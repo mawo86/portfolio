@@ -1,0 +1,45 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer class="border-t border-white/5 bg-[#080B14]">
+  <div class="max-w-6xl mx-auto px-6 py-12">
+    <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
+      <!-- Brand -->
+      <div>
+        <a href="/">
+          <img src="/logo.png" alt="Busche Cloud" class="h-7 w-auto mb-3" />
+        </a>
+        <p class="text-gray-500 text-sm max-w-xs">KI-Automatisierung & Digitale Transformation für moderne Unternehmen.</p>
+      </div>
+
+      <!-- Links -->
+      <div class="flex flex-col sm:flex-row gap-8">
+        <div>
+          <p class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">Navigation</p>
+          <ul class="flex flex-col gap-2">
+            <li><a href="/#ueber-mich" class="text-sm text-gray-400 hover:text-white transition-colors">Über mich</a></li>
+            <li><a href="/#leistungen" class="text-sm text-gray-400 hover:text-white transition-colors">Leistungen</a></li>
+            <li><a href="/#projekte" class="text-sm text-gray-400 hover:text-white transition-colors">Projekte</a></li>
+            <li><a href="/blog" class="text-sm text-gray-400 hover:text-white transition-colors">Blog</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">Kontakt</p>
+          <ul class="flex flex-col gap-2">
+            <li><a href="/#kontakt" class="text-sm text-gray-400 hover:text-white transition-colors">Anfrage stellen</a></li>
+            <li><a href="https://linkedin.com/in/marlon-b-26203116a" target="_blank" rel="noopener noreferrer" class="text-sm text-gray-400 hover:text-white transition-colors">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-10 pt-6 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p class="text-xs text-gray-600">© {year} Busche Cloud · Marlon Busche · OWL</p>
+      <div class="flex gap-4">
+        <a href="/impressum" class="text-xs text-gray-600 hover:text-gray-400 transition-colors">Impressum</a>
+        <a href="/datenschutz" class="text-xs text-gray-600 hover:text-gray-400 transition-colors">Datenschutz</a>
+      </div>
+    </div>
+  </div>
+</footer>

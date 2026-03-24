@@ -1,0 +1,43 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Impressum — Busche Cloud">
+  <Header />
+  <main class="pt-32 pb-24">
+    <div class="max-w-2xl mx-auto px-6">
+      <a href="/" class="inline-flex items-center gap-2 text-brand-400 hover:text-brand-300 text-sm mb-10 transition-colors group">
+        <svg class="w-4 h-4 transition-transform group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
+        Zurück
+      </a>
+      <h1 class="text-3xl font-bold text-white mb-8">Impressum</h1>
+      <div class="prose prose-invert prose-sm max-w-none prose-p:text-gray-400 prose-h2:text-white prose-h2:text-xl prose-h2:font-semibold">
+        <h2>Angaben gemäß § 5 TMG</h2>
+        <p>
+          Marlon Busche<br />
+          Ostwestfalen-Lippe<br />
+          Deutschland
+        </p>
+
+        <h2>Kontakt</h2>
+        <p>
+          Über das <a href="/#kontakt">Kontaktformular</a> oder LinkedIn.
+        </p>
+
+        <h2>Haftungsausschluss</h2>
+        <p>
+          Die Inhalte dieser Website wurden mit größtmöglicher Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte kann keine Haftung übernommen werden.
+        </p>
+
+        <p class="text-gray-600 text-xs mt-8">
+          Bitte ergänze deine vollständige Adresse, E-Mail und ggf. Steuernummer für ein rechtssicheres Impressum.
+        </p>
+      </div>
+    </div>
+  </main>
+  <Footer />
+</Layout>
