@@ -11,41 +11,47 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
 const services = [
   {
     icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17H3a2 2 0 01-2-2V5a2 2 0 012-2h14a2 2 0 012 2v3M21 13v4a2 2 0 01-2 2h-3" /></svg>`,
-    title: 'KI-Automatisierung',
-    description: 'Ich identifiziere die richtigen Prozesse in deinem Unternehmen und automatisiere sie mit modernen KI-Werkzeugen — messbar, skalierbar, nachhaltig.',
-    tags: ['LLM-Integration', 'Process Mining', 'Workflow-Automation'],
+    title: 'KI-Automatisierung & Prompting',
+    description: 'Ich analysiere konkrete Abläufe in deinem Unternehmen und setze gezielte KI-Automatisierungen um — von einfachem Prompt-Engineering bis zur Integration in bestehende Prozesse.',
+    tags: ['Prozessautomatisierung', 'Prompt Engineering', 'LLM-Integration'],
   },
   {
     icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>`,
-    title: 'AI Consulting',
-    description: 'Strategische Beratung für Unternehmen, die KI sinnvoll einsetzen wollen. Von der Potenzialanalyse bis zur Roadmap — pragmatisch und umsetzungsorientiert.',
-    tags: ['KI-Strategie', 'Use-Case-Analyse', 'Roadmapping'],
+    title: 'KI-Beratung & KI-Audit',
+    description: 'Wo steht dein Unternehmen beim Thema KI, und wo sind die größten Hebel? Ich helfe dir, einen klaren Überblick zu gewinnen und die richtigen nächsten Schritte zu definieren.',
+    tags: ['KI-Strategie', 'KI-Audit', 'Use-Case-Analyse'],
   },
   {
     icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" /></svg>`,
     title: 'Digitale Transformation',
-    description: 'Enterprise-Architektur, SAP-Integration und digitale Prozessgestaltung — ich bringe Business und Technologie zusammen.',
-    tags: ['Enterprise Architecture', 'SAP', 'Prozessdesign'],
+    description: 'Aus über 10 Jahren Erfahrung als IT-Organisator, Inhouse Consultant und Head of Digital bringe ich das nötige Handwerkszeug für Prozessanalyse, IT-Strategie und digitale Veränderungen.',
+    tags: ['IT-Strategie', 'Prozessanalyse', 'Change Management'],
   },
 ];
 
 const projects = [
   {
-    title: 'KI-Assistent für Kundenservice',
-    description: 'Entwicklung eines LLM-basierten Assistenzsystems, das Kundenanfragen automatisch klassifiziert, priorisiert und teilweise autonom beantwortet. Reduktion der Bearbeitungszeit um 60%.',
-    tags: ['LLM', 'Python', 'API-Integration'],
+    title: 'ERP-Auswahl & Einführungsbegleitung',
+    description: 'Systematische Evaluation und Auswahl eines ERP-Systems für ein mittelständisches Unternehmen — von der Anforderungsanalyse über den Anbietervergleich bis zur Einführungsbegleitung.',
+    tags: ['ERP', 'Anforderungsanalyse', 'Projektmanagement'],
     status: 'Abgeschlossen',
   },
   {
-    title: 'AI-gestützte SAP-Prozessanalyse',
-    description: 'Analyse und Optimierung von SAP-Workflows mit KI-Unterstützung. Identifikation von Automatisierungspotenzialen in Beschaffung und Finance.',
-    tags: ['SAP', 'Process Mining', 'KI-Analyse'],
+    title: 'Prozessanalyse & Visualisierung',
+    description: 'Aufnahme, Analyse und Visualisierung bestehender Unternehmensprozesse als Grundlage für Optimierungen und digitale Transformation. Inklusive Workshop-Moderation und Handlungsempfehlungen.',
+    tags: ['Prozessanalyse', 'Visualisierung', 'Beratung'],
     status: 'Abgeschlossen',
   },
   {
-    title: 'Digitale Transformation Mittelstand',
-    description: 'Begleitung eines mittelständischen Unternehmens bei der Einführung einer KI-gestützten Dokumentenverarbeitung und Workflow-Automatisierung.',
-    tags: ['Beratung', 'Automatisierung', 'Change Management'],
+    title: 'IT-Strategie & Digitale Transformation',
+    description: 'Entwicklung einer IT-Strategie und Begleitung der digitalen Transformation — Strukturierung der IT-Organisation, Priorisierung von Maßnahmen und Stakeholder-Kommunikation.',
+    tags: ['IT-Strategie', 'Digitalisierung', 'Organisation'],
+    status: 'Abgeschlossen',
+  },
+  {
+    title: 'KI-Consulting',
+    description: 'Beratung zu KI-Einsatzmöglichkeiten im Unternehmenskontext: Identifikation geeigneter Use Cases, Bewertung verfügbarer Tools und Unterstützung bei der gezielten Umsetzung erster KI-Projekte.',
+    tags: ['KI-Strategie', 'Use Cases', 'Umsetzung'],
     status: 'Laufend',
   },
 ];
@@ -101,9 +107,9 @@ const projects = [
       <!-- Stats -->
       <div class="mt-20 grid grid-cols-3 gap-6 max-w-lg mx-auto animate-fade-up" style="animation-delay: 0.4s;">
         {[
-          { value: '10+', label: 'Jahre Erfahrung' },
-          { value: '20+', label: 'Projekte' },
-          { value: '100%', label: 'Remote-fähig' },
+          { value: '10+', label: 'Jahre IT & Digital' },
+          { value: 'OWL', label: 'Verwurzelt & vernetzt' },
+          { value: 'Remote', label: '& vor Ort' },
         ].map(stat => (
           <div class="text-center">
             <div class="text-3xl font-black text-white">{stat.value}</div>
@@ -130,18 +136,18 @@ const projects = [
         <div>
           <p class="text-brand-400 text-sm font-semibold uppercase tracking-widest mb-4">Über mich</p>
           <h2 class="text-4xl font-bold text-white mb-6 leading-tight">
-            Digitaler Allrounder mit<br />
-            <span class="text-brand-400">Tiefen-Expertise in KI</span>
+            Breite IT-Erfahrung,<br />
+            <span class="text-brand-400">klarer KI-Fokus</span>
           </h2>
           <div class="space-y-4 text-gray-400 leading-relaxed">
             <p>
-              Ich bin in Ostwestfalen-Lippe verwurzelt und arbeite seit über einem Jahrzehnt an der Schnittstelle von Business und Technologie. Mein Fokus liegt heute klar auf einem Thema: <strong class="text-white">KI-Automatisierung, die wirklich funktioniert.</strong>
+              Ich bin in Ostwestfalen-Lippe verwurzelt und arbeite seit über einem Jahrzehnt in der IT — als Inhouse Consultant, IT-Organisator und zuletzt als Head of Digital. Diese Breite hilft mir, neue Technologien nicht isoliert zu betrachten, sondern dort einzusetzen, wo sie wirklich Sinn ergeben.
             </p>
             <p>
-              Mein Hintergrund umfasst digitale Transformation, Enterprise-Architektur und SAP-Systeme. Das gibt mir die Fähigkeit, KI nicht isoliert zu denken, sondern in bestehende Unternehmenslandschaften zu integrieren.
+              Seit einiger Zeit spezialisiere ich mich gezielt auf das Thema KI: Wie können Unternehmen KI praktisch nutzen, um effizienter zu werden und Wettbewerbsvorteile zu erzielen? Das ist die Frage, die mich antreibt — und bei der ich aktiv helfe.
             </p>
             <p>
-              Wenn ich nicht gerade Workflows automatisiere, laufe ich durch OWL oder stehe an der Dartscheibe. Familie kommt immer zuerst.
+              Wenn ich nicht gerade an KI-Themen arbeite, laufe ich durch OWL oder stehe an der Dartscheibe. Familie kommt immer zuerst.
             </p>
           </div>
           <div class="flex flex-wrap gap-3 mt-8">
@@ -163,7 +169,7 @@ const projects = [
               </div>
               <div>
                 <div class="font-bold text-white text-lg">Marlon Busche</div>
-                <div class="text-brand-400 text-sm">KI-Experte & Digital Strategist</div>
+                <div class="text-brand-400 text-sm">IT & Digital — Fokus KI</div>
               </div>
             </div>
 
@@ -237,7 +243,7 @@ const projects = [
         <p class="text-gray-400 max-w-xl mx-auto">Echte Projekte, echte Ergebnisse — keine Demos.</p>
       </div>
 
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="grid md:grid-cols-2 gap-6">
         {projects.map((project) => (
           <div class="group relative bg-white/3 hover:bg-white/5 border border-white/8 hover:border-white/15 rounded-2xl p-7 transition-all duration-300 flex flex-col">
             <div class="flex items-start justify-between mb-4">
@@ -327,13 +333,12 @@ const projects = [
       <div class="relative">
         <div class="absolute inset-0 bg-gradient-to-br from-brand-500/10 to-blue-600/5 rounded-3xl blur-xl"></div>
         <div class="relative bg-white/3 border border-white/10 rounded-3xl p-8 sm:p-10">
+          <!-- Formspree: Konto auf formspree.io erstellen, Form-ID unten eintragen -->
           <form
-            name="contact"
+            action="https://formspree.io/f/DEINE_FORM_ID"
             method="POST"
-            data-netlify="true"
             class="space-y-5 text-left"
           >
-            <input type="hidden" name="form-name" value="contact" />
             <div class="grid sm:grid-cols-2 gap-5">
               <div>
                 <label class="block text-sm font-medium text-gray-300 mb-2" for="name">Name</label>
@@ -368,7 +373,7 @@ const projects = [
               >
                 <option value="" class="bg-[#0d1117]">Bitte wählen...</option>
                 <option value="ki-automatisierung" class="bg-[#0d1117]">KI-Automatisierung</option>
-                <option value="ai-consulting" class="bg-[#0d1117]">AI Consulting</option>
+                <option value="ki-beratung" class="bg-[#0d1117]">KI-Beratung / KI-Audit</option>
                 <option value="digitale-transformation" class="bg-[#0d1117]">Digitale Transformation</option>
                 <option value="sonstiges" class="bg-[#0d1117]">Sonstiges</option>
               </select>
