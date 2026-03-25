@@ -4,3 +4,5 @@ website/.astro/
 # website/package-lock.json — needed for CI
 .DS_Store
 *.log
+.claude/
+reference/
