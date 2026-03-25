@@ -16,11 +16,21 @@ const currentPath = Astro.url.pathname;
   <nav class="relative max-w-6xl mx-auto px-6 py-5 flex items-center justify-between">
     <!-- Logo -->
     <a href={import.meta.env.BASE_URL} class="flex items-center gap-2.5 group" aria-label="Busche Cloud">
-      <img
-        src={`${import.meta.env.BASE_URL}icon_transparent_bg.png`}
-        alt=""
-        class="h-9 w-9 rounded-xl"
-      />
+      <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="38" height="38" rx="9" fill="url(#iconBg)"/>
+        <defs>
+          <linearGradient id="iconBg" x1="0" y1="0" x2="38" y2="38" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#38BDF8"/>
+            <stop offset="100%" stop-color="#0072B1"/>
+          </linearGradient>
+        </defs>
+        <!-- back cloud -->
+        <ellipse cx="24" cy="22" rx="8" ry="6" fill="white" fill-opacity="0.35"/>
+        <!-- front cloud -->
+        <path d="M8 26 C8 22 11 19 15 19 C15.5 17 17.5 15 20 15 C22.5 15 24.5 17 25 19 C27 19.5 28.5 21 28.5 23 C28.5 25.5 26.5 27 24 27 H11 C9.3 27 8 26 8 24 Z" fill="white"/>
+        <!-- B -->
+        <text x="14.5" y="25.5" font-family="Arial Black, sans-serif" font-weight="900" font-size="10" fill="url(#iconBg)">B</text>
+      </svg>
       <div class="flex items-baseline gap-1">
         <span class="text-xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-[#38BDF8] to-[#0095E8]">BUSCHE</span>
         <span class="text-xs font-bold tracking-widest text-[#0095E8] uppercase">Cloud</span>
