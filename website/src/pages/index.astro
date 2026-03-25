@@ -35,24 +35,28 @@ const projects = [
     description: 'Systematische Evaluation und Auswahl eines ERP-Systems für ein mittelständisches Unternehmen — von der Anforderungsanalyse über den Anbietervergleich bis zur Einführungsbegleitung.',
     tags: ['ERP', 'Anforderungsanalyse', 'Projektmanagement'],
     status: 'Abgeschlossen',
+    icon: `<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>`,
   },
   {
     title: 'Prozessanalyse & Visualisierung',
     description: 'Aufnahme, Analyse und Visualisierung bestehender Unternehmensprozesse als Grundlage für Optimierungen und digitale Transformation. Inklusive Workshop-Moderation und Handlungsempfehlungen.',
     tags: ['Prozessanalyse', 'Visualisierung', 'Beratung'],
     status: 'Abgeschlossen',
+    icon: `<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2"/></svg>`,
   },
   {
     title: 'IT-Strategie & Digitale Transformation',
     description: 'Entwicklung einer IT-Strategie und Begleitung der digitalen Transformation — Strukturierung der IT-Organisation, Priorisierung von Maßnahmen und Stakeholder-Kommunikation.',
     tags: ['IT-Strategie', 'Digitalisierung', 'Organisation'],
     status: 'Abgeschlossen',
+    icon: `<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>`,
   },
   {
     title: 'KI-Consulting',
     description: 'Beratung zu KI-Einsatzmöglichkeiten im Unternehmenskontext: Identifikation geeigneter Use Cases, Bewertung verfügbarer Tools und Unterstützung bei der gezielten Umsetzung erster KI-Projekte.',
     tags: ['KI-Strategie', 'Use Cases', 'Umsetzung'],
     status: 'Laufend',
+    icon: `<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17H3a2 2 0 01-2-2V5a2 2 0 012-2h14a2 2 0 012 2v3M21 13v4a2 2 0 01-2 2h-3"/></svg>`,
   },
 ];
 ---
@@ -180,13 +184,25 @@ const projects = [
             </div>
 
             {[
-              { icon: '📍', label: 'Standort', value: 'Ostwestfalen-Lippe' },
-              { icon: '🎯', label: 'Fokus', value: 'KI-Automatisierung' },
-              { icon: '💼', label: 'Erfahrung', value: '10+ Jahre Digital' },
-              { icon: '🌐', label: 'Arbeitsweise', value: 'Remote & vor Ort' },
+              {
+                icon: `<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>`,
+                label: 'Standort', value: 'Ostwestfalen-Lippe',
+              },
+              {
+                icon: `<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17H3a2 2 0 01-2-2V5a2 2 0 012-2h14a2 2 0 012 2v3M21 13v4a2 2 0 01-2 2h-3"/></svg>`,
+                label: 'Fokus', value: 'KI-Automatisierung',
+              },
+              {
+                icon: `<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>`,
+                label: 'Erfahrung', value: '10+ Jahre Digital',
+              },
+              {
+                icon: `<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"/></svg>`,
+                label: 'Arbeitsweise', value: 'Remote & vor Ort',
+              },
             ].map(item => (
               <div class="flex items-center gap-3">
-                <span class="text-lg">{item.icon}</span>
+                <div class="w-8 h-8 rounded-lg bg-brand-500/10 border border-brand-500/15 flex items-center justify-center text-brand-400 flex-shrink-0" set:html={item.icon}></div>
                 <div>
                   <div class="text-xs text-gray-500">{item.label}</div>
                   <div class="text-sm text-white font-medium">{item.value}</div>
@@ -222,7 +238,11 @@ const projects = [
 
       <div class="grid md:grid-cols-3 gap-6">
         {services.map((service, i) => (
-          <div class="group relative bg-white/3 hover:bg-white/5 border border-white/8 hover:border-brand-500/30 rounded-2xl p-7 transition-all duration-300">
+          <div class="group relative bg-white/3 hover:bg-white/5 border border-white/8 hover:border-brand-500/30 rounded-2xl p-7 transition-all duration-300 overflow-hidden">
+            <!-- Ghost number -->
+            <div class="absolute top-4 right-5 text-7xl font-black text-white/[0.03] select-none leading-none group-hover:text-brand-500/5 transition-colors">
+              {String(i + 1).padStart(2, '0')}
+            </div>
             <div class="absolute inset-0 rounded-2xl bg-gradient-to-br from-brand-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
             <div class="relative">
               <div class="w-12 h-12 rounded-xl bg-brand-500/10 border border-brand-500/20 flex items-center justify-center text-brand-400 mb-5 group-hover:bg-brand-500/20 transition-colors" set:html={service.icon}></div>
@@ -302,13 +322,12 @@ const projects = [
       <div class="grid md:grid-cols-2 gap-6">
         {projects.map((project) => (
           <div class="group relative bg-white/3 hover:bg-white/5 border border-white/8 hover:border-white/15 rounded-2xl p-7 transition-all duration-300 flex flex-col">
-            <div class="flex items-start justify-between mb-4">
-              <div class="flex-1">
-                <span class={`inline-flex items-center gap-1.5 text-xs font-medium px-2.5 py-1 rounded-full ${project.status === 'Laufend' ? 'bg-green-500/10 text-green-400 border border-green-500/20' : 'bg-gray-500/10 text-gray-400 border border-gray-500/20'}`}>
-                  <span class={`w-1.5 h-1.5 rounded-full ${project.status === 'Laufend' ? 'bg-green-400 animate-pulse' : 'bg-gray-400'}`}></span>
-                  {project.status}
-                </span>
-              </div>
+            <div class="flex items-start justify-between mb-5">
+              <span class={`inline-flex items-center gap-1.5 text-xs font-medium px-2.5 py-1 rounded-full ${project.status === 'Laufend' ? 'bg-green-500/10 text-green-400 border border-green-500/20' : 'bg-gray-500/10 text-gray-400 border border-gray-500/20'}`}>
+                <span class={`w-1.5 h-1.5 rounded-full ${project.status === 'Laufend' ? 'bg-green-400 animate-pulse' : 'bg-gray-400'}`}></span>
+                {project.status}
+              </span>
+              <div class="w-9 h-9 rounded-xl bg-brand-500/10 border border-brand-500/15 flex items-center justify-center text-brand-400 flex-shrink-0 group-hover:bg-brand-500/20 group-hover:border-brand-500/30 transition-colors" set:html={project.icon}></div>
             </div>
 
             <h3 class="text-base font-bold text-white mb-3 leading-tight">{project.title}</h3>
@@ -325,48 +344,6 @@ const projects = [
     </div>
   </section>
 
-  <!-- Referenzen -->
-  <section id="referenzen" class="py-28 border-t border-white/5">
-    <div class="max-w-6xl mx-auto px-6">
-      <div class="text-center mb-16">
-        <p class="text-brand-400 text-sm font-semibold uppercase tracking-widest mb-4">Referenzen</p>
-        <h2 class="text-4xl font-bold text-white mb-4">Was andere sagen</h2>
-        <p class="text-gray-400 max-w-xl mx-auto">Stimmen aus der Zusammenarbeit — aus Datenschutzgründen anonym.</p>
-      </div>
-
-      <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-        {[
-          {
-            quote: 'Marlon hat uns geholfen, KI-Potenziale in unserem Unternehmen zu identifizieren — pragmatisch und ohne Buzzword-Überlastung. Die Empfehlungen waren direkt umsetzbar.',
-            role: 'Geschäftsführer',
-            sector: 'Produktion · Mittelstand',
-          },
-          {
-            quote: 'Die Prozessanalyse war der Startschuss für unsere Digitalisierungsstrategie. Strukturiert aufgenommen, klar visualisiert und mit konkreten Handlungsempfehlungen versehen.',
-            role: 'IT-Leiter',
-            sector: 'Dienstleistung · Mittelstand',
-          },
-          {
-            quote: 'Was mich überzeugt hat: Marlon denkt vom Business aus, nicht von der Technologie. Das macht den Unterschied bei der ERP-Auswahl.',
-            role: 'Projektleiter',
-            sector: 'Handel · KMU',
-          },
-        ].map(ref => (
-          <div class="bg-white/3 border border-white/8 rounded-2xl p-7 flex flex-col gap-5">
-            <svg class="w-8 h-8 text-brand-500/40 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
-            </svg>
-            <p class="text-gray-300 leading-relaxed text-sm flex-1">"{ref.quote}"</p>
-            <div class="flex items-center justify-between pt-4 border-t border-white/8">
-              <span class="text-white font-medium text-sm">{ref.role}</span>
-              <span class="text-xs text-gray-500 bg-white/5 px-2.5 py-1 rounded-full">{ref.sector}</span>
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
-
   <!-- Blog -->
   {posts.length > 0 && (
     <section id="blog" class="py-28 border-t border-white/5">
@@ -376,7 +353,7 @@ const projects = [
             <p class="text-brand-400 text-sm font-semibold uppercase tracking-widest mb-4">Blog</p>
             <h2 class="text-4xl font-bold text-white">Gedanken & Insights</h2>
           </div>
-          <a href="/blog" class="hidden sm:inline-flex items-center gap-2 text-sm text-brand-400 hover:text-brand-300 transition-colors font-medium group">
+          <a href={`${import.meta.env.BASE_URL}blog`} class="hidden sm:inline-flex items-center gap-2 text-sm text-brand-400 hover:text-brand-300 transition-colors font-medium group">
             Alle Artikel
             <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
@@ -388,7 +365,7 @@ const projects = [
           {posts.map((post) => {
             const formattedDate = new Intl.DateTimeFormat('de-DE', { year: 'numeric', month: 'short', day: 'numeric' }).format(post.data.date);
             return (
-              <a href={`/blog/${post.slug}`} class="group block bg-white/3 hover:bg-white/5 border border-white/8 hover:border-white/15 rounded-2xl p-6 transition-all duration-300">
+              <a href={`${import.meta.env.BASE_URL}blog/${post.slug}`} class="group block bg-white/3 hover:bg-white/5 border border-white/8 hover:border-white/15 rounded-2xl p-6 transition-all duration-300">
                 <div class="flex flex-wrap gap-2 mb-4">
                   {post.data.tags.slice(0,2).map(tag => (
                     <span class="px-2 py-0.5 text-xs text-brand-400 bg-brand-500/10 rounded-md">{tag}</span>
@@ -408,7 +385,7 @@ const projects = [
         </div>
 
         <div class="mt-8 text-center sm:hidden">
-          <a href="/blog" class="inline-flex items-center gap-2 text-sm text-brand-400 hover:text-brand-300 transition-colors">
+          <a href={`${import.meta.env.BASE_URL}blog`} class="inline-flex items-center gap-2 text-sm text-brand-400 hover:text-brand-300 transition-colors">
             Alle Artikel ansehen
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
