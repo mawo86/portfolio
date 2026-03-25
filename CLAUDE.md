@@ -131,15 +131,22 @@ npm run dev   # Dev-Server auf http://localhost:4321
 npm run build # Produktions-Build
 ```
 
-**Offener Plan:** `plans/2026-03-24-website-deployment-und-content.md`
-→ GitHub Pages Deployment, Ionos Domain, Projekte/Referenzen/Tools-Sektionen
+**Live unter:** https://mawo86.github.io/portfolio
 
-**Noch ausstehend vor Deployment:**
-- GitHub-Username für Actions-Workflow
-- Formspree-ID für Kontaktformular
-- LinkedIn-Profiltext für Website-Texte
-- Profilfoto (in `website/public/` ablegen)
-- Impressum mit echten Kontaktdaten vervollständigen
+**Sektionen:** Hero · Über mich · Leistungen · Tools · Projekte · Referenzen · Blog · Kontakt
+
+**Erledigte Pläne:**
+- `plans/2026-03-24-website-deployment-und-content.md` — Deployment + Inhalte ✓
+- `plans/2026-03-25-linkedin-optimierung-website-erweiterung.md` — LinkedIn + Tools/Referenzen ✓
+
+**LinkedIn-Optimierung:** `outputs/linkedin-optimierung.md` — fertige Texte zum Copy-Paste
+
+**Noch ausstehend:**
+- Ionos Domain busche.cloud verknüpfen (DNS: 4x A-Record auf GitHub IPs, CNAME www → mawo86.github.io) → danach `base: '/portfolio'` aus astro.config.mjs entfernen
+- Profilfoto (als `website/public/foto.jpg` ablegen)
+- Impressum mit echter Adresse vervollständigen
+- LinkedIn-Profil mit Texten aus `outputs/linkedin-optimierung.md` aktualisieren
+- Echte Kundenzitate in Referenzen-Sektion eintragen
 
 ---
 

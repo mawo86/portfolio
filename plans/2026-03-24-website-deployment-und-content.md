@@ -1,7 +1,7 @@
 # Plan: GitHub Pages Deployment + Content-Erweiterung
 
 **Erstellt:** 2026-03-24
-**Status:** Entwurf
+**Status:** Implementiert (teilweise — Deployment live, Inhalte eingebaut; Ionos-Domain noch ausstehend)
 **Anforderung:** Website auf GitHub Pages deployen, Ionos-Domain verknüpfen, neue Sektionen (Projekte, Kundenreferenzen, Tools) mit echten Texten einbauen.
 
 ---
