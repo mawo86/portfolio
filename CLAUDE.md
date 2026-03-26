@@ -44,7 +44,8 @@ Claude sollte sich immer über `/prime` am Session-Start orientieren, dann mit v
 ├── plans/                 # Implementierungspläne erstellt von /create-plan
 ├── outputs/               # Arbeitsergebnisse und Deliverables
 ├── reference/             # Logo, Icons und Referenzmaterialien
-│   ├── logo.png           # Busche Cloud Logo (weiß/transparent)
+│   ├── logo.png           # Busche Cloud Logo (weißer Hintergrund)
+│   ├── logo.jpg           # Busche Cloud Logo (dunkler Hintergrund, Original)
 │   ├── icon_transparent_bg.png
 │   └── icon_white_bg.jpg
 ├── scripts/               # Automatisierungsskripte (falls zutreffend)
@@ -133,7 +134,11 @@ npm run build # Produktions-Build
 
 **Live unter:** https://mawo86.github.io/portfolio
 
-**Sektionen:** Hero · Über mich · Leistungen · Tools · Projekte · Referenzen · Blog · Kontakt
+**Sektionen:** Hero · Über mich · Leistungen · Tools · Projekte · Eigene Produkte · Blog · Kontakt
+
+**Eigene Produkte:** Cookloop (cookloop.vercel.app) und DartsIQ (dartsiq.vercel.app) — beide mit App-Link, Live-Status und Tech-Stack
+
+**Logo:** Inline-SVG in Header und Footer (kein Bilddatei-Request) — Icon mit blauem Gradient-Hintergrund + "BUSCHE Cloud" Text
 
 **Erledigte Pläne:**
 - `plans/2026-03-24-website-deployment-und-content.md` — Deployment + Inhalte ✓
@@ -146,7 +151,6 @@ npm run build # Produktions-Build
 - Profilfoto (als `website/public/foto.jpg` ablegen)
 - Impressum mit echter Adresse vervollständigen
 - LinkedIn-Profil mit Texten aus `outputs/linkedin-optimierung.md` aktualisieren
-- Echte Kundenzitate in Referenzen-Sektion eintragen
 
 ---
 
