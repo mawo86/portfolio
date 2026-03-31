@@ -21,52 +21,93 @@ const formattedDate = new Intl.DateTimeFormat('de-DE', {
 
 <Layout title={`${title} — Busche Cloud`} description={description}>
   <Header />
-  <main class="pt-32 pb-24">
-    <article class="max-w-2xl mx-auto px-6">
-      <!-- Back link -->
-      <a href={`${import.meta.env.BASE_URL}blog`} class="inline-flex items-center gap-2 text-brand-400 hover:text-brand-300 text-sm mb-10 transition-colors group">
+  <main class="pt-28 pb-24">
+
+    <!-- Article header -->
+    <div class="max-w-3xl mx-auto px-6 mb-12">
+      <a href={`${import.meta.env.BASE_URL}/blog`} class="inline-flex items-center gap-2 text-gray-500 hover:text-brand-400 text-sm mb-12 transition-colors group">
         <svg class="w-4 h-4 transition-transform group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
         </svg>
         Zurück zum Blog
       </a>
 
-      <!-- Tags -->
       <div class="flex flex-wrap gap-2 mb-6">
         {tags.map(tag => (
-          <span class="px-3 py-1 text-xs font-medium bg-brand-500/10 text-brand-400 border border-brand-500/20 rounded-full">
+          <span class="px-2.5 py-1 text-xs font-semibold text-brand-400 bg-brand-500/10 border border-brand-500/20 rounded-full uppercase tracking-wide">
             {tag}
           </span>
         ))}
       </div>
 
-      <!-- Title -->
-      <h1 class="text-3xl sm:text-4xl font-bold text-white mb-4 leading-tight">{title}</h1>
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white mb-5 leading-tight tracking-tight">{title}</h1>
 
-      <!-- Date -->
-      <p class="text-gray-500 text-sm mb-10 font-mono">{formattedDate}</p>
+      <div class="flex items-center gap-4 text-sm text-gray-500">
+        <span>Marlon Busche</span>
+        <span class="w-1 h-1 rounded-full bg-gray-700"></span>
+        <span>{formattedDate}</span>
+      </div>
 
-      <!-- Divider -->
-      <div class="h-px bg-gradient-to-r from-brand-500/50 to-transparent mb-10"></div>
+      <div class="mt-8 h-px bg-white/10"></div>
+    </div>
 
-      <!-- Content -->
-      <div class="prose prose-invert prose-lg max-w-none
-        prose-headings:text-white prose-headings:font-bold
-        prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4
-        prose-p:text-gray-300 prose-p:leading-relaxed
+    <!-- Article body -->
+    <article class="max-w-2xl mx-auto px-6">
+      <div class="
+        prose prose-invert max-w-none
+
+        prose-p:text-gray-300 prose-p:leading-[1.85] prose-p:text-[1.0625rem]
+        prose-p:mb-6
+
+        prose-h2:text-white prose-h2:font-black prose-h2:text-2xl
+        prose-h2:mt-14 prose-h2:mb-5 prose-h2:tracking-tight
+        prose-h2:border-t prose-h2:border-white/10 prose-h2:pt-10
+
+        prose-h3:text-white prose-h3:font-bold prose-h3:text-lg
+        prose-h3:mt-8 prose-h3:mb-3
+
         prose-strong:text-white prose-strong:font-semibold
-        prose-a:text-brand-400 prose-a:no-underline hover:prose-a:text-brand-300
-        prose-li:text-gray-300
-        prose-code:text-brand-300 prose-code:bg-white/5 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:text-sm
-        prose-blockquote:border-l-brand-500 prose-blockquote:text-gray-400">
+
+        prose-a:text-brand-400 prose-a:no-underline prose-a:border-b prose-a:border-brand-500/40
+        hover:prose-a:text-brand-300 hover:prose-a:border-brand-400
+
+        prose-ul:text-gray-300 prose-ul:my-6 prose-ul:space-y-2
+        prose-li:text-gray-300 prose-li:leading-relaxed
+        prose-li:marker:text-brand-500
+
+        prose-blockquote:border-l-2 prose-blockquote:border-brand-500/60
+        prose-blockquote:bg-white/3 prose-blockquote:rounded-r-lg
+        prose-blockquote:px-6 prose-blockquote:py-4 prose-blockquote:my-8
+        prose-blockquote:text-gray-300 prose-blockquote:not-italic prose-blockquote:text-lg
+
+        prose-code:text-brand-300 prose-code:bg-white/6 prose-code:px-1.5
+        prose-code:py-0.5 prose-code:rounded prose-code:text-sm prose-code:font-normal
+      ">
         <slot />
       </div>
 
+      <!-- Divider -->
+      <div class="mt-16 h-px bg-white/10"></div>
+
+      <!-- Author card -->
+      <div class="mt-10 flex items-start gap-4">
+        <div class="flex-shrink-0 w-12 h-12 rounded-full bg-gradient-to-br from-brand-400 to-blue-600 flex items-center justify-center text-white font-black text-lg">
+          M
+        </div>
+        <div>
+          <p class="text-white font-semibold text-sm">Marlon Busche</p>
+          <p class="text-gray-500 text-sm leading-relaxed mt-1">
+            KI-Automatisierung &amp; Digitale Transformation. Ich helfe Unternehmen, mit KI wirklich produktiver zu werden — nicht nur zu experimentieren.
+          </p>
+        </div>
+      </div>
+
       <!-- CTA -->
-      <div class="mt-16 p-8 rounded-2xl bg-gradient-to-br from-brand-500/10 to-blue-600/5 border border-brand-500/20">
-        <h3 class="text-xl font-bold text-white mb-2">Interesse geweckt?</h3>
-        <p class="text-gray-400 mb-4">Lass uns besprechen, wie KI-Automatisierung auch deinem Unternehmen helfen kann.</p>
-        <a href={`${import.meta.env.BASE_URL}#kontakt`} class="inline-flex items-center gap-2 px-5 py-2.5 bg-brand-500 hover:bg-brand-400 text-white font-medium rounded-lg transition-colors text-sm">
+      <div class="mt-10 p-8 border border-white/10 rounded-xl bg-white/2">
+        <p class="text-xs font-bold uppercase tracking-widest text-brand-400 mb-3">Interesse geweckt?</p>
+        <h3 class="text-xl font-black text-white mb-2 leading-tight">Lass uns über dein Projekt sprechen.</h3>
+        <p class="text-gray-400 text-sm leading-relaxed mb-5">Wie KI-Automatisierung konkret in deinem Unternehmen wirken kann — das klären wir in einem kurzen Gespräch.</p>
+        <a href={`${import.meta.env.BASE_URL}#kontakt`} class="inline-flex items-center gap-2 px-5 py-2.5 bg-brand-500 hover:bg-brand-400 text-white font-semibold rounded-lg transition-colors text-sm">
           Gespräch vereinbaren
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
