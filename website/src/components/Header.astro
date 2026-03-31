@@ -1,11 +1,12 @@
 ---
+const BASE = import.meta.env.BASE_URL;
 const navLinks = [
-  { href: '/#ueber-mich', label: 'Über mich' },
-  { href: '/#leistungen', label: 'Leistungen' },
-  { href: '/#projekte', label: 'Projekte' },
-  { href: '/#produkte', label: 'Produkte' },
-  { href: `${import.meta.env.BASE_URL}blog`, label: 'Blog' },
-  { href: '/#kontakt', label: 'Kontakt' },
+  { href: `${BASE}#ueber-mich`, label: 'Über mich' },
+  { href: `${BASE}#leistungen`, label: 'Leistungen' },
+  { href: `${BASE}#projekte`, label: 'Projekte' },
+  { href: `${BASE}#produkte`, label: 'Produkte' },
+  { href: `${BASE}blog`, label: 'Blog' },
+  { href: `${BASE}#kontakt`, label: 'Kontakt' },
 ];
 
 const currentPath = Astro.url.pathname;
@@ -54,7 +55,7 @@ const currentPath = Astro.url.pathname;
 
     <!-- CTA -->
     <a
-      href="/#kontakt"
+      href={`${BASE}#kontakt`}
       class="hidden md:inline-flex items-center gap-2 px-4 py-2 text-sm font-medium bg-brand-500/10 hover:bg-brand-500/20 text-brand-300 border border-brand-500/30 hover:border-brand-400/50 rounded-lg transition-all"
     >
       Jetzt anfragen
@@ -82,7 +83,7 @@ const currentPath = Astro.url.pathname;
         </li>
       ))}
       <li class="mt-2 pt-2 border-t border-white/10">
-        <a href="/#kontakt" class="block py-2.5 px-3 text-center bg-brand-500 hover:bg-brand-400 text-white rounded-lg text-sm font-medium transition-colors">
+        <a href={`${BASE}#kontakt`} class="block py-2.5 px-3 text-center bg-brand-500 hover:bg-brand-400 text-white rounded-lg text-sm font-medium transition-colors">
           Jetzt anfragen
         </a>
       </li>
