@@ -4,73 +4,197 @@ import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import { getCollection } from 'astro:content';
 
-const posts = (await getCollection('blog', ({ data }) => !data.draft))
+const allPosts = (await getCollection('blog', ({ data }) => !data.draft))
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 
-const allTags = [...new Set(posts.flatMap(p => p.data.tags))].sort();
+const featuredPost = allPosts[0];
+const remainingPosts = allPosts.slice(1);
+
+const allTags = [...new Set(allPosts.flatMap(p => p.data.tags))].sort();
+
+function formatDate(date: Date) {
+  return new Intl.DateTimeFormat('de-DE', { year: 'numeric', month: 'long', day: 'numeric' }).format(date);
+}
 ---
 
 <Layout
   title="Blog — Busche Cloud"
-  description="Gedanken, Insights und praktische Tipps zu KI-Automatisierung und digitaler Transformation von Marlon Busche."
+  description="Gedanken, Insights und praktische Einblicke zu KI-Automatisierung und digitaler Transformation von Marlon Busche."
 >
   <Header />
 
-  <main class="pt-32 pb-24">
-    <div class="max-w-6xl mx-auto px-6">
-      <!-- Header -->
-      <div class="mb-16">
-        <p class="text-brand-400 text-sm font-semibold uppercase tracking-widest mb-4">Blog</p>
-        <h1 class="text-4xl sm:text-5xl font-bold text-white mb-4">Gedanken & Insights</h1>
-        <p class="text-gray-400 max-w-xl leading-relaxed">
-          Meine Perspektiven zu KI, Automatisierung und digitaler Transformation — praxisnah, ohne Buzzword-Bingo.
-        </p>
-      </div>
+  <main class="pt-28 pb-24">
+    <div class="max-w-5xl mx-auto px-6">
 
-      <!-- Tags filter -->
-      {allTags.length > 0 && (
-        <div class="flex flex-wrap gap-2 mb-12">
-          <span class="text-xs text-gray-500 font-medium self-center mr-2">Themen:</span>
-          {allTags.map(tag => (
-            <span class="px-3 py-1.5 text-xs font-medium bg-white/5 text-gray-400 border border-white/10 rounded-full hover:border-brand-500/40 hover:text-brand-300 cursor-default transition-colors">
-              {tag}
-            </span>
-          ))}
+      <!-- ═══ EDITORIAL HERO BLOCK ═══ -->
+      <div class="border-t-2 border-white/20 pt-10 mb-10">
+        <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-8">
+          <div>
+            <p class="text-brand-400 text-xs font-bold uppercase tracking-[0.2em] mb-5">Busche Cloud · Blog</p>
+            <h1 class="text-5xl sm:text-6xl font-black text-white leading-none tracking-tight">
+              Gedanken &<br />Einblicke
+            </h1>
+          </div>
+          <p class="text-gray-400 text-base leading-relaxed max-w-sm sm:text-right">
+            KI-Automatisierung, digitale Transformation und was davon wirklich im Unternehmensalltag funktioniert — direkt aus der Praxis, ohne Buzzword-Bingo.
+          </p>
         </div>
-      )}
 
-      <!-- Posts grid -->
-      {posts.length === 0 ? (
-        <div class="text-center py-20">
+        <!-- Tag Filter -->
+        {allTags.length > 0 && (
+          <div class="flex flex-wrap items-center gap-2 pt-6 border-t border-white/10">
+            <span class="text-xs text-gray-600 uppercase tracking-widest font-medium mr-1">Themen</span>
+            <button
+              data-filter="all"
+              class="filter-btn active px-3 py-1 text-xs font-semibold rounded-full transition-all duration-200 bg-brand-500 text-white"
+            >
+              Alle
+            </button>
+            {allTags.map(tag => (
+              <button
+                data-filter={tag}
+                class="filter-btn px-3 py-1 text-xs font-semibold rounded-full transition-all duration-200 bg-white/5 text-gray-400 border border-white/10 hover:border-brand-500/40 hover:text-brand-300"
+              >
+                {tag}
+              </button>
+            ))}
+          </div>
+        )}
+      </div>
+      <div class="border-b border-white/10 mb-12"></div>
+
+      <!-- ═══ EMPTY STATE ═══ -->
+      {allPosts.length === 0 && (
+        <div class="text-center py-24">
           <p class="text-gray-500 text-lg">Noch keine Artikel veröffentlicht.</p>
           <p class="text-gray-600 text-sm mt-2">Schau bald wieder vorbei.</p>
         </div>
-      ) : (
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {posts.map((post) => {
-            const formattedDate = new Intl.DateTimeFormat('de-DE', { year: 'numeric', month: 'long', day: 'numeric' }).format(post.data.date);
-            return (
-              <a href={`/blog/${post.slug}`} class="group block bg-white/3 hover:bg-white/5 border border-white/8 hover:border-white/15 rounded-2xl p-7 transition-all duration-300 flex flex-col">
-                <div class="flex flex-wrap gap-2 mb-4">
-                  {post.data.tags.slice(0, 3).map(tag => (
-                    <span class="px-2 py-0.5 text-xs text-brand-400 bg-brand-500/10 rounded-md">{tag}</span>
-                  ))}
-                </div>
-                <h2 class="font-bold text-white mb-2 leading-snug text-lg group-hover:text-brand-300 transition-colors">{post.data.title}</h2>
-                <p class="text-gray-400 text-sm line-clamp-3 mb-5 leading-relaxed flex-1">{post.data.description}</p>
-                <div class="flex items-center justify-between mt-auto pt-4 border-t border-white/5">
-                  <span class="text-xs text-gray-600 font-mono">{formattedDate}</span>
-                  <svg class="w-4 h-4 text-gray-600 group-hover:text-brand-400 transition-all group-hover:translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                  </svg>
-                </div>
-              </a>
-            );
-          })}
+      )}
+
+      <!-- ═══ FEATURED ARTICLE ═══ -->
+      {featuredPost && (
+        <article data-article data-tags={JSON.stringify(featuredPost.data.tags)} class="mb-14 group">
+          <a href={`${import.meta.env.BASE_URL}blog/${featuredPost.slug}`} class="block">
+            <div class="flex flex-wrap items-center gap-3 mb-5">
+              <span class="text-xs font-bold uppercase tracking-[0.18em] text-brand-400">Neuester Beitrag</span>
+              <span class="w-12 h-px bg-brand-500/40"></span>
+              {featuredPost.data.tags.slice(0, 3).map(tag => (
+                <span class="px-2.5 py-0.5 text-xs font-medium text-gray-500 border border-white/10 rounded-full">{tag}</span>
+              ))}
+            </div>
+
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-tight tracking-tight mb-5 group-hover:text-brand-300 transition-colors duration-200">
+              {featuredPost.data.title}
+            </h2>
+
+            <p class="text-gray-400 text-lg leading-relaxed max-w-3xl mb-6">
+              {featuredPost.data.description}
+            </p>
+
+            <div class="flex items-center gap-4">
+              <span class="text-sm text-gray-600">{formatDate(featuredPost.data.date)}</span>
+              <span class="flex items-center gap-1.5 text-sm font-semibold text-brand-400 group-hover:gap-2.5 transition-all duration-200">
+                Artikel lesen
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </span>
+            </div>
+          </a>
+        </article>
+      )}
+
+      <!-- ═══ REMAINING ARTICLES GRID ═══ -->
+      {remainingPosts.length > 0 && (
+        <div>
+          <div class="border-t-2 border-white/15 mb-10">
+            <span class="inline-block bg-white/10 text-gray-400 text-xs font-bold uppercase tracking-[0.18em] px-3 py-1.5 -mt-px">
+              Weitere Artikel
+            </span>
+          </div>
+
+          <div id="articles-grid" class="grid grid-cols-1 md:grid-cols-2 gap-0">
+            {remainingPosts.map((post, index) => {
+              const isLeftColumn = index % 2 === 0;
+              return (
+                <article
+                  data-article
+                  data-tags={JSON.stringify(post.data.tags)}
+                  class={`group py-8 border-b border-white/10 ${isLeftColumn ? 'md:pr-10 md:border-r md:border-r-white/10' : 'md:pl-10'}`}
+                >
+                  <a href={`${import.meta.env.BASE_URL}blog/${post.slug}`} class="block">
+                    <p class="text-xs font-bold uppercase tracking-[0.18em] text-brand-400 mb-3">
+                      {post.data.tags[0] ?? 'Blog'}
+                    </p>
+                    <h2 class="text-xl font-black text-white leading-snug tracking-tight mb-3 group-hover:text-brand-300 transition-colors duration-200">
+                      {post.data.title}
+                    </h2>
+                    <p class="text-gray-500 text-sm leading-relaxed line-clamp-2 mb-4">
+                      {post.data.description}
+                    </p>
+                    <div class="flex items-center justify-between">
+                      <span class="text-xs text-gray-600">{formatDate(post.data.date)}</span>
+                      <svg class="w-4 h-4 text-gray-600 group-hover:text-brand-400 group-hover:translate-x-0.5 transition-all duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                      </svg>
+                    </div>
+                  </a>
+                </article>
+              );
+            })}
+          </div>
         </div>
       )}
+
+      <!-- ═══ FOOTER CTA ═══ -->
+      <div class="mt-20 border-t-2 border-white/15 pt-10">
+        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
+          <div>
+            <p class="text-xs font-bold uppercase tracking-[0.18em] text-gray-600 mb-2">Immer auf dem Laufenden</p>
+            <p class="text-white font-bold text-lg leading-snug">
+              Neue Perspektiven zu KI und<br class="hidden sm:block" /> digitaler Transformation.
+            </p>
+          </div>
+          <a
+            href={`${import.meta.env.BASE_URL}#kontakt`}
+            class="inline-flex items-center gap-2 px-6 py-3 border border-white/20 text-white text-sm font-semibold hover:bg-white/5 hover:border-white/40 transition-all duration-200 rounded-sm whitespace-nowrap"
+          >
+            Kontakt aufnehmen
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+        <div class="border-t border-white/10 mt-10"></div>
+      </div>
+
     </div>
   </main>
 
   <Footer />
 </Layout>
+
+<script>
+  const filterButtons = document.querySelectorAll<HTMLButtonElement>('[data-filter]');
+  const articles = document.querySelectorAll<HTMLElement>('[data-article]');
+
+  filterButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const filter = btn.dataset.filter ?? 'all';
+
+      filterButtons.forEach(b => {
+        b.classList.remove('active', 'bg-brand-500', 'text-white');
+        b.classList.add('bg-white/5', 'text-gray-400', 'border', 'border-white/10');
+      });
+      btn.classList.add('active', 'bg-brand-500', 'text-white');
+      btn.classList.remove('bg-white/5', 'text-gray-400', 'border', 'border-white/10');
+
+      articles.forEach(article => {
+        const tagsRaw = article.dataset.tags ?? '[]';
+        const tags: string[] = JSON.parse(tagsRaw);
+        const show = filter === 'all' || tags.includes(filter);
+        (article as HTMLElement).style.display = show ? '' : 'none';
+      });
+    });
+  });
+</script>

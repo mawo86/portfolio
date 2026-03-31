@@ -20,8 +20,17 @@
 - Tools & Tech (KI/LLMs, Automatisierung, Enterprise, Analyse)
 - Projekte (ERP-Auswahl, Prozessanalyse, IT-Strategie, KI-Consulting)
 - Eigene Produkte (Cookloop + DartsIQ — beide live, mit App-Link)
-- Blog (keine Artikel aktuell — Sektion erscheint nur wenn Posts vorhanden)
+- Blog (erscheint nur wenn Posts vorhanden; 1 Artikel live)
 - Kontakt (Formspree-Formular)
+
+## Blog-Index-Seite (`/blog`)
+
+- NYT-inspiriertes Editorial-Design (2026-03-31 redesigned)
+- Editorial-Hero-Block mit persönlichem Statement und Trennlinien
+- Featured-Artikel: neuester Post groß und prominent herausgestellt
+- Weitere Artikel: 2-Spalten-Grid mit Trennlinien (keine Boxen)
+- Interaktiver Tag-Filter (vanilla JS, client-side)
+- Footer-CTA mit Link zu /#kontakt
 
 ## Eigene Produkte
 
