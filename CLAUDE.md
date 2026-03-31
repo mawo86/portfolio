@@ -143,14 +143,18 @@ npm run build # Produktions-Build
 **Erledigte Pläne:**
 - `plans/2026-03-24-website-deployment-und-content.md` — Deployment + Inhalte ✓
 - `plans/2026-03-25-linkedin-optimierung-website-erweiterung.md` — LinkedIn + Tools/Referenzen ✓
+- `plans/2026-03-31-blog-portfolio-seite-nyt-design.md` — Blog-Index NYT-Redesign ✓
+
+**Blog:** 1 Artikel live (`ki-automatisierung-mittelstand`). Blog-Index-Seite (`/blog`) hat NYT-inspiriertes Editorial-Design: Hero-Block, Featured-Artikel, 2-Spalten-Grid, interaktiver Tag-Filter. Artikel-Layout (`BlogLayout.astro`) mit verbesserter Lesbarkeit (großer Header, Autor-Karte, klare Typographie-Hierarchie).
 
 **LinkedIn-Optimierung:** `outputs/linkedin-optimierung.md` — fertige Texte zum Copy-Paste
 
 **Noch ausstehend:**
-- Ionos Domain busche.cloud verknüpfen (DNS: 4x A-Record auf GitHub IPs, CNAME www → mawo86.github.io) → danach `base: '/portfolio'` aus astro.config.mjs entfernen
+- Ionos Domain busche.cloud verknüpfen (DNS: 4x A-Record auf GitHub IPs, CNAME www → mawo86.github.io) → danach `base: '/portfolio'` aus astro.config.mjs entfernen (und alle `BASE_URL + '/'` Prefixe auf direkte Pfade umstellen)
 - Profilfoto (als `website/public/foto.jpg` ablegen)
 - Impressum mit echter Adresse vervollständigen
 - LinkedIn-Profil mit Texten aus `outputs/linkedin-optimierung.md` aktualisieren
+- Weitere Blog-Artikel schreiben
 
 ---
 
