@@ -6,5 +6,5 @@ export default defineConfig({
   integrations: [tailwind(), mdx()],
   site: 'https://busche.cloud',
   // base wird entfernt sobald Custom Domain busche.cloud aktiv ist
-  base: '/portfolio',
+  // base: '/portfolio',
 });
