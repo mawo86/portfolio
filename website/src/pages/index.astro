@@ -529,6 +529,9 @@ const projects = [
             method="POST"
             class="space-y-5 text-left"
           >
+            <!-- Honeypot: Formspree verwirft Submissions wenn dieses Feld gefüllt ist -->
+            <input type="text" name="_gotcha" style="display:none !important" tabindex="-1" autocomplete="off" />
+            <input type="hidden" name="_timestamp" id="formTimestamp" value="" />
             <div class="grid sm:grid-cols-2 gap-5">
               <div>
                 <label class="block text-sm font-medium text-gray-300 mb-2" for="name">Name</label>
@@ -602,3 +605,18 @@ const projects = [
 
   <Footer />
 </Layout>
+
+<script>
+  const loadTime = Date.now();
+  const tsField = document.getElementById('formTimestamp');
+  if (tsField) tsField.value = String(loadTime);
+
+  const form = document.querySelector('form[action*="formspree"]');
+  if (form) {
+    form.addEventListener('submit', (e) => {
+      if (Date.now() - loadTime < 3000) {
+        e.preventDefault();
+      }
+    });
+  }
+</script>

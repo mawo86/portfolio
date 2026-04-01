@@ -132,7 +132,7 @@ npm run dev   # Dev-Server auf http://localhost:4321
 npm run build # Produktions-Build
 ```
 
-**Live unter:** https://mawo86.github.io/portfolio
+**Live unter:** https://busche.cloud
 
 **Sektionen:** Hero · Über mich · Leistungen · Tools · Projekte · Eigene Produkte · Blog · Kontakt
 
@@ -150,7 +150,7 @@ npm run build # Produktions-Build
 **LinkedIn-Optimierung:** `outputs/linkedin-optimierung.md` — fertige Texte zum Copy-Paste
 
 **Noch ausstehend:**
-- Ionos Domain busche.cloud verknüpfen (DNS: 4x A-Record auf GitHub IPs, CNAME www → mawo86.github.io) → danach `base: '/portfolio'` aus astro.config.mjs entfernen (und alle `BASE_URL + '/'` Prefixe auf direkte Pfade umstellen)
+- ~~Ionos Domain busche.cloud verknüpfen~~ ✓ (erledigt 2026-04-01)
 - Profilfoto (als `website/public/foto.jpg` ablegen)
 - Impressum mit echter Adresse vervollständigen
 - LinkedIn-Profil mit Texten aus `outputs/linkedin-optimierung.md` aktualisieren

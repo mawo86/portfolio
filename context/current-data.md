@@ -4,8 +4,8 @@
 
 | Aspekt | Status |
 |--------|--------|
-| Domain | busche.cloud (noch WordPress — Ionos-Umleitung ausstehend) |
-| Neue Website | Live auf https://mawo86.github.io/portfolio |
+| Domain | busche.cloud (DNS auf GitHub Pages konfiguriert — 2026-04-01) |
+| Neue Website | Live auf https://busche.cloud (+ https://mawo86.github.io/portfolio) |
 | Hosting | GitHub Pages (Repo: github.com/mawo86/portfolio) |
 | Tech-Stack | Astro 4 + Tailwind CSS + MDX |
 | Logo | Inline-SVG in Header/Footer (kein Bilddatei-Request) |
@@ -41,8 +41,8 @@
 
 ## Offene Punkte
 
-- [ ] Ionos DNS konfigurieren → busche.cloud auf GitHub Pages zeigen lassen
-- [ ] Nach Domain-Umstellung: `base: '/portfolio'` aus `website/astro.config.mjs` entfernen
+- [x] Ionos DNS konfiguriert → busche.cloud zeigt auf GitHub Pages (2026-04-01)
+- [x] `base: '/portfolio'` aus `website/astro.config.mjs` entfernt
 - [ ] Profilfoto als `website/public/foto.jpg` ablegen
 - [ ] Impressum mit echter Adresse vervollständigen
 - [ ] LinkedIn aktualisieren (Texte in `outputs/linkedin-optimierung.md`)
