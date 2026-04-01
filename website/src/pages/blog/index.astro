@@ -74,7 +74,7 @@ function formatDate(date: Date) {
       <!-- ═══ FEATURED ARTICLE ═══ -->
       {featuredPost && (
         <article data-article data-tags={JSON.stringify(featuredPost.data.tags)} class="mb-14 group">
-          <a href={`${import.meta.env.BASE_URL}/blog/${featuredPost.slug}`} class="block">
+          <a href={`${import.meta.env.BASE_URL}blog/${featuredPost.slug}`} class="block">
             <div class="flex flex-wrap items-center gap-3 mb-5">
               <span class="text-xs font-bold uppercase tracking-[0.18em] text-brand-400">Neuester Beitrag</span>
               <span class="w-12 h-px bg-brand-500/40"></span>
@@ -122,7 +122,7 @@ function formatDate(date: Date) {
                   data-tags={JSON.stringify(post.data.tags)}
                   class={`group py-8 border-b border-white/10 ${isLeftColumn ? 'md:pr-10 md:border-r md:border-r-white/10' : 'md:pl-10'}`}
                 >
-                  <a href={`${import.meta.env.BASE_URL}/blog/${post.slug}`} class="block">
+                  <a href={`${import.meta.env.BASE_URL}blog/${post.slug}`} class="block">
                     <p class="text-xs font-bold uppercase tracking-[0.18em] text-brand-400 mb-3">
                       {post.data.tags[0] ?? 'Blog'}
                     </p>
