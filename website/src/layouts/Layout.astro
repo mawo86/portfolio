@@ -71,8 +71,10 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
       }
     </style>
 
+    <link rel="alternate" type="application/rss+xml" title="Busche Cloud Blog" href="/rss.xml" />
     <link rel="icon" type="image/png" href={`${import.meta.env.BASE_URL}icon_transparent_bg.png`} />
     <title>{title}</title>
+    <slot name="head" />
   </head>
   <body class="bg-[#080B14] text-white font-sans antialiased">
     <slot />

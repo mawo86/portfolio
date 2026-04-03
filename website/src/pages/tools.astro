@@ -1,0 +1,175 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import AffiliateDisclosure from '../components/AffiliateDisclosure.astro';
+
+const categories = [
+  {
+    name: 'KI & LLMs',
+    tools: [
+      {
+        name: 'Claude',
+        description: 'Mein Haupt-KI-Modell für komplexe Aufgaben, Code-Generierung und strategisches Denken. Besonders stark bei langen Kontexten und nuancierten Antworten.',
+        url: 'https://claude.ai',
+        affiliate: false,
+      },
+      {
+        name: 'ChatGPT',
+        description: 'Nutze ich als Ergänzung zu Claude — vor allem für schnelle Recherchen, Bildgenerierung mit DALL-E und als Zweitmeinung bei komplexen Fragestellungen.',
+        url: 'https://chat.openai.com',
+        affiliate: false,
+      },
+      {
+        name: 'WhisperFlow',
+        description: 'Sprache-zu-Text direkt auf dem Desktop. Diktiere Texte, E-Mails und Notizen freihändig — funktioniert offline und ist DSGVO-freundlich.',
+        url: 'https://whisperflow.com',
+        affiliate: false,
+      },
+    ],
+  },
+  {
+    name: 'Automatisierung',
+    tools: [
+      {
+        name: 'n8n',
+        description: 'Open-Source-Automatisierungsplattform, die ich für komplexe Workflows einsetze. Self-hosted möglich, kein Vendor Lock-in, extrem flexibel.',
+        url: 'https://n8n.io',
+        affiliate: true,
+        affiliateNote: 'Affiliate',
+      },
+      {
+        name: 'Zapier',
+        description: 'Für schnelle, einfache Automatisierungen zwischen SaaS-Tools. Riesige Bibliothek an Integrationen, ideal zum Einstieg in Automatisierung.',
+        url: 'https://zapier.com',
+        affiliate: true,
+        affiliateNote: 'Affiliate',
+      },
+    ],
+  },
+  {
+    name: 'Hosting & Infrastruktur',
+    tools: [
+      {
+        name: 'IONOS',
+        description: 'Domains und E-Mail-Hosting. Deutsches Unternehmen, DSGVO-konform, zuverlässig. Hier liegt auch busche.cloud.',
+        url: 'https://www.ionos.de',
+        affiliate: true,
+        affiliateNote: 'Affiliate',
+      },
+      {
+        name: 'Hostinger',
+        description: 'Günstiges und schnelles Webhosting mit guter Performance. Nutze ich für kleinere Projekte und Kundenprojekte.',
+        url: 'https://www.hostinger.de',
+        affiliate: true,
+        affiliateNote: 'Affiliate',
+      },
+    ],
+  },
+  {
+    name: 'Produktivität & Design',
+    tools: [
+      {
+        name: 'Notion',
+        description: 'Mein zweites Gehirn für Projektplanung, Dokumentation und Wissensmanagement. Nutze ich sowohl privat als auch für Kundenprojekte.',
+        url: 'https://www.notion.so',
+        affiliate: true,
+        affiliateNote: 'Affiliate',
+      },
+      {
+        name: 'Obsidian',
+        description: 'Für persönliche Notizen und vernetzte Gedanken. Lokale Markdown-Dateien, kein Cloud-Zwang, extrem schnell.',
+        url: 'https://obsidian.md',
+        affiliate: false,
+      },
+      {
+        name: 'Canva',
+        description: 'Für schnelle Grafiken, Präsentationen und Social-Media-Content. Die KI-Features machen vieles noch schneller.',
+        url: 'https://www.canva.com',
+        affiliate: true,
+        affiliateNote: 'Affiliate',
+      },
+    ],
+  },
+  {
+    name: 'Entwicklung',
+    tools: [
+      {
+        name: 'VS Code',
+        description: 'Mein Code-Editor für alles — von schnellen Skripten bis zu kompletten Webprojekten. Mit den richtigen Extensions unschlagbar.',
+        url: 'https://code.visualstudio.com',
+        affiliate: false,
+      },
+    ],
+  },
+];
+---
+
+<Layout
+  title="Empfohlene Tools — Busche Cloud"
+  description="Die Tools, die ich täglich nutze: KI, Automatisierung, Hosting, Produktivität. Ehrliche Empfehlungen aus der Praxis."
+>
+  <Header />
+  <main class="pt-28 pb-24">
+    <div class="max-w-4xl mx-auto px-6">
+
+      <!-- Header -->
+      <div class="border-t-2 border-white/20 pt-10 mb-8">
+        <p class="text-brand-400 text-xs font-bold uppercase tracking-[0.2em] mb-5">Busche Cloud · Tools</p>
+        <h1 class="text-4xl sm:text-5xl font-black text-white leading-tight tracking-tight mb-5">
+          Tools, die ich empfehle
+        </h1>
+        <p class="text-gray-400 text-lg leading-relaxed max-w-2xl">
+          Das sind die Tools, die ich wirklich jeden Tag nutze — für KI-Projekte, Automatisierung, Kundenprojekte und meine eigene Produktivität. Keine Werbetexte, sondern ehrliche Einschätzungen.
+        </p>
+      </div>
+
+      <!-- Affiliate Disclosure -->
+      <div class="mb-12">
+        <AffiliateDisclosure />
+      </div>
+
+      <!-- Tool Categories -->
+      {categories.map(category => (
+        <section class="mb-14">
+          <div class="border-t border-white/10 pt-6 mb-6">
+            <h2 class="text-xl font-black text-white tracking-tight">{category.name}</h2>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {category.tools.map(tool => (
+              <a
+                href={tool.url}
+                target="_blank"
+                rel={tool.affiliate ? 'sponsored noopener' : 'noopener noreferrer'}
+                class="group block p-5 border border-white/10 rounded-xl bg-white/2 hover:border-brand-500/30 hover:bg-white/3 transition-all"
+              >
+                <div class="flex items-center gap-3 mb-3">
+                  <h3 class="text-base font-bold text-white group-hover:text-brand-300 transition-colors">{tool.name}</h3>
+                  {tool.affiliate && (
+                    <span class="px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-brand-400 bg-brand-500/10 border border-brand-500/20 rounded-full">
+                      {tool.affiliateNote}
+                    </span>
+                  )}
+                  <svg class="w-4 h-4 text-gray-600 group-hover:text-brand-400 ml-auto transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </div>
+                <p class="text-gray-400 text-sm leading-relaxed">{tool.description}</p>
+              </a>
+            ))}
+          </div>
+        </section>
+      ))}
+
+      <!-- Footer note -->
+      <div class="mt-8 pt-8 border-t border-white/10">
+        <p class="text-gray-500 text-sm leading-relaxed">
+          Diese Liste aktualisiere ich regelmäßig. Hast du Fragen zu einem Tool oder brauchst eine Empfehlung für deinen Use Case?
+          <a href="/#kontakt" class="text-brand-400 hover:text-brand-300 transition-colors">Schreib mir.</a>
+        </p>
+      </div>
+
+    </div>
+  </main>
+  <Footer />
+</Layout>

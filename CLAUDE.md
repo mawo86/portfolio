@@ -144,17 +144,35 @@ npm run build # Produktions-Build
 - `plans/2026-03-24-website-deployment-und-content.md` — Deployment + Inhalte ✓
 - `plans/2026-03-25-linkedin-optimierung-website-erweiterung.md` — LinkedIn + Tools/Referenzen ✓
 - `plans/2026-03-31-blog-portfolio-seite-nyt-design.md` — Blog-Index NYT-Redesign ✓
+- `plans/2026-04-03-sichtbarkeit-organisches-wachstum-affiliates.md` — SEO, Newsletter, Affiliates, Content-Pipeline ✓
 
-**Blog:** 1 Artikel live (`ki-automatisierung-mittelstand`). Blog-Index-Seite (`/blog`) hat NYT-inspiriertes Editorial-Design: Hero-Block, Featured-Artikel, 2-Spalten-Grid, interaktiver Tag-Filter. Artikel-Layout (`BlogLayout.astro`) mit verbesserter Lesbarkeit (großer Header, Autor-Karte, klare Typographie-Hierarchie).
+**Blog:** 6 Artikel live. Blog-Index-Seite (`/blog`) hat NYT-inspiriertes Editorial-Design: Hero-Block, Featured-Artikel, 2-Spalten-Grid, interaktiver Tag-Filter. Artikel-Layout (`BlogLayout.astro`) mit Lesezeit, JSON-LD, Prev/Next-Navigation, Newsletter-CTA und Autor-Karte.
+
+**Blog-Artikel:**
+- `ki-automatisierung-mittelstand` — KI-Automatisierung im Mittelstand
+- `chatgpt-vs-claude-unternehmen` — ChatGPT vs Claude Vergleich
+- `ki-prozesse-identifizieren` — 5 Zeichen für KI-geeignete Prozesse
+- `mein-ki-toolkit` — Persönliches Tool-Setup
+- `ki-strategie-erste-schritte` — KI-Strategie Einsteigerguide
+- `sap-ki-integration` — SAP + KI Praxis
+
+**Neue Seiten & Features:**
+- `/tools` — Empfohlene Tools mit Affiliate-Links (n8n, Zapier, IONOS, Hostinger, Notion, Canva)
+- `/rss.xml` — RSS-Feed für Blog-Abonnenten
+- Newsletter-Signup via Buttondown (Blog-Index, Artikel, ggf. Startseite)
+- JSON-LD strukturierte Daten auf allen Blog-Artikeln
+- `robots.txt` — Suchmaschinen + Social erlaubt, KI-Scraper blockiert
+
+**Content-Strategie:** `outputs/content-strategie.md` — Themen-Cluster, Keywords, Veröffentlichungsrhythmus (2x/Monat)
 
 **LinkedIn-Optimierung:** `outputs/linkedin-optimierung.md` — fertige Texte zum Copy-Paste
 
 **Noch ausstehend:**
-- ~~Ionos Domain busche.cloud verknüpfen~~ ✓ (erledigt 2026-04-01)
-- Profilfoto (als `website/public/foto.jpg` ablegen)
-- Impressum mit echter Adresse vervollständigen
 - LinkedIn-Profil mit Texten aus `outputs/linkedin-optimierung.md` aktualisieren
-- Weitere Blog-Artikel schreiben
+- Buttondown-Account erstellen (buttondown.com) und Username in NewsletterSignup.astro anpassen
+- Affiliate-Programme bei n8n, Zapier, IONOS, Hostinger, Notion, Canva beantragen und Links einsetzen
+- Google Search Console einrichten und Sitemap einreichen
+- OG-Images pro Blog-Artikel erstellen
 
 ---
 

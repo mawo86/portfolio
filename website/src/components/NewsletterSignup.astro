@@ -1,0 +1,76 @@
+---
+export interface Props {
+  compact?: boolean;
+}
+
+const { compact = false } = Astro.props;
+---
+
+{compact ? (
+  <!-- Kompakte Variante für Blog-Artikel -->
+  <div class="p-6 border border-white/10 rounded-xl bg-white/2">
+    <p class="text-xs font-bold uppercase tracking-widest text-brand-400 mb-2">Newsletter</p>
+    <p class="text-white font-semibold text-sm mb-4">Neue Artikel direkt ins Postfach — kein Spam, jederzeit abmeldbar.</p>
+    <form
+      action="https://buttondown.com/api/emails/embed-subscribe/buschecloud"
+      method="post"
+      target="popupwindow"
+      class="flex flex-col sm:flex-row gap-3"
+    >
+      <input
+        type="email"
+        name="email"
+        placeholder="Deine E-Mail-Adresse"
+        required
+        class="flex-1 px-4 py-2.5 bg-white/5 border border-white/10 rounded-lg text-sm text-white placeholder:text-gray-500 focus:outline-none focus:border-brand-500/50 transition-colors"
+      />
+      <button
+        type="submit"
+        class="px-5 py-2.5 bg-brand-500 hover:bg-brand-400 text-white font-semibold rounded-lg transition-colors text-sm whitespace-nowrap"
+      >
+        Abonnieren
+      </button>
+    </form>
+    <p class="text-xs text-gray-600 mt-3">
+      Mit der Anmeldung stimmst du zu, E-Mails zu erhalten. Abmeldung jederzeit per Klick.
+      <a href="/datenschutz#newsletter" class="text-gray-500 hover:text-gray-400 transition-colors">Datenschutz</a>
+    </p>
+  </div>
+) : (
+  <!-- Volle Variante für Blog-Index und Startseite -->
+  <div class="p-8 border border-white/10 rounded-xl bg-white/2">
+    <div class="flex flex-col sm:flex-row sm:items-start gap-6">
+      <div class="flex-1">
+        <p class="text-xs font-bold uppercase tracking-widest text-brand-400 mb-3">Newsletter</p>
+        <h3 class="text-xl font-black text-white mb-2 leading-tight">Bleib auf dem Laufenden.</h3>
+        <p class="text-gray-400 text-sm leading-relaxed mb-5">
+          Neue Artikel zu KI-Automatisierung und digitaler Transformation — direkt ins Postfach. Kein Spam, kein Tracking, jederzeit abmeldbar.
+        </p>
+        <form
+          action="https://buttondown.com/api/emails/embed-subscribe/buschecloud"
+          method="post"
+          target="popupwindow"
+          class="flex flex-col sm:flex-row gap-3"
+        >
+          <input
+            type="email"
+            name="email"
+            placeholder="Deine E-Mail-Adresse"
+            required
+            class="flex-1 px-4 py-2.5 bg-white/5 border border-white/10 rounded-lg text-sm text-white placeholder:text-gray-500 focus:outline-none focus:border-brand-500/50 transition-colors"
+          />
+          <button
+            type="submit"
+            class="px-5 py-2.5 bg-brand-500 hover:bg-brand-400 text-white font-semibold rounded-lg transition-colors text-sm whitespace-nowrap"
+          >
+            Abonnieren
+          </button>
+        </form>
+        <p class="text-xs text-gray-600 mt-3">
+          Mit der Anmeldung stimmst du zu, E-Mails zu erhalten. Abmeldung jederzeit per Klick.
+          <a href="/datenschutz#newsletter" class="text-gray-500 hover:text-gray-400 transition-colors">Datenschutz</a>
+        </p>
+      </div>
+    </div>
+  </div>
+)}

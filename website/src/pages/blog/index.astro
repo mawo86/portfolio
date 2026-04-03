@@ -3,6 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import { getCollection } from 'astro:content';
+import NewsletterSignup from '../../components/NewsletterSignup.astro';
 
 const allPosts = (await getCollection('blog', ({ data }) => !data.draft))
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
@@ -146,26 +147,9 @@ function formatDate(date: Date) {
         </div>
       )}
 
-      <!-- ═══ FOOTER CTA ═══ -->
+      <!-- ═══ NEWSLETTER CTA ═══ -->
       <div class="mt-20 border-t-2 border-white/15 pt-10">
-        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
-          <div>
-            <p class="text-xs font-bold uppercase tracking-[0.18em] text-gray-600 mb-2">Immer auf dem Laufenden</p>
-            <p class="text-white font-bold text-lg leading-snug">
-              Neue Perspektiven zu KI und<br class="hidden sm:block" /> digitaler Transformation.
-            </p>
-          </div>
-          <a
-            href={`${import.meta.env.BASE_URL}#kontakt`}
-            class="inline-flex items-center gap-2 px-6 py-3 border border-white/20 text-white text-sm font-semibold hover:bg-white/5 hover:border-white/40 transition-all duration-200 rounded-sm whitespace-nowrap"
-          >
-            Kontakt aufnehmen
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-            </svg>
-          </a>
-        </div>
-        <div class="border-t border-white/10 mt-10"></div>
+        <NewsletterSignup />
       </div>
 
     </div>
