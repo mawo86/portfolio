@@ -94,9 +94,10 @@
 - [x] SEO-Infrastruktur (RSS, robots.txt, JSON-LD, Sitemap) — 2026-04-03
 - [x] Newsletter-Formular eingebaut (Buttondown) — 2026-04-03
 - [x] /tools-Seite mit Affiliate-Infrastruktur — 2026-04-03
-- [x] 5 neue Blog-Artikel geschrieben — 2026-04-03
-- [ ] Buttondown-Account erstellen und Username in NewsletterSignup.astro prüfen
+- [x] 10 Blog-Drafts geschrieben (meine-stimme Stil) — 2026-04-03
+- [x] Google Search Console eingerichtet + Sitemap eingereicht — 2026-04-03
+- [ ] Buttondown-Account erstellen, Username in NewsletterSignup.astro eintragen
 - [ ] Affiliate-Programme beantragen (n8n, Zapier, IONOS, Hostinger, Notion, Canva)
-- [ ] Google Search Console einrichten + Sitemap einreichen
+- [ ] 10 Blog-Drafts reviewen und freigeben (draft: false setzen)
 - [ ] OG-Images pro Blog-Artikel erstellen
 - [ ] LinkedIn aktualisieren (Texte in `outputs/linkedin-optimierung.md`)

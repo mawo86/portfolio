@@ -146,15 +146,22 @@ npm run build # Produktions-Build
 - `plans/2026-03-31-blog-portfolio-seite-nyt-design.md` — Blog-Index NYT-Redesign ✓
 - `plans/2026-04-03-sichtbarkeit-organisches-wachstum-affiliates.md` — SEO, Newsletter, Affiliates, Content-Pipeline ✓
 
-**Blog:** 6 Artikel live. Blog-Index-Seite (`/blog`) hat NYT-inspiriertes Editorial-Design: Hero-Block, Featured-Artikel, 2-Spalten-Grid, interaktiver Tag-Filter. Artikel-Layout (`BlogLayout.astro`) mit Lesezeit, JSON-LD, Prev/Next-Navigation, Newsletter-CTA und Autor-Karte.
+**Blog:** 1 Artikel live, 10 Drafts zum Review. Blog-Index-Seite (`/blog`) hat NYT-inspiriertes Editorial-Design: Hero-Block, Featured-Artikel, 2-Spalten-Grid, interaktiver Tag-Filter. Artikel-Layout (`BlogLayout.astro`) mit Lesezeit, JSON-LD, Prev/Next-Navigation, Newsletter-CTA und Autor-Karte.
 
-**Blog-Artikel:**
+**Blog-Artikel (live):**
 - `ki-automatisierung-mittelstand` — KI-Automatisierung im Mittelstand
+
+**Blog-Drafts (draft: true, ausstehend Review):**
 - `chatgpt-vs-claude-unternehmen` — ChatGPT vs Claude Vergleich
 - `ki-prozesse-identifizieren` — 5 Zeichen für KI-geeignete Prozesse
 - `mein-ki-toolkit` — Persönliches Tool-Setup
 - `ki-strategie-erste-schritte` — KI-Strategie Einsteigerguide
 - `sap-ki-integration` — SAP + KI Praxis
+- `idee-validieren-mit-ki` — Idee in 2h mit KI prüfen
+- `mein-ki-os` — Persönliches KI-Betriebssystem mit Claude Code
+- `prompts-die-funktionieren` — 5 Prompts aus dem echten Alltag
+- `n8n-erster-workflow` — n8n Einstieg Schritt-für-Schritt
+- `app-bauen-ohne-programmierer` — App gebaut ohne Entwickler-Background
 
 **Neue Seiten & Features:**
 - `/tools` — Empfohlene Tools mit Affiliate-Links (n8n, Zapier, IONOS, Hostinger, Notion, Canva)
@@ -169,9 +176,10 @@ npm run build # Produktions-Build
 
 **Noch ausstehend:**
 - LinkedIn-Profil mit Texten aus `outputs/linkedin-optimierung.md` aktualisieren
-- Buttondown-Account erstellen (buttondown.com) und Username in NewsletterSignup.astro anpassen
-- Affiliate-Programme bei n8n, Zapier, IONOS, Hostinger, Notion, Canva beantragen und Links einsetzen
-- Google Search Console einrichten und Sitemap einreichen
+- Buttondown-Account erstellen und Username in `website/src/components/NewsletterSignup.astro` eintragen
+- Affiliate-Programme beantragen (n8n, Zapier, IONOS, Hostinger, Notion, Canva) und Links in `website/src/pages/tools.astro` ersetzen
+- ~~Google Search Console einrichten und Sitemap einreichen~~ ✓ (erledigt 2026-04-03)
+- 10 Blog-Drafts reviewen und einzeln mit `draft: false` freigeben
 - OG-Images pro Blog-Artikel erstellen
 
 ---

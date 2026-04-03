@@ -1,7 +1,7 @@
 # Plan: Sichtbarkeit, organisches Wachstum & Affiliate-Einnahmen für busche.cloud
 
 **Erstellt:** 2026-04-03
-**Status:** In Umsetzung
+**Status:** Implementiert ✓
 **Anforderung:** Blog-Strategie für organisches Wachstum und Community-Aufbau optimieren; Affiliate-Marketing evaluieren und umsetzen
 
 ---
