@@ -66,45 +66,50 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
     </div>
 
     <!-- Article body -->
-    <article class="max-w-2xl mx-auto px-6">
+    <article class="max-w-[680px] mx-auto px-6">
       <div class="
         prose prose-invert max-w-none
 
-        prose-p:text-gray-300 prose-p:leading-[1.9] prose-p:text-[1.0625rem]
-        prose-p:mb-7
+        prose-p:text-[#c8cdd6] prose-p:leading-[1.95] prose-p:text-[1.075rem]
+        prose-p:mb-8
 
-        prose-h2:text-white prose-h2:font-black prose-h2:text-2xl
-        prose-h2:mt-16 prose-h2:mb-6 prose-h2:tracking-tight
-        prose-h2:border-t-2 prose-h2:border-brand-500/30 prose-h2:pt-10
-        prose-h2:pl-0
+        prose-h2:text-white prose-h2:font-black prose-h2:text-[1.6rem]
+        prose-h2:mt-20 prose-h2:mb-5 prose-h2:tracking-tight
+        prose-h2:border-t prose-h2:border-white/10 prose-h2:pt-12
 
-        prose-h3:text-white prose-h3:font-bold prose-h3:text-lg
-        prose-h3:mt-10 prose-h3:mb-3 prose-h3:tracking-tight
+        prose-h3:text-white prose-h3:font-bold prose-h3:text-[1.15rem]
+        prose-h3:mt-12 prose-h3:mb-4 prose-h3:tracking-tight
 
-        prose-strong:text-white prose-strong:font-bold
+        prose-strong:text-white prose-strong:font-semibold
 
-        prose-em:text-gray-200 prose-em:not-italic prose-em:font-medium
+        prose-a:text-[#60a5fa] prose-a:no-underline prose-a:font-normal
+        prose-a:border-b prose-a:border-blue-400/25
+        hover:prose-a:border-blue-400/70
+        prose-a:transition-colors prose-a:duration-150
 
-        prose-a:text-brand-400 prose-a:no-underline prose-a:font-medium
-        prose-a:border-b prose-a:border-brand-500/30
-        hover:prose-a:text-brand-300 hover:prose-a:border-brand-400/60
-        prose-a:transition-colors
+        prose-ul:my-8 prose-ul:space-y-3
+        prose-ol:my-8 prose-ol:space-y-3
+        prose-li:text-[#c8cdd6] prose-li:leading-[1.85] prose-li:pl-1
+        prose-li:marker:text-[#60a5fa]
 
-        prose-ul:text-gray-300 prose-ul:my-7 prose-ul:space-y-2.5
-        prose-ol:text-gray-300 prose-ol:my-7 prose-ol:space-y-2.5
-        prose-li:text-gray-300 prose-li:leading-[1.8] prose-li:pl-1
-        prose-li:marker:text-brand-400 prose-li:marker:font-bold
+        prose-blockquote:border-l-0 prose-blockquote:not-italic
+        prose-blockquote:bg-white/[0.04] prose-blockquote:rounded-xl
+        prose-blockquote:px-8 prose-blockquote:py-6 prose-blockquote:my-12
+        prose-blockquote:text-gray-100 prose-blockquote:text-[1.1rem]
+        prose-blockquote:leading-[1.8] prose-blockquote:font-normal
+        prose-blockquote:border prose-blockquote:border-white/8
 
-        prose-blockquote:border-l-[3px] prose-blockquote:border-brand-500
-        prose-blockquote:bg-brand-500/5 prose-blockquote:rounded-r-xl
-        prose-blockquote:px-7 prose-blockquote:py-5 prose-blockquote:my-10
-        prose-blockquote:text-gray-100 prose-blockquote:not-italic
-        prose-blockquote:text-[1.05rem] prose-blockquote:leading-relaxed
-        prose-blockquote:font-normal
+        prose-hr:border-none prose-hr:my-16
+        prose-hr:before:content-['···'] prose-hr:before:block
+        prose-hr:before:text-center prose-hr:before:text-gray-600
+        prose-hr:before:text-2xl prose-hr:before:tracking-[0.5em]
 
-        prose-hr:border-white/10 prose-hr:my-14
+        prose-img:rounded-xl prose-img:my-10 prose-img:w-full
 
-        prose-code:text-brand-300 prose-code:bg-white/6 prose-code:px-1.5
+        prose-figcaption:text-gray-500 prose-figcaption:text-sm
+        prose-figcaption:text-center prose-figcaption:-mt-6 prose-figcaption:mb-10
+
+        prose-code:text-blue-300 prose-code:bg-white/6 prose-code:px-1.5
         prose-code:py-0.5 prose-code:rounded prose-code:text-sm prose-code:font-normal
         prose-code:border prose-code:border-white/8
       ">
