@@ -51,8 +51,6 @@ Aber der Grundrhythmus ist ein anderer.
   <figcaption>Früher war das der Arbeitsalltag eines Entwicklers. Heute ist es einer von vielen Schritten. (Foto: Unsplash)</figcaption>
 </figure>
 
----
-
 ## Was sich wirklich verändert hat
 
 Die Flaschenhälse haben sich verschoben.
@@ -74,8 +72,6 @@ Du bist nicht der Coder. Du bist der Architekt.
 Du entscheidest was gebaut wird, in welcher Reihenfolge, welche Kompromisse akzeptabel sind. Die KI setzt um. Aber ohne deine Richtung läuft sie im Kreis.
 
 Das Verhältnis erinnert mich an einen erfahrenen Projektleiter mit einem sehr schnellen Junior-Entwickler. Der Junior macht alles was man ihm sagt — aber er braucht klare Ansagen.
-
----
 
 ## Was das nicht ist
 
@@ -113,8 +109,6 @@ Nicht die ganze Vision — die kleinste sinnvolle Version. Ein Formular. Eine Be
 Das Schlimmste: Es funktioniert nicht und du hast ein paar Stunden investiert.
 
 Das Beste: Du hast ein laufendes Produkt — und ein komplett neues Bild davon, was für dich möglich ist.
-
----
 
 ## Mein Toolstack
 
