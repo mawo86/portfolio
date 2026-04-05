@@ -12,6 +12,11 @@ Ich verstehe Code, kann ihn lesen, habe über die Jahre Dinge in verschiedenen S
 
 Dann kam [Claude Code](https://claude.ai/code).
 
+<figure>
+  <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=80" alt="Code-Editor mit dunklem Theme auf einem Laptop-Bildschirm" />
+  <figcaption>Der Arbeitsplatz hat sich verändert — KI schreibt mit. (Foto: Unsplash)</figcaption>
+</figure>
+
 ## Was ich gebaut habe
 
 Zwei eigene Produkte. Live. **Cookloop** und **DartsIQ**.
@@ -40,6 +45,11 @@ Aber der Grundrhythmus ist ein anderer.
 **Früher:** Problem verstehen → Google → Stack Overflow → Code schreiben → debuggen → Stunden später → nächstes Problem.
 
 **Heute:** Problem beschreiben → Code erscheint → testen → weiter.
+
+<figure>
+  <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=1200&q=80" alt="Mehrere Monitore mit Code in einem dunklen Büro" />
+  <figcaption>Früher war das der Arbeitsalltag eines Entwicklers. Heute ist es einer von vielen Schritten. (Foto: Unsplash)</figcaption>
+</figure>
 
 ---
 
@@ -88,6 +98,11 @@ Der erste Schritt ist nicht Programmieren lernen.
 Der erste Schritt ist: Beschreib die Idee so präzise, dass ein anderer Mensch sie umsetzen könnte. Wenn du das kannst, hast du die Grundvoraussetzung.
 
 ## Dein nächster Schritt
+
+<figure>
+  <img src="https://images.unsplash.com/photo-1512314889357-e157c22f938d?auto=format&fit=crop&w=1200&q=80" alt="Hände tippen auf einer Laptop-Tastatur" />
+  <figcaption>Der erste Schritt ist kleiner als du denkst. (Foto: Unsplash)</figcaption>
+</figure>
 
 Nimm die kleinste, konkreteste Version einer Idee die du hast.
 
