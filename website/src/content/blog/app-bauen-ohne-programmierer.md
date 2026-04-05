@@ -14,7 +14,7 @@ Dann kam [Claude Code](https://claude.ai/code).
 
 <figure>
   <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=80" alt="Code-Editor mit dunklem Theme auf einem Laptop-Bildschirm" />
-  <figcaption>Der Arbeitsplatz hat sich verändert — KI schreibt mit. (Foto: Unsplash)</figcaption>
+  <figcaption>Der Arbeitsplatz hat sich verändert. KI schreibt mit. (Foto: Unsplash)</figcaption>
 </figure>
 
 ## Was ich gebaut habe
@@ -23,20 +23,20 @@ Zwei eigene Produkte. Live. **Cookloop** und **DartsIQ**.
 
 Cookloop ist eine Web-App für Rezeptplanung. DartsIQ ein Analyse-Tool für Darts-Spieler.
 
-Beide laufen in der Beta. Beide haben echte Tester. Und beide habe ich in wenigen Tagen gebaut — kein Entwicklerteam, keine Agentur, keine ausgelagerten Tickets. Nur ich, ein Terminal und KI als Entwicklungspartner.
+Beide laufen in der Beta. Beide haben echte Tester. Und beide habe ich in wenigen Tagen gebaut. Kein Entwicklerteam, keine Agentur, keine ausgelagerten Tickets. Nur ich, ein Terminal und KI als Entwicklungspartner.
 
-> Der Zugang zu Software-Entwicklung hat sich fundamental verändert. Nicht irgendwann in der Zukunft — jetzt, heute, für jeden der es ausprobiert.
+> Der Zugang zu Software-Entwicklung hat sich fundamental verändert. Nicht irgendwann in der Zukunft. Jetzt, heute, für jeden der es ausprobiert.
 
 ## Wie das konkret aussieht
 
-[Claude Code](https://claude.ai/code) läuft direkt im Terminal. Es liest Dateien, versteht das Projekt und schreibt Code — nicht als Antwort in einem Chat-Fenster, sondern direkt in die richtigen Dateien.
+[Claude Code](https://claude.ai/code) läuft direkt im Terminal. Es liest Dateien, versteht das Projekt und schreibt Code. Nicht als Antwort in einem Chat-Fenster, sondern direkt in die richtigen Dateien.
 
 Der Rhythmus ist schnell:
 
 1. Ich beschreibe was ich will
 2. Claude baut es
 3. Ich teste
-4. Ich sage was nicht stimmt — Claude korrigiert
+4. Ich sage was nicht stimmt. Claude korrigiert.
 
 Das klingt einfacher als es ist. Es gibt Momente wo es hakt. Wo der generierte Code nicht das tut was man erwartet. Wo man verstehen muss was da eigentlich gebaut wurde.
 
@@ -55,13 +55,13 @@ Aber der Grundrhythmus ist ein anderer.
 
 Die Flaschenhälse haben sich verschoben.
 
-Früher war der Engpass **Implementierung**. Du hattest eine Idee und brauchtest Programmierkenntnisse — oder jemanden der sie hatte. Teuer. Langsam. Abhängig.
+Früher war der Engpass **Implementierung**. Du hattest eine Idee und brauchtest Programmierkenntnisse. Oder jemanden der sie hatte. Teuer. Langsam. Abhängig.
 
 Heute ist der Engpass **Klarheit**.
 
-Du musst präzise beschreiben können was du willst. Entscheiden, nicht nur wünschen. Verstehen was gebaut wird — auch ohne jeden Codepfad zu kennen.
+Du musst präzise beschreiben können was du willst. Entscheiden, nicht nur wünschen. Verstehen was gebaut wird, auch ohne jeden Codepfad zu kennen.
 
-> Früher hast du einen Entwickler gebraucht. Heute brauchst du eine präzise Beschreibung — und den Mut anzufangen.
+> Früher hast du einen Entwickler gebraucht. Heute brauchst du eine präzise Beschreibung. Und den Mut anzufangen.
 
 Das ist eine andere Fähigkeit als Programmieren. Und sie ist lernbar.
 
@@ -71,7 +71,7 @@ Du bist nicht der Coder. Du bist der Architekt.
 
 Du entscheidest was gebaut wird, in welcher Reihenfolge, welche Kompromisse akzeptabel sind. Die KI setzt um. Aber ohne deine Richtung läuft sie im Kreis.
 
-Das Verhältnis erinnert mich an einen erfahrenen Projektleiter mit einem sehr schnellen Junior-Entwickler. Der Junior macht alles was man ihm sagt — aber er braucht klare Ansagen.
+Das Verhältnis erinnert mich an einen erfahrenen Projektleiter mit einem sehr schnellen Junior-Entwickler. Der Junior macht alles was man ihm sagt, aber er braucht klare Ansagen.
 
 ## Was das nicht ist
 
@@ -79,13 +79,13 @@ KI-generierter Code ist nicht automatisch guter Code.
 
 Wer keine Ahnung hat was da gebaut wird, läuft irgendwann gegen eine Wand. Ein System das gewachsen ist ohne dass du es verstehst, macht dir Probleme die du nicht lösen kannst.
 
-Ich lese den Code den Claude schreibt. Nicht jeden Buchstaben — aber ich verstehe die Struktur, die Entscheidungen, die Abhängigkeiten. Das ist das Minimum.
+Ich lese den Code den Claude schreibt. Nicht jeden Buchstaben, aber ich verstehe die Struktur, die Entscheidungen, die Abhängigkeiten. Das ist das Minimum.
 
-Für Unternehmens-Software mit harten Anforderungen an Sicherheit, Skalierung und Compliance brauchst du weiterhin professionelle Entwickler. KI beschleunigt auch deren Arbeit erheblich — aber ersetzt sie nicht.
+Für Unternehmens-Software mit harten Anforderungen an Sicherheit, Skalierung und Compliance brauchst du weiterhin professionelle Entwickler. KI beschleunigt auch deren Arbeit erheblich. Aber ersetzen? Noch nicht.
 
 ## Was das für dich bedeutet
 
-Wenn du eine Idee hast, die du jahrelang mit "ich bräuchte mal einen Entwickler" abgetan hast — schau nochmal hin.
+Wenn du eine Idee hast, die du jahrelang mit "ich bräuchte mal einen Entwickler" abgetan hast. Schau nochmal hin.
 
 Manche dieser Ideen lassen sich heute alleine bauen. Nicht alle. Aber mehr als du denkst.
 
@@ -102,13 +102,13 @@ Der erste Schritt ist: Beschreib die Idee so präzise, dass ein anderer Mensch s
 
 Nimm die kleinste, konkreteste Version einer Idee die du hast.
 
-Nicht die ganze Vision — die kleinste sinnvolle Version. Ein Formular. Eine Berechnung. Eine einfache Anzeige. Etwas, das an einem Nachmittag fertig sein könnte.
+Nicht die ganze Vision. Die kleinste sinnvolle Version. Ein Formular. Eine Berechnung. Eine einfache Anzeige. Etwas, das an einem Nachmittag fertig sein könnte.
 
 Öffne Claude. Beschreib es. Schau was passiert.
 
 Das Schlimmste: Es funktioniert nicht und du hast ein paar Stunden investiert.
 
-Das Beste: Du hast ein laufendes Produkt — und ein komplett neues Bild davon, was für dich möglich ist.
+Das Beste: Du hast ein laufendes Produkt. Und ein komplett neues Bild davon, was für dich möglich ist.
 
 ## Mein Toolstack
 
