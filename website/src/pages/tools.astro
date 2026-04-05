@@ -7,6 +7,7 @@ import AffiliateDisclosure from '../components/AffiliateDisclosure.astro';
 const categories = [
   {
     name: 'KI & LLMs',
+    slug: 'ki--llms',
     tools: [
       {
         name: 'Claude',
@@ -30,6 +31,7 @@ const categories = [
   },
   {
     name: 'Automatisierung',
+    slug: 'automatisierung',
     tools: [
       {
         name: 'n8n',
@@ -49,6 +51,7 @@ const categories = [
   },
   {
     name: 'Hosting & Infrastruktur',
+    slug: 'hosting--infrastruktur',
     tools: [
       {
         name: 'IONOS',
@@ -64,15 +67,29 @@ const categories = [
         affiliate: true,
         affiliateNote: 'Affiliate',
       },
+      {
+        name: 'Netlify',
+        description: 'Meine erste Wahl für das Deployment von statischen Websites und Webapps. Schnelles CDN, Git-basierter Workflow und großzügiger Free-Tier.',
+        url: 'https://www.netlify.com',
+        affiliate: true,
+        affiliateNote: 'Affiliate',
+      },
     ],
   },
   {
     name: 'Produktivität & Design',
+    slug: 'produktivitat--design',
     tools: [
       {
         name: 'Notion',
         description: 'Mein zweites Gehirn für Projektplanung, Dokumentation und Wissensmanagement. Nutze ich sowohl privat als auch für Kundenprojekte.',
         url: 'https://www.notion.so',
+        affiliate: false,
+      },
+      {
+        name: 'Miro',
+        description: 'Digitales Whiteboard für Workshops, Prozessvisualisierung und kollaboratives Arbeiten. Unverzichtbar für Remote-Teams und strukturierte Brainstormings.',
+        url: 'https://miro.com',
         affiliate: true,
         affiliateNote: 'Affiliate',
       },
@@ -86,6 +103,18 @@ const categories = [
         name: 'Canva',
         description: 'Für schnelle Grafiken, Präsentationen und Social-Media-Content. Die KI-Features machen vieles noch schneller.',
         url: 'https://www.canva.com',
+        affiliate: false,
+      },
+    ],
+  },
+  {
+    name: 'Sicherheit & Datenschutz',
+    slug: 'sicherheit--datenschutz',
+    tools: [
+      {
+        name: 'NordVPN',
+        description: 'Zuverlässiger VPN-Dienst für sicheres Arbeiten im öffentlichen WLAN und beim Zugriff auf Unternehmensressourcen. Schnell, einfach und DSGVO-konform.',
+        url: 'https://nordvpn.com',
         affiliate: true,
         affiliateNote: 'Affiliate',
       },
@@ -93,6 +122,7 @@ const categories = [
   },
   {
     name: 'Entwicklung',
+    slug: 'entwicklung',
     tools: [
       {
         name: 'VS Code',
@@ -131,7 +161,7 @@ const categories = [
 
       <!-- Tool Categories -->
       {categories.map(category => (
-        <section class="mb-14">
+        <section id={category.slug} class="mb-14">
           <div class="border-t border-white/10 pt-6 mb-6">
             <h2 class="text-xl font-black text-white tracking-tight">{category.name}</h2>
           </div>
