@@ -1,7 +1,7 @@
 ---
 title: "Ich habe in einem Wochenende eine App gebaut — ohne Programmierer zu sein"
 description: "App bauen ohne Programmierkenntnisse — ist das wirklich möglich? Ich habe es gemacht. Zwei eigene Produkte, live, mit KI als Entwicklungspartner. Was dahintersteckt und was du daraus mitnehmen kannst."
-date: 2026-06-02
+date: 2026-04-02
 tags: ["KI", "Entwicklung", "Produktivität", "Erfahrungsbericht", "No-Code", "Claude Code"]
 draft: false
 ---

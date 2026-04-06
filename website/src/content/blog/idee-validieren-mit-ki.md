@@ -1,7 +1,7 @@
 ---
 title: "Wie du eine Idee mit KI in zwei Stunden auf Herz und Nieren prüfst"
 description: "Bevor du Wochen in eine Idee investierst: So nutzt du KI als ehrlichen Sparringspartner — mit konkretem Framework und Prompts."
-date: 2026-05-05
+date: 2026-04-04
 tags: ["KI", "Strategie", "Produktivität", "Unternehmen"]
 draft: false
 ---
