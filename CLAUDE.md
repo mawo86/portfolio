@@ -146,24 +146,27 @@ npm run build # Produktions-Build
 - `plans/2026-03-31-blog-portfolio-seite-nyt-design.md` — Blog-Index NYT-Redesign ✓
 - `plans/2026-04-03-sichtbarkeit-organisches-wachstum-affiliates.md` — SEO, Newsletter, Affiliates, Content-Pipeline ✓
 
-**Blog:** 2 Artikel live, 9 Drafts. Blog-Index-Seite (`/blog`) hat NYT-inspiriertes Editorial-Design. Artikel-Layout (`BlogLayout.astro`) mit Lesezeit, JSON-LD, Prev/Next-Navigation, Newsletter-CTA und Autor-Karte. `@tailwindcss/typography` ist installiert und aktiviert — alle prose-Klassen funktionieren.
+**Blog:** 11 Artikel live, 20 Drafts in der Pipeline (KW16–25). Blog-Index-Seite (`/blog`) hat NYT-inspiriertes Editorial-Design mit Kategorie-Navigation und Pagination. Artikel-Layout (`BlogLayout.astro`) mit Lesezeit, JSON-LD, Prev/Next-Navigation, Newsletter-CTA und Autor-Karte. `@tailwindcss/typography` ist installiert und aktiviert.
 
 **Blog-Styling:** Artikel nutzen `blog-artikel` + `meine-stimme` Skills für konsistente Formatierung: Blockquotes als Callout-Boxen, Unsplash-Bilder via `<figure>/<figcaption>`, keine em-dashes im Fließtext, keine `---` Trenner.
 
-**Blog-Artikel (live):**
-- `ki-automatisierung-mittelstand` — KI-Automatisierung im Mittelstand ✓ überarbeitet
-- `app-bauen-ohne-programmierer` — App gebaut ohne Entwickler-Background ✓ live seit 2026-04-05
-- `idee-validieren-mit-ki` — Idee in 2h mit KI prüfen ✓ live seit 2026-04-06
+**Blog-Kategorien:** Jeder Artikel hat ein `category`-Feld im Frontmatter. Kategorien: Strategie, Automatisierung, Grundlagen, Branchen, Tools & Setup, SAP & Enterprise, Datenschutz, Erfahrungsbericht. Blog-Index zeigt Kategorie-Tabs + Pagination (8 Artikel/Seite).
 
-**Blog-Drafts (draft: true, ausstehend Review):**
+**Blog-Artikel (live, 11 Stück):**
+- `ki-automatisierung-mittelstand` — KI-Automatisierung im Mittelstand
+- `app-bauen-ohne-programmierer` — App gebaut ohne Entwickler-Background (inkl. Garrit Wilson / KI PIONIER Credit)
+- `idee-validieren-mit-ki` — Idee in 2h mit KI prüfen
 - `chatgpt-vs-claude-unternehmen` — ChatGPT vs Claude Vergleich
 - `ki-prozesse-identifizieren` — 5 Zeichen für KI-geeignete Prozesse
 - `mein-ki-toolkit` — Persönliches Tool-Setup
 - `ki-strategie-erste-schritte` — KI-Strategie Einsteigerguide
 - `sap-ki-integration` — SAP + KI Praxis
-- `mein-ki-os` — Persönliches KI-Betriebssystem mit Claude Code
+- `mein-ki-os` — KI-Betriebssystem (inkl. Garrit Wilson / KIPA Credit)
 - `prompts-die-funktionieren` — 5 Prompts aus dem echten Alltag
 - `n8n-erster-workflow` — n8n Einstieg Schritt-für-Schritt
+
+**Blog-Drafts (draft: true, KW16–25, 20 Artikel):**
+sprachmodell-erklaert, ki-roi-berechnen, ki-fehler-einfuehrung, ki-glossar-entscheider, zapier-vs-n8n, ki-im-kundenservice, email-automatisierung-ki, erster-ki-pilot, ki-angst-im-team, ki-projekte-scheitern, ki-team-aufbauen, ki-und-dsgvo, ki-daten-eingeben, ki-im-vertrieb, ki-in-der-buchhaltung, ki-im-hr, ki-sap-fico, microsoft-copilot-bewertung, ein-jahr-ki, ki-jobs-zukunft
 
 **Neue Seiten & Features:**
 - `/tools` — Tools mit Affiliate-Links; Kategorien: KI & LLMs, Automatisierung, Hosting & Infrastruktur, Produktivität & Design, Sicherheit & Datenschutz, Entwicklung. Section-IDs für Anchor-Links gesetzt. Netlify, Miro, NordVPN hinzugefügt. Notion + Canva ohne Affiliate-Badge.
@@ -182,11 +185,9 @@ npm run build # Produktions-Build
 
 **Noch ausstehend:**
 - LinkedIn-Profil mit Texten aus `outputs/linkedin-optimierung.md` aktualisieren
-- ~~Buttondown-Account erstellen~~ ✓ (Username: buschecloud, bereits eingetragen)
 - Affiliate-Programme beantragen und Links in `website/src/pages/tools.astro` ersetzen: n8n, Zapier, IONOS, Hostinger (Bewerbung läuft), Netlify, Miro, NordVPN
-- ~~Google Search Console einrichten und Sitemap einreichen~~ ✓ (erledigt 2026-04-03)
-- 8 Blog-Drafts reviewen, mit blog-artikel + meine-stimme Skill überarbeiten und `draft: false` setzen
 - OG-Images pro Blog-Artikel erstellen
+- 20 Draft-Artikel reviewen und schrittweise live stellen (KW16–25)
 
 ---
 
