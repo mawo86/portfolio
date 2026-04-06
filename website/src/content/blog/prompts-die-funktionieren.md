@@ -24,7 +24,7 @@ Hier sind fünf Prompts aus meinem echten Alltag. Nicht aus einem Kurs, nicht au
 
 Warum es funktioniert: KI neigt dazu, dir zu sagen was du hören willst. Sie ist von Haus aus zustimmend. Dieser Prompt durchbricht das. Er zwingt das Modell, eine Position einzunehmen — und damit echte Gegenargumente zu liefern statt abgewogenes Nichts.
 
-Ich nutze ihn vor wichtigen Entscheidungen, vor Kundenpräsentationen, vor Investitionen. Das Ergebnis ist fast immer unbequem. Und fast immer nützlich. Für die systematische Ideenvalidierung passt dieser Prompt perfekt zum Framework aus dem Artikel [Idee in zwei Stunden prüfen](/blog/idee-validieren-mit-ki).
+Ich nutze ihn vor wichtigen Entscheidungen. Das Ergebnis ist fast immer unbequem. Und fast immer nützlich. Für die systematische Ideenvalidierung passt dieser Prompt perfekt zum Framework aus dem Artikel [Idee in zwei Stunden prüfen](/blog/idee-validieren-mit-ki).
 
 ## Prompt 2: Der Rotstift
 
@@ -32,7 +32,7 @@ Ich nutze ihn vor wichtigen Entscheidungen, vor Kundenpräsentationen, vor Inves
 
 Warum es funktioniert: Konkrete Prozentzahl. Kein "kürze es ein bisschen", sondern 40. Das zwingt die KI zu echten Entscheidungen. Der Zusatz "keine Erklärung" spart Zeit: Ich will das Ergebnis sehen, nicht eine Zusammenfassung was geändert wurde.
 
-Dieser Prompt hat mir gezeigt, wie viel Fülltext ich selbst schreibe. Das ist manchmal schmerzhaft. Aber der gekürzte Text ist fast immer besser.
+Dieser Prompt hat mir gezeigt, wie viel Fülltext ich selbst schreibe. Das ist manchmal erschreckend. Aber der gekürzte Text ist fast immer besser.
 
 ## Prompt 3: Der Experte im Raum
 
@@ -48,7 +48,7 @@ Ich nutze das vor allem für Themen, in denen ich selbst kein Experte bin. Steue
 
 Warum es funktioniert: Der Unterschied zwischen "was ist schlecht" und "was fehlt" ist entscheidend. "Schlecht" lädt zu allgemeiner Kritik ein. "Fehlt" fokussiert auf konkrete Lücken. Die Antworten sind spezifischer und damit direkt verwertbar.
 
-Ich nutze diesen Prompt bei Projektplänen, bei Angeboten für Kunden, bei Artikeln bevor ich sie veröffentliche.
+Ich nutze diesen Prompt bei Projektplänen oder bei Produkten bevor ich sie veröffentliche.
 
 ## Prompt 5: Der Übersetzer
 
@@ -56,7 +56,7 @@ Ich nutze diesen Prompt bei Projektplänen, bei Angeboten für Kunden, bei Artik
 
 Warum es funktioniert: Konkrete Person statt "Laie" oder "Anfänger". Ein Produktionsleiter hat einen anderen Wissenshorizont als ein Marketingmanager. Auch wenn beide das gleiche Konzept nicht kennen. Die KI trifft die Analogien besser, wenn sie weiß, womit sie arbeiten darf.
 
-Ich nutze das, wenn ich komplexe Konzepte an Kunden kommunizieren muss, die einen anderen fachlichen Hintergrund haben als ich.
+Ich nutze das, wenn ich komplexe Konzepte verschiedene Zielgruppen kommunizieren muss, die einen anderen fachlichen Hintergrund haben als ich.
 
 ## Was diese fünf Prompts gemeinsam haben
 
@@ -68,8 +68,8 @@ Das ist kein Geheimwissen. Es ist das Gleiche wie mit einem menschlichen Kollege
 
 ## Dein nächster Schritt
 
-Nimm den Prompt, der für dich am relevantesten klingt. Nicht alle fünf. Einen.
+Nimm den Prompt, der für dich am relevantesten klingt. Nicht alle fünf, sondern nur einen.
 
 Teste ihn heute mit einer echten Aufgabe aus deinem Alltag. Dann entscheide, ob er in dein Setup gehört.
 
-Welches KI-Modell dabei die besten Ergebnisse liefert, hängt vom Use Case ab. Den Vergleich findest du im Artikel [ChatGPT vs Claude für Unternehmen](/blog/chatgpt-vs-claude-unternehmen). Und wenn du ein ganzes System rund um KI aufbauen willst, lohnt sich ein Blick auf [Mein KI-Toolkit](/blog/mein-ki-toolkit).
+Welches KI-Modell dabei die besten Ergebnisse liefert, hängt vom Use Case ab. Den Vergleich von ChatGPT und Claude findest du im Artikel [ChatGPT vs Claude für Unternehmen](/blog/chatgpt-vs-claude-unternehmen). Und wenn du ein ganzes System rund um KI aufbauen willst, lohnt sich ein Blick auf [Mein KI-Toolkit](/blog/mein-ki-toolkit).

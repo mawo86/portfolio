@@ -3,7 +3,7 @@ title: "KI trifft SAP: Was heute schon funktioniert und wo die Reise hingeht"
 description: "KI und SAP kombinieren: Konkrete Szenarien für Rechnungserkennung, Berichtsautomatisierung und Chatbots — was heute funktioniert und was kommt."
 date: 2026-04-06
 tags: ["SAP", "KI", "Enterprise", "Integration"]
-draft: false
+draft: true
 category: "SAP & Enterprise"
 ---
 

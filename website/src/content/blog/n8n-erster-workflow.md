@@ -3,7 +3,7 @@ title: "n8n: Dein erster Automatisierungs-Workflow in 30 Minuten"
 description: "n8n installieren, verstehen und den ersten echten Workflow bauen — Schritt für Schritt. Kein Entwickler-Hintergrund nötig."
 date: 2026-04-06
 tags: ["Automatisierung", "n8n", "Anleitung", "Tools"]
-draft: false
+draft: true
 category: "Automatisierung"
 ---
 

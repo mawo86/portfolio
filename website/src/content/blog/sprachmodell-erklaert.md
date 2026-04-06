@@ -22,7 +22,7 @@ Hier ist, was du wirklich wissen musst.
 
 Ein Sprachmodell ist ein statistisches System. Es wurde auf riesigen Mengen Text trainiert und hat dabei gelernt, welche Wörter und Sätze mit hoher Wahrscheinlichkeit aufeinander folgen.
 
-Wenn du eine Frage stellst, berechnet das Modell, welche Antwort am wahrscheinlichsten korrekt und passend ist. Es "denkt" nicht. Es prediziert.
+Wenn du eine Frage stellst, berechnet das Modell, welche Antwort am wahrscheinlichsten korrekt und passend ist. Es "denkt" nicht. Es errechnet.
 
 Das klingt ernüchternd. Ist es aber nicht. Denn diese Vorhersagefähigkeit ist beeindruckend präzise. Das Modell hat so viel Text verarbeitet, dass es Muster erkennt, die kein Mensch bewusst formuliert hat. Es versteht Kontext, folgt komplexen Anweisungen und kann stilistisch variieren.
 
@@ -36,7 +36,7 @@ Es ist keine Intelligenz. Aber es ist ein unglaublich leistungsfähiges Werkzeug
 
 **Code schreiben und erklären.** Sprachmodelle sind erstaunlich gut im Umgang mit Programmiersprachen. Einfache Skripte, SQL-Abfragen, Formeln. Und sie erklären bestehenden Code so, dass auch Nicht-Entwickler ihn verstehen.
 
-**Fragen beantworten.** Wenn die Antwort im Trainingsdata enthalten sein könnte und keine hochpräzisen Fakten verlangt, sind Sprachmodelle schnell und hilfreich. Ein erfahrener Assistent, der viel gelesen hat.
+**Fragen beantworten.** Wenn die Antwort im Trainingsdaten-Set enthalten sein könnte und keine hochpräzisen Fakten verlangt, sind Sprachmodelle schnell und hilfreich. Ein erfahrener Assistent, der viel gelesen hat.
 
 **Ideen generieren.** Brainstorming, Gegenargumente, alternative Formulierungen. Das Modell liefert Varianten ohne zu urteilen. Gut zum Durchbrechen von Denkblockaden.
 
