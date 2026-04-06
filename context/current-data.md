@@ -26,18 +26,18 @@
 - Kontakt (Formspree-Formular)
 - **Empfohlene Tools** (`/tools`) — Tool-Empfehlungen mit Affiliate-Links
 
-## Blog-Artikel (2 live, 9 Drafts)
+## Blog-Artikel (3 live, 8 Drafts)
 
 | Artikel | Slug | Datum | Status |
 |---------|------|-------|--------|
 | KI-Automatisierung im Mittelstand | ki-automatisierung-mittelstand | 2026-03-31 | Live ✓ überarbeitet |
 | App gebaut ohne Entwickler-Background | app-bauen-ohne-programmierer | 2026-06-02 | Live ✓ |
+| Idee validieren mit KI | idee-validieren-mit-ki | 2026-04-04 | Live ✓ 2026-04-06 |
 | ChatGPT vs Claude für Unternehmen | chatgpt-vs-claude-unternehmen | 2026-04-03 | Draft |
 | 5 Zeichen für KI-geeignete Prozesse | ki-prozesse-identifizieren | 2026-04-07 | Draft |
 | Mein KI-Toolkit | mein-ki-toolkit | 2026-04-14 | Draft |
 | KI-Strategie: Erste Schritte | ki-strategie-erste-schritte | 2026-04-21 | Draft |
 | KI trifft SAP | sap-ki-integration | 2026-04-28 | Draft |
-| Idee validieren mit KI | idee-validieren-mit-ki | — | Draft |
 | Mein KI OS | mein-ki-os | — | Draft |
 | 5 Prompts aus dem Alltag | prompts-die-funktionieren | — | Draft |
 | n8n erster Workflow | n8n-erster-workflow | — | Draft |
@@ -111,6 +111,7 @@
 - [x] 2 Artikel überarbeitet und live (ki-automatisierung, app-bauen) — 2026-04-05
 - [x] Tools-Seite: Netlify, Miro, NordVPN hinzugefügt; Section-IDs gesetzt — 2026-04-05
 - [ ] Affiliate-Programme beantragen: n8n, Zapier, IONOS, Netlify, NordVPN (Hostinger + Miro laufen)
-- [ ] 9 Blog-Drafts reviewen, mit blog-artikel Skill überarbeiten, freigeben
+- [x] idee-validieren-mit-ki Artikel fertiggestellt und live (2026-04-06)
+- [ ] 8 Blog-Drafts reviewen, mit blog-artikel Skill überarbeiten, freigeben
 - [ ] OG-Images pro Blog-Artikel erstellen
 - [ ] LinkedIn aktualisieren (Texte in `outputs/linkedin-optimierung.md`)

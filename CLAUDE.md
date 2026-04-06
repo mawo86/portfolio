@@ -153,6 +153,7 @@ npm run build # Produktions-Build
 **Blog-Artikel (live):**
 - `ki-automatisierung-mittelstand` — KI-Automatisierung im Mittelstand ✓ überarbeitet
 - `app-bauen-ohne-programmierer` — App gebaut ohne Entwickler-Background ✓ live seit 2026-04-05
+- `idee-validieren-mit-ki` — Idee in 2h mit KI prüfen ✓ live seit 2026-04-06
 
 **Blog-Drafts (draft: true, ausstehend Review):**
 - `chatgpt-vs-claude-unternehmen` — ChatGPT vs Claude Vergleich
@@ -160,7 +161,6 @@ npm run build # Produktions-Build
 - `mein-ki-toolkit` — Persönliches Tool-Setup
 - `ki-strategie-erste-schritte` — KI-Strategie Einsteigerguide
 - `sap-ki-integration` — SAP + KI Praxis
-- `idee-validieren-mit-ki` — Idee in 2h mit KI prüfen
 - `mein-ki-os` — Persönliches KI-Betriebssystem mit Claude Code
 - `prompts-die-funktionieren` — 5 Prompts aus dem echten Alltag
 - `n8n-erster-workflow` — n8n Einstieg Schritt-für-Schritt
@@ -185,7 +185,7 @@ npm run build # Produktions-Build
 - ~~Buttondown-Account erstellen~~ ✓ (Username: buschecloud, bereits eingetragen)
 - Affiliate-Programme beantragen und Links in `website/src/pages/tools.astro` ersetzen: n8n, Zapier, IONOS, Hostinger (Bewerbung läuft), Netlify, Miro, NordVPN
 - ~~Google Search Console einrichten und Sitemap einreichen~~ ✓ (erledigt 2026-04-03)
-- 9 Blog-Drafts reviewen, mit blog-artikel + meine-stimme Skill überarbeiten und `draft: false` setzen
+- 8 Blog-Drafts reviewen, mit blog-artikel + meine-stimme Skill überarbeiten und `draft: false` setzen
 - OG-Images pro Blog-Artikel erstellen
 
 ---
