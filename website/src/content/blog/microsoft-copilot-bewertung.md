@@ -4,6 +4,7 @@ description: "Microsoft Copilot 365 ist in aller Munde. Was er wirklich kann, wo
 date: 2026-06-05
 tags: ["KI", "Tools", "Microsoft", "Copilot", "Vergleich"]
 draft: true
+category: "SAP & Enterprise"
 ---
 
 Viele Unternehmen haben Microsoft 365 im Einsatz. Und viele fragen sich gerade: Sollen wir Copilot dazubuchen?

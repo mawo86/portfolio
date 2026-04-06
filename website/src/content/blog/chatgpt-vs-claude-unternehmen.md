@@ -4,6 +4,7 @@ description: "ChatGPT oder Claude? Ein ehrlicher Praxisvergleich für Unternehme
 date: 2026-04-06
 tags: ["KI", "Tools", "Vergleich", "Unternehmen"]
 draft: false
+category: "Grundlagen"
 ---
 
 Ich nutze beide. Jeden Tag. Und ich werde regelmäßig gefragt: Welches soll ich nehmen?

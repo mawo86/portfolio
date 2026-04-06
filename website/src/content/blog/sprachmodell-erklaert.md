@@ -4,6 +4,7 @@ description: "Sprachmodelle wie ChatGPT und Claude sind keine Alleskönner. Was 
 date: 2026-04-14
 tags: ["KI", "Grundlagen", "Unternehmen", "Einstieg"]
 draft: true
+category: "Grundlagen"
 ---
 
 Die meisten Menschen, die KI im Unternehmen einführen wollen, haben eine vage Vorstellung davon, was ein Sprachmodell ist. "Irgendwas mit neuronalen Netzen, das Text generiert."

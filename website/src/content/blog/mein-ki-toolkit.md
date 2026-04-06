@@ -4,6 +4,7 @@ description: "Welche KI-Tools ich täglich nutze und warum. Mein ehrliches Setup
 date: 2026-04-06
 tags: ["KI", "Tools", "Produktivität", "Setup"]
 draft: false
+category: "Tools & Setup"
 ---
 
 Ich werde regelmäßig gefragt: Welche Tools nutzt du eigentlich?

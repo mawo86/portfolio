@@ -4,6 +4,7 @@ description: "Wie KI das SAP-Controlling konkret verändert — von automatisier
 date: 2026-06-16
 tags: ["SAP", "KI", "Controlling", "FI/CO", "Enterprise"]
 draft: true
+category: "SAP & Enterprise"
 ---
 
 SAP FI/CO ist das Herzstück des Finanzcontrollings in tausenden deutschen Unternehmen. Und gleichzeitig ein System, das täglich Stunden an manueller Arbeit produziert.

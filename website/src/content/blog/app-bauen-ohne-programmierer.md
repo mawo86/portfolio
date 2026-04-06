@@ -4,6 +4,7 @@ description: "App bauen ohne Programmierkenntnisse — ist das wirklich möglich
 date: 2026-04-02
 tags: ["KI", "Entwicklung", "Produktivität", "Erfahrungsbericht", "No-Code", "Claude Code"]
 draft: false
+category: "Erfahrungsbericht"
 ---
 
 Ich bin kein Programmierer.

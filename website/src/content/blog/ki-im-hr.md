@@ -4,6 +4,7 @@ description: "Wie KI Recruiting, Bewerbungsscreening und Onboarding beschleunigt
 date: 2026-06-02
 tags: ["KI", "HR", "Recruiting", "Automatisierung"]
 draft: true
+category: "Branchen"
 ---
 
 Recruiting ist zeitintensiv und fehleranfällig. HR-Teams lesen stapelweise Bewerbungen, planen Interviews, koordinieren Feedback und starten Onboarding-Prozesse — vieles davon repetitiv, vieles davon automatisierbar.

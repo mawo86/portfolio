@@ -4,6 +4,7 @@ description: "Warum die Frage 'Nimmt KI meinen Job?' falsch gestellt ist — und
 date: 2026-06-19
 tags: ["KI", "Zukunft", "Arbeit", "Meinung"]
 draft: true
+category: "Erfahrungsbericht"
 ---
 
 "Nimmt KI meinen Job weg?"

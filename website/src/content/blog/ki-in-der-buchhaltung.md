@@ -4,6 +4,7 @@ description: "Rechnungsverarbeitung, Kostenstellen-Zuweisung, Reporting — was 
 date: 2026-05-15
 tags: ["KI", "Buchhaltung", "Automatisierung", "Finance"]
 draft: true
+category: "Branchen"
 ---
 
 Buchhaltung ist prädestiniert für KI. Strukturierte Daten, wiederkehrende Prozesse, klare Regeln — und trotzdem enorme manuelle Aufwände.

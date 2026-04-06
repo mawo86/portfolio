@@ -4,6 +4,7 @@ description: "LLM, RAG, Prompt Engineering, Halluzination — KI-Gespräche sind
 date: 2026-04-24
 tags: ["KI", "Grundlagen", "Glossar", "Entscheider"]
 draft: true
+category: "Grundlagen"
 ---
 
 Du sitzt in einem Meeting über KI-Einführung. Jemand spricht von "RAG-Architektur", jemand anderes von "Fine-Tuning" und der Berater fragt nach eurem "Prompt-Engineering-Ansatz".

@@ -4,6 +4,7 @@ description: "Die meisten KI-Projekte liefern keine messbaren Ergebnisse. Warum 
 date: 2026-05-22
 tags: ["KI", "Strategie", "Fehler", "Unternehmen"]
 draft: true
+category: "Strategie"
 ---
 
 Laut Studien liefern 70-85 % aller KI-Projekte nicht die erwarteten Ergebnisse.

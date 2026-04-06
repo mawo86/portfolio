@@ -4,6 +4,7 @@ description: "KI und SAP kombinieren: Konkrete Szenarien für Rechnungserkennung
 date: 2026-04-06
 tags: ["SAP", "KI", "Enterprise", "Integration"]
 draft: false
+category: "SAP & Enterprise"
 ---
 
 SAP ist das Rückgrat vieler deutscher Unternehmen. Gleichzeitig ist es ein System, das im Alltag mehr Geduld erfordert als die meisten zugeben.

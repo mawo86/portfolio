@@ -4,6 +4,7 @@ description: "KI-Strategie in 4 Schritten: Prozesse analysieren, Quick Wins find
 date: 2026-04-06
 tags: ["KI", "Strategie", "Unternehmen", "Einstieg"]
 draft: false
+category: "Strategie"
 ---
 
 Du weißt, dass dein Unternehmen etwas mit KI machen sollte. Aber du weißt nicht, wo anfangen.

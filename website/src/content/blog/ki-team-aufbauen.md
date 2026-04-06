@@ -4,6 +4,7 @@ description: "KI-Kompetenz im Unternehmen aufbauen ohne teure Spezialisten. Welc
 date: 2026-06-12
 tags: ["KI", "Organisation", "Führung", "Team"]
 draft: true
+category: "Strategie"
 ---
 
 "Wir bräuchten jemanden der KI richtig kann."

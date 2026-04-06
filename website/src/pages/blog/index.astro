@@ -11,7 +11,18 @@ const allPosts = (await getCollection('blog', ({ data }) => !data.draft))
 const featuredPost = allPosts[0];
 const remainingPosts = allPosts.slice(1);
 
-const allTags = [...new Set(allPosts.flatMap(p => p.data.tags))].sort();
+const CATEGORY_ORDER = [
+  'Strategie',
+  'Automatisierung',
+  'Grundlagen',
+  'Branchen',
+  'Tools & Setup',
+  'SAP & Enterprise',
+  'Datenschutz',
+  'Erfahrungsbericht',
+];
+const usedCategories = [...new Set(allPosts.map(p => p.data.category).filter(Boolean))];
+const categories = CATEGORY_ORDER.filter(c => usedCategories.includes(c));
 
 function formatDate(date: Date) {
   return new Intl.DateTimeFormat('de-DE', { year: 'numeric', month: 'long', day: 'numeric' }).format(date);
@@ -41,26 +52,24 @@ function formatDate(date: Date) {
           </p>
         </div>
 
-        <!-- Tag Filter -->
-        {allTags.length > 0 && (
-          <div class="flex flex-wrap items-center gap-2 pt-6 border-t border-white/10">
-            <span class="text-xs text-gray-600 uppercase tracking-widest font-medium mr-1">Themen</span>
+        <!-- Category Navigation -->
+        <div class="flex flex-wrap items-center gap-2 pt-6 border-t border-white/10">
+          <span class="text-xs text-gray-600 uppercase tracking-widest font-medium mr-1">Themen</span>
+          <button
+            data-filter="all"
+            class="cat-btn active px-3 py-1 text-xs font-semibold rounded-full transition-all duration-200 bg-brand-500 text-white"
+          >
+            Alle
+          </button>
+          {categories.map(cat => (
             <button
-              data-filter="all"
-              class="filter-btn active px-3 py-1 text-xs font-semibold rounded-full transition-all duration-200 bg-brand-500 text-white"
+              data-filter={cat}
+              class="cat-btn px-3 py-1 text-xs font-semibold rounded-full transition-all duration-200 bg-white/5 text-gray-400 border border-white/10 hover:border-brand-500/40 hover:text-brand-300"
             >
-              Alle
+              {cat}
             </button>
-            {allTags.map(tag => (
-              <button
-                data-filter={tag}
-                class="filter-btn px-3 py-1 text-xs font-semibold rounded-full transition-all duration-200 bg-white/5 text-gray-400 border border-white/10 hover:border-brand-500/40 hover:text-brand-300"
-              >
-                {tag}
-              </button>
-            ))}
-          </div>
-        )}
+          ))}
+        </div>
       </div>
       <div class="border-b border-white/10 mb-12"></div>
 
@@ -74,14 +83,19 @@ function formatDate(date: Date) {
 
       <!-- ═══ FEATURED ARTICLE ═══ -->
       {featuredPost && (
-        <article data-article data-tags={JSON.stringify(featuredPost.data.tags)} class="mb-14 group">
+        <article
+          data-article
+          data-category={featuredPost.data.category}
+          data-index="0"
+          class="mb-14 group"
+        >
           <a href={`${import.meta.env.BASE_URL}blog/${featuredPost.slug}`} class="block">
             <div class="flex flex-wrap items-center gap-3 mb-5">
               <span class="text-xs font-bold uppercase tracking-[0.18em] text-brand-400">Neuester Beitrag</span>
               <span class="w-12 h-px bg-brand-500/40"></span>
-              {featuredPost.data.tags.slice(0, 3).map(tag => (
-                <span class="px-2.5 py-0.5 text-xs font-medium text-gray-500 border border-white/10 rounded-full">{tag}</span>
-              ))}
+              <span class="px-2.5 py-0.5 text-xs font-semibold text-brand-300 bg-brand-500/10 border border-brand-500/20 rounded-full">
+                {featuredPost.data.category}
+              </span>
             </div>
 
             <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-tight tracking-tight mb-5 group-hover:text-brand-300 transition-colors duration-200">
@@ -109,7 +123,7 @@ function formatDate(date: Date) {
       {remainingPosts.length > 0 && (
         <div>
           <div class="border-t-2 border-white/15 mb-10">
-            <span class="inline-block bg-white/10 text-gray-400 text-xs font-bold uppercase tracking-[0.18em] px-3 py-1.5 -mt-px">
+            <span id="section-label" class="inline-block bg-white/10 text-gray-400 text-xs font-bold uppercase tracking-[0.18em] px-3 py-1.5 -mt-px">
               Weitere Artikel
             </span>
           </div>
@@ -120,13 +134,14 @@ function formatDate(date: Date) {
               return (
                 <article
                   data-article
-                  data-tags={JSON.stringify(post.data.tags)}
+                  data-category={post.data.category}
+                  data-index={index + 1}
                   class={`group py-8 border-b border-white/10 ${isLeftColumn ? 'md:pr-10 md:border-r md:border-r-white/10' : 'md:pl-10'}`}
                 >
                   <a href={`${import.meta.env.BASE_URL}blog/${post.slug}`} class="block">
-                    <p class="text-xs font-bold uppercase tracking-[0.18em] text-brand-400 mb-3">
-                      {post.data.tags[0] ?? 'Blog'}
-                    </p>
+                    <span class="inline-block mb-3 px-2 py-0.5 text-xs font-semibold text-brand-400 bg-brand-500/10 border border-brand-500/15 rounded-full uppercase tracking-wide">
+                      {post.data.category}
+                    </span>
                     <h2 class="text-xl font-black text-white leading-snug tracking-tight mb-3 group-hover:text-brand-300 transition-colors duration-200">
                       {post.data.title}
                     </h2>
@@ -144,6 +159,29 @@ function formatDate(date: Date) {
               );
             })}
           </div>
+
+          <!-- ═══ PAGINATION ═══ -->
+          <div id="pagination" class="mt-12 flex items-center justify-between">
+            <button
+              id="prev-page"
+              class="hidden items-center gap-2 px-4 py-2 text-sm font-semibold text-gray-400 border border-white/10 rounded-lg hover:border-brand-500/40 hover:text-brand-300 transition-all disabled:opacity-30 disabled:pointer-events-none"
+            >
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+              </svg>
+              Neuere Artikel
+            </button>
+            <div id="page-info" class="text-xs text-gray-600 font-medium tracking-wider uppercase"></div>
+            <button
+              id="next-page"
+              class="hidden items-center gap-2 px-4 py-2 text-sm font-semibold text-gray-400 border border-white/10 rounded-lg hover:border-brand-500/40 hover:text-brand-300 transition-all disabled:opacity-30 disabled:pointer-events-none"
+            >
+              Ältere Artikel
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+          </div>
         </div>
       )}
 
@@ -159,26 +197,137 @@ function formatDate(date: Date) {
 </Layout>
 
 <script>
-  const filterButtons = document.querySelectorAll<HTMLButtonElement>('[data-filter]');
-  const articles = document.querySelectorAll<HTMLElement>('[data-article]');
+  const ARTICLES_PER_PAGE = 8;
 
-  filterButtons.forEach(btn => {
+  const catButtons = document.querySelectorAll<HTMLButtonElement>('[data-filter]');
+  const articles = Array.from(document.querySelectorAll<HTMLElement>('[data-article]'));
+  const featuredArticle = articles[0];
+  const gridArticles = articles.slice(1);
+
+  const prevBtn = document.getElementById('prev-page') as HTMLButtonElement;
+  const nextBtn = document.getElementById('next-page') as HTMLButtonElement;
+  const pageInfo = document.getElementById('page-info');
+  const sectionLabel = document.getElementById('section-label');
+
+  let currentFilter = 'all';
+  let currentPage = 0;
+
+  function getFilteredGrid(): HTMLElement[] {
+    if (currentFilter === 'all') return gridArticles;
+    return gridArticles.filter(a => a.dataset.category === currentFilter);
+  }
+
+  function getFilteredFeatured(): boolean {
+    if (currentFilter === 'all') return true;
+    return featuredArticle?.dataset.category === currentFilter;
+  }
+
+  function render() {
+    const filtered = getFilteredGrid();
+    const showFeatured = getFilteredFeatured();
+    const isPaginated = currentFilter === 'all';
+
+    // Featured article
+    if (featuredArticle) {
+      featuredArticle.style.display = showFeatured ? '' : 'none';
+    }
+
+    // Section label
+    if (sectionLabel) {
+      if (currentFilter !== 'all') {
+        sectionLabel.textContent = currentFilter;
+      } else {
+        sectionLabel.textContent = 'Weitere Artikel';
+      }
+    }
+
+    if (isPaginated) {
+      // Paginated mode: show ARTICLES_PER_PAGE at a time
+      const totalPages = Math.ceil(filtered.length / ARTICLES_PER_PAGE);
+      const start = currentPage * ARTICLES_PER_PAGE;
+      const end = start + ARTICLES_PER_PAGE;
+
+      gridArticles.forEach(a => { a.style.display = 'none'; });
+      filtered.slice(start, end).forEach(a => { a.style.display = ''; });
+
+      // Fix grid alignment (left column always has right border)
+      const visible = filtered.slice(start, end);
+      visible.forEach((a, i) => {
+        a.classList.toggle('md:pr-10', i % 2 === 0);
+        a.classList.toggle('md:border-r', i % 2 === 0);
+        a.classList.toggle('md:border-r-white/10', i % 2 === 0);
+        a.classList.toggle('md:pl-10', i % 2 !== 0);
+      });
+
+      // Pagination controls
+      if (totalPages > 1) {
+        prevBtn.classList.toggle('hidden', currentPage === 0);
+        prevBtn.classList.toggle('inline-flex', currentPage > 0);
+        nextBtn.classList.toggle('hidden', currentPage >= totalPages - 1);
+        nextBtn.classList.toggle('inline-flex', currentPage < totalPages - 1);
+        if (pageInfo) pageInfo.textContent = `Seite ${currentPage + 1} von ${totalPages}`;
+      } else {
+        prevBtn.classList.add('hidden');
+        nextBtn.classList.add('hidden');
+        if (pageInfo) pageInfo.textContent = '';
+      }
+    } else {
+      // Category filter mode: show all matching articles, no pagination
+      gridArticles.forEach(a => {
+        a.style.display = a.dataset.category === currentFilter ? '' : 'none';
+      });
+
+      // Fix grid alignment for filtered results
+      const visible = gridArticles.filter(a => a.dataset.category === currentFilter);
+      visible.forEach((a, i) => {
+        a.classList.toggle('md:pr-10', i % 2 === 0);
+        a.classList.toggle('md:border-r', i % 2 === 0);
+        a.classList.toggle('md:border-r-white/10', i % 2 === 0);
+        a.classList.toggle('md:pl-10', i % 2 !== 0);
+      });
+
+      prevBtn.classList.add('hidden');
+      nextBtn.classList.add('hidden');
+      if (pageInfo) pageInfo.textContent = '';
+    }
+  }
+
+  // Category buttons
+  catButtons.forEach(btn => {
     btn.addEventListener('click', () => {
-      const filter = btn.dataset.filter ?? 'all';
+      currentFilter = btn.dataset.filter ?? 'all';
+      currentPage = 0;
 
-      filterButtons.forEach(b => {
+      catButtons.forEach(b => {
         b.classList.remove('active', 'bg-brand-500', 'text-white');
         b.classList.add('bg-white/5', 'text-gray-400', 'border', 'border-white/10');
       });
       btn.classList.add('active', 'bg-brand-500', 'text-white');
       btn.classList.remove('bg-white/5', 'text-gray-400', 'border', 'border-white/10');
 
-      articles.forEach(article => {
-        const tagsRaw = article.dataset.tags ?? '[]';
-        const tags: string[] = JSON.parse(tagsRaw);
-        const show = filter === 'all' || tags.includes(filter);
-        (article as HTMLElement).style.display = show ? '' : 'none';
-      });
+      render();
     });
   });
+
+  // Pagination buttons
+  prevBtn?.addEventListener('click', () => {
+    if (currentPage > 0) {
+      currentPage--;
+      render();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  });
+
+  nextBtn?.addEventListener('click', () => {
+    const filtered = getFilteredGrid();
+    const totalPages = Math.ceil(filtered.length / ARTICLES_PER_PAGE);
+    if (currentPage < totalPages - 1) {
+      currentPage++;
+      render();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  });
+
+  // Initial render
+  render();
 </script>

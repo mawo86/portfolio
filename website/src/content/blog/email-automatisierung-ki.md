@@ -4,6 +4,7 @@ description: "Wie du E-Mail-Prozesse mit KI und n8n automatisierst — von Klass
 date: 2026-05-29
 tags: ["Automatisierung", "E-Mail", "n8n", "Workflow"]
 draft: true
+category: "Automatisierung"
 ---
 
 Die Inbox ist für viele Teams ein Flaschenhals. Jede Anfrage muss gelesen, verstanden, kategorisiert und weitergeleitet werden. Täglich. Stundenlang.

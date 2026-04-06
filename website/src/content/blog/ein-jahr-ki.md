@@ -4,6 +4,7 @@ description: "Kein Hype-Artikel. Was sich nach einem Jahr intensiver KI-Nutzung 
 date: 2026-06-09
 tags: ["KI", "Erfahrungsbericht", "Produktivität", "Persönlich"]
 draft: true
+category: "Erfahrungsbericht"
 ---
 
 Ich nutze KI seit über einem Jahr intensiv. Täglich. Für Texte, Code, Analysen, Planung, Sparrings-Gespräche.

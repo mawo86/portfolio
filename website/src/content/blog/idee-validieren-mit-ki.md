@@ -4,6 +4,7 @@ description: "Bevor du Wochen in eine Idee investierst: So nutzt du KI als ehrli
 date: 2026-04-04
 tags: ["KI", "Strategie", "Produktivität", "Unternehmen"]
 draft: false
+category: "Strategie"
 ---
 
 Die meisten Ideen sterben nicht am Markt. Sie sterben an der Umsetzung — weil man zu lange zu viel Zeit in eine Idee gesteckt hat, die von Anfang an nicht funktioniert hätte.

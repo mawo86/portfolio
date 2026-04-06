@@ -4,6 +4,7 @@ description: "Wie du den Return on Investment für KI-Projekte konkret berechnen
 date: 2026-04-17
 tags: ["KI", "Strategie", "Unternehmen", "ROI"]
 draft: true
+category: "Strategie"
 ---
 
 "Das klingt interessant, aber was bringt es uns konkret?"

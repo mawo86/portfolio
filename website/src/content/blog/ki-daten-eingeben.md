@@ -4,6 +4,7 @@ description: "Kundennamen in ChatGPT? Personaldaten in Claude? Was erlaubt ist u
 date: 2026-05-08
 tags: ["KI", "DSGVO", "Datenschutz", "Praxis"]
 draft: true
+category: "Datenschutz"
 ---
 
 Theorie ist eine Sache. Die tägliche Praxis eine andere.

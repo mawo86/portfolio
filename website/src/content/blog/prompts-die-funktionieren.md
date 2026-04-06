@@ -4,6 +4,7 @@ description: "Kein Prompt-Kurs, kein Cheat-Sheet mit 100 Vorlagen. Fünf konkret
 date: 2026-04-06
 tags: ["KI", "Produktivität", "Prompts", "Anleitung"]
 draft: false
+category: "Tools & Setup"
 ---
 
 Die meisten Prompts sind zu höflich.

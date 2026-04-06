@@ -4,6 +4,7 @@ description: "Viele Mittelständler starten mit KI und landen bei teuren Pilotpr
 date: 2026-03-31
 tags: ["KI", "Automatisierung", "Mittelstand", "Prozesse"]
 draft: false
+category: "Automatisierung"
 ---
 
 Die meisten Gespräche über KI im Mittelstand laufen gleich ab. Jemand hat einen Artikel gelesen, ein Konkurrent soll "jetzt auch KI machen", und plötzlich sitzt man in einem Meeting und fragt sich: Wo fangen wir überhaupt an?

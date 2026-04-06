@@ -4,6 +4,7 @@ description: "KI im Kundenservice einsetzen — aber richtig. Wo Automatisierung
 date: 2026-05-01
 tags: ["KI", "Kundenservice", "Automatisierung", "Unternehmen"]
 draft: true
+category: "Branchen"
 ---
 
 "Unser Chatbot löst 80 % der Anfragen automatisch." Das höre ich oft. Was ich selten höre: wie die Kundenzufriedenheit danach aussieht.

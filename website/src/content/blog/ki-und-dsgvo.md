@@ -4,6 +4,7 @@ description: "Welche DSGVO-Regeln gelten beim Einsatz von KI-Tools? Was ist erla
 date: 2026-05-05
 tags: ["KI", "DSGVO", "Datenschutz", "Unternehmen", "Recht"]
 draft: true
+category: "Datenschutz"
 ---
 
 "Darf ich das überhaupt in ChatGPT eingeben?"

@@ -4,6 +4,7 @@ description: "Wie du erkennst welche Prozesse sich für KI-Automatisierung eigne
 date: 2026-04-06
 tags: ["KI", "Prozesse", "Automatisierung", "Anleitung"]
 draft: false
+category: "Strategie"
 ---
 
 Nicht jeder Prozess braucht KI. Aber manche schreien danach. Und niemand hört hin.

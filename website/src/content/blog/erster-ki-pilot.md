@@ -4,6 +4,7 @@ description: "Wie du ein erstes KI-Projekt in vier Wochen umsetzt, das messbare 
 date: 2026-05-19
 tags: ["KI", "Strategie", "Pilot", "Anleitung"]
 draft: true
+category: "Strategie"
 ---
 
 Vier Wochen. Das ist die Zeit, die ein gut definiertes KI-Pilotprojekt braucht, um messbare Ergebnisse zu liefern.

@@ -4,6 +4,7 @@ description: "Wenn KI eingeführt wird, entstehen Ängste. Jobverlust, Kontrollv
 date: 2026-04-24
 tags: ["KI", "Change Management", "Führung", "Mitarbeiter"]
 draft: true
+category: "Strategie"
 ---
 
 "Wir führen jetzt KI ein" — und dann ist Stille. Kein Jubel. Keine Begeisterung. Sondern fragende Blicke und das unausgesprochene: Was bedeutet das für mich?

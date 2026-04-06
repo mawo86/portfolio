@@ -4,6 +4,7 @@ description: "Kein Tool, kein Abo, sondern ein System. Wie Claude Code als pers�
 date: 2026-04-06
 tags: ["KI", "Produktivität", "Setup", "Betriebssystem", "Claude"]
 draft: false
+category: "Tools & Setup"
 ---
 
 Die meisten Menschen nutzen KI wie eine Suchmaschine. Frage rein, Antwort raus, Fenster schließen.

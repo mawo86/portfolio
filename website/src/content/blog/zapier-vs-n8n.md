@@ -4,6 +4,7 @@ description: "Zapier oder n8n? Ein ehrlicher Vergleich für Unternehmen — wann
 date: 2026-04-28
 tags: ["Automatisierung", "Tools", "n8n", "Zapier", "Vergleich"]
 draft: true
+category: "Automatisierung"
 ---
 
 Zapier oder n8n? Ich werde diese Frage regelmäßig gestellt. Und die ehrliche Antwort ist: Es kommt drauf an.

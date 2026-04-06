@@ -4,6 +4,7 @@ description: "Warum so viele KI-Projekte im Pilotpurgatorium stecken — und wel
 date: 2026-04-21
 tags: ["KI", "Strategie", "Unternehmen", "Fehler"]
 draft: true
+category: "Strategie"
 ---
 
 Die meisten KI-Projekte scheitern nicht an der Technologie.

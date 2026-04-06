@@ -4,6 +4,7 @@ description: "n8n installieren, verstehen und den ersten echten Workflow bauen �
 date: 2026-04-06
 tags: ["Automatisierung", "n8n", "Anleitung", "Tools"]
 draft: false
+category: "Automatisierung"
 ---
 
 [n8n](/tools#automatisierung) ist das Automatisierungstool, das ich für fast alles nutze. Open Source, visuell, mächtig.

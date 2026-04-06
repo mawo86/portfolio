@@ -4,6 +4,7 @@ description: "Wie KI den B2B-Vertrieb konkret verändert — von der Lead-Recher
 date: 2026-05-12
 tags: ["KI", "Vertrieb", "Automatisierung", "B2B"]
 draft: true
+category: "Branchen"
 ---
 
 Kaltakquise ist teuer. Ein guter Vertriebsmitarbeiter verbringt Stunden damit, potenzielle Kunden zu recherchieren, Gesprächsaufhänger zu finden und erste Nachrichten zu schreiben. Die meisten davon werden ignoriert.
