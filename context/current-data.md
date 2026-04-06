@@ -26,16 +26,21 @@
 - Kontakt (Formspree-Formular)
 - **Empfohlene Tools** (`/tools`) — Tool-Empfehlungen mit Affiliate-Links
 
-## Blog-Artikel (6 live)
+## Blog-Artikel (2 live, 9 Drafts)
 
-| Artikel | Slug | Datum | Tags |
-|---------|------|-------|------|
-| KI-Automatisierung im Mittelstand | ki-automatisierung-mittelstand | 2026-03-31 | KI, Automatisierung, Mittelstand |
-| ChatGPT vs Claude für Unternehmen | chatgpt-vs-claude-unternehmen | 2026-04-03 | KI, Tools, Vergleich |
-| 5 Zeichen für KI-geeignete Prozesse | ki-prozesse-identifizieren | 2026-04-07 | KI, Prozesse, Automatisierung |
-| Mein KI-Toolkit | mein-ki-toolkit | 2026-04-14 | KI, Tools, Produktivität |
-| KI-Strategie: Erste Schritte | ki-strategie-erste-schritte | 2026-04-21 | KI, Strategie, Unternehmen |
-| KI trifft SAP | sap-ki-integration | 2026-04-28 | SAP, KI, Enterprise |
+| Artikel | Slug | Datum | Status |
+|---------|------|-------|--------|
+| KI-Automatisierung im Mittelstand | ki-automatisierung-mittelstand | 2026-03-31 | Live ✓ überarbeitet |
+| App gebaut ohne Entwickler-Background | app-bauen-ohne-programmierer | 2026-06-02 | Live ✓ |
+| ChatGPT vs Claude für Unternehmen | chatgpt-vs-claude-unternehmen | 2026-04-03 | Draft |
+| 5 Zeichen für KI-geeignete Prozesse | ki-prozesse-identifizieren | 2026-04-07 | Draft |
+| Mein KI-Toolkit | mein-ki-toolkit | 2026-04-14 | Draft |
+| KI-Strategie: Erste Schritte | ki-strategie-erste-schritte | 2026-04-21 | Draft |
+| KI trifft SAP | sap-ki-integration | 2026-04-28 | Draft |
+| Idee validieren mit KI | idee-validieren-mit-ki | — | Draft |
+| Mein KI OS | mein-ki-os | — | Draft |
+| 5 Prompts aus dem Alltag | prompts-die-funktionieren | — | Draft |
+| n8n erster Workflow | n8n-erster-workflow | — | Draft |
 
 ## Blog-Index-Seite (`/blog`)
 
@@ -66,12 +71,15 @@
 
 | Tool | Affiliate? | Status |
 |------|-----------|--------|
-| n8n | Ja (20% recurring) | Link einsetzen nach Approval |
-| Zapier | Ja (bis $500/Conv.) | Link einsetzen nach Approval |
-| IONOS | Ja (€50-75/Sale) | Link einsetzen nach Approval |
-| Hostinger | Ja (60% recurring) | Link einsetzen nach Approval |
-| Notion | Ja ($10/Signup) | Link einsetzen nach Approval |
-| Canva | Ja (bis $36/Sale) | Link einsetzen nach Approval |
+| n8n | Ja (20% recurring) | Bewerbung ausstehend |
+| Zapier | Ja (bis $500/Conv.) | Bewerbung ausstehend |
+| IONOS | Ja (€50-75/Sale) | Bewerbung ausstehend |
+| Hostinger | Ja (60% recurring) | Bewerbung läuft (2026-04-05) |
+| Netlify | Ja | Bewerbung ausstehend |
+| Miro | Ja | Bewerbung läuft (2026-04-05) |
+| NordVPN | Ja | Bewerbung ausstehend |
+| Notion | Nein (Affiliate entfernt) | Regulärer Link |
+| Canva | Nein (Affiliate entfernt) | Regulärer Link |
 | Claude, ChatGPT, WhisperFlow, Obsidian, VS Code | Nein | Reguläre Links |
 
 ## Eigene Produkte
@@ -92,12 +100,17 @@
 - [x] Ionos DNS konfiguriert → busche.cloud zeigt auf GitHub Pages (2026-04-01)
 - [x] `base: '/portfolio'` aus `website/astro.config.mjs` entfernt
 - [x] SEO-Infrastruktur (RSS, robots.txt, JSON-LD, Sitemap) — 2026-04-03
-- [x] Newsletter-Formular eingebaut (Buttondown) — 2026-04-03
+- [x] Newsletter-Formular eingebaut (Buttondown, Username: buschecloud) — 2026-04-03
 - [x] /tools-Seite mit Affiliate-Infrastruktur — 2026-04-03
 - [x] 10 Blog-Drafts geschrieben (meine-stimme Stil) — 2026-04-03
 - [x] Google Search Console eingerichtet + Sitemap eingereicht — 2026-04-03
-- [ ] Buttondown-Account erstellen, Username in NewsletterSignup.astro eintragen
-- [ ] Affiliate-Programme beantragen (n8n, Zapier, IONOS, Hostinger, Notion, Canva)
-- [ ] 10 Blog-Drafts reviewen und freigeben (draft: false setzen)
+- [x] Buttondown-Account erstellt, Username buschecloud eingetragen — 2026-04-05
+- [x] @tailwindcss/typography installiert + aktiviert — 2026-04-05
+- [x] blog-artikel Skill erstellt (Formatierung, Bilder, Headings) — 2026-04-05
+- [x] meine-stimme Skill: em-dash + --- Regeln ergänzt — 2026-04-05
+- [x] 2 Artikel überarbeitet und live (ki-automatisierung, app-bauen) — 2026-04-05
+- [x] Tools-Seite: Netlify, Miro, NordVPN hinzugefügt; Section-IDs gesetzt — 2026-04-05
+- [ ] Affiliate-Programme beantragen: n8n, Zapier, IONOS, Netlify, NordVPN (Hostinger + Miro laufen)
+- [ ] 9 Blog-Drafts reviewen, mit blog-artikel Skill überarbeiten, freigeben
 - [ ] OG-Images pro Blog-Artikel erstellen
 - [ ] LinkedIn aktualisieren (Texte in `outputs/linkedin-optimierung.md`)

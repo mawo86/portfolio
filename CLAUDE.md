@@ -146,10 +146,13 @@ npm run build # Produktions-Build
 - `plans/2026-03-31-blog-portfolio-seite-nyt-design.md` — Blog-Index NYT-Redesign ✓
 - `plans/2026-04-03-sichtbarkeit-organisches-wachstum-affiliates.md` — SEO, Newsletter, Affiliates, Content-Pipeline ✓
 
-**Blog:** 1 Artikel live, 10 Drafts zum Review. Blog-Index-Seite (`/blog`) hat NYT-inspiriertes Editorial-Design: Hero-Block, Featured-Artikel, 2-Spalten-Grid, interaktiver Tag-Filter. Artikel-Layout (`BlogLayout.astro`) mit Lesezeit, JSON-LD, Prev/Next-Navigation, Newsletter-CTA und Autor-Karte.
+**Blog:** 2 Artikel live, 9 Drafts. Blog-Index-Seite (`/blog`) hat NYT-inspiriertes Editorial-Design. Artikel-Layout (`BlogLayout.astro`) mit Lesezeit, JSON-LD, Prev/Next-Navigation, Newsletter-CTA und Autor-Karte. `@tailwindcss/typography` ist installiert und aktiviert — alle prose-Klassen funktionieren.
+
+**Blog-Styling:** Artikel nutzen `blog-artikel` + `meine-stimme` Skills für konsistente Formatierung: Blockquotes als Callout-Boxen, Unsplash-Bilder via `<figure>/<figcaption>`, keine em-dashes im Fließtext, keine `---` Trenner.
 
 **Blog-Artikel (live):**
-- `ki-automatisierung-mittelstand` — KI-Automatisierung im Mittelstand
+- `ki-automatisierung-mittelstand` — KI-Automatisierung im Mittelstand ✓ überarbeitet
+- `app-bauen-ohne-programmierer` — App gebaut ohne Entwickler-Background ✓ live seit 2026-04-05
 
 **Blog-Drafts (draft: true, ausstehend Review):**
 - `chatgpt-vs-claude-unternehmen` — ChatGPT vs Claude Vergleich
@@ -161,14 +164,17 @@ npm run build # Produktions-Build
 - `mein-ki-os` — Persönliches KI-Betriebssystem mit Claude Code
 - `prompts-die-funktionieren` — 5 Prompts aus dem echten Alltag
 - `n8n-erster-workflow` — n8n Einstieg Schritt-für-Schritt
-- `app-bauen-ohne-programmierer` — App gebaut ohne Entwickler-Background
 
 **Neue Seiten & Features:**
-- `/tools` — Empfohlene Tools mit Affiliate-Links (n8n, Zapier, IONOS, Hostinger, Notion, Canva)
+- `/tools` — Tools mit Affiliate-Links; Kategorien: KI & LLMs, Automatisierung, Hosting & Infrastruktur, Produktivität & Design, Sicherheit & Datenschutz, Entwicklung. Section-IDs für Anchor-Links gesetzt. Netlify, Miro, NordVPN hinzugefügt. Notion + Canva ohne Affiliate-Badge.
 - `/rss.xml` — RSS-Feed für Blog-Abonnenten
-- Newsletter-Signup via Buttondown (Blog-Index, Artikel, ggf. Startseite)
+- Newsletter-Signup via Buttondown (Username: `buschecloud`) — aktiv in allen Artikeln und Blog-Index
 - JSON-LD strukturierte Daten auf allen Blog-Artikeln
 - `robots.txt` — Suchmaschinen + Social erlaubt, KI-Scraper blockiert
+
+**Skills (global in ~/.claude/skills/):**
+- `meine-stimme` — Textstil: kein em-dash im Fließtext, kein `---` als Trenner
+- `blog-artikel` — Formatierung: Blockquotes, Bilder, Headings, Absatzstruktur
 
 **Content-Strategie:** `outputs/content-strategie.md` — Themen-Cluster, Keywords, Veröffentlichungsrhythmus (2x/Monat)
 
@@ -176,10 +182,10 @@ npm run build # Produktions-Build
 
 **Noch ausstehend:**
 - LinkedIn-Profil mit Texten aus `outputs/linkedin-optimierung.md` aktualisieren
-- Buttondown-Account erstellen und Username in `website/src/components/NewsletterSignup.astro` eintragen
-- Affiliate-Programme beantragen (n8n, Zapier, IONOS, Hostinger, Notion, Canva) und Links in `website/src/pages/tools.astro` ersetzen
+- ~~Buttondown-Account erstellen~~ ✓ (Username: buschecloud, bereits eingetragen)
+- Affiliate-Programme beantragen und Links in `website/src/pages/tools.astro` ersetzen: n8n, Zapier, IONOS, Hostinger (Bewerbung läuft), Netlify, Miro, NordVPN
 - ~~Google Search Console einrichten und Sitemap einreichen~~ ✓ (erledigt 2026-04-03)
-- 10 Blog-Drafts reviewen und einzeln mit `draft: false` freigeben
+- 9 Blog-Drafts reviewen, mit blog-artikel + meine-stimme Skill überarbeiten und `draft: false` setzen
 - OG-Images pro Blog-Artikel erstellen
 
 ---
