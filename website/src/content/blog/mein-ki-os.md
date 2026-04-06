@@ -21,11 +21,11 @@ Und ich muss direkt sagen: Ich habe dieses System nicht selbst erfunden.
 
 ## Woher dieses System kommt
 
-Das Konzept hinter dem KI-OS stammt von **Garrit Wilson** und der [KI PIONIER Akademie](https://ki-pionier-akademie.de).
+Das Konzept hinter dem KI-OS stammt von **Garrit Wilson** und der [KIPA KI Pionier Akademie](https://ki-pionier-akademie.de).
 
-Garrit hat ein Workspace-Template-System entwickelt, das eine centrale Frage löst: Wie gibst du einer KI dauerhaften Kontext, ohne jedes Mal von vorn anfangen zu müssen? Seine Antwort ist strukturiert, durchdacht und direkt einsetzbar. Ich bin über die KI PIONIER Community auf dieses System gestoßen und habe es sofort übernommen.
+Garrit hat ein Workspace-Template-System entwickelt, das eine zentrale Frage löst: Wie gibst du einer KI dauerhaften Kontext, ohne jedes Mal von vorn anfangen zu müssen? Seine Antwort ist strukturiert, durchdacht und direkt einsetzbar. Ich bin über die KIPA Community auf dieses System gestoßen und habe es sofort übernommen.
 
-Was ich gemacht habe: Die Grundstruktur auf meine Arbeitsschwerpunkte ausgerichtet, eigene Commands entwickelt, das System mit meiner Portfolio-Arbeit und meinem Blog-Workflow verbunden.
+Was ich gemacht habe: Die Grundstruktur auf meine Arbeitsschwerpunkte ausgerichtet, eigene Commands entwickelt, das System mit meinen Projekten vernetzt und per Online Datenbank und Telegram verbunden.
 
 Das Ergebnis ist meine Version eines KI-Betriebssystems. Aber das Fundament, die Idee und die Architektur dahinter sind Garrits Arbeit. Wer das Ursprungssystem kennenlernen will: [ki-pionier-akademie.de](https://ki-pionier-akademie.de).
 
