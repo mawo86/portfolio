@@ -51,6 +51,22 @@ Aber der Grundrhythmus ist ein anderer.
   <figcaption>Früher war das der Arbeitsalltag eines Entwicklers. Heute ist es einer von vielen Schritten. (Foto: Unsplash)</figcaption>
 </figure>
 
+## Das System dahinter: KI PIONIER und Garrit Wilson
+
+Ich muss an dieser Stelle ehrlich sein: Die Effizienz kam nicht allein von Claude Code.
+
+Hinter dem Arbeitsrhythmus steckt ein System. Ein strukturierter Workspace, der Claude dauerhaft im Kontext hält — wer ich bin, woran ich arbeite, welche Entscheidungen bereits getroffen sind. Claude startet nicht jeden Tag neu bei null. Es kennt das Projekt.
+
+Dieses System habe ich in großen Teilen von **Garrit Wilson** und der [KI PIONIER Akademie](https://ki-pionier-akademie.de) übernommen und auf meine Bedürfnisse angepasst. Garrit hat ein Workspace-Template-Konzept entwickelt, das genau dieses Problem löst: Wie gibst du einer KI dauerhaften Kontext, ohne jedes Mal von vorn anfangen zu müssen?
+
+Die Grundidee: Eine zentrale Konfigurationsdatei (`CLAUDE.md`) beschreibt, wer du bist, was deine Ziele sind und wie der Workspace aufgebaut ist. Slash-Commands wie `/prime` laden diesen Kontext zu Beginn jeder Session. Kontext-Dateien halten aktuelle Projektstände, Entscheidungen und Prioritäten fest. Ein Memory-System merkt sich, was sich über Sessions hinweg bewährt hat.
+
+Was ich daran angepasst habe: die Struktur auf meine Arbeitsschwerpunkte ausgerichtet, eigene Commands entwickelt, das System mit meinem Portfolio-Workspace verbunden und den Blog-Workflow integriert.
+
+Das Ergebnis ist ein persönliches KI-Betriebssystem. Claude kennt meine Projekte. Es kennt meinen Schreibstil. Es weiß was bereits erledigt ist und was als nächstes kommt. Mehr dazu im Artikel [Mein KI-OS](/blog/mein-ki-os).
+
+Wer sich für das Ursprungssystem interessiert: Garrit und die KI PIONIER Community sind bei [ki-pionier-akademie.de](https://ki-pionier-akademie.de) zu finden. Das, was ich dort gelernt und adaptiert habe, hat meine Arbeitsweise fundamental verändert.
+
 ## Was sich wirklich verändert hat
 
 Die Flaschenhälse haben sich verschoben.
@@ -104,11 +120,13 @@ Nimm die kleinste, konkreteste Version einer Idee die du hast.
 
 Nicht die ganze Vision. Die kleinste sinnvolle Version. Ein Formular. Eine Berechnung. Eine einfache Anzeige. Etwas, das an einem Nachmittag fertig sein könnte.
 
-Öffne Claude. Beschreib es. Schau was passiert.
+Öffne [Claude](https://claude.ai). Beschreib es. Schau was passiert.
 
 Das Schlimmste: Es funktioniert nicht und du hast ein paar Stunden investiert.
 
 Das Beste: Du hast ein laufendes Produkt. Und ein komplett neues Bild davon, was für dich möglich ist.
+
+Bevor du loslegst: Wenn du deine Idee zuerst prüfen willst, bevor du baust, zeigt der Artikel [Idee in zwei Stunden validieren](/blog/idee-validieren-mit-ki) wie das geht.
 
 ## Mein Toolstack
 
