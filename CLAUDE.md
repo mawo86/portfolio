@@ -157,7 +157,8 @@ npm run build # Produktions-Build
 - `app-bauen-ohne-programmierer` — App gebaut ohne Entwickler-Background (inkl. Garrit Wilson / KI PIONIER Credit)
 - `idee-validieren-mit-ki` — Idee in 2h mit KI prüfen
 - `chatgpt-vs-claude-unternehmen` — ChatGPT vs Claude Vergleich
-- `ki-prozesse-identifizieren` — 5 Zeichen für KI-geeignete Prozesse
+- `ki-prozesse-identifizieren` — 5 Zeichen für KI-geeignete Prozesse (überarbeitet: keine persönlichen Beispiele, allgemein bekannte Referenzen)
+- `nordvpn-sicher-arbeiten` — Warum ein VPN heute zum Arbeitsalltag gehört (inkl. NordVPN Affiliate-Link)
 - `mein-ki-toolkit` — Persönliches Tool-Setup
 - `ki-strategie-erste-schritte` — KI-Strategie Einsteigerguide
 - `sap-ki-integration` — SAP + KI Praxis
@@ -169,7 +170,7 @@ npm run build # Produktions-Build
 sprachmodell-erklaert, ki-roi-berechnen, ki-fehler-einfuehrung, ki-glossar-entscheider, zapier-vs-n8n, ki-im-kundenservice, email-automatisierung-ki, erster-ki-pilot, ki-angst-im-team, ki-projekte-scheitern, ki-team-aufbauen, ki-und-dsgvo, ki-daten-eingeben, ki-im-vertrieb, ki-in-der-buchhaltung, ki-im-hr, ki-sap-fico, microsoft-copilot-bewertung, ein-jahr-ki, ki-jobs-zukunft
 
 **Neue Seiten & Features:**
-- `/tools` — Tools mit Affiliate-Links; Kategorien: KI & LLMs, Automatisierung, Hosting & Infrastruktur, Produktivität & Design, Sicherheit & Datenschutz, Entwicklung. Section-IDs für Anchor-Links gesetzt. Netlify, Miro, NordVPN hinzugefügt. Notion + Canva ohne Affiliate-Badge.
+- `/tools` — Tools mit Affiliate-Links; Kategorien: KI & LLMs, Automatisierung, Hosting & Infrastruktur, Produktivität & Design, Sicherheit & Datenschutz, Entwicklung. Section-IDs für Anchor-Links gesetzt. Netlify, Miro hinzugefügt. NordVPN mit aktivem Affiliate-Link (go.nordvpn.net). Notion + Canva ohne Affiliate-Badge.
 - `/rss.xml` — RSS-Feed für Blog-Abonnenten
 - Newsletter-Signup via Buttondown (Username: `buschecloud`) — aktiv in allen Artikeln und Blog-Index
 - JSON-LD strukturierte Daten auf allen Blog-Artikeln

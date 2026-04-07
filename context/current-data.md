@@ -107,7 +107,7 @@
 | Hostinger | Ja (60% recurring) | Bewerbung läuft (2026-04-05) |
 | Netlify | Ja | Bewerbung ausstehend |
 | Miro | Ja | Bewerbung läuft (2026-04-05) |
-| NordVPN | Ja | Bewerbung ausstehend |
+| NordVPN | Ja | Affiliate-Link aktiv (2026-04-07) |
 | Notion | Nein (Affiliate entfernt) | Regulärer Link |
 | Canva | Nein (Affiliate entfernt) | Regulärer Link |
 | Claude, ChatGPT, WhisperFlow, Obsidian, VS Code | Nein | Reguläre Links |
@@ -140,7 +140,8 @@
 - [x] OG-Image Relative-URL-Bug gefixt (Layout.astro) — 2026-04-06
 - [x] Blog-Kategorien + Pagination implementiert — 2026-04-06
 - [x] app-bauen + mein-ki-os: Garrit Wilson / KI PIONIER Credit ergänzt — 2026-04-06
-- [ ] Affiliate-Programme beantragen: n8n, Zapier, IONOS, Netlify, NordVPN
+- [x] NordVPN Affiliate-Link aktiv + in tools.astro eingebunden — 2026-04-07
+- [ ] Affiliate-Programme beantragen: n8n, Zapier, IONOS, Netlify
 - [ ] OG-Images pro Blog-Artikel erstellen
 - [ ] LinkedIn aktualisieren (Texte in `outputs/linkedin-optimierung.md`)
 - [ ] 20 Draft-Artikel schrittweise reviewen + live stellen (KW16–25)
