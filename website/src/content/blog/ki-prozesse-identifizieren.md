@@ -20,45 +20,43 @@ Hier sind fünf klare Zeichen. Wenn du eines davon erkennst, hast du einen Kandi
 
 ## Zeichen 1: Jemand kopiert Daten von A nach B, jeden Tag
 
-Du hast Mitarbeiter, die regelmäßig Informationen aus einem System nehmen und in ein anderes eintippen. Aus einer E-Mail ins CRM. Aus einer PDF ins ERP. Aus einem Formular in eine Excel-Tabelle.
+Mitarbeiter nehmen Informationen aus einem System und tippen sie in ein anderes ein. Aus einer E-Mail ins CRM. Aus einer PDF ins ERP. Aus einem Formular in eine Excel-Tabelle.
 
-Ein Handelsunternehmen, das ich kenne, hat vier Mitarbeiter, die täglich Bestellungen aus E-Mails in SAP übertragen. Immer dasselbe Schema: Artikelnummer, Menge, Lieferadresse, Datum. Die Informationen stehen in der E-Mail. Sie müssen nur extrahiert und ins richtige Feld eingetragen werden.
+Das ist keine Seltenheit. In der Logistik, im Handel, in der Verwaltung ist manuelles Datenabtippen so verbreitet, dass es als normal gilt. Es ist aber kein unvermeidliches Naturgesetz. Es ist ein ungelöstes Automatisierungsproblem.
 
-Das ist exakt die Art von Aufgabe, bei der KI zuverlässig funktioniert. Strukturierte Informationen aus unstrukturierten Quellen ziehen. Das schafft ein Sprachmodell in Sekunden.
-
-Eine einfache Faustregel: Wenn die Aufgabe ein Azubi nach zwei Tagen Einarbeitung beherrscht, kann sie automatisiert werden.
+Die einfache Faustregel: Wenn die Aufgabe ein Azubi nach zwei Tagen Einarbeitung beherrscht, kann sie automatisiert werden. Strukturierte Informationen aus unstrukturierten Quellen ziehen — das schafft ein Sprachmodell in Sekunden, zuverlässig und ohne Tippfehler.
 
 ## Zeichen 2: Die Antwort ist fast immer dieselbe
 
-Dein Support-Team beantwortet Anfragen. 70 Prozent davon sind Variationen von fünf bis zehn Standardfragen. Lieferstatus, Rückgabebedingungen, Preisanfragen, Terminvereinbarungen.
+Support-Teams beantworten Anfragen. Oft sind 60 bis 80 Prozent davon Variationen von wenigen Standardfragen. Lieferstatus, Rückgabebedingungen, Preisanfragen, Terminvereinbarungen.
 
-Ein IT-Dienstleister bekommt täglich 60 Support-Tickets. 40 davon sind Passwort-Resets, VPN-Probleme oder Druckerfragen. Dieselben Lösungen, dieselben Antworten. Nur die Namen ändern sich.
+Das ist kein Zufall. Kunden haben immer wieder dieselben Fragen, weil sie dieselben Bedürfnisse haben. Deshalb haben Unternehmen wie Zalando, Telekommunikationsanbieter oder Versicherungen schon früh auf Chatbots und automatisierte Ticketklassifizierung gesetzt. Nicht um Mitarbeiter loszuwerden, sondern um die stumpfe Arbeit herauszuziehen.
 
-Ein KI-basiertes System kann diese Tickets automatisch klassifizieren, die Standardantwort generieren und dem Mitarbeiter zur Freigabe vorlegen. Der Mensch prüft nur noch, statt selbst zu tippen. Das spart nicht die Stelle. Es spart die stumpfe Arbeit und gibt dem Team Zeit für die wirklich komplexen Fälle.
+Ein KI-basiertes System kann Tickets automatisch klassifizieren, die Standardantwort generieren und dem Mitarbeiter zur Freigabe vorlegen. Der Mensch prüft nur noch, statt selbst zu tippen. Das gibt dem Team Zeit für die wirklich komplexen Fälle.
 
 ## Zeichen 3: Es gibt eine Checkliste, und trotzdem werden Punkte vergessen
 
 Prozesse mit Checklisten sind ein klares Signal. Warum? Weil die Checkliste zeigt, dass der Ablauf definiert ist. Und wenn trotzdem Punkte vergessen werden, zeigt das, dass Menschen bei repetitiven Prüfungen nachlassen.
 
-Ein Produktionsunternehmen hat eine Qualitätsprüfung mit 25 Checkpoints. Jedes Teil muss durch. In der Praxis werden bei Schichtende die letzten fünf Punkte überflogen. Nicht aus Faulheit, sondern aus Müdigkeit. Das Ergebnis: Reklamationen, die vermeidbar wären.
+Kognitionsforscher nennen das "Vigilanzverlust": Je länger jemand eine monotone Aufgabe ausführt, desto mehr lässt die Aufmerksamkeit nach. Das ist keine Schwäche, das ist Biologie. Aus genau diesem Grund setzen Automobilhersteller wie BMW oder Toyota seit Jahren auf Bilderkennungssysteme in der Qualitätssicherung. Maschinen werden nicht müde.
 
-KI kann hier auf zwei Arten helfen. Bilderkennungs-KI, die visuelle Prüfungen automatisiert. Und Prozess-KI, die sicherstellt, dass kein Schritt übersprungen wird. Maschinen werden nicht müde.
+KI kann hier auf zwei Arten helfen. Bilderkennungs-KI für visuelle Prüfungen. Und Prozess-KI, die sicherstellt, dass kein Schritt übersprungen wird.
 
 ## Zeichen 4: Jemand erstellt regelmäßig Berichte aus Rohdaten
 
-Monatliche Reports, Quartalsberichte, Dashboards, die manuell befüllt werden. Jemand exportiert Daten aus einem oder mehreren Systemen, formatiert sie in Excel und erstellt daraus Folien oder PDFs.
+Monatliche Reports, Quartalsberichte, Dashboards, die manuell befüllt werden. Jemand exportiert Daten aus Systemen, formatiert sie in Excel und erstellt daraus Folien oder PDFs.
 
-Die Controlling-Abteilung eines Mittelständlers verbringt die erste Woche jedes Monats damit, Zahlen aus drei verschiedenen Systemen zusammenzutragen. Dasselbe Layout, dieselben KPIs. Nur neue Zahlen.
+McKinsey hat in mehreren Studien ermittelt, dass Mitarbeiter in Finance- und Controlling-Rollen zwischen 20 und 40 Prozent ihrer Arbeitszeit mit Datenzusammenführung und manueller Berichterstellung verbringen. Dasselbe Layout, dieselben KPIs, jede Woche neue Zahlen.
 
-Dieser Prozess lässt sich vollständig automatisieren. Datenexport, Aufbereitung, Visualisierung, Berichtserstellung. Der Bericht liegt am ersten Werktag morgens im Postfach, statt am fünften. Weitere Beispiele dazu findest du in meinem Artikel über [KI-Automatisierung im Mittelstand](/blog/ki-automatisierung-mittelstand).
+Dieser Prozess lässt sich vollständig automatisieren. Datenexport, Aufbereitung, Visualisierung, Berichtserstellung. Der Bericht liegt morgens im Postfach, statt drei Tage später. Weitere Beispiele dazu findest du in meinem Artikel über [KI-Automatisierung im Mittelstand](/blog/ki-automatisierung-mittelstand).
 
 ## Zeichen 5: Kritisches Wissen steckt in einer Person, und nirgendwo sonst
 
-Dein bester Mitarbeiter geht in Rente. Oder kündigt. Und plötzlich merkt ihr: Die Hälfte des Prozesswissens steckte in seinem Kopf. Wie man mit Sonderfällen umgeht. Welcher Lieferant bei welchem Problem der richtige Ansprechpartner ist. Warum man bei Kunde X immer die Rechnung per Post schickt.
+Ein erfahrener Mitarbeiter geht in Rente oder kündigt. Plötzlich merkt ihr: Die Hälfte des Prozesswissens steckte in seinem Kopf. Wie man mit Sonderfällen umgeht. Welcher Lieferant bei welchem Problem der richtige Ansprechpartner ist. Warum Kunde X die Rechnung immer per Post bekommt.
 
-Ein Versicherungsmakler hat drei erfahrene Sachbearbeiter mit zusammen 80 Jahren Berufserfahrung. Wenn ein komplexer Schadensfall reinkommt, wissen sie sofort, was zu tun ist. Neue Mitarbeiter brauchen Monate, um dieses Urteilsvermögen zu entwickeln.
+Dieses Problem hat einen Namen: "Brain Drain". Siemens, Bosch und andere große Industrieunternehmen investieren seit Jahren massiv in Wissensmanagementsysteme, genau weil die Babyboomer-Generation in Rente geht und dabei jahrzehntelange Erfahrung mitnimmt.
 
-KI kann dieses implizite Wissen zugänglich machen. Ein internes Wissenssystem, das auf den Dokumenten, E-Mails und Fallhistorien des Unternehmens basiert, gibt neuen Mitarbeitern sofort die relevanten Informationen. Es ersetzt nicht die Erfahrung. Aber es verkürzt den Weg dorthin.
+> KI ersetzt diese Erfahrung nicht. Aber sie macht implizites Wissen zugänglich. Ein internes Wissenssystem auf Basis von Dokumenten, E-Mails und Fallhistorien gibt neuen Mitarbeitern sofort die relevanten Informationen — und verkürzt den Weg zur Kompetenz erheblich.
 
 <figure>
   <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80" alt="Dashboard mit Daten und Diagrammen" />
@@ -67,8 +65,6 @@ KI kann dieses implizite Wissen zugänglich machen. Ein internes Wissenssystem, 
 
 ## Das Framework zum Mitnehmen
 
-> Jedes Ja ist ein Treffer. Priorisiere nach Häufigkeit und Kosten — der Prozess, der am meisten Zeit frisst und am öftesten vorkommt, ist dein Startpunkt.
-
 Geh diese fünf Fragen für jeden relevanten Prozess durch:
 
 1. Werden Daten manuell von einem System ins andere übertragen?
@@ -76,6 +72,8 @@ Geh diese fünf Fragen für jeden relevanten Prozess durch:
 3. Gibt es dokumentierte Abläufe, die trotzdem fehleranfällig sind?
 4. Werden regelmäßig Berichte aus Rohdaten manuell erstellt?
 5. Hängt kritisches Wissen an einzelnen Personen?
+
+Jedes Ja ist ein Treffer. Priorisiere nach Häufigkeit und Kosten. Der Prozess, der am meisten Zeit frisst und am öftesten vorkommt, ist dein Startpunkt.
 
 ## Dein nächster Schritt
 
