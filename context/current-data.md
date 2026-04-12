@@ -126,6 +126,21 @@
 - Themen-Cluster: Strategie, Automatisierung, Grundlagen, Branchen, Tools, SAP/Enterprise, Datenschutz, Erfahrungsberichte
 - Details: `outputs/content-strategie.md`
 
+## Monetarisierungskanäle
+
+Vollständige Strategie: `outputs/monetarisierung-strategie.md`
+Consulting-Angebot: `outputs/consulting-angebot.md`
+Digitale Produkte: `outputs/digitale-produkte.md`
+
+| Kanal | Status | Nächster Schritt |
+|-------|--------|-----------------|
+| Affiliate (NordVPN) | Aktiv | — |
+| Affiliate (Hostinger, Miro) | Bewerbung läuft | Status prüfen |
+| Affiliate (n8n, Zapier, IONOS, Netlify) | Noch nicht beantragt | Beantragen |
+| Consulting / Discovery Call | In Arbeit | Cal.com einrichten |
+| Digitales Produkt | Geplant KW18 | Produkt-Typ entscheiden |
+| Newsletter-Sponsoring | Geplant KW19–20 | Ab >100 Abonnenten |
+
 ## Offene Punkte
 
 - [x] Ionos DNS konfiguriert → busche.cloud zeigt auf GitHub Pages (2026-04-01)
@@ -141,7 +156,13 @@
 - [x] Blog-Kategorien + Pagination implementiert — 2026-04-06
 - [x] app-bauen + mein-ki-os: Garrit Wilson / KI PIONIER Credit ergänzt — 2026-04-06
 - [x] NordVPN Affiliate-Link aktiv + in tools.astro eingebunden — 2026-04-07
+- [x] Monetarisierungsstrategie erstellt (outputs/monetarisierung-strategie.md) — 2026-04-12
+- [x] Consulting-Angebot ausformuliert (outputs/consulting-angebot.md) — 2026-04-12
+- [x] Digitale Produkte geplant (outputs/digitale-produkte.md) — 2026-04-12
+- [x] Discovery-Call-CTA auf Startseite + in BlogLayout — 2026-04-12
+- [ ] Cal.com einrichten + Link in Website einbauen
 - [ ] Affiliate-Programme beantragen: n8n, Zapier, IONOS, Netlify
+- [ ] Digitales Produkt erstellen + Gumroad-Seite (KW18)
 - [ ] OG-Images pro Blog-Artikel erstellen
 - [ ] LinkedIn aktualisieren (Texte in `outputs/linkedin-optimierung.md`)
 - [ ] 20 Draft-Artikel schrittweise reviewen + live stellen (KW16–25)

@@ -184,9 +184,17 @@ sprachmodell-erklaert, ki-roi-berechnen, ki-fehler-einfuehrung, ki-glossar-entsc
 
 **LinkedIn-Optimierung:** `outputs/linkedin-optimierung.md` — fertige Texte zum Copy-Paste
 
+**Monetarisierungsstrategie:** `outputs/monetarisierung-strategie.md` — Alle Kanäle, Einnahmen-Tracking, monatliches Review
+
+**Consulting-Angebot:** `outputs/consulting-angebot.md` — Pakete (KI-Readiness-Check €299, KI-Pilot ab €1.500, Begleitung ab €800/Monat), Discovery-Call-Konzept
+
+**Digitale Produkte:** `outputs/digitale-produkte.md` — Produkt-Optionen, Empfehlung: PDF-Guide "KI-Strategie in 30 Tagen" (€9–19)
+
 **Noch ausstehend:**
+- Cal.com einrichten + Discovery-Call-Link in Website einbauen
+- Affiliate-Programme beantragen: n8n, Zapier, IONOS, Netlify; Status prüfen: Hostinger, Miro
+- Digitales Produkt erstellen (KW18, Empfehlung: PDF-Guide)
 - LinkedIn-Profil mit Texten aus `outputs/linkedin-optimierung.md` aktualisieren
-- Affiliate-Programme beantragen und Links in `website/src/pages/tools.astro` ersetzen: n8n, Zapier, IONOS, Hostinger (Bewerbung läuft), Netlify, Miro, NordVPN
 - OG-Images pro Blog-Artikel erstellen
 - 20 Draft-Artikel reviewen und schrittweise live stellen (KW16–25)
 

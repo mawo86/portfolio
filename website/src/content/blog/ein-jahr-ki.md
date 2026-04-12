@@ -7,7 +7,7 @@ draft: true
 category: "Erfahrungsbericht"
 ---
 
-Ich nutze KI seit über einem Jahr intensiv. Täglich. Für Texte, Code, Analysen, Planung, Sparrings-Gespräche.
+Ich nutze KI seit über einem Jahr intensiv. Fast täglich. Für Texte, Code, Analysen, Planung, Sparrings-Gespräche.
 
 Das ist kein Artikel über KI-Potenzial. Es ist ein ehrlicher Rückblick auf das, was sich wirklich verändert hat.
 
