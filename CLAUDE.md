@@ -146,13 +146,13 @@ npm run build # Produktions-Build
 - `plans/2026-03-31-blog-portfolio-seite-nyt-design.md` — Blog-Index NYT-Redesign ✓
 - `plans/2026-04-03-sichtbarkeit-organisches-wachstum-affiliates.md` — SEO, Newsletter, Affiliates, Content-Pipeline ✓
 
-**Blog:** 11 Artikel live, 20 Drafts in der Pipeline (KW16–25). Blog-Index-Seite (`/blog`) hat NYT-inspiriertes Editorial-Design mit Kategorie-Navigation und Pagination. Artikel-Layout (`BlogLayout.astro`) mit Lesezeit, JSON-LD, Prev/Next-Navigation, Newsletter-CTA und Autor-Karte. `@tailwindcss/typography` ist installiert und aktiviert.
+**Blog:** 12 Artikel live, 19 Drafts in der Pipeline (KW16–25). Blog-Index-Seite (`/blog`) hat NYT-inspiriertes Editorial-Design mit Kategorie-Navigation und Pagination. Artikel-Layout (`BlogLayout.astro`) mit Lesezeit, JSON-LD, Prev/Next-Navigation, Newsletter-CTA und Autor-Karte. `@tailwindcss/typography` ist installiert und aktiviert.
 
 **Blog-Styling:** Artikel nutzen `blog-artikel` + `meine-stimme` Skills für konsistente Formatierung: Blockquotes als Callout-Boxen, Unsplash-Bilder via `<figure>/<figcaption>`, keine em-dashes im Fließtext, keine `---` Trenner.
 
 **Blog-Kategorien:** Jeder Artikel hat ein `category`-Feld im Frontmatter. Kategorien: Strategie, Automatisierung, Grundlagen, Branchen, Tools & Setup, SAP & Enterprise, Datenschutz, Erfahrungsbericht. Blog-Index zeigt Kategorie-Tabs + Pagination (8 Artikel/Seite).
 
-**Blog-Artikel (live, 11 Stück):**
+**Blog-Artikel (live, 12 Stück):**
 - `ki-automatisierung-mittelstand` — KI-Automatisierung im Mittelstand
 - `app-bauen-ohne-programmierer` — App gebaut ohne Entwickler-Background (inkl. Garrit Wilson / KI PIONIER Credit)
 - `idee-validieren-mit-ki` — Idee in 2h mit KI prüfen
@@ -165,9 +165,10 @@ npm run build # Produktions-Build
 - `mein-ki-os` — KI-Betriebssystem (inkl. Garrit Wilson / KIPA Credit)
 - `prompts-die-funktionieren` — 5 Prompts aus dem echten Alltag
 - `n8n-erster-workflow` — n8n Einstieg Schritt-für-Schritt
+- `ein-jahr-ki` — Ein Jahr KI im Alltag: Erfahrungsbericht (fundamental überarbeitet 2026-04-21)
 
-**Blog-Drafts (draft: true, KW16–25, 20 Artikel):**
-sprachmodell-erklaert, ki-roi-berechnen, ki-fehler-einfuehrung, ki-glossar-entscheider, zapier-vs-n8n, ki-im-kundenservice, email-automatisierung-ki, erster-ki-pilot, ki-angst-im-team, ki-projekte-scheitern, ki-team-aufbauen, ki-und-dsgvo, ki-daten-eingeben, ki-im-vertrieb, ki-in-der-buchhaltung, ki-im-hr, ki-sap-fico, microsoft-copilot-bewertung, ein-jahr-ki, ki-jobs-zukunft
+**Blog-Drafts (draft: true, KW16–25, 19 Artikel):**
+sprachmodell-erklaert, ki-roi-berechnen, ki-fehler-einfuehrung, ki-glossar-entscheider, zapier-vs-n8n, ki-im-kundenservice, email-automatisierung-ki, erster-ki-pilot, ki-angst-im-team, ki-projekte-scheitern, ki-team-aufbauen, ki-und-dsgvo, ki-daten-eingeben, ki-im-vertrieb, ki-in-der-buchhaltung, ki-im-hr, ki-sap-fico, microsoft-copilot-bewertung, ki-jobs-zukunft
 
 **Neue Seiten & Features:**
 - `/tools` — Tools mit Affiliate-Links; Kategorien: KI & LLMs, Automatisierung, Hosting & Infrastruktur, Produktivität & Design, Sicherheit & Datenschutz, Entwicklung. Section-IDs für Anchor-Links gesetzt. Netlify, Miro hinzugefügt. NordVPN mit aktivem Affiliate-Link (go.nordvpn.net). Notion + Canva ohne Affiliate-Badge.

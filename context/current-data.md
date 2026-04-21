@@ -26,7 +26,7 @@
 - Kontakt (Formspree-Formular)
 - **Empfohlene Tools** (`/tools`) — Tool-Empfehlungen mit Affiliate-Links
 
-## Blog-Artikel (11 live, 20 Drafts)
+## Blog-Artikel (12 live, 19 Drafts)
 
 ### Live-Artikel
 
@@ -43,6 +43,7 @@
 | Mein KI OS | mein-ki-os | 2026-04-06 | Tools & Setup |
 | 5 Prompts aus dem Alltag | prompts-die-funktionieren | 2026-04-06 | Tools & Setup |
 | n8n erster Workflow | n8n-erster-workflow | 2026-04-06 | Automatisierung |
+| Ein Jahr KI im Alltag | ein-jahr-ki | 2026-04-21 | Erfahrungsbericht |
 
 ### Draft-Artikel (Redaktionsplan KW16–25)
 
