@@ -13,7 +13,7 @@ const pages = Object.fromEntries([
   ['case-studies', { title: 'Case Studies', description: 'Echte Projekte, messbare Ergebnisse', tag: 'Case Studies' }],
 ]);
 
-export const { getStaticPaths, GET } = await OGImageRoute({
+export const { getStaticPaths, GET } = OGImageRoute({
   param: 'route',
   pages,
   getImageOptions: (_path, page: { title: string; description: string; tag: string }) => ({
