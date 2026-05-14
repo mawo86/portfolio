@@ -16,6 +16,15 @@ export default {
           800: '#004780',
           900: '#003466',
         },
+        // Surface tokens — konsistent über alle Komponenten
+        ink: {
+          900: '#080B14',   // Haupt-Hintergrund
+          800: '#0d1117',   // Karten / select-Optionen
+          700: '#161b22',   // Hover-Stufe
+        },
+      },
+      scrollMargin: {
+        'header': '6rem',
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],

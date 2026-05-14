@@ -24,9 +24,11 @@ const formattedDate = new Intl.DateTimeFormat('de-DE', {
 }).format(date);
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
+const slug = Astro.url.pathname.replace(/^\/blog\//, '').replace(/\/$/, '');
+const ogRoute = `blog/${slug}`;
 ---
 
-<Layout title={`${title} — Busche Cloud`} description={description}>
+<Layout title={`${title} — Busche Cloud`} description={description} ogRoute={ogRoute}>
   <JsonLd title={title} description={description} date={date} url={canonicalURL} slot="head" />
   <Header />
   <main id="main" class="pt-28 pb-24">
@@ -66,7 +68,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
     </div>
 
     <!-- Article body -->
-    <article class="max-w-[680px] mx-auto px-6">
+    <article class="max-w-[680px] mx-auto px-6" data-pagefind-body data-pagefind-meta={`title:${title}`}>
       <div class="
         prose prose-invert max-w-none
 

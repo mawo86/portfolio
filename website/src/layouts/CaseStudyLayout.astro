@@ -1,0 +1,102 @@
+---
+import Layout from './Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+export interface Props {
+  title: string;
+  description: string;
+  client: string;
+  industry: string;
+  timeframe: string;
+  role: string;
+  services: string[];
+  results: { metric: string; label: string }[];
+}
+
+const { title, description, client, industry, timeframe, role, services, results } = Astro.props;
+const slug = Astro.url.pathname.replace(/^\/case-studies\//, '').replace(/\/$/, '');
+const ogRoute = `case-studies/${slug}`;
+---
+
+<Layout title={`${title} — Case Study — Busche Cloud`} description={description} ogRoute={ogRoute}>
+  <Header />
+  <main id="main" class="pt-28 pb-24">
+    <article class="max-w-4xl mx-auto px-6">
+      <a href="/case-studies" class="inline-flex items-center gap-2 text-gray-500 hover:text-brand-400 text-sm mb-12 transition-colors group">
+        <svg class="w-4 h-4 transition-transform group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
+        Alle Case Studies
+      </a>
+
+      <p class="text-brand-400 text-sm font-semibold uppercase tracking-widest mb-4">Case Study</p>
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white mb-5 leading-tight tracking-tight">{title}</h1>
+      <p class="text-gray-400 text-lg leading-relaxed mb-10 max-w-3xl">{description}</p>
+
+      <!-- Meta-Box -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-px bg-white/8 border border-white/8 rounded-2xl overflow-hidden mb-12">
+        {[
+          { label: 'Kunde', value: client },
+          { label: 'Branche', value: industry },
+          { label: 'Zeitraum', value: timeframe },
+          { label: 'Rolle', value: role },
+        ].map(item => (
+          <div class="bg-[#080B14] p-5">
+            <div class="text-xs text-gray-500 uppercase tracking-wider mb-1">{item.label}</div>
+            <div class="text-sm text-white font-semibold">{item.value}</div>
+          </div>
+        ))}
+      </div>
+
+      <!-- Ergebnisse -->
+      {results.length > 0 && (
+        <div class="grid sm:grid-cols-3 gap-6 mb-14">
+          {results.map(r => (
+            <div class="bg-gradient-to-br from-brand-500/10 to-blue-600/5 border border-brand-500/20 rounded-2xl p-7 text-center">
+              <div class="text-4xl font-black text-white mb-2">{r.metric}</div>
+              <div class="text-sm text-gray-400 leading-snug">{r.label}</div>
+            </div>
+          ))}
+        </div>
+      )}
+
+      <!-- Body -->
+      <div class="prose prose-invert max-w-none
+        prose-p:text-[#c8cdd6] prose-p:leading-[1.9] prose-p:text-[1.05rem]
+        prose-h2:text-white prose-h2:font-black prose-h2:text-[1.75rem] prose-h2:mt-16 prose-h2:mb-6
+        prose-h3:text-white prose-h3:font-bold prose-h3:text-[1.25rem]
+        prose-strong:text-white
+        prose-a:text-[#60a5fa] prose-a:no-underline
+        prose-blockquote:border-l-0 prose-blockquote:bg-white/5 prose-blockquote:rounded-xl
+        prose-blockquote:px-7 prose-blockquote:py-5 prose-blockquote:not-italic
+        prose-li:text-[#c8cdd6]
+      ">
+        <slot />
+      </div>
+
+      <!-- Service-Tags -->
+      {services.length > 0 && (
+        <div class="mt-14 flex flex-wrap gap-2">
+          {services.map(s => (
+            <span class="px-3 py-1.5 text-xs font-medium bg-white/5 text-gray-300 border border-white/10 rounded-lg">{s}</span>
+          ))}
+        </div>
+      )}
+
+      <!-- CTA -->
+      <div class="mt-14 p-8 border border-brand-500/20 rounded-2xl bg-white/2">
+        <p class="text-xs font-bold uppercase tracking-widest text-brand-400 mb-3">Ähnlicher Use Case bei dir?</p>
+        <h3 class="text-xl font-black text-white mb-2 leading-tight">Lass uns 30 Minuten darüber sprechen.</h3>
+        <p class="text-gray-400 text-sm leading-relaxed mb-5">Kostenloses Erstgespräch, kein Verkauf. Wir schauen, ob und wie es bei dir passt.</p>
+        <a href="/#kontakt" class="inline-flex items-center gap-2 px-5 py-2.5 bg-brand-500 hover:bg-brand-400 text-white font-semibold rounded-lg transition-colors text-sm">
+          Erstgespräch buchen
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+    </article>
+  </main>
+  <Footer />
+</Layout>

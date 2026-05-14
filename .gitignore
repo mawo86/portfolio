@@ -6,3 +6,7 @@ website/.astro/
 *.log
 .claude/
 reference/
+
+# Pagefind output (wird beim Build erzeugt, nicht im Repo)
+dist/
+.astro-og-canvas/

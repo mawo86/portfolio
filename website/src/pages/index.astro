@@ -2,7 +2,14 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import Testimonials from '../components/Testimonials.astro';
 import { getCollection } from 'astro:content';
+import { availability, links } from '../config/site';
+
+const status = availability.status;
+const availabilityLabel = availability.label[status];
+const statusDot = status === 'available' ? 'bg-brand-400' : status === 'limited' ? 'bg-amber-400' : 'bg-gray-400';
+const statusBg = status === 'available' ? 'bg-brand-500/10 border-brand-500/20 text-brand-300' : status === 'limited' ? 'bg-amber-500/10 border-amber-500/20 text-amber-300' : 'bg-gray-500/10 border-gray-500/20 text-gray-300';
 
 const posts = (await getCollection('blog', ({ data }) => !data.draft))
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
@@ -67,7 +74,7 @@ const projects = [
   <main id="main">
 
   <!-- Hero -->
-  <section class="relative min-h-screen flex items-center justify-center overflow-hidden" aria-labelledby="hero-heading">
+  <section class="relative min-h-[85vh] flex items-center justify-center overflow-hidden pt-32 pb-20" aria-labelledby="hero-heading">
     <!-- Background effects -->
     <div class="absolute inset-0">
       <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-brand-500/10 rounded-full blur-3xl animate-pulse-slow"></div>
@@ -78,11 +85,11 @@ const projects = [
     <!-- Grid pattern overlay -->
     <div class="absolute inset-0 opacity-[0.03]" style="background-image: linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px); background-size: 50px 50px;"></div>
 
-    <div class="relative max-w-6xl mx-auto px-6 py-32 text-center">
+    <div class="relative max-w-6xl mx-auto px-6 text-center">
       <!-- Badge -->
-      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-300 text-sm font-medium mb-8 animate-fade-in">
-        <span class="w-2 h-2 bg-brand-400 rounded-full animate-pulse"></span>
-        Verfügbar für neue Projekte
+      <div class={`inline-flex items-center gap-2 px-4 py-2 rounded-full border text-sm font-medium mb-8 animate-fade-in ${statusBg}`}>
+        <span class={`w-2 h-2 rounded-full animate-pulse ${statusDot}`}></span>
+        {availabilityLabel}
       </div>
 
       <!-- Headline -->
@@ -103,15 +110,15 @@ const projects = [
       <!-- CTAs -->
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-up" style="animation-delay: 0.3s;">
         <a href="/#kontakt" class="px-7 py-3.5 bg-brand-500 hover:bg-brand-400 text-white font-semibold rounded-xl transition-all hover:scale-105 hover:shadow-lg hover:shadow-brand-500/25 text-base">
-          Gespräch vereinbaren
+          Kostenloses Erstgespräch
         </a>
-        <a href="/#projekte" class="px-7 py-3.5 bg-white/5 hover:bg-white/10 text-white font-semibold rounded-xl border border-white/10 hover:border-white/20 transition-all text-base">
-          Projekte ansehen
+        <a href="/case-studies" class="px-7 py-3.5 bg-white/5 hover:bg-white/10 text-white font-semibold rounded-xl border border-white/10 hover:border-white/20 transition-all text-base">
+          Case Studies ansehen
         </a>
       </div>
 
       <!-- Stats -->
-      <div class="mt-20 grid grid-cols-3 gap-6 max-w-lg mx-auto animate-fade-up" style="animation-delay: 0.4s;">
+      <div class="mt-14 grid grid-cols-3 gap-4 max-w-md mx-auto animate-fade-up" style="animation-delay: 0.4s;">
         {[
           { value: '10+', label: 'Jahre IT & Digital' },
           { value: 'OWL', label: 'Verwurzelt in OWL' },
@@ -126,7 +133,7 @@ const projects = [
     </div>
 
     <!-- Scroll indicator -->
-    <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-float">
+    <div class="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-float" aria-hidden="true">
       <span class="text-xs text-gray-600 uppercase tracking-widest">Scroll</span>
       <svg class="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -374,6 +381,9 @@ const projects = [
     </div>
   </section>
 
+  <!-- Testimonials (rendert nur, wenn welche vorhanden) -->
+  <Testimonials />
+
   <!-- Own Products -->
   <section id="produkte" class="py-28 border-t border-white/5">
     <div class="max-w-6xl mx-auto px-6">
@@ -558,9 +568,12 @@ const projects = [
             action="https://formspree.io/f/xgopevdy"
             method="POST"
             class="space-y-5 text-left"
+            aria-label="Kontaktformular"
           >
+            <!-- Formspree: Redirect nach erfolgreichem Submit -->
+            <input type="hidden" name="_next" value="https://busche.cloud/danke" />
             <!-- Honeypot: Formspree verwirft Submissions wenn dieses Feld gefüllt ist -->
-            <input type="text" name="_gotcha" style="display:none !important" tabindex="-1" autocomplete="off" />
+            <input type="text" name="_gotcha" style="display:none !important" tabindex="-1" autocomplete="off" aria-hidden="true" />
             <input type="hidden" name="_timestamp" id="formTimestamp" value="" />
             <div class="grid sm:grid-cols-2 gap-5">
               <div>

@@ -3,16 +3,34 @@ export interface Props {
   title: string;
   description?: string;
   image?: string;
+  ogRoute?: string;
 }
 
 const {
   title,
   description = 'Marlon Busche — KI-Automatisierung & Digitale Transformation. Ich helfe Unternehmen dabei, mit KI erfolgreicher zu werden.',
-  image = '/icon_transparent_bg.png',
+  image,
+  ogRoute,
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
-const absoluteImage = image.startsWith('http') ? image : new URL(image, Astro.site).toString();
+
+// OG-Image-Auswahl:
+// 1) explizit übergebenes image
+// 2) ogRoute (z.B. "blog/slug") → generiertes OG via /og/...png
+// 3) Pfad-basiert auto-detect für statische Seiten
+// 4) Fallback: Icon
+function resolveOgRoute() {
+  if (ogRoute) return ogRoute;
+  const path = Astro.url.pathname.replace(/\/$/, '').replace(/^\//, '');
+  if (!path) return 'index';
+  if (['blog', 'tools', 'case-studies'].includes(path)) return path;
+  return null;
+}
+
+const resolved = resolveOgRoute();
+const ogImagePath = image ?? (resolved ? `/og/${resolved}.png` : '/icon_transparent_bg.png');
+const absoluteImage = ogImagePath.startsWith('http') ? ogImagePath : new URL(ogImagePath, Astro.site).toString();
 ---
 
 <!DOCTYPE html>
@@ -21,6 +39,9 @@ const absoluteImage = image.startsWith('http') ? image : new URL(image, Astro.si
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'wasm-unsafe-eval' https://gc.zgo.at; style-src 'self' 'unsafe-inline'; img-src 'self' data: https: blob:; font-src 'self' data:; connect-src 'self' https://gc.zgo.at https://formspree.io https://buttondown.com; worker-src 'self' blob:; form-action 'self' https://formspree.io https://buttondown.com; frame-ancestors 'none'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests" />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), interest-cohort=()" />
     <meta name="format-detection" content="telephone=no" />
     <link rel="canonical" href={canonicalURL} />
     <meta name="description" content={description} />
@@ -35,11 +56,16 @@ const absoluteImage = image.startsWith('http') ? image : new URL(image, Astro.si
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={absoluteImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="de_DE" />
+    <meta property="og:site_name" content="Busche Cloud" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={absoluteImage} />
 
     <!-- Fonts (self-hosted, DSGVO-konform) -->
     <style is:inline>
@@ -79,6 +105,8 @@ const absoluteImage = image.startsWith('http') ? image : new URL(image, Astro.si
 
     <link rel="alternate" type="application/rss+xml" title="Busche Cloud Blog" href="/rss.xml" />
     <link rel="icon" type="image/png" href={`${import.meta.env.BASE_URL}icon_transparent_bg.png`} />
+    <link rel="apple-touch-icon" href={`${import.meta.env.BASE_URL}icon_transparent_bg.png`} />
+    <link rel="manifest" href={`${import.meta.env.BASE_URL}site.webmanifest`} />
     <link rel="preconnect" href="https://gc.zgo.at" crossorigin />
     <link rel="dns-prefetch" href="https://gc.zgo.at" />
     <link rel="dns-prefetch" href="https://formspree.io" />
@@ -95,6 +123,12 @@ const absoluteImage = image.startsWith('http') ? image : new URL(image, Astro.si
     <script data-goatcounter="https://buschecloud.goatcounter.com/count"
             async src="https://gc.zgo.at/count.js"></script>
     <style is:global>
+      /* Header-Offset für Anker-Links — vermeidet, dass fixed Header die Section verdeckt */
+      :target,
+      section[id],
+      [id^="main"] {
+        scroll-margin-top: 6rem;
+      }
       @media (prefers-reduced-motion: reduce) {
         *, *::before, *::after {
           animation-duration: 0.001ms !important;

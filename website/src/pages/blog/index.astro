@@ -52,8 +52,26 @@ function formatDate(date: Date) {
           </p>
         </div>
 
+        <!-- Search -->
+        <div class="pt-6 border-t border-white/10">
+          <label for="blog-search" class="sr-only">Blog durchsuchen</label>
+          <div class="relative">
+            <svg class="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+            <input
+              id="blog-search"
+              type="search"
+              placeholder="Blog durchsuchen…"
+              autocomplete="off"
+              class="w-full pl-10 pr-4 py-3 bg-white/5 border border-white/10 rounded-xl text-sm text-white placeholder:text-gray-500 focus:outline-none focus:border-brand-500/50 transition-colors"
+            />
+          </div>
+          <div id="blog-search-results" class="mt-4 hidden"></div>
+        </div>
+
         <!-- Category Navigation -->
-        <div class="flex flex-wrap items-center gap-2 pt-6 border-t border-white/10">
+        <div id="category-nav" class="flex flex-wrap items-center gap-2 pt-6">
           <span class="text-xs text-gray-600 uppercase tracking-widest font-medium mr-1">Themen</span>
           <button
             data-filter="all"
@@ -330,4 +348,79 @@ function formatDate(date: Date) {
 
   // Initial render
   render();
+</script>
+
+<!-- Pagefind Search (Static, läuft komplett im Browser) -->
+<script>
+  const searchInput = document.getElementById('blog-search') as HTMLInputElement | null;
+  const resultsBox = document.getElementById('blog-search-results');
+  const articleGrid = document.querySelectorAll<HTMLElement>('[data-article]');
+  const featured = document.querySelector<HTMLElement>('article[data-article]:first-of-type');
+  const categoryNav = document.getElementById('category-nav');
+
+  if (searchInput && resultsBox) {
+    let pagefind: any = null;
+
+    async function loadPagefind() {
+      if (pagefind) return pagefind;
+      try {
+        const url = '/pagefind/pagefind.js';
+        // @ts-ignore — Index wird erst nach astro build via pagefind CLI generiert
+        pagefind = await import(/* @vite-ignore */ /* webpackIgnore: true */ url);
+        await pagefind.init();
+      } catch (err) {
+        console.warn('Pagefind nicht verfügbar (Dev-Modus oder build ohne pagefind):', err);
+      }
+      return pagefind;
+    }
+
+    let debounceTimer: ReturnType<typeof setTimeout>;
+    searchInput.addEventListener('input', async () => {
+      clearTimeout(debounceTimer);
+      const query = searchInput.value.trim();
+
+      if (!query) {
+        resultsBox.classList.add('hidden');
+        articleGrid.forEach(el => el.style.display = '');
+        featured && (featured.style.display = '');
+        categoryNav && (categoryNav.style.display = '');
+        return;
+      }
+
+      debounceTimer = setTimeout(async () => {
+        const pf = await loadPagefind();
+        if (!pf) {
+          resultsBox.classList.remove('hidden');
+          resultsBox.innerHTML = '<p class="text-gray-500 text-sm">Suche aktuell nicht verfügbar.</p>';
+          return;
+        }
+
+        const search = await pf.search(query);
+        const results = await Promise.all(search.results.slice(0, 8).map((r: any) => r.data()));
+
+        // Restliche Inhalte verstecken
+        articleGrid.forEach(el => el.style.display = 'none');
+        featured && (featured.style.display = 'none');
+        categoryNav && (categoryNav.style.display = 'none');
+        resultsBox.classList.remove('hidden');
+
+        if (results.length === 0) {
+          resultsBox.innerHTML = `<p class="text-gray-400 text-sm py-4">Keine Treffer für „${query}".</p>`;
+          return;
+        }
+
+        resultsBox.innerHTML = `
+          <p class="text-xs text-gray-500 uppercase tracking-wider mb-3">${results.length} Treffer</p>
+          <div class="space-y-3">
+            ${results.map((r: any) => `
+              <a href="${r.url}" class="block p-5 bg-white/3 hover:bg-white/5 border border-white/8 hover:border-brand-500/30 rounded-xl transition-all">
+                <h3 class="text-base font-bold text-white mb-1.5 leading-snug">${r.meta?.title ?? r.url}</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">${r.excerpt}</p>
+              </a>
+            `).join('')}
+          </div>
+        `;
+      }, 200);
+    });
+  }
 </script>
