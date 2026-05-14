@@ -29,7 +29,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
 <Layout title={`${title} — Busche Cloud`} description={description}>
   <JsonLd title={title} description={description} date={date} url={canonicalURL} slot="head" />
   <Header />
-  <main class="pt-28 pb-24">
+  <main id="main" class="pt-28 pb-24">
 
     <!-- Article header -->
     <div class="max-w-3xl mx-auto px-6 mb-12">
@@ -52,12 +52,12 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
 
       <div class="flex items-center gap-4 text-sm text-gray-500">
         <span>Marlon Busche</span>
-        <span class="w-1 h-1 rounded-full bg-gray-700"></span>
-        <span>{formattedDate}</span>
+        <span class="w-1 h-1 rounded-full bg-gray-700" aria-hidden="true"></span>
+        <time datetime={date.toISOString()}>{formattedDate}</time>
         {readingTime && (
           <>
-            <span class="w-1 h-1 rounded-full bg-gray-700"></span>
-            <span>{readingTime} Min. Lesezeit</span>
+            <span class="w-1 h-1 rounded-full bg-gray-700" aria-hidden="true"></span>
+            <span aria-label={`${readingTime} Minuten Lesezeit`}>{readingTime} Min. Lesezeit</span>
           </>
         )}
       </div>

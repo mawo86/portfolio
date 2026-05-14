@@ -64,8 +64,10 @@ const projects = [
 <Layout title="Busche Cloud — KI-Automatisierung & Digitale Transformation">
   <Header />
 
+  <main id="main">
+
   <!-- Hero -->
-  <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+  <section class="relative min-h-screen flex items-center justify-center overflow-hidden" aria-labelledby="hero-heading">
     <!-- Background effects -->
     <div class="absolute inset-0">
       <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-brand-500/10 rounded-full blur-3xl animate-pulse-slow"></div>
@@ -84,7 +86,7 @@ const projects = [
       </div>
 
       <!-- Headline -->
-      <h1 class="text-5xl sm:text-6xl lg:text-7xl font-black text-white mb-6 leading-[1.05] tracking-tight animate-fade-up" style="animation-delay: 0.1s;">
+      <h1 id="hero-heading" class="text-5xl sm:text-6xl lg:text-7xl font-black text-white mb-6 leading-[1.05] tracking-tight animate-fade-up" style="animation-delay: 0.1s;">
         KI macht dein
         <br />
         <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-300 via-brand-400 to-blue-400">
@@ -168,14 +170,18 @@ const projects = [
           <div class="absolute inset-0 bg-gradient-to-br from-brand-500/10 to-blue-600/5 rounded-3xl blur-xl"></div>
           <div class="relative bg-white/3 border border-white/10 rounded-3xl p-8 space-y-6">
             <div class="flex items-center gap-4 pb-6 border-b border-white/10">
-              <div class="w-14 h-14 rounded-2xl overflow-hidden bg-gradient-to-br from-brand-400 to-brand-600 flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-brand-500/30 flex-shrink-0">
+              <div class="avatar w-14 h-14 rounded-2xl overflow-hidden bg-gradient-to-br from-brand-400 to-brand-600 flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-brand-500/30 flex-shrink-0 relative">
                 <img
+                  id="avatar-img"
                   src={`${import.meta.env.BASE_URL}foto.jpg`}
-                  alt="Marlon Busche"
+                  alt="Porträtfoto von Marlon Busche"
+                  loading="lazy"
+                  decoding="async"
+                  width="56"
+                  height="56"
                   class="w-full h-full object-cover"
-                  onerror="this.style.display='none'; this.parentElement.querySelector('.avatar-fallback').style.display='flex';"
                 />
-                <span class="avatar-fallback hidden w-full h-full items-center justify-center">MB</span>
+                <span aria-hidden="true" class="avatar-fallback absolute inset-0 hidden items-center justify-center">MB</span>
               </div>
               <div>
                 <div class="font-bold text-white text-lg">Marlon Busche</div>
@@ -586,9 +592,10 @@ const projects = [
               <select
                 id="subject"
                 name="subject"
+                required
                 class="w-full px-4 py-3 bg-white/5 border border-white/10 focus:border-brand-500/50 rounded-xl text-white text-sm outline-none transition-all appearance-none"
               >
-                <option value="" class="bg-[#0d1117]">Bitte wählen...</option>
+                <option value="" class="bg-[#0d1117]" disabled selected>Bitte wählen...</option>
                 <option value="ki-automatisierung" class="bg-[#0d1117]">KI-Automatisierung</option>
                 <option value="ki-beratung" class="bg-[#0d1117]">KI-Beratung / KI-Audit</option>
                 <option value="digitale-transformation" class="bg-[#0d1117]">Digitale Transformation</option>
@@ -608,9 +615,22 @@ const projects = [
               ></textarea>
             </div>
 
+            <div class="flex items-start gap-3">
+              <input
+                type="checkbox"
+                id="consent"
+                name="consent"
+                required
+                class="mt-1 w-4 h-4 flex-shrink-0 accent-brand-500 cursor-pointer"
+              />
+              <label for="consent" class="text-xs text-gray-400 leading-relaxed cursor-pointer">
+                Ich bin damit einverstanden, dass meine Angaben zur Bearbeitung der Anfrage verarbeitet werden. Details in der <a href="/datenschutz" class="text-brand-400 hover:text-brand-300 underline underline-offset-2">Datenschutzerklärung</a>.
+              </label>
+            </div>
+
             <button
               type="submit"
-              class="w-full py-3.5 bg-brand-500 hover:bg-brand-400 text-white font-semibold rounded-xl transition-all hover:shadow-lg hover:shadow-brand-500/25 text-base"
+              class="w-full py-3.5 bg-brand-500 hover:bg-brand-400 text-white font-semibold rounded-xl transition-all hover:shadow-lg hover:shadow-brand-500/25 text-base disabled:opacity-50 disabled:cursor-not-allowed"
             >
               Nachricht absenden
             </button>
@@ -627,19 +647,40 @@ const projects = [
     </div>
   </section>
 
+  </main>
+
   <Footer />
 </Layout>
 
 <script>
   const loadTime = Date.now();
-  const tsField = document.getElementById('formTimestamp');
+  const tsField = document.getElementById('formTimestamp') as HTMLInputElement | null;
   if (tsField) tsField.value = String(loadTime);
 
-  const form = document.querySelector('form[action*="formspree"]');
+  const form = document.querySelector('form[action*="formspree"]') as HTMLFormElement | null;
   if (form) {
     form.addEventListener('submit', (e) => {
       if (Date.now() - loadTime < 3000) {
         e.preventDefault();
+        return;
+      }
+      const btn = form.querySelector('button[type="submit"]') as HTMLButtonElement | null;
+      if (btn) {
+        btn.disabled = true;
+        btn.textContent = 'Wird gesendet…';
+      }
+    });
+  }
+
+  // Avatar-Fallback (CSP-freundlich, ohne inline onerror)
+  const avatarImg = document.getElementById('avatar-img') as HTMLImageElement | null;
+  if (avatarImg) {
+    avatarImg.addEventListener('error', () => {
+      avatarImg.style.display = 'none';
+      const fallback = avatarImg.parentElement?.querySelector('.avatar-fallback') as HTMLElement | null;
+      if (fallback) {
+        fallback.classList.remove('hidden');
+        fallback.classList.add('flex');
       }
     });
   }

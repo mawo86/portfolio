@@ -15,7 +15,7 @@ const currentPath = Astro.url.pathname;
 
 <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
   <div class="absolute inset-0 bg-[#080B14]/0 backdrop-blur-0 transition-all duration-300" id="header-bg"></div>
-  <nav class="relative max-w-6xl mx-auto px-6 py-5 flex items-center justify-between">
+  <nav class="relative max-w-6xl mx-auto px-6 py-5 flex items-center justify-between" aria-label="Hauptnavigation">
     <!-- Logo -->
     <a href={import.meta.env.BASE_URL} class="flex items-center gap-2.5 group" aria-label="Busche Cloud">
       <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -66,9 +66,19 @@ const currentPath = Astro.url.pathname;
     </a>
 
     <!-- Mobile menu button -->
-    <button id="mobile-menu-btn" class="md:hidden p-2 text-gray-400 hover:text-white transition-colors" aria-label="Menü öffnen">
-      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <button
+      id="mobile-menu-btn"
+      type="button"
+      class="md:hidden p-2 text-gray-400 hover:text-white transition-colors"
+      aria-label="Menü öffnen"
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+    >
+      <svg id="mobile-menu-icon-open" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+      <svg id="mobile-menu-icon-close" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
       </svg>
     </button>
   </nav>
@@ -110,12 +120,33 @@ const currentPath = Astro.url.pathname;
   // Mobile menu
   const btn = document.getElementById('mobile-menu-btn');
   const menu = document.getElementById('mobile-menu');
+  const iconOpen = document.getElementById('mobile-menu-icon-open');
+  const iconClose = document.getElementById('mobile-menu-icon-close');
+
+  function setMenuOpen(open: boolean) {
+    if (!menu || !btn) return;
+    menu.classList.toggle('hidden', !open);
+    btn.setAttribute('aria-expanded', String(open));
+    btn.setAttribute('aria-label', open ? 'Menü schließen' : 'Menü öffnen');
+    iconOpen?.classList.toggle('hidden', open);
+    iconClose?.classList.toggle('hidden', !open);
+  }
+
   btn?.addEventListener('click', () => {
-    menu?.classList.toggle('hidden');
+    const isHidden = menu?.classList.contains('hidden');
+    setMenuOpen(!!isHidden);
   });
 
   // Close mobile menu on link click
   menu?.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => menu.classList.add('hidden'));
+    link.addEventListener('click', () => setMenuOpen(false));
+  });
+
+  // Close mobile menu on Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && menu && !menu.classList.contains('hidden')) {
+      setMenuOpen(false);
+      btn?.focus();
+    }
   });
 </script>
