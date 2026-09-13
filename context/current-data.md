@@ -14,17 +14,28 @@
 | RSS-Feed | /rss.xml (automatisch generiert via @astrojs/rss) |
 | Analytics | GoatCounter (cookieless, DSGVO-konform) |
 
+## Positionierung (seit 2026-09-13)
+
+"AI-Consultant mit Angebot" — KI-Beratung für den Mittelstand (KMU, 10–500 MA). Hero: "KI, die bei euch wirklich läuft." Weg von breiter IT-Allrounder-Sprache, hin zu klarer KI-Consulting-Nische, passend zu Marlons Rolle als Global AI Manager. Details: `plans/2026-09-13-website-repositionierung-retention-redesign.md`.
+
 ## Sektionen auf der Website
 
-- Hero (Badge, Headline, CTAs, Stats)
-- Über mich (Text + Info-Karte mit SVG-Icons)
-- Leistungen (KI-Automatisierung, KI-Beratung/Audit, Digitale Transformation)
+- Hero (Badge, neue KI-Consultant-Headline, CTAs, Stats)
+- Über mich (Text angepasst auf Global AI Manager, alte IT-Projekte hier als Kontext erwähnt statt eigener Sektion)
+- Leistungen-Teaser (3 Karten, Link zu eigener Seite `/leistungen`)
+- **Newsletter** (neu, Haupt-CTA, `NewsletterSignup`-Komponente, nicht-compact)
 - Tools & Tech (KI/LLMs, Automatisierung, Enterprise, Analyse)
-- Projekte (ERP-Auswahl, Prozessanalyse, IT-Strategie, KI-Consulting)
+- Projekte (kompakter Teaser, Link zu `/case-studies`)
 - Eigene Produkte (Cookloop + DartsIQ — beide live, mit App-Link)
-- Blog (11 Artikel live)
-- Kontakt (Formspree-Formular)
-- **Empfohlene Tools** (`/tools`) — Tool-Empfehlungen mit Affiliate-Links
+- Blog (12 Artikel live)
+- Kontakt (Formspree-Formular, weiterhin primärer Buchungsweg — Cal.com noch nicht eingerichtet)
+
+## Eigene Unterseiten
+
+- **`/leistungen`** (neu) — Drei Consulting-Pakete mit Preisen (KI-Readiness-Check €299, KI-Pilot-Projekt ab €1.500, Laufende KI-Begleitung ab €800/Monat), Discovery-Call-Erklärung
+- **`/case-studies`** — zeigt jetzt das Beispielprojekt (`beispiel-ki-pilot.md`, `draft: false`, Titel-Präfix "Beispielprojekt:" zur Kennzeichnung)
+- **`/tools`** — Tool-Empfehlungen mit Affiliate-Links
+- **`/blog`** — Artikel-Übersicht mit Kategorien
 
 ## Blog-Artikel (12 live, 19 Drafts)
 
@@ -85,6 +96,7 @@
 - Lesezeit-Anzeige (berechnet aus Wortanzahl)
 - JSON-LD strukturierte Daten (Article-Schema)
 - Prev/Next-Navigation zwischen Artikeln
+- **RelatedPosts** (neu, 2026-09-13) — 2–3 verwandte Artikel nach Kategorie, unter Prev/Next
 - Newsletter-Signup nach Autor-Karte
 - CTA "Gespräch vereinbaren"
 - `category`-Feld in allen Artikeln (für Blog-Navigation)
@@ -161,9 +173,12 @@ Digitale Produkte: `outputs/digitale-produkte.md`
 - [x] Consulting-Angebot ausformuliert (outputs/consulting-angebot.md) — 2026-04-12
 - [x] Digitale Produkte geplant (outputs/digitale-produkte.md) — 2026-04-12
 - [x] Discovery-Call-CTA auf Startseite + in BlogLayout — 2026-04-12
-- [ ] Cal.com einrichten + Link in Website einbauen
+- [x] Website-Repositionierung "AI-Consultant mit Angebot" + `/leistungen`-Seite + Newsletter-Haupt-CTA + RelatedPosts — 2026-09-13
+- [ ] Cal.com einrichten + Link in Website einbauen (alle CTAs zeigen aktuell auf Kontaktformular)
 - [ ] Affiliate-Programme beantragen: n8n, Zapier, IONOS, Netlify
 - [ ] Digitales Produkt erstellen + Gumroad-Seite (KW18)
 - [ ] OG-Images pro Blog-Artikel erstellen
-- [ ] LinkedIn aktualisieren (Texte in `outputs/linkedin-optimierung.md`)
-- [ ] 20 Draft-Artikel schrittweise reviewen + live stellen (KW16–25)
+- [ ] LinkedIn-Texte (`outputs/linkedin-optimierung.md`) auf Konsistenz mit neuer Positionierung prüfen + Profil aktualisieren
+- [ ] Testimonials mit echten Kundenstimmen befüllen (aktuell ausgeblendet)
+- [ ] Echte Case Study nach erstem Projekt einpflegen (ersetzt Beispielprojekt)
+- [ ] 19 Draft-Artikel schrittweise reviewen + live stellen (KW16–25)

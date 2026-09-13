@@ -13,13 +13,9 @@
 
 ## Wie Erfolg aussieht
 
-- Neue, bessere Anstellung gefunden
-- Portfoliowebsite live und professionell
-- Regelmäßige Blogbeiträge zu KI/Digitalisierung
+- Fokusiertes AI Wissen aufbauen
 - Anfragen für AI-Consulting-Projekte kommen rein
 
 ## Offene Fragen
 
 - Welche konkreten AI-Projekte sollen showcased werden?
-- Soll die Seite DE oder EN sein (oder zweisprachig)?
-- Kontaktformular oder direkt Kalender-Booking?

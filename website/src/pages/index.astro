@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import Testimonials from '../components/Testimonials.astro';
+import NewsletterSignup from '../components/NewsletterSignup.astro';
 import { getCollection } from 'astro:content';
 import { availability, links } from '../config/site';
 
@@ -30,45 +31,15 @@ const services = [
   },
   {
     icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" /></svg>`,
-    title: 'Digitale Transformation',
-    description: 'Über zehn Jahre als IT-Organisator, Inhouse Consultant und Head of Digital. Dieses Handwerkszeug bringe ich mit, wenn es um Prozessanalyse, IT-Strategie und echten Wandel geht.',
-    tags: ['IT-Strategie', 'Prozessanalyse', 'Change Management'],
+    title: 'KI-Pilotprojekte',
+    description: 'Von der Idee zum produktiven Workflow in vier Wochen. Ich baue mit dir den ersten Automatisierungs-Workflow, der ab Tag eins Arbeit abnimmt. Kein Prototyp in der Schublade.',
+    tags: ['Pilotprojekt', 'n8n-Workflows', 'Umsetzung'],
   },
 ];
 
-const projects = [
-  {
-    title: 'ERP-Auswahl & Einführungsbegleitung',
-    description: 'Begleitung eines Mittelständlers bei der Auswahl und Einführung eines neuen ERP-Systems. Von der Anforderungsaufnahme über den Anbietervergleich bis zum Go-live.',
-    tags: ['ERP', 'Anforderungsanalyse', 'Projektmanagement'],
-    status: 'Abgeschlossen',
-    icon: `<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>`,
-  },
-  {
-    title: 'Prozessanalyse & Visualisierung',
-    description: 'Aufnahme und Visualisierung bestehender Unternehmensprozesse als Grundlage für Optimierungen. Mit Workshop-Moderation und konkreten Handlungsempfehlungen.',
-    tags: ['Prozessanalyse', 'Visualisierung', 'Beratung'],
-    status: 'Abgeschlossen',
-    icon: `<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2"/></svg>`,
-  },
-  {
-    title: 'IT-Strategie & Digitale Transformation',
-    description: 'Entwicklung einer IT-Strategie und Begleitung beim digitalen Wandel. Strukturierung der IT-Organisation, Priorisierung von Maßnahmen und Kommunikation mit Stakeholdern.',
-    tags: ['IT-Strategie', 'Digitalisierung', 'Organisation'],
-    status: 'Abgeschlossen',
-    icon: `<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>`,
-  },
-  {
-    title: 'KI-Consulting',
-    description: 'Beratung zu KI-Einsatzmöglichkeiten im Unternehmenskontext. Geeignete Use Cases identifizieren, verfügbare Tools bewerten und erste Projekte gezielt in die Umsetzung bringen.',
-    tags: ['KI-Strategie', 'Use Cases', 'Umsetzung'],
-    status: 'Laufend',
-    icon: `<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17H3a2 2 0 01-2-2V5a2 2 0 012-2h14a2 2 0 012 2v3M21 13v4a2 2 0 01-2 2h-3"/></svg>`,
-  },
-];
 ---
 
-<Layout title="Busche Cloud — KI-Automatisierung & Digitale Transformation">
+<Layout title="Busche Cloud — KI-Beratung für den Mittelstand">
   <Header />
 
   <main id="main">
@@ -94,17 +65,17 @@ const projects = [
 
       <!-- Headline -->
       <h1 id="hero-heading" class="text-5xl sm:text-6xl lg:text-7xl font-black text-white mb-6 leading-[1.05] tracking-tight animate-fade-up" style="animation-delay: 0.1s;">
-        KI macht dein
+        KI, die bei euch
         <br />
         <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-300 via-brand-400 to-blue-400">
-          Unternehmen schneller.
+          wirklich läuft.
         </span>
       </h1>
 
       <!-- Subline -->
       <p class="text-xl text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed animate-fade-up" style="animation-delay: 0.2s;">
-        Ich bin Marlon Busche, Digital- und KI-Experte aus OWL und helfe Unternehmen dabei,
-        KI sinnvoll einzusetzen und echte Wettbewerbsvorteile daraus zu machen.
+        Ich helfe kleinen und mittleren Unternehmen, mit KI Prozesse zu automatisieren.
+        Nicht als Strategiepapier, sondern als Workflow, der ab Woche vier Arbeit abnimmt.
       </p>
 
       <!-- CTAs -->
@@ -112,17 +83,17 @@ const projects = [
         <a href="/#kontakt" class="px-7 py-3.5 bg-brand-500 hover:bg-brand-400 text-white font-semibold rounded-xl transition-all hover:scale-105 hover:shadow-lg hover:shadow-brand-500/25 text-base">
           Kostenloses Erstgespräch
         </a>
-        <a href="/case-studies" class="px-7 py-3.5 bg-white/5 hover:bg-white/10 text-white font-semibold rounded-xl border border-white/10 hover:border-white/20 transition-all text-base">
-          Case Studies ansehen
+        <a href="/leistungen" class="px-7 py-3.5 bg-white/5 hover:bg-white/10 text-white font-semibold rounded-xl border border-white/10 hover:border-white/20 transition-all text-base">
+          Leistungen & Preise
         </a>
       </div>
 
       <!-- Stats -->
       <div class="mt-14 grid grid-cols-3 gap-4 max-w-md mx-auto animate-fade-up" style="animation-delay: 0.4s;">
         {[
-          { value: '10+', label: 'Jahre IT & Digital' },
-          { value: 'OWL', label: 'Verwurzelt in OWL' },
-          { value: 'Remote', label: 'und vor Ort' },
+          { value: '3', label: 'Consulting-Pakete' },
+          { value: '4', label: 'Wochen bis zum Piloten' },
+          { value: 'OWL', label: 'Verwurzelt & remote' },
         ].map(stat => (
           <div class="text-center">
             <div class="text-3xl font-black text-white">{stat.value}</div>
@@ -149,22 +120,22 @@ const projects = [
         <div>
           <p class="text-brand-400 text-sm font-semibold uppercase tracking-widest mb-4">Über mich</p>
           <h2 class="text-4xl font-bold text-white mb-6 leading-tight">
-            Breite IT-Erfahrung,<br />
-            <span class="text-brand-400">klarer KI-Fokus</span>
+            Global AI Manager,<br />
+            <span class="text-brand-400">hands-on für den Mittelstand</span>
           </h2>
           <div class="space-y-4 text-gray-400 leading-relaxed">
             <p>
-              Ich bin in Ostwestfalen-Lippe verwurzelt und arbeite seit über einem Jahrzehnt in der IT. Als Inhouse Consultant, IT-Organisator und zuletzt als Head of Digital habe ich gelernt, neue Technologien nicht isoliert zu betrachten, sondern dort einzusetzen, wo sie wirklich Sinn ergeben.
+              Ich bin in Ostwestfalen-Lippe verwurzelt und arbeite als Global AI Manager. Über zehn Jahre Erfahrung im digitalen Sektor, unter anderem als Inhouse Consultant, IT-Organisator und in ERP- und IT-Strategie-Projekten, bilden das Fundament, auf dem mein heutiger KI-Fokus aufbaut.
             </p>
             <p>
-              Seit mehr als einem Jahr fokussiere ich mich gezielt auf KI und dessen Mehrwert in Unternehmen. Wie können Unternehmen KI praktisch nutzen, effizienter werden und Wettbewerbsvorteile aufbauen? Das ist die Frage, die mich antreibt. Und bei der ich helfe.
+              Seit mehr als einem Jahr arbeite ich gezielt an einer Frage: Wie nutzen Unternehmen KI praktisch, statt sie nur zu testen? Genau dabei helfe ich Unternehmen aus dem Mittelstand. Pragmatisch, mit einem klaren Blick für das, was tatsächlich in Produktion geht.
             </p>
             <p>
               Abseits der Arbeit bin ich gerne draußen in OWL oder stehe an der Dartscheibe. Die Familie hat immer Vorrang.
             </p>
           </div>
           <div class="flex flex-wrap gap-3 mt-8">
-            {['KI & Automatisierung', 'Enterprise Architecture', 'SAP', 'Digitale Transformation', 'OWL'].map(tag => (
+            {['KI-Automatisierung', 'KI-Strategie', 'Prompt Engineering', 'SAP', 'OWL'].map(tag => (
               <span class="px-3 py-1.5 text-xs font-medium bg-white/5 text-gray-300 border border-white/10 rounded-lg">
                 {tag}
               </span>
@@ -192,7 +163,7 @@ const projects = [
               </div>
               <div>
                 <div class="font-bold text-white text-lg">Marlon Busche</div>
-                <div class="text-brand-400 text-sm">IT & Digital mit Fokus auf KI</div>
+                <div class="text-brand-400 text-sm">Global AI Manager</div>
               </div>
             </div>
 
@@ -203,7 +174,7 @@ const projects = [
               },
               {
                 icon: `<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17H3a2 2 0 01-2-2V5a2 2 0 012-2h14a2 2 0 012 2v3M21 13v4a2 2 0 01-2 2h-3"/></svg>`,
-                label: 'Fokus', value: 'KI-Automatisierung',
+                label: 'Rolle', value: 'Global AI Manager',
               },
               {
                 icon: `<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>`,
@@ -271,22 +242,22 @@ const projects = [
         ))}
       </div>
 
-      <!-- Discovery Call CTA -->
+      <!-- Leistungen & Preise CTA -->
       <div class="mt-12 relative">
         <div class="absolute inset-0 bg-gradient-to-br from-brand-500/8 to-blue-600/4 rounded-2xl blur-xl"></div>
         <div class="relative bg-white/3 border border-brand-500/20 rounded-2xl p-8 flex flex-col sm:flex-row items-center justify-between gap-6">
           <div>
-            <p class="text-xs font-bold uppercase tracking-widest text-brand-400 mb-2">Kostenloses Erstgespräch</p>
-            <h3 class="text-xl font-black text-white mb-2">30 Minuten. Kein Verkaufsgespräch.</h3>
+            <p class="text-xs font-bold uppercase tracking-widest text-brand-400 mb-2">Drei Pakete, transparente Preise</p>
+            <h3 class="text-xl font-black text-white mb-2">Vom Readiness-Check bis zur laufenden Begleitung.</h3>
             <p class="text-gray-400 text-sm leading-relaxed max-w-lg">
-              Wir schauen gemeinsam, wo KI in deinem Unternehmen den größten Hebel hat — und ob und wie ich dabei helfen kann. Unverbindlich.
+              Ob erster Überblick oder produktiver Workflow: Auf der Leistungsseite siehst du genau, was du bekommst und was es kostet.
             </p>
           </div>
           <a
-            href="/#kontakt"
+            href="/leistungen"
             class="flex-shrink-0 inline-flex items-center gap-2 px-6 py-3.5 bg-brand-500 hover:bg-brand-400 text-white font-semibold rounded-xl transition-all hover:scale-105 hover:shadow-lg hover:shadow-brand-500/25 text-sm whitespace-nowrap"
           >
-            Gespräch vereinbaren
+            Leistungen & Preise ansehen
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
             </svg>
@@ -294,6 +265,13 @@ const projects = [
         </div>
       </div>
 
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section id="newsletter" class="py-28 border-t border-white/5">
+    <div class="max-w-3xl mx-auto px-6">
+      <NewsletterSignup />
     </div>
   </section>
 
@@ -349,35 +327,21 @@ const projects = [
 
   <!-- Projects -->
   <section id="projekte" class="py-28 border-t border-white/5">
-    <div class="max-w-6xl mx-auto px-6">
-      <div class="text-center mb-16">
-        <p class="text-brand-400 text-sm font-semibold uppercase tracking-widest mb-4">Projekte</p>
-        <h2 class="text-4xl font-bold text-white mb-4">Ausgewählte Arbeiten</h2>
-        <p class="text-gray-400 max-w-xl mx-auto">Echte Projekte. Echte Ergebnisse. Keine Hochglanzfolien.</p>
-      </div>
-
-      <div class="grid md:grid-cols-2 gap-6">
-        {projects.map((project) => (
-          <div class="group relative bg-white/3 hover:bg-white/5 border border-white/8 hover:border-white/15 rounded-2xl p-7 transition-all duration-300 flex flex-col">
-            <div class="flex items-start justify-between mb-5">
-              <span class={`inline-flex items-center gap-1.5 text-xs font-medium px-2.5 py-1 rounded-full ${project.status === 'Laufend' ? 'bg-green-500/10 text-green-400 border border-green-500/20' : 'bg-gray-500/10 text-gray-400 border border-gray-500/20'}`}>
-                <span class={`w-1.5 h-1.5 rounded-full ${project.status === 'Laufend' ? 'bg-green-400 animate-pulse' : 'bg-gray-400'}`}></span>
-                {project.status}
-              </span>
-              <div class="w-9 h-9 rounded-xl bg-brand-500/10 border border-brand-500/15 flex items-center justify-center text-brand-400 flex-shrink-0 group-hover:bg-brand-500/20 group-hover:border-brand-500/30 transition-colors" set:html={project.icon}></div>
-            </div>
-
-            <h3 class="text-base font-bold text-white mb-3 leading-tight">{project.title}</h3>
-            <p class="text-gray-400 text-sm leading-relaxed mb-5 flex-1">{project.description}</p>
-
-            <div class="flex flex-wrap gap-2 mt-auto">
-              {project.tags.map(tag => (
-                <span class="px-2 py-1 text-xs bg-brand-500/8 text-brand-400 border border-brand-500/15 rounded-md">{tag}</span>
-              ))}
-            </div>
-          </div>
-        ))}
-      </div>
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <p class="text-brand-400 text-sm font-semibold uppercase tracking-widest mb-4">Projekte</p>
+      <h2 class="text-4xl font-bold text-white mb-4">Wie ein Projekt bei mir abläuft</h2>
+      <p class="text-gray-400 max-w-xl mx-auto mb-10">
+        Ein Beispielprojekt zeigt dir, was ein KI-Pilot konkret bedeutet: von der ersten Analyse bis zum produktiven Workflow.
+      </p>
+      <a
+        href="/case-studies"
+        class="inline-flex items-center gap-2 px-6 py-3.5 bg-white/5 hover:bg-white/10 text-white font-semibold rounded-xl border border-white/10 hover:border-white/20 transition-all text-sm"
+      >
+        Beispielprojekt ansehen
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+      </a>
     </div>
   </section>
 
@@ -609,9 +573,9 @@ const projects = [
                 class="w-full px-4 py-3 bg-white/5 border border-white/10 focus:border-brand-500/50 rounded-xl text-white text-sm outline-none transition-all appearance-none"
               >
                 <option value="" class="bg-[#0d1117]" disabled selected>Bitte wählen...</option>
-                <option value="ki-automatisierung" class="bg-[#0d1117]">KI-Automatisierung</option>
-                <option value="ki-beratung" class="bg-[#0d1117]">KI-Beratung / KI-Audit</option>
-                <option value="digitale-transformation" class="bg-[#0d1117]">Digitale Transformation</option>
+                <option value="readiness-check" class="bg-[#0d1117]">KI-Readiness-Check</option>
+                <option value="pilot-projekt" class="bg-[#0d1117]">KI-Pilot-Projekt</option>
+                <option value="laufende-begleitung" class="bg-[#0d1117]">Laufende KI-Begleitung</option>
                 <option value="sonstiges" class="bg-[#0d1117]">Sonstiges</option>
               </select>
             </div>

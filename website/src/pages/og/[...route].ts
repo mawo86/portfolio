@@ -7,10 +7,11 @@ const studies = await getCollection('case-studies', ({ data }) => !data.draft);
 const pages = Object.fromEntries([
   ...blog.map(p => [`blog/${p.slug}`, { title: p.data.title, description: p.data.description, tag: p.data.category }]),
   ...studies.map(p => [`case-studies/${p.slug}`, { title: p.data.title, description: p.data.description, tag: p.data.industry }]),
-  ['index', { title: 'Busche Cloud', description: 'KI-Automatisierung & Digitale Transformation', tag: 'Portfolio' }],
+  ['index', { title: 'Busche Cloud', description: 'KI-Beratung für den Mittelstand', tag: 'Portfolio' }],
   ['blog', { title: 'Blog', description: 'Gedanken & Insights zu KI im Unternehmen', tag: 'Blog' }],
   ['tools', { title: 'Empfohlene Tools', description: 'Tools, die ich tatsächlich nutze', tag: 'Tools' }],
   ['case-studies', { title: 'Case Studies', description: 'Echte Projekte, messbare Ergebnisse', tag: 'Case Studies' }],
+  ['leistungen', { title: 'Leistungen & Preise', description: 'KI-Beratung für den Mittelstand — transparente Pakete', tag: 'Leistungen' }],
 ]);
 
 export const { getStaticPaths, GET } = OGImageRoute({

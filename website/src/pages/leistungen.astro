@@ -1,0 +1,154 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const packages = [
+  {
+    name: 'KI-Readiness-Check',
+    tagline: '"Was ist bei euch automatisierbar?"',
+    price: '€299',
+    duration: '2 Stunden (remote)',
+    description: 'Zwei Stunden, ein klares Bild. Wir gehen eure Prozesse durch und sortieren: Was lässt sich heute schon automatisieren, was lohnt sich nicht, wo fehlen Daten? Ihr bekommt eine priorisierte Liste mit konkreten Ansatzpunkten. Kein Verkaufsgespräch, sondern eine Entscheidungsgrundlage.',
+    includes: [
+      'Analyse eurer 3–5 größten Zeitfresser auf KI-Potenzial',
+      'Konkrete Tool-Empfehlungen, passend zu eurer Situation',
+      'Priorisierte Roadmap: was zuerst angehen, warum',
+      'PDF-Zusammenfassung zum Weiterleiten',
+    ],
+    idealFor: 'Unternehmen, die noch nicht wissen, wo sie anfangen sollen. Oder die schon mit ChatGPT experimentieren, aber keinen klaren Plan haben.',
+    highlight: false,
+  },
+  {
+    name: 'KI-Pilot-Projekt',
+    tagline: '"Erster Automatisierungs-Workflow in Produktion"',
+    price: 'ab €1.500',
+    duration: '4 Wochen',
+    description: 'Ein Prozess, vier Wochen, ein Workflow in Produktion. Wir nehmen den Ansatzpunkt mit dem besten Verhältnis aus Aufwand und Nutzen und setzen ihn gemeinsam um. Am Ende läuft etwas, das euer Team täglich nutzt. Kein Prototyp in der Schublade.',
+    includes: [
+      'Definition eines konkreten Use Cases',
+      'Aufbau des Workflows (n8n, Make, Zapier oder Custom)',
+      'Dokumentation und Übergabe',
+      '2 Wochen Post-Go-live-Support',
+    ],
+    idealFor: 'Unternehmen, die vom Planen ins Tun kommen wollen. Ein echter Workflow, der ab Tag 1 Arbeit abnimmt. Preisspanne €1.500–4.000 je nach Komplexität.',
+    highlight: true,
+  },
+  {
+    name: 'Laufende KI-Begleitung',
+    tagline: '"KI-Strategie + Umsetzung, kontinuierlich"',
+    price: 'ab €800/Monat',
+    duration: 'Mindestlaufzeit 3 Monate',
+    description: 'Für alle, die nach dem Piloten nicht stehen bleiben wollen. Ich bleibe an Bord: Wir bauen weitere Workflows, schulen das Team und passen die KI-Strategie an das an, was sich in der Praxis bewährt. Ihr habt einen Ansprechpartner, der eure Systeme kennt, ohne eine ganze Beratungsmannschaft zu bezahlen.',
+    includes: [
+      'Regelmäßige KI-Strategie-Gespräche (2x monatlich)',
+      'Begleitung bei der Umsetzung laufender KI-Projekte',
+      'Ad-hoc-Fragen per Chat (Antwort innerhalb 48h)',
+      'Monatlicher Kurzbericht: was läuft, was kommt, was blockiert',
+    ],
+    idealFor: 'Unternehmen, die KI kontinuierlich weiterentwickeln wollen, aber keine Vollzeitkraft brauchen.',
+    highlight: false,
+  },
+];
+---
+
+<Layout
+  title="Leistungen & Preise — Busche Cloud"
+  description="KI-Beratung für den Mittelstand: Readiness-Check, Pilotprojekt oder laufende Begleitung. Transparente Preise, pragmatische Umsetzung."
+  ogRoute="leistungen"
+>
+  <Header />
+  <main id="main" class="pt-28 pb-24">
+    <div class="max-w-6xl mx-auto px-6">
+
+      <!-- Intro -->
+      <div class="max-w-2xl mb-20">
+        <p class="text-brand-400 text-sm font-semibold uppercase tracking-widest mb-4">Leistungen &amp; Preise</p>
+        <h1 class="text-4xl sm:text-5xl font-black text-white mb-6 leading-tight tracking-tight">
+          KI, die bei euch wirklich läuft.
+        </h1>
+        <p class="text-gray-400 text-lg leading-relaxed">
+          Ich helfe kleinen und mittleren Unternehmen, mit KI Prozesse zu automatisieren. Nicht als Strategiepapier, sondern als Workflow, der ab Woche vier Arbeit abnimmt. Drei Pakete, transparente Preise, kein "Preis auf Anfrage".
+        </p>
+      </div>
+
+      <!-- Discovery Call -->
+      <div class="relative mb-20">
+        <div class="absolute inset-0 bg-gradient-to-br from-brand-500/8 to-blue-600/4 rounded-2xl blur-xl"></div>
+        <div class="relative bg-white/3 border border-brand-500/20 rounded-2xl p-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+          <div>
+            <p class="text-xs font-bold uppercase tracking-widest text-brand-400 mb-2">Kostenloses Erstgespräch</p>
+            <h2 class="text-xl font-black text-white mb-2">30 Minuten. Kein Verkaufsgespräch.</h2>
+            <p class="text-gray-400 text-sm leading-relaxed max-w-lg">
+              Vor jedem Paket steht ein kostenloses Erstgespräch: Was beschäftigt dich beim Thema KI? Wo steckt das größte Potenzial? Welches Paket passt zu deiner Situation? Unverbindlich.
+            </p>
+          </div>
+          <a
+            href="/#kontakt"
+            class="flex-shrink-0 inline-flex items-center gap-2 px-6 py-3.5 bg-brand-500 hover:bg-brand-400 text-white font-semibold rounded-xl transition-all hover:scale-105 hover:shadow-lg hover:shadow-brand-500/25 text-sm whitespace-nowrap"
+          >
+            Gespräch vereinbaren
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Pakete -->
+      <div class="grid lg:grid-cols-3 gap-6 mb-8">
+        {packages.map((pkg) => (
+          <div class={`relative flex flex-col rounded-2xl p-7 border transition-all duration-300 ${pkg.highlight ? 'bg-gradient-to-br from-brand-500/10 to-blue-600/5 border-brand-500/30' : 'bg-white/3 border-white/8'}`}>
+            {pkg.highlight && (
+              <span class="absolute -top-3 left-7 px-3 py-1 text-xs font-bold uppercase tracking-wider bg-brand-500 text-white rounded-full">
+                Meistgebucht
+              </span>
+            )}
+
+            <p class="text-brand-400 text-xs font-semibold uppercase tracking-widest mb-3">{pkg.tagline}</p>
+            <h3 class="text-xl font-black text-white mb-1">{pkg.name}</h3>
+            <div class="flex flex-wrap items-baseline gap-x-2 gap-y-0.5 mb-5">
+              <span class="text-2xl font-black text-white whitespace-nowrap">{pkg.price}</span>
+              <span class="text-sm text-gray-500 whitespace-nowrap">· {pkg.duration}</span>
+            </div>
+
+            <p class="text-gray-400 text-sm leading-relaxed mb-6">{pkg.description}</p>
+
+            <div class="mb-6">
+              <p class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">Was du bekommst</p>
+              <ul class="space-y-2.5">
+                {pkg.includes.map(item => (
+                  <li class="flex items-start gap-2.5 text-sm text-gray-300">
+                    <svg class="w-4 h-4 text-brand-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div class="mt-auto pt-5 border-t border-white/10">
+              <p class="text-xs text-gray-500 leading-relaxed mb-5"><span class="text-gray-400 font-medium">Ideal für:</span> {pkg.idealFor}</p>
+              <a
+                href="/#kontakt"
+                class={`flex items-center justify-center gap-2 w-full py-3 font-semibold rounded-xl transition-all text-sm ${pkg.highlight ? 'bg-brand-500 hover:bg-brand-400 text-white hover:shadow-lg hover:shadow-brand-500/25' : 'bg-white/5 hover:bg-white/10 text-white border border-white/10 hover:border-white/20'}`}
+              >
+                Erstgespräch anfragen
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <p class="text-center text-gray-600 text-sm max-w-xl mx-auto">
+        Alle Preise verstehen sich zzgl. USt. Die genaue Preisspanne für Pilot- und Begleitungspakete hängt vom Umfang ab. Im Erstgespräch klären wir das gemeinsam.
+      </p>
+
+    </div>
+  </main>
+  <Footer />
+</Layout>

@@ -1,6 +1,6 @@
 ---
-title: "KI-Pilot im Mittelstand — von der Idee zum produktiven Workflow"
-description: "Wie ein mittelständischer Hersteller in 6 Wochen einen KI-gestützten Angebotsprozess gebaut hat, der heute jeden Tag läuft."
+title: "Beispielprojekt: KI-Pilot im Mittelstand — von der Idee zum produktiven Workflow"
+description: "So könnte ein KI-Pilot-Projekt bei dir aussehen: Wie ein mittelständischer Hersteller in 6 Wochen einen KI-gestützten Angebotsprozess gebaut hat, der heute jeden Tag läuft."
 client: "Mittelständischer Hersteller (Maschinenbau)"
 industry: "Maschinenbau"
 timeframe: "6 Wochen"
@@ -18,11 +18,13 @@ results:
   - metric: "100%"
     label: "Akzeptanz im Vertrieb"
 date: 2026-04-10
-draft: true
+draft: false
 ---
 
-> Dies ist ein Template-Eintrag. Inhalt durch echte Case-Study ersetzen, sobald
-> Freigabe vom Kunden vorliegt — oder als anonymisierte Version aufbereiten.
+> **Beispielprojekt.** Dieser Case zeigt exemplarisch, wie ein KI-Pilot-Projekt
+> abläuft und was er bewirken kann. Er ersetzt noch keine echte, freigegebene
+> Case Study. Die erste reale Projektdokumentation folgt, sobald ein
+> abgeschlossenes Projekt vorliegt.
 
 ## Ausgangssituation
 

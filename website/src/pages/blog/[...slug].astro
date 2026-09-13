@@ -28,6 +28,7 @@ const readingTime = Math.max(1, Math.ceil(wordCount / 200));
   description={post.data.description}
   date={post.data.date}
   tags={post.data.tags}
+  category={post.data.category}
   readingTime={readingTime}
   prevPost={prevPost ? { slug: prevPost.slug, title: prevPost.data.title } : null}
   nextPost={nextPost ? { slug: nextPost.slug, title: nextPost.data.title } : null}

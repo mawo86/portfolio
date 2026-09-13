@@ -4,18 +4,20 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import JsonLd from '../components/JsonLd.astro';
 import NewsletterSignup from '../components/NewsletterSignup.astro';
+import RelatedPosts from '../components/RelatedPosts.astro';
 
 export interface Props {
   title: string;
   description: string;
   date: Date;
   tags: string[];
+  category: string;
   readingTime?: number;
   prevPost?: { slug: string; title: string } | null;
   nextPost?: { slug: string; title: string } | null;
 }
 
-const { title, description, date, tags, readingTime, prevPost, nextPost } = Astro.props;
+const { title, description, date, tags, category, readingTime, prevPost, nextPost } = Astro.props;
 
 const formattedDate = new Intl.DateTimeFormat('de-DE', {
   year: 'numeric',
@@ -129,7 +131,7 @@ const ogRoute = `blog/${slug}`;
         <div>
           <p class="text-white font-semibold text-sm">Marlon Busche</p>
           <p class="text-gray-500 text-sm leading-relaxed mt-1">
-            KI-Automatisierung &amp; Digitale Transformation. Ich helfe Unternehmen, mit KI wirklich produktiver zu werden — nicht nur zu experimentieren.
+            KI-Consultant für den Mittelstand. Ich helfe Unternehmen, mit KI wirklich produktiv zu werden — nicht nur zu experimentieren.
           </p>
         </div>
       </div>
@@ -173,6 +175,8 @@ const ogRoute = `blog/${slug}`;
           )}
         </nav>
       )}
+
+      <RelatedPosts currentSlug={slug} category={category} />
     </article>
   </main>
   <Footer />

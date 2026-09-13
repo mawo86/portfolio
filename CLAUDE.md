@@ -134,7 +134,9 @@ npm run build # Produktions-Build
 
 **Live unter:** https://busche.cloud
 
-**Sektionen:** Hero · Über mich · Leistungen · Tools · Projekte · Eigene Produkte · Blog · Kontakt
+**Sektionen (Startseite):** Hero · Über mich · Leistungen (Teaser, Link zu `/leistungen`) · Newsletter · Tools · Projekte (Beispielprojekt-Teaser, Link zu `/case-studies`) · Eigene Produkte · Blog · Kontakt
+
+**Eigene Unterseiten:** `/leistungen` (Pakete & Preise) · `/case-studies` · `/tools` · `/blog` · `/kontakt`
 
 **Eigene Produkte:** Cookloop (cookloop.vercel.app) und DartsIQ (dartsiq.vercel.app) — beide mit App-Link, Live-Status und Tech-Stack
 
@@ -145,8 +147,19 @@ npm run build # Produktions-Build
 - `plans/2026-03-25-linkedin-optimierung-website-erweiterung.md` — LinkedIn + Tools/Referenzen ✓
 - `plans/2026-03-31-blog-portfolio-seite-nyt-design.md` — Blog-Index NYT-Redesign ✓
 - `plans/2026-04-03-sichtbarkeit-organisches-wachstum-affiliates.md` — SEO, Newsletter, Affiliates, Content-Pipeline ✓
+- `plans/2026-09-13-website-repositionierung-retention-redesign.md` — Repositionierung "AI-Consultant mit Angebot" + Retention-Redesign ✓
 
-**Blog:** 12 Artikel live, 19 Drafts in der Pipeline (KW16–25). Blog-Index-Seite (`/blog`) hat NYT-inspiriertes Editorial-Design mit Kategorie-Navigation und Pagination. Artikel-Layout (`BlogLayout.astro`) mit Lesezeit, JSON-LD, Prev/Next-Navigation, Newsletter-CTA und Autor-Karte. `@tailwindcss/typography` ist installiert und aktiviert.
+**Positionierung (seit 2026-09-13):** "AI-Consultant mit Angebot" — KI-Beratung für den Mittelstand (KMU, 10–500 MA), statt breiter IT-Allrounder-Sprache. Hero: "KI, die bei euch wirklich läuft." Marlons Rolle: Global AI Manager (angestellt), baut Busche Cloud nebenberuflich auf. Alte IT-Projekte (ERP-Auswahl etc.) sind in den About-Text zurückgestuft, KI-Consulting steht im Vordergrund.
+
+**Neue Seite `/leistungen`:** Zeigt die drei Consulting-Pakete aus `outputs/consulting-angebot.md` mit Preisen (KI-Readiness-Check €299, KI-Pilot-Projekt ab €1.500, Laufende KI-Begleitung ab €800/Monat), inkl. Discovery-Call-Erklärung. Verlinkt von Header, Footer, Hero und Leistungs-Teaser auf der Startseite.
+
+**Newsletter als Haupt-CTA:** Eigene Newsletter-Sektion auf der Startseite (nach dem Leistungs-Teaser), `NewsletterSignup`-Komponente (Buttondown). Discovery-Call/Kontaktformular bleibt sekundärer CTA — Cal.com ist noch nicht eingerichtet, alle "Erstgespräch"-Links zeigen weiterhin auf `/#kontakt`.
+
+**Case Studies:** `beispiel-ki-pilot.md` ist jetzt sichtbar (`draft: false`), Titel trägt Präfix "Beispielprojekt:" zur klaren Kennzeichnung, da es noch keine echte, freigegebene Case Study gibt.
+
+**Retention:** Neue Komponente `RelatedPosts.astro` zeigt am Ende jedes Blog-Artikels 2–3 thematisch verwandte Artikel (gleiche Kategorie, Fallback auf neueste). Eingebunden in `BlogLayout.astro` nach der Prev/Next-Navigation.
+
+**Blog:** 12 Artikel live, 19 Drafts in der Pipeline (KW16–25). Blog-Index-Seite (`/blog`) hat NYT-inspiriertes Editorial-Design mit Kategorie-Navigation und Pagination. Artikel-Layout (`BlogLayout.astro`) mit Lesezeit, JSON-LD, Prev/Next-Navigation, RelatedPosts, Newsletter-CTA und Autor-Karte. `@tailwindcss/typography` ist installiert und aktiviert.
 
 **Blog-Styling:** Artikel nutzen `blog-artikel` + `meine-stimme` Skills für konsistente Formatierung: Blockquotes als Callout-Boxen, Unsplash-Bilder via `<figure>/<figcaption>`, keine em-dashes im Fließtext, keine `---` Trenner.
 
@@ -192,12 +205,14 @@ sprachmodell-erklaert, ki-roi-berechnen, ki-fehler-einfuehrung, ki-glossar-entsc
 **Digitale Produkte:** `outputs/digitale-produkte.md` — Produkt-Optionen, Empfehlung: PDF-Guide "KI-Strategie in 30 Tagen" (€9–19)
 
 **Noch ausstehend:**
-- Cal.com einrichten + Discovery-Call-Link in Website einbauen
+- Cal.com einrichten + Discovery-Call-Link in Website einbauen (aktuell zeigen alle CTAs auf das Formspree-Kontaktformular)
 - Affiliate-Programme beantragen: n8n, Zapier, IONOS, Netlify; Status prüfen: Hostinger, Miro
 - Digitales Produkt erstellen (KW18, Empfehlung: PDF-Guide)
-- LinkedIn-Profil mit Texten aus `outputs/linkedin-optimierung.md` aktualisieren
+- LinkedIn-Texte (`outputs/linkedin-optimierung.md`) auf Konsistenz mit neuer Positionierung prüfen und Profil aktualisieren
 - OG-Images pro Blog-Artikel erstellen
-- 20 Draft-Artikel reviewen und schrittweise live stellen (KW16–25)
+- 19 Draft-Artikel reviewen und schrittweise live stellen (KW16–25)
+- Testimonials-Sektion mit echten Kundenstimmen befüllen, sobald verfügbar (aktuell ausgeblendet, da leer)
+- Echte Case Study nach erstem abgeschlossenen Consulting-Projekt einpflegen (ersetzt/ergänzt das Beispielprojekt)
 
 ---
 
