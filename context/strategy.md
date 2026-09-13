@@ -19,3 +19,7 @@
 ## Offene Fragen
 
 - Welche konkreten AI-Projekte sollen showcased werden?
+
+## Offene Aufgaben
+
+- Transkribiere alle Videos auf Youtube der letzten 6 Monaten vollständig von folgenden Youtube-Kanälen: "Silicon Valley Girl", "Alex Hormozi", "Dan Martell", "Chris Donnelly" und "Everlast AI". Mache mir eine gesammelte Datei daraus.
