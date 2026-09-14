@@ -23,6 +23,6 @@ Breit aufgestellt im digitalen Sektor mit starkem Fokus auf KI. Aktuell tätig a
 
 ## Ziele
 
-- **Kurzfristig:** Als KI Experte eine gute Nische/ Positionierung finden
+- **Kurzfristig:** Als KI Experte eine gute Nische/Positionierung finden — seit 2026-09-14 geschärft auf SAP-nahe Prozessautomatisierung in Vertrieb/Kundenservice/Backoffice (siehe `context/strategy.md`, `outputs/consulting-angebot.md`)
 - **Perspektivisch:** Selbstständigkeit im AI-Segment — Unternehmen mit KI erfolgreicher machen
 - Sichtbarkeit aufbauen über busche.cloud als persönliche Marke

@@ -178,11 +178,15 @@ Digitale Produkte: `outputs/digitale-produkte.md`
 - [x] Digitale Produkte geplant (outputs/digitale-produkte.md) — 2026-04-12
 - [x] Discovery-Call-CTA auf Startseite + in BlogLayout — 2026-04-12
 - [x] Website-Repositionierung "AI-Consultant mit Angebot" + `/leistungen`-Seite + Newsletter-Haupt-CTA + RelatedPosts — 2026-09-13
+- [x] 133 YouTube-Transkripte gesammelt + zweifach analysiert (Consulting-Fokus + breite Themenanalyse) — 2026-09-14
+- [x] Preise angehoben, SAP-Prozess-Nische geschärft, Discovery-Call-Leitfaden + Testimonial-Vorlage erstellt, 2 neue Blog-Drafts — 2026-09-14
 - [ ] Cal.com einrichten + Link in Website einbauen (alle CTAs zeigen aktuell auf Kontaktformular)
 - [ ] Affiliate-Programme beantragen: n8n, Zapier, IONOS, Netlify
 - [ ] Digitales Produkt erstellen + Gumroad-Seite (KW18)
 - [ ] OG-Images pro Blog-Artikel erstellen
 - [ ] LinkedIn-Texte (`outputs/linkedin-optimierung.md`) auf Konsistenz mit neuer Positionierung prüfen + Profil aktualisieren
-- [ ] Testimonials mit echten Kundenstimmen befüllen (aktuell ausgeblendet)
-- [ ] Echte Case Study nach erstem Projekt einpflegen (ersetzt Beispielprojekt)
-- [ ] 19 Draft-Artikel schrittweise reviewen + live stellen (KW16–25)
+- [ ] Testimonials mit echten Kundenstimmen befüllen (aktuell ausgeblendet) — Vorlage bereit: `outputs/testimonial-vorlage.md`
+- [ ] Echte Case Study nach erstem Projekt einpflegen (ersetzt Beispielprojekt) — Interview-Leitfaden bereit: `outputs/testimonial-vorlage.md`
+- [ ] 21 Draft-Artikel schrittweise reviewen + live stellen (KW16–25)
+- [ ] BAFA-Förderhinweis (Konzept in `outputs/discovery-call-leitfaden.md`) noch in Website-Texte einbauen
+- [ ] Discovery-Call-Leitfaden (`outputs/discovery-call-leitfaden.md`) beim nächsten Erstgespräch anwenden

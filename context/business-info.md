@@ -6,12 +6,15 @@
 **Domain:** busche.cloud
 **Logo:** Vorhanden in `reference/` (blaues Cloud-Logo mit "BUSCHE CLOUD")
 
-## Angebot (perspektivisch / in Entwicklung)
+## Angebot
 
-- KI-Automatisierung für Unternehmen
-- AI Consulting
-- Digitale Transformation
-- Zielgruppe: Unternehmen (KMU bis Enterprise), die mit KI effizienter werden wollen
+Drei Consulting-Pakete (Details: `outputs/consulting-angebot.md`):
+- KI-Readiness-Check — €299
+- KI-Pilot-Projekt — ab €2.500
+- Laufende KI-Begleitung — ab €1.200/Monat
+- Tagessatz-Projekte (neu) — €1.200–1.800/Tag
+
+Zielgruppe: KMU/Mittelstand (10–500 MA), Schwerpunkt seit 2026-09-14: SAP-nahe Prozessautomatisierung in Vertrieb, Kundenservice & Backoffice.
 
 ## Aktueller Stand
 
@@ -21,4 +24,4 @@
 
 ## Positionierung
 
-"Ich helfe Unternehmen dabei, mit KI erfolgreicher zu werden" — pragmatisch, erfahren, hands-on.
+"Ich helfe Unternehmen, KI sinnvoll einzusetzen und echte Wettbewerbsvorteile daraus zu machen" — pragmatisch, hands-on, mit Schwerpunkt auf SAP-nahen Prozessen (seit 2026-09-14, siehe `context/strategy.md`).
