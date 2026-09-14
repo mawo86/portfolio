@@ -151,7 +151,7 @@ npm run build # Produktions-Build
 
 **Positionierung (seit 2026-09-13):** "AI-Consultant mit Angebot" — KI-Beratung für den Mittelstand (KMU, 10–500 MA), statt breiter IT-Allrounder-Sprache. Hero: "KI, die bei euch wirklich läuft." Marlons Rolle: Global AI Manager (angestellt), baut Busche Cloud nebenberuflich auf. Alte IT-Projekte (ERP-Auswahl etc.) sind in den About-Text zurückgestuft, KI-Consulting steht im Vordergrund.
 
-**Neue Seite `/leistungen`:** Zeigt die drei Consulting-Pakete aus `outputs/consulting-angebot.md` mit Preisen (KI-Readiness-Check €299, KI-Pilot-Projekt ab €1.500, Laufende KI-Begleitung ab €800/Monat), inkl. Discovery-Call-Erklärung. Verlinkt von Header, Footer, Hero und Leistungs-Teaser auf der Startseite.
+**Neue Seite `/leistungen`:** Zeigt die drei Consulting-Pakete aus `outputs/consulting-angebot.md` mit Preisen (KI-Readiness-Check €299, KI-Pilot-Projekt ab €2.500, Laufende KI-Begleitung ab €1.200/Monat — angehoben 2026-09-14, siehe unten), inkl. Discovery-Call-Erklärung. Verlinkt von Header, Footer, Hero und Leistungs-Teaser auf der Startseite.
 
 **Newsletter als Haupt-CTA:** Eigene Newsletter-Sektion auf der Startseite (nach dem Leistungs-Teaser), `NewsletterSignup`-Komponente (Buttondown). Discovery-Call/Kontaktformular bleibt sekundärer CTA — Cal.com ist noch nicht eingerichtet, alle "Erstgespräch"-Links zeigen weiterhin auf `/#kontakt`.
 
@@ -200,9 +200,11 @@ sprachmodell-erklaert, ki-roi-berechnen, ki-fehler-einfuehrung, ki-glossar-entsc
 
 **Monetarisierungsstrategie:** `outputs/monetarisierung-strategie.md` — Alle Kanäle, Einnahmen-Tracking, monatliches Review
 
-**Consulting-Angebot:** `outputs/consulting-angebot.md` — Pakete (KI-Readiness-Check €299, KI-Pilot ab €1.500, Begleitung ab €800/Monat), Discovery-Call-Konzept
+**Consulting-Angebot:** `outputs/consulting-angebot.md` — Pakete (KI-Readiness-Check €299, KI-Pilot ab €2.500, Begleitung ab €1.200/Monat, neu: Tagessatz €1.200–1.800), Discovery-Call-Konzept. Nischen-Schwerpunkt: SAP-nahe Prozesse in Vertrieb/Kundenservice/Backoffice (seit 2026-09-14, abgeleitet aus Transkript-Analyse in `context/strategy.md`).
 
 **Digitale Produkte:** `outputs/digitale-produkte.md` — Produkt-Optionen, Empfehlung: PDF-Guide "KI-Strategie in 30 Tagen" (€9–19)
+
+**Skript `scripts/youtube_transcripts.py`:** Lädt via yt-dlp Untertitel (letzte 6 Monate) für eine konfigurierte Kanalliste, wandelt sie in Klartext um und schreibt Ergebnisse nach `reference/youtube-transcripts/` (pro Kanal + `alle-transkripte.md` gesammelt; `_raw/` enthält Original-VTTs). Voraussetzung: `brew install yt-dlp`. Zuletzt gelaufen 2026-09-14 für Silicon Valley Girl, Alex Hormozi, Dan Martell, Chris Donnelly, Everlast AI (133 Transkripte, siehe `context/strategy.md`).
 
 **Noch ausstehend:**
 - Cal.com einrichten + Discovery-Call-Link in Website einbauen (aktuell zeigen alle CTAs auf das Formspree-Kontaktformular)

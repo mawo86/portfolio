@@ -4,6 +4,8 @@ website/.astro/
 # website/package-lock.json — needed for CI
 .DS_Store
 *.log
+__pycache__/
+*.pyc
 .claude/
 reference/
 

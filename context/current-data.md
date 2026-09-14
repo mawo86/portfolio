@@ -14,9 +14,13 @@
 | RSS-Feed | /rss.xml (automatisch generiert via @astrojs/rss) |
 | Analytics | GoatCounter (cookieless, DSGVO-konform) |
 
-## Positionierung (seit 2026-09-13)
+## Positionierung (seit 2026-09-13, geschärft 2026-09-14)
 
 "AI-Consultant mit Angebot" — KI-Beratung für den Mittelstand (KMU, 10–500 MA). Hero: "KI, die bei euch wirklich läuft." Weg von breiter IT-Allrounder-Sprache, hin zu klarer KI-Consulting-Nische, passend zu Marlons Rolle als Global AI Manager. Details: `plans/2026-09-13-website-repositionierung-retention-redesign.md`.
+
+**Nischen-Schärfung (2026-09-14):** Zusätzlich Fokus auf SAP-nahe Prozessautomatisierung in Vertrieb, Kundenservice & Backoffice — abgeleitet aus Analyse von 133 YouTube-Transkripten (Silicon Valley Girl, Alex Hormozi, Dan Martell), siehe `context/strategy.md` und `outputs/consulting-angebot.md`. Eingebaut in Hero-Subline, About-Text, Leistungs-Teaser und `/leistungen`-Intro. Kein hartes Ausschlusskriterium, sondern Schwerpunkt-Kommunikation.
+
+**Preisanpassung (2026-09-14):** KI-Pilot-Projekt jetzt ab €2.500 (bisher €1.500), laufende KI-Begleitung ab €1.200/Monat (bisher €800/Monat), neues Tagessatz-Angebot €1.200–1.800/Tag für größere Vorhaben. Readiness-Check bleibt bei €299. Begründung: Marktbenchmark für KI-Beratung in Deutschland liegt bei 800–3.000 €/Tag, alte Preise lagen deutlich darunter. Details in `outputs/consulting-angebot.md`.
 
 ## Sektionen auf der Website
 

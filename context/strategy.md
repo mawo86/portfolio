@@ -22,4 +22,4 @@
 
 ## Offene Aufgaben
 
-- Transkribiere alle Videos auf Youtube der letzten 6 Monaten vollständig von folgenden Youtube-Kanälen: "Silicon Valley Girl", "Alex Hormozi", "Dan Martell", "Chris Donnelly" und "Everlast AI". Mache mir eine gesammelte Datei daraus.
+- [x] Transkribiere alle Videos auf Youtube der letzten 6 Monaten vollständig von folgenden Youtube-Kanälen: "Silicon Valley Girl", "Alex Hormozi", "Dan Martell", "Chris Donnelly" und "Everlast AI". Mache mir eine gesammelte Datei daraus. — erledigt 2026-09-14, 133 Transkripte in `reference/youtube-transcripts/` (Chris Donnelly: 0, Kanal ruht seit Januar 2026). Reproduzierbar via `scripts/youtube_transcripts.py`.
