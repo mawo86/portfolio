@@ -180,8 +180,10 @@ npm run build # Produktions-Build
 - `n8n-erster-workflow` — n8n Einstieg Schritt-für-Schritt
 - `ein-jahr-ki` — Ein Jahr KI im Alltag: Erfahrungsbericht (fundamental überarbeitet 2026-04-21)
 
-**Blog-Drafts (draft: true, KW16–25, 19 Artikel):**
-sprachmodell-erklaert, ki-roi-berechnen, ki-fehler-einfuehrung, ki-glossar-entscheider, zapier-vs-n8n, ki-im-kundenservice, email-automatisierung-ki, erster-ki-pilot, ki-angst-im-team, ki-projekte-scheitern, ki-team-aufbauen, ki-und-dsgvo, ki-daten-eingeben, ki-im-vertrieb, ki-in-der-buchhaltung, ki-im-hr, ki-sap-fico, microsoft-copilot-bewertung, ki-jobs-zukunft
+**Blog-Drafts (draft: true, KW16–25, 21 Artikel):**
+sprachmodell-erklaert, ki-roi-berechnen, ki-fehler-einfuehrung, ki-glossar-entscheider, zapier-vs-n8n, ki-im-kundenservice, eu-ai-act-mittelstand, email-automatisierung-ki, erster-ki-pilot, ki-angst-im-team, ki-projekte-scheitern, ki-team-aufbauen, ki-und-dsgvo, ki-daten-eingeben, ki-im-vertrieb, ki-in-der-buchhaltung, ki-im-hr, ki-sap-fico, microsoft-copilot-bewertung, ki-jobs-zukunft, ki-jobs-mittelstand-zahlen
+
+Neu 2026-09-14, abgeleitet aus Transkript-Analyse (`context/strategy.md`): `eu-ai-act-mittelstand` (EU AI Act, dm-Chef-Interview als Aufhänger, Kategorie Datenschutz) und `ki-jobs-mittelstand-zahlen` (belegte 16%-Entry-Level-Zahl vs. Mittelstand-Realität, Kategorie Strategie).
 
 **Neue Seiten & Features:**
 - `/tools` — Tools mit Affiliate-Links; Kategorien: KI & LLMs, Automatisierung, Hosting & Infrastruktur, Produktivität & Design, Sicherheit & Datenschutz, Entwicklung. Section-IDs für Anchor-Links gesetzt. Netlify, Miro hinzugefügt. NordVPN mit aktivem Affiliate-Link (go.nordvpn.net). Notion + Canva ohne Affiliate-Badge.
@@ -204,6 +206,10 @@ sprachmodell-erklaert, ki-roi-berechnen, ki-fehler-einfuehrung, ki-glossar-entsc
 
 **Digitale Produkte:** `outputs/digitale-produkte.md` — Produkt-Optionen, Empfehlung: PDF-Guide "KI-Strategie in 30 Tagen" (€9–19)
 
+**Discovery-Call-Leitfaden:** `outputs/discovery-call-leitfaden.md` (neu, 2026-09-14) — Gesprächsstruktur fürs kostenlose Erstgespräch, inkl. "Effizienz vor Kreativität"-Erwartungssteuerung und BAFA-Förderhinweis.
+
+**Testimonial-Vorlage:** `outputs/testimonial-vorlage.md` (neu, 2026-09-14) — Interview-Leitfaden und Veröffentlichungs-Struktur für Kundenstimmen (Kunde erzählt in eigenen Worten statt Anbieter-Case-Study). Einsatzbereit, sobald erstes echtes Projekt abgeschlossen ist.
+
 **Skript `scripts/youtube_transcripts.py`:** Lädt via yt-dlp Untertitel (letzte 6 Monate) für eine konfigurierte Kanalliste, wandelt sie in Klartext um und schreibt Ergebnisse nach `reference/youtube-transcripts/` (pro Kanal + `alle-transkripte.md` gesammelt; `_raw/` enthält Original-VTTs). Voraussetzung: `brew install yt-dlp`. Zuletzt gelaufen 2026-09-14 für Silicon Valley Girl, Alex Hormozi, Dan Martell, Chris Donnelly, Everlast AI (133 Transkripte, siehe `context/strategy.md`).
 
 **Noch ausstehend:**
@@ -212,9 +218,10 @@ sprachmodell-erklaert, ki-roi-berechnen, ki-fehler-einfuehrung, ki-glossar-entsc
 - Digitales Produkt erstellen (KW18, Empfehlung: PDF-Guide)
 - LinkedIn-Texte (`outputs/linkedin-optimierung.md`) auf Konsistenz mit neuer Positionierung prüfen und Profil aktualisieren
 - OG-Images pro Blog-Artikel erstellen
-- 19 Draft-Artikel reviewen und schrittweise live stellen (KW16–25)
-- Testimonials-Sektion mit echten Kundenstimmen befüllen, sobald verfügbar (aktuell ausgeblendet, da leer)
-- Echte Case Study nach erstem abgeschlossenen Consulting-Projekt einpflegen (ersetzt/ergänzt das Beispielprojekt)
+- 21 Draft-Artikel reviewen und schrittweise live stellen (KW16–25)
+- Testimonials-Sektion mit echten Kundenstimmen befüllen, sobald verfügbar (aktuell ausgeblendet, da leer) — Vorlage bereit: `outputs/testimonial-vorlage.md`
+- Echte Case Study nach erstem abgeschlossenen Consulting-Projekt einpflegen (ersetzt/ergänzt das Beispielprojekt) — Interview-Leitfaden bereit: `outputs/testimonial-vorlage.md`
+- Discovery-Call-Leitfaden (`outputs/discovery-call-leitfaden.md`) beim nächsten Erstgespräch anwenden und bei Bedarf nachschärfen
 
 ---
 
