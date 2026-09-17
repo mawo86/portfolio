@@ -1,52 +1,38 @@
 ---
+import Logo from './Logo.astro';
+
 const BASE = import.meta.env.BASE_URL;
 const navLinks = [
   { href: `${BASE}leistungen`, label: 'Leistungen' },
-  { href: `${BASE}case-studies`, label: 'Case Studies' },
+  { href: `${BASE}case-studies`, label: 'Projekte' },
   { href: `${BASE}blog`, label: 'Blog' },
   { href: `${BASE}tools`, label: 'Tools' },
-  { href: `${BASE}#kontakt`, label: 'Kontakt' },
+  { href: `${BASE}#ueber-mich`, label: 'Über mich' },
 ];
 
 const currentPath = Astro.url.pathname;
+function isActive(href: string) {
+  const clean = href.replace(BASE, '/').split('#')[0];
+  return clean !== '/' && currentPath.startsWith(clean);
+}
 ---
 
-<header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
-  <div class="absolute inset-0 bg-[#080B14]/0 backdrop-blur-0 transition-all duration-300" id="header-bg"></div>
-  <nav class="relative max-w-6xl mx-auto px-6 py-5 flex items-center justify-between" aria-label="Hauptnavigation">
-    <!-- Logo -->
-    <a href={import.meta.env.BASE_URL} class="flex items-center gap-2.5 group" aria-label="Busche Cloud">
-      <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect width="38" height="38" rx="9" fill="url(#iconBg)"/>
-        <defs>
-          <linearGradient id="iconBg" x1="0" y1="0" x2="38" y2="38" gradientUnits="userSpaceOnUse">
-            <stop offset="0%" stop-color="#38BDF8"/>
-            <stop offset="100%" stop-color="#0072B1"/>
-          </linearGradient>
-        </defs>
-        <!-- back cloud -->
-        <ellipse cx="24" cy="22" rx="8" ry="6" fill="white" fill-opacity="0.35"/>
-        <!-- front cloud -->
-        <path d="M8 26 C8 22 11 19 15 19 C15.5 17 17.5 15 20 15 C22.5 15 24.5 17 25 19 C27 19.5 28.5 21 28.5 23 C28.5 25.5 26.5 27 24 27 H11 C9.3 27 8 26 8 24 Z" fill="white"/>
-        <!-- B -->
-        <text x="14.5" y="25.5" font-family="Arial Black, sans-serif" font-weight="900" font-size="10" fill="url(#iconBg)">B</text>
-      </svg>
-      <div class="flex items-baseline gap-1">
-        <span class="text-xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-[#38BDF8] to-[#0095E8]">BUSCHE</span>
-        <span class="text-xs font-bold tracking-widest text-[#0095E8] uppercase">Cloud</span>
-      </div>
-    </a>
+<header id="header" class="fixed top-0 left-0 right-0 z-50 transition-colors duration-300">
+  <div class="absolute inset-0 bg-ink-900/0 backdrop-blur-0 transition-all duration-300 border-b border-transparent" id="header-bg"></div>
+  <nav class="relative max-w-7xl mx-auto px-6 lg:px-10 h-[4.5rem] flex items-center justify-between" aria-label="Hauptnavigation">
+    <Logo />
 
     <!-- Desktop nav -->
-    <ul class="hidden md:flex items-center gap-8">
+    <ul class="hidden md:flex items-center gap-7">
       {navLinks.map(link => (
         <li>
           <a
             href={link.href}
-            class="text-sm text-gray-400 hover:text-white transition-colors font-medium relative group"
+            aria-current={isActive(link.href) ? 'page' : undefined}
+            class={`text-[0.9rem] font-medium transition-colors relative group ${isActive(link.href) ? 'text-bone-50' : 'text-bone-400 hover:text-bone-50'}`}
           >
             {link.label}
-            <span class="absolute -bottom-0.5 left-0 w-0 h-px bg-brand-400 transition-all duration-300 group-hover:w-full"></span>
+            <span class={`absolute -bottom-1 left-0 h-px bg-brand-400 transition-all duration-300 ${isActive(link.href) ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
           </a>
         </li>
       ))}
@@ -55,11 +41,11 @@ const currentPath = Astro.url.pathname;
     <!-- CTA -->
     <a
       href={`${BASE}#kontakt`}
-      class="hidden md:inline-flex items-center gap-2 px-4 py-2 text-sm font-medium bg-brand-500/10 hover:bg-brand-500/20 text-brand-300 border border-brand-500/30 hover:border-brand-400/50 rounded-lg transition-all"
+      class="hidden md:inline-flex items-center gap-2 px-4 py-2 text-sm font-semibold bg-bone-50 text-ink-950 hover:bg-brand-300 rounded-full transition-colors"
     >
-      Erstgespräch buchen
+      Erstgespräch
       <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M5 12h14M13 6l6 6-6 6" />
       </svg>
     </a>
 
@@ -67,32 +53,32 @@ const currentPath = Astro.url.pathname;
     <button
       id="mobile-menu-btn"
       type="button"
-      class="md:hidden p-2 text-gray-400 hover:text-white transition-colors"
+      class="md:hidden p-2 -mr-2 text-bone-200 hover:text-bone-50 transition-colors"
       aria-label="Menü öffnen"
       aria-expanded="false"
       aria-controls="mobile-menu"
     >
-      <svg id="mobile-menu-icon-open" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      <svg id="mobile-menu-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 7h16M4 12h16M4 17h16" />
       </svg>
-      <svg id="mobile-menu-icon-close" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      <svg id="mobile-menu-icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M6 18L18 6M6 6l12 12" />
       </svg>
     </button>
   </nav>
 
   <!-- Mobile menu -->
-  <div id="mobile-menu" class="hidden md:hidden border-t border-white/10 bg-[#080B14]/95 backdrop-blur-xl">
-    <ul class="max-w-6xl mx-auto px-6 py-4 flex flex-col gap-1">
+  <div id="mobile-menu" class="hidden md:hidden border-t border-bone-50/10 bg-ink-900/95 backdrop-blur-xl">
+    <ul class="max-w-7xl mx-auto px-6 py-5 flex flex-col gap-1">
       {navLinks.map(link => (
         <li>
-          <a href={link.href} class="block py-2.5 px-3 text-gray-300 hover:text-white hover:bg-white/5 rounded-lg transition-colors text-sm font-medium">
+          <a href={link.href} class="block py-3 px-3 text-bone-200 hover:text-bone-50 hover:bg-bone-50/5 rounded-lg transition-colors text-base font-display font-medium">
             {link.label}
           </a>
         </li>
       ))}
-      <li class="mt-2 pt-2 border-t border-white/10">
-        <a href={`${BASE}#kontakt`} class="block py-2.5 px-3 text-center bg-brand-500 hover:bg-brand-400 text-white rounded-lg text-sm font-medium transition-colors">
+      <li class="mt-3 pt-3 border-t border-bone-50/10">
+        <a href={`${BASE}#kontakt`} class="block py-3 px-3 text-center bg-bone-50 text-ink-950 hover:bg-brand-300 rounded-full text-sm font-semibold transition-colors">
           Erstgespräch buchen
         </a>
       </li>
@@ -101,21 +87,18 @@ const currentPath = Astro.url.pathname;
 </header>
 
 <script>
-  // Header scroll effect
   const header = document.getElementById('header');
   const headerBg = document.getElementById('header-bg');
 
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 20) {
-      headerBg?.classList.add('!bg-[#080B14]/90', '!backdrop-blur-xl');
-      header?.classList.add('border-b', 'border-white/5');
-    } else {
-      headerBg?.classList.remove('!bg-[#080B14]/90', '!backdrop-blur-xl');
-      header?.classList.remove('border-b', 'border-white/5');
-    }
-  });
+  function onScroll() {
+    const scrolled = window.scrollY > 24;
+    headerBg?.classList.toggle('!bg-ink-900/85', scrolled);
+    headerBg?.classList.toggle('!backdrop-blur-xl', scrolled);
+    headerBg?.classList.toggle('!border-bone-50/[0.06]', scrolled);
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
 
-  // Mobile menu
   const btn = document.getElementById('mobile-menu-btn');
   const menu = document.getElementById('mobile-menu');
   const iconOpen = document.getElementById('mobile-menu-icon-open');
@@ -128,6 +111,8 @@ const currentPath = Astro.url.pathname;
     btn.setAttribute('aria-label', open ? 'Menü schließen' : 'Menü öffnen');
     iconOpen?.classList.toggle('hidden', open);
     iconClose?.classList.toggle('hidden', !open);
+    if (open) headerBg?.classList.add('!bg-ink-900/85', '!backdrop-blur-xl');
+    else onScroll();
   }
 
   btn?.addEventListener('click', () => {
@@ -135,12 +120,10 @@ const currentPath = Astro.url.pathname;
     setMenuOpen(!!isHidden);
   });
 
-  // Close mobile menu on link click
   menu?.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => setMenuOpen(false));
   });
 
-  // Close mobile menu on Escape
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && menu && !menu.classList.contains('hidden')) {
       setMenuOpen(false);

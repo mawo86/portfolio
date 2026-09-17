@@ -33,105 +33,95 @@ const ogRoute = `blog/${slug}`;
 <Layout title={`${title} — Busche Cloud`} description={description} ogRoute={ogRoute}>
   <JsonLd title={title} description={description} date={date} url={canonicalURL} slot="head" />
   <Header />
-  <main id="main" class="pt-28 pb-24">
+  <main id="main" class="pt-36 lg:pt-44 pb-24">
 
-    <!-- Article header -->
-    <div class="max-w-3xl mx-auto px-6 mb-12">
-      <a href={`${import.meta.env.BASE_URL}blog`} class="inline-flex items-center gap-2 text-gray-500 hover:text-brand-400 text-sm mb-12 transition-colors group">
-        <svg class="w-4 h-4 transition-transform group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+    <!-- Kopf -->
+    <div class="max-w-3xl mx-auto px-6 mb-14">
+      <a href={`${import.meta.env.BASE_URL}blog`} class="inline-flex items-center gap-2 text-bone-600 hover:text-bone-50 text-sm mb-10 transition-colors group">
+        <svg class="w-4 h-4 transition-transform group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5M11 18l-6-6 6-6" />
         </svg>
-        Zurück zum Blog
+        Alle Artikel
       </a>
 
-      <div class="flex flex-wrap gap-2 mb-6">
-        {tags.map(tag => (
-          <span class="px-2.5 py-1 text-xs font-semibold text-brand-400 bg-brand-500/10 border border-brand-500/20 rounded-full uppercase tracking-wide">
-            {tag}
-          </span>
-        ))}
-      </div>
+      <p class="text-brand-400 text-[0.75rem] font-semibold uppercase tracking-[0.2em] mb-5">{category}</p>
 
-      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white mb-5 leading-tight tracking-tight">{title}</h1>
+      <h1 class="font-display font-bold text-bone-50 text-[2.3rem] sm:text-[3rem] lg:text-[3.5rem] leading-[1.02] tracking-tight mb-6" style="text-wrap: balance;">{title}</h1>
 
-      <div class="flex items-center gap-4 text-sm text-gray-500">
-        <span>Marlon Busche</span>
-        <span class="w-1 h-1 rounded-full bg-gray-700" aria-hidden="true"></span>
+      <p class="text-bone-400 text-[1.15rem] leading-relaxed mb-8">{description}</p>
+
+      <div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-bone-600 pt-6 border-t border-bone-50/10">
+        <span class="text-bone-200">Marlon Busche</span>
+        <span aria-hidden="true">·</span>
         <time datetime={date.toISOString()}>{formattedDate}</time>
         {readingTime && (
           <>
-            <span class="w-1 h-1 rounded-full bg-gray-700" aria-hidden="true"></span>
+            <span aria-hidden="true">·</span>
             <span aria-label={`${readingTime} Minuten Lesezeit`}>{readingTime} Min. Lesezeit</span>
           </>
         )}
       </div>
-
-      <div class="mt-8 h-px bg-white/10"></div>
     </div>
 
-    <!-- Article body -->
+    <!-- Artikel -->
     <article class="max-w-[680px] mx-auto px-6" data-pagefind-body data-pagefind-meta={`title:${title}`}>
       <div class="
         prose prose-invert max-w-none
 
-        prose-p:text-[#c8cdd6] prose-p:leading-[1.95] prose-p:text-[1.075rem]
+        prose-p:text-bone-200 prose-p:leading-[1.9] prose-p:text-[1.1rem]
         prose-p:mb-8
 
-        prose-h2:text-white prose-h2:font-black prose-h2:text-[2rem]
-        prose-h2:mt-20 prose-h2:mb-7 prose-h2:tracking-tight
-        prose-h2:border-t prose-h2:border-white/10 prose-h2:pt-14
+        prose-h2:text-bone-50 prose-h2:font-display prose-h2:font-bold prose-h2:text-[1.9rem]
+        prose-h2:mt-20 prose-h2:mb-6 prose-h2:tracking-tight prose-h2:leading-tight
 
-        prose-h3:text-white prose-h3:font-bold prose-h3:text-[1.3rem]
-        prose-h3:mt-14 prose-h3:mb-5 prose-h3:tracking-tight
+        prose-h3:text-bone-50 prose-h3:font-display prose-h3:font-semibold prose-h3:text-[1.35rem]
+        prose-h3:mt-14 prose-h3:mb-4 prose-h3:tracking-tight
 
-        prose-strong:text-white prose-strong:font-semibold
+        prose-strong:text-bone-50 prose-strong:font-semibold
 
-        prose-a:text-[#60a5fa] prose-a:no-underline prose-a:font-normal
-        prose-a:border-b prose-a:border-blue-400/25
-        hover:prose-a:border-blue-400/70
+        prose-a:text-bone-50 prose-a:no-underline prose-a:font-normal
+        prose-a:border-b prose-a:border-brand-400/50
+        hover:prose-a:border-brand-300 hover:prose-a:text-brand-300
         prose-a:transition-colors prose-a:duration-150
 
         prose-ul:my-8 prose-ul:space-y-3
         prose-ol:my-8 prose-ol:space-y-3
-        prose-li:text-[#c8cdd6] prose-li:leading-[1.85] prose-li:pl-1
-        prose-li:marker:text-[#60a5fa]
+        prose-li:text-bone-200 prose-li:leading-[1.8] prose-li:pl-1
+        prose-li:marker:text-brand-400
 
-        prose-blockquote:border-l-0 prose-blockquote:not-italic
-        prose-blockquote:bg-white/[0.04] prose-blockquote:rounded-xl
-        prose-blockquote:px-8 prose-blockquote:py-6 prose-blockquote:my-12
-        prose-blockquote:text-gray-100 prose-blockquote:text-[1.1rem]
-        prose-blockquote:leading-[1.8] prose-blockquote:font-normal
-        prose-blockquote:border prose-blockquote:border-white/8
+        prose-blockquote:border-l-2 prose-blockquote:border-brand-400 prose-blockquote:not-italic
+        prose-blockquote:bg-ink-800 prose-blockquote:rounded-r-2xl
+        prose-blockquote:px-7 prose-blockquote:py-6 prose-blockquote:my-12
+        prose-blockquote:text-bone-50 prose-blockquote:text-[1.2rem] prose-blockquote:font-display prose-blockquote:font-medium
+        prose-blockquote:leading-[1.6]
 
         prose-hr:border-none prose-hr:my-16
         prose-hr:before:content-['···'] prose-hr:before:block
-        prose-hr:before:text-center prose-hr:before:text-gray-600
+        prose-hr:before:text-center prose-hr:before:text-bone-600
         prose-hr:before:text-2xl prose-hr:before:tracking-[0.5em]
 
-        prose-img:rounded-xl prose-img:my-10 prose-img:w-full
+        prose-img:rounded-2xl prose-img:my-10 prose-img:w-full
 
-        prose-figcaption:text-gray-500 prose-figcaption:text-sm
+        prose-figcaption:text-bone-600 prose-figcaption:text-sm
         prose-figcaption:text-center prose-figcaption:-mt-6 prose-figcaption:mb-10
 
-        prose-code:text-blue-300 prose-code:bg-white/6 prose-code:px-1.5
+        prose-code:text-brand-200 prose-code:bg-ink-800 prose-code:px-1.5
         prose-code:py-0.5 prose-code:rounded prose-code:text-sm prose-code:font-normal
-        prose-code:border prose-code:border-white/8
+        prose-code:border prose-code:border-bone-50/10
+        prose-code:before:content-none prose-code:after:content-none
       ">
         <slot />
       </div>
 
-      <!-- Divider -->
-      <div class="mt-16 h-px bg-white/10"></div>
-
-      <!-- Author card -->
-      <div class="mt-10 flex items-start gap-4">
-        <div class="flex-shrink-0 w-12 h-12 rounded-full bg-gradient-to-br from-brand-400 to-blue-600 flex items-center justify-center text-white font-black text-lg">
+      <!-- Autor -->
+      <div class="mt-16 pt-10 border-t border-bone-50/10 flex items-start gap-5">
+        <div class="flex-shrink-0 w-12 h-12 rounded-full bg-brand-500 text-ink-950 flex items-center justify-center font-display font-bold text-lg">
           M
         </div>
         <div>
-          <p class="text-white font-semibold text-sm">Marlon Busche</p>
-          <p class="text-gray-500 text-sm leading-relaxed mt-1">
-            KI-Consultant für den Mittelstand. Ich helfe Unternehmen, mit KI wirklich produktiv zu werden — nicht nur zu experimentieren.
+          <p class="text-bone-50 font-semibold text-sm">Marlon Busche</p>
+          <p class="text-bone-400 text-sm leading-relaxed mt-1">
+            KI-Consultant für den Mittelstand. Tagsüber Global AI Manager, hier schreibe ich auf, was davon in der Praxis hängen bleibt.
           </p>
         </div>
       </div>
@@ -142,35 +132,29 @@ const ogRoute = `blog/${slug}`;
       </div>
 
       <!-- CTA -->
-      <div class="mt-6 p-8 border border-brand-500/20 rounded-xl bg-white/2">
-        <p class="text-xs font-bold uppercase tracking-widest text-brand-400 mb-3">Kostenloses Erstgespräch</p>
-        <h3 class="text-xl font-black text-white mb-2 leading-tight">30 Minuten. Kein Verkaufsgespräch.</h3>
-        <p class="text-gray-400 text-sm leading-relaxed mb-5">Wir schauen gemeinsam, wo KI in deinem Unternehmen den größten Hebel hat — und ob ich dabei helfen kann. Unverbindlich.</p>
-        <a href={`${import.meta.env.BASE_URL}#kontakt`} class="inline-flex items-center gap-2 px-5 py-2.5 bg-brand-500 hover:bg-brand-400 text-white font-semibold rounded-lg transition-colors text-sm">
-          Kostenloses Erstgespräch buchen
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-          </svg>
+      <div class="mt-5 p-7 sm:p-8 bg-ink-800 border border-brand-500/25 rounded-2xl">
+        <p class="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-brand-400 mb-2.5">Kostenloses Erstgespräch</p>
+        <h3 class="font-display font-semibold text-bone-50 text-[1.35rem] leading-tight tracking-tight mb-2">30 Minuten. Kein Verkaufsgespräch.</h3>
+        <p class="text-bone-400 text-sm leading-relaxed mb-5">Wir schauen gemeinsam, wo KI in deinem Unternehmen den größten Hebel hat. Und ob ich dabei helfen kann. Wenn nicht, sage ich das auch.</p>
+        <a href={`${import.meta.env.BASE_URL}#kontakt`} class="inline-flex items-center gap-2 px-5 py-3 bg-bone-50 text-ink-950 hover:bg-brand-300 font-semibold rounded-full transition-colors text-sm">
+          Gespräch vereinbaren
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M5 12h14M13 6l6 6-6 6" /></svg>
         </a>
       </div>
 
-      <!-- Prev/Next Navigation -->
+      <!-- Vor / Zurück -->
       {(prevPost || nextPost) && (
-        <nav class="mt-12 pt-8 border-t border-white/10 grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <nav class="mt-12 pt-8 border-t border-bone-50/10 grid grid-cols-1 sm:grid-cols-2 gap-6">
           {prevPost ? (
-            <a href={`${import.meta.env.BASE_URL}blog/${prevPost.slug}`} class="group flex flex-col gap-1">
-              <span class="text-xs text-gray-600 uppercase tracking-wider">Vorheriger Artikel</span>
-              <span class="text-sm font-semibold text-gray-400 group-hover:text-brand-400 transition-colors leading-snug">
-                {prevPost.title}
-              </span>
+            <a href={`${import.meta.env.BASE_URL}blog/${prevPost.slug}`} class="group flex flex-col gap-1.5">
+              <span class="text-[0.7rem] text-bone-600 uppercase tracking-[0.14em]">Vorheriger Artikel</span>
+              <span class="font-display font-medium text-bone-200 group-hover:text-brand-300 transition-colors leading-snug">{prevPost.title}</span>
             </a>
           ) : <div />}
           {nextPost && (
-            <a href={`${import.meta.env.BASE_URL}blog/${nextPost.slug}`} class="group flex flex-col gap-1 sm:text-right sm:items-end">
-              <span class="text-xs text-gray-600 uppercase tracking-wider">Nächster Artikel</span>
-              <span class="text-sm font-semibold text-gray-400 group-hover:text-brand-400 transition-colors leading-snug">
-                {nextPost.title}
-              </span>
+            <a href={`${import.meta.env.BASE_URL}blog/${nextPost.slug}`} class="group flex flex-col gap-1.5 sm:text-right sm:items-end">
+              <span class="text-[0.7rem] text-bone-600 uppercase tracking-[0.14em]">Nächster Artikel</span>
+              <span class="font-display font-medium text-bone-200 group-hover:text-brand-300 transition-colors leading-snug">{nextPost.title}</span>
             </a>
           )}
         </nav>

@@ -11,84 +11,69 @@ const id = 'nl-' + Math.random().toString(36).slice(2, 9);
 ---
 
 {compact ? (
-  <div class="p-6 border border-white/10 rounded-xl bg-white/2" data-newsletter-root={id}>
-    <p class="text-xs font-bold uppercase tracking-widest text-brand-400 mb-2">Newsletter</p>
-    <p class="text-white font-semibold text-sm mb-4">Neue Artikel direkt ins Postfach — kein Spam, jederzeit abmeldbar.</p>
-    <form
-      action={action}
-      method="post"
-      class="flex flex-col sm:flex-row gap-3"
-      data-newsletter-form
-    >
+  <div class="p-6 sm:p-7 bg-ink-800 border border-bone-50/[0.08] rounded-2xl" data-newsletter-root={id}>
+    <p class="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-brand-400 mb-2">Newsletter</p>
+    <p class="font-display font-semibold text-bone-50 text-[1.15rem] leading-snug mb-4">Neue Artikel und was ich gerade in Projekten sehe. Direkt ins Postfach.</p>
+    <form action={action} method="post" class="flex flex-col sm:flex-row gap-3" data-newsletter-form>
       <label for={`${id}-email`} class="sr-only">E-Mail-Adresse</label>
       <input
         id={`${id}-email`}
         type="email"
         name="email"
-        placeholder="Deine E-Mail-Adresse"
+        placeholder="deine@mail.de"
         required
         autocomplete="email"
-        class="flex-1 px-4 py-2.5 bg-white/5 border border-white/10 rounded-lg text-sm text-white placeholder:text-gray-500 focus:outline-none focus:border-brand-500/50 transition-colors"
+        class="flex-1 px-4 py-3 bg-ink-900 border border-bone-50/10 rounded-full text-sm text-bone-50 placeholder:text-bone-600 focus:outline-none focus:border-brand-400 transition-colors"
       />
-      <button
-        type="submit"
-        class="px-5 py-2.5 bg-brand-500 hover:bg-brand-400 text-white font-semibold rounded-lg transition-colors text-sm whitespace-nowrap disabled:opacity-50"
-      >
-        Abonnieren
+      <button type="submit" class="px-5 py-3 bg-bone-50 text-ink-950 hover:bg-brand-300 font-semibold rounded-full transition-colors text-sm whitespace-nowrap disabled:opacity-50">
+        Eintragen
       </button>
     </form>
     <p data-newsletter-status class="sr-only" role="status" aria-live="polite"></p>
-    <p class="text-xs text-gray-600 mt-3">
-      Mit der Anmeldung stimmst du zu, E-Mails zu erhalten. Abmeldung jederzeit per Klick.
-      <a href="/datenschutz#newsletter" class="text-gray-500 hover:text-gray-400 transition-colors">Datenschutz</a>
+    <p class="text-xs text-bone-600 mt-3">
+      Kein Spam, kein Tracking, Abmeldung mit einem Klick.
+      <a href="/datenschutz#newsletter" class="text-bone-400 hover:text-bone-200 transition-colors underline underline-offset-2">Datenschutz</a>
     </p>
   </div>
 ) : (
-  <div class="p-8 border border-white/10 rounded-xl bg-white/2" data-newsletter-root={id}>
-    <div class="flex flex-col sm:flex-row sm:items-start gap-6">
-      <div class="flex-1">
-        <p class="text-xs font-bold uppercase tracking-widest text-brand-400 mb-3">Newsletter</p>
-        <h3 class="text-xl font-black text-white mb-2 leading-tight">Bleib auf dem Laufenden.</h3>
-        <p class="text-gray-400 text-sm leading-relaxed mb-5">
-          Neue Artikel zu KI-Automatisierung und digitaler Transformation — direkt ins Postfach. Kein Spam, kein Tracking, jederzeit abmeldbar.
-        </p>
-        <form
-          action={action}
-          method="post"
-          class="flex flex-col sm:flex-row gap-3"
-          data-newsletter-form
-        >
-          <label for={`${id}-email`} class="sr-only">E-Mail-Adresse</label>
-          <input
-            id={`${id}-email`}
-            type="email"
-            name="email"
-            placeholder="Deine E-Mail-Adresse"
-            required
-            autocomplete="email"
-            class="flex-1 px-4 py-2.5 bg-white/5 border border-white/10 rounded-lg text-sm text-white placeholder:text-gray-500 focus:outline-none focus:border-brand-500/50 transition-colors"
-          />
-          <button
-            type="submit"
-            class="px-5 py-2.5 bg-brand-500 hover:bg-brand-400 text-white font-semibold rounded-lg transition-colors text-sm whitespace-nowrap disabled:opacity-50"
-          >
-            Abonnieren
-          </button>
-        </form>
-        <p data-newsletter-status class="sr-only" role="status" aria-live="polite"></p>
-        <p class="text-xs text-gray-600 mt-3">
-          Mit der Anmeldung stimmst du zu, E-Mails zu erhalten. Abmeldung jederzeit per Klick.
-          <a href="/datenschutz#newsletter" class="text-gray-500 hover:text-gray-400 transition-colors">Datenschutz</a>
-        </p>
-      </div>
+  <div class="grid lg:grid-cols-12 gap-10 lg:gap-16 items-center" data-newsletter-root={id}>
+    <div class="lg:col-span-7">
+      <p class="text-brand-400 text-[0.75rem] font-semibold uppercase tracking-[0.2em] mb-5">Newsletter</p>
+      <h2 class="font-display font-bold text-bone-50 text-[2.2rem] sm:text-[2.9rem] leading-[1.02] tracking-tight mb-5" style="text-wrap: balance;">
+        Was bei KI im Mittelstand gerade wirklich funktioniert.
+      </h2>
+      <p class="text-bone-400 text-[1.05rem] leading-relaxed max-w-xl">
+        Keine Tool-Listen, kein Hype. Neue Artikel und das, was ich in Projekten sehe, kurz aufgeschrieben. Kein Spam, kein Tracking, Abmeldung mit einem Klick.
+      </p>
+    </div>
+    <div class="lg:col-span-5">
+      <form action={action} method="post" class="flex flex-col gap-3" data-newsletter-form>
+        <label for={`${id}-email`} class="sr-only">E-Mail-Adresse</label>
+        <input
+          id={`${id}-email`}
+          type="email"
+          name="email"
+          placeholder="deine@mail.de"
+          required
+          autocomplete="email"
+          class="w-full px-5 py-4 bg-ink-800 border border-bone-50/10 rounded-full text-base text-bone-50 placeholder:text-bone-600 focus:outline-none focus:border-brand-400 transition-colors"
+        />
+        <button type="submit" class="w-full px-5 py-4 bg-bone-50 text-ink-950 hover:bg-brand-300 font-semibold rounded-full transition-colors text-base disabled:opacity-50">
+          Eintragen
+        </button>
+      </form>
+      <p data-newsletter-status class="sr-only" role="status" aria-live="polite"></p>
+      <p class="text-xs text-bone-600 mt-3">
+        Mit der Anmeldung stimmst du dem Empfang zu.
+        <a href="/datenschutz#newsletter" class="text-bone-400 hover:text-bone-200 transition-colors underline underline-offset-2">Datenschutz</a>
+      </p>
     </div>
   </div>
 )}
 
 <script>
-  // Newsletter-Submit ohne Popup-Window. Buttondown akzeptiert auch
-  // ein normales form-POST und gibt eine HTML-Bestätigungsseite zurück — wir
-  // submitten via fetch und zeigen eine Inline-Bestätigung.
+  // Newsletter-Submit ohne Popup. Buttondown akzeptiert ein normales form-POST;
+  // wir senden via fetch und zeigen eine Inline-Bestätigung.
   document.querySelectorAll<HTMLFormElement>('form[data-newsletter-form]').forEach(form => {
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
@@ -103,23 +88,17 @@ const id = 'nl-' + Math.random().toString(36).slice(2, 9);
 
       try {
         const fd = new FormData(form);
-        await fetch(form.action, {
-          method: 'POST',
-          body: fd,
-          mode: 'no-cors', // Buttondown unterstützt kein CORS — Antwort opaque, aber Request kommt durch
-        });
-
-        // Form ausblenden, Erfolg zeigen
+        await fetch(form.action, { method: 'POST', body: fd, mode: 'no-cors' });
         form.style.display = 'none';
         status.classList.remove('sr-only');
-        status.className = 'mt-2 p-4 rounded-lg bg-brand-500/10 border border-brand-500/20 text-brand-300 text-sm';
-        status.innerHTML = '<strong>Fast geschafft.</strong> Bitte bestätige die Anmeldung in der E-Mail, die wir dir gerade gesendet haben.';
+        status.className = 'mt-2 p-4 rounded-xl bg-brand-500/10 border border-brand-500/25 text-brand-200 text-sm';
+        status.innerHTML = '<strong>Fast geschafft.</strong> Bestätige kurz die Anmeldung in der E-Mail, die gerade rausging.';
       } catch {
         btn.disabled = false;
-        btn.textContent = 'Abonnieren';
+        btn.textContent = 'Eintragen';
         status.classList.remove('sr-only');
-        status.className = 'mt-2 p-3 rounded-lg bg-red-500/10 border border-red-500/20 text-red-300 text-sm';
-        status.textContent = 'Da ging etwas schief. Versuch es bitte gleich nochmal.';
+        status.className = 'mt-2 p-3 rounded-xl bg-red-500/10 border border-red-500/20 text-red-300 text-sm';
+        status.textContent = 'Da ging etwas schief. Versuch es gleich nochmal.';
       }
     });
   });

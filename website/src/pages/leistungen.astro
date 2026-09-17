@@ -2,65 +2,78 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import MediaImage from '../components/MediaImage.astro';
 
 const packages = [
   {
+    id: 'readiness-check',
+    step: '01',
     name: 'KI-Readiness-Check',
-    tagline: '"Was ist bei euch automatisierbar?"',
+    claim: 'Was ist bei euch automatisierbar?',
     price: '€299',
-    duration: '2 Stunden (remote)',
-    description: 'Zwei Stunden, ein klares Bild. Wir gehen eure Prozesse durch und sortieren: Was lässt sich heute schon automatisieren, was lohnt sich nicht, wo fehlen Daten? Nicht jede Idee, die euch einfällt, ist sofort sinnvoll — ein Teil des Ergebnisses ist auch, wovon ich aktiv abrate. Ihr bekommt eine priorisierte Liste mit konkreten Ansatzpunkten. Kein Verkaufsgespräch, sondern eine Entscheidungsgrundlage.',
+    duration: '2 Stunden, remote',
+    image: 'paket-check.jpg',
+    description: 'Zwei Stunden, ein klares Bild. Wir gehen eure Prozesse durch und sortieren: Was lässt sich heute schon automatisieren, was lohnt sich nicht, wo fehlen Daten? Nicht jede Idee ist sofort sinnvoll. Ein Teil des Ergebnisses ist auch, wovon ich abrate. Ihr bekommt eine priorisierte Liste mit konkreten Ansatzpunkten. Kein Verkaufsgespräch, sondern eine Entscheidungsgrundlage.',
     includes: [
-      'Analyse eurer 3–5 größten Zeitfresser auf KI-Potenzial',
+      'Analyse eurer 3 bis 5 größten Zeitfresser auf KI-Potenzial',
       'Konkrete Tool-Empfehlungen, passend zu eurer Situation',
-      'Priorisierte Roadmap: was zuerst angehen, warum',
+      'Priorisierte Roadmap: was zuerst, und warum',
       'PDF-Zusammenfassung zum Weiterleiten',
     ],
-    idealFor: 'Unternehmen, die noch nicht wissen, wo sie anfangen sollen. Oder die schon mit ChatGPT experimentieren, aber keinen klaren Plan haben.',
+    idealFor: 'Unternehmen, die noch nicht wissen, wo sie anfangen sollen. Oder die schon mit ChatGPT experimentieren, aber keinen Plan haben.',
     highlight: false,
   },
   {
+    id: 'pilot-projekt',
+    step: '02',
     name: 'KI-Pilot-Projekt',
-    tagline: '"Erster Automatisierungs-Workflow in Produktion"',
+    claim: 'Der erste Workflow in Produktion.',
     price: 'ab €2.500',
     duration: '4 Wochen',
+    image: 'paket-pilot.jpg',
     description: 'Ein Prozess, vier Wochen, ein Workflow in Produktion. Wir nehmen den Ansatzpunkt mit dem besten Verhältnis aus Aufwand und Nutzen und setzen ihn gemeinsam um. Am Ende läuft etwas, das euer Team täglich nutzt. Kein Prototyp in der Schublade.',
     includes: [
       'Definition eines konkreten Use Cases',
       'Aufbau des Workflows (n8n, Make, Zapier oder Custom)',
       'Dokumentation und Übergabe',
-      '2 Wochen Post-Go-live-Support',
+      '2 Wochen Support nach dem Go-live',
     ],
-    idealFor: 'Unternehmen, die vom Planen ins Tun kommen wollen. Ein echter Workflow, der ab Tag 1 Arbeit abnimmt. Preisspanne €2.500–5.500 je nach Komplexität.',
+    idealFor: 'Unternehmen, die vom Planen ins Tun kommen wollen. Ein echter Workflow, der ab Tag 1 Arbeit abnimmt. Preisspanne €2.500 bis €5.500 je nach Komplexität.',
     highlight: true,
   },
   {
+    id: 'begleitung',
+    step: '03',
     name: 'Laufende KI-Begleitung',
-    tagline: '"KI-Strategie + Umsetzung, kontinuierlich"',
+    claim: 'Strategie und Umsetzung, kontinuierlich.',
     price: 'ab €1.200/Monat',
     duration: 'Mindestlaufzeit 3 Monate',
-    description: 'Für alle, die nach dem Piloten nicht stehen bleiben wollen. Ich bleibe an Bord: Wir bauen weitere Workflows, schulen das Team und passen die KI-Strategie an das an, was sich in der Praxis bewährt. Ihr habt einen Ansprechpartner, der eure Systeme kennt, ohne eine ganze Beratungsmannschaft zu bezahlen.',
+    image: 'paket-begleitung.jpg',
+    description: 'Für alle, die nach dem Piloten nicht stehen bleiben wollen. Ich bleibe an Bord: Wir bauen weitere Workflows, schulen das Team und passen die KI-Strategie an das an, was sich in der Praxis bewährt. Ihr habt einen Ansprechpartner, der eure Systeme kennt. Ohne eine ganze Beratungsmannschaft zu bezahlen.',
     includes: [
-      'Regelmäßige KI-Strategie-Gespräche (2x monatlich)',
+      'KI-Strategie-Gespräche, 2x im Monat',
       'Begleitung bei der Umsetzung laufender KI-Projekte',
-      'Ad-hoc-Fragen per Chat (Antwort innerhalb 48h)',
+      'Ad-hoc-Fragen per Chat, Antwort innerhalb von 48h',
       'Monatlicher Kurzbericht: was läuft, was kommt, was blockiert',
     ],
     idealFor: 'Unternehmen, die KI kontinuierlich weiterentwickeln wollen, aber keine Vollzeitkraft brauchen.',
     highlight: false,
   },
   {
+    id: 'tagessatz',
+    step: null,
     name: 'Tagessatz',
-    tagline: '"Flexibler Einsatz für konkrete Aufgaben"',
-    price: '€1.200–1.800/Tag',
-    duration: 'Nach Absprache',
-    description: 'Für Unternehmen, die gezielt Unterstützung für einen klar definierten Tag oder ein Kurzprojekt brauchen — ohne langfristige Bindung. Workshops, technische Umsetzung vor Ort oder remote, Strategie-Sessions mit dem Führungsteam.',
+    claim: 'Punktuell, ohne Bindung.',
+    price: '€1.200 bis 1.800 / Tag',
+    duration: 'nach Absprache',
+    image: 'paket-tagessatz.jpg',
+    description: 'Für Unternehmen, die gezielt Unterstützung für einen klar definierten Tag oder ein Kurzprojekt brauchen. Workshops, technische Umsetzung vor Ort oder remote, Strategie-Sessions mit dem Führungsteam. Vorbereitung und Nachbereitung sind drin.',
     includes: [
       'Vorbereitung und Nachbereitung inklusive',
-      'Remote oder vor Ort (OWL & Umgebung ohne Aufschlag)',
+      'Remote oder vor Ort, in OWL und Umgebung ohne Aufschlag',
       'Zusammenfassung und nächste Schritte als Dokument',
     ],
-    idealFor: 'Unternehmen, die für einen Workshop, eine technische Umsetzung oder eine Strategie-Session punktuell externe KI-Expertise brauchen.',
+    idealFor: 'Unternehmen, die für einen Workshop, eine technische Umsetzung oder eine Strategie-Session externe KI-Expertise brauchen. Einmalig oder gelegentlich.',
     highlight: false,
   },
 ];
@@ -68,99 +81,114 @@ const packages = [
 
 <Layout
   title="Leistungen & Preise — Busche Cloud"
-  description="KI-Beratung für den Mittelstand: Readiness-Check, Pilotprojekt oder laufende Begleitung. Transparente Preise, pragmatische Umsetzung."
+  description="KI-Beratung für den Mittelstand: Readiness-Check €299, Pilotprojekt ab €2.500, laufende Begleitung ab €1.200/Monat, Tagessatz. Feste Preise, kein 'auf Anfrage'."
   ogRoute="leistungen"
 >
   <Header />
-  <main id="main" class="pt-28 pb-24">
-    <div class="max-w-6xl mx-auto px-6">
+  <main id="main" class="pt-36 lg:pt-44 pb-24">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
 
       <!-- Intro -->
-      <div class="max-w-2xl mb-20">
-        <p class="text-brand-400 text-sm font-semibold uppercase tracking-widest mb-4">Leistungen &amp; Preise</p>
-        <h1 class="text-4xl sm:text-5xl font-black text-white mb-6 leading-tight tracking-tight">
-          KI, die bei euch wirklich läuft.
-        </h1>
-        <p class="text-gray-400 text-lg leading-relaxed">
-          Ich helfe kleinen und mittleren Unternehmen, mit KI Prozesse zu automatisieren — besonders in Vertrieb, Kundenservice und Backoffice rund um SAP-Landschaften, wo noch viel per E-Mail und Excel läuft. Nicht als Strategiepapier, sondern als Workflow, der ab Woche vier Arbeit abnimmt. Drei Pakete, transparente Preise, kein "Preis auf Anfrage".
-        </p>
-      </div>
-
-      <!-- Discovery Call -->
-      <div class="relative mb-20">
-        <div class="absolute inset-0 bg-gradient-to-br from-brand-500/8 to-blue-600/4 rounded-2xl blur-xl"></div>
-        <div class="relative bg-white/3 border border-brand-500/20 rounded-2xl p-8 flex flex-col sm:flex-row items-center justify-between gap-6">
-          <div>
-            <p class="text-xs font-bold uppercase tracking-widest text-brand-400 mb-2">Kostenloses Erstgespräch</p>
-            <h2 class="text-xl font-black text-white mb-2">30 Minuten. Kein Verkaufsgespräch.</h2>
-            <p class="text-gray-400 text-sm leading-relaxed max-w-lg">
-              Vor jedem Paket steht ein kostenloses Erstgespräch: Was beschäftigt dich beim Thema KI? Wo steckt das größte Potenzial? Welches Paket passt zu deiner Situation? Unverbindlich.
-            </p>
-          </div>
-          <a
-            href="/#kontakt"
-            class="flex-shrink-0 inline-flex items-center gap-2 px-6 py-3.5 bg-brand-500 hover:bg-brand-400 text-white font-semibold rounded-xl transition-all hover:scale-105 hover:shadow-lg hover:shadow-brand-500/25 text-sm whitespace-nowrap"
-          >
-            Gespräch vereinbaren
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-            </svg>
-          </a>
+      <div class="grid lg:grid-cols-12 gap-8 mb-16 lg:mb-20">
+        <div class="lg:col-span-8">
+          <p class="text-brand-400 text-[0.75rem] font-semibold uppercase tracking-[0.2em] mb-5">Leistungen &amp; Preise</p>
+          <h1 class="font-display font-bold text-bone-50 text-[2.7rem] sm:text-[3.6rem] lg:text-[4.4rem] leading-[0.96] tracking-tightest" style="text-wrap: balance;">
+            Vier Pakete. Feste Preise. Kein „auf Anfrage“.
+          </h1>
+        </div>
+        <div class="lg:col-span-4 lg:pt-14">
+          <p class="text-bone-200 text-[1.05rem] leading-relaxed">
+            Ich helfe kleinen und mittleren Unternehmen, mit KI Prozesse zu automatisieren. Besonders dort, wo rund um SAP noch viel per E-Mail und Excel läuft: Vertrieb, Kundenservice, Backoffice. Nicht als Strategiepapier, sondern als Workflow, der ab Woche vier Arbeit abnimmt.
+          </p>
         </div>
       </div>
 
+      <!-- Erstgespräch -->
+      <div class="bg-ink-800 border border-bone-50/[0.08] rounded-2xl p-7 sm:p-9 flex flex-col md:flex-row md:items-center justify-between gap-6 mb-20 lg:mb-28">
+        <div class="max-w-xl">
+          <p class="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-brand-400 mb-2.5">Davor immer: das Erstgespräch</p>
+          <h2 class="font-display font-semibold text-bone-50 text-[1.5rem] leading-tight tracking-tight mb-2">30 Minuten. Kostenlos. Kein Verkaufsgespräch.</h2>
+          <p class="text-bone-400 text-[0.95rem] leading-relaxed">
+            Was beschäftigt dich beim Thema KI? Wo steckt das größte Potenzial? Welches Paket passt? Das klären wir zuerst. Unverbindlich, und wenn es nicht passt, sage ich das auch.
+          </p>
+        </div>
+        <a href="/#kontakt" class="flex-shrink-0 inline-flex items-center gap-2 px-6 py-3.5 bg-bone-50 text-ink-950 hover:bg-brand-300 font-semibold rounded-full transition-colors text-[0.95rem] whitespace-nowrap">
+          Gespräch vereinbaren
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M5 12h14M13 6l6 6-6 6" /></svg>
+        </a>
+      </div>
+
       <!-- Pakete -->
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-        {packages.map((pkg) => (
-          <div class={`relative flex flex-col rounded-2xl p-7 border transition-all duration-300 ${pkg.highlight ? 'bg-gradient-to-br from-brand-500/10 to-blue-600/5 border-brand-500/30' : 'bg-white/3 border-white/8'}`}>
-            {pkg.highlight && (
-              <span class="absolute -top-3 left-7 px-3 py-1 text-xs font-bold uppercase tracking-wider bg-brand-500 text-white rounded-full">
-                Meistgebucht
-              </span>
-            )}
-
-            <p class="text-brand-400 text-xs font-semibold uppercase tracking-widest mb-3">{pkg.tagline}</p>
-            <h3 class="text-xl font-black text-white mb-1">{pkg.name}</h3>
-            <div class="flex flex-wrap items-baseline gap-x-2 gap-y-0.5 mb-5">
-              <span class="text-2xl font-black text-white whitespace-nowrap">{pkg.price}</span>
-              <span class="text-sm text-gray-500 whitespace-nowrap">· {pkg.duration}</span>
+      <div class="space-y-20 lg:space-y-28">
+        {packages.map((pkg, i) => (
+          <article id={pkg.id} class="grid lg:grid-cols-12 gap-10 lg:gap-16 items-start">
+            <div class={`lg:col-span-5 ${i % 2 === 1 ? 'lg:order-2' : ''}`}>
+              <MediaImage file={pkg.image} alt={`${pkg.name}: ${pkg.claim}`} aspect="aspect-[4/5] lg:aspect-[5/6]" class="rounded-2xl lg:sticky lg:top-28" tint={pkg.highlight ? 'amber' : 'neutral'} />
             </div>
 
-            <p class="text-gray-400 text-sm leading-relaxed mb-6">{pkg.description}</p>
+            <div class={`lg:col-span-7 ${i % 2 === 1 ? 'lg:order-1' : ''}`}>
+              <div class="flex items-center gap-3 mb-5">
+                {pkg.step ? (
+                  <span class="font-mono text-sm text-bone-600">{pkg.step}</span>
+                ) : (
+                  <span class="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-bone-600">Ergänzend</span>
+                )}
+                {pkg.highlight && (
+                  <span class="px-2.5 py-1 text-[0.65rem] font-bold uppercase tracking-[0.14em] bg-brand-500 text-ink-950 rounded-full">Meistgebucht</span>
+                )}
+              </div>
 
-            <div class="mb-6">
-              <p class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">Was du bekommst</p>
-              <ul class="space-y-2.5">
-                {pkg.includes.map(item => (
-                  <li class="flex items-start gap-2.5 text-sm text-gray-300">
-                    <svg class="w-4 h-4 text-brand-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                    </svg>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
+              <h2 class="font-display font-bold text-bone-50 text-[2rem] sm:text-[2.6rem] leading-[1.02] tracking-tight mb-2">{pkg.name}</h2>
+              <p class="text-brand-300 font-display font-medium text-[1.2rem] mb-6">{pkg.claim}</p>
 
-            <div class="mt-auto pt-5 border-t border-white/10">
-              <p class="text-xs text-gray-500 leading-relaxed mb-5"><span class="text-gray-400 font-medium">Ideal für:</span> {pkg.idealFor}</p>
+              <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1 mb-7 pb-7 border-b border-bone-50/10">
+                <span class="font-display font-bold text-bone-50 text-[2rem] leading-none tracking-tight">{pkg.price}</span>
+                <span class="text-bone-400 text-sm">{pkg.duration}</span>
+              </div>
+
+              <p class="text-bone-200 text-[1.05rem] leading-[1.75] mb-8 max-w-2xl">{pkg.description}</p>
+
+              <div class="grid sm:grid-cols-2 gap-8 mb-8">
+                <div>
+                  <p class="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-bone-600 mb-4">Was du bekommst</p>
+                  <ul class="space-y-3">
+                    {pkg.includes.map(item => (
+                      <li class="flex items-start gap-3 text-[0.95rem] text-bone-200 leading-snug">
+                        <svg class="w-4 h-4 text-brand-400 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4" d="M5 13l4 4L19 7" /></svg>
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div>
+                  <p class="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-bone-600 mb-4">Passt, wenn</p>
+                  <p class="text-[0.95rem] text-bone-400 leading-relaxed">{pkg.idealFor}</p>
+                </div>
+              </div>
+
               <a
                 href="/#kontakt"
-                class={`flex items-center justify-center gap-2 w-full py-3 font-semibold rounded-xl transition-all text-sm ${pkg.highlight ? 'bg-brand-500 hover:bg-brand-400 text-white hover:shadow-lg hover:shadow-brand-500/25' : 'bg-white/5 hover:bg-white/10 text-white border border-white/10 hover:border-white/20'}`}
+                class={`inline-flex items-center gap-2 px-6 py-3.5 font-semibold rounded-full transition-colors text-[0.95rem] ${pkg.highlight ? 'bg-bone-50 text-ink-950 hover:bg-brand-300' : 'text-bone-50 border border-bone-50/20 hover:border-bone-50/50'}`}
               >
-                Erstgespräch anfragen
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                </svg>
+                {pkg.name} anfragen
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M5 12h14M13 6l6 6-6 6" /></svg>
               </a>
             </div>
-          </div>
+          </article>
         ))}
       </div>
 
-      <p class="text-center text-gray-600 text-sm max-w-xl mx-auto">
-        Alle Preise verstehen sich zzgl. USt. Die genaue Preisspanne für Pilot- und Begleitungspakete hängt vom Umfang ab. Im Erstgespräch klären wir das gemeinsam.
-      </p>
+      <div class="mt-20 lg:mt-28 pt-8 border-t border-bone-50/10 grid md:grid-cols-12 gap-6">
+        <p class="md:col-span-7 text-bone-400 text-sm leading-relaxed">
+          Alle Preise zzgl. USt. Die genaue Spanne für Pilot und Begleitung hängt vom Umfang ab, das klären wir im Erstgespräch. Für Beratungsleistungen im Mittelstand gibt es Fördermöglichkeiten, zum Beispiel über die BAFA. Sprich mich darauf an.
+        </p>
+        <div class="md:col-span-5 md:text-right">
+          <a href="/#kontakt" class="inline-flex items-center gap-2 text-sm font-semibold text-bone-50 hover:text-brand-300 transition-colors group">
+            Unsicher, welches Paket? Lass uns reden
+            <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M5 12h14M13 6l6 6-6 6" /></svg>
+          </a>
+        </div>
+      </div>
 
     </div>
   </main>

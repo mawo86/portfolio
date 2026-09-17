@@ -134,13 +134,27 @@ npm run build # Produktions-Build
 
 **Live unter:** https://busche.cloud
 
-**Sektionen (Startseite):** Hero · Über mich · Leistungen (Teaser, Link zu `/leistungen`) · Newsletter · Tools · Projekte (Beispielprojekt-Teaser, Link zu `/case-studies`) · Eigene Produkte · Blog · Kontakt
+**Browser-Preview:** `.claude/launch.json` (Projekt-Root) startet den Dev-Server mit `npm run dev --prefix website` auf Port 4321. In Claude Code via `preview_start` mit Name `website-dev`.
 
-**Eigene Unterseiten:** `/leistungen` (Pakete & Preise) · `/case-studies` · `/tools` · `/blog` · `/kontakt`
+**Design-System (Rebranding "Cinematic Dark", 2026-09-17):**
+- Grund: warmes Anthrazit (`ink-900` #121110, `ink-950` #0B0A09, Flächen `ink-800`), kein Navy mehr
+- Text: warmes Off-White (`bone-50` #F5F1EA, `bone-200`, `bone-400`, `bone-600`)
+- Akzent: Amber/Kupfer (`brand-*`, Kern #E08A1E). Eine Signalfarbe, sparsam. Kein Blau.
+- Tailwind `gray` ist auf eine warme Skala überschrieben, damit ältere gray-Klassen (Impressum, Datenschutz) automatisch passen
+- Display-Font: Bricolage Grotesque (variable, self-hosted in `public/fonts/`, Klasse `font-display`), Body: Inter, Mono: JetBrains Mono
+- Filmkorn-Overlay per `body::before` in `Layout.astro`, Buttons als Pills (`rounded-full`, primär `bg-bone-50 text-ink-950`, Hover Amber)
+- Keine Glas-Karten, keine Blur-Blobs, keine Gradient-Headlines mehr. Sektionen mit Linien und großer Typo, Karten nur wo nötig (`bg-ink-800`)
+- Tokens in `website/tailwind.config.mjs`
+
+**Higgsfield-Visuals:** Die Seite sucht zur Build-Zeit nach Dateien in `website/public/media/` (`src/lib/media.ts` → `hasMedia()`). Fehlt eine Datei, rendert `MediaImage.astro` bzw. der Hero einen ruhigen Verlauf. Slots: `hero.mp4`/`hero.webm`/`hero-poster.jpg` (Startseite), `about.jpg` (Über mich, am besten echtes Porträt), `paket-check.jpg`/`paket-pilot.jpg`/`paket-begleitung.jpg`/`paket-tagessatz.jpg` (`/leistungen`), `kontakt.jpg` (Kontakt-Hintergrund). Alle Prompts, Formate und der Style-Block stehen in `reference/higgsfield-briefing.md`. Aktuell liegt noch kein Asset im Ordner.
+
+**Sektionen (Startseite):** Hero (Video-Slot, Proof-Leiste) · Über mich (Bild-Slot + Text) · Leistungen (nummerierte Stufen 01–03 + Tagessatz-Hinweis) · So läuft ein Projekt (Link zu `/case-studies`) · Newsletter · Werkzeuge · Eigene Produkte · Blog (Listenansicht, 4 Artikel) · Kontakt (Split: Text + Formular, Bild-Slot)
+
+**Eigene Unterseiten:** `/leistungen` (Pakete & Preise, alternierend Bild/Text) · `/case-studies` (im Menü "Projekte") · `/tools` · `/blog` · `/kontakt` (Redirect)
 
 **Eigene Produkte:** Cookloop (cookloop.vercel.app) und DartsIQ (dartsiq.vercel.app) — beide mit App-Link, Live-Status und Tech-Stack
 
-**Logo:** Inline-SVG in Header und Footer (kein Bilddatei-Request) — Icon mit blauem Gradient-Hintergrund + "BUSCHE Cloud" Text
+**Logo:** Neue Wortmarke in `src/components/Logo.astro` (Inline-SVG): geometrisches Monolinien-B auf Amber-Kachel + "Busche Cloud" in Bricolage Grotesque. Header und Footer nutzen die Komponente. Die alte Wolke ist nur noch als Favicon/OG-Fallback (`public/icon_transparent_bg.png`) im Einsatz und sollte bei Gelegenheit ersetzt werden.
 
 **Erledigte Pläne:**
 - `plans/2026-03-24-website-deployment-und-content.md` — Deployment + Inhalte ✓
@@ -148,6 +162,7 @@ npm run build # Produktions-Build
 - `plans/2026-03-31-blog-portfolio-seite-nyt-design.md` — Blog-Index NYT-Redesign ✓
 - `plans/2026-04-03-sichtbarkeit-organisches-wachstum-affiliates.md` — SEO, Newsletter, Affiliates, Content-Pipeline ✓
 - `plans/2026-09-13-website-repositionierung-retention-redesign.md` — Repositionierung "AI-Consultant mit Angebot" + Retention-Redesign ✓
+- Rebranding "Cinematic Dark" (2026-09-17, ohne Plan-Datei, direkt umgesetzt): neue Palette, Display-Font, Wortmarke, alle Seiten-Texte überarbeitet, Higgsfield-Slots ✓
 
 **Positionierung (seit 2026-09-13):** "AI-Consultant mit Angebot" — KI-Beratung für den Mittelstand (KMU, 10–500 MA), statt breiter IT-Allrounder-Sprache. Hero: "KI, die bei euch wirklich läuft." Marlons Rolle: Global AI Manager (angestellt), baut Busche Cloud nebenberuflich auf. Alte IT-Projekte (ERP-Auswahl etc.) sind in den About-Text zurückgestuft, KI-Consulting steht im Vordergrund.
 
@@ -213,6 +228,8 @@ Neu 2026-09-14, abgeleitet aus Transkript-Analyse (`context/strategy.md`): `eu-a
 **Skript `scripts/youtube_transcripts.py`:** Lädt via yt-dlp Untertitel (letzte 6 Monate) für eine konfigurierte Kanalliste, wandelt sie in Klartext um und schreibt Ergebnisse nach `reference/youtube-transcripts/` (pro Kanal + `alle-transkripte.md` gesammelt; `_raw/` enthält Original-VTTs). Voraussetzung: `brew install yt-dlp`. Zuletzt gelaufen 2026-09-14 für Silicon Valley Girl, Alex Hormozi, Dan Martell, Chris Donnelly, Everlast AI (133 Transkripte, siehe `context/strategy.md`).
 
 **Noch ausstehend:**
+- Higgsfield-Assets generieren und in `website/public/media/` ablegen (Briefing: `reference/higgsfield-briefing.md`). Wichtigste zuerst: `hero.mp4` + `hero-poster.jpg`, dann `about.jpg` (echtes Porträt)
+- Favicon/App-Icon auf die neue Wortmarke umstellen (`public/icon_transparent_bg.png` zeigt noch die alte Wolke)
 - Cal.com einrichten + Discovery-Call-Link in Website einbauen (aktuell zeigen alle CTAs auf das Formspree-Kontaktformular)
 - Affiliate-Programme beantragen: n8n, Zapier, IONOS, Netlify; Status prüfen: Hostinger, Miro
 - Digitales Produkt erstellen (KW18, Empfehlung: PDF-Guide)

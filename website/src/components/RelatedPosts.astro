@@ -18,13 +18,13 @@ const related = [...sameCategory, ...rest].slice(0, 3);
 ---
 
 {related.length > 0 && (
-  <nav class="mt-12 pt-10 border-t border-white/10" aria-label="Weitere Artikel">
-    <p class="text-xs font-bold uppercase tracking-widest text-brand-400 mb-6">Weiterlesen</p>
+  <nav class="mt-14 pt-10 border-t border-bone-50/10" aria-label="Weitere Artikel">
+    <p class="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-brand-400 mb-6">Weiterlesen</p>
     <div class="grid sm:grid-cols-3 gap-5">
       {related.map(post => (
-        <a href={`${import.meta.env.BASE_URL}blog/${post.slug}`} class="group block bg-white/3 hover:bg-white/5 border border-white/8 hover:border-white/15 rounded-xl p-5 transition-all duration-300">
-          <span class="text-xs text-brand-400 font-medium">{post.data.category}</span>
-          <h4 class="text-sm font-bold text-white mt-2 mb-1 leading-snug group-hover:text-brand-300 transition-colors line-clamp-2">
+        <a href={`${import.meta.env.BASE_URL}blog/${post.slug}`} class="group block bg-ink-800 border border-bone-50/[0.06] hover:border-bone-50/20 rounded-2xl p-5 transition-colors">
+          <span class="text-xs text-bone-600 font-semibold uppercase tracking-wider">{post.data.category}</span>
+          <h4 class="font-display font-semibold text-bone-50 text-[1.05rem] mt-2 leading-snug tracking-tight group-hover:text-brand-300 transition-colors line-clamp-3">
             {post.data.title}
           </h4>
         </a>

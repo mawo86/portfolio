@@ -134,17 +134,17 @@ const categories = [
   description="Die Tools, die ich täglich nutze: KI, Automatisierung, Hosting, Produktivität. Ehrliche Empfehlungen aus der Praxis."
 >
   <Header />
-  <main id="main" class="pt-28 pb-24">
+  <main id="main" class="pt-36 lg:pt-44 pb-24">
     <div class="max-w-4xl mx-auto px-6">
 
       <!-- Header -->
-      <div class="border-t-2 border-white/20 pt-10 mb-8">
-        <p class="text-brand-400 text-xs font-bold uppercase tracking-[0.2em] mb-5">Busche Cloud · Tools</p>
-        <h1 class="text-4xl sm:text-5xl font-black text-white leading-tight tracking-tight mb-5">
-          Tools, die ich empfehle
+      <div class="mb-10">
+        <p class="text-brand-400 text-[0.75rem] font-semibold uppercase tracking-[0.2em] mb-5">Tools</p>
+        <h1 class="font-display font-bold text-bone-50 text-[3rem] sm:text-[4.2rem] leading-[0.96] tracking-tightest mb-6">
+          Womit ich arbeite.
         </h1>
-        <p class="text-gray-400 text-lg leading-relaxed max-w-2xl">
-          Das sind die Tools, die ich wirklich jeden Tag nutze — für KI-Projekte, Automatisierung, Kundenprojekte und meine eigene Produktivität. Keine Werbetexte, sondern ehrliche Einschätzungen.
+        <p class="text-bone-400 text-[1.05rem] leading-relaxed max-w-2xl">
+          Das steht bei mir wirklich im Einsatz. Für KI-Projekte, Automatisierung, Kundenarbeit und den eigenen Alltag. Keine Werbetexte, sondern was ich nach Monaten Nutzung darüber denke.
         </p>
       </div>
 
@@ -156,8 +156,8 @@ const categories = [
       <!-- Tool Categories -->
       {categories.map(category => (
         <section id={category.slug} class="mb-14">
-          <div class="border-t border-white/10 pt-6 mb-6">
-            <h2 class="text-xl font-black text-white tracking-tight">{category.name}</h2>
+          <div class="border-t border-bone-50/10 pt-6 mb-6">
+            <h2 class="font-display font-semibold text-[1.4rem] text-bone-50 tracking-tight">{category.name}</h2>
           </div>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             {category.tools.map(tool => (
@@ -166,10 +166,10 @@ const categories = [
                 target="_blank"
                 rel={tool.affiliate ? 'sponsored noopener noreferrer' : 'noopener noreferrer'}
                 aria-label={`${tool.name} öffnen (externer Link, neuer Tab)`}
-                class="group block p-5 border border-white/10 rounded-xl bg-white/2 hover:border-brand-500/30 hover:bg-white/3 transition-all focus:outline-none focus:ring-2 focus:ring-brand-500/60 focus:ring-offset-2 focus:ring-offset-[#080B14]"
+                class="group block p-6 border border-bone-50/[0.06] rounded-2xl bg-ink-800 hover:border-bone-50/20 transition-colors focus:outline-none focus:ring-2 focus:ring-brand-400/60 focus:ring-offset-2 focus:ring-offset-ink-900"
               >
                 <div class="flex items-center gap-3 mb-3">
-                  <h3 class="text-base font-bold text-white group-hover:text-brand-300 transition-colors">{tool.name}</h3>
+                  <h3 class="font-display font-semibold text-[1.15rem] text-bone-50 group-hover:text-brand-300 transition-colors">{tool.name}</h3>
                   {tool.affiliate && (
                     <span class="px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-brand-400 bg-brand-500/10 border border-brand-500/20 rounded-full">
                       {tool.affiliateNote}
@@ -189,8 +189,8 @@ const categories = [
       <!-- Footer note -->
       <div class="mt-8 pt-8 border-t border-white/10">
         <p class="text-gray-500 text-sm leading-relaxed">
-          Diese Liste aktualisiere ich regelmäßig. Hast du Fragen zu einem Tool oder brauchst eine Empfehlung für deinen Use Case?
-          <a href="/#kontakt" class="text-brand-400 hover:text-brand-300 transition-colors">Schreib mir.</a>
+          Die Liste wächst mit. Fehlt dir eine Einschätzung oder suchst du ein Tool für einen konkreten Fall?
+          <a href="/#kontakt" class="text-bone-50 hover:text-brand-300 transition-colors underline decoration-bone-50/30 underline-offset-4">Schreib mir.</a>
         </p>
       </div>
 

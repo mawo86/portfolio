@@ -1,0 +1,47 @@
+---
+// Still-Visual aus public/media/ (Higgsfield-Output).
+// Fehlt die Datei, rendert ein ruhiger Fallback-Verlauf in derselben Fläche,
+// damit Layout und Rhythmus auch ohne Asset stimmen.
+import { hasMedia, mediaUrl } from '../lib/media';
+
+export interface Props {
+  file: string;
+  alt: string;
+  class?: string;
+  aspect?: string;
+  loading?: 'lazy' | 'eager';
+  sizes?: string;
+  tint?: 'amber' | 'neutral';
+}
+
+const {
+  file,
+  alt,
+  class: className = '',
+  aspect = 'aspect-[4/5]',
+  loading = 'lazy',
+  tint = 'neutral',
+} = Astro.props;
+
+const exists = hasMedia(file);
+const tintClass = tint === 'amber'
+  ? 'from-brand-700/40 via-ink-800 to-ink-900'
+  : 'from-ink-700 via-ink-800 to-ink-900';
+---
+
+<div class={`relative overflow-hidden bg-ink-800 ${aspect} ${className}`}>
+  {exists ? (
+    <img
+      src={mediaUrl(file)}
+      alt={alt}
+      loading={loading}
+      decoding="async"
+      class="absolute inset-0 w-full h-full object-cover"
+    />
+  ) : (
+    <div class={`absolute inset-0 bg-gradient-to-br ${tintClass}`} role="img" aria-label={alt}>
+      <div class="absolute inset-0 opacity-[0.06]" style="background-image: linear-gradient(rgba(245,241,234,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(245,241,234,0.5) 1px, transparent 1px); background-size: 32px 32px;"></div>
+    </div>
+  )}
+  <div class="absolute inset-0 ring-1 ring-inset ring-bone-50/5 pointer-events-none"></div>
+</div>

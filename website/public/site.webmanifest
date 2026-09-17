@@ -1,12 +1,12 @@
 {
   "name": "Busche Cloud — Marlon Busche",
   "short_name": "Busche Cloud",
-  "description": "KI-Automatisierung & Digitale Transformation für moderne Unternehmen.",
+  "description": "KI-Beratung für den Mittelstand. Automatisierung, die im Alltag läuft.",
   "start_url": "/",
   "scope": "/",
   "display": "minimal-ui",
-  "background_color": "#080B14",
-  "theme_color": "#0080cc",
+  "background_color": "#121110",
+  "theme_color": "#121110",
   "lang": "de",
   "dir": "ltr",
   "icons": [

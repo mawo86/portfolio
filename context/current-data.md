@@ -22,21 +22,25 @@
 
 **Preisanpassung (2026-09-14):** KI-Pilot-Projekt jetzt ab €2.500 (bisher €1.500), laufende KI-Begleitung ab €1.200/Monat (bisher €800/Monat), neues Tagessatz-Angebot €1.200–1.800/Tag für größere Vorhaben. Readiness-Check bleibt bei €299. Begründung: Marktbenchmark für KI-Beratung in Deutschland liegt bei 800–3.000 €/Tag, alte Preise lagen deutlich darunter. Details in `outputs/consulting-angebot.md`.
 
+## Rebranding "Cinematic Dark" (2026-09-17)
+
+Komplette visuelle Neuausrichtung, um Marlon als KI-Experten zu positionieren statt als generisches KI-Startup: warmes Anthrazit statt Navy, Amber statt Electric Blue, Bricolage Grotesque als Display-Font, neue Wortmarke (Monolinien-B, keine Wolke), alle Texte im `meine-stimme`-Stil überarbeitet (keine Em-Dashes, kurze Sätze). Slots für Higgsfield-Video und -Stills eingebaut, Assets noch nicht generiert. Briefing mit Prompts: `reference/higgsfield-briefing.md`. Details zum Design-System in `CLAUDE.md`.
+
 ## Sektionen auf der Website
 
-- Hero (Badge, neue KI-Consultant-Headline, CTAs, Stats)
-- Über mich (Text angepasst auf Global AI Manager, alte IT-Projekte hier als Kontext erwähnt statt eigener Sektion)
-- Leistungen-Teaser (3 Karten, Link zu eigener Seite `/leistungen`)
-- **Newsletter** (neu, Haupt-CTA, `NewsletterSignup`-Komponente, nicht-compact)
-- Tools & Tech (KI/LLMs, Automatisierung, Enterprise, Analyse)
-- Projekte (kompakter Teaser, Link zu `/case-studies`)
+- Hero (Video-Slot mit Fallback-Verlauf, Status-Zeile, zweizeilige Headline, Proof-Leiste mit 4 Fakten)
+- Über mich (Bild-Slot `about.jpg` links, Text rechts, LinkedIn + Link zum Erfahrungsbericht)
+- Leistungen (Stufen 01–03 als Liste mit Preis, Tagessatz als Hinweis, Link zu `/leistungen`)
+- So läuft ein Projekt (dunkle Band-Sektion, Link zu `/case-studies`)
+- **Newsletter** (Haupt-CTA, `NewsletterSignup`-Komponente, Split-Layout)
+- Werkzeuge (4 Spalten Klartext, Link zu `/tools`)
 - Eigene Produkte (Cookloop + DartsIQ — beide live, mit App-Link)
-- Blog (12 Artikel live)
-- Kontakt (Formspree-Formular, weiterhin primärer Buchungsweg — Cal.com noch nicht eingerichtet)
+- Blog (Listenansicht, 4 neueste Artikel)
+- Kontakt (Split: Text + Fakten links, Formular rechts, Bild-Slot `kontakt.jpg`; Formspree, Cal.com noch nicht eingerichtet)
 
 ## Eigene Unterseiten
 
-- **`/leistungen`** (neu) — Drei Consulting-Pakete mit Preisen (KI-Readiness-Check €299, KI-Pilot-Projekt ab €1.500, Laufende KI-Begleitung ab €800/Monat), Discovery-Call-Erklärung
+- **`/leistungen`** — Vier Pakete (KI-Readiness-Check €299, KI-Pilot-Projekt ab €2.500, Laufende KI-Begleitung ab €1.200/Monat, Tagessatz €1.200–1.800) alternierend mit Bild-Slots, Erstgespräch-Band oben, BAFA-Hinweis unten
 - **`/case-studies`** — zeigt jetzt das Beispielprojekt (`beispiel-ki-pilot.md`, `draft: false`, Titel-Präfix "Beispielprojekt:" zur Kennzeichnung)
 - **`/tools`** — Tool-Empfehlungen mit Affiliate-Links
 - **`/blog`** — Artikel-Übersicht mit Kategorien
@@ -180,6 +184,9 @@ Digitale Produkte: `outputs/digitale-produkte.md`
 - [x] Website-Repositionierung "AI-Consultant mit Angebot" + `/leistungen`-Seite + Newsletter-Haupt-CTA + RelatedPosts — 2026-09-13
 - [x] 133 YouTube-Transkripte gesammelt + zweifach analysiert (Consulting-Fokus + breite Themenanalyse) — 2026-09-14
 - [x] Preise angehoben, SAP-Prozess-Nische geschärft, Discovery-Call-Leitfaden + Testimonial-Vorlage erstellt, 2 neue Blog-Drafts — 2026-09-14
+- [x] Rebranding "Cinematic Dark": Palette, Font, Wortmarke, alle Texte, Higgsfield-Slots + Briefing — 2026-09-17
+- [ ] Higgsfield-Assets generieren (`reference/higgsfield-briefing.md`), zuerst Hero-Video + Porträt
+- [ ] Favicon auf neue Wortmarke umstellen
 - [ ] Cal.com einrichten + Link in Website einbauen (alle CTAs zeigen aktuell auf Kontaktformular)
 - [ ] Affiliate-Programme beantragen: n8n, Zapier, IONOS, Netlify
 - [ ] Digitales Produkt erstellen + Gumroad-Seite (KW18)
