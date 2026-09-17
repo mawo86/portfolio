@@ -29,12 +29,13 @@ Claude sollte sich immer über `/prime` am Session-Start orientieren, dann mit v
 .
 ├── CLAUDE.md              # Diese Datei — Kern-Kontext, immer geladen
 ├── shell-aliases.md       # Shell-Aliase für den Workspace
-├── .claude/
+├── .claude/               # (git-ignoriert)
 │   ├── commands/          # Slash-Commands, die Claude ausführen kann
 │   │   ├── prime.md       # /prime — Session-Initialisierung
 │   │   ├── create-plan.md # /create-plan — Implementierungspläne erstellen
 │   │   ├── implement.md   # /implement — Pläne umsetzen
 │   │   └── shutdown.md    # /shutdown — Session sauber beenden
+│   ├── launch.json        # Dev-Server-Config für die Browser-Preview (website-dev, Port 4321)
 │   └── skills/            # Installierte Skills
 ├── context/               # Hintergrund-Kontext über den User und das Projekt
 │   ├── personal-info.md   # Wer Marlon ist, Rolle, Ziele
@@ -43,19 +44,23 @@ Claude sollte sich immer über `/prime` am Session-Start orientieren, dann mit v
 │   └── current-data.md    # Metriken und Projektstatus
 ├── plans/                 # Implementierungspläne erstellt von /create-plan
 ├── outputs/               # Arbeitsergebnisse und Deliverables
-├── reference/             # Logo, Icons und Referenzmaterialien
-│   ├── logo.png           # Busche Cloud Logo (weißer Hintergrund)
-│   ├── logo.jpg           # Busche Cloud Logo (dunkler Hintergrund, Original)
-│   ├── icon_transparent_bg.png
-│   └── icon_white_bg.jpg
-├── scripts/               # Automatisierungsskripte (falls zutreffend)
+├── reference/             # Referenzmaterialien (git-ignoriert)
+│   ├── higgsfield-briefing.md  # Prompts, Formate und Dateinamen für alle Visual-Slots
+│   ├── logo.png / logo.jpg / icon_*.png  # Alte Wolken-Marke, nur noch Archiv
+│   └── youtube-transcripts/    # Output von scripts/youtube_transcripts.py
+├── scripts/               # youtube_transcripts.py
 └── website/               # Astro-Portfolio-Website (busche.cloud)
+    ├── tailwind.config.mjs  # Design-Tokens (ink, bone, brand, font-display)
     ├── src/
-    │   ├── pages/         # index.astro, blog/, impressum, datenschutz
-    │   ├── content/       # blog/ (Markdown-Artikel)
-    │   ├── layouts/       # Layout.astro, BlogLayout.astro
-    │   └── components/    # Header.astro, Footer.astro
-    └── public/            # Logo, Icons, CNAME (nach Deployment)
+    │   ├── pages/         # index, leistungen, blog/, case-studies/, tools, 404, danke, og/
+    │   ├── content/       # blog/ und case-studies/ (Markdown)
+    │   ├── layouts/       # Layout, BlogLayout, CaseStudyLayout
+    │   ├── components/    # Logo, Header, Footer, MediaImage, NewsletterSignup, ...
+    │   └── lib/media.ts   # hasMedia(): Build-Zeit-Check für public/media/
+    └── public/
+        ├── fonts/         # Bricolage Grotesque, Inter, JetBrains Mono (self-hosted)
+        ├── media/         # Higgsfield-Assets (hero.mp4, about.jpg, paket-*.jpg, kontakt.jpg)
+        └── favicon.svg, icon-*.png, apple-touch-icon.png, CNAME, robots.txt
 ```
 
 **Verzeichnisse:**

@@ -4,11 +4,13 @@
 
 **Busche Cloud** — persönliche Marke von Marlon Busche
 **Domain:** busche.cloud
-**Logo:** Vorhanden in `reference/` (blaues Cloud-Logo mit "BUSCHE CLOUD")
+**Logo:** Seit 2026-09-17 neue Wortmarke (geometrisches B auf Amber, "Busche Cloud" in Bricolage Grotesque) als Inline-SVG in `website/src/components/Logo.astro` und `public/favicon.svg`. Die alte blaue Wolke liegt nur noch archiviert in `reference/`.
+
+**Look:** "Cinematic Dark": warmes Anthrazit, Off-White, Amber als einzige Akzentfarbe. Details in `CLAUDE.md`.
 
 ## Angebot
 
-Drei Consulting-Pakete (Details: `outputs/consulting-angebot.md`):
+Vier Consulting-Pakete (Details: `outputs/consulting-angebot.md`):
 - KI-Readiness-Check — €299
 - KI-Pilot-Projekt — ab €2.500
 - Laufende KI-Begleitung — ab €1.200/Monat
