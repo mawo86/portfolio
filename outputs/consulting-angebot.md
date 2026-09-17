@@ -2,7 +2,7 @@
 
 **Erstellt:** 2026-04-12
 **Überarbeitet:** 2026-09-14 — Preise & Nischen-Schärfung nach Analyse von 133 YouTube-Transkripten (Silicon Valley Girl, Alex Hormozi, Dan Martell), siehe `context/strategy.md`
-**Status:** Entwurf — Preise noch nicht auf Website live (dort steht noch die alte Staffel)
+**Status:** Preise live auf Website seit 2026-09-14 (leistungen.astro aktualisiert)
 
 ---
 

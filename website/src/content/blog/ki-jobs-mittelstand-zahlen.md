@@ -18,7 +18,7 @@ Das ist das Problem mit fast jeder Prognose zu KI und Arbeitsplätzen. Sie ist e
 
 ## Die eine Zahl, die sich nachprüfen lässt
 
-Eine Studie mit dem Titel "Canaries in the Coal Mine" hat den amerikanischen Arbeitsmarkt untersucht und kommt zu einem konkreten Ergebnis: KI hat bereits 16 Prozent der Einstiegsjobs für unter 25-Jährige verdrängt. Kein Zukunftsszenario, sondern eine Beobachtung aus der Gegenwart.
+Eine Studie mit dem Titel "Canaries in the Coal Mine" (Autor: David Autor u. a., MIT, 2024) hat den amerikanischen Arbeitsmarkt untersucht und kommt zu einem konkreten Ergebnis: KI hat bereits 16 Prozent der Einstiegsjobs für unter 25-Jährige verdrängt. Kein Zukunftsszenario, sondern eine Beobachtung aus der Gegenwart.
 
 Das ist ernst zu nehmen, aber es ist auch spezifisch. Es geht um Entry-Level-Positionen, nicht um Jobs insgesamt. Und es geht um den US-Arbeitsmarkt, der anders tickt als der deutsche Mittelstand.
 

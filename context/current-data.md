@@ -188,5 +188,4 @@ Digitale Produkte: `outputs/digitale-produkte.md`
 - [ ] Testimonials mit echten Kundenstimmen befüllen (aktuell ausgeblendet) — Vorlage bereit: `outputs/testimonial-vorlage.md`
 - [ ] Echte Case Study nach erstem Projekt einpflegen (ersetzt Beispielprojekt) — Interview-Leitfaden bereit: `outputs/testimonial-vorlage.md`
 - [ ] 21 Draft-Artikel schrittweise reviewen + live stellen (KW16–25)
-- [ ] BAFA-Förderhinweis (Konzept in `outputs/discovery-call-leitfaden.md`) noch in Website-Texte einbauen
 - [ ] Discovery-Call-Leitfaden (`outputs/discovery-call-leitfaden.md`) beim nächsten Erstgespräch anwenden

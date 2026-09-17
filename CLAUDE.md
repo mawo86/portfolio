@@ -151,7 +151,7 @@ npm run build # Produktions-Build
 
 **Positionierung (seit 2026-09-13):** "AI-Consultant mit Angebot" — KI-Beratung für den Mittelstand (KMU, 10–500 MA), statt breiter IT-Allrounder-Sprache. Hero: "KI, die bei euch wirklich läuft." Marlons Rolle: Global AI Manager (angestellt), baut Busche Cloud nebenberuflich auf. Alte IT-Projekte (ERP-Auswahl etc.) sind in den About-Text zurückgestuft, KI-Consulting steht im Vordergrund.
 
-**Neue Seite `/leistungen`:** Zeigt die drei Consulting-Pakete aus `outputs/consulting-angebot.md` mit Preisen (KI-Readiness-Check €299, KI-Pilot-Projekt ab €2.500, Laufende KI-Begleitung ab €1.200/Monat — angehoben 2026-09-14, siehe unten), inkl. Discovery-Call-Erklärung. Verlinkt von Header, Footer, Hero und Leistungs-Teaser auf der Startseite.
+**Neue Seite `/leistungen`:** Zeigt vier Consulting-Pakete aus `outputs/consulting-angebot.md` mit Preisen (KI-Readiness-Check €299, KI-Pilot-Projekt ab €2.500, Laufende KI-Begleitung ab €1.200/Monat, Tagessatz €1.200–1.800/Tag — angehoben 2026-09-14), inkl. Discovery-Call-Erklärung. Verlinkt von Header, Footer, Hero und Leistungs-Teaser auf der Startseite.
 
 **Newsletter als Haupt-CTA:** Eigene Newsletter-Sektion auf der Startseite (nach dem Leistungs-Teaser), `NewsletterSignup`-Komponente (Buttondown). Discovery-Call/Kontaktformular bleibt sekundärer CTA — Cal.com ist noch nicht eingerichtet, alle "Erstgespräch"-Links zeigen weiterhin auf `/#kontakt`.
 

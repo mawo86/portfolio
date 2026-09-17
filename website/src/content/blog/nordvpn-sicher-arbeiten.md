@@ -61,7 +61,7 @@ Es schützt deine Netzwerkverbindung. Es schützt nicht vor Phishing, schwachen 
 
 Und es ersetzt keine Unternehmens-Sicherheitslösung. Für Teams die mit sensiblen Kundendaten oder Enterprise-Systemen arbeiten, braucht es mehr. Das VPN ist eine Schicht von mehreren.
 
-Zum Thema DSGVO und welche Daten in welche Tools dürfen, habe ich hier mehr geschrieben: [KI und DSGVO: Was du wissen musst](/blog/ki-und-dsgvo).
+Zum Thema DSGVO und welche Daten in welche Tools dürfen, lohnt sich ein Blick in die [KI-Strategie Einsteigerguide](/blog/ki-strategie-erste-schritte) — dort gehe ich auch auf datenschutzkonforme Tool-Auswahl ein.
 
 ## Was das für dich bedeutet
 

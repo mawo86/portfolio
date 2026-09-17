@@ -49,6 +49,20 @@ const packages = [
     idealFor: 'Unternehmen, die KI kontinuierlich weiterentwickeln wollen, aber keine Vollzeitkraft brauchen.',
     highlight: false,
   },
+  {
+    name: 'Tagessatz',
+    tagline: '"Flexibler Einsatz für konkrete Aufgaben"',
+    price: '€1.200–1.800/Tag',
+    duration: 'Nach Absprache',
+    description: 'Für Unternehmen, die gezielt Unterstützung für einen klar definierten Tag oder ein Kurzprojekt brauchen — ohne langfristige Bindung. Workshops, technische Umsetzung vor Ort oder remote, Strategie-Sessions mit dem Führungsteam.',
+    includes: [
+      'Vorbereitung und Nachbereitung inklusive',
+      'Remote oder vor Ort (OWL & Umgebung ohne Aufschlag)',
+      'Zusammenfassung und nächste Schritte als Dokument',
+    ],
+    idealFor: 'Unternehmen, die für einen Workshop, eine technische Umsetzung oder eine Strategie-Session punktuell externe KI-Expertise brauchen.',
+    highlight: false,
+  },
 ];
 ---
 
@@ -96,7 +110,7 @@ const packages = [
       </div>
 
       <!-- Pakete -->
-      <div class="grid lg:grid-cols-3 gap-6 mb-8">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
         {packages.map((pkg) => (
           <div class={`relative flex flex-col rounded-2xl p-7 border transition-all duration-300 ${pkg.highlight ? 'bg-gradient-to-br from-brand-500/10 to-blue-600/5 border-brand-500/30' : 'bg-white/3 border-white/8'}`}>
             {pkg.highlight && (

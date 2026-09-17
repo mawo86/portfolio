@@ -48,7 +48,7 @@ Drei Schritte, die in jedem Erstgespräch sinnvoll sind, bevor du ein KI-Projekt
 2. **Dokumentieren:** Auch bei geringem Risiko gilt: Wer welches Tool wofür nutzt, sollte nachvollziehbar sein.
 3. **Transparent bleiben:** Wenn Kunden mit einem KI-System interagieren (Chatbot, automatisierte Antwort), sollte das erkennbar sein.
 
-Das ist kein Hexenwerk. Es ist die gleiche Sorgfalt, die du schon bei der [DSGVO](/blog/ki-und-dsgvo) walten lässt, nur auf eine neue Fragestellung angewendet.
+Das ist kein Hexenwerk. Es ist die gleiche Sorgfalt, die du bei sensiblen Kundendaten oder Compliance-Themen walten lässt — nur auf eine neue Fragestellung angewendet.
 
 ## Dein nächster Schritt
 
