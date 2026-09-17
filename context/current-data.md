@@ -186,7 +186,7 @@ Digitale Produkte: `outputs/digitale-produkte.md`
 - [x] Preise angehoben, SAP-Prozess-Nische geschärft, Discovery-Call-Leitfaden + Testimonial-Vorlage erstellt, 2 neue Blog-Drafts — 2026-09-14
 - [x] Rebranding "Cinematic Dark": Palette, Font, Wortmarke, alle Texte, Higgsfield-Slots + Briefing — 2026-09-17
 - [ ] Higgsfield-Assets generieren (`reference/higgsfield-briefing.md`), zuerst Hero-Video + Porträt
-- [ ] Favicon auf neue Wortmarke umstellen
+- [x] Favicon + App-Icons auf neue Wortmarke umgestellt — 2026-09-17
 - [ ] Cal.com einrichten + Link in Website einbauen (alle CTAs zeigen aktuell auf Kontaktformular)
 - [ ] Affiliate-Programme beantragen: n8n, Zapier, IONOS, Netlify
 - [ ] Digitales Produkt erstellen + Gumroad-Seite (KW18)

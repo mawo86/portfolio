@@ -154,7 +154,7 @@ npm run build # Produktions-Build
 
 **Eigene Produkte:** Cookloop (cookloop.vercel.app) und DartsIQ (dartsiq.vercel.app) — beide mit App-Link, Live-Status und Tech-Stack
 
-**Logo:** Neue Wortmarke in `src/components/Logo.astro` (Inline-SVG): geometrisches Monolinien-B auf Amber-Kachel + "Busche Cloud" in Bricolage Grotesque. Header und Footer nutzen die Komponente. Die alte Wolke ist nur noch als Favicon/OG-Fallback (`public/icon_transparent_bg.png`) im Einsatz und sollte bei Gelegenheit ersetzt werden.
+**Logo:** Neue Wortmarke in `src/components/Logo.astro` (Inline-SVG): geometrisches Monolinien-B auf Amber-Kachel + "Busche Cloud" in Bricolage Grotesque. Header und Footer nutzen die Komponente. Favicon und App-Icons sind aus derselben Marke gerastert: `public/favicon.svg` (Quelle), `favicon-32.png`, `apple-touch-icon.png`, `icon-192.png`, `icon-512.png`, `icon-maskable-512.png` (Marke auf Anthrazit mit Safe-Zone). Die alte Wolke liegt nur noch archiviert in `reference/`.
 
 **Erledigte Pläne:**
 - `plans/2026-03-24-website-deployment-und-content.md` — Deployment + Inhalte ✓
@@ -229,7 +229,6 @@ Neu 2026-09-14, abgeleitet aus Transkript-Analyse (`context/strategy.md`): `eu-a
 
 **Noch ausstehend:**
 - Higgsfield-Assets generieren und in `website/public/media/` ablegen (Briefing: `reference/higgsfield-briefing.md`). Wichtigste zuerst: `hero.mp4` + `hero-poster.jpg`, dann `about.jpg` (echtes Porträt)
-- Favicon/App-Icon auf die neue Wortmarke umstellen (`public/icon_transparent_bg.png` zeigt noch die alte Wolke)
 - Cal.com einrichten + Discovery-Call-Link in Website einbauen (aktuell zeigen alle CTAs auf das Formspree-Kontaktformular)
 - Affiliate-Programme beantragen: n8n, Zapier, IONOS, Netlify; Status prüfen: Hostinger, Miro
 - Digitales Produkt erstellen (KW18, Empfehlung: PDF-Guide)
