@@ -43,7 +43,7 @@ Strikt getaktet. Timer sichtbar mitlaufen lassen (z.B. zweiter Monitor mit Stopp
 | Zeit | Block | Inhalt |
 |---|---|---|
 | **0:00–0:15** | Kickoff & Kontext | Ziele des Kunden fürs Gespräch abgleichen. Intake-Antworten kurz gemeinsam durchgehen ("Ihr habt X, Y, Z genannt — passt das noch, oder hat sich was verschoben?"). Erwartungsmanagement: "Am Ende habt ihr keine fertige Lösung, sondern eine priorisierte Liste plus PDF." |
-| **0:15–1:10** | Prozess-Deep-Dive | 55 Minuten geteilt durch Anzahl besprochener Prozesse (3–5 Stück): bei 5 Prozessen ca. 11 Min je Prozess, bei 3 Prozessen ca. 18 Min. Ablauf Schritt für Schritt durchgehen. Leitfragen unten. Live in die Bewertungsmatrix eintragen (Bildschirm teilen, Kunde sieht mit — schafft Vertrauen und schon während des Calls Aha-Effekte). |
+| **0:15–1:10** | Prozess-Deep-Dive | 55 Minuten geteilt durch Anzahl besprochener Prozesse (3–5 Stück): bei 5 Prozessen ca. 11 Min je Prozess, bei 3 Prozessen ca. 18 Min. Ablauf Schritt für Schritt durchgehen. Leitfragen unten (jetzt 7 statt 6 — die Abhängigkeits-Frage ist meist kurz beantwortet, "keine" oder eine knappe Nennung, verlängert den Slot in der Praxis kaum). Live in die Bewertungsmatrix eintragen (Bildschirm teilen, Kunde sieht mit — schafft Vertrauen und schon während des Calls Aha-Effekte). |
 | **1:10–1:15** | Kurze Pause | 5 Minuten Verschnaufpause, kein fester Puffer. Reicht bei Bedarf auch als kurzer Themenwechsel. |
 | **1:15–1:45** | Priorisierung gemeinsam | Matrix (Abschnitt 3) gemeinsam durchgehen, laut denken: "Diese zwei sehen am stärksten aus, weil…". Kunde kann widersprechen oder ergänzen — er kennt interne Politik/Widerstände, die ich nicht sehe. |
 | **1:45–2:00** | Tool-Ausblick & nächste Schritte | Grobe Tool-Richtung nennen (nicht die volle Ausarbeitung — die kommt im PDF). Ablauf nach dem Call erklären: PDF in 3–5 Werktagen, Nachfass-Call nach 1 Woche. Fragen offen lassen für den Nachfass-Call statt hier alles klären zu wollen. |
@@ -57,9 +57,12 @@ Pro Prozess, in dieser Reihenfolge:
 1. "Beschreib mir den Ablauf, als würdest du es einem neuen Mitarbeiter erklären." (Ablauf verstehen, nicht bewerten)
 2. "Wo kommen die Informationen her, die du dafür brauchst?" (Systeme, E-Mails, Excel, Kopf des Kollegen)
 3. "Was genau macht daran am meisten Arbeit — das Sammeln der Infos, das Entscheiden, oder das Eintippen/Dokumentieren?" (unterscheidet Automatisierungs- von KI-Kandidat)
-4. "Wie oft geht dabei was schief oder muss korrigiert werden?" (Qualitätsproblem = zusätzlicher Hebel)
-5. "Wenn das komplett wegfallen würde — was würdet ihr mit der Zeit machen?" (Impact greifbar machen, auch für den späteren Report)
-6. "Gibt's das schon irgendwo als Vorlage, Regel oder Checkliste?" (Reifegrad — je strukturierter, desto leichter automatisierbar)
+4. "Hängt der Prozess an einer bestimmten Abteilung oder Person, ohne die es nicht weitergeht?" (Abhängigkeit — füttert direkt die Umsetzbarkeit-Achse: eine Automatisierung, die trotzdem auf externe Zuarbeit oder eine bestimmte Person wartet, bringt weniger, egal wie regelbasiert der Rest ist. Diese Frage stand bis 2026-09-20 nicht im Fragenkatalog — ein simulierter Testlauf zeigte, dass genau diese Information sonst nur zufällig beiläufig auftaucht, wenn der Kunde sie von sich aus erwähnt, statt verlässlich erfragt zu werden)
+5. "Wie oft geht dabei was schief oder muss korrigiert werden?" (Qualitätsproblem = zusätzlicher Hebel)
+6. "Wenn das komplett wegfallen würde — was würdet ihr mit der Zeit machen? Und: gibt es dadurch auch Fälle, die aktuell liegen bleiben oder abgelehnt werden?" (Impact greifbar machen — Zeitersparnis UND entgangenes Geschäft, siehe Hinweis unten)
+7. "Gibt's das schon irgendwo als Vorlage, Regel oder Checkliste?" (Reifegrad — je strukturierter, desto leichter automatisierbar)
+
+**Entgangenes Geschäft ist kein vierter Scoring-Faktor.** Der Score bleibt strikt Zeitaufwand × Automatisierbarkeit × Umsetzbarkeit (Abschnitt 3.2) — ein vierter Faktor würde den Wertebereich (1–125) und die Schwellen (60/20) sowie die Deckelungs-Begründung bei niedriger Umsetzbarkeit stillschweigend ungültig machen. Wenn ein Kunde von liegengebliebenen Anfragen oder abgelehntem Geschäft berichtet, ist das ein **Freitext-Fakt für die Executive Summary** (oft ein stärkeres Kundenargument als reine Zeitersparnis), nicht Teil der Punktevergabe.
 
 ---
 
@@ -77,7 +80,7 @@ Für jeden im Call besprochenen Prozess:
 | **Automatisierbarkeit** | Stark individuell, viele Ausnahmen, Bauchentscheidung nötig | Teilweise regelbasiert, einige Ausnahmen | Klar regelbasiert / strukturierte Eingabe-Ausgabe, wenig Ausnahmen |
 | **Umsetzbarkeit (Aufwand)** | Tiefe Systemintegration nötig, Change-Management, mehrere Abteilungen | Ein System, moderate Einrichtung, ein Verantwortlicher | Steht-Tool oder einfacher Workflow, in Tagen umsetzbar |
 
-**Zeitaufwand** = "Wie sehr tut's weh, dass das manuell läuft" (auf Wochenbasis hochrechnen, Anzahl beteiligter Personen × Zeit pro Durchlauf × Häufigkeit).
+**Zeitaufwand** = "Wie sehr tut's weh, dass das manuell läuft" — erfasst wird in **Std./Woche** (Anzahl beteiligter Personen × Zeit pro Durchlauf × Häufigkeit), für die Score-Schwellen unten auf Std./Monat hochgerechnet (× 4,33).
 
 **Automatisierbarkeit** = "Wie klar ist die Logik dahinter" — je mehr Wenn-Dann, desto höher.
 
@@ -121,7 +124,7 @@ Zielumfang: 6–8 Seiten. Kein Roman, kein PowerPoint-Bullet-Friedhof. Struktur 
 Drei Kernaussagen ganz oben, fett, für den Chef, der den Rest nicht liest: größter Zeitfresser, größtes Potenzial, empfohlener erster Schritt. Ein Satz Einordnung, wo das Unternehmen im Vergleich zu ähnlichen KMU steht (grob, ohne erfundene Statistik).
 
 **2. Ist-Zustand** (eine Seite, tabellarisch)
-Die im Call analysierten 3–5 Prozesse als Tabelle: Prozessname, wer ist beteiligt, wie oft, geschätzter Zeitaufwand pro Monat, kurze Beschreibung des aktuellen Ablaufs (2–3 Sätze). Reine Bestandsaufnahme, noch keine Bewertung.
+Die im Call analysierten 3–5 Prozesse als Tabelle: Prozessname, wer ist beteiligt, wie oft, geschätzter Zeitaufwand pro Woche, kurze Beschreibung des aktuellen Ablaufs (2–3 Sätze). Reine Bestandsaufnahme, noch keine Bewertung.
 
 **3. Potenzial-Matrix** (eine Seite, visualisiert)
 Die Bewertungsmatrix aus Abschnitt 3 als einfache Grafik (z.B. Balkendiagramm mit Score, oder 2×2-Matrix Impact/Umsetzbarkeit mit den Prozessen als Punkten). Kurzer Absatz, wie der Score zustande kommt (Transparenz schafft Glaubwürdigkeit).
