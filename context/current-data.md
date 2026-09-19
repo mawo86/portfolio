@@ -34,14 +34,13 @@ Komplette visuelle Neuausrichtung, um Marlon als KI-Experten zu positionieren st
 - So läuft ein Projekt (dunkle Band-Sektion, Link zu `/case-studies`)
 - **Newsletter** (Haupt-CTA, `NewsletterSignup`-Komponente, Split-Layout)
 - Werkzeuge (4 Spalten Klartext, Link zu `/tools`)
-- Eigene Produkte (Cookloop + DartsIQ — beide live, mit App-Link)
 - Blog (Listenansicht, 4 neueste Artikel)
 - Kontakt (Split: Text + Fakten links, Formular rechts, Bild-Slot `kontakt.jpg`; Formspree, Cal.com noch nicht eingerichtet)
 
 ## Eigene Unterseiten
 
 - **`/leistungen`** — Vier Pakete (KI-Readiness-Check €299, KI-Pilot-Projekt ab €2.500, Laufende KI-Begleitung ab €1.200/Monat, Tagessatz €1.200–1.800) alternierend mit Bild-Slots, Erstgespräch-Band oben, BAFA-Hinweis unten
-- **`/case-studies`** — zeigt jetzt das Beispielprojekt (`beispiel-ki-pilot.md`, `draft: false`, Titel-Präfix "Beispielprojekt:" zur Kennzeichnung)
+- **`/case-studies`** — zeigt das Beispielprojekt (`beispiel-ki-pilot.md`, Titel-Präfix "Beispielprojekt:") und seit 2026-09-19 das Showcase `rag-demo-quellenbelegter-chatbot.md` (Titel-Präfix "Showcase:", RAG-Pipeline-Demo aus `/Users/mabu/Documents/demo-rag`)
 - **`/tools`** — Tool-Empfehlungen mit Affiliate-Links
 - **`/blog`** — Artikel-Übersicht mit Kategorien
 
@@ -133,13 +132,6 @@ Komplette visuelle Neuausrichtung, um Marlon als KI-Experten zu positionieren st
 | Canva | Nein (Affiliate entfernt) | Regulärer Link |
 | Claude, ChatGPT, WhisperFlow, Obsidian, VS Code | Nein | Reguläre Links |
 
-## Eigene Produkte
-
-| Produkt | URL | Farbe | Status |
-|---------|-----|-------|--------|
-| Cookloop | cookloop.vercel.app | Grün/Emerald | Live |
-| DartsIQ | dartsiq.vercel.app | Rot | Live MVP |
-
 ## Content-Strategie
 
 - Veröffentlichungsrhythmus: 2 Artikel pro Woche (KW16–25), danach 2x/Monat
@@ -185,8 +177,12 @@ Digitale Produkte: `outputs/digitale-produkte.md`
 - [x] 133 YouTube-Transkripte gesammelt + zweifach analysiert (Consulting-Fokus + breite Themenanalyse) — 2026-09-14
 - [x] Preise angehoben, SAP-Prozess-Nische geschärft, Discovery-Call-Leitfaden + Testimonial-Vorlage erstellt, 2 neue Blog-Drafts — 2026-09-14
 - [x] Rebranding "Cinematic Dark": Palette, Font, Wortmarke, alle Texte, Higgsfield-Slots + Briefing — 2026-09-17
-- [ ] Higgsfield-Assets generieren (`reference/higgsfield-briefing.md`), zuerst Hero-Video + Porträt
+- [x] 4 von 8 Higgsfield-Assets generiert + live: about.jpg (Übergangslösung), paket-check.jpg, paket-pilot.jpg, paket-begleitung.jpg — 2026-09-19
+- [ ] paket-tagessatz.jpg + kontakt.jpg generieren, sobald Higgsfield-Credits wieder verfügbar sind
+- [ ] hero.mp4 + hero-poster.jpg: braucht Higgsfield-Plan-Upgrade oder Credit-Top-up (Video ≈ 56 Credits, Free-Plan hatte nur 10)
+- [ ] about.jpg durch echtes Porträt ersetzen (aktuell nur Umgebungsbild)
 - [x] Favicon + App-Icons auf neue Wortmarke umgestellt — 2026-09-17
+- [x] Eigene-Produkte-Sektion (Cookloop, DartsIQ) von Startseite + Footer entfernt, sollen nicht mehr präsentiert werden — 2026-09-19
 - [ ] Cal.com einrichten + Link in Website einbauen (alle CTAs zeigen aktuell auf Kontaktformular)
 - [ ] Affiliate-Programme beantragen: n8n, Zapier, IONOS, Netlify
 - [ ] Digitales Produkt erstellen + Gumroad-Seite (KW18)

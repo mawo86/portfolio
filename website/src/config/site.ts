@@ -19,8 +19,6 @@ export const links = {
   linkedin: 'https://linkedin.com/in/marlon-b-26203116a',
   formspree: 'https://formspree.io/f/xgopevdy',
   newsletter: 'https://buttondown.com/api/emails/embed-subscribe/buschecloud',
-  cookloop: 'https://cookloop.vercel.app',
-  dartsiq: 'https://dartsiq.vercel.app',
 };
 
 export const site = {

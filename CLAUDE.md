@@ -153,11 +153,9 @@ npm run build # Produktions-Build
 
 **Higgsfield-Visuals:** Die Seite sucht zur Build-Zeit nach Dateien in `website/public/media/` (`src/lib/media.ts` → `hasMedia()`). Fehlt eine Datei, rendert `MediaImage.astro` bzw. der Hero einen ruhigen Verlauf. Slots: `hero.mp4`/`hero.webm`/`hero-poster.jpg` (Startseite), `about.jpg` (Über mich, am besten echtes Porträt), `paket-check.jpg`/`paket-pilot.jpg`/`paket-begleitung.jpg`/`paket-tagessatz.jpg` (`/leistungen`), `kontakt.jpg` (Kontakt-Hintergrund). Alle Prompts, Formate und der Style-Block stehen in `reference/higgsfield-briefing.md`. Aktuell liegt noch kein Asset im Ordner.
 
-**Sektionen (Startseite):** Hero (Video-Slot, Proof-Leiste) · Über mich (Bild-Slot + Text) · Leistungen (nummerierte Stufen 01–03 + Tagessatz-Hinweis) · So läuft ein Projekt (Link zu `/case-studies`) · Newsletter · Werkzeuge · Eigene Produkte · Blog (Listenansicht, 4 Artikel) · Kontakt (Split: Text + Formular, Bild-Slot)
+**Sektionen (Startseite):** Hero (Video-Slot, Proof-Leiste) · Über mich (Bild-Slot + Text) · Leistungen (nummerierte Stufen 01–03 + Tagessatz-Hinweis) · So läuft ein Projekt (Link zu `/case-studies`) · Newsletter · Werkzeuge · Blog (Listenansicht, 4 Artikel) · Kontakt (Split: Text + Formular, Bild-Slot)
 
 **Eigene Unterseiten:** `/leistungen` (Pakete & Preise, alternierend Bild/Text) · `/case-studies` (im Menü "Projekte") · `/tools` · `/blog` · `/kontakt` (Redirect)
-
-**Eigene Produkte:** Cookloop (cookloop.vercel.app) und DartsIQ (dartsiq.vercel.app) — beide mit App-Link, Live-Status und Tech-Stack
 
 **Logo:** Neue Wortmarke in `src/components/Logo.astro` (Inline-SVG): geometrisches Monolinien-B auf Amber-Kachel + "Busche Cloud" in Bricolage Grotesque. Header und Footer nutzen die Komponente. Favicon und App-Icons sind aus derselben Marke gerastert: `public/favicon.svg` (Quelle), `favicon-32.png`, `apple-touch-icon.png`, `icon-192.png`, `icon-512.png`, `icon-maskable-512.png` (Marke auf Anthrazit mit Safe-Zone). Die alte Wolke liegt nur noch archiviert in `reference/`.
 
@@ -175,7 +173,7 @@ npm run build # Produktions-Build
 
 **Newsletter als Haupt-CTA:** Eigene Newsletter-Sektion auf der Startseite (nach dem Leistungs-Teaser), `NewsletterSignup`-Komponente (Buttondown). Discovery-Call/Kontaktformular bleibt sekundärer CTA — Cal.com ist noch nicht eingerichtet, alle "Erstgespräch"-Links zeigen weiterhin auf `/#kontakt`.
 
-**Case Studies:** `beispiel-ki-pilot.md` ist jetzt sichtbar (`draft: false`), Titel trägt Präfix "Beispielprojekt:" zur klaren Kennzeichnung, da es noch keine echte, freigegebene Case Study gibt.
+**Case Studies:** `beispiel-ki-pilot.md` ist sichtbar (`draft: false`), Titel trägt Präfix "Beispielprojekt:" zur klaren Kennzeichnung, da es noch keine echte, freigegebene Case Study gibt. Zweite Case Study `rag-demo-quellenbelegter-chatbot.md` (2026-09-19): eigenes technisches Showcase-Projekt (RAG-Pipeline aus `/Users/mabu/Documents/demo-rag`), Titel-Präfix "Showcase:", im Text als "Showcase, kein Kundenprojekt" gekennzeichnet.
 
 **Retention:** Neue Komponente `RelatedPosts.astro` zeigt am Ende jedes Blog-Artikels 2–3 thematisch verwandte Artikel (gleiche Kategorie, Fallback auf neueste). Eingebunden in `BlogLayout.astro` nach der Prev/Next-Navigation.
 
@@ -232,8 +230,14 @@ Neu 2026-09-14, abgeleitet aus Transkript-Analyse (`context/strategy.md`): `eu-a
 
 **Skript `scripts/youtube_transcripts.py`:** Lädt via yt-dlp Untertitel (letzte 6 Monate) für eine konfigurierte Kanalliste, wandelt sie in Klartext um und schreibt Ergebnisse nach `reference/youtube-transcripts/` (pro Kanal + `alle-transkripte.md` gesammelt; `_raw/` enthält Original-VTTs). Voraussetzung: `brew install yt-dlp`. Zuletzt gelaufen 2026-09-14 für Silicon Valley Girl, Alex Hormozi, Dan Martell, Chris Donnelly, Everlast AI (133 Transkripte, siehe `context/strategy.md`).
 
+**Higgsfield-Assets (2026-09-19):** 4 von 8 Slots erzeugt und live: `about.jpg` (Umgebungsbild, Übergangslösung bis echtes Porträt), `paket-check.jpg`, `paket-pilot.jpg`, `paket-begleitung.jpg`. Erzeugt via `image_auto`-Modell (Free-Plan-Account erlaubt kein `gpt_image_2_5`/`recraft_v4_1`), Format 3:4 statt Briefing-Ziel 4:5 (kein 4:5 im Free-Plan verfügbar), auf 1120×1500 skaliert, unter 400 KB. Account-Guthaben danach bei 0 Credits (Free-Plan: 10 Credits, 1 Bild ≈ 1–1,25 Credits, Video ≈ 56 Credits — Video mit Free-Plan nicht finanzierbar).
+
+**Eigene-Produkte-Sektion entfernt (2026-09-19):** Cookloop und DartsIQ werden auf der Website nicht mehr präsentiert. Entfernt: Startseiten-Sektion "Eigene Produkte" (`index.astro`), Footer-Spalte "Eigene Apps", `links.cookloop`/`links.dartsiq` in `src/config/site.ts`. Der Blog-Artikel `app-bauen-ohne-programmierer.md` erwähnt Cookloop weiterhin als Erfahrungsbericht-Content, unverändert.
+
 **Noch ausstehend:**
-- Higgsfield-Assets generieren und in `website/public/media/` ablegen (Briefing: `reference/higgsfield-briefing.md`). Wichtigste zuerst: `hero.mp4` + `hero-poster.jpg`, dann `about.jpg` (echtes Porträt)
+- `paket-tagessatz.jpg` und `kontakt.jpg` generieren, sobald wieder Credits verfügbar sind (Prompts bereits in `reference/higgsfield-briefing.md`)
+- `hero.mp4` + `hero-poster.jpg`: Video braucht Higgsfield-Plan-Upgrade (Free-Plan reicht nicht, ~56 Credits/Video) oder Credit-Top-up
+- `about.jpg` durch ein echtes Porträt ersetzen (aktuell nur Umgebungsbild als Übergangslösung)
 - Cal.com einrichten + Discovery-Call-Link in Website einbauen (aktuell zeigen alle CTAs auf das Formspree-Kontaktformular)
 - Affiliate-Programme beantragen: n8n, Zapier, IONOS, Netlify; Status prüfen: Hostinger, Miro
 - Digitales Produkt erstellen (KW18, Empfehlung: PDF-Guide)
