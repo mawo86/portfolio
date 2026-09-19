@@ -12,7 +12,7 @@ nur in eine auswendig lernbare und eine ausfüllbare Form gebracht. Wenn sich
 die Fragen oder Kriterien mal ändern, zuerst in der Methodik ändern, dann
 hier nachziehen.
 
-**Stand 2026-09-20, zwei Testläufe:**
+**Stand 2026-09-20, fünf Testläufe (davon einer bis zum PDF-Entwurf durchgezogen):**
 
 *Testlauf 1* (politisch schwieriger Kunde) deckte auf: eine fehlende
 Leitfrage zu Abteilungs-/Personen-Abhängigkeiten, ein fehlender
@@ -33,6 +33,27 @@ Priorisierung beliebig macht; die Abhängigkeits-Frage behandelte
 fälschlich gleich, obwohl beide entgegengesetzt wirken; und der
 Preis-Einwand-Block deckte einen strukturell anderen Einwand nicht ab —
 eine Forderung nach technischer Garantie statt einer Preisfrage.
+
+*Testläufe 3–5* (durchweg niedrig scorender Kunde, Kleinstunternehmen mit
+falscher Person am Call, und ein PDF-Entwurf aus den Testlauf-3-Daten)
+deckten strukturelle Lücken auf, die keine der beiden bisherigen
+Rollenspiel-Runden berühren konnte, weil beide Male ein Prozess am Ende
+über der Sofort-Schwelle lag: **Erstens**, wenn **kein** Prozess die
+Sofort-Schwelle erreicht, laufen drei Anschlussstellen (Prioritäts-Bogen
+Phase 1, Abschluss-Bogen "Empfohlener Pilot-Prozess", PDF S.7) ins Leere —
+das ist jetzt ein eigener, benannter Ablauf mit vorbereiteter Antwort auf
+die "was bekomme ich für mein Geld"-Frage, keine Ausnahme mehr, die
+improvisiert werden muss. **Zweitens**, die Schwankungsregel aus Testlauf 2
+wurde am falschen Fall geprüft: Bei echter **Konzentration** eines
+Prozesses auf ein Zeitfenster (statt bloßer Schwankung) ließ die alte
+Regel den größten Zeitblock der Firma auf einen Rundungsfehler
+schrumpfen — durchgerechnet in der Methodik, Fix: Jahresschnitt statt
+Wert-außerhalb-der-Spitze bei Konzentration. **Drittens**, die
+Bereichs-Kategorien (Vertrieb/Kundenservice/Backoffice) haben keinen
+Auffangmechanismus für Kleinstunternehmen ohne Abteilungsstruktur.
+**Viertens**, das Framework geht implizit von 3–5 Prozessen aus (5 Zeilen
+im Prioritäts-Bogen, 6 Maßnahmen in der Roadmap) — bei nur 1–2 genannten
+Prozessen skaliert das nicht automatisch mit.
 
 Details und Begründungen jeweils an der betroffenen Stelle.
 
@@ -219,6 +240,15 @@ einem Oberbegriff zusammen, damit es übersichtlich bleibt") — nicht die
 PDF-Vorlage stillschweigend mit einem vierten Bereich überladen, den sie
 strukturell nicht vorsieht.
 
+**Falls die Kategorien selbst nicht passen (Kleinstunternehmen ohne
+Abteilungen):** Ein Testlauf mit einem 6-Personen-Handwerksbetrieb zeigte,
+dass Vertrieb/Kundenservice/Backoffice bei so kleinen Teams schlicht nicht
+greifen — es gibt "den Chef", "die Monteure", "die Bürokraft", keine
+Abteilungen. Dann keine der drei Kategorien erzwingen, sondern selbst einen
+passenden Sammelbegriff bilden (z. B. "Büro/Organisation") und dem Kunden
+kurz sagen, dass das intern für die Auswertung so zusammengefasst wird —
+genau wie beim Zusammenfassen bei einem vierten Bereich oben.
+
 **Warum die Systemintegration jetzt im Kickoff steht, nicht als
 Leitfrage pro Prozess:** Ein zweiter Testlauf zeigte, dass ein
 Automatisierungsvorschlag technisch ins Leere laufen kann, wenn das im
@@ -295,8 +325,15 @@ Bereich:            _______________________________  ↳ PDF S.3
   → Std./Woche gesamt (Personen × Zeit × Häufigkeit
     umgerechnet):                    _____ Std./Woche   ↳ PDF S.2, S.3
   Schwankt saisonal/je nach Auslastung? □ nein
-    □ ja, Spitzenwert: _____ Std./Woche (nur für Report-Text,
-      NICHT für die Punktevergabe — siehe Bewertungsregel unten)
+    □ ja, SCHWANKUNG (läuft ganzjährig, mal mehr/mal weniger):
+      Spitzenwert: _____ Std./Woche (nur für Report-Text, NICHT
+      für die Punktevergabe — außerhalb-der-Spitze-Wert oben scoren)
+    □ ja, KONZENTRATION (läuft nur in einem Zeitfenster, sonst
+      nahe null): Zeitfenster ______ Wochen, Wert im Fenster
+      _____ Std./Woche → Jahresschnitt (× Wochen ÷ 52):
+      _____ Std./Woche — DIESER Wert wird oben gescort UND in
+      S.3 gedruckt (siehe Bewertungsregel unten, Unterscheidung
+      Schwankung/Konzentration)
   Schätzung: □ belastbar (konkrete Zahlen genannt)
              □ grob (Kunde hat selbst Unsicherheit
                benannt, z. B. "könnte auch X sein")
@@ -403,6 +440,23 @@ immer der **typische Wert außerhalb der Spitzenzeit**, der Spitzenwert
 wandert nur als Erwähnung in den Report-Text ("in Spitzenzeiten auch mehr"),
 nie in die Punktevergabe.
 
+**Warum Konzentration eine andere Regel braucht als Schwankung:** Ein
+dritter Testlauf (Jahresabschluss-Vorbereitung einer Steuerkanzlei,
+konzentriert auf ~5 Monate mit 15–20 Std./Woche, den Rest des Jahres kaum
+etwas) zeigte, dass die Schwankungsregel hier zum falschen Ergebnis führt.
+Wendet man "Wert außerhalb der Spitze nehmen" unverändert an, landet der
+Prozess bei ~0,5 Std./Woche — der mit Abstand größte Zeitblock der Firma
+verschwindet als Rundungsfehler aus PDF S.3 und aus der Summenzeile in
+S.2. Der Jahresschnitt (350 Std. im Zeitfenster ÷ 52 Wochen ≈ 6,7
+Std./Woche) bildet die tatsächliche Belastung ab, ohne den Ausreißer der
+Spitzenzeit zu übernehmen. Der Unterschied zur Schwankung: bei
+Schwankung ist der Prozess das ganze Jahr über aktiv, nur mit
+unterschiedlicher Intensität — der Wert außerhalb der Spitze ist real und
+reicht als konservative Schätzung. Bei Konzentration ist der Prozess
+außerhalb des Zeitfensters faktisch nicht vorhanden — "der Wert außerhalb
+der Spitze" wäre hier keine konservative Schätzung, sondern eine falsche
+Aussage über die Firma.
+
 **Warum Abhängigkeit zwei verschiedene Wirkungen haben kann:** Ein
 Testlauf zeigte zwei Fälle, die beide "Abhängigkeit von einer Person"
 sind, aber entgegengesetzt wirken. Fall 1 (blockierend): eine andere
@@ -462,11 +516,19 @@ Drei Kernaussagen für Executive Summary (PDF S.2):
      passieren"-Antworten oder Reifegrad-Mustern):
      _______________________________________
 
-Roadmap-Maßnahmen (PDF S.5 — 6 Stück, je Titel + 1 Satz; Phase 3 ist laut
-Methodik meist eine strukturelle Empfehlung, nicht direkt aus einem
-einzelnen Prozess abgeleitet):
+Roadmap-Maßnahmen (PDF S.5 — normal 6 Stück in 3 Phasen, je Titel + 1 Satz;
+Phase 3 ist laut Methodik meist eine strukturelle Empfehlung, nicht direkt
+aus einem einzelnen Prozess abgeleitet. Bei nur 1–2 besprochenen Prozessen
+oder ohne Sofort-Kandidat: Anzahl skaliert mit dem, was tatsächlich da ist
+— lieber 3 begründete Maßnahmen als 6 aufgeblähte):
 
   PHASE 1 · SOFORT (0–4 Wochen) — aus Sofort-Prozessen ableiten
+    □ Kein Prozess erreicht die Sofort-Schwelle (Score ≥60) — siehe
+      Methodik Abschnitt 3.2 "Sonderfall: kein Prozess erreicht die
+      Sofort-Schwelle". Phase 1 entfällt im Report EXPLIZIT
+      ("Aktuell kein Prozess mit akutem Sofort-Potenzial"), wird
+      nicht kommentarlos leer gelassen. Weiter unten: stärkster
+      Phase-2-Kandidat + Bedingung, die ihn nach oben schieben würde.
     Maßnahme 1: _______________________________
       Kurzbeschreibung: ________________________
     Maßnahme 2: _______________________________
@@ -525,6 +587,10 @@ _______________________________________________
 
 Empfohlener Pilot-Prozess (für PDF S.7 "[Prozess aus Phase 1]"):
 _______________________________________________
+  □ Kein Phase-1-Prozess vorhanden (siehe Prioritäts-Bogen). PDF S.7
+    nennt stattdessen den stärksten Phase-2-Kandidaten + die konkrete
+    Bedingung, die ihn nach oben schieben würde:
+    Prozess: ___________________  Bedingung: ___________________
 
 Termin Nachfass-Call vereinbart:  ______________
 
@@ -535,6 +601,18 @@ ein Sales-Call?") — Kernaussagen, nicht ablesen, aber parat haben:
     + erste Tool-Richtung — auch ohne Folgeauftrag nutzbar
   □ Ehrlich zugeben: ja, es ist auch ein Einstieg fürs Pilotprojekt —
     aber ohne Verpflichtung dazu
+
+Falls kein Prozess die Sofort-Schwelle erreicht und der Kunde fragt
+"was bekomme ich dann für meine 299 €?" (dritter Testlauf, kam
+zugespitzt und wiederholt — mit die kritischste Frage im ganzen
+Gespräch) — dreiteilige Antwort, im Testlauf überzeugend bestätigt:
+  □ Bestätigung ist ein Ergebnis: der Kunde weiß jetzt konkret, wo er
+    NICHT investieren sollte — oft mit Bezug auf einen früheren
+    gescheiterten Anlauf, den der Kunde selbst erwähnt hat
+  □ Das PDF bleibt als Referenz gültig, auch in einem Jahr noch
+    nutzbar (neue Tools, geänderte Situation)
+  □ Ehrlichkeit statt künstlichem Sofort-Kandidaten ist selbst das
+    Argument: ein erfundener "Quick Win" wäre kein Gefallen
 
 Falls Garantie-Einwand kam ("garantierst du, dass Tool X wirklich mit
 unserem System funktioniert, bevor ich fürs Pilotprojekt zahle?"):
@@ -581,9 +659,9 @@ noch übertragen wird:
 | S.3 Tabelle (Name, Bereich, Beschreibung, Std./Woche, Werkzeug) | Prozessblatt, Abschnitt 1+2+3 |
 | S.4 Matrix (x/y/Punktgröße pro Prozess) | Prozessblatt, "Matrix-Position" |
 | S.4 Kommentare je Cluster | Prioritäts-Bogen + Prozessblatt-Bewertung |
-| S.5 Roadmap, 6 Maßnahmen in 3 Phasen (Platzierung ggf. abweichend vom Score) | Prioritäts-Bogen, Block "Roadmap-Maßnahmen" + Prozessblatt "Phase abweichend vom Score" |
+| S.5 Roadmap, normal 6 Maßnahmen in 3 Phasen, skaliert bei wenigen Prozessen (Platzierung ggf. abweichend vom Score) | Prioritäts-Bogen, Block "Roadmap-Maßnahmen" + Prozessblatt "Phase abweichend vom Score" |
 | S.6 Tool-Tabelle | Abschluss-Bogen, "Tool-Richtung" + Tool-Empfehlungs-Logik (Methodik 4) |
-| S.7 "[Prozess aus Phase 1]" | Abschluss-Bogen, "Empfohlener Pilot-Prozess" |
+| S.7 "[Prozess aus Phase 1]" ODER, falls kein Sofort-Kandidat, stärkster Phase-2-Kandidat + Bedingung | Abschluss-Bogen, "Empfohlener Pilot-Prozess" (inkl. Fallback-Feld) |
 
 Wenn eine Zeile im PDF beim Ausfüllen leer bleibt, obwohl alle Bögen
 vollständig sind, fehlt ein Feld auf einem Bogen — dann wird dieses
@@ -604,3 +682,36 @@ Dokument nachgezogen, nicht das PDF mit einer Ad-hoc-Schätzung gefüllt.
    und prüfen, ob sich die eigene Praxis noch mit "Erzählen, Zerlegen,
    Werten, Ordnen" deckt. Wenn nicht — Methodik überarbeiten, nicht nur
    den eigenen Ablauf stillschweigend driften lassen.
+
+---
+
+## 8. Fallbeispiel: kein Sofort-Kandidat (aus Testlauf 3, 2026-09-20)
+
+Ein durchgerechnetes Beispiel, weil ein ausgefülltes Blatt schneller
+verstehen lässt als ein weiterer Absatz Begründung. Kundin: kleine
+Steuerberatungskanzlei, 9 Mitarbeiter, DATEV, bereits gut organisiert.
+
+| Prozess | Std./Woche | Zeitaufwand | Autom. | Umsetz. | Score | Phase |
+|---|---|---|---|---|---|---|
+| Mandanten-Rückfragen (Telefon) | ~13 (grob) | 5 | 1 | 2 | 10 | Beobachten |
+| Jahresabschluss-Vorbereitung | ~7 im Jahresschnitt (konzentriert Jan–Mai auf 15–20) | 5 | 1 | 1 | 5 | Beobachten |
+| Papierbeleg-Digitalisierung | 4–5 | 5 | 3 | 2 | 30 | 3 Monate |
+
+**Kein Prozess erreicht die Sofort-Schwelle.** Papierbeleg-Digitalisierung
+ist der stärkste Kandidat (Score 30), aber die Umsetzbarkeit bleibt
+niedrig, weil ein früherer Automatisierungsversuch an der
+DATEV-Buchungslogik scheiterte — genau der Fall, für den PDF S.7 jetzt
+einen Fallback-Satz vorsieht: *"Stärkster Kandidat für einen zweiten
+Anlauf: Papierbeleg-Digitalisierung — vorausgesetzt, ein neuer Ansatz
+adressiert gezielt die DATEV-Buchungslogik, an der der letzte Versuch
+scheiterte."*
+
+Zwei Dinge an diesem Beispiel, die sich nicht aus der Tabelle allein
+ergeben: Erstens, die Jahresabschluss-Zeile zeigt genau den
+Konzentrations-Fall — der Jahresschnitt (~7 Std./Woche) steht in S.3,
+nicht der Wert außerhalb der Saison (~0,5), der den Prozess unsichtbar
+gemacht hätte. Zweitens, "kein Sofort-Kandidat" hat den Score-Bereich
+selbst nicht verändert (1–125, Schwellen 60/20 unangetastet) — es hat nur
+sichtbar gemacht, dass die Anschlussstellen im Report (S.5, S.7,
+Abschluss-Bogen) einen expliziten Pfad für dieses Ergebnis brauchen,
+keinen impliziten.
