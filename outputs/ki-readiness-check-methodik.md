@@ -15,7 +15,7 @@ Der Kunde füllt das aus, bevor der Termin überhaupt bestätigt wird. Ohne ausg
 **Fragen:**
 
 1. Firma, Branche, Anzahl Mitarbeiter
-2. Welches ERP-/Kernsystem nutzt ihr? (SAP-Version falls SAP, sonst welches System)
+2. Welches ERP-/Kernsystem nutzt ihr? Und hat das eine offene Schnittstelle/API, einen Datenexport (z. B. CSV, ggf. mit Zeitversatz), oder läuft der Datenaustausch komplett manuell? (SAP-Version falls SAP, sonst welches System — die Integrationsfähigkeit ist ab 2026-09-20 Teil der Frage, nicht mehr nur Vorab-Recherche des Beraters, siehe Hinweis unten)
 3. Wer nimmt am Call teil? (Name, Rolle — wichtig: Person muss die operativen Prozesse selbst kennen, nicht nur der Chef)
 4. Nennt 3–5 Aufgaben/Prozesse, die im Team als "nervig", "zeitaufwändig" oder "macht keiner gerne" gelten
 5. Für jeden genannten Prozess: Wie oft passiert das? (täglich/wöchentlich/monatlich) Wie viele Personen sind beteiligt? Grobe Schätzung Zeitaufwand pro Durchlauf
@@ -25,6 +25,10 @@ Der Kunde füllt das aus, bevor der Termin überhaupt bestätigt wird. Ohne ausg
 9. Budget-Hausnummer für ein mögliches Folgeprojekt vorhanden? (nicht verpflichtend, aber hilft bei der Roadmap-Kalibrierung)
 
 Das Formular ist absichtlich kurz (9 Fragen, 10 Minuten Ausfüllzeit). Ziel ist Rohmaterial, keine fertige Analyse.
+
+**Warum Frage 2 die Integrationsfähigkeit jetzt mit abfragt:** Ein Testlauf zeigte, dass ein Automatisierungsvorschlag technisch scheitern kann, wenn das genannte System keine offene Schnittstelle hat, sondern nur einen zeitversetzten Export (z. B. nächtlicher CSV-Export statt Live-API). Bei bekannten Systemen (SAP, gängige CRMs) lässt sich das vorab recherchieren (Abschnitt 1.2) — bei einer Branchensoftware, die der Kunde nutzt und der Berater nicht kennt, geht das nicht zuverlässig vorab. Die Frage steht deshalb im Intake, nicht als zusätzliche Leitfrage im Call (das würde den Deep-Dive-Slot pro Prozess unnötig verlängern, obwohl die Antwort für den ganzen Call gilt, nicht pro Prozess).
+
+**Wichtig: Systemintegration ist Kontext, kein globaler Abzug.** Dass ein System nur Batch-Export statt Live-API hat, begrenzt nur die Prozesse, die tatsächlich Live-Daten bräuchten (z. B. Lagerbestands-Überwachung). Ein Prozess ohne Systemanbindung (z. B. reine Dokumentation vor Ort) ist davon unberührt. Keine pauschale Regel wie "Batch-only senkt Umsetzbarkeit bei allen Prozessen" — die Einschränkung wird pro Prozess im Deep-Dive geprüft, wenn eine Automatisierungsidee tatsächlich eine Systemanbindung braucht.
 
 ### 1.2 Vorbereitung durch Marlon (15–20 Minuten, am Tag vor dem Call)
 
@@ -97,6 +101,8 @@ Score-Bereich: 1–125.
 - **< 20:** Beobachten oder verwerfen — im Report kurz erwähnen, aber nicht empfehlen
 
 Das Produkt erledigt das automatisch: Mit Umsetzbarkeit 1 oder 2 ist der Score rechnerisch auf maximal 5 × 5 × 2 = 50 gedeckelt — unter der Sofort-Schwelle von 60. Ein Prozess, der nicht kurzfristig umsetzbar ist, kann also nie in Phase 1 landen, egal wie hoch Impact und Automatisierbarkeit sind. Das ist kein Zufall, sondern der Grund, warum hier ein Produkt und keine Summe verwendet wird — eine zusätzliche Sonderregel braucht es dafür nicht.
+
+**Regel bei schwankenden Zeitangaben (z. B. saisonal):** Wenn ein Kunde selbst eine Spanne nennt (z. B. "15–20 pro Woche, im Winter eher 20–25"), wird für den Score der **typische Wert** verwendet (im Beispiel: der Wert außerhalb der Spitzenzeit), nicht der Extremwert. Die Spanne selbst wird trotzdem in den Report übernommen ("in Spitzenzeiten auch mehr"), damit die Information nicht verloren geht — nur die Punktevergabe bleibt auf einem Wert, sonst kann derselbe Prozess je nach gewähltem Wert die Sofort-Schwelle über- oder unterschreiten und die Priorisierung wird beliebig. Diese Regel gehört zusammen mit dem Konfidenz-Marker (belastbar/grob) auf das Prozessblatt.
 
 ### 3.3 Praxis-Hinweis
 

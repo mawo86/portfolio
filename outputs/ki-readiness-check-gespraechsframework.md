@@ -12,15 +12,29 @@ nur in eine auswendig lernbare und eine ausfüllbare Form gebracht. Wenn sich
 die Fragen oder Kriterien mal ändern, zuerst in der Methodik ändern, dann
 hier nachziehen.
 
-**Stand 2026-09-20:** Ein simulierter Testlauf (Rollenspiel mit einem
-KMU-Kunden-Avatar) hat mehrere Lücken aufgedeckt, die in diesem Dokument
-eingearbeitet sind: eine fehlende Leitfrage zu Abteilungs-/Personen-
-Abhängigkeiten, ein fehlender Konfidenz-Marker für Zeitschätzungen, ein
-fehlendes Feld für den Fall, dass Score und politische Realität
-auseinanderfallen, eine unklare Regel für mehr als drei Bereiche, ein
-fehlendes Feld für entgangenes Geschäft (als Freitext, nicht als Score!)
-und eine unvorbereitete Antwort auf den wahrscheinlichen Preis-Einwand am
-Ende. Details und Begründungen jeweils an der betroffenen Stelle.
+**Stand 2026-09-20, zwei Testläufe:**
+
+*Testlauf 1* (politisch schwieriger Kunde) deckte auf: eine fehlende
+Leitfrage zu Abteilungs-/Personen-Abhängigkeiten, ein fehlender
+Konfidenz-Marker für Zeitschätzungen, ein fehlendes Feld für den Fall,
+dass Score und politische Realität auseinanderfallen, eine unklare Regel
+für mehr als drei Bereiche, ein fehlendes Feld für entgangenes Geschäft
+(als Freitext, nicht als Score!) und eine unvorbereitete Antwort auf den
+Preis-Einwand am Ende.
+
+*Testlauf 2* (fachlich präziser, technisch versierter Kunde) deckte
+zusätzlich auf: die Systemintegrationsfähigkeit (API vs. Export vs.
+manuell) fehlte als abgefragte Information und hing vom Zufall ab, ob der
+Kunde selbst technisch versiert genug war, eine unpassende
+Automatisierungsidee zu korrigieren; die Zeitschätzung hatte kein Feld für
+saisonale Schwankung, was bei knapper Nähe zu einer Score-Schwelle die
+Priorisierung beliebig macht; die Abhängigkeits-Frage behandelte
+"blockierende Abhängigkeit" und "Wissenskonzentration auf eine Person"
+fälschlich gleich, obwohl beide entgegengesetzt wirken; und der
+Preis-Einwand-Block deckte einen strukturell anderen Einwand nicht ab —
+eine Forderung nach technischer Garantie statt einer Preisfrage.
+
+Details und Begründungen jeweils an der betroffenen Stelle.
 
 ---
 
@@ -169,6 +183,12 @@ Erwartungsmanagement gegeben:
 Teilnehmer im Call (Name, Rolle):
 _______________________________________________
 
+Systemintegration (aus Intake-Frage 2, hier nur bestätigen/präzisieren):
+□ Offene Schnittstelle/API   □ Export mit Zeitversatz (z.B. CSV): ______
+□ Komplett manuell           □ Unklar, im Call klären
+  → Gilt nur für Prozesse, die tatsächlich eine Systemanbindung
+    brauchen — kein pauschaler Abzug für alle Prozesse.
+
 Bereits genannte Prozesse (aus Intake übernommen, hier nur bestätigen):
 1. _____________________  Bereich: __________
 2. _____________________  Bereich: __________
@@ -198,6 +218,21 @@ ein Slot) und das dem Kunden kurz erklären ("Ich fasse das im Report unter
 einem Oberbegriff zusammen, damit es übersichtlich bleibt") — nicht die
 PDF-Vorlage stillschweigend mit einem vierten Bereich überladen, den sie
 strukturell nicht vorsieht.
+
+**Warum die Systemintegration jetzt im Kickoff steht, nicht als
+Leitfrage pro Prozess:** Ein zweiter Testlauf zeigte, dass ein
+Automatisierungsvorschlag technisch ins Leere laufen kann, wenn das im
+Intake genannte System keine offene Schnittstelle hat, sondern nur einen
+zeitversetzten Export — und dass ein Berater das bei einer unbekannten
+Branchensoftware nicht zuverlässig vorab recherchieren kann (anders als
+bei SAP oder gängigen CRMs). Die Frage gilt für den ganzen Call einmalig,
+nicht pro Prozess — sie würde sonst 3–5 mal denselben Fakt abfragen und
+den knappen Deep-Dive-Slot unnötig verlängern. **Wichtig beim Anwenden:**
+Das ist Kontext für einzelne Prozesse, kein globaler Abzug. Ein Prozess
+ohne Systemanbindung (z. B. eine Dokumentation auf Papier oder in einem
+eigenständigen Tool) ist von der Systemintegration-Einschränkung völlig
+unberührt — die Einschränkung wird erst relevant, wenn im Deep-Dive
+tatsächlich eine Automatisierungsidee mit Systemanbindung entsteht.
 
 ---
 
@@ -236,8 +271,17 @@ Bereich:            _______________________________  ↳ PDF S.3
   Werkzeug/System heute: ____________________         ↳ PDF S.3
   Größte Reibung:  □ Sammeln  □ Entscheiden  □ Eintippen
   Ausnahmen/Sonderfälle: viele □  einige □  wenige □   ↳ Automatisierbarkeit
-  Abhängigkeit von Abteilung/Person: □ keine  □ ja: ___________
+  Braucht dieser Prozess eine Systemanbindung? □ nein  □ ja
+    Falls ja: passt zur Kickoff-Systemintegration? □ ja □ nein, Grund: ___
                                                         ↳ Umsetzbarkeit
+  Abhängigkeit von Abteilung/Person: □ keine
+    □ blockierend (andere Abteilung/Person muss zuarbeiten,
+      ohne die es nicht weitergeht — drückt Umsetzbarkeit)
+    □ Wissenskonzentration (eine Person kann/macht es allein,
+      z. B. "läuft nur über mich" — drückt Umsetzbarkeit NICHT
+      zwangsläufig, kann sogar FÜR das Projekt sprechen als
+      Risikoreduktion/Wissensdokumentation, siehe Hinweis unten)
+    Wer/welche Abteilung: ___________
 
 ── 3. WERTEN (Schmerz beziffern) ───────────────────
   ("Wie oft geht was schief oder muss korrigiert
@@ -250,6 +294,9 @@ Bereich:            _______________________________  ↳ PDF S.3
   Zeit pro Durchlauf: _____ Min
   → Std./Woche gesamt (Personen × Zeit × Häufigkeit
     umgerechnet):                    _____ Std./Woche   ↳ PDF S.2, S.3
+  Schwankt saisonal/je nach Auslastung? □ nein
+    □ ja, Spitzenwert: _____ Std./Woche (nur für Report-Text,
+      NICHT für die Punktevergabe — siehe Bewertungsregel unten)
   Schätzung: □ belastbar (konkrete Zahlen genannt)
              □ grob (Kunde hat selbst Unsicherheit
                benannt, z. B. "könnte auch X sein")
@@ -274,13 +321,18 @@ Bereich:            _______________________________  ↳ PDF S.3
    Bewertungskarte gibt die Wochen-Äquivalente vor, keine Kopfrechnung
    nötig: <0,5 → 1 Punkt, 0,5–3,5 → 3 Punkte, >3,5 → 5 Punkte)
 
-  Zeitaufwand-Punkte      (1 / 3 / 5): _____
+  Zeitaufwand-Punkte      (1 / 3 / 5): _____ (bei Schwankung: den
+                                                Wert AUSSERHALB der
+                                                Spitzenzeit nehmen,
+                                                nicht den Spitzenwert)
   Automatisierbarkeit     (1 / 3 / 5): _____
-  Umsetzbarkeit           (1 / 3 / 5): _____ (Abhängigkeit oben mit
-                                                einbeziehen: eine
-                                                Abhängigkeit drückt den
-                                                Punktwert, auch wenn der
-                                                Rest regelbasiert ist)
+  Umsetzbarkeit           (1 / 3 / 5): _____ (blockierende Abhängigkeit
+                                                drückt den Punktwert;
+                                                Wissenskonzentration
+                                                allein NICHT automatisch —
+                                                erst wenn zusätzlich eine
+                                                Systemanbindung fehlt
+                                                oder nicht passt)
 
 ═══ SCORE & PHASE (Pause oder direkt vor Block 3, NICHT während man
     gleichzeitig zuhört) ═══
@@ -338,6 +390,34 @@ seine eigene Unsicherheit als angebliche Analyse-Erkenntnis zurück, was
 Vertrauen kostet statt aufzubauen. Bei "grob" geschätzten Werten wird die
 S.2-Formulierung entsprechend gehedgt ("grob geschätzt rund [X] Stunden pro
 Woche" statt "identifiziert").
+
+**Warum bei Schwankungen der niedrigere Wert gescort wird, nicht der
+Spitzenwert:** Ein zweiter Testlauf rechnete konkret durch, was passiert,
+wenn man stattdessen den Spitzenwert nimmt: 3,4 Std./Woche ergeben 3
+Punkte (0,5–3,5-Band), ein saisonaler Spitzenwert von 4–5 Std./Woche
+ergibt 5 Punkte (>3,5). Bei gleicher Automatisierbarkeit und Umsetzbarkeit
+kann das denselben Prozess von "3 Monate" (Score 45) zu "Sofort" (Score
+75) verschieben — je nachdem, welcher der beiden korrekten Werte gewählt
+wird. Ohne eine feste Regel ist die Priorisierung damit beliebig. Deshalb:
+immer der **typische Wert außerhalb der Spitzenzeit**, der Spitzenwert
+wandert nur als Erwähnung in den Report-Text ("in Spitzenzeiten auch mehr"),
+nie in die Punktevergabe.
+
+**Warum Abhängigkeit zwei verschiedene Wirkungen haben kann:** Ein
+Testlauf zeigte zwei Fälle, die beide "Abhängigkeit von einer Person"
+sind, aber entgegengesetzt wirken. Fall 1 (blockierend): eine andere
+Abteilung muss zuarbeiten, bevor der Prozess weitergehen kann (z. B.
+"die Fertigung wird zum Flaschenhals") — das ist ein echtes
+Umsetzbarkeits-Hindernis, weil eine Automatisierung trotzdem auf externe
+Zuarbeit wartet. Fall 2 (Wissenskonzentration): eine einzelne Person kann
+und macht den kompletten Prozess allein (z. B. "das läuft komplett über
+mich, ich bin der Einzige, der das durchblickt") — das blockiert nichts,
+im Gegenteil: es ist oft ein zusätzliches Argument FÜR das Projekt, weil
+Automatisierung hier auch Risikoreduktion und Wissensdokumentation bedeutet
+(was passiert, wenn diese eine Person ausfällt). Beide Fälle drücken die
+Umsetzbarkeit deshalb **nicht automatisch gleich** — nur Fall 1 tut es
+direkt; Fall 2 wird erst relevant, wenn zusätzlich die Systemintegration
+fehlt oder nicht zur Idee passt (siehe Kickoff-Bogen).
 
 **Separate private Notizen:** Budget-Hausnummer aus dem Intake,
 Bauchgefühl zur Pilot-Konversion oder Red Flags (z. B. erkennbarer
@@ -455,6 +535,13 @@ ein Sales-Call?") — Kernaussagen, nicht ablesen, aber parat haben:
     + erste Tool-Richtung — auch ohne Folgeauftrag nutzbar
   □ Ehrlich zugeben: ja, es ist auch ein Einstieg fürs Pilotprojekt —
     aber ohne Verpflichtung dazu
+
+Falls Garantie-Einwand kam ("garantierst du, dass Tool X wirklich mit
+unserem System funktioniert, bevor ich fürs Pilotprojekt zahle?"):
+  □ Keine ungeprüfte Zusage geben — unseriös und nicht haltbar
+  □ Stattdessen anbieten: die ersten 1–2 Tage des Pilotprojekts sind
+    Verifikation an echten Daten/echtem Export, mit Ausstiegsoption,
+    falls sich der Ansatz dabei als nicht tragfähig erweist
 ```
 
 **Warum der Preis-Einwand-Block hier steht, nicht in der Methodik:** Die
@@ -466,6 +553,18 @@ des Calls plausibel und sollte nicht zum ersten Mal in dem Moment
 beantwortet werden. Die drei Punkte oben sind keine Skript-Vorlage zum
 Vorlesen, sondern Anker, damit die Antwort im Call nicht improvisiert
 werden muss.
+
+**Warum der Garantie-Einwand ein eigener Block ist, kein Duplikat des
+Preis-Einwands:** Ein zweiter Testlauf zeigte einen strukturell anderen
+Einwand — nicht "was bekomme ich für mein Geld", sondern "garantierst du
+technische Machbarkeit, bevor ich fürs Pilotprojekt zahle". Eine unseriöse
+Zusage ("ja, das passt sicher") wäre der einfachste Weg, den Call positiv
+zu beenden, aber falsch, wenn die Kompatibilität tatsächlich unklar ist
+(z. B. bei einer unbekannten Branchensoftware ohne dokumentierte API). Die
+ehrliche Antwort — keine Garantie, aber eine kurze, risikoarme
+Verifikationsphase am Anfang des Pilotprojekts — hat sich im Testlauf als
+überzeugender erwiesen als eine leere Zusage, gerade bei technisch
+versierten Kunden, die eine Garantie ohnehin kritisch hinterfragen würden.
 
 ---
 
