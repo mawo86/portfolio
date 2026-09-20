@@ -40,6 +40,8 @@ Aus der Transkript-Analyse: Generalisten-Positionierung ("KI-Beratung für alle 
 - Priorisierte Roadmap: Was zuerst angehen, warum
 - PDF-Zusammenfassung zum Weiterleiten
 
+**Was der Check NICHT ist:** kein allgemeines Reifegrad-Urteil über die Organisation (Datenqualität, Team-Skills, Governance) — der Score bewertet einzelne Prozesse (Zeitaufwand × Automatisierbarkeit × Umsetzbarkeit), nicht das Unternehmen als Ganzes. Der Name "Readiness-Check" ist als Marktbegriff bewusst beibehalten (etabliert, niedrigschwellig), das Ergebnis ist aber eine priorisierte Use-Case-Liste, kein Reifegrad-Zertifikat. Diese Erwartung gehört klar in Website-Text und Kickoff-Gespräch, damit kein falscher Eindruck entsteht.
+
 **Ideal für:** Unternehmen, die noch nicht wissen, wo sie anfangen sollen. Oder die schon mit ChatGPT experimentieren, aber keinen klaren Plan haben.
 
 ---
