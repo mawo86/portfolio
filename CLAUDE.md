@@ -234,6 +234,16 @@ Neu 2026-09-14, abgeleitet aus Transkript-Analyse (`context/strategy.md`): `eu-a
 
 **Eigene-Produkte-Sektion entfernt (2026-09-19):** Cookloop und DartsIQ werden auf der Website nicht mehr präsentiert. Entfernt: Startseiten-Sektion "Eigene Produkte" (`index.astro`), Footer-Spalte "Eigene Apps", `links.cookloop`/`links.dartsiq` in `src/config/site.ts`. Der Blog-Artikel `app-bauen-ohne-programmierer.md` erwähnt Cookloop weiterhin als Erfahrungsbericht-Content, unverändert.
 
+**KI-Readiness-Check — Methodik, Framework, Lernmaterial (2026-09-19/20):** Vollständiger Aufbau des €299-Pakets:
+- `outputs/ki-readiness-check-methodik.md` — Durchführungs-Methodik (Intake, 2h-Call-Ablauf, Bewertungsraster, Tool-Logik, Deliverable-Struktur, Zeitbudget)
+- `outputs/ki-readiness-check-gespraechsframework.md` — Memorierbares Framework ("Erzählen. Zerlegen. Werten. Ordnen.") + 4 Notizbögen (Kickoff/Prozessblatt/Prioritäts/Abschluss), gehärtet durch 5 simulierte Testläufe (Rollenspiel via Subagenten), inkl. Fallbeispiel Abschnitt 8
+- `reference/ki-readiness-check-pdf-vorlage.html` (gitignored) — 8-seitige CI-PDF-Vorlage, zeigt das Kunden-Deliverable
+- Trainingsdeck (Claude Artifact, Slides): [KI-Readiness-Check auswendig können](https://claude.ai/artifact/8BEdQ1ikwVVfTSNTrDZ2Ay), 13 Folien
+- `reference/ki-readiness-check-merkkarte.html` (gitignored) → `outputs/pdf/ki-readiness-check-merkkarte.pdf` — 1-Seiten-Merkkarte zum Auswendiglernen (dunkel, dicht, alle Kernregeln)
+- `reference/ki-readiness-check-arbeitsboegen.html` (gitignored) → `outputs/pdf/ki-readiness-check-arbeitsboegen.pdf` — 6-seitiges ausfüllbares Bögen-Set zum Ausdrucken (Deckblatt + 4 Bögen + Fallbeispiel)
+
+Invarianten (nie ändern ohne bewussten Grund): Score = Zeitaufwand × Automatisierbarkeit × Umsetzbarkeit (Produkt, 1–125, Schwellen 60/20), Std./Woche als Erfassungseinheit, max. 3 Bereiche, 7 Leitfragen.
+
 **Noch ausstehend:**
 - `paket-tagessatz.jpg` und `kontakt.jpg` generieren, sobald wieder Credits verfügbar sind (Prompts bereits in `reference/higgsfield-briefing.md`)
 - `hero.mp4` + `hero-poster.jpg`: Video braucht Higgsfield-Plan-Upgrade (Free-Plan reicht nicht, ~56 Credits/Video) oder Credit-Top-up
