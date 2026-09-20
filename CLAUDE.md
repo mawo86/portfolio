@@ -241,6 +241,7 @@ Neu 2026-09-14, abgeleitet aus Transkript-Analyse (`context/strategy.md`): `eu-a
 - Trainingsdeck (Claude Artifact, Slides): [KI-Readiness-Check auswendig können](https://claude.ai/artifact/8BEdQ1ikwVVfTSNTrDZ2Ay), 13 Folien
 - `reference/ki-readiness-check-merkkarte.html` (gitignored) → `outputs/pdf/ki-readiness-check-merkkarte.pdf` — 1-Seiten-Merkkarte zum Auswendiglernen (dunkel, dicht, alle Kernregeln)
 - `reference/ki-readiness-check-arbeitsboegen.html` (gitignored) → `outputs/pdf/ki-readiness-check-arbeitsboegen.pdf` — 6-seitiges ausfüllbares Bögen-Set zum Ausdrucken (Deckblatt + 4 Bögen + Fallbeispiel)
+- `reference/ki-readiness-check-fallbeispiel.html` (gitignored) → `outputs/pdf/ki-readiness-check-fallbeispiel.pdf` — dasselbe Fallbeispiel als eigenständiges 1-Seiten-Handout (identischer Inhalt wie Arbeitsbögen S.6, separat weitergebbar)
 
 Invarianten (nie ändern ohne bewussten Grund): Score = Zeitaufwand × Automatisierbarkeit × Umsetzbarkeit (Produkt, 1–125, Schwellen 60/20), Std./Woche als Erfassungseinheit, max. 3 Bereiche, 7 Leitfragen.
 
