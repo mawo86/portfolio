@@ -238,10 +238,17 @@ Neu 2026-09-14, abgeleitet aus Transkript-Analyse (`context/strategy.md`): `eu-a
 - `outputs/ki-readiness-check-methodik.md` — Durchführungs-Methodik (Intake, 2h-Call-Ablauf, Bewertungsraster, Tool-Logik, Deliverable-Struktur, Zeitbudget)
 - `outputs/ki-readiness-check-gespraechsframework.md` — Memorierbares Framework ("Erzählen. Zerlegen. Werten. Ordnen.") + 4 Notizbögen (Kickoff/Prozessblatt/Prioritäts/Abschluss), gehärtet durch 5 simulierte Testläufe (Rollenspiel via Subagenten), inkl. Fallbeispiel Abschnitt 8
 - `reference/ki-readiness-check-pdf-vorlage.html` (gitignored) — 8-seitige CI-PDF-Vorlage, zeigt das Kunden-Deliverable
-- Trainingsdeck (Claude Artifact, Slides): [KI-Readiness-Check auswendig können](https://claude.ai/artifact/8BEdQ1ikwVVfTSNTrDZ2Ay), 13 Folien
+- Trainingsdeck (Claude Artifact, Slides): [KI-Readiness-Check auswendig können](https://claude.ai/artifact/8BEdQ1ikwVVfTSNTrDZ2Ay), 14 Folien (inkl. "Technisches Setup")
 - `reference/ki-readiness-check-merkkarte.html` (gitignored) → `outputs/pdf/ki-readiness-check-merkkarte.pdf` — 1-Seiten-Merkkarte zum Auswendiglernen (dunkel, dicht, alle Kernregeln)
 - `reference/ki-readiness-check-arbeitsboegen.html` (gitignored) → `outputs/pdf/ki-readiness-check-arbeitsboegen.pdf` — 6-seitiges ausfüllbares Bögen-Set zum Ausdrucken (Deckblatt + 4 Bögen + Fallbeispiel)
 - `reference/ki-readiness-check-fallbeispiel.html` (gitignored) → `outputs/pdf/ki-readiness-check-fallbeispiel.pdf` — dasselbe Fallbeispiel als eigenständiges 1-Seiten-Handout (identischer Inhalt wie Arbeitsbögen S.6, separat weitergebbar)
+
+**Praktische Umsetzung — Trockenlauf (2026-09-20):** Der Petra-Fall wurde Minute für Minute durchgerechnet (was der Kunde vorab ausfüllt, was wann auf welchem Bildschirm erfasst wird, was direkt nach dem Call rausgeht, wie viel Nacharbeit bis zum PDF bleibt). Ergebnisse eingearbeitet in Methodik (Abschnitt 6: Sofort-Handover + Trockenlauf-Beleg in Abschnitt 7) und Gesprächsframework (neuer Abschnitt 1a: Technisches Setup — zwei Bildschirme/Sichtbarkeiten, Aufnahme nur als Sicherheitsnetz mit Einwilligung), sowie in Arbeitsbögen, Merkkarte und Trainingsdeck (neue Folie 09):
+- **Zwei Fenster:** geteilt = Checkboxen/Zahlen/Matrix (Vertrauens-Mechanismus), privat = die 4 echten Freitext-Felder pro Prozess (Kurzbeschreibung, Werkzeug, Fehlerquote, "was würde mit der Zeit passieren")
+- **Kein Transkriptions-Tool nötig:** von ~20 Feldern/Prozess sind nur 4 Freitext, der Rest kostet einen Klick. Eingebauter Call-Rekorder reicht als Sicherheitsnetz zum punktuellen Nachschlagen — nie zur vollständigen Nachbearbeitung (würde die 6,5-Std.-Wirtschaftlichkeitsschwelle sofort reißen), Aufnahme nur mit Einwilligung (Kickoff-Bogen-Checkbox, hängt mit Intake-Frage 7/Betriebsrat zusammen)
+- **Sofort-Handover:** Foto/Scan der Bögen + 2–3 Sätze Zusammenfassung innerhalb 15 Min nach Call-Ende — ersetzt zugleich eine formale Verifikation, da der Kunde die Bewertung bereits live im Screenshare gesehen hat
+- **PDF-Timing unverändert:** 3–5 Werktage, Nachfass-Call nach 1 Woche (dort auch der Ort für inhaltliche Korrekturen, keine vorgeschaltete Freigabeschleife). `outputs/consulting-angebot.md` macht kein Timing-Versprechen und wurde deshalb nicht geändert
+- Baseline-Zeitbudget bestätigt bei ~6,2 Std., knapp unter der 6,5-Std.-Schwelle — kein Puffer für zusätzliche Nacharbeit
 
 Invarianten (nie ändern ohne bewussten Grund): Score = Zeitaufwand × Automatisierbarkeit × Umsetzbarkeit (Produkt, 1–125, Schwellen 60/20), Std./Woche als Erfassungseinheit, max. 3 Bereiche, 7 Leitfragen.
 

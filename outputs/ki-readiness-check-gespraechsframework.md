@@ -55,6 +55,19 @@ Auffangmechanismus für Kleinstunternehmen ohne Abteilungsstruktur.
 im Prioritäts-Bogen, 6 Maßnahmen in der Roadmap) — bei nur 1–2 genannten
 Prozessen skaliert das nicht automatisch mit.
 
+**Trockenlauf (2026-09-20):** Zusätzlich zu den fünf Testläufen wurde der
+Petra-Fall Minute für Minute durchgerechnet — nicht als weiteres
+Rollenspiel, sondern als Zeit- und Werkzeug-Check: was der Kunde vorab
+ausfüllt, was wann auf welchem Bildschirm erfasst wird, was direkt nach
+dem Call rausgeht, wie viel Nacharbeit bis zum PDF bleibt. Ergebnis:
+Abschnitt 1a (neu) legt fest, was geteilt und was privat ist, und ordnet
+ein, dass von ca. 20 Feldern pro Prozess nur 4 echte Freitext-Felder sind
+— eine Audioaufnahme ist deshalb ein Sicherheitsnetz zum Nachschlagen,
+kein zweiter Notizkanal. Der Abschluss-Bogen hat jetzt einen
+Sofort-Handover-Punkt (Foto der Bögen innerhalb 15 Minuten), der zugleich
+die Verifikation ersetzt — der Kunde bestätigt live im Screenshare, nicht
+nachträglich per Freigabeschleife. Details in Methodik Abschnitt 6 und 7.
+
 Details und Begründungen jeweils an der betroffenen Stelle.
 
 ---
@@ -186,6 +199,58 @@ eine falsche Priorität vorzuspiegeln.
 
 ---
 
+## 1a. Technisches Setup: was ist sichtbar, was ist privat, welche Hilfsmittel
+
+Vor dem ersten echten Call geklärt, nicht während des Calls improvisiert.
+Ein durchgerechneter Trockenlauf (Petras Fall, 3 Prozesse, siehe
+Fallbeispiel Abschnitt 8) zeigt: Das Prozessblatt hat pro Prozess nur
+**4 echte Freitext-Felder** (Kurzbeschreibung, Werkzeug/System heute,
+Fehlerquote, "was würde mit der Zeit passieren"/"bleibt liegen") — der
+Rest sind Checkboxen und Zahlen, die einen Klick oder eine kurze Ziffer
+kosten, keine Formulierungsarbeit während man zuhört. Das ändert, worauf
+man sich technisch vorbereiten muss: nicht "jedes Wort mitschreiben",
+sondern die vier Sätze pro Prozess, in denen der Kunde etwas in eigenen
+Worten beschreibt.
+
+**Zwei Bildschirme, zwei Sichtbarkeiten.**
+
+| Fenster | Inhalt | Warum |
+|---|---|---|
+| **Geteilt (Kunde sieht mit)** | Kickoff-Bogen, Prozessblatt-Checkboxen/Zahlen, Rohpunkte, später die Matrix | Methodik 3.3: die Bewertung soll nachvollziehbar sein — das ist der Vertrauensmechanismus, kein Nice-to-have |
+| **Privat (nur Marlon)** | Kurzbeschreibung, während sie entsteht (getippter Text wird erst nach dem Feinschliff kopiert), Fehlerquote/Freitext, der "PRIVAT, NICHT IM SCREENSHARE"-Block (Prozessblatt) | Ein Kunde, der live mitliest, wie seine eigene Aussage in Echtzeit paraphrasiert und redigiert wird, wirkt unsicherer als einer, der nur das fertige Ergebnis sieht. Die Checkboxen/Zahlen sind dagegen unmittelbar, brauchen keinen Feinschliff — die dürfen live sichtbar sein |
+
+Praktisch: zwei Fenster oder zwei Tabs, geteilter Screenshare zeigt nur
+eins davon. Ein einzelnes Dokument mit einem ausgeblendeten Bereich
+funktioniert auch, ist aber fehleranfälliger (ein falscher Klick zeigt
+den privaten Teil).
+
+**Hilfsmittel für die vier Freitext-Felder pro Prozess.** Keine
+Live-Transkription nötig — bei 4 kurzen Feldern und 11–18 Minuten pro
+Prozess reicht normales Mitschreiben in eigenen Worten. Eine
+Audioaufnahme des Calls ist ein **Sicherheitsnetz für Lücken**, kein
+zweiter Notizkanal, der nach dem Call durchgearbeitet wird:
+
+- **Aufnahme nur mit Einwilligung.** Gehört als Checkbox auf den
+  Kickoff-Bogen ("Aufnahme zur eigenen Absicherung, wird nach Report-
+  Versand gelöscht — einverstanden? Ja/Nein") und hängt mit
+  Intake-Frage 7 zusammen (Datenschutz-/Compliance-Vorgaben) — bei
+  Betriebsrats- oder Kundendaten-Restriktionen im Zweifel darauf
+  verzichten, nicht durchsetzen.
+- **Nur zum Nachschlagen, nie zum Nacharbeiten.** Wenn nach dem Call ein
+  Feld unklar ist ("was genau war nochmal die Fehlerquote bei Prozess
+  2?"), kurz die Stelle in der Aufnahme nachhören. Wird die Aufnahme zur
+  Gewohnheit, den ganzen Call nachträglich nochmal durchzuhören, ist das
+  eine zusätzliche Stunde Nacharbeit, die das Zeitbudget (Methodik 7,
+  6,2 Std. Baseline, Schwelle 6,5 Std.) sofort sprengt — dann lieber im
+  Call konsequenter nachfragen, bis das Feld sitzt, statt es später zu
+  reparieren.
+- **Keine Software-Empfehlung nötig.** Der eingebaute Rekorder des
+  Videocall-Tools (Zoom, Teams, Google Meet) reicht — ein separates
+  Transkriptions-Tool wäre eine weitere Nachbearbeitungsquelle, die die
+  Non-Negotiable-Regel oben ("nur Nachschlagen") unterläuft.
+
+---
+
 ## 2. Kickoff-Bogen (Block 1, 0:00–0:15)
 
 Wird ausgefüllt, während der Bildschirm bereits geteilt ist — der Kunde
@@ -203,6 +268,11 @@ Erwartungsmanagement gegeben:
 
 Teilnehmer im Call (Name, Rolle):
 _______________________________________________
+
+Aufnahme zur eigenen Absicherung (nur Nachschlagen, wird nach
+Report-Versand gelöscht):
+□ Einverstanden   □ Nicht einverstanden (dann ohne Aufnahme,
+  siehe Intake-Frage 7 bei Betriebsrats-/Compliance-Vorgaben)
 
 Systemintegration (aus Intake-Frage 2, hier nur bestätigen/präzisieren):
 □ Offene Schnittstelle/API   □ Export mit Zeitversatz (z.B. CSV): ______
@@ -593,6 +663,11 @@ _______________________________________________
     Prozess: ___________________  Bedingung: ___________________
 
 Termin Nachfass-Call vereinbart:  ______________
+
+Direkt nach dem Call (innerhalb von 15 Min, noch vor Report-Erstellung):
+□ Foto/Scan der ausgefüllten Bögen (Prioritäts- + Abschluss-Bogen)
+  per E-Mail an den Kunden gesendet, mit 2–3 Sätzen Zusammenfassung
+  → siehe Methodik Abschnitt 6, "Sofort-Handover"
 
 Falls Preis-Einwand kam ("was bekomme ich für 299 €, ist das nur
 ein Sales-Call?") — Kernaussagen, nicht ablesen, aber parat haben:
