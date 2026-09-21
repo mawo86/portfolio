@@ -30,6 +30,38 @@ Das Formular ist absichtlich kurz (9 Fragen, 10 Minuten Ausfüllzeit). Ziel ist 
 
 **Wichtig: Systemintegration ist Kontext, kein globaler Abzug.** Dass ein System nur Batch-Export statt Live-API hat, begrenzt nur die Prozesse, die tatsächlich Live-Daten bräuchten (z. B. Lagerbestands-Überwachung). Ein Prozess ohne Systemanbindung (z. B. reine Dokumentation vor Ort) ist davon unberührt. Keine pauschale Regel wie "Batch-only senkt Umsetzbarkeit bei allen Prozessen" — die Einschränkung wird pro Prozess im Deep-Dive geprüft, wenn eine Automatisierungsidee tatsächlich eine Systemanbindung braucht.
 
+**Copy-Paste-Vorlage (2026-09-21)** — bis Typeform/Formspree eingerichtet ist, per E-Mail direkt nach Terminanfrage verschicken:
+
+> Betreff: Kurzer Fragebogen vor unserem KI-Readiness-Check-Termin
+>
+> Hallo [Name],
+>
+> vorab noch ein kurzer Fragebogen (ca. 10 Minuten) — das hilft mir, den
+> gemeinsamen Termin optimal zu nutzen, statt Grundlagen erst im Call zu
+> klären. Bitte schickt mir die Antworten spätestens 2 Werktage vor dem
+> Termin zurück, sonst müssen wir den Termin leider verschieben.
+>
+> 1. Firma, Branche, Anzahl Mitarbeiter:
+> 2. Welches ERP-/Kernsystem nutzt ihr? Hat es eine offene
+>    Schnittstelle/API, einen Datenexport (z. B. CSV, ggf. zeitversetzt),
+>    oder läuft der Datenaustausch komplett manuell?
+> 3. Wer nimmt am Call teil (Name, Rolle)? Wichtig: Die Person sollte die
+>    operativen Abläufe selbst kennen, nicht nur die Geschäftsführung.
+> 4. Nennt 3–5 Aufgaben/Prozesse, die im Team als "nervig",
+>    "zeitaufwändig" oder "macht keiner gerne" gelten:
+> 5. Für jeden genannten Prozess: Wie oft passiert das (täglich/
+>    wöchentlich/monatlich)? Wie viele Personen sind beteiligt? Grobe
+>    Schätzung des Zeitaufwands pro Durchlauf?
+> 6. Nutzt ihr aktuell schon KI-Tools? Welche, wofür, seit wann?
+> 7. Gibt es Datenschutz-/Compliance-Vorgaben, die wir kennen müssen
+>    (Betriebsrat, Branchenauflagen, Kundendaten-Restriktionen)?
+> 8. Was ist der Auslöser, dass ihr euch jetzt mit KI beschäftigt?
+> 9. Budget-Hausnummer für ein mögliches Folgeprojekt vorhanden? (nicht
+>    verpflichtend, hilft aber bei der Roadmap-Kalibrierung)
+>
+> Viele Grüße
+> Marlon
+
 ### 1.2 Vorbereitung durch Marlon (15–20 Minuten, am Tag vor dem Call)
 
 1. **Intake-Antworten lesen** (5 Min) — Prozesse und Zeitangaben rauskopieren in die Bewertungsraster-Vorlage (siehe Abschnitt 3), damit ich im Call sofort eintragen kann statt mitzuschreiben.

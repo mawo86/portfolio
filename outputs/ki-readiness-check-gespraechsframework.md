@@ -249,6 +249,29 @@ zweiter Notizkanal, der nach dem Call durchgearbeitet wird:
   Transkriptions-Tool wäre eine weitere Nachbearbeitungsquelle, die die
   Non-Negotiable-Regel oben ("nur Nachschlagen") unterläuft.
 
+**Digitales Bewertungsraster (`outputs/xlsx/ki-readiness-check-bewertungsraster.xlsx`,
+neu 2026-09-21):** Die Papier-/PDF-Bögen erfassen die Rohdaten, rechnen
+aber nichts aus. Diese Excel-Datei ist das Bindeglied dazwischen — drei
+Blätter:
+
+- **Anleitung** — die Bewertungstabelle (1/3/5-Punkte-Kriterien) als
+  Nachschlagehilfe, direkt neben der Eingabe statt im Kopf oder auf der
+  Merkkarte.
+- **Prozesse** — Rohdaten pro Prozess. Std./Woche direkt eintragen, oder
+  bei mehrteiligen Angaben ("X mal pro Woche/Monat à Y Minuten") die
+  Hilfsspalten (Häufigkeit, Einheit Woche/Monat, Minuten pro Durchlauf)
+  nutzen — die Umrechnung in Std./Woche passiert automatisch.
+- **Bewertung** — Automatisierbarkeit und Umsetzbarkeit per Dropdown
+  (1/3/5) wählen, Zeitaufwand wird aus dem Prozesse-Blatt vorgeschlagen.
+  Score und Phase (Sofort/3 Monate/Beobachten) berechnen sich
+  automatisch, inkl. Sonderfall-Hinweis, falls kein Prozess die
+  Sofort-Schwelle erreicht (siehe Abschnitt 3.2 der Methodik).
+
+Genutzt wird sie direkt im Call oder in den ersten Minuten danach —
+sie ersetzt nicht die Papier-Bögen (die bleiben Gesprächsleitfaden und
+Kunden-Sichtfläche im Screenshare), sondern nimmt die Rechenarbeit ab,
+die bisher niemand digital abgebildet hatte.
+
 ---
 
 ## 2. Kickoff-Bogen (Block 1, 0:00–0:15)
@@ -757,6 +780,54 @@ Dokument nachgezogen, nicht das PDF mit einer Ad-hoc-Schätzung gefüllt.
    und prüfen, ob sich die eigene Praxis noch mit "Erzählen, Zerlegen,
    Werten, Ordnen" deckt. Wenn nicht — Methodik überarbeiten, nicht nur
    den eigenen Ablauf stillschweigend driften lassen.
+
+---
+
+## 7a. Typische Anfängerfehler beim Verdichten (aus 5 Trainings-Durchläufen, 2026-09-20)
+
+Diese vier Fehler traten in einer kontrollierten Übungsreihe (Rollenspiel,
+5 Prozesse, zunehmend erschwert) wiederholt auf, bevor sie sich durch
+Wiederholung von selbst erledigten. Wer das Framework an andere
+weitergibt, sollte gezielt auf genau diese vier Stellen achten —
+sie sind der Unterschied zwischen "hat zugehört" und "hat sauber
+verdichtet":
+
+1. **Prosa-Zahlen nicht bis zum Ende umgerechnet.** Kunden sagen
+   "1 von 6-7" oder "jede vierte", nicht "14 %" oder "25 %". Wer die
+   Rohformulierung unverdichtet stehen lässt, kann Prozesse später
+   nicht mehr fair gegeneinander vergleichen. Regel: jede Häufigkeits-
+   angabe sofort in Prozent umrechnen, bevor sie ins Feld kommt.
+
+2. **Mehrteilige Zeitangaben werden benannt, aber nicht addiert.**
+   Wenn ein Aufwand aus einer Grundzeit plus einem Zusatzfall bei
+   einem Teil der Fälle besteht (z. B. "6-7 Rechnungen à 15 Min, plus
+   bei jeder fünften nochmal 10 Min Mahnung"), reicht es nicht, beide
+   Bestandteile zu erkennen — sie müssen zu einer einzigen
+   Std./Woche-Zahl zusammengeführt werden, sonst fehlt am Ende die
+   Zahl, die das Bewertungsraster braucht.
+
+3. **Anekdoten und Nebengeschichten rutschen mit ins Freitextfeld.**
+   Kunden erzählen gerne auch das, was für keines der vier Felder
+   gebraucht wird (ein bestimmter Vorfall, ein Name, eine Beschwerde).
+   Das kostet Zeit, die beim engen Zeitbudget pro Prozess fehlt.
+   Bewusste Frage beim Verdichten: "Gehört das zu Kurzbeschreibung,
+   Werkzeug, Fehlerquote oder Zeitgewinn — oder ist es nur Kontext?"
+   Wenn Letzteres: weglassen, auch wenn es interessant klingt.
+
+4. **Ähnlich klingende Aussagen zwischen Prozessen werden verwechselt.**
+   Wenn zwei Prozesse zufällig eine ähnliche Zeitgewinn-Antwort haben
+   (z. B. beide "dann hat die Ehefrau mehr Zeit für Angebote"), genau
+   hinhören, WOFÜR die freiwerdende Zeit laut Kunde konkret genutzt
+   würde — nicht die Formulierung aus dem vorherigen Prozessblatt
+   kopieren.
+
+**Trainingsempfehlung:** Diese vier Punkte lassen sich gezielt üben,
+indem eine Trainingsperson (oder ein Rollenspiel) bewusst mit
+Umrechnungs-Zahlen, mehrteiligen Zeitangaben, Anekdoten und
+ähnlich klingenden Formulierungen "aufs Glatteis führt". Bestanden
+ist die Übung, wenn zwei Durchläufe hintereinander ohne Korrektur
+in allen vier Punkten sauber sind — nicht nach dem ersten Treffer,
+da Zufall nicht von Können zu unterscheiden ist.
 
 ---
 
