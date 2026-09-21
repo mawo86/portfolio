@@ -752,26 +752,48 @@ versierten Kunden, die eine Garantie ohnehin kritisch hinterfragen würden.
 
 ---
 
-## 6. Vom Bogen zum PDF — die Übersetzungstabelle
+## 6. Vom Bogen über Excel zum Word-Report — die Übersetzungstabelle
 
-Damit beim Report-Schreiben nichts neu erfunden werden muss, sondern nur
-noch übertragen wird:
+Die Kette ist seit dem digitalen Bewertungsraster und der Word-Vorlage
+(2026-09-21) dreistufig: **Papier-Bogen** (Rohdaten im Call) → **Excel**
+(`outputs/xlsx/ki-readiness-check-bewertungsraster.xlsx`, Score/Phase/Matrix
+automatisch) → **Word** (`outputs/docx/ki-readiness-check-report-vorlage.docx`,
+Kunden-Deliverable, Copy-Paste aus Excel). Damit beim Report-Schreiben
+nichts neu erfunden werden muss, sondern nur noch übertragen wird:
 
-| PDF-Feld | Quelle im Bogen |
+| Word-Feld (S.) | Quelle |
 |---|---|
-| S.2 "[Anzahl] Prozesse aus [Bereich 1/2/3]" | Kickoff-Bogen, Prozessliste + Bereich |
-| S.2 "rund [X] Stunden pro Woche" (gehedgt, falls "grob" markiert) | Prioritäts-Bogen, Summe Std./Woche + Konfidenz-Marker je Prozessblatt |
-| S.2 Kernaussagen 01/02/03 | Prioritäts-Bogen, "Drei Kernaussagen" (inkl. entgangenes Geschäft aus Prozessblatt, falls genannt) |
-| S.3 Tabelle (Name, Bereich, Beschreibung, Std./Woche, Werkzeug) | Prozessblatt, Abschnitt 1+2+3 |
-| S.4 Matrix (x/y/Punktgröße pro Prozess) | Prozessblatt, "Matrix-Position" |
-| S.4 Kommentare je Cluster | Prioritäts-Bogen + Prozessblatt-Bewertung |
-| S.5 Roadmap, normal 6 Maßnahmen in 3 Phasen, skaliert bei wenigen Prozessen (Platzierung ggf. abweichend vom Score) | Prioritäts-Bogen, Block "Roadmap-Maßnahmen" + Prozessblatt "Phase abweichend vom Score" |
-| S.6 Tool-Tabelle | Abschluss-Bogen, "Tool-Richtung" + Tool-Empfehlungs-Logik (Methodik 4) |
-| S.7 "[Prozess aus Phase 1]" ODER, falls kein Sofort-Kandidat, stärkster Phase-2-Kandidat + Bedingung | Abschluss-Bogen, "Empfohlener Pilot-Prozess" (inkl. Fallback-Feld) |
+| S.2 "[Anzahl] Prozesse aus [Bereich 1/2/3]" | Kickoff-Bogen (Anzahl) + Excel-Blatt "Prozesse" Spalte K (Bereich, Dropdown aus AA1:AC1) |
+| S.2 "rund [X] Stunden pro Woche" | Excel-Blatt "Prozesse", Summe Spalte F (→ Std./Woche) |
+| S.2 Kernaussagen 01/02/03 | Excel-Blatt "Bewertung" nach Score sortiert (01/02) + freie Einschätzung (03, siehe Word-↳-Hinweis) |
+| S.3 Tabelle (Name, Bereich, Beschreibung, Std./Woche, Werkzeug) | Excel-Blatt "Prozesse" Spalten A, K, G, F, H — Bereich (K) steht am Tabellenende, nicht direkt neben Prozess (A), da nachträglich angehängt statt eingefügt (keine Formel-Verschiebung); beim Copy-Paste in die Word-Tabelle daher Spalte K separat holen, nicht als Blockkopie |
+| S.4 Matrix (Zeitaufwand × Umsetzbarkeit, Größe = Score) | Excel-Blatt "Bewertung", Blasendiagramm als Screenshot — Achsen stimmen mit Word S.4 überein, keine Neuzeichnung nötig |
+| S.5 Roadmap, normal 6 Maßnahmen in 3 Phasen, skaliert bei wenigen Prozessen | Phase 1/2 aus Excel-Score (≥60 / 20-59), Phase 3 freie strategische Einschätzung (nicht aus einem einzelnen Prozess ableitbar) |
+| S.6 Tool-Tabelle | Freie Auswahl nach Tool-Logik (Methodik Abschnitt 4), nicht aus Excel ableitbar |
+| S.7 "[Prozess aus Phase 1]" ODER, falls kein Sofort-Kandidat, stärkster Phase-2-Kandidat + Bedingung | Excel-Blatt "Bewertung", höchster Score mit Phase "Sofort"; Sonderfall siehe Methodik Abschnitt 3.2 |
 
-Wenn eine Zeile im PDF beim Ausfüllen leer bleibt, obwohl alle Bögen
-vollständig sind, fehlt ein Feld auf einem Bogen — dann wird dieses
-Dokument nachgezogen, nicht das PDF mit einer Ad-hoc-Schätzung gefüllt.
+**Fehlerquote bewusst nicht im Word-Report:** Die Fehlerquote (%) wird im
+Excel-Blatt "Prozesse" erfasst (Spalte I), taucht aber in keinem Word-Feld
+auf. Entscheidung vom 2026-09-21: sie ist ein Call-interner Fakt zur
+Priorisierung (fließt in die freie Einschätzung der Kernaussagen und
+Roadmap-Begründung ein), aber kein Standard-Reportfeld — sonst würde die
+S.3-Tabelle überladen, ohne dass der Kunde davon mehr Nutzen hätte als
+aus der Kurzbeschreibung.
+
+**Feldverteilung im Word-Report (Stand 2026-09-21):** Von den rund 80
+Platzhaltern sind gut die Hälfte reines Copy-Paste (Tabellenzellen S.3,
+Kundenname/Datum/Bereiche) — Sekunden pro Feld. Der Rest ist freie
+Formulierung, die nicht aus Excel kommt: die 3 Exec-Summary-Karten, die
+6 Roadmap-Maßnahmen (Titel + Kurzbeschreibung je), die 4
+Tool-Begründungen. Das deckt sich mit dem bereits budgetierten Aufwand
+für Report-Erstellung (Methodik Abschnitt 7, 3,0 Std. der ~6,2-Std.-
+Baseline) — die Word-Vorlage beschleunigt den mechanischen Teil, ersetzt
+aber nicht die inhaltliche Arbeit an Roadmap und Tool-Empfehlung.
+
+Wenn eine Zeile im Word-Report beim Ausfüllen leer bleibt, obwohl Bogen
+und Excel vollständig sind, fehlt ein Feld auf einem Bogen oder in Excel
+— dann wird dieses Dokument nachgezogen, nicht der Report mit einer
+Ad-hoc-Schätzung gefüllt.
 
 ---
 
