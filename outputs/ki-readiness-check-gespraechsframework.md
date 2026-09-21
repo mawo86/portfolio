@@ -265,7 +265,15 @@ Blätter:
   (1/3/5) wählen, Zeitaufwand wird aus dem Prozesse-Blatt vorgeschlagen.
   Score und Phase (Sofort/3 Monate/Beobachten) berechnen sich
   automatisch, inkl. Sonderfall-Hinweis, falls kein Prozess die
-  Sofort-Schwelle erreicht (siehe Abschnitt 3.2 der Methodik).
+  Sofort-Schwelle erreicht (siehe Abschnitt 3.2 der Methodik). Rechts
+  daneben ein automatisch generiertes Blasendiagramm (Automatisierbarkeit
+  × Umsetzbarkeit, Blasengröße = Score) für die ersten 5 Zeilen —
+  aktualisiert sich live. Zwei Prozesse mit identischen Punktzahlen
+  liegen exakt übereinander (korrekt, kein Anzeigefehler). Achtung:
+  diese Achsenwahl weicht von der PDF-Vorgabe (S.4, Methodik Abschnitt
+  5: Impact/Umsetzbarkeit-Matrix) ab — die Excel-Grafik ist zum
+  Arbeiten/Vorab-Check gedacht, für das Kunden-PDF wird die Matrix
+  eigenständig mit den dort spezifizierten Achsen gezeichnet.
 
 Genutzt wird sie direkt im Call oder in den ersten Minuten danach —
 sie ersetzt nicht die Papier-Bögen (die bleiben Gesprächsleitfaden und
