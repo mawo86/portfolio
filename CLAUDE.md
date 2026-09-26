@@ -29,7 +29,8 @@ Claude sollte sich immer über `/prime` am Session-Start orientieren, dann mit v
 .
 ├── CLAUDE.md              # Diese Datei — Kern-Kontext, immer geladen
 ├── shell-aliases.md       # Shell-Aliase für den Workspace
-├── .github/workflows/deploy.yml  # Build + Deploy auf GitHub Pages bei Push auf main
+├── .github/workflows/deploy.yml    # Build + Link-Check + Deploy auf GitHub Pages bei Push auf main
+├── .github/workflows/pr-check.yml  # Build + Link-Check + Größen-Budget auf jedem Pull Request
 ├── .claude/               # (git-ignoriert)
 │   ├── commands/          # Slash-Commands, die Claude ausführen kann
 │   │   ├── prime.md       # /prime — Session-Initialisierung
@@ -45,6 +46,7 @@ Claude sollte sich immer über `/prime` am Session-Start orientieren, dann mit v
 │   └── current-data.md    # Metriken und Projektstatus
 ├── plans/                 # Implementierungspläne erstellt von /create-plan
 ├── outputs/               # Arbeitsergebnisse und Deliverables
+│   └── loesungswege/      # Interne Schritt-für-Schritt-Anleitungen pro Use-Case (nie auf die Website)
 ├── reference/             # Referenzmaterialien (git-ignoriert)
 │   ├── higgsfield-briefing.md  # Prompts, Formate und Dateinamen für alle Visual-Slots
 │   ├── logo.png / logo.jpg / icon_*.png  # Alte Wolken-Marke, nur noch Archiv
@@ -56,11 +58,14 @@ Claude sollte sich immer über `/prime` am Session-Start orientieren, dann mit v
     ├── src/
     │   ├── config/site.ts # Externe Links, Verfügbarkeits-Status, Site-Metadaten
     │   ├── content/config.ts  # Zod-Schemas der Collections blog + case-studies
-    │   ├── pages/         # index, leistungen, blog/, case-studies/, tools, 404, danke, og/
-    │   ├── content/       # blog/ und case-studies/ (Markdown)
+    │   ├── pages/         # index, leistungen, loesungen/, blog/, case-studies/, tools, 404, danke, og/
+    │   ├── content/       # blog/, case-studies/ und loesungen/ (Markdown)
     │   ├── layouts/       # Layout, BlogLayout, CaseStudyLayout
-    │   ├── components/    # Logo, Header, Footer, MediaImage, NewsletterSignup, ...
-    │   └── lib/media.ts   # hasMedia(): Build-Zeit-Check für public/media/
+    │   ├── components/    # Logo, Header, Footer, MediaImage, NewsletterSignup, UseCaseFinder, LoesungTeaser, ...
+    │   ├── lib/media.ts   # hasMedia(): Build-Zeit-Check für public/media/
+    │   ├── lib/loesungen.ts  # Helfer für Use-Case-Bibliothek und Finder
+    │   └── assets/og-fonts/  # Statische TTF-Instanzen für OG-Bilder (offline-fähiger Build)
+    ├── scripts/           # check-links.mjs, check-budget.mjs (laufen in CI)
     └── public/
         ├── fonts/         # Bricolage Grotesque, Inter, JetBrains Mono (self-hosted)
         ├── media/         # Higgsfield-Assets (hero.mp4, about.jpg, paket-*.jpg, kontakt.jpg)
@@ -148,23 +153,33 @@ Es gibt keine Tests, kein Lint und kein Format-Tooling. `npm run build` ist der 
 
 **Live unter:** https://busche.cloud
 
-**Deployment:** `.github/workflows/deploy.yml` baut bei jedem Push auf `main` (Node 20, `npm ci`, `npm run build`) und deployt `website/dist` auf GitHub Pages. `main` ist also Produktion, es gibt kein Staging. Die Domain kommt aus `public/CNAME`.
+**Deployment und CI (seit 2026-09-26):**
+- `deploy.yml`: bei Push auf `main` Node 20, `npm ci`, `npm run build`, `npm run check:links`, dann Deploy von `website/dist` auf GitHub Pages. `main` ist Produktion, kein Staging. Domain aus `public/CNAME`.
+- `pr-check.yml`: bei jedem Pull Request gegen `main` (Pfad `website/**`) derselbe Build, Link-Check als Pflicht, Größen-Budget als Warnung, `dist` als Artefakt zum Anschauen. Damit wird `main` nie rot.
+- `npm run check:links` (`scripts/check-links.mjs`): prüft alle internen `href`/`src` im gebauten `dist/` auf vorhandene Ziele und Anker, ohne Netz. Exit 1 bei Fehlern.
+- `npm run check:budget` (`scripts/check-budget.mjs`): HTML 120 KB, JS/CSS 200 KB, Bilder 400 KB, Summe JS+CSS 600 KB. Immer Exit 0.
+- `npm run check`: Build plus beide Prüfungen, lokal vor jedem Push.
+- OG-Bilder brauchen keinen Netzzugriff mehr: `pages/og/[...route].ts` lädt Bricolage Grotesque 700/800 und Inter 400 aus `src/assets/og-fonts/` (statische Instanzen, erzeugt mit fontTools aus den Variable-Fonts).
 
 ### Architektur der Website (was man aus mehreren Dateien zusammenlesen müsste)
 
 **Inhalte sind Astro Content Collections.** `src/content/config.ts` definiert zwei Collections mit Zod-Schema: `blog` (title, description, date, tags, category, image?, draft) und `case-studies` (zusätzlich client, industry, timeframe, role, services, results[]). Ein neuer Artikel ist eine Markdown-Datei in `src/content/blog/`, der Dateiname ist der Slug. Neue Pflichtfelder im Frontmatter müssen im Schema landen, sonst bricht der Build.
 
-**Drafts werden an vier Stellen gefiltert**, immer mit `getCollection('blog', ({ data }) => !data.draft)`: `pages/index.astro` (Blog-Teaser), `pages/blog/index.astro`, `pages/blog/[...slug].astro` und `pages/rss.xml.ts`. Dazu `pages/og/[...route].ts` für OG-Bilder. Wer die Draft-Logik ändert, muss alle fünf anfassen.
+**Drafts werden an vier Stellen gefiltert**, immer mit `getCollection('blog', ({ data }) => !data.draft)`: `pages/index.astro` (Blog-Teaser), `pages/blog/index.astro`, `pages/blog/[...slug].astro` und `pages/rss.xml.ts`. Dazu `pages/og/[...route].ts` für OG-Bilder. Wer die Draft-Logik ändert, muss alle fünf anfassen. Für `loesungen` läuft der Draft-Filter zentral in `lib/loesungen.ts` (`getLoesungen()`), nur die OG-Route filtert selbst.
+
+**Use-Case-Bibliothek (`/loesungen`, seit 2026-09-26):** Dritte Collection `loesungen` (Schema mit Enums `BEREICHE`, `ZEITPROBLEME`, `PAKETE`, `REIFEGRADE` in `content/config.ts`, exportiert für Finder und Seiten). Öffentliche Fassung pro Use-Case: Problem, Lösung, Aufwand, Effekt, Paket. Der interne Umsetzungsweg liegt in `outputs/loesungswege/<slug>.md` und darf nie ins `website/`-Verzeichnis. `UseCaseFinder.astro` rendert alle Lösungen als JSON in die Seite und filtert clientseitig (Branche optional, Bereich und Zeitproblem Pflicht, Score: Bereich 10, Zeitproblem 5, Branche 2, plus `prio`). `LoesungTeaser.astro` zeigt in `BlogLayout` die 2 Lösungen, deren `blogKategorien` die Artikel-Kategorie enthält. `pakete` in `config/site.ts` ist die eine Stelle für Paketnamen und Preise, die Bibliothek liest sie von dort.
+
+**Funnel-Verdrahtung:** Alle "Erstgespräch"-Buttons rufen `terminUrl(params)` aus `config/site.ts` auf. Sie baut aus `links.termin` (heute `/#kontakt`) und Parametern eine URL mit Query vor dem Hash (`/?thema=x&paket=y#kontakt`). `index.astro` liest `thema`, `titel`, `paket`, `bereich`, `zeitproblem` und belegt Betreff-Auswahl, Nachricht und ein verstecktes Feld `thema` vor. Cal.com-Wechsel: nur `links.termin` ändern. Funnel-Ereignisse: `window.bcTrack(name)` in `Layout.astro` zählt in GoatCounter als Event unter `ev/<name>`, Elemente mit `data-track="<name>"` melden Klicks automatisch. Namen in `funnelEvents` (`config/site.ts`): `finder_gestartet`, `finder_abgeschlossen`, `leadmagnet_angefordert`, `formular_gesendet`, `paket_cta_geklickt`. Lead-Magnet im Finder ist ein Buttondown-Formular mit Tag `use-case-finder` und Metadaten `finder_bereich`, `finder_zeitproblem`, `finder_branche`, `finder_loesungen`; der Versand der "ausführlichen Fassung" ist in Buttondown noch nicht eingerichtet (siehe Noch ausstehend).
 
 **Blog-Kategorien sind hart kodiert.** `pages/blog/index.astro` hat `CATEGORY_ORDER`; eine Kategorie im Frontmatter, die dort fehlt, bekommt keinen Tab (der Artikel erscheint trotzdem in der Liste). Neue Kategorie = Frontmatter + `CATEGORY_ORDER` + Liste in dieser Datei ("Blog-Kategorien" unten).
 
-**OG-Images werden zur Build-Zeit gerendert** (astro-og-canvas, `pages/og/[...route].ts`). Die Route baut ein `pages`-Objekt aus allen nicht-draft Blog-Artikeln und Case Studies plus festen Einträgen für `index`, `blog`, `tools`, `case-studies`, `leistungen`. `layouts/Layout.astro` wählt das Bild in dieser Reihenfolge: explizites `image`-Prop, `ogRoute`-Prop (setzen `BlogLayout`/`CaseStudyLayout`), Pfad-Auto-Erkennung für die statischen Seiten (Liste in `resolveOgRoute()`), sonst `/icon-512.png`. Eine neue statische Seite mit eigenem OG-Bild braucht Einträge an **beiden** Stellen (og-Route und `resolveOgRoute`).
+**OG-Images werden zur Build-Zeit gerendert** (astro-og-canvas, `pages/og/[...route].ts`). Die Route baut ein `pages`-Objekt aus allen nicht-draft Blog-Artikeln und Case Studies plus allen `loesungen` und festen Einträgen für `index`, `blog`, `tools`, `case-studies`, `leistungen`, `loesungen`. `layouts/Layout.astro` wählt das Bild in dieser Reihenfolge: explizites `image`-Prop, `ogRoute`-Prop (setzen `BlogLayout`/`CaseStudyLayout`/`LoesungLayout`), Pfad-Auto-Erkennung für die statischen Seiten (Liste in `resolveOgRoute()`), sonst `/icon-512.png`. Eine neue statische Seite mit eigenem OG-Bild braucht Einträge an **beiden** Stellen (og-Route und `resolveOgRoute`).
 
-Der OG-Schritt lädt beim Build Schriften von `api.fontsource.org` nach (astro-og-canvas). Ohne Netz oder in Sandboxes, die den Host blocken, bricht `astro build` mit `Cannot read properties of null (reading 'countFamilies')` ab. Das ist kein Repo-Fehler; in GitHub Actions läuft der Build durch.
+Die OG-Schriften liegen seit 2026-09-26 lokal (`src/assets/og-fonts/`), der Build braucht dafür kein Netz mehr. Wer die `fonts`-Option in der OG-Route entfernt, holt sich den Download von `api.fontsource.org` zurück, der in Sandboxes mit `Cannot read properties of null (reading 'countFamilies')` scheitert.
 
 **Suche läuft über Pagefind, nur nach Full-Build.** `BlogLayout.astro` markiert Artikel mit `data-pagefind-body`; die Blog-Index-Seite lädt `/pagefind/pagefind.js` zur Laufzeit. Im Dev-Server und bei `build:fast` existiert der Index nicht, die Suche loggt dann nur eine Warnung. Das ist kein Bug.
 
-**Zentrale Konfiguration:** `src/config/site.ts` hält externe URLs (LinkedIn, Formspree-Formular, Buttondown-Endpoint), Site-Metadaten und den Verfügbarkeits-Status (`available` / `limited` / `booked`) für den Header-Indikator. Dort ändern, nicht in einzelnen Komponenten. `src/lib/media.ts` (`hasMedia()`) prüft zur Build-Zeit, ob ein Higgsfield-Asset in `public/media/` liegt; Komponenten rendern sonst einen Fallback-Verlauf (Details unten).
+**Zentrale Konfiguration:** `src/config/site.ts` hält externe URLs (LinkedIn, Formspree-Formular, Buttondown-Endpoint, `termin`, `loesungen`), `terminUrl()`, `pakete` (Namen, Preise, Anker), `funnelEvents`, Site-Metadaten und den Verfügbarkeits-Status (`available` / `limited` / `booked`) für den Header-Indikator. Dort ändern, nicht in einzelnen Komponenten. `src/lib/media.ts` (`hasMedia()`) prüft zur Build-Zeit, ob ein Higgsfield-Asset in `public/media/` liegt; Komponenten rendern sonst einen Fallback-Verlauf (Details unten).
 
 **Layouts:** `Layout.astro` ist die Hülle (Head, Meta, Canonical, OG, Filmkorn-Overlay, Fonts). `BlogLayout` und `CaseStudyLayout` wrappen es; Header und Footer werden pro Seite eingebunden, nicht im Layout. Interne Links nutzen `import.meta.env.BASE_URL` als Präfix. Path-Alias `@/*` → `src/*` ist in `tsconfig.json` definiert.
 
@@ -186,9 +201,9 @@ Der OG-Schritt lädt beim Build Schriften von `api.fontsource.org` nach (astro-o
 
 **Higgsfield-Visuals:** Die Seite sucht zur Build-Zeit nach Dateien in `website/public/media/` (`src/lib/media.ts` → `hasMedia()`). Fehlt eine Datei, rendert `MediaImage.astro` bzw. der Hero einen ruhigen Verlauf. Slots: `hero.mp4`/`hero.webm`/`hero-poster.jpg` (Startseite), `about.jpg` (Über mich, am besten echtes Porträt), `paket-check.jpg`/`paket-pilot.jpg`/`paket-begleitung.jpg`/`paket-tagessatz.jpg` (`/leistungen`), `kontakt.jpg` (Kontakt-Hintergrund). Alle Prompts, Formate und der Style-Block stehen in `reference/higgsfield-briefing.md`. Aktuell liegt noch kein Asset im Ordner.
 
-**Sektionen (Startseite):** Hero (Video-Slot, Proof-Leiste) · Über mich (Bild-Slot + Text) · Leistungen (nummerierte Stufen 01–03 + Tagessatz-Hinweis) · So läuft ein Projekt (Link zu `/case-studies`) · Newsletter · Werkzeuge · Blog (Listenansicht, 4 Artikel) · Kontakt (Split: Text + Formular, Bild-Slot)
+**Sektionen (Startseite):** Hero (Video-Slot, Proof-Leiste, zweiter Button führt zu `/loesungen`) · Über mich (Bild-Slot + Text) · Leistungen (nummerierte Stufen 01–03 + Tagessatz-Hinweis) · Lösungen (4 Top-Use-Cases nach `prio`, Link zum Finder) · So läuft ein Projekt (Link zu `/case-studies`) · Newsletter · Werkzeuge · Blog (Listenansicht, 4 Artikel) · Kontakt (Split: Text + Formular, Bild-Slot)
 
-**Eigene Unterseiten:** `/leistungen` (Pakete & Preise, alternierend Bild/Text) · `/case-studies` (im Menü "Projekte") · `/tools` · `/blog` · `/kontakt` (Redirect)
+**Eigene Unterseiten:** `/loesungen` (Use-Case-Finder + filterbare Bibliothek, 26 Einträge, im Menü an erster Stelle) · `/loesungen/<slug>` (`LoesungLayout`: Problem-Kasten, Fakten-Sidebar, Paket-Karte mit Anfrage-CTA, verwandte Lösungen) · `/leistungen` (Pakete & Preise, alternierend Bild/Text) · `/case-studies` (im Menü "Projekte") · `/tools` · `/blog` · `/danke` (drei konkrete nächste Schritte statt nur Dank) · `/kontakt` (Redirect)
 
 **Logo:** Neue Wortmarke in `src/components/Logo.astro` (Inline-SVG): geometrisches Monolinien-B auf Amber-Kachel + "Busche Cloud" in Bricolage Grotesque. Header und Footer nutzen die Komponente. Favicon und App-Icons sind aus derselben Marke gerastert: `public/favicon.svg` (Quelle), `favicon-32.png`, `apple-touch-icon.png`, `icon-192.png`, `icon-512.png`, `icon-maskable-512.png` (Marke auf Anthrazit mit Safe-Zone). Die alte Wolke liegt nur noch archiviert in `reference/`.
 
@@ -204,7 +219,7 @@ Der OG-Schritt lädt beim Build Schriften von `api.fontsource.org` nach (astro-o
 
 **Neue Seite `/leistungen`:** Zeigt vier Consulting-Pakete aus `outputs/consulting-angebot.md` mit Preisen (KI-Readiness-Check €299, KI-Pilot-Projekt ab €2.500, Laufende KI-Begleitung ab €1.200/Monat, Tagessatz €1.200–1.800/Tag — angehoben 2026-09-14), inkl. Discovery-Call-Erklärung. Verlinkt von Header, Footer, Hero und Leistungs-Teaser auf der Startseite.
 
-**Newsletter als Haupt-CTA:** Eigene Newsletter-Sektion auf der Startseite (nach dem Leistungs-Teaser), `NewsletterSignup`-Komponente (Buttondown). Discovery-Call/Kontaktformular bleibt sekundärer CTA — Cal.com ist noch nicht eingerichtet, alle "Erstgespräch"-Links zeigen weiterhin auf `/#kontakt`.
+**Newsletter als Haupt-CTA:** Eigene Newsletter-Sektion auf der Startseite (nach dem Leistungs-Teaser), `NewsletterSignup`-Komponente (Buttondown). Discovery-Call/Kontaktformular bleibt sekundärer CTA. Cal.com ist noch nicht eingerichtet, alle "Erstgespräch"-Links laufen über `terminUrl()` und zeigen auf `/#kontakt`; der Wechsel ist eine Zeile in `config/site.ts`.
 
 **Case Studies:** `beispiel-ki-pilot.md` ist sichtbar (`draft: false`), Titel trägt Präfix "Beispielprojekt:" zur klaren Kennzeichnung, da es noch keine echte, freigegebene Case Study gibt. Zweite Case Study `rag-demo-quellenbelegter-chatbot.md` (2026-09-19): eigenes technisches Showcase-Projekt (RAG-Pipeline aus `/Users/mabu/Documents/demo-rag`), Titel-Präfix "Showcase:", im Text als "Showcase, kein Kundenprojekt" gekennzeichnet.
 
@@ -223,7 +238,7 @@ Der OG-Schritt lädt beim Build Schriften von `api.fontsource.org` nach (astro-o
 - `chatgpt-vs-claude-unternehmen` — ChatGPT vs Claude Vergleich
 - `ki-prozesse-identifizieren` — 5 Zeichen für KI-geeignete Prozesse (überarbeitet: keine persönlichen Beispiele, allgemein bekannte Referenzen)
 - `nordvpn-sicher-arbeiten` — Warum ein VPN heute zum Arbeitsalltag gehört (inkl. NordVPN Affiliate-Link)
-- `mein-ki-toolkit` — Persönliches Tool-Setup
+- `mein-ki-toolkit` — Persönliches Tool-Setup (**Achtung:** steht seit Commit 252bee1 auf `draft: true`, ist also nicht live. Sechs Artikel verlinkten darauf, seit 2026-09-26 zeigen diese Links auf `/tools`. Entscheiden: Artikel überarbeiten und live stellen oder aus dieser Liste streichen.)
 - `ki-strategie-erste-schritte` — KI-Strategie Einsteigerguide
 - `sap-ki-integration` — SAP + KI Praxis
 - `mein-ki-os` — KI-Betriebssystem (inkl. Garrit Wilson / KIPA Credit)
@@ -259,7 +274,11 @@ Neu 2026-09-14, abgeleitet aus Transkript-Analyse (`context/strategy.md`): `eu-a
 
 **Discovery-Call-Leitfaden:** `outputs/discovery-call-leitfaden.md` (neu, 2026-09-14) — Gesprächsstruktur fürs kostenlose Erstgespräch, inkl. "Effizienz vor Kreativität"-Erwartungssteuerung und BAFA-Förderhinweis.
 
-**Lead-Funnel-Autopilot-Prompt:** `outputs/prompt-lead-funnel-autopilot.md` (neu, 2026-09-26) — fertiger Prompt für eine Fable-5.1-Session, die Website-Ziel erkennt, Lead-Funnel (Use-Case-Finder, Use-Case-Bibliothek, Lead-Magnet, Tracking) und PR-Build-Check selbstständig umsetzt und pro Use-Case eine interne Schritt-für-Schritt-Anleitung unter `outputs/loesungswege/` anlegt.
+**Lead-Funnel-Autopilot-Prompt:** `outputs/prompt-lead-funnel-autopilot.md` (2026-09-26) — fertiger Prompt für eine Fable-5.1-Session, die Website-Ziel erkennt, Lead-Funnel und PR-Build-Check umsetzt. **Am 2026-09-26 ausgeführt**, Ergebnisbericht in `outputs/lead-funnel-autopilot-bericht.md`.
+
+**Lead-Funnel (umgesetzt 2026-09-26):** Der Weg Besucher → Kunde ist jetzt durchgängig: Blog-Artikel enden in passenden Lösungen (`LoesungTeaser`) → `/loesungen` mit Use-Case-Finder (drei Klicks, drei Lösungen) → Lösungsseite mit Paket-Karte → Erstgespräch-CTA mit vorbelegtem Kontaktformular → `/danke` mit nächsten Schritten. Lead-Magnet im Finder (ausführliche Fassung per E-Mail) über Buttondown mit Tag. Fünf Funnel-Ereignisse in GoatCounter. Readiness-Check (€299) als Abschluss an jedem Funnel-Ende. Details zur Technik im Architektur-Abschnitt oben.
+
+**Lösungswege (intern, `outputs/loesungswege/`, 2026-09-26):** 26 Schritt-für-Schritt-Anleitungen, eine pro Website-Use-Case, plus `_betriebsstandard.md` (Repo-Struktur, Umgebungen test/prod, Prompt-Regressionstests, Pipeline mit Approval, Secrets, Entscheidungsprotokoll, Alarme, Rollback, Runbook, Übergabe) und `INDEX.md` (Slug ↔ Anleitung ↔ Paket ↔ Status). Neun Abschnitte pro Anleitung, Abschnitt 5 behandelt Deployment und CI/CD beim Kunden. Preise in Abschnitt 8 folgen `outputs/consulting-angebot.md`. Status überall "Anleitung fertig", noch nichts beim Kunden erprobt.
 
 **Testimonial-Vorlage:** `outputs/testimonial-vorlage.md` (neu, 2026-09-14) — Interview-Leitfaden und Veröffentlichungs-Struktur für Kundenstimmen (Kunde erzählt in eigenen Worten statt Anbieter-Case-Study). Einsatzbereit, sobald erstes echtes Projekt abgeschlossen ist.
 
@@ -293,6 +312,10 @@ Neu 2026-09-14, abgeleitet aus Transkript-Analyse (`context/strategy.md`): `eu-a
 Invarianten (nie ändern ohne bewussten Grund): Score = Zeitaufwand × Automatisierbarkeit × Umsetzbarkeit (Produkt, 1–125, Schwellen 60/20), Std./Woche als Erfassungseinheit, max. 3 Bereiche, 7 Leitfragen.
 
 **Noch ausstehend:**
+- Buttondown: Tag `use-case-finder` anlegen und eine Automation "Willkommens-Mail für Tag use-case-finder" mit der ausführlichen Fassung der Lösungen (Link auf `/loesungen` plus PDF oder Text) einrichten. Bis dahin bekommen Finder-Abonnenten nur die Bestätigungsmail. Metadaten `finder_*` kommen mit und stehen im Abonnenten-Profil.
+- GoatCounter: Events-Ansicht prüfen (Pfade `ev/finder_gestartet` usw. erscheinen nach den ersten Klicks), optional als Dashboard-Filter speichern.
+- `mein-ki-toolkit` entscheiden: live stellen oder aus der Live-Liste streichen (siehe Blog-Artikel).
+- Pull Request [mawo86/portfolio#1](https://github.com/mawo86/portfolio/pull/1) reviewen und mergen; danach läuft `pr-check.yml` bei jedem weiteren PR.
 - `paket-tagessatz.jpg` und `kontakt.jpg` generieren, sobald wieder Credits verfügbar sind (Prompts bereits in `reference/higgsfield-briefing.md`)
 - `hero.mp4` + `hero-poster.jpg`: Video braucht Higgsfield-Plan-Upgrade (Free-Plan reicht nicht, ~56 Credits/Video) oder Credit-Top-up
 - `about.jpg` durch ein echtes Porträt ersetzen (aktuell nur Umgebungsbild als Übergangslösung)

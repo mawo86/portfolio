@@ -12,7 +12,9 @@
 | Kontaktformular | Formspree (xgopevdy) → marlonbusche86@gmail.com |
 | Newsletter | Buttondown (Username: buschecloud, Embed-Formular aktiv) |
 | RSS-Feed | /rss.xml (automatisch generiert via @astrojs/rss) |
-| Analytics | GoatCounter (cookieless, DSGVO-konform) |
+| Analytics | GoatCounter (cookieless, DSGVO-konform), seit 2026-09-26 mit fünf Funnel-Events (`ev/finder_gestartet`, `ev/finder_abgeschlossen`, `ev/leadmagnet_angefordert`, `ev/formular_gesendet`, `ev/paket_cta_geklickt`) |
+| CI | `pr-check.yml` (Build, Link-Check, Größen-Budget auf jedem PR), `deploy.yml` mit Link-Check vor Deploy (seit 2026-09-26) |
+| Lead-Funnel | `/loesungen` mit Use-Case-Finder (26 Use-Cases), Blog-Ausleitung, vorbelegtes Kontaktformular, Danke-Seite mit nächsten Schritten (seit 2026-09-26) |
 
 ## Positionierung (seit 2026-09-13, geschärft 2026-09-14)
 
@@ -38,6 +40,8 @@ Komplette visuelle Neuausrichtung, um Marlon als KI-Experten zu positionieren st
 - Kontakt (Split: Text + Fakten links, Formular rechts, Bild-Slot `kontakt.jpg`; Formspree, Cal.com noch nicht eingerichtet)
 
 ## Eigene Unterseiten
+
+- **`/loesungen`** (neu 2026-09-26) — Use-Case-Finder (Branche, Bereich, Zeitproblem) plus filterbare Bibliothek mit 26 Lösungen über zehn Bereiche (Vertrieb, Kundenservice, Backoffice & Buchhaltung, HR, Einkauf & Logistik, Produktion & Technik, Geschäftsführung, SAP-Prozesse, Recht & Organisation, Technik & Betrieb). Jede Lösung mit Problem, Lösung, Aufwand, Effekt, Paket. Interne Umsetzungsanleitungen in `outputs/loesungswege/`.
 
 - **`/leistungen`** — Vier Pakete (KI-Readiness-Check €299, KI-Pilot-Projekt ab €2.500, Laufende KI-Begleitung ab €1.200/Monat, Tagessatz €1.200–1.800) alternierend mit Bild-Slots, Erstgespräch-Band oben, BAFA-Hinweis unten
 - **`/case-studies`** — zeigt das Beispielprojekt (`beispiel-ki-pilot.md`, Titel-Präfix "Beispielprojekt:") und seit 2026-09-19 das Showcase `rag-demo-quellenbelegter-chatbot.md` (Titel-Präfix "Showcase:", RAG-Pipeline-Demo aus `/Users/mabu/Documents/demo-rag`)
