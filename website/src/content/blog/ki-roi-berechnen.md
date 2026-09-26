@@ -3,7 +3,7 @@ title: "KI-ROI berechnen: So überzeugst du deinen Chef"
 description: "Wie du den Return on Investment für KI-Projekte konkret berechnen und intern verkaufen kannst. Mit einer einfachen Formel und echten Beispielzahlen."
 date: 2026-04-17
 tags: ["KI", "Strategie", "Unternehmen", "ROI"]
-draft: true
+draft: false
 category: "Strategie"
 ---
 

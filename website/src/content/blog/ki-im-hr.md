@@ -3,7 +3,7 @@ title: "KI im HR: Recruiting und Onboarding automatisieren"
 description: "Wie KI Recruiting, Bewerbungsscreening und Onboarding beschleunigt und wo die Grenzen zwischen Effizienz und menschlichem Urteil liegen."
 date: 2026-06-02
 tags: ["KI", "HR", "Recruiting", "Automatisierung"]
-draft: true
+draft: false
 category: "Branchen"
 ---
 
@@ -20,7 +20,7 @@ KI verändert HR. Nicht grundlegend, aber an den richtigen Stellen erheblich.
 
 ### Stellenausschreibungen schneller schreiben
 
-Gute Stellenausschreibungen sind klar, ehrlich und ansprechen die richtige Zielgruppe. Viele HR-Teams kämpfen damit, weil es Zeit braucht, einen neutralen, einladenden Text zu schreiben.
+Gute Stellenausschreibungen sind klar, ehrlich und sprechen die richtige Zielgruppe an. Viele HR-Teams kämpfen damit, weil es Zeit braucht, einen neutralen, einladenden Text zu schreiben.
 
 KI generiert einen ersten Entwurf. Du beschreibst die Rolle, die Anforderungen und die Unternehmenskultur. Claude oder ChatGPT formuliert einen Entwurf, den du überarbeitest. Aus zwei Stunden werden 30 Minuten.
 
@@ -30,7 +30,7 @@ Bei vielen Bewerbungen: Wer hat die Mindestanforderungen erfüllt? Was sind die 
 
 KI kann Bewerbungsunterlagen auf definierte Kriterien prüfen und eine erste Sortierung vornehmen. Wichtig dabei: KI trifft keine Entscheidungen, sie schlägt vor. Der Mensch entscheidet.
 
-Noch wichtiger: Datenschutz. Bewerberdaten sind besonders sensibel. Nur Tools mit entsprechenden Datenschutzverträgen und klarer DSGVO-Konformität einsetzen. Details dazu im Artikel [Welche Daten darf ich in KI-Tools eingeben?](/blog/ki-daten-eingeben).
+Noch wichtiger: Recht. Bewerberdaten sind besonders sensibel, und KI-gestützte Bewerberauswahl zählt im EU AI Act zu den Hochrisiko-Anwendungen (Anhang III, Pflichten ab Dezember 2027). Was das heißt, steht im Artikel [EU AI Act für den Mittelstand](/blog/eu-ai-act-mittelstand). Nur Tools mit entsprechenden Datenschutzverträgen und klarer DSGVO-Konformität einsetzen. Details dazu im Artikel [Welche Daten darf ich in KI-Tools eingeben?](/blog/ki-daten-eingeben).
 
 ### Interview-Vorbereitung
 

@@ -3,11 +3,11 @@ title: "Warum KI-Projekte scheitern und wie du es von Anfang an vermeidest"
 description: "Die meisten KI-Projekte liefern keine messbaren Ergebnisse. Warum, und was Unternehmen konkret anders machen müssen, bevor sie starten."
 date: 2026-05-22
 tags: ["KI", "Strategie", "Fehler", "Unternehmen"]
-draft: true
+draft: false
 category: "Strategie"
 ---
 
-Laut Studien liefern 70-85 % aller KI-Projekte nicht die erwarteten Ergebnisse.
+Je nach Studie liefern 80 bis 95 % aller KI-Projekte nicht die erwarteten Ergebnisse. RAND zählte 2024 über 80 % gescheiterte Vorhaben, das MIT (NANDA-Report, 2025) fand bei 95 % der GenAI-Piloten keinen messbaren Ergebnisbeitrag.
 
 Das ist keine Kritik an der Technologie. Es ist eine Kritik an der Erwartungshaltung und der Vorgehensweise.
 

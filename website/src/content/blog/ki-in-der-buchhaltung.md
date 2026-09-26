@@ -3,13 +3,13 @@ title: "KI in der Buchhaltung: Was heute schon geht und was noch nicht"
 description: "Rechnungsverarbeitung, Kostenstellen-Zuweisung, Reporting: Was KI in der Buchhaltung heute zuverlässig kann und wo die Grenzen sind."
 date: 2026-05-15
 tags: ["KI", "Buchhaltung", "Automatisierung", "Finance"]
-draft: true
+draft: false
 category: "Branchen"
 ---
 
 Buchhaltung ist prädestiniert für KI. Strukturierte Daten, wiederkehrende Prozesse, klare Regeln, und trotzdem enorme manuelle Aufwände.
 
-Ich sage das nicht als Außenstehender. Ich habe jahrelang mit SAP FI/CO gearbeitet und weiß, wie viel Zeit in Prozessen steckt, die eigentlich automatisiert sein könnten.
+Ich sage das nicht als Außenstehender. Ich habe jahrelang im SAP-Umfeld gearbeitet, auch mit FI/CO, und weiß, wie viel Zeit in Prozessen steckt, die eigentlich automatisiert sein könnten.
 
 <figure>
   <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80" alt="Finanzdaten auf Bildschirmen, Taschenrechner und Unterlagen" />

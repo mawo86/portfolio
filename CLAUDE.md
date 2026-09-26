@@ -228,31 +228,19 @@ Die OG-Schriften liegen seit 2026-09-26 lokal (`src/assets/og-fonts/`), der Buil
 
 **Retention:** Neue Komponente `RelatedPosts.astro` zeigt am Ende jedes Blog-Artikels 2–3 thematisch verwandte Artikel (gleiche Kategorie, Fallback auf neueste). Eingebunden in `BlogLayout.astro` nach der Prev/Next-Navigation.
 
-**Blog:** 12 Artikel live, 22 Drafts in der Pipeline (KW16–25). Blog-Index-Seite (`/blog`) hat NYT-inspiriertes Editorial-Design mit Kategorie-Navigation und Pagination. Artikel-Layout (`BlogLayout.astro`) mit Lesezeit, JSON-LD, Prev/Next-Navigation, RelatedPosts, Newsletter-CTA und Autor-Karte. `@tailwindcss/typography` ist installiert und aktiviert.
+**Blog:** 34 Artikel live, keine Drafts mehr (alle 22 Pipeline-Artikel am 2026-09-26 reviewt und veröffentlicht). Blog-Index-Seite (`/blog`) hat NYT-inspiriertes Editorial-Design mit Kategorie-Navigation und Pagination. Artikel-Layout (`BlogLayout.astro`) mit Lesezeit, JSON-LD, Prev/Next-Navigation, RelatedPosts, Newsletter-CTA und Autor-Karte. `@tailwindcss/typography` ist installiert und aktiviert.
 
-**Blog-Styling:** Artikel nutzen `blog-artikel` + `meine-stimme` Skills für konsistente Formatierung: Blockquotes als Callout-Boxen, Unsplash-Bilder via `<figure>/<figcaption>`, keine em-dashes im Fließtext, keine `---` Trenner.
+**Blog-Styling:** Artikel nutzen `blog-artikel` + `meine-stimme` Skills für konsistente Formatierung: Blockquotes als Callout-Boxen, Unsplash-Bilder via `<figure>/<figcaption>`, keine em-dashes im Fließtext, keine `---` Trenner. `npm run check:style` prüft das für alle veröffentlichten Inhalte.
 
-**Blog-Kategorien:** Jeder Artikel hat ein `category`-Feld im Frontmatter. Kategorien: Strategie, Automatisierung, Grundlagen, Branchen, Tools & Setup, SAP & Enterprise, Datenschutz, Erfahrungsbericht. Blog-Index zeigt Kategorie-Tabs + Pagination (8 Artikel/Seite).
+**Blog-Kategorien:** Jeder Artikel hat ein `category`-Feld im Frontmatter. Kategorien: Strategie, Automatisierung, Grundlagen, Branchen, Tools & Setup, SAP & Enterprise, Datenschutz, Erfahrungsbericht. Blog-Index zeigt Kategorie-Tabs + Pagination (8 Artikel/Seite, clientseitig).
 
-**Blog-Artikel (live, 12 Stück):**
-- `ki-automatisierung-mittelstand` — KI-Automatisierung im Mittelstand
-- `app-bauen-ohne-programmierer` — App gebaut ohne Entwickler-Background (inkl. Garrit Wilson / KI PIONIER Credit)
-- `idee-validieren-mit-ki` — Idee in 2h mit KI prüfen
-- `chatgpt-vs-claude-unternehmen` — ChatGPT vs Claude Vergleich
-- `ki-prozesse-identifizieren` — 5 Zeichen für KI-geeignete Prozesse (überarbeitet: keine persönlichen Beispiele, allgemein bekannte Referenzen)
-- `nordvpn-sicher-arbeiten` — Warum ein VPN heute zum Arbeitsalltag gehört (inkl. NordVPN Affiliate-Link)
-- `mein-ki-toolkit` — Persönliches Tool-Setup (war von Commit 252bee1 bis 2026-09-26 versehentlich auf `draft: true`, seit 2026-09-26 wieder live; die sechs internen Links aus anderen Artikeln zeigen wieder auf den Artikel)
-- `ki-strategie-erste-schritte` — KI-Strategie Einsteigerguide
-- `mein-ki-os` — KI-Betriebssystem (inkl. Garrit Wilson / KIPA Credit)
-- `mein-ki-toolkit`, `n8n-erster-workflow`, `prompts-die-funktionieren`, `ki-automatisierung-mittelstand`, `app-bauen-ohne-programmierer` und die übrigen Live-Artikel sind seit 2026-09-26 frei von Gedankenstrichen (`check:style`)
-- `prompts-die-funktionieren` — 5 Prompts aus dem echten Alltag
-- `n8n-erster-workflow` — n8n Einstieg Schritt-für-Schritt (war von Commit 252bee1 bis 2026-09-26 versehentlich auf `draft: true`, seit 2026-09-26 wieder live)
-- `ein-jahr-ki` — Ein Jahr KI im Alltag: Erfahrungsbericht (fundamental überarbeitet 2026-04-21)
+**Blog-Artikel (live, 34 Stück):**
+- Erste Welle (bis 2026-04-21): `ki-automatisierung-mittelstand`, `app-bauen-ohne-programmierer` (inkl. Garrit Wilson / KI PIONIER Credit), `idee-validieren-mit-ki`, `chatgpt-vs-claude-unternehmen`, `ki-prozesse-identifizieren` (keine persönlichen Beispiele, allgemein bekannte Referenzen), `nordvpn-sicher-arbeiten` (NordVPN Affiliate-Link), `mein-ki-toolkit`, `ki-strategie-erste-schritte`, `mein-ki-os` (inkl. Garrit Wilson / KIPA Credit), `prompts-die-funktionieren`, `n8n-erster-workflow`, `ein-jahr-ki` (fundamental überarbeitet 2026-04-21). `mein-ki-toolkit` und `n8n-erster-workflow` waren von Commit 252bee1 bis 2026-09-26 versehentlich auf `draft: true`.
+- Zweite Welle (Datum 2026-04-06 bis 2026-06-19, veröffentlicht 2026-09-26 mit den ursprünglich geplanten Daten): `sap-ki-integration`, `sprachmodell-erklaert`, `ki-roi-berechnen`, `ki-fehler-einfuehrung`, `ki-angst-im-team`, `ki-glossar-entscheider`, `zapier-vs-n8n`, `ki-im-kundenservice`, `ki-und-dsgvo`, `ki-daten-eingeben`, `eu-ai-act-mittelstand`, `ki-im-vertrieb`, `ki-in-der-buchhaltung`, `erster-ki-pilot`, `ki-projekte-scheitern`, `email-automatisierung-ki`, `ki-im-hr`, `microsoft-copilot-bewertung`, `ki-team-aufbauen`, `ki-sap-fico`, `ki-jobs-zukunft`, `ki-jobs-mittelstand-zahlen`.
 
-**Blog-Drafts (draft: true, KW16–25, 22 Artikel):**
-sap-ki-integration (in älteren Notizen als live geführt, ist aber `draft: true`), sprachmodell-erklaert, ki-roi-berechnen, ki-fehler-einfuehrung, ki-glossar-entscheider, zapier-vs-n8n, ki-im-kundenservice, eu-ai-act-mittelstand, email-automatisierung-ki, erster-ki-pilot, ki-angst-im-team, ki-projekte-scheitern, ki-team-aufbauen, ki-und-dsgvo, ki-daten-eingeben, ki-im-vertrieb, ki-in-der-buchhaltung, ki-im-hr, ki-sap-fico, microsoft-copilot-bewertung, ki-jobs-zukunft, ki-jobs-mittelstand-zahlen
+**Review der zweiten Welle (2026-09-26), was korrigiert wurde und warum:** Studienangabe in `ki-jobs-mittelstand-zahlen` (Brynjolfsson/Chandar/Chen, Stanford, August 2025, 13 % relativ bzw. 16 % bereinigt bei 22- bis 25-Jährigen in KI-exponierten Berufen; vorher falsch MIT/Autor 2024 zugeschrieben). EU-AI-Act-Zeitlinie in `eu-ai-act-mittelstand` und `ki-im-hr` (gilt seit August 2026, Anhang III ab Dezember 2027). Erfundene Kundenanekdote in `ki-im-kundenservice` durch Rechenbeispiel und Stanford/MIT-Feldstudie ersetzt. `ki-glossar-entscheider` hatte 19 statt 20 Begriffe (Embedding ergänzt), Modellnamen aktualisiert. `zapier-vs-n8n`: n8n als Fair-Code statt Open Source, n8n Cloud richtig eingeordnet, Zapier 7.000+ Apps. `microsoft-copilot-bewertung`: Produktname "Microsoft 365 Copilot", Modelle aktualisiert (auch Claude seit Herbst 2025), Business-Lizenz, Pilotkosten 450 bis 900 Euro. `ki-daten-eingeben`: WhisperFlow-Aussage (lokal, Meeting-Rekorder) durch hedged Formulierung ersetzt, Produktnamen Claude Team/Enterprise. `ki-projekte-scheitern`: Scheiterquote mit RAND 2024 und MIT NANDA 2025 belegt. `sap-ki-integration`: Joule-Einschätzung aktualisiert. Regel für künftige Artikel: keine Kundenanekdoten, solange es kein echtes Kundenprojekt gibt; Zahlen mit Quelle oder als Erfahrungswert kennzeichnen.
 
-Neu 2026-09-14, abgeleitet aus Transkript-Analyse (`context/strategy.md`): `eu-ai-act-mittelstand` (EU AI Act, dm-Chef-Interview als Aufhänger, Kategorie Datenschutz) und `ki-jobs-mittelstand-zahlen` (belegte 16%-Entry-Level-Zahl vs. Mittelstand-Realität, Kategorie Strategie).
+Herkunft 2026-09-14, abgeleitet aus Transkript-Analyse (`context/strategy.md`): `eu-ai-act-mittelstand` (EU AI Act, dm-Chef-Interview als Aufhänger, Kategorie Datenschutz) und `ki-jobs-mittelstand-zahlen` (Kategorie Strategie).
 
 **Neue Seiten & Features:**
 - `/tools` — Tools mit Affiliate-Links; Kategorien: KI & LLMs, Automatisierung, Hosting & Infrastruktur, Produktivität & Design, Sicherheit & Datenschutz, Entwicklung. Section-IDs für Anchor-Links gesetzt. Netlify, Miro hinzugefügt. NordVPN mit aktivem Affiliate-Link (go.nordvpn.net). Notion + Canva ohne Affiliate-Badge.
@@ -333,7 +321,7 @@ Invarianten (nie ändern ohne bewussten Grund): Score = Zeitaufwand × Automatis
 - Digitales Produkt erstellen (KW18, Empfehlung: PDF-Guide)
 - LinkedIn-Texte (`outputs/linkedin-optimierung.md`) auf Konsistenz mit neuer Positionierung prüfen und Profil aktualisieren
 - OG-Images pro Blog-Artikel erstellen
-- 22 Draft-Artikel reviewen und schrittweise live stellen (KW16–25); Gedankenstriche sind seit 2026-09-26 auch in allen Drafts bereinigt, `check:style` bleibt beim Live-Stellen grün
+- Neue Blog-Artikel schreiben: Die Pipeline ist seit 2026-09-26 leer (alle 22 Drafts live), Rhythmus laut `outputs/content-strategie.md` 2x/Monat
 - Testimonials-Sektion mit echten Kundenstimmen befüllen, sobald verfügbar (aktuell ausgeblendet, da leer) — Vorlage bereit: `outputs/testimonial-vorlage.md`
 - Echte Case Study nach erstem abgeschlossenen Consulting-Projekt einpflegen (ersetzt/ergänzt das Beispielprojekt) — Interview-Leitfaden bereit: `outputs/testimonial-vorlage.md`
 - Discovery-Call-Leitfaden (`outputs/discovery-call-leitfaden.md`) beim nächsten Erstgespräch anwenden und bei Bedarf nachschärfen

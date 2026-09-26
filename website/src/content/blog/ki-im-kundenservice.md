@@ -3,7 +3,7 @@ title: "KI im Kundenservice: Was wirklich funktioniert (und was nicht)"
 description: "KI im Kundenservice einsetzen, aber richtig. Wo Automatisierung echten Mehrwert schafft, wo sie schadet und was die häufigsten Fehler sind."
 date: 2026-05-01
 tags: ["KI", "Kundenservice", "Automatisierung", "Unternehmen"]
-draft: true
+draft: false
 category: "Branchen"
 ---
 
@@ -22,15 +22,13 @@ KI im Kundenservice ist kein Selbstläufer. Falsch eingesetzt frustriert sie Kun
 
 Eingehende E-Mails und Tickets werden von KI gelesen, kategorisiert und an die richtige Abteilung weitergeleitet. Kein manuelles Sortieren mehr.
 
-Ein Maschinenbauer, den ich kenne, bekommt täglich 150 Support-Anfragen. Früher hat ein Mitarbeiter morgens zwei Stunden damit verbracht, sie zu lesen und zuzuweisen. Heute macht das ein Automatisierungsworkflow. Der Mitarbeiter übernimmt nur noch Ausnahmen.
-
-Ergebnis: Reaktionszeit für kritische Anfragen sank von durchschnittlich 4 Stunden auf 45 Minuten.
+Rechenbeispiel für einen Maschinenbauer mit 150 Support-Anfragen am Tag: Ein Mitarbeiter braucht morgens zwei Stunden, um sie zu lesen und zuzuweisen. Übernimmt ein Automatisierungsworkflow die Vorsortierung, bleiben ihm die Ausnahmen. Kritische Anfragen landen nicht mehr nach Stunden, sondern nach Minuten beim richtigen Team, weil niemand mehr die Reihenfolge des Postfachs abarbeiten muss.
 
 ### Standard-Antworten vorschlagen
 
 Für die häufigsten Anfragen schlägt KI dem Mitarbeiter eine Antwort vor. Der Mitarbeiter prüft, passt an, sendet ab. Statt selbst zu schreiben: korrigieren.
 
-Das klingt nach einem kleinen Schritt. In der Praxis sind es 40-60 % schnellere Bearbeitungszeiten pro Ticket, weil der kognitive Aufwand des Schreibens wegfällt.
+Das klingt nach einem kleinen Schritt. Studien zu KI-Assistenz im Support (etwa die Stanford/MIT-Feldstudie von 2023 mit rund 5.000 Agenten) messen 14 % mehr gelöste Anfragen pro Stunde, bei unerfahrenen Mitarbeitern über 30 %. Der Grund: Der kognitive Aufwand des Formulierens fällt weg.
 
 ### Wissensbasis-Suche in Echtzeit
 

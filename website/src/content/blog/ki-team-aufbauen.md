@@ -3,7 +3,7 @@ title: "Wie du ein KI-Team aufbaust ohne einen einzigen KI-Experten einzustellen
 description: "KI-Kompetenz im Unternehmen aufbauen ohne teure Spezialisten. Welche Rollen wirklich zählen, wie du vorhandene Mitarbeiter entwickelst und was ein KI-Verantwortlicher tut."
 date: 2026-06-12
 tags: ["KI", "Organisation", "Führung", "Team"]
-draft: true
+draft: false
 category: "Strategie"
 ---
 

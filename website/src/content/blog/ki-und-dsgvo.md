@@ -3,7 +3,7 @@ title: "KI und DSGVO: Was du wissen musst, bevor du loslegst"
 description: "Welche DSGVO-Regeln gelten beim Einsatz von KI-Tools? Was ist erlaubt, was nicht, und wie schützt du dich und dein Unternehmen rechtlich?"
 date: 2026-05-05
 tags: ["KI", "DSGVO", "Datenschutz", "Unternehmen", "Recht"]
-draft: true
+draft: false
 category: "Datenschutz"
 ---
 
@@ -34,7 +34,7 @@ ChatGPT Free, Claude.ai ohne Enterprise-Vertrag, Google Gemini ohne Workspace-Ab
 
 **Business-/Enterprise-Versionen**
 
-ChatGPT Enterprise, Claude for Business, Microsoft Copilot 365 mit Enterprise-Konfiguration: Diese Versionen haben Datenverarbeitungsverträge (DPA), die klar regeln, dass deine Daten nicht für Training genutzt werden und in definierten Regionen verbleiben.
+ChatGPT Team oder Enterprise, Claude Team oder Enterprise, Microsoft 365 Copilot mit Enterprise-Konfiguration: Diese Versionen haben Datenverarbeitungsverträge (DPA), die klar regeln, dass deine Daten nicht für Training genutzt werden und in definierten Regionen verbleiben.
 
 Wenn du diese Verträge abgeschlossen und konfiguriert hast, ist die Rechtslage deutlich besser.
 

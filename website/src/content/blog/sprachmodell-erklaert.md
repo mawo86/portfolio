@@ -3,7 +3,7 @@ title: "Was ein Sprachmodell wirklich kann und was nicht"
 description: "Sprachmodelle wie ChatGPT und Claude sind keine Alleskönner. Was steckt wirklich dahinter, wo liegen die Grenzen, und was bedeutet das für Unternehmen?"
 date: 2026-04-14
 tags: ["KI", "Grundlagen", "Unternehmen", "Einstieg"]
-draft: true
+draft: false
 category: "Grundlagen"
 ---
 

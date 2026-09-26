@@ -3,7 +3,7 @@ title: "Dein erster KI-Pilot in 4 Wochen: Ein konkreter Fahrplan"
 description: "Wie du ein erstes KI-Projekt in vier Wochen umsetzt, das messbare Ergebnisse liefert und intern Vertrauen aufbaut. Mit konkretem Wochenplan."
 date: 2026-05-19
 tags: ["KI", "Strategie", "Pilot", "Anleitung"]
-draft: true
+draft: false
 category: "Strategie"
 ---
 
