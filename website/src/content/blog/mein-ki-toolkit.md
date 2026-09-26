@@ -38,7 +38,7 @@ Wenn ich bei einem Thema unsicher bin, lasse ich beide Modelle draufschauen. Die
 
 Open Source, self-hosted möglich, visuelle Oberfläche die auch komplexe Workflows übersichtlich hält. Ich baue damit Automatisierungen, die Daten zwischen Systemen bewegen, APIs anbinden und Prozesse orchestrieren.
 
-Der entscheidende Vorteil: Ich habe volle Kontrolle über meine Daten und bin nicht von einem Anbieter abhängig. Für Kunden, die Wert auf Datenschutz legen, ist das oft das ausschlaggebende Argument. Mehr zu n8n und den Alternativen steht auf der [Tools-Seite](/tools#automatisierung).
+Der entscheidende Vorteil: Ich habe volle Kontrolle über meine Daten und bin nicht von einem Anbieter abhängig. Für Kunden, die Wert auf Datenschutz legen, ist das oft das ausschlaggebende Argument. Wie du deinen ersten Workflow baust, zeigt der Artikel [n8n: Dein erster Workflow in 30 Minuten](/blog/n8n-erster-workflow).
 
 ## Zapier
 
