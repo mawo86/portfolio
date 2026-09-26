@@ -46,7 +46,8 @@ Claude sollte sich immer über `/prime` am Session-Start orientieren, dann mit v
 │   └── current-data.md    # Metriken und Projektstatus
 ├── plans/                 # Implementierungspläne erstellt von /create-plan
 ├── outputs/               # Arbeitsergebnisse und Deliverables
-│   └── loesungswege/      # Interne Schritt-für-Schritt-Anleitungen pro Use-Case (nie auf die Website)
+│   ├── loesungswege/      # Interne Schritt-für-Schritt-Anleitungen pro Use-Case (nie auf die Website)
+│   └── produkte/          # Produktportfolio: README (Familien, Preislogik, Build-Reihenfolge) + 26 Produktkarten
 ├── reference/             # Referenzmaterialien (git-ignoriert)
 │   ├── higgsfield-briefing.md  # Prompts, Formate und Dateinamen für alle Visual-Slots
 │   ├── logo.png / logo.jpg / icon_*.png  # Alte Wolken-Marke, nur noch Archiv
@@ -281,6 +282,8 @@ Neu 2026-09-14, abgeleitet aus Transkript-Analyse (`context/strategy.md`): `eu-a
 - Quellen stehen **nur intern**: `outputs/loesungswege/_belege.md` (Belegtabelle pro Lösung mit Prüftiefe V/S/E) und Abschnitt 10 jeder Anleitung. Kein Schema-Feld, keine Quellenliste auf der Website (bewusste Entscheidung Marlons).
 - Prüftiefe: Die Sandbox konnte die meisten Quellseiten nicht abrufen, Belege stammen aus Suchergebnis-Auszügen (Stufe S). Vor dem ersten Kundengespräch zu einer Lösung die Quellen aus Abschnitt 10 einmal selbst öffnen.
 - Korrigiert: EU-AI-Act-Fristen (Anhang III seit Digital Omnibus VO (EU) 2026/1744 erst ab 02.12.2027), Bestell-API (V2 abgekündigt, V4 `api_purchaseorder_2`), Betriebsrats-Aussagen (ArbG Hamburg 24 BVGa 1/24 differenziert). Neu geprüft und bestätigt: API_SALES_ORDER_SRV, API_CUSTOMER_MATERIAL_SRV, API_SUPPLIERINVOICE_PROCESS_SRV, API_MAINTNOTIFICATION, API_SUPPLIERQUOTATION, BAPI_SALESORDER_CREATEFROMDAT2.
+
+**Produktportfolio (2026-09-26, `outputs/produkte/`):** Jeder der 26 Use-Cases hat eine Produktkarte (Versprechen, Lieferform, Box-Inhalt, Anbindung mit Aufwand, Voraussetzungen, Einregelung, Preis einmalig/laufend, Fertig-Grad 1 bis 5, Wettbewerb, Risiken, Build-Aufwand, Status). `README.md` bündelt acht Produktfamilien mit gemeinsamen Bausteinen (Belegpilot, Postfach-Pilot, Wissensbox, Sprachnotiz, Finanzpilot, Stammdaten-Radar, Betriebspaket, Beratungs-Kits), Preislogik, Marktplatz-Einschätzung und Build-Reihenfolge. Rahmenbedingungen aus der Recherche, die jedes Produkt prägen: n8n-Lizenz (Kunde betreibt n8n selbst, ich liefere Blueprint, Anbindung und Betrieb als Dienstleistung; kein White-Label ohne Embed-Lizenz ab ca. 50.000 USD/Jahr), Anthropic (kein Weiterverkauf von API-Zugang, Kunde bringt eigenen Schlüssel), Teams-Bots als Single-Tenant-Custom-App je Kunde. Noch nichts davon auf der Website; erst nach dem ersten laufenden Kunden bekommt die Lösungsseite einen Abschnitt "Als fertiges Paket".
 
 **Lead-Funnel (umgesetzt 2026-09-26):** Der Weg Besucher → Kunde ist jetzt durchgängig: Blog-Artikel enden in passenden Lösungen (`LoesungTeaser`) → `/loesungen` mit Use-Case-Finder (drei Klicks, drei Lösungen) → Lösungsseite mit Paket-Karte → Erstgespräch-CTA mit vorbelegtem Kontaktformular → `/danke` mit nächsten Schritten. Lead-Magnet im Finder (ausführliche Fassung per E-Mail) über Buttondown mit Tag. Fünf Funnel-Ereignisse in GoatCounter. Readiness-Check (€299) als Abschluss an jedem Funnel-Ende. Details zur Technik im Architektur-Abschnitt oben.
 
