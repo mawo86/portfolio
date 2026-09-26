@@ -192,23 +192,25 @@ Die OG-Schriften liegen seit 2026-09-26 lokal (`src/assets/og-fonts/`), der Buil
 
 **Browser-Preview:** `.claude/launch.json` (Projekt-Root) startet den Dev-Server mit `npm run dev --prefix website` auf Port 4321. In Claude Code via `preview_start` mit Name `website-dev`.
 
-**Design-System (Rebranding "Cinematic Dark", 2026-09-17):**
-- Grund: warmes Anthrazit (`ink-900` #121110, `ink-950` #0B0A09, Flächen `ink-800`), kein Navy mehr
-- Text: warmes Off-White (`bone-50` #F5F1EA, `bone-200`, `bone-400`, `bone-600`)
-- Akzent: Amber/Kupfer (`brand-*`, Kern #E08A1E). Eine Signalfarbe, sparsam. Kein Blau.
-- Tailwind `gray` ist auf eine warme Skala überschrieben, damit ältere gray-Klassen (Impressum, Datenschutz) automatisch passen
-- Display-Font: Bricolage Grotesque (variable, self-hosted in `public/fonts/`, Klasse `font-display`), Body: Inter, Mono: JetBrains Mono
-- Filmkorn-Overlay per `body::before` in `Layout.astro`, Buttons als Pills (`rounded-full`, primär `bg-bone-50 text-ink-950`, Hover Amber)
-- Keine Glas-Karten, keine Blur-Blobs, keine Gradient-Headlines mehr. Sektionen mit Linien und großer Typo, Karten nur wo nötig (`bg-ink-800`)
-- Tokens in `website/tailwind.config.mjs`
+**Design-System ("Material Light", Google-inspiriert, seit 2026-09-26; davor "Cinematic Dark" 2026-09-17):**
+- Grund: Weiß (`ink-900` #FFFFFF), Tonfläche für Karten und Container `ink-800` #F0F4F9, `ink-950` #F8F9FA. Nur heller Modus (`color-scheme: light`), kein Dark Mode.
+- Text: Anthrazit (`bone-50` #1F1F1F Haupttext, `bone-200` #3C4043, `bone-400` #5F6368, `bone-600` #747775 Hinweise)
+- Primärfarbe: Google-Blau (`brand-600` #0B57D0 für Buttons, `brand-400` Akzenttext, `brand-700` Hover, `brand-100` #D3E3FD Tonfläche und aktive Chips mit `text-brand-900`). Die Skala ist bewusst nicht monoton: 50 bis 200 hell, ab 300 dunkel, damit alte Klassen wie `text-brand-400` und `bg-brand-500/10` weiter passen. Kein Amber mehr, auch nicht im Logo.
+- Zusätzliche Tonflächen `tonal.blue/green/yellow/red` plus `-900`-Textfarben in `tailwind.config.mjs` (Material-Pastell, für Paketkarten und Kategorien gedacht, noch nicht überall eingesetzt).
+- Tailwind `gray` ist auf Google-Neutrals umgestellt (gray-400 bis 600 dunkel genug für Text auf Weiß), damit Impressum, Datenschutz und Tools ohne Anpassung lesbar sind.
+- Display-Font: Manrope (variable, self-hosted in `public/fonts/manrope-*.woff2`, Klasse `font-display`), Body: Roboto (variable, `roboto-*.woff2`), Mono: JetBrains Mono. Bricolage Grotesque und Inter sind entfernt. OG-Bilder nutzen statische TTF-Instanzen `Manrope-800/700` und `Roboto-400` in `src/assets/og-fonts/` (erzeugt mit fontTools), heller Grund, blauer Rand links.
+- Formen: Pill-Buttons (primär `bg-brand-600 text-white hover:bg-brand-700`, sekundär `border border-bone-50/20`), Chips als Filter (aktiv `bg-brand-100 text-brand-900 border-brand-600`), Karten und Container mit 16 bis 28 px Radius und feiner Kontur (`border-bone-50/10`) statt Schatten, Hero als Tonfläche `rounded-[28px] bg-ink-800`.
+- Kein Filmkorn-Overlay mehr, kein Hero-Video (Slots `hero.mp4`/`hero-poster.jpg` sind aus `index.astro` entfernt, `hasMedia()` bleibt für `about.jpg`, `paket-*.jpg`, `kontakt.jpg`).
+- Umstellung technisch: Die Token-Werte wurden invertiert, die Klassennamen im Markup blieben (`bg-ink-800` ist jetzt hell, `text-bone-50` dunkel). `white`-Klassen wurden auf Token umgestellt, `prose-invert` entfernt. Wer neue Komponenten baut, denkt in Rollen (ink = Fläche, bone = Text, brand = Signal), nicht in den alten Farbnamen.
+- Mock-ups, die Marlon freigegeben hat (Variante A): [busche.cloud Redesign-Mockups](https://claude.ai/artifact/SenxvGBrRqvCPzCyzRY1dF)
 
-**Higgsfield-Visuals:** Die Seite sucht zur Build-Zeit nach Dateien in `website/public/media/` (`src/lib/media.ts` → `hasMedia()`). Fehlt eine Datei, rendert `MediaImage.astro` bzw. der Hero einen ruhigen Verlauf. Slots: `hero.mp4`/`hero.webm`/`hero-poster.jpg` (Startseite), `about.jpg` (Über mich, am besten echtes Porträt), `paket-check.jpg`/`paket-pilot.jpg`/`paket-begleitung.jpg`/`paket-tagessatz.jpg` (`/leistungen`), `kontakt.jpg` (Kontakt-Hintergrund). Alle Prompts, Formate und der Style-Block stehen in `reference/higgsfield-briefing.md`. Aktuell liegt noch kein Asset im Ordner.
+**Higgsfield-Visuals:** Die Seite sucht zur Build-Zeit nach Dateien in `website/public/media/` (`src/lib/media.ts` → `hasMedia()`). Fehlt eine Datei, rendert `MediaImage.astro` einen ruhigen Verlauf. Slots (seit dem Redesign ohne Hero-Video): `about.jpg` (Über mich, am besten echtes Porträt), `paket-check.jpg`/`paket-pilot.jpg`/`paket-begleitung.jpg`/`paket-tagessatz.jpg` (`/leistungen`), `kontakt.jpg` (Kontakt-Hintergrund). Alle Prompts, Formate und der Style-Block stehen in `reference/higgsfield-briefing.md`. Aktuell liegt noch kein Asset im Ordner.
 
-**Sektionen (Startseite):** Hero (Video-Slot, Proof-Leiste, zweiter Button führt zu `/loesungen`) · Über mich (Bild-Slot + Text) · Leistungen (nummerierte Stufen 01–03 + Tagessatz-Hinweis) · Lösungen (4 Top-Use-Cases nach `prio`, Link zum Finder) · So läuft ein Projekt (Link zu `/case-studies`) · Newsletter · Werkzeuge · Blog (Listenansicht, 4 Artikel) · Kontakt (Split: Text + Formular, Bild-Slot)
+**Sektionen (Startseite):** Hero (Tonfläche, Proof-Karten, zweiter Button führt zu `/loesungen`) · Über mich (Bild-Slot + Text) · Leistungen (nummerierte Stufen 01–03 + Tagessatz-Hinweis) · Lösungen (4 Top-Use-Cases nach `prio`, Link zum Finder) · So läuft ein Projekt (Link zu `/case-studies`) · Newsletter · Werkzeuge · Blog (Listenansicht, 4 Artikel) · Kontakt (Split: Text + Formular, Bild-Slot)
 
 **Eigene Unterseiten:** `/loesungen` (Use-Case-Finder + filterbare Bibliothek, 26 Einträge, im Menü an erster Stelle) · `/loesungen/<slug>` (`LoesungLayout`: Problem-Kasten, Fakten-Sidebar, Paket-Karte mit Anfrage-CTA, verwandte Lösungen) · `/leistungen` (Pakete & Preise, alternierend Bild/Text) · `/case-studies` (im Menü "Projekte") · `/tools` · `/blog` · `/danke` (drei konkrete nächste Schritte statt nur Dank) · `/kontakt` (Redirect)
 
-**Logo:** Neue Wortmarke in `src/components/Logo.astro` (Inline-SVG): geometrisches Monolinien-B auf Amber-Kachel + "Busche Cloud" in Bricolage Grotesque. Header und Footer nutzen die Komponente. Favicon und App-Icons sind aus derselben Marke gerastert: `public/favicon.svg` (Quelle), `favicon-32.png`, `apple-touch-icon.png`, `icon-192.png`, `icon-512.png`, `icon-maskable-512.png` (Marke auf Anthrazit mit Safe-Zone). Die alte Wolke liegt nur noch archiviert in `reference/`.
+**Logo:** Wortmarke in `src/components/Logo.astro` (Inline-SVG): geometrisches Monolinien-B in Weiß auf blauer Kachel (Verlauf #1A73E8 → #0842A0) + "Busche Cloud" in Manrope. Header und Footer nutzen die Komponente. Favicon und App-Icons sind aus derselben Marke gerastert (2026-09-26 neu, per Chromium-Screenshot aus `public/favicon.svg`): `favicon-32.png`, `apple-touch-icon.png`, `icon-192.png`, `icon-512.png`, `icon-maskable-512.png` (B auf blauer Vollfläche mit Safe-Zone). Die alte Wolke liegt nur noch archiviert in `reference/`.
 
 **Erledigte Pläne:**
 - `plans/2026-03-24-website-deployment-und-content.md` — Deployment + Inhalte ✓
@@ -217,6 +219,7 @@ Die OG-Schriften liegen seit 2026-09-26 lokal (`src/assets/og-fonts/`), der Buil
 - `plans/2026-04-03-sichtbarkeit-organisches-wachstum-affiliates.md` — SEO, Newsletter, Affiliates, Content-Pipeline ✓
 - `plans/2026-09-13-website-repositionierung-retention-redesign.md` — Repositionierung "AI-Consultant mit Angebot" + Retention-Redesign ✓
 - Rebranding "Cinematic Dark" (2026-09-17, ohne Plan-Datei, direkt umgesetzt): neue Palette, Display-Font, Wortmarke, alle Seiten-Texte überarbeitet, Higgsfield-Slots ✓
+- Redesign "Material Light" (2026-09-26, Google-inspiriert, nach Mock-up-Freigabe direkt umgesetzt): helle Palette, Google-Blau, Manrope/Roboto, blaues Logo und Icons, Hero ohne Video, kein Filmkorn ✓
 
 **Positionierung (seit 2026-09-13):** "AI-Consultant mit Angebot" — KI-Beratung für den Mittelstand (KMU, 10–500 MA), statt breiter IT-Allrounder-Sprache. Hero: "KI, die bei euch wirklich läuft." Marlons Rolle: Global AI Manager (angestellt), baut Busche Cloud nebenberuflich auf. Alte IT-Projekte (ERP-Auswahl etc.) sind in den About-Text zurückgestuft, KI-Consulting steht im Vordergrund.
 
@@ -315,7 +318,6 @@ Invarianten (nie ändern ohne bewussten Grund): Score = Zeitaufwand × Automatis
 - Buttondown: Tag `use-case-finder` anlegen und eine Automation "Willkommens-Mail für Tag use-case-finder" mit der ausführlichen Fassung der Lösungen (Link auf `/loesungen` plus PDF oder Text) einrichten. Bis dahin bekommen Finder-Abonnenten nur die Bestätigungsmail. Metadaten `finder_*` kommen mit und stehen im Abonnenten-Profil.
 - GoatCounter: Events-Ansicht prüfen (Pfade `ev/finder_gestartet` usw. erscheinen nach den ersten Klicks), optional als Dashboard-Filter speichern.
 - `paket-tagessatz.jpg` und `kontakt.jpg` generieren, sobald wieder Credits verfügbar sind (Prompts bereits in `reference/higgsfield-briefing.md`)
-- `hero.mp4` + `hero-poster.jpg`: Video braucht Higgsfield-Plan-Upgrade (Free-Plan reicht nicht, ~56 Credits/Video) oder Credit-Top-up
 - `about.jpg` durch ein echtes Porträt ersetzen (aktuell nur Umgebungsbild als Übergangslösung)
 - Cal.com einrichten + Discovery-Call-Link in Website einbauen (aktuell zeigen alle CTAs auf das Formspree-Kontaktformular)
 - Affiliate-Programme beantragen: n8n, Zapier, IONOS, Netlify; Status prüfen: Hostinger, Miro

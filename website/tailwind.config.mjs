@@ -6,56 +6,66 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Signalfarbe: warmes Amber/Kupfer. Eine Akzentfarbe, sparsam eingesetzt.
+        // Primärfarbe: Google-Blau (Material 3 Tonpalette). Eine Signalfarbe, sparsam.
+        // Hinweis zur Skala: 50 bis 200 sind helle Tonflächen, ab 300 dunkle Text- und Buttonfarben,
+        // damit alte Klassen wie text-brand-400 (Akzenttext) und bg-brand-500/10 (Tint) weiter passen.
         brand: {
-          50:  '#FFF6E5',
-          100: '#FFE8BF',
-          200: '#FFD08A',
-          300: '#F7B65A',
-          400: '#EE9F34',
-          500: '#E08A1E',
-          600: '#BF7014',
-          700: '#98570F',
-          800: '#6E3F0C',
-          900: '#472908',
+          50:  '#EEF3FD',
+          100: '#D3E3FD',
+          200: '#A8C7FA',
+          300: '#0842A0',
+          400: '#0B57D0',
+          500: '#0B57D0',
+          600: '#0B57D0',
+          700: '#0842A0',
+          800: '#062E6F',
+          900: '#041E49',
         },
-        // Grund: warmes Anthrazit statt Navy
+        // Grund: Weiß und helle Grautöne (Google-Neutrals). ink-900 ist der Seitengrund,
+        // ink-800 die Tonfläche für Karten und Container.
         ink: {
-          950: '#0B0A09',
-          900: '#121110',
-          800: '#1A1816',
-          700: '#242220',
-          600: '#34312D',
+          950: '#F8F9FA',
+          900: '#FFFFFF',
+          800: '#F0F4F9',
+          700: '#E8EBEF',
+          600: '#DADCE0',
         },
-        // Textfarben: warmes Off-White
+        // Text: Anthrazit-Töne. bone-50 ist Haupttext, bone-200/400 Fließ- und Nebentext, bone-600 Hinweise.
         bone: {
-          50:  '#F5F1EA',
-          200: '#D9D3C8',
-          400: '#A39C90',
-          600: '#6F6961',
+          50:  '#1F1F1F',
+          200: '#3C4043',
+          400: '#5F6368',
+          600: '#747775',
         },
-        // Tailwind-Gray auf warm umgestellt, damit bestehende gray-Klassen
-        // (Impressum, Datenschutz, Tools) automatisch zur neuen Palette passen.
+        // Tailwind-Gray auf Google-Neutrals, damit bestehende gray-Klassen im hellen Design lesbar bleiben.
+        // Achtung: gray-400 bis gray-600 sind absichtlich dunkel genug für Text auf Weiß.
         gray: {
-          50:  '#F5F1EA',
-          100: '#E9E4DB',
-          200: '#D9D3C8',
-          300: '#C2BBAF',
-          400: '#A39C90',
-          500: '#857E73',
-          600: '#6F6961',
-          700: '#4E4943',
-          800: '#34312D',
-          900: '#1A1816',
-          950: '#0B0A09',
+          50:  '#F8F9FA',
+          100: '#F1F3F4',
+          200: '#E8EAED',
+          300: '#DADCE0',
+          400: '#5F6368',
+          500: '#4D5156',
+          600: '#3C4043',
+          700: '#303134',
+          800: '#202124',
+          900: '#1F1F1F',
+          950: '#171717',
+        },
+        // Tonflächen für Karten und Chips (Material-Pastell). Text darauf: die jeweilige -900.
+        tonal: {
+          blue:    '#D3E3FD', 'blue-900':   '#041E49',
+          green:   '#C4EED0', 'green-900':  '#072711',
+          yellow:  '#FEEFC3', 'yellow-900': '#5F3E00',
+          red:     '#FAD2CF', 'red-900':    '#601410',
         },
       },
       scrollMargin: {
         'header': '6rem',
       },
       fontFamily: {
-        display: ['"Bricolage Grotesque"', 'Inter', 'system-ui', 'sans-serif'],
-        sans: ['Inter', 'system-ui', 'sans-serif'],
+        display: ['Manrope', 'Roboto', 'system-ui', 'sans-serif'],
+        sans: ['Roboto', 'system-ui', 'sans-serif'],
         mono: ['"JetBrains Mono"', 'monospace'],
       },
       letterSpacing: {

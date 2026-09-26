@@ -12,7 +12,7 @@ const { compact = false, id = 'finder' } = Astro.props;
 
 const items = (await getLoesungen()).map(toFinderItem);
 const BASE = import.meta.env.BASE_URL;
-const chip = 'px-3.5 py-2 text-sm font-medium rounded-full border transition-colors cursor-pointer select-none bg-ink-800 text-bone-200 border-bone-50/10 hover:border-brand-400/60 hover:text-bone-50 data-[on=true]:bg-bone-50 data-[on=true]:text-ink-950 data-[on=true]:border-bone-50';
+const chip = 'px-3.5 py-2 text-sm font-medium rounded-full border transition-colors cursor-pointer select-none bg-ink-800 text-bone-200 border-bone-50/10 hover:border-brand-400/60 hover:text-bone-50 data-[on=true]:bg-brand-100 data-[on=true]:text-brand-900 data-[on=true]:border-brand-600';
 ---
 
 <div id={id} data-finder data-base={BASE} data-newsletter={links.newsletter} data-termin={links.termin} class={compact ? '' : 'bg-ink-800/60 border border-bone-50/[0.08] rounded-3xl p-7 sm:p-10'}>
@@ -53,7 +53,7 @@ const chip = 'px-3.5 py-2 text-sm font-medium rounded-full border transition-col
     </fieldset>
 
     <div class="flex flex-col sm:flex-row sm:items-center gap-4 pt-2">
-      <button type="submit" data-finder-submit disabled class="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-bone-50 text-ink-950 hover:bg-brand-300 font-semibold rounded-full transition-colors text-[0.95rem] disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:bg-bone-50">
+      <button type="submit" data-finder-submit disabled class="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-brand-600 text-white hover:bg-brand-700 font-semibold rounded-full transition-colors text-[0.95rem] disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:bg-bone-50">
         Lösungen anzeigen
         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M5 12h14M13 6l6 6-6 6" /></svg>
       </button>
@@ -79,7 +79,7 @@ const chip = 'px-3.5 py-2 text-sm font-medium rounded-full border transition-col
         <p class="font-display font-semibold text-bone-50 text-[1.2rem] leading-snug tracking-tight">Welcher davon zuerst? Das klärt der KI-Readiness-Check in zwei Stunden.</p>
         <p class="mt-3 text-bone-400 text-sm leading-relaxed flex-1">Für €299 gehen wir eure drei bis fünf größten Zeitfresser durch und ihr bekommt eine priorisierte Liste mit Tool-Empfehlung. Oder ihr startet mit einem kostenlosen Erstgespräch.</p>
         <div class="mt-5 flex flex-col sm:flex-row gap-2.5">
-          <a data-finder-cta href="#" data-track="paket_cta_geklickt" class="inline-flex items-center justify-center gap-2 px-5 py-3 bg-bone-50 text-ink-950 hover:bg-brand-300 font-semibold rounded-full transition-colors text-sm">
+          <a data-finder-cta href="#" data-track="paket_cta_geklickt" class="inline-flex items-center justify-center gap-2 px-5 py-3 bg-brand-600 text-white hover:bg-brand-700 font-semibold rounded-full transition-colors text-sm">
             Erstgespräch dazu anfragen
           </a>
           <a href={`${BASE}leistungen#readiness-check`} data-track="paket_cta_geklickt" class="inline-flex items-center justify-center px-5 py-3 text-bone-50 border border-bone-50/20 hover:border-bone-50/50 font-semibold rounded-full transition-colors text-sm">
@@ -216,7 +216,7 @@ const chip = 'px-3.5 py-2 text-sm font-medium rounded-full border transition-col
         try {
           await fetch(newsletter, { method: 'POST', body: new FormData(lmForm), mode: 'no-cors' });
           lmForm.style.display = 'none';
-          status.className = 'mt-4 p-4 rounded-xl bg-brand-500/10 border border-brand-500/25 text-brand-200 text-sm';
+          status.className = 'mt-4 p-4 rounded-xl bg-brand-500/10 border border-brand-500/25 text-brand-800 text-sm';
           status.innerHTML = '<strong>Fast geschafft.</strong> Bestätige kurz die Anmeldung in der E-Mail, die gerade rausging. Danach kommt die ausführliche Fassung.';
           window.bcTrack?.('leadmagnet_angefordert');
         } catch {

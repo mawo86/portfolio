@@ -45,8 +45,8 @@ const absoluteImage = ogImagePath.startsWith('http') ? ogImagePath : new URL(ogI
     <meta name="format-detection" content="telephone=no" />
     <link rel="canonical" href={canonicalURL} />
     <meta name="description" content={description} />
-    <meta name="theme-color" content="#121110" />
-    <meta name="color-scheme" content="dark" />
+    <meta name="theme-color" content="#FFFFFF" />
+    <meta name="color-scheme" content="light" />
     <meta name="robots" content="index,follow,max-image-preview:large" />
     <meta name="author" content="Marlon Busche" />
 
@@ -68,39 +68,39 @@ const absoluteImage = ogImagePath.startsWith('http') ? ogImagePath : new URL(ogI
     <meta name="twitter:image" content={absoluteImage} />
 
     <!-- Fonts (self-hosted, DSGVO-konform) -->
-    <link rel="preload" href="/fonts/bricolage-latin.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/roboto-latin.woff2" as="font" type="font/woff2" crossorigin />
     <style is:inline>
       @font-face {
-        font-family: 'Bricolage Grotesque';
+        font-family: 'Manrope';
         font-style: normal;
         font-weight: 200 800;
         font-display: swap;
-        src: url('/fonts/bricolage-latin.woff2') format('woff2');
+        src: url('/fonts/manrope-latin.woff2') format('woff2');
         unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
       }
       @font-face {
-        font-family: 'Bricolage Grotesque';
+        font-family: 'Manrope';
         font-style: normal;
         font-weight: 200 800;
         font-display: swap;
-        src: url('/fonts/bricolage-latin-ext.woff2') format('woff2');
+        src: url('/fonts/manrope-latin-ext.woff2') format('woff2');
         unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
       }
       @font-face {
-        font-family: 'Inter';
+        font-family: 'Roboto';
         font-style: normal;
-        font-weight: 300 900;
+        font-weight: 100 900;
         font-display: swap;
-        src: url('/fonts/inter-latin.woff2') format('woff2');
+        src: url('/fonts/roboto-latin.woff2') format('woff2');
         unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
       }
       @font-face {
-        font-family: 'Inter';
+        font-family: 'Roboto';
         font-style: normal;
-        font-weight: 300 900;
+        font-weight: 100 900;
         font-display: swap;
-        src: url('/fonts/inter-latin-ext.woff2') format('woff2');
+        src: url('/fonts/roboto-latin-ext.woff2') format('woff2');
         unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
       }
       @font-face {
@@ -133,8 +133,8 @@ const absoluteImage = ogImagePath.startsWith('http') ? ogImagePath : new URL(ogI
     <title>{title}</title>
     <slot name="head" />
   </head>
-  <body class="bg-ink-900 text-bone-50 font-sans antialiased selection:bg-brand-500/30 selection:text-bone-50">
-    <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:px-4 focus:py-2 focus:bg-brand-500 focus:text-ink-950 focus:rounded-lg focus:font-semibold focus:shadow-xl">
+  <body class="bg-ink-900 text-bone-50 font-sans antialiased selection:bg-brand-100 selection:text-brand-900">
+    <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:px-4 focus:py-2 focus:bg-brand-600 focus:text-white focus:rounded-lg focus:font-semibold focus:shadow-xl">
       Zum Hauptinhalt springen
     </a>
     <slot />
@@ -158,22 +158,9 @@ const absoluteImage = ogImagePath.startsWith('http') ? ogImagePath : new URL(ogI
       }, { passive: true });
     </script>
     <style is:global>
-      /* Filmkorn über der ganzen Seite. Sehr leicht, gibt dem Anthrazit Tiefe. */
-      body::before {
-        content: '';
-        position: fixed;
-        inset: 0;
-        z-index: 9999;
-        pointer-events: none;
-        opacity: 0.045;
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 0.95 0 0 0 0 0.9 0 0 0 1 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-        mix-blend-mode: screen;
-      }
-
-      /* Display-Schrift bekommt engere Laufweite und optische Größe */
+      /* Display-Schrift: leicht engere Laufweite, Kerning an */
       .font-display {
-        font-variation-settings: 'opsz' 96;
-        font-feature-settings: 'ss01', 'kern';
+        font-feature-settings: 'kern';
       }
 
       /* Header-Offset für Anker-Links */
@@ -186,7 +173,7 @@ const absoluteImage = ogImagePath.startsWith('http') ? ogImagePath : new URL(ogI
       /* Feine Linie als Sektionstrenner */
       .rule {
         height: 1px;
-        background: linear-gradient(90deg, transparent, rgba(245,241,234,0.14) 18%, rgba(245,241,234,0.14) 82%, transparent);
+        background: linear-gradient(90deg, transparent, rgba(31,31,31,0.12) 18%, rgba(31,31,31,0.12) 82%, transparent);
       }
 
       @media (prefers-reduced-motion: reduce) {
