@@ -1,5 +1,5 @@
 ---
-title: "Beispielprojekt: KI-Pilot im Mittelstand — von der Idee zum produktiven Workflow"
+title: "Beispielprojekt: KI-Pilot im Mittelstand, von der Idee zum produktiven Workflow"
 description: "So könnte ein KI-Pilot-Projekt bei dir aussehen: Wie ein mittelständischer Hersteller in 6 Wochen einen KI-gestützten Angebotsprozess gebaut hat, der heute jeden Tag läuft."
 client: "Mittelständischer Hersteller (Maschinenbau)"
 industry: "Maschinenbau"
@@ -34,8 +34,8 @@ pro Woche ein gewaltiger Engpass.
 
 ## Vorgehen
 
-1. **Discovery-Workshop** (2 Tage) — Prozessanalyse mit Vertrieb und Technik
-2. **Quick-Win-Identifikation** — drei Kernschritte automatisierbar
+1. **Discovery-Workshop** (2 Tage): Prozessanalyse mit Vertrieb und Technik
+2. **Quick-Win-Identifikation**: drei Kernschritte automatisierbar
 3. **Pilot-Workflow** in n8n mit Claude-API als Reasoning-Schicht
 4. **Integration** in CRM-Schnittstelle und PDF-Generator
 5. **Schulung & Übergabe** in zwei Sessions

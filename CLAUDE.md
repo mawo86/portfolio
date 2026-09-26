@@ -156,10 +156,12 @@ Es gibt keine Tests, kein Lint und kein Format-Tooling. `npm run build` ist der 
 
 **Deployment und CI (seit 2026-09-26):**
 - `deploy.yml`: bei Push auf `main` Node 20, `npm ci`, `npm run build`, `npm run check:links`, dann Deploy von `website/dist` auf GitHub Pages. `main` ist Produktion, kein Staging. Domain aus `public/CNAME`.
-- `pr-check.yml`: bei jedem Pull Request gegen `main` (Pfad `website/**`) derselbe Build, Link-Check als Pflicht, Größen-Budget als Warnung, `dist` als Artefakt zum Anschauen. Damit wird `main` nie rot.
-- `npm run check:links` (`scripts/check-links.mjs`): prüft alle internen `href`/`src` im gebauten `dist/` auf vorhandene Ziele und Anker, ohne Netz. Exit 1 bei Fehlern.
+- `pr-check.yml`: bei jedem Pull Request gegen `main` (Pfad `website/**`) erst `astro check` (Pflicht), dann Stil-Check (Warnung), derselbe Build, Link-Check als Pflicht, Größen-Budget als Warnung, `dist` als Artefakt zum Anschauen. Beide Workflows haben `timeout-minutes: 15`. Damit wird `main` nie rot.
+- `npm run check:types` (`astro check`, devDeps `@astrojs/check` + `typescript`): TypeScript in `.astro`-Dateien, strenger als der Build (der Build meldet Typfehler nur in Frontmatter-Code). `tsconfig.json` schließt `dist/` aus, sonst prüft er den Pagefind-Output mit.
+- `npm run check:style` (`scripts/check-style.mjs`): Regeln aus dem Skill `meine-stimme` für veröffentlichte Inhalte (blog, case-studies, loesungen, ohne Drafts): kein Gedankenstrich, kein `---` als Trenner im Body. Ohne `--strict` nur Warnung.
+- `npm run check:links` (`scripts/check-links.mjs`): prüft alle internen `href`/`src`/`srcset` sowie URL-artige `content`-Werte (og:image, og:url, auch als absolute `https://busche.cloud/...`-URL) im gebauten `dist/` auf vorhandene Ziele und Anker, ohne Netz. Exit 1 bei Fehlern.
 - `npm run check:budget` (`scripts/check-budget.mjs`): HTML 120 KB, JS/CSS 200 KB, Bilder 400 KB, Summe JS+CSS 600 KB. Immer Exit 0.
-- `npm run check`: Build plus beide Prüfungen, lokal vor jedem Push.
+- `npm run check`: Typen, Stil, Build, Links, Budget in dieser Reihenfolge, lokal vor jedem Push.
 - OG-Bilder brauchen keinen Netzzugriff mehr: `pages/og/[...route].ts` lädt Bricolage Grotesque 700/800 und Inter 400 aus `src/assets/og-fonts/` (statische Instanzen, erzeugt mit fontTools aus den Variable-Fonts).
 
 ### Architektur der Website (was man aus mehreren Dateien zusammenlesen müsste)
@@ -168,7 +170,7 @@ Es gibt keine Tests, kein Lint und kein Format-Tooling. `npm run build` ist der 
 
 **Drafts werden an vier Stellen gefiltert**, immer mit `getCollection('blog', ({ data }) => !data.draft)`: `pages/index.astro` (Blog-Teaser), `pages/blog/index.astro`, `pages/blog/[...slug].astro` und `pages/rss.xml.ts`. Dazu `pages/og/[...route].ts` für OG-Bilder. Wer die Draft-Logik ändert, muss alle fünf anfassen. Für `loesungen` läuft der Draft-Filter zentral in `lib/loesungen.ts` (`getLoesungen()`), nur die OG-Route filtert selbst.
 
-**Use-Case-Bibliothek (`/loesungen`, seit 2026-09-26):** Dritte Collection `loesungen` (Schema mit Enums `BEREICHE`, `ZEITPROBLEME`, `PAKETE`, `REIFEGRADE` in `content/config.ts`, exportiert für Finder und Seiten). Öffentliche Fassung pro Use-Case: Problem, Lösung, Aufwand, Effekt, Paket. Der interne Umsetzungsweg liegt in `outputs/loesungswege/<slug>.md` und darf nie ins `website/`-Verzeichnis. `UseCaseFinder.astro` rendert alle Lösungen als JSON in die Seite und filtert clientseitig (Branche optional, Bereich und Zeitproblem Pflicht, Score: Bereich 10, Zeitproblem 5, Branche 2, plus `prio`). `LoesungTeaser.astro` zeigt in `BlogLayout` die 2 Lösungen, deren `blogKategorien` die Artikel-Kategorie enthält. `pakete` in `config/site.ts` ist die eine Stelle für Paketnamen und Preise, die Bibliothek liest sie von dort.
+**Use-Case-Bibliothek (`/loesungen`, seit 2026-09-26):** Dritte Collection `loesungen` (Schema mit Enums `BEREICHE`, `ZEITPROBLEME`, `PAKETE`, `REIFEGRADE` in `content/config.ts`, exportiert für Finder und Seiten). Öffentliche Fassung pro Use-Case: Problem, Lösung, Aufwand, Effekt, Paket. Der interne Umsetzungsweg liegt in `outputs/loesungswege/<slug>.md` und darf nie ins `website/`-Verzeichnis. `UseCaseFinder.astro` rendert alle Lösungen als JSON in die Seite (`<` als `\u003c` maskiert, ca. 20 KB) und filtert clientseitig; die Ergebnisliste ist eine `role="region"` und erhält nach dem Filtern den Fokus, die Filter-Buttons auf `/loesungen` tragen `aria-pressed`. Filtern (Branche optional, Bereich und Zeitproblem Pflicht, Score: Bereich 10, Zeitproblem 5, Branche 2, plus `prio`). `LoesungTeaser.astro` zeigt in `BlogLayout` die 2 Lösungen, deren `blogKategorien` die Artikel-Kategorie enthält. `pakete` in `config/site.ts` ist die eine Stelle für Paketnamen und Preise, die Bibliothek liest sie von dort.
 
 **Funnel-Verdrahtung:** Alle "Erstgespräch"-Buttons rufen `terminUrl(params)` aus `config/site.ts` auf. Sie baut aus `links.termin` (heute `/#kontakt`) und Parametern eine URL mit Query vor dem Hash (`/?thema=x&paket=y#kontakt`). `index.astro` liest `thema`, `titel`, `paket`, `bereich`, `zeitproblem` und belegt Betreff-Auswahl, Nachricht und ein verstecktes Feld `thema` vor. Cal.com-Wechsel: nur `links.termin` ändern. Funnel-Ereignisse: `window.bcTrack(name)` in `Layout.astro` zählt in GoatCounter als Event unter `ev/<name>`, Elemente mit `data-track="<name>"` melden Klicks automatisch. Namen in `funnelEvents` (`config/site.ts`): `finder_gestartet`, `finder_abgeschlossen`, `leadmagnet_angefordert`, `formular_gesendet`, `paket_cta_geklickt`. Lead-Magnet im Finder ist ein Buttondown-Formular mit Tag `use-case-finder` und Metadaten `finder_bereich`, `finder_zeitproblem`, `finder_branche`, `finder_loesungen`; der Versand der "ausführlichen Fassung" ist in Buttondown noch nicht eingerichtet (siehe Noch ausstehend).
 
@@ -182,7 +184,7 @@ Die OG-Schriften liegen seit 2026-09-26 lokal (`src/assets/og-fonts/`), der Buil
 
 **Zentrale Konfiguration:** `src/config/site.ts` hält externe URLs (LinkedIn, Formspree-Formular, Buttondown-Endpoint, `termin`, `loesungen`), `terminUrl()`, `pakete` (Namen, Preise, Anker), `funnelEvents`, Site-Metadaten und den Verfügbarkeits-Status (`available` / `limited` / `booked`) für den Header-Indikator. Dort ändern, nicht in einzelnen Komponenten. `src/lib/media.ts` (`hasMedia()`) prüft zur Build-Zeit, ob ein Higgsfield-Asset in `public/media/` liegt; Komponenten rendern sonst einen Fallback-Verlauf (Details unten).
 
-**Layouts:** `Layout.astro` ist die Hülle (Head, Meta, Canonical, OG, Filmkorn-Overlay, Fonts). `BlogLayout` und `CaseStudyLayout` wrappen es; Header und Footer werden pro Seite eingebunden, nicht im Layout. Interne Links nutzen `import.meta.env.BASE_URL` als Präfix. Path-Alias `@/*` → `src/*` ist in `tsconfig.json` definiert.
+**Layouts:** `Layout.astro` ist die Hülle (Head, Meta, Canonical, OG, Filmkorn-Overlay, Fonts). `BlogLayout`, `CaseStudyLayout` und `LoesungLayout` wrappen es; `LoesungLayout` setzt Canonical und JSON-LD (Article + BreadcrumbList Start › Lösungen › Titel) per `slot="head"`; Header und Footer werden pro Seite eingebunden, nicht im Layout. Interne Links nutzen `import.meta.env.BASE_URL` als Präfix. Path-Alias `@/*` → `src/*` ist in `tsconfig.json` definiert.
 
 **Markdown-Pipeline:** `astro.config.mjs` registriert ein eigenes Rehype-Plugin, das allen `<img>` im Content `loading="lazy"` und `decoding="async"` gibt. MDX ist aktiviert, Sitemap wird automatisch erzeugt, `site` ist `https://busche.cloud`.
 
@@ -226,7 +228,7 @@ Die OG-Schriften liegen seit 2026-09-26 lokal (`src/assets/og-fonts/`), der Buil
 
 **Retention:** Neue Komponente `RelatedPosts.astro` zeigt am Ende jedes Blog-Artikels 2–3 thematisch verwandte Artikel (gleiche Kategorie, Fallback auf neueste). Eingebunden in `BlogLayout.astro` nach der Prev/Next-Navigation.
 
-**Blog:** 12 Artikel live, 19 Drafts in der Pipeline (KW16–25). Blog-Index-Seite (`/blog`) hat NYT-inspiriertes Editorial-Design mit Kategorie-Navigation und Pagination. Artikel-Layout (`BlogLayout.astro`) mit Lesezeit, JSON-LD, Prev/Next-Navigation, RelatedPosts, Newsletter-CTA und Autor-Karte. `@tailwindcss/typography` ist installiert und aktiviert.
+**Blog:** 12 Artikel live, 22 Drafts in der Pipeline (KW16–25). Blog-Index-Seite (`/blog`) hat NYT-inspiriertes Editorial-Design mit Kategorie-Navigation und Pagination. Artikel-Layout (`BlogLayout.astro`) mit Lesezeit, JSON-LD, Prev/Next-Navigation, RelatedPosts, Newsletter-CTA und Autor-Karte. `@tailwindcss/typography` ist installiert und aktiviert.
 
 **Blog-Styling:** Artikel nutzen `blog-artikel` + `meine-stimme` Skills für konsistente Formatierung: Blockquotes als Callout-Boxen, Unsplash-Bilder via `<figure>/<figcaption>`, keine em-dashes im Fließtext, keine `---` Trenner.
 
@@ -241,14 +243,14 @@ Die OG-Schriften liegen seit 2026-09-26 lokal (`src/assets/og-fonts/`), der Buil
 - `nordvpn-sicher-arbeiten` — Warum ein VPN heute zum Arbeitsalltag gehört (inkl. NordVPN Affiliate-Link)
 - `mein-ki-toolkit` — Persönliches Tool-Setup (war von Commit 252bee1 bis 2026-09-26 versehentlich auf `draft: true`, seit 2026-09-26 wieder live; die sechs internen Links aus anderen Artikeln zeigen wieder auf den Artikel)
 - `ki-strategie-erste-schritte` — KI-Strategie Einsteigerguide
-- `sap-ki-integration` — SAP + KI Praxis
 - `mein-ki-os` — KI-Betriebssystem (inkl. Garrit Wilson / KIPA Credit)
+- `mein-ki-toolkit`, `n8n-erster-workflow`, `prompts-die-funktionieren`, `ki-automatisierung-mittelstand`, `app-bauen-ohne-programmierer` und die übrigen Live-Artikel sind seit 2026-09-26 frei von Gedankenstrichen (`check:style`)
 - `prompts-die-funktionieren` — 5 Prompts aus dem echten Alltag
 - `n8n-erster-workflow` — n8n Einstieg Schritt-für-Schritt (war von Commit 252bee1 bis 2026-09-26 versehentlich auf `draft: true`, seit 2026-09-26 wieder live)
 - `ein-jahr-ki` — Ein Jahr KI im Alltag: Erfahrungsbericht (fundamental überarbeitet 2026-04-21)
 
-**Blog-Drafts (draft: true, KW16–25, 21 Artikel):**
-sprachmodell-erklaert, ki-roi-berechnen, ki-fehler-einfuehrung, ki-glossar-entscheider, zapier-vs-n8n, ki-im-kundenservice, eu-ai-act-mittelstand, email-automatisierung-ki, erster-ki-pilot, ki-angst-im-team, ki-projekte-scheitern, ki-team-aufbauen, ki-und-dsgvo, ki-daten-eingeben, ki-im-vertrieb, ki-in-der-buchhaltung, ki-im-hr, ki-sap-fico, microsoft-copilot-bewertung, ki-jobs-zukunft, ki-jobs-mittelstand-zahlen
+**Blog-Drafts (draft: true, KW16–25, 22 Artikel):**
+sap-ki-integration (in älteren Notizen als live geführt, ist aber `draft: true`), sprachmodell-erklaert, ki-roi-berechnen, ki-fehler-einfuehrung, ki-glossar-entscheider, zapier-vs-n8n, ki-im-kundenservice, eu-ai-act-mittelstand, email-automatisierung-ki, erster-ki-pilot, ki-angst-im-team, ki-projekte-scheitern, ki-team-aufbauen, ki-und-dsgvo, ki-daten-eingeben, ki-im-vertrieb, ki-in-der-buchhaltung, ki-im-hr, ki-sap-fico, microsoft-copilot-bewertung, ki-jobs-zukunft, ki-jobs-mittelstand-zahlen
 
 Neu 2026-09-14, abgeleitet aus Transkript-Analyse (`context/strategy.md`): `eu-ai-act-mittelstand` (EU AI Act, dm-Chef-Interview als Aufhänger, Kategorie Datenschutz) und `ki-jobs-mittelstand-zahlen` (belegte 16%-Entry-Level-Zahl vs. Mittelstand-Realität, Kategorie Strategie).
 

@@ -1,13 +1,13 @@
 ---
 title: "Wie du eine Idee mit KI in zwei Stunden auf Herz und Nieren prüfst"
-description: "Bevor du Wochen in eine Idee investierst: So nutzt du KI als ehrlichen Sparringspartner — mit konkretem Framework und Prompts."
+description: "Bevor du Wochen in eine Idee investierst: So nutzt du KI als ehrlichen Sparringspartner, mit konkretem Framework und Prompts."
 date: 2026-04-04
 tags: ["KI", "Strategie", "Produktivität", "Unternehmen"]
 draft: false
 category: "Strategie"
 ---
 
-Die meisten Ideen sterben nicht am Markt. Sie sterben an der Umsetzung — weil man zu lange zu viel Zeit in eine Idee gesteckt hat, die von Anfang an nicht funktioniert hätte.
+Die meisten Ideen sterben nicht am Markt. Sie sterben an der Umsetzung, weil man zu lange zu viel Zeit in eine Idee gesteckt hat, die von Anfang an nicht funktioniert hätte.
 
 KI löst dieses Problem nicht vollständig. Aber sie kann dir in zwei Stunden zeigen, wo eine Idee wackelt. Und ein passender Toolstack hilft dir eine Idee zu validieren, bevor du einen einzigen Euro investierst.
 

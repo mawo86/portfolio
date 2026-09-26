@@ -1,6 +1,6 @@
 ---
 title: "KI-Automatisierung im Mittelstand: Was wirklich funktioniert"
-description: "Viele Mittelständler starten mit KI und landen bei teuren Pilotprojekten ohne Ergebnis. Hier ist, was tatsächlich funktioniert — und warum der Einstieg einfacher ist als gedacht."
+description: "Viele Mittelständler starten mit KI und landen bei teuren Pilotprojekten ohne Ergebnis. Hier ist, was tatsächlich funktioniert und warum der Einstieg einfacher ist als gedacht."
 date: 2026-03-31
 tags: ["KI", "Automatisierung", "Mittelstand", "Prozesse"]
 draft: false

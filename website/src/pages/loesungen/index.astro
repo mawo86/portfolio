@@ -41,11 +41,11 @@ const BASE = import.meta.env.BASE_URL;
         <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-8">
           <h2 id="bibliothek-heading" class="font-display font-bold text-bone-50 text-[2rem] sm:text-[2.6rem] leading-[1.02] tracking-tight">Alle Lösungen.</h2>
           <div class="flex flex-wrap gap-2" id="bereich-nav">
-            <button data-filter="all" class="bereich-btn px-3 py-1.5 text-xs font-semibold rounded-full transition-colors bg-bone-50 text-ink-950 border border-bone-50">Alle</button>
+            <button data-filter="all" aria-pressed="true" class="bereich-btn px-3 py-1.5 text-xs font-semibold rounded-full transition-colors border bg-bone-50 text-ink-950 border-bone-50">Alle</button>
             {usedBereiche.map(b => (
-              <button data-filter={b} class="bereich-btn px-3 py-1.5 text-xs font-semibold rounded-full transition-colors bg-ink-800 text-bone-400 border border-bone-50/10 hover:border-brand-400/60 hover:text-brand-300">{bereichLabel[b]}</button>
+              <button data-filter={b} aria-pressed="false" class="bereich-btn px-3 py-1.5 text-xs font-semibold rounded-full transition-colors border bg-ink-800 text-bone-400 border-bone-50/10 hover:border-brand-400/60 hover:text-brand-300">{bereichLabel[b]}</button>
             ))}
-            <button data-filter="sap" class="bereich-btn px-3 py-1.5 text-xs font-semibold rounded-full transition-colors bg-ink-800 text-bone-400 border border-bone-50/10 hover:border-brand-400/60 hover:text-brand-300">SAP-nah</button>
+            <button data-filter="sap" aria-pressed="false" class="bereich-btn px-3 py-1.5 text-xs font-semibold rounded-full transition-colors border bg-ink-800 text-bone-400 border-bone-50/10 hover:border-brand-400/60 hover:text-brand-300">SAP-nah</button>
           </div>
         </div>
 
@@ -102,11 +102,16 @@ const BASE = import.meta.env.BASE_URL;
   const buttons = document.querySelectorAll<HTMLButtonElement>('.bereich-btn');
   const rows = document.querySelectorAll<HTMLElement>('[data-loesung]');
   const empty = document.getElementById('loesung-empty');
-  const on = 'bg-bone-50 text-ink-950 border-bone-50';
-  const off = 'bg-ink-800 text-bone-400 border-bone-50/10 hover:border-brand-400/60 hover:text-brand-300';
+  const ON = ['bg-bone-50', 'text-ink-950', 'border-bone-50'];
+  const OFF = ['bg-ink-800', 'text-bone-400', 'border-bone-50/10', 'hover:border-brand-400/60', 'hover:text-brand-300'];
   buttons.forEach(btn => btn.addEventListener('click', () => {
     const f = btn.dataset.filter!;
-    buttons.forEach(b => { b.className = b.className.replace(on, '').replace(off, '').trim() + ' ' + (b === btn ? on : off); });
+    buttons.forEach(b => {
+      const active = b === btn;
+      b.classList.remove(...(active ? OFF : ON));
+      b.classList.add(...(active ? ON : OFF));
+      b.setAttribute('aria-pressed', String(active));
+    });
     let shown = 0;
     rows.forEach(r => {
       const show = f === 'all' || (f === 'sap' ? r.dataset.sap === 'true' : r.dataset.bereich === f);
@@ -114,5 +119,6 @@ const BASE = import.meta.env.BASE_URL;
       if (show) shown++;
     });
     empty?.classList.toggle('hidden', shown > 0);
+    window.bcTrack?.('finder_gestartet', { label: `filter:${f}` });
   }));
 </script>

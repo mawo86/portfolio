@@ -1,6 +1,6 @@
 ---
-title: "Die 5 Prompts, die ich täglich nutze — und warum sie funktionieren"
-description: "Kein Prompt-Kurs, kein Cheat-Sheet mit 100 Vorlagen. Fünf konkrete Prompts aus meinem Alltag — mit Erklärung warum sie besser sind als das, was die meisten schreiben."
+title: "Die 5 Prompts, die ich täglich nutze und warum sie funktionieren"
+description: "Kein Prompt-Kurs, kein Cheat-Sheet mit 100 Vorlagen. Fünf konkrete Prompts aus meinem Alltag, mit Erklärung warum sie besser sind als das, was die meisten schreiben."
 date: 2026-04-06
 tags: ["KI", "Produktivität", "Prompts", "Anleitung"]
 draft: false
@@ -9,7 +9,7 @@ category: "Tools & Setup"
 
 Die meisten Prompts sind zu höflich.
 
-"Kannst du mir bitte helfen, einen Text zu schreiben, der..." — das klingt wie eine Anfrage beim Kundenservice. KI braucht keine Höflichkeit. Sie braucht Präzision.
+"Kannst du mir bitte helfen, einen Text zu schreiben, der..." Das klingt wie eine Anfrage beim Kundenservice. KI braucht keine Höflichkeit. Sie braucht Präzision.
 
 Hier sind fünf Prompts aus meinem echten Alltag. Nicht aus einem Kurs, nicht aus einem Cheat-Sheet. Aus täglicher Arbeit. Mit Erklärung, warum jeder davon funktioniert.
 
@@ -22,7 +22,7 @@ Hier sind fünf Prompts aus meinem echten Alltag. Nicht aus einem Kurs, nicht au
 
 **Prompt:** *"Ich habe folgende Entscheidung getroffen: [Entscheidung]. Argumentiere jetzt so stark wie möglich dagegen. Nicht ausgewogen, sondern einseitig gegen meine Position. Ich will die schwächsten Punkte meiner eigenen Argumentation kennen."*
 
-Warum es funktioniert: KI neigt dazu, dir zu sagen was du hören willst. Sie ist von Haus aus zustimmend. Dieser Prompt durchbricht das. Er zwingt das Modell, eine Position einzunehmen — und damit echte Gegenargumente zu liefern statt abgewogenes Nichts.
+Warum es funktioniert: KI neigt dazu, dir zu sagen was du hören willst. Sie ist von Haus aus zustimmend. Dieser Prompt durchbricht das. Er zwingt das Modell, eine Position einzunehmen und damit echte Gegenargumente zu liefern statt abgewogenes Nichts.
 
 Ich nutze ihn vor wichtigen Entscheidungen. Das Ergebnis ist fast immer unbequem. Und fast immer nützlich. Für die systematische Ideenvalidierung passt dieser Prompt perfekt zum Framework aus dem Artikel [Idee in zwei Stunden prüfen](/blog/idee-validieren-mit-ki).
 

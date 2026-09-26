@@ -61,7 +61,7 @@ Es schützt deine Netzwerkverbindung. Es schützt nicht vor Phishing, schwachen 
 
 Und es ersetzt keine Unternehmens-Sicherheitslösung. Für Teams die mit sensiblen Kundendaten oder Enterprise-Systemen arbeiten, braucht es mehr. Das VPN ist eine Schicht von mehreren.
 
-Zum Thema DSGVO und welche Daten in welche Tools dürfen, lohnt sich ein Blick in die [KI-Strategie Einsteigerguide](/blog/ki-strategie-erste-schritte) — dort gehe ich auch auf datenschutzkonforme Tool-Auswahl ein.
+Zum Thema DSGVO und welche Daten in welche Tools dürfen, lohnt sich ein Blick in die [KI-Strategie Einsteigerguide](/blog/ki-strategie-erste-schritte), dort gehe ich auch auf datenschutzkonforme Tool-Auswahl ein.
 
 ## Was das für dich bedeutet
 
@@ -71,7 +71,7 @@ Für alle die KI-Tools, Kundenportale oder interne Systeme nutzen: Das Risiko ei
 
 ## Dein nächster Schritt
 
-[NordVPN direkt testen](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=145049&url_id=902) — die App läuft auf bis zu 10 Geräten gleichzeitig, also auch für Familien oder kleine Teams.
+[NordVPN direkt testen](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=145049&url_id=902): Die App läuft auf bis zu 10 Geräten gleichzeitig, also auch für Familien oder kleine Teams.
 
 Alle Tools, die ich nutze und empfehle, findest du auf der [Tools-Seite](/tools#sicherheit--datenschutz). Dort stehen auch andere Sicherheits-Tools mit kurzer Einordnung.
 

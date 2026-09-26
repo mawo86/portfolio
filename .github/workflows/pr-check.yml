@@ -1,7 +1,7 @@
 name: PR Check
 
 # Baut die Website auf jedem Pull Request, damit main nie rot wird.
-# Kein Deploy. Link-Check ist Pflicht, Größen-Budget nur Warnung.
+# Kein Deploy. Typen-Check und Link-Check sind Pflicht, Stil-Check und Größen-Budget nur Warnung.
 on:
   pull_request:
     branches: [main]
@@ -20,6 +20,7 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
 
@@ -33,6 +34,15 @@ jobs:
       - name: Install dependencies
         working-directory: website
         run: npm ci
+
+      - name: TypeScript prüfen (astro check)
+        working-directory: website
+        run: npm run check:types
+
+      - name: Stil-Check (nur Warnung)
+        working-directory: website
+        continue-on-error: true
+        run: npm run check:style -- --strict
 
       - name: Build (astro + pagefind, identisch zum Deploy)
         working-directory: website

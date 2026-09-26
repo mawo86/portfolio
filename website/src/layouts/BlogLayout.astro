@@ -19,7 +19,7 @@ export interface Props {
   nextPost?: { slug: string; title: string } | null;
 }
 
-const { title, description, date, tags, category, readingTime, prevPost, nextPost } = Astro.props;
+const { title, description, date, category, readingTime, prevPost, nextPost } = Astro.props;
 
 const formattedDate = new Intl.DateTimeFormat('de-DE', {
   year: 'numeric',

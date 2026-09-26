@@ -62,7 +62,7 @@ const chip = 'px-3.5 py-2 text-sm font-medium rounded-full border transition-col
   </form>
 
   <!-- Ergebnis -->
-  <div data-finder-results class="hidden mt-10 pt-10 border-t border-bone-50/10" aria-live="polite">
+  <div data-finder-results class="hidden mt-10 pt-10 border-t border-bone-50/10" aria-live="polite" role="region" aria-label="Ergebnis des Use-Case-Finders" tabindex="-1">
     <div class="flex items-end justify-between gap-6 mb-6">
       <div>
         <p class="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-brand-400 mb-2">Das passt zu euch</p>
@@ -109,7 +109,7 @@ const chip = 'px-3.5 py-2 text-sm font-medium rounded-full border transition-col
     </div>
   </div>
 
-  <script type="application/json" data-finder-data set:html={JSON.stringify(items)} />
+  <script type="application/json" data-finder-data set:html={JSON.stringify(items).replace(/</g, "\\u003c")} />
 </div>
 
 <script>
@@ -148,6 +148,8 @@ const chip = 'px-3.5 py-2 text-sm font-medium rounded-full border transition-col
         if (already) { delete pick[group]; }
         else { pick[group] = btn.dataset.value!; btn.dataset.on = 'true'; btn.setAttribute('aria-checked', 'true'); }
         submit.disabled = !(pick.bereich && pick.zeitproblem);
+        // Alte Ergebnisse ausblenden, sobald die Auswahl geändert wird
+        if (!results.classList.contains('hidden')) results.classList.add('hidden');
         if (!started) { started = true; window.bcTrack?.('finder_gestartet'); }
       });
     });
@@ -193,6 +195,7 @@ const chip = 'px-3.5 py-2 text-sm font-medium rounded-full border transition-col
       });
       results.classList.remove('hidden');
       results.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      results.focus({ preventScroll: true });
       window.bcTrack?.('finder_abgeschlossen');
     });
 

@@ -7,9 +7,11 @@
     "build": "astro build && pagefind --site dist",
     "build:fast": "astro build",
     "preview": "astro preview",
+    "check:types": "astro check",
+    "check:style": "node scripts/check-style.mjs",
     "check:links": "node scripts/check-links.mjs dist",
     "check:budget": "node scripts/check-budget.mjs dist",
-    "check": "npm run build && npm run check:links && npm run check:budget"
+    "check": "npm run check:types && npm run check:style && npm run build && npm run check:links && npm run check:budget"
   },
   "dependencies": {
     "@astrojs/mdx": "^3.1.8",
@@ -25,6 +27,8 @@
     "unist-util-visit": "^5.1.0"
   },
   "devDependencies": {
-    "pagefind": "^1.5.2"
+    "@astrojs/check": "^0.9.10",
+    "pagefind": "^1.5.2",
+    "typescript": "^5.9.3"
   }
 }

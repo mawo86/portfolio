@@ -1,6 +1,6 @@
 ---
 title: "ChatGPT vs Claude: Welches KI-Modell passt zu deinem Unternehmen?"
-description: "ChatGPT oder Claude? Ein ehrlicher Praxisvergleich für Unternehmen — wann welches KI-Modell besser passt und wo die Unterschiede wirklich liegen."
+description: "ChatGPT oder Claude? Ein ehrlicher Praxisvergleich für Unternehmen: wann welches KI-Modell besser passt und wo die Unterschiede wirklich liegen."
 date: 2026-04-06
 tags: ["KI", "Tools", "Vergleich", "Unternehmen"]
 draft: false

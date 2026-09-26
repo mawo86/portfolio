@@ -1,6 +1,6 @@
 ---
 title: "n8n: Dein erster Automatisierungs-Workflow in 30 Minuten"
-description: "n8n installieren, verstehen und den ersten echten Workflow bauen — Schritt für Schritt. Kein Entwickler-Hintergrund nötig."
+description: "n8n installieren, verstehen und den ersten echten Workflow bauen, Schritt für Schritt. Kein Entwickler-Hintergrund nötig."
 date: 2026-04-06
 tags: ["Automatisierung", "n8n", "Anleitung", "Tools"]
 draft: false
@@ -15,7 +15,7 @@ Deshalb machen wir es anders. Wir bauen einen echten Workflow. Einen, der tatsä
 
 <figure>
   <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=1200&q=80" alt="Automatisierungsvisualisierung mit verbundenen Elementen" />
-  <figcaption>Automatisierung ist kein Selbstzweck. Sie löst ein konkretes Problem — oder sie lohnt sich nicht. (Foto: Unsplash)</figcaption>
+  <figcaption>Automatisierung ist kein Selbstzweck. Sie löst ein konkretes Problem, oder sie lohnt sich nicht. (Foto: Unsplash)</figcaption>
 </figure>
 
 ## Was wir bauen
@@ -42,7 +42,7 @@ Das ist dein Arbeitsbereich. Jeder Workflow besteht aus Nodes. Kleine Bausteine,
 
 Jeder Workflow braucht einen Startpunkt. In n8n heißt das Trigger.
 
-Klick auf das Plus-Symbol, such nach "Webhook". Ein Webhook ist eine URL, an die andere Systeme Daten schicken können. Wenn dein Kontaktformular abgesendet wird, schickt es die Daten an diese URL — und dein Workflow startet.
+Klick auf das Plus-Symbol, such nach "Webhook". Ein Webhook ist eine URL, an die andere Systeme Daten schicken können. Wenn dein Kontaktformular abgesendet wird, schickt es die Daten an diese URL, und dein Workflow startet.
 
 Wähle "Webhook" aus, stelle die Methode auf POST, und kopiere die generierte URL. Diese URL kommt später in dein Kontaktformular.
 
@@ -81,9 +81,9 @@ Ab jetzt läuft er im Hintergrund. Jede eingehende Anfrage löst automatisch die
 
 ## Was du jetzt weißt
 
-> Trigger, Verarbeitung, Aktion. Dieses Muster gilt für praktisch jeden Workflow — egal ob du Rechnungen verarbeitest, Daten synchronisierst oder Benachrichtigungen automatisierst.
+> Trigger, Verarbeitung, Aktion. Dieses Muster gilt für praktisch jeden Workflow, egal ob du Rechnungen verarbeitest, Daten synchronisierst oder Benachrichtigungen automatisierst.
 
-n8n hat über 400 integrierte Nodes. Jedes Tool das du kennst — Slack, Notion, Google Sheets, SAP, Salesforce — hat wahrscheinlich einen. Was du gerade gelernt hast, kannst du auf hunderte Szenarien anwenden.
+n8n hat über 400 integrierte Nodes. Jedes Tool das du kennst (Slack, Notion, Google Sheets, SAP, Salesforce) hat wahrscheinlich einen. Was du gerade gelernt hast, kannst du auf hunderte Szenarien anwenden.
 
 Für einfachere Integrationen zwischen Cloud-Diensten ist [Zapier](/tools#automatisierung) eine gute Alternative. Weniger flexibel, dafür schneller aufgesetzt. Den Unterschied beschreibe ich in meinem [KI-Toolkit](/blog/mein-ki-toolkit).
 

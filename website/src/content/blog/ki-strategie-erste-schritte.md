@@ -46,7 +46,7 @@ Die Tool-Landschaft ist riesig und ändert sich wöchentlich. Aber die Grundfrag
 
 Für die meisten Einstiegsprojekte reicht eine Kombination aus bestehenden Werkzeugen. Automatisierungsplattformen wie [n8n oder Zapier](/tools#automatisierung), kombiniert mit Sprachmodellen wie Claude oder ChatGPT, decken erstaunlich viele Anwendungsfälle ab. Die Entscheidung zwischen den Modellen ist dabei weniger dramatisch als viele denken. Wichtiger ist, dass du anfängst. Einen detaillierten Vergleich findest du im Artikel [ChatGPT vs Claude für Unternehmen](/blog/chatgpt-vs-claude-unternehmen).
 
-Bei der Tool-Wahl solltest du drei Dinge im Blick haben: Wo landen deine Daten, gerade bei Kundendaten kein Nebenpunkt. Lässt sich das Tool an deine bestehenden Systeme anbinden. Und was kostet es wirklich — Lizenz, Betrieb, Schulung zusammen.
+Bei der Tool-Wahl solltest du drei Dinge im Blick haben: Wo landen deine Daten, gerade bei Kundendaten kein Nebenpunkt. Lässt sich das Tool an deine bestehenden Systeme anbinden. Und was kostet es wirklich: Lizenz, Betrieb, Schulung zusammen.
 
 ## Schritt 4: Klein starten, messen, skalieren
 
@@ -54,7 +54,7 @@ Du hast den Prozess, den Quick Win, das Tool. Jetzt der letzte und häufigste Fe
 
 Starte mit einem Piloten. Ein Team, ein Prozess, ein klar definierter Zeitraum. Zwei bis vier Wochen. Mit einem Ziel, das du messen kannst.
 
-"Wir wollen KI einführen" ist kein Ziel. "Wir wollen die Bearbeitungszeit für Eingangsrechnungen von 15 auf 3 Minuten reduzieren" — das ist ein Ziel.
+"Wir wollen KI einführen" ist kein Ziel. "Wir wollen die Bearbeitungszeit für Eingangsrechnungen von 15 auf 3 Minuten reduzieren", das ist ein Ziel.
 
 Während des Piloten sammelst du Daten. Was funktioniert? Wo hakt es? Wo brauchen Mitarbeiter Unterstützung? Diese Erkenntnisse sind wertvoller als das Ergebnis selbst. Sie zeigen dir, was beim nächsten Projekt besser läuft.
 
