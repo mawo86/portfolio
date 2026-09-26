@@ -259,6 +259,8 @@ Neu 2026-09-14, abgeleitet aus Transkript-Analyse (`context/strategy.md`): `eu-a
 
 **Discovery-Call-Leitfaden:** `outputs/discovery-call-leitfaden.md` (neu, 2026-09-14) — Gesprächsstruktur fürs kostenlose Erstgespräch, inkl. "Effizienz vor Kreativität"-Erwartungssteuerung und BAFA-Förderhinweis.
 
+**Lead-Funnel-Autopilot-Prompt:** `outputs/prompt-lead-funnel-autopilot.md` (neu, 2026-09-26) — fertiger Prompt für eine Fable-5.1-Session, die Website-Ziel erkennt, Lead-Funnel (Use-Case-Finder, Use-Case-Bibliothek, Lead-Magnet, Tracking) und PR-Build-Check selbstständig umsetzt und pro Use-Case eine interne Schritt-für-Schritt-Anleitung unter `outputs/loesungswege/` anlegt.
+
 **Testimonial-Vorlage:** `outputs/testimonial-vorlage.md` (neu, 2026-09-14) — Interview-Leitfaden und Veröffentlichungs-Struktur für Kundenstimmen (Kunde erzählt in eigenen Worten statt Anbieter-Case-Study). Einsatzbereit, sobald erstes echtes Projekt abgeschlossen ist.
 
 **Skript `scripts/youtube_transcripts.py`:** Lädt via yt-dlp Untertitel (letzte 6 Monate) für eine konfigurierte Kanalliste, wandelt sie in Klartext um und schreibt Ergebnisse nach `reference/youtube-transcripts/` (pro Kanal + `alle-transkripte.md` gesammelt; `_raw/` enthält Original-VTTs). Voraussetzung: `brew install yt-dlp`. Zuletzt gelaufen 2026-09-14 für Silicon Valley Girl, Alex Hormozi, Dan Martell, Chris Donnelly, Everlast AI (133 Transkripte, siehe `context/strategy.md`).
