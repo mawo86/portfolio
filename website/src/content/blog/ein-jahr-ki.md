@@ -109,6 +109,6 @@ Nicht mit einer Strategie. Nicht mit einem Tool-Vergleich. Nicht mit einem Kurs.
 
 Nach drei Wochen hast du ein Gefühl dafür, welche Aufgaben sich eignen. Nach drei Monaten erwischst du dich dabei, wie du ungefragt den richtigen Prompt formulierst. Nach einem Jahr denkst du an bestimmten Stellen anders über deine Arbeit, als du es vorher getan hättest.
 
-Wer tiefer einsteigen will: Mein komplettes Setup ist in [Mein KI-OS](/blog/mein-ki-os) beschrieben, die konkreten Tools in [Mein KI-Toolkit](/tools). Wer gerade am Anfang steht, findet in [KI-Strategie: Erste Schritte](/blog/ki-strategie-erste-schritte) einen geordneten Einstieg.
+Wer tiefer einsteigen will: Mein komplettes Setup ist in [Mein KI-OS](/blog/mein-ki-os) beschrieben, die konkreten Tools in [Mein KI-Toolkit](/blog/mein-ki-toolkit). Wer gerade am Anfang steht, findet in [KI-Strategie: Erste Schritte](/blog/ki-strategie-erste-schritte) einen geordneten Einstieg.
 
 Nach einem Jahr würde ich keins der Werkzeuge mehr hergeben wollen. Aber das Werkzeug ist nicht das Wichtige. Das Wichtige ist, was es mit einem macht, wenn man es ernsthaft nutzt. Und das ist nicht, was alle behaupten. Es ist etwas Stilleres. Nützlicheres. Und auf eine ruhige Weise: besseres.

@@ -72,4 +72,4 @@ Nimm den Prompt, der für dich am relevantesten klingt. Nicht alle fünf, sonder
 
 Teste ihn heute mit einer echten Aufgabe aus deinem Alltag. Dann entscheide, ob er in dein Setup gehört.
 
-Welches KI-Modell dabei die besten Ergebnisse liefert, hängt vom Use Case ab. Den Vergleich von ChatGPT und Claude findest du im Artikel [ChatGPT vs Claude für Unternehmen](/blog/chatgpt-vs-claude-unternehmen). Und wenn du ein ganzes System rund um KI aufbauen willst, lohnt sich ein Blick auf [Mein KI-Toolkit](/tools).
+Welches KI-Modell dabei die besten Ergebnisse liefert, hängt vom Use Case ab. Den Vergleich von ChatGPT und Claude findest du im Artikel [ChatGPT vs Claude für Unternehmen](/blog/chatgpt-vs-claude-unternehmen). Und wenn du ein ganzes System rund um KI aufbauen willst, lohnt sich ein Blick auf [Mein KI-Toolkit](/blog/mein-ki-toolkit).

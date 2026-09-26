@@ -75,4 +75,4 @@ Für alle die KI-Tools, Kundenportale oder interne Systeme nutzen: Das Risiko ei
 
 Alle Tools, die ich nutze und empfehle, findest du auf der [Tools-Seite](/tools#sicherheit--datenschutz). Dort stehen auch andere Sicherheits-Tools mit kurzer Einordnung.
 
-Und wenn du wissen willst, wie ich meinen gesamten digitalen Arbeitsalltag strukturiere: [Mein KI-Toolkit](/tools) gibt einen vollständigen Überblick.
+Und wenn du wissen willst, wie ich meinen gesamten digitalen Arbeitsalltag strukturiere: [Mein KI-Toolkit](/blog/mein-ki-toolkit) gibt einen vollständigen Überblick.

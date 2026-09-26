@@ -77,4 +77,4 @@ Oder sie starten bei Schritt 4 und wollen sofort skalieren, bevor sie wissen ob 
 
 Nimm dir morgen 30 Minuten. Schreib die fünf zeitintensivsten wiederkehrenden Prozesse in deinem Unternehmen auf. Nicht die kompliziertesten. Die zeitintensivsten.
 
-Das ist dein Ausgangspunkt. Und wenn du den ersten Quick Win gefunden hast, hilft dir mein [KI-Toolkit](/tools) bei der Tool-Auswahl.
+Das ist dein Ausgangspunkt. Und wenn du den ersten Quick Win gefunden hast, hilft dir mein [KI-Toolkit](/blog/mein-ki-toolkit) bei der Tool-Auswahl.
