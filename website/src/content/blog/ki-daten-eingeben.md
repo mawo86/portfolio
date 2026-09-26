@@ -1,6 +1,6 @@
 ---
 title: "Welche Daten darf ich in KI-Tools eingeben? Eine praktische Übersicht"
-description: "Kundennamen in ChatGPT? Personaldaten in Claude? Was erlaubt ist und was nicht — eine konkrete, alltagstaugliche Übersicht für Unternehmen."
+description: "Kundennamen in ChatGPT? Personaldaten in Claude? Was erlaubt ist und was nicht: eine konkrete, alltagstaugliche Übersicht für Unternehmen."
 date: 2026-05-08
 tags: ["KI", "DSGVO", "Datenschutz", "Praxis"]
 draft: true
@@ -9,7 +9,7 @@ category: "Datenschutz"
 
 Theorie ist eine Sache. Die tägliche Praxis eine andere.
 
-Der DSGVO-Artikel erklärt das Warum. Dieser Artikel beantwortet das Wie. Welche Daten in welche Tools — konkret, ohne Juristendeutsch.
+Der DSGVO-Artikel erklärt das Warum. Dieser Artikel beantwortet das Wie. Welche Daten in welche Tools, konkret und ohne Juristendeutsch.
 
 ## Die drei Kategorien
 
@@ -41,7 +41,7 @@ Kommt drauf an. Das Transkript selbst enthält Personendaten. In Claude for Busi
 
 **Darf ich eine E-Mail eines Kunden in ChatGPT einfügen, um eine Antwort zu generieren?**
 
-In ChatGPT Free oder Plus: nein — Personendaten des Kunden landen ohne Einwilligung bei OpenAI. In ChatGPT Enterprise mit AVV: rechtlich besser, aber trotzdem bewusst einsetzen. Alternative: E-Mail paraphrasieren ("Ein Kunde schreibt sinngemäß, dass er mit der Lieferzeit unzufrieden ist") — dann kein Personenbezug mehr.
+In ChatGPT Free oder Plus: nein, Personendaten des Kunden landen ohne Einwilligung bei OpenAI. In ChatGPT Enterprise mit AVV: rechtlich besser, aber trotzdem bewusst einsetzen. Alternative: E-Mail paraphrasieren ("Ein Kunde schreibt sinngemäß, dass er mit der Lieferzeit unzufrieden ist"), dann kein Personenbezug mehr.
 
 **Darf ich Bewerbungsunterlagen in KI-Tools einlesen?**
 
@@ -53,7 +53,7 @@ Kommt auf den Inhalt an. Aggregierte Finanzdaten ohne Kundenbezug: möglicherwei
 
 **Kann ich WhisperFlow für Meeting-Aufzeichnungen nutzen?**
 
-WhisperFlow verarbeitet lokal auf deinem Gerät — kein Cloud-Upload. Das ist datenschutzrechtlich deutlich unkomplizierter. Trotzdem: Alle Meeting-Teilnehmer müssen wissen, dass aufgezeichnet wird.
+WhisperFlow verarbeitet lokal auf deinem Gerät, kein Cloud-Upload. Das ist datenschutzrechtlich deutlich unkomplizierter. Trotzdem: Alle Meeting-Teilnehmer müssen wissen, dass aufgezeichnet wird.
 
 ## Die einfachste Schutzmaßnahme: Anonymisieren
 
@@ -65,7 +65,7 @@ Ein anonymisierter Text lässt sich meistens genauso gut von KI verarbeiten. Und
 
 ## Für das gesamte Team
 
-Eine kurze interne Richtlinie — eine halbe Seite reicht — mit den konkreten Regeln für euer Unternehmen reduziert Unsicherheit und verhindert Fehler.
+Eine kurze interne Richtlinie (eine halbe Seite reicht) mit den konkreten Regeln für euer Unternehmen reduziert Unsicherheit und verhindert Fehler.
 
 Klare Regeln, welche Tools freigegeben sind. Klare Regeln, was nicht eingegeben werden darf. Ein Ansprechpartner für Fragen.
 

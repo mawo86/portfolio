@@ -22,9 +22,9 @@ Hier ist, wie du es richtig machst.
 
 Die meisten KI-ROI-Rechnungen scheitern an zwei Fehlern.
 
-Entweder sind sie zu optimistisch. "Wir sparen 10 Vollzeitstellen" — und dann läuft das System in der Realität nur für 30 % der Fälle. Die Rechnung war Fantasie.
+Entweder sind sie zu optimistisch. "Wir sparen 10 Vollzeitstellen", und dann läuft das System in der Realität nur für 30 % der Fälle. Die Rechnung war Fantasie.
 
-Oder sie sind zu unspezifisch. "Wir steigern die Effizienz um 20 %" — was bedeutet das in Euro? Was ist die Basis?
+Oder sie sind zu unspezifisch. "Wir steigern die Effizienz um 20 %". Was bedeutet das in Euro? Was ist die Basis?
 
 Die Lösung: Rechne klein und konkret. Nicht das Gesamtpotenzial, sondern den einen Prozess, den du tatsächlich automatisieren willst.
 
@@ -44,9 +44,9 @@ Nicht "die Aufgabe dauert 2 Stunden, also sparen wir 2 Stunden". Das stimmt nich
 
 Realistische Schätzung in drei Schritten:
 
-1. Wie lange dauert die Aufgabe heute? (Messung, nicht Schätzung — ideal über zwei Wochen protokollieren)
+1. Wie lange dauert die Aufgabe heute? (Messung, nicht Schätzung, ideal über zwei Wochen protokollieren)
 2. Wie oft kommt sie vor? (pro Tag, pro Woche, pro Monat)
-3. Wie viel davon kann tatsächlich automatisiert werden? (Nicht 100 % — rechne mit 60-80 % im ersten Schritt)
+3. Wie viel davon kann tatsächlich automatisiert werden? (Nicht 100 %, rechne mit 60-80 % im ersten Schritt)
 
 Beispiel: Ein Mitarbeiter verarbeitet täglich 30 Eingangsrechnungen à 8 Minuten = 4 Stunden täglich. KI übernimmt 70 % davon. Eingesparte Zeit: 2,8 Stunden täglich.
 

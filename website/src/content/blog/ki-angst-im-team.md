@@ -7,7 +7,7 @@ draft: true
 category: "Strategie"
 ---
 
-"Wir führen jetzt KI ein" — und dann ist Stille. Kein Jubel. Keine Begeisterung. Sondern fragende Blicke und das unausgesprochene: Was bedeutet das für mich?
+"Wir führen jetzt KI ein", und dann ist Stille. Kein Jubel. Keine Begeisterung. Sondern fragende Blicke und das unausgesprochene: Was bedeutet das für mich?
 
 Das ist normal. Und wer das ignoriert, hat ein Problem.
 
@@ -16,7 +16,7 @@ Das ist normal. Und wer das ignoriert, hat ein Problem.
   <figcaption>Die wichtigste Frage im Raum wird oft nicht laut gestellt. (Foto: Unsplash)</figcaption>
 </figure>
 
-## Warum Mitarbeiter Angst haben — und wieso das berechtigt ist
+## Warum Mitarbeiter Angst haben und wieso das berechtigt ist
 
 Die Angst vor KI ist nicht irrational. Automatisierung hat in der Vergangenheit Berufsbilder verändert und eliminiert. Wer sagt, das passiert nicht wieder, lügt.
 
@@ -26,7 +26,7 @@ Als Führungskraft darfst du das nicht kleinreden. Aber du musst es richtig eino
 
 ## Was du nicht tun solltest
 
-**Versprechen, die du nicht halten kannst.** "Niemand verliert seinen Job durch KI" — das kannst du nicht wissen. Und wenn es doch passiert, bist du unglaubwürdig.
+**Versprechen, die du nicht halten kannst.** "Niemand verliert seinen Job durch KI": Das kannst du nicht wissen. Und wenn es doch passiert, bist du unglaubwürdig.
 
 **Ignorieren, bis es eskaliert.** Wenn du die Bedenken nicht ansprichst, entstehen Gerüchte. Gerüchte sind fast immer schlimmer als die Wahrheit.
 
@@ -64,7 +64,7 @@ Schulung muss nicht teuer sein. Ein Nachmittag mit praktischen Übungen zu den T
 
 Die Angst löst sich nicht in Luft auf, wenn das System live geht. Sie transformiert sich.
 
-Mitarbeiter, die anfangs skeptisch waren, werden oft zu den stärksten Befürwortern — wenn das System hält, was versprochen wurde. Und wenn sie merken, dass ihre Arbeit interessanter geworden ist.
+Mitarbeiter, die anfangs skeptisch waren, werden oft zu den stärksten Befürwortern, wenn das System hält, was versprochen wurde. Und wenn sie merken, dass ihre Arbeit interessanter geworden ist.
 
 Mitarbeiter, die sich übergangen oder getäuscht fühlen, werden dauerhaft ein Problem sein.
 

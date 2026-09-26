@@ -1,6 +1,6 @@
 ---
-title: "KI ersetzt keine Jobs — aber KI-Nutzer ersetzen Nicht-Nutzer"
-description: "Warum die Frage 'Nimmt KI meinen Job?' falsch gestellt ist — und welche Fähigkeiten in einer KI-geprägten Arbeitswelt wirklich zählen."
+title: "KI ersetzt keine Jobs, aber KI-Nutzer ersetzen Nicht-Nutzer"
+description: "Warum die Frage 'Nimmt KI meinen Job?' falsch gestellt ist und welche Fähigkeiten in einer KI-geprägten Arbeitswelt wirklich zählen."
 date: 2026-06-19
 tags: ["KI", "Zukunft", "Arbeit", "Meinung"]
 draft: true
@@ -22,7 +22,7 @@ Die richtige Frage lautet: Was kann ich besser, wenn ich KI als Werkzeug nutze? 
 
 KI nimmt keine ganzen Berufe weg. Sie nimmt Aufgaben weg.
 
-Buchhalter verlieren nicht ihren Job, weil KI Rechnungen lesen kann. Aber Buchhalter, die täglich vier Stunden damit verbringen, Rechnungen manuell zu erfassen — die verlieren diesen Teil ihrer Arbeit.
+Buchhalter verlieren nicht ihren Job, weil KI Rechnungen lesen kann. Aber Buchhalter, die täglich vier Stunden damit verbringen, Rechnungen manuell zu erfassen, die verlieren diesen Teil ihrer Arbeit.
 
 Was bleibt: Urteilsvermögen, Kontext, Beziehungen, Verantwortung.
 
@@ -44,13 +44,13 @@ Das ist der eigentliche Job-Effekt. Kein Roboter, der Menschen ersetzt. Sondern 
 
 ## Was das für Arbeitnehmer bedeutet
 
-Die Priorität ist klar: Lern, KI-Tools zu nutzen. Nicht theoretisch — praktisch.
+Die Priorität ist klar: Lern, KI-Tools zu nutzen. Nicht theoretisch, sondern praktisch.
 
 Das bedeutet nicht, ein KI-Experte zu werden. Es bedeutet, KI für die eigene Arbeit nutzbar zu machen. Der Buchhalter, der versteht wie KI-gestützte Belegverarbeitung funktioniert und sie bedienen kann, ist wertvoller als einer, der das ablehnt.
 
 Das gilt für fast jeden Beruf.
 
-**Was nicht weggeht:** Urteilen, Entscheiden, Beziehungen pflegen, Verantwortung übernehmen, Kontext verstehen. Das sind menschliche Kernkompetenzen. KI kann Vorschläge machen — aber der Mensch trägt die Konsequenzen.
+**Was nicht weggeht:** Urteilen, Entscheiden, Beziehungen pflegen, Verantwortung übernehmen, Kontext verstehen. Das sind menschliche Kernkompetenzen. KI kann Vorschläge machen, aber der Mensch trägt die Konsequenzen.
 
 **Was weggeht:** Alles, das sich in klaren Regeln beschreiben lässt. Alles, das repetitiv und musterbasiert ist.
 
@@ -58,9 +58,9 @@ Das gilt für fast jeden Beruf.
 
 Ihr verantwortet zwei Dinge.
 
-Erstens: Eure Teams müssen die Werkzeuge kennen. Nicht als optionales Upgrade, sondern als Teil der normalen Arbeit. KI-Kompetenz ist keine Spezialität mehr — sie ist Grundlage.
+Erstens: Eure Teams müssen die Werkzeuge kennen. Nicht als optionales Upgrade, sondern als Teil der normalen Arbeit. KI-Kompetenz ist keine Spezialität mehr, sie ist Grundlage.
 
-Zweitens: Die Angst muss adressiert werden. Nicht wegdiskutiert — adressiert. [KI-Angst im Team](/blog/ki-angst-im-team) ist real und berechtigt. Wer sie ignoriert, verliert die Mitarbeiter, die er braucht.
+Zweitens: Die Angst muss adressiert werden. Nicht wegdiskutiert, sondern adressiert. [KI-Angst im Team](/blog/ki-angst-im-team) ist real und berechtigt. Wer sie ignoriert, verliert die Mitarbeiter, die er braucht.
 
 ## Was das für Unternehmen bedeutet
 
@@ -72,7 +72,7 @@ Nicht dramatisch über Nacht. Aber stetig. Und der Abstand wird größer.
 
 ## Dein nächster Schritt
 
-Wenn du als Arbeitnehmer liest: Fang heute an. Nicht mit dem perfekten Setup — mit der nächsten Aufgabe, bei der du KI ausprobierst.
+Wenn du als Arbeitnehmer liest: Fang heute an. Nicht mit dem perfekten Setup, sondern mit der nächsten Aufgabe, bei der du KI ausprobierst.
 
 Wenn du als Führungskraft liest: Frag dich, ob dein Team die Werkzeuge kennt. Und ob du die Bedingungen geschaffen hast, in denen sie gelernt werden können.
 

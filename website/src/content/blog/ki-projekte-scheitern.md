@@ -1,6 +1,6 @@
 ---
-title: "Warum KI-Projekte scheitern — und wie du es von Anfang an vermeidest"
-description: "Die meisten KI-Projekte liefern keine messbaren Ergebnisse. Warum — und was Unternehmen konkret anders machen müssen, bevor sie starten."
+title: "Warum KI-Projekte scheitern und wie du es von Anfang an vermeidest"
+description: "Die meisten KI-Projekte liefern keine messbaren Ergebnisse. Warum, und was Unternehmen konkret anders machen müssen, bevor sie starten."
 date: 2026-05-22
 tags: ["KI", "Strategie", "Fehler", "Unternehmen"]
 draft: true
@@ -24,7 +24,7 @@ Das ist die Mutter aller Scheitergründe.
 
 "Wir wollen KI nutzen, um effizienter zu werden." Oder: "KI soll uns helfen, wettbewerbsfähiger zu sein."
 
-Das sind keine Probleme. Das sind Wünsche. KI löst keine Wünsche — sie löst spezifische, definierte Probleme.
+Das sind keine Probleme. Das sind Wünsche. KI löst keine Wünsche, sie löst spezifische, definierte Probleme.
 
 Ein konkretes Problem: "Wir verarbeiten täglich 200 Eingangsrechnungen manuell, jede dauert durchschnittlich 12 Minuten, das kostet uns 3.400 Euro pro Woche."
 
@@ -34,17 +34,17 @@ Damit kann man arbeiten.
 
 KI-Tools werden ausgewählt, bevor der Prozess verstanden wird.
 
-Das führt zu einem Phänomen, das ich als "Lösungssuche nach dem Kauf" bezeichne: Man hat ein Tool — jetzt sucht man ein Problem, das dazu passt.
+Das führt zu einem Phänomen, das ich als "Lösungssuche nach dem Kauf" bezeichne: Man hat ein Tool, jetzt sucht man ein Problem, das dazu passt.
 
 Richtig ist der umgekehrte Weg. Erst: Wo liegt der Schmerz? Dann: Welches Werkzeug passt? Der technologische Startpunkt ist das letzte, nicht das erste.
 
 ## Muster 3: Fehlende Datenbasis
 
-KI braucht Daten. Nicht irgendwelche — saubere, strukturierte, relevante Daten.
+KI braucht Daten. Nicht irgendwelche, sondern saubere, strukturierte, relevante Daten.
 
 In der Realität sind viele Unternehmens-Datensätze chaotisch: inkonsistente Formate, fehlende Felder, doppelte Einträge, veraltete Informationen. Was in manuellen Prozessen "irgendwie funktioniert", ist für automatisierte Systeme ein systematischer Fehler.
 
-Wenn die Datenbasis nicht stimmt, kann das beste Modell keinen Mehrwert liefern. Datenqualität ist kein Annexthema — sie ist Voraussetzung.
+Wenn die Datenbasis nicht stimmt, kann das beste Modell keinen Mehrwert liefern. Datenqualität ist kein Annexthema, sie ist Voraussetzung.
 
 ## Muster 4: Falscher Pilot-Scope
 
@@ -58,13 +58,13 @@ Der erste Pilot muss klein sein. Ein Prozess, ein Team, vier Wochen. Der Beweis,
 
 Technologie wird eingeführt. Mitarbeiter werden nicht vorbereitet.
 
-Dann passiert das Vorhersehbare: Das System wird umgangen. Mitarbeiter finden Wege, es zu ignorieren oder zu sabotieren. Nicht aus Böswilligkeit — aus Unsicherheit oder fehlendem Verständnis.
+Dann passiert das Vorhersehbare: Das System wird umgangen. Mitarbeiter finden Wege, es zu ignorieren oder zu sabotieren. Nicht aus Böswilligkeit, sondern aus Unsicherheit oder fehlendem Verständnis.
 
-Wer Mitarbeiter früh einbindet, erklärt und schult, verhindert das. Das ist kein Softfaktor — es ist Projektmanagement. Mehr dazu im Artikel [KI-Angst im Team](/blog/ki-angst-im-team).
+Wer Mitarbeiter früh einbindet, erklärt und schult, verhindert das. Das ist kein Softfaktor, es ist Projektmanagement. Mehr dazu im Artikel [KI-Angst im Team](/blog/ki-angst-im-team).
 
 ## Muster 6: Kein klarer Erfolgsmaßstab
 
-Nach dem Pilot die Frage: "Wie lief es?" — "Ganz okay, irgendwie."
+Nach dem Pilot die Frage: "Wie lief es?" "Ganz okay, irgendwie."
 
 "Irgendwie" ist kein Ergebnis. Wenn vor dem Start nicht definiert wurde, was Erfolg bedeutet und wie er gemessen wird, gibt es nach dem Projekt nur Interpretationen, keine Fakten.
 

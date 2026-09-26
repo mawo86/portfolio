@@ -22,11 +22,11 @@ Du brauchst kein Team aus KI-Wissenschaftlern. Du brauchst Struktur, Verantwortu
 
 Kein Data Scientist. Kein Machine-Learning-Engineer. Nicht für den Anfang.
 
-Was du brauchst, sind drei Typen. Nicht drei Vollzeitstellen — drei Rollen, die auch von bestehenden Mitarbeitern übernommen werden können.
+Was du brauchst, sind drei Typen. Nicht drei Vollzeitstellen, sondern drei Rollen, die auch von bestehenden Mitarbeitern übernommen werden können.
 
 ### Der KI-Verantwortliche
 
-Eine Person, die KI-Projekte koordiniert, intern kommuniziert und den Überblick behält. Kein Techniker — ein Organisator. Jemand, der versteht wie Unternehmensprozesse funktionieren und neugierig auf Technologie ist.
+Eine Person, die KI-Projekte koordiniert, intern kommuniziert und den Überblick behält. Kein Techniker, sondern ein Organisator. Jemand, der versteht wie Unternehmensprozesse funktionieren und neugierig auf Technologie ist.
 
 Diese Rolle kann ein Projektmanager, ein Prozessberater oder ein engagierter Teamleiter übernehmen. Die Fähigkeiten sind lernbar. Die Neugier muss schon da sein.
 
@@ -40,15 +40,15 @@ Auswahl: Wer in eurem Unternehmen probiert gerne neue Tools aus? Wer stellt die 
 
 ### Der Technische Umsetzer
 
-Jemand, der Automatisierungsworkflows bauen kann. Das muss kein Entwickler sein — jemand, der Tools wie [n8n](/tools#automatisierung) oder Zapier erlernt, reicht für die meisten Einstiegsprojekte.
+Jemand, der Automatisierungsworkflows bauen kann. Das muss kein Entwickler sein. Jemand, der Tools wie [n8n](/tools#automatisierung) oder Zapier erlernt, reicht für die meisten Einstiegsprojekte.
 
 Wenn ihr keinen internen Kandidaten habt: Externer Freelancer für die ersten Projekte, Wissenstransfer einbauen.
 
 ## Wie du Kompetenz aufbaust
 
-**Schritt 1: Freiraum schaffen.** KI lernt man nicht in Pflichtseminaren. Power-User brauchen Zeit, um zu experimentieren. Zwei Stunden pro Woche für KI-Exploration einzuplanen klingt wenig — aber es reicht für den Start.
+**Schritt 1: Freiraum schaffen.** KI lernt man nicht in Pflichtseminaren. Power-User brauchen Zeit, um zu experimentieren. Zwei Stunden pro Woche für KI-Exploration einzuplanen klingt wenig, aber es reicht für den Start.
 
-**Schritt 2: Einen internen Wissenskanal einrichten.** Slack-Channel, Teams-Gruppe, internes Wiki — egal wo. Ein Ort, wo gute Prompts, nützliche Workflows und Erfahrungen geteilt werden. Das Wissen darf nicht in Einzelpersonen stecken bleiben.
+**Schritt 2: Einen internen Wissenskanal einrichten.** Slack-Channel, Teams-Gruppe, internes Wiki, egal wo. Ein Ort, wo gute Prompts, nützliche Workflows und Erfahrungen geteilt werden. Das Wissen darf nicht in Einzelpersonen stecken bleiben.
 
 **Schritt 3: Klare Werkzeugauswahl.** Wenn jeder andere Tools nutzt, gibt es keine gemeinsame Sprache. Definiert zwei bis drei Tools, die ihr einsetzt. Alle anderen werden nicht freigeschaltet. Fokus schlägt Vielfalt.
 
@@ -66,7 +66,7 @@ Auf den perfekten KI-Experten warten. Den gibt es nicht zu dem Preis, den ihr za
 
 ## Dein nächster Schritt
 
-Benenne heute einen KI-Verantwortlichen. Nicht mit 100 % Kapazität — mit der Aufgabe, die ersten Schritte zu koordinieren.
+Benenne heute einen KI-Verantwortlichen. Nicht mit 100 % Kapazität, sondern mit der Aufgabe, die ersten Schritte zu koordinieren.
 
 Dann identifiziere zwei bis drei Power-User-Kandidaten pro Bereich. Gib ihnen Freiraum und einen klaren ersten Auftrag: In einem Monat ein nützliches KI-Anwendungsbeispiel für ihren Bereich zu finden.
 

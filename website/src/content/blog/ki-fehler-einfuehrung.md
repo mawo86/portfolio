@@ -1,6 +1,6 @@
 ---
 title: "Die 7 häufigsten Fehler bei der KI-Einführung"
-description: "Warum so viele KI-Projekte im Pilotpurgatorium stecken — und welche sieben Fehler fast immer dahinterstecken. Mit konkreten Gegenmaßnahmen."
+description: "Warum so viele KI-Projekte im Pilotpurgatorium stecken und welche sieben Fehler fast immer dahinterstecken. Mit konkreten Gegenmaßnahmen."
 date: 2026-04-21
 tags: ["KI", "Strategie", "Unternehmen", "Fehler"]
 draft: true
@@ -32,13 +32,13 @@ Gegenmaßnahme: Prozesse dokumentieren, bevor du Tools evaluierst. Mindestens zw
 
 Klingt ambitioniert. Ist ein Rezept für einen 12-monatigen Piloten, der nichts beweist.
 
-Der erste Pilot muss klein sein. Eng definiert. Ein Prozess, ein Team, vier Wochen. Du brauchst einen schnellen Beweis, der intern Vertrauen aufbaut. Wenn das erste Projekt zu groß ist, gibt es keinen schnellen Beweis — nur langes Warten und steigende Skepsis.
+Der erste Pilot muss klein sein. Eng definiert. Ein Prozess, ein Team, vier Wochen. Du brauchst einen schnellen Beweis, der intern Vertrauen aufbaut. Wenn das erste Projekt zu groß ist, gibt es keinen schnellen Beweis, nur langes Warten und steigende Skepsis.
 
 Gegenmaßnahme: Scope des ersten Projekts auf einen einzigen messbaren Use Case begrenzen.
 
 ## Fehler 3: Kein Erfolgsmaßstab definiert
 
-"Hat es funktioniert?" — "Ja, irgendwie."
+"Hat es funktioniert?" "Ja, irgendwie."
 
 Dieses Gespräch passiert nach jedem schlecht geplanten Piloten. Wenn du vorher nicht definiert hast, was Erfolg bedeutet, kannst du ihn nicht feststellen. Und ohne Erfolgsnachweis gibt es kein nächstes Budget.
 
@@ -50,7 +50,7 @@ KI-Projekte werden von oben geplant und unten eingeführt. Die Menschen, die den
 
 Das rächt sich. Mitarbeiter kennen Ausnahmen, Sonderfälle und informelle Regeln, die in keiner Dokumentation stehen. Wenn KI diese nicht kennt, produziert sie Fehler. Und wenn Mitarbeiter das System nicht verstehen oder ihm nicht vertrauen, nutzen sie es nicht.
 
-Gegenmaßnahme: Key-User früh einbinden. Nicht als Testpersonen — als Mitgestalter.
+Gegenmaßnahme: Key-User früh einbinden. Nicht als Testpersonen, sondern als Mitgestalter.
 
 ## Fehler 5: Datenqualität unterschätzt
 
@@ -64,7 +64,7 @@ Gegenmaßnahme: Datenqualität als eigenständige Teilaufgabe einplanen. Vor dem
 
 KI-Anbieter versprechen viel. In Demos läuft alles perfekt. Echte Daten sind kein Demo.
 
-Wer in sein Führungsteam kommuniziert "KI wird 80 % unserer Arbeit übernehmen", hat sich selbst in eine Falle gesetzt. Wenn es dann 40 % sind — was ein gutes Ergebnis wäre — fühlt es sich wie Scheitern an.
+Wer in sein Führungsteam kommuniziert "KI wird 80 % unserer Arbeit übernehmen", hat sich selbst in eine Falle gesetzt. Wenn es dann 40 % sind, was ein gutes Ergebnis wäre, fühlt es sich wie Scheitern an.
 
 Gegenmaßnahme: Konservativ kommunizieren. Besser überraschen als enttäuschen.
 
@@ -78,7 +78,7 @@ Wer diese Fragen nicht dokumentiert, macht beim nächsten Projekt die gleichen F
 
 Gegenmaßnahme: Retrospektive als Pflicht einplanen, nicht als Option.
 
-> Das Gute: Alle sieben Fehler sind vermeidbar. Sie brauchen keine Technologie — sie brauchen Disziplin.
+> Das Gute: Alle sieben Fehler sind vermeidbar. Sie brauchen keine Technologie, sie brauchen Disziplin.
 
 ## Was du mitnehmen kannst
 

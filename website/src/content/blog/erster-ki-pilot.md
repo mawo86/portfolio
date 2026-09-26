@@ -9,7 +9,7 @@ category: "Strategie"
 
 Vier Wochen. Das ist die Zeit, die ein gut definiertes KI-Pilotprojekt braucht, um messbare Ergebnisse zu liefern.
 
-Nicht sechs Monate. Nicht ein Jahr. Vier Wochen — wenn du es richtig angehst.
+Nicht sechs Monate. Nicht ein Jahr. Vier Wochen, wenn du es richtig angehst.
 
 <figure>
   <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80" alt="Kalender und Planungsunterlagen auf einem Schreibtisch" />
@@ -20,7 +20,7 @@ Nicht sechs Monate. Nicht ein Jahr. Vier Wochen — wenn du es richtig angehst.
 
 Nicht jeder Prozess eignet sich für einen Vier-Wochen-Piloten. Du brauchst:
 
-**Einen definierten Prozess.** Nicht "wir wollen KI in der Kommunikation" — sondern "wir wollen täglich eingehende Supportanfragen automatisch klassifizieren und weiterleiten".
+**Einen definierten Prozess.** Nicht "wir wollen KI in der Kommunikation", sondern "wir wollen täglich eingehende Supportanfragen automatisch klassifizieren und weiterleiten".
 
 **Vorhandene Daten.** Der Prozess muss heute schon Daten produzieren, auf die KI zugreifen kann. Keine Daten, kein Pilot.
 
@@ -34,7 +34,7 @@ Fehlt eine dieser Voraussetzungen, kläre sie zuerst.
 
 ### Woche 1: Vorbereitung und Setup
 
-**Tag 1-2:** Den Prozess vollständig dokumentieren. Nicht wie er aussehen soll — wie er heute wirklich abläuft. Ausnahmen, Sonderfälle, manuelle Eingriffe. Alles aufschreiben.
+**Tag 1-2:** Den Prozess vollständig dokumentieren. Nicht wie er aussehen soll, sondern wie er heute wirklich abläuft. Ausnahmen, Sonderfälle, manuelle Eingriffe. Alles aufschreiben.
 
 **Tag 3-4:** Tool-Auswahl und technisches Setup. Welches Tool passt zum Prozess? Zugang einrichten, Testumgebung aufsetzen, sicherstellen dass alle nötigen Schnittstellen verfügbar sind.
 
@@ -42,7 +42,7 @@ Fehlt eine dieser Voraussetzungen, kläre sie zuerst.
 
 ### Woche 2: Bauen
 
-Die eigentliche Implementierung. Nicht die perfekte Lösung — die erste funktionierende Version.
+Die eigentliche Implementierung. Nicht die perfekte Lösung, sondern die erste funktionierende Version.
 
 Ein Automatisierungsworkflow, der den Prozess für typische Fälle abdeckt. 60-70 % der Fälle ist ein gutes Ziel für die erste Version. Der Rest kommt in Woche 3.
 
@@ -58,24 +58,24 @@ Am Ende von Woche 3 sollte das System für 70-80 % der Fälle zuverlässig laufe
 
 ### Woche 4: Messen und Entscheiden
 
-Den parallelen Betrieb beenden. Das System läuft alleine — mit menschlicher Überprüfung bei Ausnahmen.
+Den parallelen Betrieb beenden. Das System läuft alleine, mit menschlicher Überprüfung bei Ausnahmen.
 
 Kennzahlen erheben: Zeitersparnis, Fehlerrate, Bearbeitungszeit, Nutzerfeedback.
 
 **Ehrliche Bewertung:** Hat der Pilot sein Ziel erreicht? Wenn ja: ausrollen. Wenn nein: Was war das Problem? War es das falsche Tool, der falsche Prozess, oder ein Umsetzungsfehler?
 
-> Ein Pilot der scheitert, ist kein Misserfolg. Er ist ein Erkenntnisgewinn — wenn du weißt, warum er gescheitert ist.
+> Ein Pilot der scheitert, ist kein Misserfolg. Er ist ein Erkenntnisgewinn, wenn du weißt, warum er gescheitert ist.
 
 ## Was oft schiefgeht
 
 **Der Scope kriecht.** In Woche 2 wird plötzlich "noch schnell" ein zweiter Use Case hinzugefügt. Dann ein dritter. Am Ende läuft nichts richtig.
 
-**Die Erfolgsdefinition ändert sich.** Wenn die Ergebnisse nicht dem entsprechen was man sich erhofft hat, beginnt man die Ziele nachträglich zu verschieben. Legt die Erfolgskennzahl vor dem Start fest — und ändert sie nicht.
+**Die Erfolgsdefinition ändert sich.** Wenn die Ergebnisse nicht dem entsprechen was man sich erhofft hat, beginnt man die Ziele nachträglich zu verschieben. Legt die Erfolgskennzahl vor dem Start fest und ändert sie nicht.
 
 **Kein Feedback der Nutzer.** Das System läuft, aber niemand hat die Mitarbeiter gefragt ob es funktioniert. Deren Feedback ist Gold wert.
 
 ## Dein nächster Schritt
 
-Schreib heute den Prozess auf, den du pilotieren willst. Nicht die Idee — den konkreten, heute laufenden Prozess.
+Schreib heute den Prozess auf, den du pilotieren willst. Nicht die Idee, sondern den konkreten, heute laufenden Prozess.
 
 Dann lies [5 Zeichen, dass ein Prozess nach KI schreit](/blog/ki-prozesse-identifizieren) und schau, ob dein Kandidat die Kriterien erfüllt. Den strategischen Rahmen liefert [KI-Strategie: Wo du wirklich anfangen solltest](/blog/ki-strategie-erste-schritte).

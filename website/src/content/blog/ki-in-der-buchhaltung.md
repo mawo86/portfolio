@@ -1,19 +1,19 @@
 ---
-title: "KI in der Buchhaltung: Was heute schon geht — und was noch nicht"
-description: "Rechnungsverarbeitung, Kostenstellen-Zuweisung, Reporting — was KI in der Buchhaltung heute zuverlässig kann und wo die Grenzen sind."
+title: "KI in der Buchhaltung: Was heute schon geht und was noch nicht"
+description: "Rechnungsverarbeitung, Kostenstellen-Zuweisung, Reporting: Was KI in der Buchhaltung heute zuverlässig kann und wo die Grenzen sind."
 date: 2026-05-15
 tags: ["KI", "Buchhaltung", "Automatisierung", "Finance"]
 draft: true
 category: "Branchen"
 ---
 
-Buchhaltung ist prädestiniert für KI. Strukturierte Daten, wiederkehrende Prozesse, klare Regeln — und trotzdem enorme manuelle Aufwände.
+Buchhaltung ist prädestiniert für KI. Strukturierte Daten, wiederkehrende Prozesse, klare Regeln, und trotzdem enorme manuelle Aufwände.
 
 Ich sage das nicht als Außenstehender. Ich habe jahrelang mit SAP FI/CO gearbeitet und weiß, wie viel Zeit in Prozessen steckt, die eigentlich automatisiert sein könnten.
 
 <figure>
   <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80" alt="Finanzdaten auf Bildschirmen, Taschenrechner und Unterlagen" />
-  <figcaption>Buchhaltung lebt von Präzision. KI kann die Fleißarbeit übernehmen — der Mensch prüft. (Foto: Unsplash)</figcaption>
+  <figcaption>Buchhaltung lebt von Präzision. KI kann die Fleißarbeit übernehmen, der Mensch prüft. (Foto: Unsplash)</figcaption>
 </figure>
 
 ## Was heute zuverlässig funktioniert
@@ -44,11 +44,11 @@ Monatliche Berichte aus SAP oder anderen ERP-Systemen: Datenexport, Aufbereitung
 
 ## Was noch nicht funktioniert
 
-**Vollautomatische Buchungen ohne Freigabe:** Bei Finanzdaten ist ein Mensch im Loop keine Schwäche, sondern Standard. Nicht nur aus Compliance-Gründen — auch weil KI Kontext nicht versteht. Eine Rechnung mit ungewöhnlichem Betrag kann korrekt sein oder ein Fehler. Der Buchhalter weiß das. Das Modell oft nicht.
+**Vollautomatische Buchungen ohne Freigabe:** Bei Finanzdaten ist ein Mensch im Loop keine Schwäche, sondern Standard. Nicht nur aus Compliance-Gründen, auch weil KI Kontext nicht versteht. Eine Rechnung mit ungewöhnlichem Betrag kann korrekt sein oder ein Fehler. Der Buchhalter weiß das. Das Modell oft nicht.
 
 **Steuerliche Einschätzungen:** KI kann Standardfälle abbilden. Aber steuerliche Grenzfälle, neue Rechtsprechung oder unternehmensindividuelle Gestaltungen brauchen menschliche Expertise. KI als Hilfe bei der Vorbereitung: ja. Steuerberater ersetzen: nein.
 
-**ERP-Integration ohne Vorarbeit:** KI-Tools funktionieren nicht von alleine mit SAP, DATEV oder anderen ERP-Systemen. Es braucht Schnittstellen, saubere Datenstrukturen und oft technische Implementierungsarbeit. Das ist machbar — aber kein Plug-and-Play.
+**ERP-Integration ohne Vorarbeit:** KI-Tools funktionieren nicht von alleine mit SAP, DATEV oder anderen ERP-Systemen. Es braucht Schnittstellen, saubere Datenstrukturen und oft technische Implementierungsarbeit. Das ist machbar, aber kein Plug-and-Play.
 
 > Die Stärke von KI in der Buchhaltung liegt nicht darin, Buchhalter zu ersetzen. Sie liegt darin, ihnen die Arbeit zu geben, für die ihre Expertise wirklich gebraucht wird.
 

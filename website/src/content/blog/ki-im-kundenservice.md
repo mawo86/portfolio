@@ -1,6 +1,6 @@
 ---
 title: "KI im Kundenservice: Was wirklich funktioniert (und was nicht)"
-description: "KI im Kundenservice einsetzen — aber richtig. Wo Automatisierung echten Mehrwert schafft, wo sie schadet und was die häufigsten Fehler sind."
+description: "KI im Kundenservice einsetzen, aber richtig. Wo Automatisierung echten Mehrwert schafft, wo sie schadet und was die häufigsten Fehler sind."
 date: 2026-05-01
 tags: ["KI", "Kundenservice", "Automatisierung", "Unternehmen"]
 draft: true
@@ -13,7 +13,7 @@ KI im Kundenservice ist kein Selbstläufer. Falsch eingesetzt frustriert sie Kun
 
 <figure>
   <img src="https://images.unsplash.com/photo-1512314889357-e157c22f938d?auto=format&fit=crop&w=1200&q=80" alt="Person am Laptop mit Headset, im Hintergrund ein modernes Büro" />
-  <figcaption>KI im Kundenservice funktioniert — wenn sie das Richtige tut. (Foto: Unsplash)</figcaption>
+  <figcaption>KI im Kundenservice funktioniert, wenn sie das Richtige tut. (Foto: Unsplash)</figcaption>
 </figure>
 
 ## Was wirklich gut funktioniert
@@ -44,7 +44,7 @@ KI liest den Ton einer Nachricht und erkennt frustrierte, verärgerte oder eskal
 
 Einfach, aber wirkungsvoll. Kein Kunde, der stundenlang auf eine Antwort wartet und dann eskaliert, weil ihn die Automation vergessen hat.
 
-## Was nicht funktioniert — ehrlich
+## Was nicht funktioniert, ehrlich gesagt
 
 ### Komplette Automatisierung ohne menschliche Kontrolle
 
@@ -62,11 +62,11 @@ Faustregel: KI für alles, das sich in einem Absatz beantworten lässt. Mensch f
 
 ### Implementierung ohne Mitarbeitereinbindung
 
-Support-Teams, die nicht verstehen warum KI-Tools eingeführt werden und wie sie funktionieren, sabotieren die Einführung. Nicht böswillig — aus Unsicherheit.
+Support-Teams, die nicht verstehen warum KI-Tools eingeführt werden und wie sie funktionieren, sabotieren die Einführung. Nicht böswillig, sondern aus Unsicherheit.
 
 Wer nicht erklärt bekommt, warum sich die Arbeit ändert, erfindet eigene Erklärungen. Meistens schlechtere.
 
-> Der beste Kundenservice-Bot ist einer, den die Mitarbeiter schätzen — weil er ihnen Arbeit abnimmt, nicht weil er sie ersetzt.
+> Der beste Kundenservice-Bot ist einer, den die Mitarbeiter schätzen, weil er ihnen Arbeit abnimmt, nicht weil er sie ersetzt.
 
 ## Wo du anfangen kannst
 
