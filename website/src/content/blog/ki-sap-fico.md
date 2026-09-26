@@ -1,6 +1,6 @@
 ---
 title: "KI für SAP FI/CO: Konkrete Anwendungsfälle im Controlling"
-description: "Wie KI das SAP-Controlling konkret verändert — von automatisierten Abschlüssen über intelligente Abweichungsanalysen bis zu natürlichsprachigen Datenabfragen."
+description: "Wie KI das SAP-Controlling konkret verändert: von automatisierten Abschlüssen über intelligente Abweichungsanalysen bis zu natürlichsprachigen Datenabfragen."
 date: 2026-06-16
 tags: ["SAP", "KI", "Controlling", "FI/CO", "Enterprise"]
 draft: true
@@ -24,9 +24,9 @@ Ein mittelgroßes Unternehmen verbringt 3-5 Arbeitstage pro Monat für diesen Pr
 
 Wo KI eingreifen kann:
 
-**Datenaggregation:** Ein automatisierter Prozess exportiert täglich Rohdaten aus SAP (via RFC oder OData), bereitet sie auf und stellt sie in einer konsistenten Struktur bereit. Nicht mehr manuell am Monatsende — sondern laufend.
+**Datenaggregation:** Ein automatisierter Prozess exportiert täglich Rohdaten aus SAP (via RFC oder OData), bereitet sie auf und stellt sie in einer konsistenten Struktur bereit. Nicht mehr manuell am Monatsende, sondern laufend.
 
-**Abweichungsanalyse:** KI identifiziert automatisch signifikante Abweichungen gegenüber Vormonat, Vorjahr oder Budget. Der Controller bekommt nicht den rohen Datensatz — er bekommt eine priorisierte Liste der wichtigsten Auffälligkeiten.
+**Abweichungsanalyse:** KI identifiziert automatisch signifikante Abweichungen gegenüber Vormonat, Vorjahr oder Budget. Der Controller bekommt nicht den rohen Datensatz, er bekommt eine priorisierte Liste der wichtigsten Auffälligkeiten.
 
 **Kommentargenerierung:** Für Standard-Abweichungen generiert KI einen ersten Kommentarentwurf. "Materialkosten +12 % gegenüber Vormonat, getrieben durch gestiegene Rohstoffpreise im Bereich X." Der Controller prüft und ergänzt.
 
@@ -40,7 +40,7 @@ Mit einem KI-gestützten Abfrage-Interface: Frage tippen, Antwort lesen. Sekunde
 
 Das setzt eine Anbindung voraus. Die technische Grundlage: Ein Sprachmodell mit Zugriff auf SAP-Stammdaten (Kostenstellen, Buchungskreise, Kontenplan) und die Fähigkeit, Abfragen in SAP-lesbare Formate zu übersetzen.
 
-Das ist aufwendiger als eine Zapier-Integration — aber machbar, wenn du beide Seiten kennst. Die RFC-Schnittstelle ist SAP-Standard. Die KI-Seite ist heute für jeden zugänglich.
+Das ist aufwendiger als eine Zapier-Integration, aber machbar, wenn du beide Seiten kennst. Die RFC-Schnittstelle ist SAP-Standard. Die KI-Seite ist heute für jeden zugänglich.
 
 ## Abweichungskommentare aus SAP-Berichten
 
@@ -52,11 +52,11 @@ Ein automatisierter Prozess kann:
 3. Für jede Abweichung einen Kommentar-Entwurf generieren
 4. Entwürfe dem Controller zur Überprüfung und Freigabe vorlegen
 
-Der Controller verbringt seine Zeit mit inhaltlicher Bewertung und Ergänzung — nicht mit dem Tippen von Standard-Erklärungen.
+Der Controller verbringt seine Zeit mit inhaltlicher Bewertung und Ergänzung, nicht mit dem Tippen von Standard-Erklärungen.
 
 ## Forecast-Unterstützung
 
-KI kann historische SAP-Daten analysieren und Forecasts als Ausgangspunkt generieren. Nicht als Ersatz für den Controller — als erste Schätzung, die qualitativ bewertet wird.
+KI kann historische SAP-Daten analysieren und Forecasts als Ausgangspunkt generieren. Nicht als Ersatz für den Controller, sondern als erste Schätzung, die qualitativ bewertet wird.
 
 Besonders nützlich: KI kann Muster erkennen, die Menschen übersehen. Saisonalitäten, Kostenentwicklungen, Abweichungskorrelationen über mehrere Perioden.
 

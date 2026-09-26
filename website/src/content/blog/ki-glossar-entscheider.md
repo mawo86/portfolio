@@ -1,6 +1,6 @@
 ---
 title: "KI-Glossar für Entscheider: Die 20 Begriffe, die du kennen musst"
-description: "LLM, RAG, Prompt Engineering, Halluzination — KI-Gespräche sind voller Fachbegriffe. Hier sind die 20 wichtigsten, verständlich erklärt für Führungskräfte."
+description: "LLM, RAG, Prompt Engineering, Halluzination: KI-Gespräche sind voller Fachbegriffe. Hier sind die 20 wichtigsten, verständlich erklärt für Führungskräfte."
 date: 2026-04-24
 tags: ["KI", "Grundlagen", "Glossar", "Entscheider"]
 draft: true
@@ -19,33 +19,33 @@ Das hier ändert das.
 Ein Sprachmodell, das nicht nur antwortet, sondern selbstständig Aufgaben ausführt. Es kann Tools nutzen, Informationen recherchieren, Code ausführen und mehrere Schritte planen. Agenten sind der nächste Entwicklungsschritt nach einfachen Chatbots.
 
 **API (Application Programming Interface)**
-Eine Schnittstelle, über die Software mit anderer Software kommuniziert. Wenn dein Unternehmen ein KI-Modell in ein bestehendes System einbinden will, passiert das über eine API. Du brauchst kein technisches Verständnis — aber du solltest wissen, dass "KI anbinden" fast immer "API nutzen" bedeutet.
+Eine Schnittstelle, über die Software mit anderer Software kommuniziert. Wenn dein Unternehmen ein KI-Modell in ein bestehendes System einbinden will, passiert das über eine API. Du brauchst kein technisches Verständnis, aber du solltest wissen, dass "KI anbinden" fast immer "API nutzen" bedeutet.
 
 **Automatisierung**
-Der Prozess, bei dem wiederkehrende Aufgaben durch Software übernommen werden. KI-gestützte Automatisierung geht weiter als klassische Automatisierung: Sie kann mit unstrukturierten Eingaben umgehen — E-Mails, PDFs, freie Texte. Mehr dazu im Artikel [n8n: Dein erster Workflow](/blog/n8n-erster-workflow).
+Der Prozess, bei dem wiederkehrende Aufgaben durch Software übernommen werden. KI-gestützte Automatisierung geht weiter als klassische Automatisierung: Sie kann mit unstrukturierten Eingaben umgehen, etwa E-Mails, PDFs oder freie Texte. Mehr dazu im Artikel [n8n: Dein erster Workflow](/blog/n8n-erster-workflow).
 
 **Context Window**
 Wie viel Text ein Modell auf einmal "sehen" und verarbeiten kann. Ein großes Context Window bedeutet: Du kannst ein langes Dokument auf einmal hineinladen. Für Unternehmen relevant, wenn große Verträge, Berichte oder Datenmengen analysiert werden sollen.
 
 **Fine-Tuning**
-Ein vortrainiertes Modell wird zusätzlich auf unternehmenseigene Daten trainiert, damit es besser auf spezifische Aufgaben oder den Unternehmenskontext ausgerichtet ist. Aufwendig und teuer. Für die meisten Anwendungsfälle nicht nötig — RAG ist oft die bessere Alternative.
+Ein vortrainiertes Modell wird zusätzlich auf unternehmenseigene Daten trainiert, damit es besser auf spezifische Aufgaben oder den Unternehmenskontext ausgerichtet ist. Aufwendig und teuer. Für die meisten Anwendungsfälle nicht nötig, RAG ist oft die bessere Alternative.
 
 ## G–L
 
 **Halluzination**
-Ein Sprachmodell gibt eine Antwort, die falsch ist — aber überzeugend klingt. Es "erfindet" Fakten, Quellen oder Zahlen. Das ist kein Bug, sondern ein systemisches Merkmal. Gegenmaßnahme: bei faktenkritischen Aufgaben immer gegenchecken.
+Ein Sprachmodell gibt eine Antwort, die falsch ist, aber überzeugend klingt. Es "erfindet" Fakten, Quellen oder Zahlen. Das ist kein Bug, sondern ein systemisches Merkmal. Gegenmaßnahme: bei faktenkritischen Aufgaben immer gegenchecken.
 
 **Inference**
 Der Prozess, bei dem ein trainiertes Modell eine Anfrage verarbeitet und eine Antwort generiert. Relevant für Kosten: Je mehr Inference, desto höher der API-Verbrauch. Wer viele Anfragen automatisiert, sollte die Inference-Kosten einplanen.
 
 **KI-Modell vs. KI-Produkt**
-Ein Modell ist das technische Fundament (z.B. GPT-4, Claude 3). Ein Produkt ist die Benutzeroberfläche darüber (z.B. ChatGPT, Claude.ai). Du kannst das gleiche Modell über verschiedene Produkte nutzen — oder über die API direkt ansprechen.
+Ein Modell ist das technische Fundament (z.B. GPT-4, Claude 3). Ein Produkt ist die Benutzeroberfläche darüber (z.B. ChatGPT, Claude.ai). Du kannst das gleiche Modell über verschiedene Produkte nutzen oder über die API direkt ansprechen.
 
 **LLM (Large Language Model)**
 Das technische Wort für das, was die meisten "KI" nennen. Ein sehr großes, auf riesigen Textmengen trainiertes Modell, das Sprache versteht und generiert. Claude und GPT-4 sind LLMs. Der Begriff taucht in jeder technischen Diskussion auf.
 
 **Latenz**
-Die Zeit, die ein Modell braucht, um zu antworten. Für Anwendungen, die in Echtzeit reagieren müssen — z.B. Chatbots im Kundenservice — ist niedrige Latenz wichtig. Für Batch-Verarbeitungen (z.B. nächtliche Berichterstellung) irrelevant.
+Die Zeit, die ein Modell braucht, um zu antworten. Für Anwendungen, die in Echtzeit reagieren müssen (z.B. Chatbots im Kundenservice), ist niedrige Latenz wichtig. Für Batch-Verarbeitungen (z.B. nächtliche Berichterstellung) irrelevant.
 
 ## M–R
 
@@ -64,7 +64,7 @@ Eine Technik, bei der das Modell nicht nur auf sein Trainingswissen zurückgreif
 ## S–Z
 
 **System-Prompt**
-Eine versteckte Anweisung, die vor jeder Nutzeranfrage geladen wird. Damit wird dem Modell gesagt, wie es sich verhalten soll — welche Rolle es einnimmt, welchen Ton es nutzt, was es nicht tun darf. Wichtig für Anwendungen, die konsistentes Verhalten brauchen.
+Eine versteckte Anweisung, die vor jeder Nutzeranfrage geladen wird. Damit wird dem Modell gesagt, wie es sich verhalten soll: welche Rolle es einnimmt, welchen Ton es nutzt, was es nicht tun darf. Wichtig für Anwendungen, die konsistentes Verhalten brauchen.
 
 **Token**
 Die Einheit, in der Sprachmodelle Text verarbeiten. Ungefähr ein Wort oder eine Silbe. Relevant für Kosten: API-Anbieter berechnen pro Token. Wer lange Dokumente verarbeitet, braucht viele Token.
@@ -78,7 +78,7 @@ Eine spezielle Datenbank, die Inhalte so speichert, dass ähnliche Inhalte schne
 **Zero-Shot / Few-Shot**
 Wie viele Beispiele das Modell braucht, um eine Aufgabe zu erledigen. Zero-Shot: kein Beispiel nötig. Few-Shot: zwei bis fünf Beispiele im Prompt verbessern die Ergebnisse erheblich. Relevant beim Prompt Engineering.
 
-> Wer diese 20 Begriffe kennt, spricht auf Augenhöhe mit Technologie-Teams und Beratern — und trifft bessere Entscheidungen.
+> Wer diese 20 Begriffe kennt, spricht auf Augenhöhe mit Technologie-Teams und Beratern und trifft bessere Entscheidungen.
 
 ## Dein nächster Schritt
 

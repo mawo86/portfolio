@@ -1,6 +1,6 @@
 ---
 title: "KI trifft SAP: Was heute schon funktioniert und wo die Reise hingeht"
-description: "KI und SAP kombinieren: Konkrete Szenarien für Rechnungserkennung, Berichtsautomatisierung und Chatbots — was heute funktioniert und was kommt."
+description: "KI und SAP kombinieren: Konkrete Szenarien für Rechnungserkennung, Berichtsautomatisierung und Chatbots. Was heute funktioniert und was kommt."
 date: 2026-04-06
 tags: ["SAP", "KI", "Enterprise", "Integration"]
 draft: true
@@ -15,7 +15,7 @@ Ich arbeite seit Jahren mit SAP und Enterprise-Systemen. Was mich in letzter Zei
 
 <figure>
   <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80" alt="Dashboard mit Finanzdaten und Diagrammen auf einem Bildschirm" />
-  <figcaption>SAP-Daten sind vorhanden. Die Frage ist, wer sie schneller verarbeitet — Mensch oder Maschine. (Foto: Unsplash)</figcaption>
+  <figcaption>SAP-Daten sind vorhanden. Die Frage ist, wer sie schneller verarbeitet: Mensch oder Maschine. (Foto: Unsplash)</figcaption>
 </figure>
 
 ## Warum SAP und KI zusammengehören

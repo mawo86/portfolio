@@ -333,7 +333,7 @@ Invarianten (nie ändern ohne bewussten Grund): Score = Zeitaufwand × Automatis
 - Digitales Produkt erstellen (KW18, Empfehlung: PDF-Guide)
 - LinkedIn-Texte (`outputs/linkedin-optimierung.md`) auf Konsistenz mit neuer Positionierung prüfen und Profil aktualisieren
 - OG-Images pro Blog-Artikel erstellen
-- 21 Draft-Artikel reviewen und schrittweise live stellen (KW16–25)
+- 22 Draft-Artikel reviewen und schrittweise live stellen (KW16–25); Gedankenstriche sind seit 2026-09-26 auch in allen Drafts bereinigt, `check:style` bleibt beim Live-Stellen grün
 - Testimonials-Sektion mit echten Kundenstimmen befüllen, sobald verfügbar (aktuell ausgeblendet, da leer) — Vorlage bereit: `outputs/testimonial-vorlage.md`
 - Echte Case Study nach erstem abgeschlossenen Consulting-Projekt einpflegen (ersetzt/ergänzt das Beispielprojekt) — Interview-Leitfaden bereit: `outputs/testimonial-vorlage.md`
 - Discovery-Call-Leitfaden (`outputs/discovery-call-leitfaden.md`) beim nächsten Erstgespräch anwenden und bei Bedarf nachschärfen

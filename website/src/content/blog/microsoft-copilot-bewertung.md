@@ -15,7 +15,7 @@ Hier ist meine Einschätzung nach intensiver Beschäftigung mit dem Thema.
 
 <figure>
   <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=1200&q=80" alt="Moderner Büroarbeitsplatz mit Microsoft-365-Anwendungen auf mehreren Bildschirmen" />
-  <figcaption>Copilot ist tief in Microsoft 365 integriert. Das ist seine Stärke — und seine Grenzen. (Foto: Unsplash)</figcaption>
+  <figcaption>Copilot ist tief in Microsoft 365 integriert. Das ist seine Stärke und seine Grenze. (Foto: Unsplash)</figcaption>
 </figure>
 
 ## Was Microsoft Copilot 365 ist
@@ -32,15 +32,15 @@ Das Modell dahinter ist GPT-4, kombiniert mit Zugriff auf deine eigenen Unterneh
 
 **Erste Entwürfe in Word und Outlook:** Ähnlich wie andere Sprachmodelle. Wenn du weißt, was du schreiben willst, aber keine Zeit zum Formulieren hast, hilft Copilot. Die Qualität ist vergleichbar mit anderen guten Modellen.
 
-**Excel-Erklärungen:** "Was macht diese Formel?" oder "Wie kann ich diese Berechnung vereinfachen?" — das funktioniert solide. Für Excel-Nutzer ohne tiefe Formelnkenntnisse eine echte Hilfe.
+**Excel-Erklärungen:** "Was macht diese Formel?" oder "Wie kann ich diese Berechnung vereinfachen?" Das funktioniert solide. Für Excel-Nutzer ohne tiefe Formelnkenntnisse eine echte Hilfe.
 
-**Inhalte aus eigenen Dokumenten finden:** Copilot kann auf deine SharePoint-Dokumente und E-Mails zugreifen und Informationen heraussuchen. "Zusammenfassung aller E-Mails von Kunde X aus dem letzten Quartal" — wenn die Berechtigungen stimmen.
+**Inhalte aus eigenen Dokumenten finden:** Copilot kann auf deine SharePoint-Dokumente und E-Mails zugreifen und Informationen heraussuchen. "Zusammenfassung aller E-Mails von Kunde X aus dem letzten Quartal" funktioniert, wenn die Berechtigungen stimmen.
 
 ## Was nicht so gut funktioniert
 
 **Die Integration ist uneinheitlich:** In manchen Apps tief eingebunden, in anderen oberflächlich. Die Erfahrung variiert stark je nach Anwendung.
 
-**Halluzinationen bei Unternehmensdaten:** Copilot greift auf deine Dokumente zu — aber manchmal mit falschen Verweisen. "Wie war unser Umsatz im Q3?" kann eine Antwort produzieren, die aus dem falschen Dokument stammt. Immer gegenchecken.
+**Halluzinationen bei Unternehmensdaten:** Copilot greift auf deine Dokumente zu, aber manchmal mit falschen Verweisen. "Wie war unser Umsatz im Q3?" kann eine Antwort produzieren, die aus dem falschen Dokument stammt. Immer gegenchecken.
 
 **30 Euro pro Nutzer im Monat:** Das ist nicht wenig. Für einen Nutzer, der täglich in Teams ist und viele Meetings hat: möglicherweise gerechtfertigt. Für jemanden, der hauptsächlich in SAP oder spezialisierten Tools arbeitet: fraglich.
 

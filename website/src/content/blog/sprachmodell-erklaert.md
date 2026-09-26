@@ -1,6 +1,6 @@
 ---
-title: "Was ein Sprachmodell wirklich kann — und was nicht"
-description: "Sprachmodelle wie ChatGPT und Claude sind keine Alleskönner. Was steckt wirklich dahinter, wo liegen die Grenzen — und was bedeutet das für Unternehmen?"
+title: "Was ein Sprachmodell wirklich kann und was nicht"
+description: "Sprachmodelle wie ChatGPT und Claude sind keine Alleskönner. Was steckt wirklich dahinter, wo liegen die Grenzen, und was bedeutet das für Unternehmen?"
 date: 2026-04-14
 tags: ["KI", "Grundlagen", "Unternehmen", "Einstieg"]
 draft: true
@@ -18,7 +18,7 @@ Hier ist, was du wirklich wissen musst.
   <figcaption>Ein Sprachmodell denkt nicht. Es rechnet. Der Unterschied ist entscheidend. (Foto: Unsplash)</figcaption>
 </figure>
 
-## Was ein Sprachmodell ist — wirklich
+## Was ein Sprachmodell wirklich ist
 
 Ein Sprachmodell ist ein statistisches System. Es wurde auf riesigen Mengen Text trainiert und hat dabei gelernt, welche Wörter und Sätze mit hoher Wahrscheinlichkeit aufeinander folgen.
 

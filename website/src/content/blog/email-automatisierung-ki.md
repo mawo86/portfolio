@@ -1,6 +1,6 @@
 ---
 title: "E-Mail-Automatisierung mit KI: Von der übervollen Inbox zum Workflow"
-description: "Wie du E-Mail-Prozesse mit KI und n8n automatisierst — von Klassifikation über Weiterleitung bis zur automatischen Antwort. Schritt für Schritt."
+description: "Wie du E-Mail-Prozesse mit KI und n8n automatisierst: von Klassifikation über Weiterleitung bis zur automatischen Antwort. Schritt für Schritt."
 date: 2026-05-29
 tags: ["Automatisierung", "E-Mail", "n8n", "Workflow"]
 draft: true
@@ -9,7 +9,7 @@ category: "Automatisierung"
 
 Die Inbox ist für viele Teams ein Flaschenhals. Jede Anfrage muss gelesen, verstanden, kategorisiert und weitergeleitet werden. Täglich. Stundenlang.
 
-KI kann das übernehmen. Nicht vollständig — aber den größten Teil der repetitiven Arbeit.
+KI kann das übernehmen. Nicht vollständig, aber den größten Teil der repetitiven Arbeit.
 
 <figure>
   <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=80" alt="Laptop-Bildschirm mit E-Mail-Client und Workflow-Diagramm" />
@@ -32,7 +32,7 @@ Die Klassifikation und das Routing können direkt in einen Automatisierungsworkf
 
 ### Zusammenfassung für den Bearbeiter
 
-Lange E-Mails werden auf die wesentlichen Punkte zusammengefasst. Der Bearbeiter bekommt sofort die relevanten Informationen — ohne den ganzen Text lesen zu müssen.
+Lange E-Mails werden auf die wesentlichen Punkte zusammengefasst. Der Bearbeiter bekommt sofort die relevanten Informationen, ohne den ganzen Text lesen zu müssen.
 
 Besonders wertvoll bei langen E-Mail-Verläufen oder komplexen Anfragen.
 
@@ -44,7 +44,7 @@ Für die häufigsten Anfragen: KI generiert einen ersten Antwortentwurf. Der Mit
 
 Bei einfachen, eindeutigen Anfragen kann eine automatische Erstantwort sinnvoll sein: "Wir haben Ihre Anfrage erhalten und melden uns innerhalb von 24 Stunden."
 
-Oder für echte Standardfälle: "Ihre Bestellung wurde erfasst. Die Lieferung erfolgt bis [Datum]." — wenn der Prozess das hergibt.
+Oder für echte Standardfälle: "Ihre Bestellung wurde erfasst. Die Lieferung erfolgt bis [Datum]." Das geht, wenn der Prozess das hergibt.
 
 ## Ein konkreter Workflow mit n8n
 
@@ -54,7 +54,7 @@ Hier ist, wie ein typischer E-Mail-Automatisierungsworkflow aussieht:
 
 **Schritt 1:** E-Mail-Inhalt an Claude oder GPT senden. Prompt: "Klassifiziere diese E-Mail in eine der folgenden Kategorien: Bestellung, Reklamation, Support, Allgemein. Gib außerdem eine kurze Zusammenfassung in einem Satz."
 
-**Schritt 2:** Basierend auf der Kategorie — Routing. n8n-Switch-Node leitet in verschiedene Pfade.
+**Schritt 2:** Basierend auf der Kategorie folgt das Routing. n8n-Switch-Node leitet in verschiedene Pfade.
 
 **Schritt 3a (Bestellung):** Automatisch in CRM eintragen, Bestätigungsmail senden.
 

@@ -1,6 +1,6 @@
 ---
 title: "KI im Vertrieb: Mehr Leads, weniger Kaltakquise"
-description: "Wie KI den B2B-Vertrieb konkret verändert — von der Lead-Recherche über Angebotserstellung bis zur Follow-up-Automatisierung. Mit echten Beispielen."
+description: "Wie KI den B2B-Vertrieb konkret verändert: von der Lead-Recherche über Angebotserstellung bis zur Follow-up-Automatisierung. Mit echten Beispielen."
 date: 2026-05-12
 tags: ["KI", "Vertrieb", "Automatisierung", "B2B"]
 draft: true
@@ -9,7 +9,7 @@ category: "Branchen"
 
 Kaltakquise ist teuer. Ein guter Vertriebsmitarbeiter verbringt Stunden damit, potenzielle Kunden zu recherchieren, Gesprächsaufhänger zu finden und erste Nachrichten zu schreiben. Die meisten davon werden ignoriert.
 
-KI ändert das Verhältnis. Nicht indem sie Vertrieb ersetzt — sondern indem sie die Vorarbeit übernimmt, die heute Stunden frisst.
+KI ändert das Verhältnis. Nicht indem sie Vertrieb ersetzt, sondern indem sie die Vorarbeit übernimmt, die heute Stunden frisst.
 
 <figure>
   <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=1200&q=80" alt="Vertriebsteam an Bildschirmen, aktive Arbeitsatmosphäre" />
@@ -24,11 +24,11 @@ Mit KI: Du gibst ein Unternehmen ein, Claude oder ChatGPT fasst die wichtigsten 
 
 Das funktioniert noch besser, wenn du eine Automatisierung baust, die neue Leads automatisch recherchiert, sobald sie in dein CRM eingetragen werden. [n8n](/tools#automatisierung) kann das mit einer Website-Zusammenfassung und einem KI-Analyse-Schritt verbinden.
 
-**Zeitersparnis:** Aus 30 Minuten werden 5. Nicht 0 — du musst die Zusammenfassung lesen und qualifizieren. Aber 5.
+**Zeitersparnis:** Aus 30 Minuten werden 5. Nicht 0, du musst die Zusammenfassung lesen und qualifizieren. Aber 5.
 
 ## Personalisierte Erstnachrichten skalieren
 
-Der Durchschnitt der Vertriebsmails klingt wie eine Kopie der nächsten. "Wir helfen Unternehmen wie Ihrem..." — gelöscht.
+Der Durchschnitt der Vertriebsmails klingt wie eine Kopie der nächsten. "Wir helfen Unternehmen wie Ihrem..." Gelöscht.
 
 Personalisierung konvertiert besser. Aber manuelle Personalisierung skaliert nicht.
 
@@ -58,7 +58,7 @@ Das ist keine Massen-Spam-Kampagne. Es ist strukturiertes Nachfassen bei qualifi
 
 KI kann keine echte Beziehung aufbauen. Das Gespräch, das Vertrauen schafft, muss ein Mensch führen.
 
-KI kann nicht einschätzen, ob ein Lead wirklich qualifiziert ist — das braucht Erfahrung und Branchenkenntnis, die kein Modell vollständig ersetzen kann.
+KI kann nicht einschätzen, ob ein Lead wirklich qualifiziert ist. Das braucht Erfahrung und Branchenkenntnis, die kein Modell vollständig ersetzen kann.
 
 Und KI kann keine komplexen Kaufentscheidungen herbeiführen. Die Überzeugungsarbeit bei einem 6-stelligen Enterprise-Deal liegt beim Menschen.
 

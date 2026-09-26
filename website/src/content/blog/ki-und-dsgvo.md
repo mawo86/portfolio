@@ -15,16 +15,16 @@ Hier ist, was du wirklich wissen musst.
 
 <figure>
   <img src="https://images.unsplash.com/photo-1512314889357-e157c22f938d?auto=format&fit=crop&w=1200&q=80" alt="Person liest Dokument am Laptop, nachdenklich" />
-  <figcaption>DSGVO und KI sind kein Widerspruch — aber es braucht klare Regeln. (Foto: Unsplash)</figcaption>
+  <figcaption>DSGVO und KI sind kein Widerspruch, aber es braucht klare Regeln. (Foto: Unsplash)</figcaption>
 </figure>
 
 ## Das Grundprinzip: Personenbezogene Daten sind das Risiko
 
-Die DSGVO schützt personenbezogene Daten. Das sind alle Informationen, die einer identifizierbaren natürlichen Person zugeordnet werden können: Name, E-Mail, Telefonnummer, IP-Adresse, Standort — aber auch Kombinationen, die eine Person identifizierbar machen.
+Die DSGVO schützt personenbezogene Daten. Das sind alle Informationen, die einer identifizierbaren natürlichen Person zugeordnet werden können: Name, E-Mail, Telefonnummer, IP-Adresse, Standort, aber auch Kombinationen, die eine Person identifizierbar machen.
 
 Wenn du solche Daten in ein KI-Tool eingibst, verarbeitest du sie außerhalb deiner Kontrolle. Das ist das Kernproblem.
 
-Nicht-personenbezogene Daten hingegen sind unkritisch. Allgemeine Geschäftsanalysen, Produktbeschreibungen, interne Prozessbeschreibungen ohne Personenbezug — kein Problem.
+Nicht-personenbezogene Daten hingegen sind unkritisch. Allgemeine Geschäftsanalysen, Produktbeschreibungen, interne Prozessbeschreibungen ohne Personenbezug: kein Problem.
 
 ## Was du in welche Tools eingeben darfst
 
@@ -58,7 +58,7 @@ Daten, die für einen Zweck erhoben wurden, dürfen nicht für einen anderen ver
 
 **Keine sensiblen Datenkategorien**
 
-Gesundheitsdaten, politische Überzeugungen, Religionszugehörigkeit, biometrische Daten — diese besonders geschützten Kategorien nach Art. 9 DSGVO haben in externen KI-Tools nichts zu suchen.
+Gesundheitsdaten, politische Überzeugungen, Religionszugehörigkeit, biometrische Daten: Diese besonders geschützten Kategorien nach Art. 9 DSGVO haben in externen KI-Tools nichts zu suchen.
 
 > Faustregel: Wenn du die Daten nicht in einer normalen E-Mail an einen externen Dienstleister schicken würdest, gehören sie nicht in ein ungesichertes KI-Tool.
 
@@ -77,4 +77,4 @@ Das muss keine 20-seitige Policy sein. Eine halbe Seite mit klaren Regeln reicht
 
 Wenn du noch keinen AVV mit deinen KI-Tool-Anbietern hast: Heute kümmern. Nicht irgendwann.
 
-Den nächsten Artikel zum Thema — welche Daten konkret in welche Tools dürfen — findest du in [Welche Daten darf ich in KI-Tools eingeben?](/blog/ki-daten-eingeben). Und welche Tools mit guten Datenschutz-Optionen ich empfehle, steht auf der [Tools-Seite](/tools).
+Den nächsten Artikel zum Thema, welche Daten konkret in welche Tools dürfen, findest du in [Welche Daten darf ich in KI-Tools eingeben?](/blog/ki-daten-eingeben). Und welche Tools mit guten Datenschutz-Optionen ich empfehle, steht auf der [Tools-Seite](/tools).
