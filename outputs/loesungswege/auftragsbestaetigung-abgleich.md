@@ -11,7 +11,7 @@ Auftragsbestätigungen werden abgelegt statt geprüft. Wir bauen Auslesen, Beste
 ## 2. Voraussetzungen beim Kunden
 
 - Postfach für Bestätigungen oder Postfach der Einkäufer mit Regel
-- ERP mit Bestellzugriff: SAP MM (ME23N, OData API_PURCHASEORDER_PROCESS_SRV, Bestätigungssteuerung), oder anderes ERP mit Export
+- ERP mit Bestellzugriff: SAP MM (ME23N, OData V4 Purchase Order api_purchaseorder_2, V2-Dienst API_PURCHASEORDER_PROCESS_SRV seit 2308 abgekündigt, Bestätigungssteuerung), oder anderes ERP mit Export
 - Toleranzen: Preis (z. B. 1 Prozent), Termin (z. B. 3 Tage), Menge (0 oder Über-/Unterlieferungstoleranz aus dem Stamm)
 - 30 alte Bestätigungen mit Bestellung und tatsächlichem Ausgang
 - Einkäufer als Bewerter
@@ -68,3 +68,9 @@ Gilt `_betriebsstandard.md`. Spezifisch hier:
 - Rechnungseingang (der nächste Abgleich in der Kette: Bestellung, Bestätigung, Wareneingang, Rechnung)
 - Lieferantenangebote vergleichen (davor)
 - SAP-Stammdatenqualität
+
+## 10. Belege und Quellen
+
+- SAP Note 3502308 und SAP Help: API_PURCHASEORDER_PROCESS_SRV (V2) seit 2308 abgekündigt, Nachfolger OData V4 Purchase Order (api_purchaseorder_2). Im Angebot den V4-Dienst nennen.
+- SAP Help "Supplier Confirmation" und "Bestätigungen manuell pflegen": Bestätigungssatz ist Standard, Bestätigungssteuerung im Customizing (T163L/T163G), Überwachung ME92F.
+- Zeitersparnis: kein Beleg. Messgrößen: Anteil automatisch bestätigter Positionen, Vorlaufzeit bis Abweichungsmeldung.

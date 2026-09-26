@@ -80,3 +80,57 @@
 | SAP-Toleranzschlüssel (OMR6), Dreiwegeabgleich Bestellung/Wareneingang/Rechnung, Zahlsperre bei Abweichung, Freigabe MRBR | SAP-Dokumentation Logistik-Rechnungsprüfung, guru99, mind-logistik | Doku | S | |
 | GoBD (BMF 28.11.2019, Änderung 14.07.2025): Verfahrensdokumentation Pflicht, fehlende Doku ist formeller Mangel, strukturierte E-Rechnung muss nur als Datensatz aufbewahrt werden | BMF-Schreiben, DATEV, IHK Nordschwarzwald | Gesetz/Behörde | S | |
 | 5 bis 10 Std./Woche | keine externe Quelle für den Mittelstand | Einschätzung | E | |
+
+## sap-fico-buchungsvorschlaege
+
+| Aussage | Quelle | Art | Tiefe | Anmerkung |
+|---|---|---|---|---|
+| SAP S/4HANA Cloud "Invoice Object Recommendation": ML schlägt für Rechnungen ohne Bestellbezug Sachkonto, Kostenobjekt und CO-PA-Merkmale aus Historie vor; Custom oder vortrainiertes Modell | SAP Developers Tutorial "Use Machine Learning and the Invoice Object Recommendation Business Blueprint", SAP Blog "Intelligent Accounts Payable with SAP S/4HANA Cloud" (2021), SAP Discovery Center (Ariba G/L line-item determination) | Doku | S | Belegt, dass der Mechanismus SAP-Standard ist |
+| API_SUPPLIERINVOICE_PROCESS_SRV für Vorerfassung | siehe rechnungseingang | Doku | S | |
+| Steuerkennzeichen regelbasiert, nicht per Modell | eigene Designentscheidung | Einschätzung | E | |
+| 5 bis 10 Std./Woche, weniger Umbuchungen | keine externe Quelle | Einschätzung | E | |
+
+## sap-stammdatenqualitaet
+
+| Aussage | Quelle | Art | Tiefe | Anmerkung |
+|---|---|---|---|---|
+| S/4HANA Dublettenprüfung für Geschäftspartner auf Basis unscharfer HANA-Suche (ICM), ohne Drittanbieter ab SAP_BASIS 755; Trefferliste mit Prozent-Score | SAP Blog "SAP S/4HANA Business Partner Duplicate Check" (2021), SAP Note 3612988, SAP Help "Duplicate Check" | Doku | S | Im Text neu aufgenommen |
+| Planat-Studie: nur 1 % bewerten Datenqualität in mittelständischen Fertigern als "sehr hoch", 38 % als "hoch", über die Hälfte besorgt | Planat Presseinformation (Presseportal, finanzen.net) | Studie | S | Anbieterstudie, Stichprobe nicht geprüft |
+| Uniserv: jedes dritte Unternehmen mit fehlerhaften Postadressen, jedes fünfte mit Retouren durch unvollständige/doppelte Kundendaten; Rücklaufkosten 273.900 Euro/Jahr | Uniserv-Umfrage (über CallCenterProfi, Regis24) | Studie | S | Anbieterstudie; die Euro-Zahl nicht auf die Website übernommen |
+| "28 % Dubletten bei europäischem Händler, über 1 Mio. Euro Einsparung" | datamastr.com Blog | Fachpresse ohne Methodik | S | Nicht verwendet |
+| Nutzen in Stunden | nicht bezifferbar | Einschätzung | E | Text sagt das ausdrücklich |
+
+## auftragsbestaetigung-abgleich
+
+| Aussage | Quelle | Art | Tiefe | Anmerkung |
+|---|---|---|---|---|
+| API_PURCHASEORDER_PROCESS_SRV (OData V2) seit Release 2308 abgekündigt, Nachfolger OData V4 "Purchase Order" (api_purchaseorder_2) | SAP Note 3502308, SAP Help "Purchase Order (OData V2) - (Deprecated)", SAP Help "Purchase Order (OData V4)" | Doku | S | **Korrektur:** alter Text nannte nur den V2-Dienst |
+| Bestätigungssatz/Supplier Confirmation als Entität der Bestell-API (A_PurchaseOrderItemConfirmation bzw. SupplierConfirmation in V4) | SAP Help "Supplier Confirmation", SAP Community | Doku | S | |
+| Bestätigungssteuerung: Tabellen T163L/T163G, Bestätigungsschlüssel, manuelle Pflege im Bestätigungsbild, Überwachung mit ME92F | SAP-Dokumentation "Bestätigungen manuell pflegen", ERPyourself ME92, Munich Enterprise ME92F | Doku | S | |
+| 3 bis 6 Std./Woche | keine externe Quelle | Einschätzung | E | |
+
+## lieferantenanfragen-vergleichen
+
+| Aussage | Quelle | Art | Tiefe | Anmerkung |
+|---|---|---|---|---|
+| ME49 Angebotspreisspiegel vergleicht Angebote zu einer Anfrage positionsweise, Absprung nach ME47 | SAP-Dokumentation "Angebote vergleichen", ERPyourself, guru99 | Doku | S | |
+| API_SUPPLIERQUOTATION: Lesen, Anlegen, Ändern von Lieferantenangeboten mit Bezug zur Anfrage | SAP Cloud SDK Doku (SupplierQuotation Service) | Doku | S | |
+| 2 bis 5 Std. pro Ausschreibung | keine externe Quelle | Einschätzung | E | |
+
+## mahnwesen-vorschlaege
+
+| Aussage | Quelle | Art | Tiefe | Anmerkung |
+|---|---|---|---|---|
+| Forderungslaufzeit 39,63 Tage, Zahlungsziel 32,13 Tage, Verzug 7,50 Tage (2. HJ 2025), ca. 3,8 Mio. Belege aus dem Debitorenregister, veröffentlicht Feb 2026 | Creditreform, "Zahlungsindikator Deutschland Winter 2025/26" | Studie | S | Zahlen im Text |
+| 81 % der deutschen Unternehmen mit Zahlungsverzögerungen, durchschnittliche Verzögerung fast 32 Tage (2025) | Coface Zahlungserfahrungsstudie Deutschland 2025 | Studie | S | Coface misst Verzögerung anders als Creditreform (Befragung vs. Belegdaten); nur 81 % im Text |
+| 2 bis 4 Std./Woche | keine externe Quelle | Einschätzung | E | |
+| Scoring von Privatpersonen nach Zahlverhalten datenschutzrechtlich heikel | eigene Einschätzung, Art. 22 DSGVO-Nähe | Einschätzung | E | Im Zweifel Datenschutzbeauftragten fragen |
+
+## reporting-kommentierung
+
+| Aussage | Quelle | Art | Tiefe | Anmerkung |
+|---|---|---|---|---|
+| Berichtskommentierung als typischer GenAI-Pilotfall im Controlling | ICV Blog "Generative KI im Controlling", "Zukunft im Blick: So verändert KI das Controlling"; Controller Institut Insights "KI-Use-Cases im Controlling" | Fachpresse | S | |
+| Controlling & Management Review 2025, "Generative KI im Controlling praktisch umsetzen" | Springer, doi 10.1007/s12176-025-1497-1 | Studie/Fachartikel | S | Volltext nicht gelesen |
+| ICV-Studie zu KI und Automatisierung in Reporting und Forecasting (Eisl, Hofer, Perkhofer) läuft/lief 2025 | Haufe Controlling | Fachpresse | S | Ergebnisse nachschlagen, wenn veröffentlicht |
+| 1 bis 2 Tage pro Abschluss | keine externe Quelle | Einschätzung | E | |

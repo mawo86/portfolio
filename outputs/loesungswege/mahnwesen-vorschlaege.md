@@ -69,3 +69,9 @@ Gilt `_betriebsstandard.md`. Spezifisch hier:
 - Rechnungseingang (Eingangsseite)
 - Reporting-Kommentierung (Liquiditätsbericht)
 - SAP FI/CO-Buchungsvorschläge
+
+## 10. Belege und Quellen
+
+- Creditreform "Zahlungsindikator Deutschland Winter 2025/26" (Feb 2026): Forderungslaufzeit 39,63 Tage, Zahlungsziel 32,13, Verzug 7,50, Basis 3,8 Mio. Belege. Die Zahl für das Erstgespräch.
+- Coface Zahlungserfahrungsstudie 2025: 81 % mit Verzögerungen. Achtung: Coface misst per Befragung, Creditreform per Belegdaten, Verzugsdauern nicht vergleichbar.
+- Zeitersparnis: kein Beleg. Messgröße: Verzugsdauer der eigenen Forderungen aus dem ERP, Baseline vor Start.

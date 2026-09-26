@@ -70,3 +70,9 @@ Gilt `_betriebsstandard.md`. Spezifisch hier:
 - Rechnungseingang (bestellbezogene Rechnungen, Abgleich statt Kontierung)
 - Stammdatenqualität (Lieferantenstamm sauber = bessere Kandidaten)
 - Reporting-Kommentierung
+
+## 10. Belege und Quellen
+
+- SAP Developers Tutorial "Invoice Object Recommendation Business Blueprint" und SAP Blog "Intelligent Accounts Payable with SAP S/4HANA Cloud" (2021): SAP bietet den Mechanismus selbst an (Sachkonto, Kostenobjekt, CO-PA aus Historie). Im Gespräch: Wenn der Kunde S/4HANA Cloud mit dieser Funktion hat, sie zuerst prüfen, bevor wir bauen.
+- api.sap.com API_SUPPLIERINVOICE_PROCESS_SRV: Vorerfassung per API.
+- Zeitersparnis: kein Beleg. Messgrößen: Anteil unverändert freigegebener Vorschläge, Umbuchungen im Abschluss vorher/nachher.

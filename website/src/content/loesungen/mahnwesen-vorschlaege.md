@@ -22,11 +22,17 @@ Das Mahnen wird aufgeschoben, weil es niemand gern macht. Standardmahnungen ver�
 
 ## Was wir bauen
 
-Der Workflow zieht täglich die offenen Posten, bewertet jeden Fall nach Zahlungshistorie, Kundenwert und Überfälligkeit und schlägt eine Stufe vor: freundliche Erinnerung, klare Mahnung oder Übergabe. Für jeden Fall entsteht ein passender Textentwurf mit Rechnungsbezug. Ihr seht die Liste morgens, klickt frei oder ändert.
+Jeden Werktag um sieben zieht der Workflow die offenen Posten aus dem ERP (SAP: Debitoren-Einzelposten, DATEV: OPOS-Export) und die Zahlungshistorie der letzten zwölf Monate. Die Stufe pro Fall ist Arithmetik, kein Modell: Überfälligkeit, Kundengruppe (A/B/C) und Zahlverhalten ergeben nach eurem Regelwerk Erinnerung, Mahnung, Anruf-Vorschlag oder Übergabe. Streitfälle und gesperrte Kunden sind ausgeschlossen. Erst dann kommt das Sprachmodell: Es schreibt für jeden Fall den Text in eurem Ton, mit Rechnungsbezug, Frist und Kontaktangebot, für den zuverlässigen Kunden anders als für den Dauerschuldner. Ihr seht morgens eine Liste mit Fall, Stufe und Entwurf. "Senden" erzeugt einen Outlook-Entwurf, nichts geht ohne Klick raus. Zahlungseingang beendet den Fall automatisch, eine Kundenantwort pausiert ihn.
 
 ## Was das bringt
 
-Die Einsparung liegt bei 2 bis 4 Stunden pro Woche, Erfahrungswert aus vergleichbaren Prozessen. Wichtiger ist die Außenstandsdauer: Wer täglich und passend erinnert, bekommt sein Geld Wochen früher.
+Wie viel Geld draußen steht, ist gut belegt. Creditreform hat für das zweite Halbjahr 2025 rund 3,8 Millionen Rechnungsbelege ausgewertet: Die Forderungslaufzeit lag im Schnitt bei 39,63 Tagen, davon 32,13 Tage Zahlungsziel und 7,50 Tage Verzug. Coface berichtet für 2025, dass 81 Prozent der befragten deutschen Unternehmen mit Zahlungsverzögerungen zu tun haben. Jeder Tag weniger Verzug ist Liquidität, die ihr nicht vorfinanzieren müsst.
+
+Zur Zeitersparnis im Mahnwesen selbst habe ich extern keine belastbare Zahl gefunden. Mein Erfahrungswert: 2 bis 4 Stunden pro Woche. Die Kennzahl, die zählt, ist die Verzugsdauer eurer eigenen Forderungen, und die messen wir aus dem ERP, vorher und acht Wochen nach Start.
+
+## Wo es schwierig wird
+
+Der Ton. Ein A-Kunde, der eine Rechnung übersehen hat, bekommt bei uns einen Anruf-Vorschlag, keine Mahnung, und das muss im Regelwerk stehen, sonst macht das System Schaden. Zweitens dürfen Kunden mit offener Reklamation nicht gemahnt werden, die Ausschlussliste ist Pflicht und muss gepflegt werden. Drittens, bei Privatkunden: Scoring von Personen nach Zahlverhalten ist datenschutzrechtlich heikel, dort arbeiten wir nur mit Überfälligkeit, nicht mit Bewertung.
 
 ## Was ihr dafür braucht
 
