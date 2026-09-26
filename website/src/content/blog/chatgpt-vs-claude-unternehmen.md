@@ -72,4 +72,4 @@ Primär Texte, Kundenkommunikation, komplexe Projekte? Claude. Viel Datenarbeit,
 
 Oder mach es wie ich: Nutze beide. Die 40 Dollar im Monat für beide Pro-Versionen sind günstiger als eine Stunde Mitarbeiterzeit, die du damit sparst.
 
-Wie du KI sinnvoll in deinen Arbeitsalltag einbaust, zeigt mein Artikel zur [KI-Strategie für Unternehmen](/blog/ki-strategie-erste-schritte). Welche weiteren Tools ich täglich nutze, findest du in meinem [KI-Toolkit](/blog/mein-ki-toolkit) und auf der [Tools-Seite](/tools).
+Wie du KI sinnvoll in deinen Arbeitsalltag einbaust, zeigt mein Artikel zur [KI-Strategie für Unternehmen](/blog/ki-strategie-erste-schritte). Welche weiteren Tools ich täglich nutze, findest du in meinem [KI-Toolkit](/tools) und auf der [Tools-Seite](/tools).

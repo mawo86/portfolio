@@ -1,18 +1,21 @@
-name: Deploy to GitHub Pages
+name: PR Check
 
+# Baut die Website auf jedem Pull Request, damit main nie rot wird.
+# Kein Deploy. Link-Check ist Pflicht, Größen-Budget nur Warnung.
 on:
-  push:
+  pull_request:
     branches: [main]
+    paths:
+      - 'website/**'
+      - '.github/workflows/pr-check.yml'
   workflow_dispatch:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 concurrency:
-  group: pages
-  cancel-in-progress: false
+  group: pr-check-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   build:
@@ -31,7 +34,7 @@ jobs:
         working-directory: website
         run: npm ci
 
-      - name: Build
+      - name: Build (astro + pagefind, identisch zum Deploy)
         working-directory: website
         run: npm run build
 
@@ -39,18 +42,14 @@ jobs:
         working-directory: website
         run: npm run check:links
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: website/dist
+      - name: Größen-Budget (nur Warnung)
+        working-directory: website
+        continue-on-error: true
+        run: npm run check:budget
 
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+      - name: Build-Artefakt für Review
+        uses: actions/upload-artifact@v4
+        with:
+          name: website-dist
+          path: website/dist
+          retention-days: 7

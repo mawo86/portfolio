@@ -95,4 +95,4 @@ Fang mit einer einzigen Datei an.
 
 Kopiere das in dein nächstes Gespräch mit [Claude](https://claude.ai) ganz oben rein, bevor du deine eigentliche Frage stellst.
 
-Du wirst den Unterschied in der ersten Antwort merken. Welche Prompts dann den größten Unterschied machen, zeigt der Artikel [5 Prompts, die ich täglich nutze](/blog/prompts-die-funktionieren). Und welche weiteren Tools das System sinnvoll ergänzen, steht in meinem [KI-Toolkit](/blog/mein-ki-toolkit).
+Du wirst den Unterschied in der ersten Antwort merken. Welche Prompts dann den größten Unterschied machen, zeigt der Artikel [5 Prompts, die ich täglich nutze](/blog/prompts-die-funktionieren). Und welche weiteren Tools das System sinnvoll ergänzen, steht in meinem [KI-Toolkit](/tools).
