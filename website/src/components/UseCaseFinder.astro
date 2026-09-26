@@ -1,0 +1,227 @@
+---
+// Use-Case-Finder: drei Fragen, drei passende Lösungen. Rein clientseitig,
+// die Daten stehen als JSON in der Seite. Kein Server, kein Cookie.
+import { getLoesungen, toFinderItem, BEREICHE, ZEITPROBLEME, FINDER_BRANCHEN, bereichLabel } from '../lib/loesungen';
+import { links } from '../config/site';
+
+export interface Props {
+  compact?: boolean;
+  id?: string;
+}
+const { compact = false, id = 'finder' } = Astro.props;
+
+const items = (await getLoesungen()).map(toFinderItem);
+const BASE = import.meta.env.BASE_URL;
+const chip = 'px-3.5 py-2 text-sm font-medium rounded-full border transition-colors cursor-pointer select-none bg-ink-800 text-bone-200 border-bone-50/10 hover:border-brand-400/60 hover:text-bone-50 data-[on=true]:bg-bone-50 data-[on=true]:text-ink-950 data-[on=true]:border-bone-50';
+---
+
+<div id={id} data-finder data-base={BASE} data-newsletter={links.newsletter} data-termin={links.termin} class={compact ? '' : 'bg-ink-800/60 border border-bone-50/[0.08] rounded-3xl p-7 sm:p-10'}>
+  {!compact && (
+    <div class="mb-9 max-w-2xl">
+      <p class="text-brand-400 text-[0.75rem] font-semibold uppercase tracking-[0.2em] mb-4">Use-Case-Finder</p>
+      <h2 class="font-display font-bold text-bone-50 text-[1.9rem] sm:text-[2.4rem] leading-[1.05] tracking-tight mb-4" style="text-wrap: balance;">Drei Klicks. Dann seht ihr, was bei euch zuerst dran wäre.</h2>
+      <p class="text-bone-400 leading-relaxed">Keine Anmeldung, keine Daten. Ihr wählt Branche, Bereich und das, was am meisten Zeit frisst. Ich zeige euch die passenden Lösungen mit Aufwand, Effekt und Paket.</p>
+    </div>
+  )}
+
+  <form data-finder-form class="space-y-8" novalidate>
+    <fieldset>
+      <legend class="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-bone-600 mb-3"><span class="font-mono text-brand-400 mr-2">01</span>Eure Branche</legend>
+      <div class="flex flex-wrap gap-2" role="radiogroup">
+        {FINDER_BRANCHEN.map(b => (
+          <button type="button" role="radio" aria-checked="false" data-pick="branche" data-value={b} data-on="false" class={chip}>{b}</button>
+        ))}
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend class="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-bone-600 mb-3"><span class="font-mono text-brand-400 mr-2">02</span>Der Bereich, um den es geht</legend>
+      <div class="flex flex-wrap gap-2" role="radiogroup">
+        {BEREICHE.map(b => (
+          <button type="button" role="radio" aria-checked="false" data-pick="bereich" data-value={b} data-on="false" class={chip}>{bereichLabel[b]}</button>
+        ))}
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend class="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-bone-600 mb-3"><span class="font-mono text-brand-400 mr-2">03</span>Was frisst dort am meisten Zeit?</legend>
+      <div class="flex flex-wrap gap-2" role="radiogroup">
+        {ZEITPROBLEME.map(z => (
+          <button type="button" role="radio" aria-checked="false" data-pick="zeitproblem" data-value={z} data-on="false" class={chip}>{z}</button>
+        ))}
+      </div>
+    </fieldset>
+
+    <div class="flex flex-col sm:flex-row sm:items-center gap-4 pt-2">
+      <button type="submit" data-finder-submit disabled class="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-bone-50 text-ink-950 hover:bg-brand-300 font-semibold rounded-full transition-colors text-[0.95rem] disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:bg-bone-50">
+        Lösungen anzeigen
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M5 12h14M13 6l6 6-6 6" /></svg>
+      </button>
+      <p data-finder-hint class="text-xs text-bone-600">Bereich und Zeitproblem reichen, die Branche ist optional.</p>
+    </div>
+  </form>
+
+  <!-- Ergebnis -->
+  <div data-finder-results class="hidden mt-10 pt-10 border-t border-bone-50/10" aria-live="polite">
+    <div class="flex items-end justify-between gap-6 mb-6">
+      <div>
+        <p class="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-brand-400 mb-2">Das passt zu euch</p>
+        <p data-finder-summary class="text-bone-400 text-sm"></p>
+      </div>
+      <button type="button" data-finder-reset class="text-sm text-bone-600 hover:text-bone-50 transition-colors underline underline-offset-4 whitespace-nowrap">Neu wählen</button>
+    </div>
+    <div data-finder-list class="grid md:grid-cols-3 gap-4"></div>
+
+    <div class="mt-8 grid lg:grid-cols-2 gap-4">
+      <!-- Abschluss: Readiness-Check -->
+      <div class="bg-ink-800 border border-brand-500/25 rounded-2xl p-6 sm:p-7 flex flex-col">
+        <p class="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-brand-400 mb-2">Nächster Schritt</p>
+        <p class="font-display font-semibold text-bone-50 text-[1.2rem] leading-snug tracking-tight">Welcher davon zuerst? Das klärt der KI-Readiness-Check in zwei Stunden.</p>
+        <p class="mt-3 text-bone-400 text-sm leading-relaxed flex-1">Für €299 gehen wir eure drei bis fünf größten Zeitfresser durch und ihr bekommt eine priorisierte Liste mit Tool-Empfehlung. Oder ihr startet mit einem kostenlosen Erstgespräch.</p>
+        <div class="mt-5 flex flex-col sm:flex-row gap-2.5">
+          <a data-finder-cta href="#" data-track="paket_cta_geklickt" class="inline-flex items-center justify-center gap-2 px-5 py-3 bg-bone-50 text-ink-950 hover:bg-brand-300 font-semibold rounded-full transition-colors text-sm">
+            Erstgespräch dazu anfragen
+          </a>
+          <a href={`${BASE}leistungen#readiness-check`} data-track="paket_cta_geklickt" class="inline-flex items-center justify-center px-5 py-3 text-bone-50 border border-bone-50/20 hover:border-bone-50/50 font-semibold rounded-full transition-colors text-sm">
+            Readiness-Check ansehen
+          </a>
+        </div>
+      </div>
+
+      <!-- Lead-Magnet: ausführliche Fassung per Mail -->
+      <div class="bg-ink-800 border border-bone-50/[0.08] rounded-2xl p-6 sm:p-7" data-leadmagnet-root>
+        <p class="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-bone-600 mb-2">Zum Weiterleiten</p>
+        <p class="font-display font-semibold text-bone-50 text-[1.2rem] leading-snug tracking-tight">Die ausführliche Fassung dieser Lösungen per E-Mail.</p>
+        <p class="mt-3 text-bone-400 text-sm leading-relaxed">Voraussetzungen, Ablauf, typische Stolpersteine und was ihr selbst vorbereiten könnt. Dazu gelegentlich neue Lösungen aus der Praxis. Abmeldung mit einem Klick.</p>
+        <form data-leadmagnet-form method="post" class="mt-5 flex flex-col sm:flex-row gap-2.5">
+          <input type="hidden" name="tag" value="use-case-finder" />
+          <input type="hidden" name="metadata__finder_bereich" value="" data-meta="bereich" />
+          <input type="hidden" name="metadata__finder_zeitproblem" value="" data-meta="zeitproblem" />
+          <input type="hidden" name="metadata__finder_branche" value="" data-meta="branche" />
+          <input type="hidden" name="metadata__finder_loesungen" value="" data-meta="loesungen" />
+          <label for={`${id}-lm-email`} class="sr-only">E-Mail-Adresse</label>
+          <input id={`${id}-lm-email`} type="email" name="email" required autocomplete="email" placeholder="name@unternehmen.de" class="flex-1 px-4 py-3 bg-ink-900 border border-bone-50/10 rounded-full text-sm text-bone-50 placeholder:text-bone-600 focus:outline-none focus:border-brand-400 transition-colors" />
+          <button type="submit" class="px-5 py-3 bg-ink-900 border border-bone-50/20 text-bone-50 hover:border-brand-400 font-semibold rounded-full transition-colors text-sm whitespace-nowrap disabled:opacity-50">Zusenden</button>
+        </form>
+        <p data-leadmagnet-status class="sr-only" role="status" aria-live="polite"></p>
+        <p class="mt-3 text-xs text-bone-600">Versand über Buttondown. <a href={`${BASE}datenschutz#newsletter`} class="text-bone-400 hover:text-bone-200 underline underline-offset-2 transition-colors">Datenschutz</a></p>
+      </div>
+    </div>
+  </div>
+
+  <script type="application/json" data-finder-data set:html={JSON.stringify(items)} />
+</div>
+
+<script>
+  type Item = {
+    slug: string; title: string; problem: string; description: string; bereich: string;
+    zeitprobleme: string[]; branchen: string[]; paket: string; paketName: string; paketPreis: string;
+    aufwand: string; einsparung: string; prio: number;
+  };
+  declare global { interface Window { bcTrack?: (name: string, data?: Record<string, string>) => void } }
+
+  function esc(s: string) {
+    return s.replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c] as string));
+  }
+
+  document.querySelectorAll<HTMLElement>('[data-finder]').forEach(root => {
+    const items: Item[] = JSON.parse(root.querySelector('[data-finder-data]')?.textContent || '[]');
+    const base = root.dataset.base || '/';
+    const termin = root.dataset.termin || '/#kontakt';
+    const newsletter = root.dataset.newsletter || '';
+    const form = root.querySelector<HTMLFormElement>('[data-finder-form]')!;
+    const submit = root.querySelector<HTMLButtonElement>('[data-finder-submit]')!;
+    const results = root.querySelector<HTMLElement>('[data-finder-results]')!;
+    const list = root.querySelector<HTMLElement>('[data-finder-list]')!;
+    const summary = root.querySelector<HTMLElement>('[data-finder-summary]')!;
+    const cta = root.querySelector<HTMLAnchorElement>('[data-finder-cta]')!;
+    const pick: Record<string, string> = {};
+    let started = false;
+
+    root.querySelectorAll<HTMLButtonElement>('[data-pick]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const group = btn.dataset.pick!;
+        const already = pick[group] === btn.dataset.value;
+        root.querySelectorAll<HTMLButtonElement>(`[data-pick="${group}"]`).forEach(b => {
+          b.dataset.on = 'false'; b.setAttribute('aria-checked', 'false');
+        });
+        if (already) { delete pick[group]; }
+        else { pick[group] = btn.dataset.value!; btn.dataset.on = 'true'; btn.setAttribute('aria-checked', 'true'); }
+        submit.disabled = !(pick.bereich && pick.zeitproblem);
+        if (!started) { started = true; window.bcTrack?.('finder_gestartet'); }
+      });
+    });
+
+    function score(it: Item) {
+      let s = 0;
+      if (pick.bereich && it.bereich === pick.bereich) s += 10;
+      if (pick.zeitproblem && it.zeitprobleme.includes(pick.zeitproblem)) s += 5;
+      if (pick.branche && pick.branche !== 'Andere' && it.branchen.includes(pick.branche)) s += 2;
+      return s + it.prio / 100;
+    }
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      if (submit.disabled) return;
+      const ranked = items.map(it => ({ it, s: score(it) })).filter(x => x.s >= 5).sort((a, b) => b.s - a.s);
+      // Mindestens zwei Treffer aus dem Bereich, sonst mit Zeitproblem-Treffern auffüllen.
+      const top = ranked.slice(0, 3).map(x => x.it);
+      list.innerHTML = top.map((it, i) => `
+        <a href="${base}loesungen/${esc(it.slug)}" class="group flex flex-col bg-ink-900 border border-bone-50/[0.08] hover:border-bone-50/25 rounded-2xl p-6 transition-colors">
+          <div class="flex items-center justify-between mb-4">
+            <span class="font-mono text-xs text-bone-600">0${i + 1}</span>
+            <span class="text-[0.65rem] font-semibold uppercase tracking-wider text-brand-400">${esc(it.bereich)}</span>
+          </div>
+          <h3 class="font-display font-semibold text-bone-50 text-[1.1rem] leading-snug tracking-tight group-hover:text-brand-300 transition-colors">${esc(it.title)}</h3>
+          <p class="mt-3 text-bone-400 text-sm leading-relaxed flex-1">${esc(it.description)}</p>
+          <dl class="mt-5 pt-4 border-t border-bone-50/10 grid grid-cols-2 gap-3 text-xs">
+            <div><dt class="text-bone-600 mb-0.5">Aufwand</dt><dd class="text-bone-200">${esc(it.aufwand)}</dd></div>
+            <div><dt class="text-bone-600 mb-0.5">Paket</dt><dd class="text-bone-200">${esc(it.paketName)} · ${esc(it.paketPreis)}</dd></div>
+            <div class="col-span-2"><dt class="text-bone-600 mb-0.5">Effekt</dt><dd class="text-bone-200">${esc(it.einsparung)}</dd></div>
+          </dl>
+        </a>`).join('');
+      summary.textContent = top.length
+        ? `${pick.bereich} · ${pick.zeitproblem}${pick.branche ? ' · ' + pick.branche : ''}`
+        : 'Dazu habe ich noch keine fertige Lösung beschrieben. Genau solche Fälle klären wir im Erstgespräch.';
+      const first = top[0]?.slug ?? '';
+      const [pathAndQuery, hash] = termin.split('#');
+      const qs = new URLSearchParams({ thema: first || 'finder', titel: top[0]?.title || '', bereich: pick.bereich || '', zeitproblem: pick.zeitproblem || '' }).toString();
+      cta.href = `${pathAndQuery}${pathAndQuery.includes('?') ? '&' : '?'}${qs}${hash ? '#' + hash : ''}`;
+      root.querySelectorAll<HTMLInputElement>('[data-meta]').forEach(inp => {
+        const k = inp.dataset.meta!;
+        inp.value = k === 'loesungen' ? top.map(t => t.slug).join(',') : (pick[k] || '');
+      });
+      results.classList.remove('hidden');
+      results.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      window.bcTrack?.('finder_abgeschlossen');
+    });
+
+    root.querySelector('[data-finder-reset]')?.addEventListener('click', () => {
+      results.classList.add('hidden');
+      root.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+
+    // Lead-Magnet über Buttondown (Tag + Metadaten, damit die passende Fassung rausgeht)
+    const lmForm = root.querySelector<HTMLFormElement>('[data-leadmagnet-form]');
+    if (lmForm && newsletter) {
+      lmForm.action = newsletter;
+      lmForm.addEventListener('submit', async e => {
+        e.preventDefault();
+        const status = root.querySelector<HTMLElement>('[data-leadmagnet-status]')!;
+        const btn = lmForm.querySelector<HTMLButtonElement>('button[type="submit"]')!;
+        btn.disabled = true; btn.textContent = 'Wird gesendet…';
+        try {
+          await fetch(newsletter, { method: 'POST', body: new FormData(lmForm), mode: 'no-cors' });
+          lmForm.style.display = 'none';
+          status.className = 'mt-4 p-4 rounded-xl bg-brand-500/10 border border-brand-500/25 text-brand-200 text-sm';
+          status.innerHTML = '<strong>Fast geschafft.</strong> Bestätige kurz die Anmeldung in der E-Mail, die gerade rausging. Danach kommt die ausführliche Fassung.';
+          window.bcTrack?.('leadmagnet_angefordert');
+        } catch {
+          btn.disabled = false; btn.textContent = 'Zusenden';
+          status.className = 'mt-4 p-3 rounded-xl bg-red-500/10 border border-red-500/20 text-red-300 text-sm';
+          status.textContent = 'Da ging etwas schief. Versuch es gleich nochmal.';
+        }
+      });
+    }
+  });
+</script>

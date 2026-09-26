@@ -1,0 +1,25 @@
+---
+import LoesungLayout from '../../layouts/LoesungLayout.astro';
+import { getLoesungen } from '../../lib/loesungen';
+
+export async function getStaticPaths() {
+  const alle = await getLoesungen();
+  return alle.map(l => ({
+    params: { slug: l.slug },
+    props: {
+      loesung: l,
+      verwandte: alle
+        .filter(v => v.slug !== l.slug && v.data.bereich === l.data.bereich)
+        .concat(alle.filter(v => v.slug !== l.slug && v.data.bereich !== l.data.bereich && v.data.zeitprobleme.some(z => l.data.zeitprobleme.includes(z))))
+        .slice(0, 3),
+    },
+  }));
+}
+
+const { loesung, verwandte } = Astro.props;
+const { Content } = await loesung.render();
+---
+
+<LoesungLayout loesung={loesung} verwandte={verwandte}>
+  <Content />
+</LoesungLayout>

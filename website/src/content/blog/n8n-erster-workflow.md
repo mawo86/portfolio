@@ -85,7 +85,7 @@ Ab jetzt läuft er im Hintergrund. Jede eingehende Anfrage löst automatisch die
 
 n8n hat über 400 integrierte Nodes. Jedes Tool das du kennst — Slack, Notion, Google Sheets, SAP, Salesforce — hat wahrscheinlich einen. Was du gerade gelernt hast, kannst du auf hunderte Szenarien anwenden.
 
-Für einfachere Integrationen zwischen Cloud-Diensten ist [Zapier](/tools#automatisierung) eine gute Alternative. Weniger flexibel, dafür schneller aufgesetzt. Den Unterschied beschreibe ich in meinem [KI-Toolkit](/blog/mein-ki-toolkit).
+Für einfachere Integrationen zwischen Cloud-Diensten ist [Zapier](/tools#automatisierung) eine gute Alternative. Weniger flexibel, dafür schneller aufgesetzt. Den Unterschied beschreibe ich in meinem [KI-Toolkit](/tools).
 
 ## Dein nächster Schritt
 

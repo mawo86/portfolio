@@ -1,0 +1,127 @@
+---
+import Layout from './Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { pakete, terminUrl } from '../config/site';
+import { bereichLabel, type Loesung } from '../lib/loesungen';
+
+export interface Props {
+  loesung: Loesung;
+  verwandte: Loesung[];
+}
+
+const { loesung, verwandte } = Astro.props;
+const d = loesung.data;
+const paket = pakete[d.paket];
+const slug = loesung.slug;
+const ogRoute = `loesungen/${slug}`;
+const anfrageHref = terminUrl({ thema: slug, titel: d.title, paket: d.paket });
+const BASE = import.meta.env.BASE_URL;
+---
+
+<Layout title={`${d.title} — Lösungen — Busche Cloud`} description={d.description} ogRoute={ogRoute}>
+  <Header />
+  <main id="main" class="pt-36 lg:pt-44 pb-24">
+    <article class="max-w-7xl mx-auto px-6 lg:px-10">
+
+      <a href={`${BASE}loesungen`} class="inline-flex items-center gap-2 text-bone-600 hover:text-bone-50 text-sm mb-10 transition-colors group">
+        <svg class="w-4 h-4 transition-transform group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5M11 18l-6-6 6-6" />
+        </svg>
+        Alle Lösungen
+      </a>
+
+      <div class="grid lg:grid-cols-12 gap-12 lg:gap-16">
+        <div class="lg:col-span-8">
+          <p class="text-brand-400 text-[0.75rem] font-semibold uppercase tracking-[0.2em] mb-5">
+            {bereichLabel[d.bereich]}{d.sapNah && <span class="text-bone-600 normal-case tracking-normal font-medium"> · SAP-nah</span>}
+          </p>
+          <h1 class="font-display font-bold text-bone-50 text-[2.3rem] sm:text-[3rem] lg:text-[3.5rem] leading-[1.02] tracking-tight mb-8" style="text-wrap: balance;">{d.title}</h1>
+
+          <div class="border-l-2 border-brand-400 bg-ink-800 rounded-r-2xl px-7 py-6 mb-12">
+            <p class="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-bone-600 mb-2">Kommt euch das bekannt vor?</p>
+            <p class="font-display font-medium text-bone-50 text-[1.2rem] leading-[1.6]">{d.problem}</p>
+          </div>
+
+          <div class="
+            prose prose-invert max-w-none
+            prose-p:text-bone-200 prose-p:leading-[1.85] prose-p:text-[1.08rem] prose-p:mb-6
+            prose-h2:text-bone-50 prose-h2:font-display prose-h2:font-bold prose-h2:text-[1.6rem] prose-h2:mt-14 prose-h2:mb-5 prose-h2:tracking-tight
+            prose-strong:text-bone-50
+            prose-ul:my-6 prose-ul:space-y-2 prose-li:text-bone-200 prose-li:leading-[1.75] prose-li:marker:text-brand-400
+            prose-a:text-bone-50 prose-a:no-underline prose-a:border-b prose-a:border-brand-400/50 hover:prose-a:text-brand-300
+          ">
+            <slot />
+          </div>
+
+          {d.caseStudy && (
+            <a href={`${BASE}case-studies/${d.caseStudy}`} class="mt-12 group flex items-center justify-between gap-6 p-6 bg-ink-800 border border-bone-50/[0.06] hover:border-bone-50/20 rounded-2xl transition-colors">
+              <div>
+                <p class="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-brand-400 mb-1.5">So sieht das gebaut aus</p>
+                <p class="font-display font-semibold text-bone-50 text-[1.1rem] leading-snug group-hover:text-brand-300 transition-colors">Zum Showcase-Projekt</p>
+              </div>
+              <svg class="w-5 h-5 text-bone-600 group-hover:text-brand-300 group-hover:translate-x-1 transition-all flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M13 6l6 6-6 6" /></svg>
+            </a>
+          )}
+        </div>
+
+        <!-- Seitenleiste: Fakten + Paket -->
+        <aside class="lg:col-span-4">
+          <div class="lg:sticky lg:top-28 space-y-5">
+            <dl class="bg-ink-800 border border-bone-50/[0.06] rounded-2xl p-7 space-y-5">
+              {[
+                { label: 'Aufwand', value: d.aufwand },
+                { label: 'Effekt', value: d.einsparung, hint: 'Erfahrungswert aus vergleichbaren Prozessen' },
+                { label: 'Reifegrad', value: d.reifegrad },
+                { label: 'Werkzeuge', value: d.werkzeuge.join(', ') },
+              ].map(f => (
+                <div>
+                  <dt class="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-bone-600 mb-1.5">{f.label}</dt>
+                  <dd class="text-bone-50 text-[0.95rem] leading-snug">{f.value}</dd>
+                  {f.hint && <dd class="text-bone-600 text-xs mt-1">{f.hint}</dd>}
+                </div>
+              ))}
+            </dl>
+
+            <div class="bg-ink-800 border border-brand-500/25 rounded-2xl p-7">
+              <p class="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-brand-400 mb-2.5">Passendes Paket</p>
+              <p class="font-display font-semibold text-bone-50 text-[1.3rem] leading-tight tracking-tight">{paket.name}</p>
+              <p class="mt-1.5 text-sm text-bone-400"><span class="text-bone-50 font-semibold">{paket.price}</span> · {paket.meta}</p>
+              <p class="mt-4 text-bone-400 text-sm leading-relaxed">{paket.kurz}</p>
+              <div class="mt-6 flex flex-col gap-2.5">
+                <a href={anfrageHref} data-track="paket_cta_geklickt" class="inline-flex items-center justify-center gap-2 px-5 py-3 bg-bone-50 text-ink-950 hover:bg-brand-300 font-semibold rounded-full transition-colors text-sm">
+                  Dazu Erstgespräch anfragen
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M5 12h14M13 6l6 6-6 6" /></svg>
+                </a>
+                <a href={`${BASE}${paket.href.replace(/^\//, '')}`} data-track="paket_cta_geklickt" class="inline-flex items-center justify-center px-5 py-3 text-bone-50 border border-bone-50/20 hover:border-bone-50/50 font-semibold rounded-full transition-colors text-sm">
+                  Paket im Detail
+                </a>
+              </div>
+              {d.paket !== 'readiness-check' && (
+                <p class="mt-5 text-xs text-bone-600 leading-relaxed">
+                  Noch nicht sicher, ob das der richtige Prozess ist? Der <a href={`${BASE}leistungen#readiness-check`} class="text-bone-400 hover:text-brand-300 underline underline-offset-2 transition-colors">KI-Readiness-Check</a> klärt das in zwei Stunden für €299.
+                </p>
+              )}
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      {verwandte.length > 0 && (
+        <nav class="mt-20 pt-10 border-t border-bone-50/10" aria-label="Weitere Lösungen">
+          <p class="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-brand-400 mb-6">Weitere Lösungen aus {bereichLabel[d.bereich]}</p>
+          <div class="grid sm:grid-cols-3 gap-5">
+            {verwandte.map(v => (
+              <a href={`${BASE}loesungen/${v.slug}`} class="group block bg-ink-800 border border-bone-50/[0.06] hover:border-bone-50/20 rounded-2xl p-6 transition-colors">
+                <span class="text-xs text-bone-600 font-semibold uppercase tracking-wider">{pakete[v.data.paket].name}</span>
+                <h3 class="font-display font-semibold text-bone-50 text-[1.05rem] mt-2 leading-snug tracking-tight group-hover:text-brand-300 transition-colors">{v.data.title}</h3>
+                <p class="mt-3 text-bone-400 text-sm leading-relaxed line-clamp-3">{v.data.description}</p>
+              </a>
+            ))}
+          </div>
+        </nav>
+      )}
+    </article>
+  </main>
+  <Footer />
+</Layout>

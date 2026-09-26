@@ -6,7 +6,8 @@ import Testimonials from '../components/Testimonials.astro';
 import NewsletterSignup from '../components/NewsletterSignup.astro';
 import MediaImage from '../components/MediaImage.astro';
 import { getCollection } from 'astro:content';
-import { availability } from '../config/site';
+import { availability, links, terminUrl } from '../config/site';
+import { getLoesungen, bereichLabel } from '../lib/loesungen';
 import { hasMedia, mediaUrl } from '../lib/media';
 
 const status = availability.status;
@@ -21,6 +22,10 @@ const kontaktStill = hasMedia('kontakt.jpg');
 const posts = (await getCollection('blog', ({ data }) => !data.draft))
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
   .slice(0, 4);
+
+const alleLoesungen = await getLoesungen();
+const topLoesungen = alleLoesungen.slice(0, 4);
+const anzahlBereiche = new Set(alleLoesungen.map(l => l.data.bereich)).size;
 
 const ladder = [
   {
@@ -128,12 +133,12 @@ function formatDate(date: Date) {
         </p>
 
         <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3 animate-fade-up" style="animation-delay: 0.28s;">
-          <a href="/#kontakt" class="inline-flex items-center gap-2 px-6 py-3.5 bg-bone-50 text-ink-950 hover:bg-brand-300 font-semibold rounded-full transition-colors text-[0.95rem]">
+          <a href={terminUrl()} data-track="paket_cta_geklickt" data-track-label="hero" class="inline-flex items-center gap-2 px-6 py-3.5 bg-bone-50 text-ink-950 hover:bg-brand-300 font-semibold rounded-full transition-colors text-[0.95rem]">
             Kostenloses Erstgespräch
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M5 12h14M13 6l6 6-6 6" /></svg>
           </a>
-          <a href="/leistungen" class="inline-flex items-center gap-2 px-6 py-3.5 text-bone-50 border border-bone-50/20 hover:border-bone-50/50 font-semibold rounded-full transition-colors text-[0.95rem]">
-            Pakete &amp; Preise
+          <a href="/loesungen" class="inline-flex items-center gap-2 px-6 py-3.5 text-bone-50 border border-bone-50/20 hover:border-bone-50/50 font-semibold rounded-full transition-colors text-[0.95rem]">
+            Was ist bei euch automatisierbar?
           </a>
         </div>
       </div>
@@ -244,6 +249,44 @@ function formatDate(date: Date) {
         <a href="/leistungen" class="inline-flex items-center gap-2 text-sm font-semibold text-bone-50 hover:text-brand-300 transition-colors group whitespace-nowrap">
           Alle Pakete im Detail
           <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M5 12h14M13 6l6 6-6 6" /></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ LÖSUNGEN ═══ -->
+  <section id="loesungen" class="py-24 lg:py-32 border-t border-bone-50/[0.06]">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+      <div class="grid lg:grid-cols-12 gap-8 mb-14">
+        <div class="lg:col-span-7">
+          <p class="text-brand-400 text-[0.75rem] font-semibold uppercase tracking-[0.2em] mb-5">Lösungen</p>
+          <h2 class="font-display font-bold text-bone-50 text-[2.2rem] sm:text-[2.9rem] leading-[1.02] tracking-tight" style="text-wrap: balance;">
+            Nicht "KI einführen". Sondern: Angebote in einer Stunde statt in zwei Tagen.
+          </h2>
+        </div>
+        <div class="lg:col-span-5 lg:pt-12">
+          <p class="text-bone-400 text-[1.05rem] leading-relaxed">
+            {alleLoesungen.length} konkrete Lösungen aus {anzahlBereiche} Unternehmensbereichen, jede mit Aufwand, Effekt und Paket. Der Use-Case-Finder zeigt euch in drei Klicks, was bei euch zuerst dran wäre.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-4">
+        {topLoesungen.map(l => (
+          <a href={`/loesungen/${l.slug}`} class="group flex flex-col bg-ink-800 border border-bone-50/[0.06] hover:border-bone-50/20 rounded-2xl p-7 transition-colors">
+            <span class="text-[0.65rem] font-semibold uppercase tracking-wider text-brand-400">{bereichLabel[l.data.bereich]}</span>
+            <h3 class="font-display font-semibold text-bone-50 text-[1.3rem] mt-3 leading-snug tracking-tight group-hover:text-brand-300 transition-colors">{l.data.title}</h3>
+            <p class="mt-3 text-bone-400 text-[0.95rem] leading-relaxed flex-1 line-clamp-3">{l.data.problem}</p>
+            <p class="mt-5 pt-4 border-t border-bone-50/10 text-xs text-bone-600">Aufwand {l.data.aufwand} · Effekt {l.data.einsparung}</p>
+          </a>
+        ))}
+      </div>
+
+      <div class="mt-8 flex flex-col sm:flex-row sm:items-center justify-between gap-5">
+        <p class="text-bone-400 text-sm">Alle Lösungen lassen sich nach Bereich filtern, auch nach SAP-Nähe.</p>
+        <a href="/loesungen" class="inline-flex items-center gap-2 px-5 py-3 bg-bone-50 text-ink-950 hover:bg-brand-300 font-semibold rounded-full transition-colors text-sm whitespace-nowrap">
+          Use-Case-Finder starten
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M5 12h14M13 6l6 6-6 6" /></svg>
         </a>
       </div>
     </div>
@@ -390,7 +433,7 @@ function formatDate(date: Date) {
         <div class="lg:col-span-7">
           <div class="bg-ink-800/90 backdrop-blur border border-bone-50/[0.08] rounded-2xl p-7 sm:p-10">
             <form
-              action="https://formspree.io/f/xgopevdy"
+              action={links.formspree}
               method="POST"
               class="space-y-6"
               aria-label="Kontaktformular"
@@ -398,6 +441,7 @@ function formatDate(date: Date) {
               <input type="hidden" name="_next" value="https://busche.cloud/danke" />
               <input type="text" name="_gotcha" style="display:none !important" tabindex="-1" autocomplete="off" aria-hidden="true" />
               <input type="hidden" name="_timestamp" id="formTimestamp" value="" />
+              <input type="hidden" name="thema" id="formThema" value="" />
 
               <div class="grid sm:grid-cols-2 gap-6">
                 <div>
@@ -461,12 +505,38 @@ function formatDate(date: Date) {
   if (tsField) tsField.value = String(loadTime);
 
   const form = document.querySelector('form[action*="formspree"]') as HTMLFormElement | null;
+
+  // Vorbelegung aus dem Funnel: /?thema=<slug>&paket=<id>&bereich=..&zeitproblem=..#kontakt
+  // (gesetzt von Lösungs-Seiten, Finder und Blog-CTA). Der Besucher sieht, dass wir wissen, worum es geht.
+  const params = new URLSearchParams(window.location.search);
+  const thema = params.get('thema');
+  if (form && thema) {
+    const paket = params.get('paket');
+    const bereich = params.get('bereich');
+    const zeitproblem = params.get('zeitproblem');
+    const subject = form.querySelector<HTMLSelectElement>('#subject');
+    const message = form.querySelector<HTMLTextAreaElement>('#message');
+    const themaField = form.querySelector<HTMLInputElement>('#formThema');
+    const paketMap: Record<string, string> = { 'readiness-check': 'readiness-check', 'pilot-projekt': 'pilot-projekt', 'begleitung': 'laufende-begleitung', 'tagessatz': 'tagessatz' };
+    if (subject && paket && paketMap[paket]) subject.value = paketMap[paket];
+    else if (subject && thema === 'finder') subject.value = 'readiness-check';
+    if (themaField) themaField.value = [thema, bereich, zeitproblem].filter(Boolean).join(' | ');
+    if (message && !message.value) {
+      const titel = params.get('titel');
+      const readable = thema.startsWith('blog/') ? `dem Artikel "${titel || thema.slice(5)}"` : thema === 'finder' ? 'dem Use-Case-Finder' : `der Lösung "${titel || thema.replace(/-/g, ' ')}"`;
+      message.value = `Ich komme von ${readable}${bereich ? ` (Bereich: ${bereich}${zeitproblem ? `, Thema: ${zeitproblem}` : ''})` : ''}. Bei uns sieht das so aus: `;
+    }
+    // Anker nach dem Setzen der Werte erneut anfahren, damit der Browser nicht am Seitenanfang bleibt
+    if (window.location.hash === '#kontakt') document.getElementById('kontakt')?.scrollIntoView();
+  }
+
   if (form) {
     form.addEventListener('submit', (e) => {
       if (Date.now() - loadTime < 3000) {
         e.preventDefault();
         return;
       }
+      (window as any).bcTrack?.('formular_gesendet', { label: (form.querySelector<HTMLSelectElement>('#subject')?.value) || '' });
       const btn = form.querySelector('button[type="submit"]') as HTMLButtonElement | null;
       if (btn) {
         btn.disabled = true;

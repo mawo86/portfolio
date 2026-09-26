@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import MediaImage from '../components/MediaImage.astro';
+import { terminUrl } from '../config/site';
 
 const packages = [
   {
@@ -112,7 +113,7 @@ const packages = [
             Was beschäftigt dich beim Thema KI? Wo steckt das größte Potenzial? Welches Paket passt? Das klären wir zuerst. Unverbindlich, und wenn es nicht passt, sage ich das auch.
           </p>
         </div>
-        <a href="/#kontakt" class="flex-shrink-0 inline-flex items-center gap-2 px-6 py-3.5 bg-bone-50 text-ink-950 hover:bg-brand-300 font-semibold rounded-full transition-colors text-[0.95rem] whitespace-nowrap">
+        <a href={terminUrl()} class="flex-shrink-0 inline-flex items-center gap-2 px-6 py-3.5 bg-bone-50 text-ink-950 hover:bg-brand-300 font-semibold rounded-full transition-colors text-[0.95rem] whitespace-nowrap">
           Gespräch vereinbaren
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M5 12h14M13 6l6 6-6 6" /></svg>
         </a>
@@ -167,7 +168,7 @@ const packages = [
               </div>
 
               <a
-                href="/#kontakt"
+                href={terminUrl()}
                 class={`inline-flex items-center gap-2 px-6 py-3.5 font-semibold rounded-full transition-colors text-[0.95rem] ${pkg.highlight ? 'bg-bone-50 text-ink-950 hover:bg-brand-300' : 'text-bone-50 border border-bone-50/20 hover:border-bone-50/50'}`}
               >
                 {pkg.name} anfragen
@@ -183,7 +184,7 @@ const packages = [
           Alle Preise zzgl. USt. Die genaue Spanne für Pilot und Begleitung hängt vom Umfang ab, das klären wir im Erstgespräch. Für Beratungsleistungen im Mittelstand gibt es Fördermöglichkeiten, zum Beispiel über die BAFA. Sprich mich darauf an.
         </p>
         <div class="md:col-span-5 md:text-right">
-          <a href="/#kontakt" class="inline-flex items-center gap-2 text-sm font-semibold text-bone-50 hover:text-brand-300 transition-colors group">
+          <a href={terminUrl()} class="inline-flex items-center gap-2 text-sm font-semibold text-bone-50 hover:text-brand-300 transition-colors group">
             Unsicher, welches Paket? Lass uns reden
             <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M5 12h14M13 6l6 6-6 6" /></svg>
           </a>
