@@ -69,3 +69,8 @@ Gilt `_betriebsstandard.md`. Spezifisch hier:
 - Angebotsentwurf aus der Anfrage (der nächste Schritt im selben Prozess)
 - CRM-Pflege und Nachfassen
 - Ticket-Klassifikation im Service (gleiche Technik, anderes Postfach)
+
+## 10. Belege und Quellen
+
+- Oldroyd, McElheran, Elkington, "The Short Life of Online Sales Leads", Harvard Business Review, März 2011: 1,25 Mio. Leads, 42 Unternehmen, Kontakt binnen einer Stunde fast 7x so oft qualifiziert; Audit 2.241 Firmen, Ø 42 Std. Antwortzeit, 23 % antworten nie. Die Zahl fürs Erstgespräch. Nicht mit der 5-Minuten-Regel (MIT/InsideSales 2007) verwechseln.
+- Zeitersparnis: kein Beleg. Messgröße: Zeit bis Erstantwort-Entwurf, Zeit bis erster menschlicher Kontakt.

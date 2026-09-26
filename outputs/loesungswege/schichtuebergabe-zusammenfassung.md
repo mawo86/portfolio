@@ -67,3 +67,10 @@ Gilt `_betriebsstandard.md`. Spezifisch hier:
 - Wartungsdokumentation per Sprache (Quelle verbessern)
 - Reporting-Kommentierung (Wochen- oder Monatsbericht Produktion nach gleichem Prinzip)
 - Wissensdatenbank (Übergaben durchsuchbar)
+
+## 10. Belege und Quellen
+
+- Wiley Prozesstechnik, "Betriebsstörung Kommunikationsfehler": Übergabe Nacht→Früh als kritischster Moment, Schichtbuch/Überlappung/Checkliste.
+- 451 Research (zitiert in chemietechnik.de): 40 % der Störfälle kurz nach Übergabe oder An-/Abfahren. Primärquelle nachschlagen, bevor die Zahl in ein Angebot geht.
+- "25 bis 40 % Informationsverlust": nur Anbieterblogs, nicht als Fakt verwenden.
+- Messgröße im Piloten: Vollständigkeit offener Störungen (100 %), Dauer Übergabegespräch.

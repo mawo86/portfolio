@@ -22,11 +22,17 @@ HR-Texte sind Routinearbeit mit Anspruch: Sie müssen rechtssicher, einheitlich 
 
 ## Was wir bauen
 
-Eine Sammlung geprüfter Vorlagen und Anweisungen, mit der eure HR-Kollegen in einem KI-Assistenten aus Stichworten fertige Entwürfe erzeugen: Stellenanzeige mit euren Benefits und Pflichtangaben, Zeugnisentwurf aus Beurteilungsnotizen, Onboarding-Plan aus Rolle und Startdatum. Kein Workflow im Hintergrund nötig, nur ein sauber eingerichtetes Werkzeug und eine Stunde Einweisung.
+Kein Workflow, sondern ein sauber eingerichteter Assistent in eurem Business-KI-Werkzeug (Claude Team oder Enterprise, Copilot für Microsoft 365, ChatGPT Team). Pro Textart gibt es eine feste Anweisung: Struktur, Ton, eure Pflichtbausteine (Benefits, Datenschutzhinweis für Bewerber, Zeugnisformulierungen des Hauses) und eine Verbotsliste (Superlative, Formulierungen mit Diskriminierungsrisiko, Versprechen). Fünf gute alte Texte pro Art dienen als Vorbild. HR gibt Stichworte ein, bekommt einen Entwurf, prüft gegen eine AGG-Checkliste und veröffentlicht. Bei Zeugnissen wird der Name erst nach der Generierung eingesetzt, das Modell arbeitet mit Platzhaltern. Zwei Stunden Einweisung gehören dazu.
 
 ## Was das bringt
 
-Die Einsparung liegt bei 3 bis 5 Stunden pro Woche im Team, Erfahrungswert aus vergleichbaren Prozessen. Texte werden einheitlicher, Stellenanzeigen gehen am selben Tag online. Ein guter erster Kontakt mit KI für ein Team, das oft skeptisch ist.
+Der rechtliche Rahmen ist der Grund für die Verbotsliste. Nach § 11 AGG müssen Stellen neutral ausgeschrieben werden, und Formulierungen, die auf ein geschütztes Merkmal hindeuten, begründen die Vermutung einer Benachteiligung mit Entschädigungsanspruch nach § 15 AGG. Die Rechtsprechung zu "junges Team" ist uneinheitlich: Ein Landesarbeitsgericht sah keine Benachteiligung, das Arbeitsgericht Dortmund verurteilte in einem anderen Fall zu einer Entschädigung von 60.000 Euro. Eine Verbotsliste in der Anweisung kostet nichts und nimmt dieses Risiko aus dem Alltag.
+
+Für die Werkzeuge gilt: Bei Team- und Enterprise-Tarifen der großen Anbieter werden eure Eingaben nicht zum Training genutzt und ein Auftragsverarbeitungsvertrag ist enthalten, bei Anthropic zum Beispiel als Teil der Commercial Terms. Bei privaten Konten gilt beides nicht. Zur Zeitersparnis habe ich keine externe Zahl gefunden, mein Erfahrungswert liegt bei 3 bis 5 Stunden pro Woche in einem HR-Team, das regelmäßig ausschreibt.
+
+## Wo es schwierig wird
+
+Privatkonten. Wenn HR mit dem privaten ChatGPT arbeitet, landen Zeugnisdaten in einem Consumer-Dienst ohne Vertrag. Der Business-Tarif ist keine Empfehlung, sondern Bedingung. Zweitens Zeugnisse: Zeugnissprache ist Rechtssprache, das Modell liefert Bausteine, die Note entscheidet HR. Drittens: Ohne die zwei Stunden Einweisung wird das Werkzeug wie eine Suchmaschine benutzt und enttäuscht.
 
 ## Was ihr dafür braucht
 

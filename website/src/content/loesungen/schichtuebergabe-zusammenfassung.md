@@ -22,11 +22,17 @@ date: 2026-09-26
 
 ## Was wir bauen
 
-Zum Schichtende fasst der Workflow zusammen, was passiert ist: Störungen und ihr Status, Qualitätsabweichungen, Materialengpässe, offene Aufträge und besondere Hinweise. Quelle sind Schichtbuch-Einträge (auch handschriftlich als Foto), Störmeldungen und, wenn vorhanden, Produktionsdaten. Das Ergebnis ist eine halbe Seite, die auf dem Display an der Linie und in Teams erscheint.
+Fünfzehn Minuten vor Schichtende startet der Workflow und sammelt, was passiert ist: Einträge aus dem Schichtbuch (digital oder als Foto einer handschriftlichen Seite, die das Modell liest), Störmeldungen aus der Instandhaltung, wenn vorhanden Stückzahlen und Stillstände aus dem MES. Das Sprachmodell füllt daraus ein festes Format mit fünf Rubriken: Störungen offen und erledigt, Qualität, Material, offene Aufträge, Hinweise. Jedes Ereignis mit Uhrzeit und Anlage, maximal eine halbe Seite. Die Zusammenfassung erscheint auf dem Bildschirm an der Linie und in Teams, das Archiv hält jede Schicht. Schlägt der Workflow fehl, zeigt das Display "nicht verfügbar, bitte mündlich übergeben", nie eine alte Zusammenfassung. Der Schichtleiter kann per Klick ergänzen, was fehlt.
 
 ## Was das bringt
 
-Die Einsparung liegt bei 10 bis 15 Minuten pro Übergabe, Erfahrungswert aus vergleichbaren Prozessen. Der Hauptnutzen ist Sicherheit: Jede Schicht startet mit demselben Wissensstand, unabhängig davon, wer gerade Dienst hat.
+Die Übergabe ist als Risikopunkt gut dokumentiert. In der Prozessindustrie gilt die Übergabe von der Nacht- an die Frühschicht als kritischste Kommunikationssituation, mit Schichtbuch, Überlappungszeit und Checkliste als Gegenmaßnahmen (Praxisbericht, Wiley Prozesstechnik). Eine Auswertung von 451 Research, die in der Fachpresse zitiert wird, ordnet 40 Prozent der Störfälle der Zeit kurz nach der Übergabe oder dem An- und Abfahren von Anlagen zu. Anbieter digitaler Schichtbücher nennen Informationsverluste von 25 bis 40 Prozent bei mündlicher Übergabe, dafür habe ich keine Primärquelle gefunden, deshalb steht die Zahl hier nicht als Fakt.
+
+Mein Erfahrungswert: Das Übergabegespräch wird von zehn auf fünf Minuten kürzer und vollständiger. Das Sicherheitskriterium, das wir prüfen, ist ein anderes: Jede offene Störung des Testzeitraums muss in der Zusammenfassung stehen, ohne Ausnahme.
+
+## Wo es schwierig wird
+
+Handschrift. Die Fotoerkennung schwankt mit der Lesbarkeit, deshalb zeigt das System bei niedrigem Sicherheitswert den Originalausschnitt mit an. Zweitens die Länge: Eine halbe Seite, sonst liest es niemand. Drittens Personen: "Schicht A hatte viel Ausschuss" ist eine Auswertung über Menschen. Die Zusammenfassung nennt Anlagen und Ereignisse, keine Namen, und das steht in der Vereinbarung mit dem Betriebsrat.
 
 ## Was ihr dafür braucht
 

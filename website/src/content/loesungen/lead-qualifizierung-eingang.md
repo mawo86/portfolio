@@ -22,11 +22,17 @@ Anfragen sind ungleich wertvoll, werden aber gleich behandelt. Die Einschätzung
 
 ## Was wir bauen
 
-Ein Workflow nimmt jede Anfrage entgegen, zieht öffentlich verfügbare Informationen zum Unternehmen dazu und bewertet nach euren Kriterien: Branche, Größe, Thema, Dringlichkeit. Das Ergebnis landet als angereicherter Datensatz im CRM und als Nachricht bei der zuständigen Person. Für Standardfälle entsteht ein Antwortentwurf, den ihr nur noch freigebt.
+Jede Anfrage aus Formular, Postfach oder Messe-Scan landet in einem Workflow. Aus der E-Mail-Domain holt er die Firmenwebsite, liest Startseite und Impressum und fasst zusammen: Branche, Größe, Produkte, Region. Nur öffentliche Quellen, keine Personenprofile. Dann bewertet das Sprachmodell die Anfrage gegen eure fünf Kriterien (Branche, Größe, Thema, Region, Dringlichkeit) und gibt eine Passung von 1 bis 5 mit einem Satz Begründung zurück, plus Spam-Verdacht. Über eine Zuständigkeitstabelle (Region, Produkt, Größe) geht die Anfrage an die richtige Person, als Teams-Nachricht und als Datensatz im CRM mit Kurzprofil und Bewertung. Für Passung 4 und 5 legt der Workflow einen Antwortentwurf im Postfach des Zuständigen ab. Gesendet wird nichts automatisch, Spam wird nie gelöscht, nur in einen Ordner verschoben.
 
 ## Was das bringt
 
-Die Erstantwort geht innerhalb einer Stunde raus statt nach zwei Tagen. Die Einsparung liegt bei 3 bis 6 Stunden pro Woche, Erfahrungswert aus vergleichbaren Prozessen. Der eigentliche Gewinn: Niemand übersieht mehr die wertvolle Anfrage zwischen zwanzig Spam-Mails.
+Warum die Geschwindigkeit der Erstantwort so viel ausmacht, ist eine der am besten belegten Zahlen im Vertrieb: Eine Untersuchung von 1,25 Millionen Anfragen bei 42 Unternehmen (Oldroyd, McElheran, Elkington, Harvard Business Review, März 2011) zeigte, dass Unternehmen, die innerhalb einer Stunde reagierten, die Anfrage fast siebenmal so oft qualifizieren konnten wie solche, die eine Stunde später anriefen. Dieselbe Untersuchung fand bei 2.241 geprüften Unternehmen eine durchschnittliche Antwortzeit von 42 Stunden, 23 Prozent antworteten gar nicht. Die Zahlen sind aus den USA und über zehn Jahre alt, das Muster hat sich in meiner Erfahrung nicht geändert.
+
+Zur Zeitersparnis im Team habe ich extern nichts Belastbares gefunden. Mein Erfahrungswert: 3 bis 6 Stunden pro Woche. Der Effekt, der zählt: Der Antwortentwurf liegt zehn Minuten nach Eingang bereit.
+
+## Wo es schwierig wird
+
+Fünf Kriterien reichen, bei zehn wird die Bewertung unschärfer statt schärfer. Zweitens der Spam-Filter: Eine echte Anfrage im Spam-Ordner kostet mehr als zwanzig Spam-Mails beim Menschen, deshalb ist der Filter bewusst vorsichtig eingestellt. Drittens die Anreicherung: Die Firmenwebsite ist erlaubt, Personenprofile in sozialen Netzwerken sind ein Datenschutzproblem, das wir nicht anfassen.
 
 ## Was ihr dafür braucht
 

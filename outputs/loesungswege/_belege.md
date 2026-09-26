@@ -204,3 +204,75 @@
 | Preisabstand Haiku zu Opus (1/5 vs 4/20 bzw. 5/25 USD pro Mio. Token) | Preisübersichten 09/2026 | Fachpresse | S | Im Text nur "Bruchteil", keine Zahl, weil Preise wechseln |
 | Anthropic Ausgabenlimits und Alarme | siehe oben | Doku | S | |
 | 30 bis 60 % in Praxis-Workflows | eigene Schätzung aus Benchmark abgeleitet | Einschätzung | E | |
+
+## lead-qualifizierung-eingang
+
+| Aussage | Quelle | Art | Tiefe | Anmerkung |
+|---|---|---|---|---|
+| 1,25 Mio. Leads bei 42 US-Unternehmen: Kontakt innerhalb einer Stunde → fast 7x höhere Qualifizierungswahrscheinlichkeit; Audit von 2.241 Unternehmen: Ø Antwortzeit 42 Std., 23 % antworten nie | Oldroyd, McElheran, Elkington, "The Short Life of Online Sales Leads", Harvard Business Review, März 2011 | Studie | S | US, 2011, im Text so eingeordnet. Nicht verwechseln mit der MIT/InsideSales-Studie 2007 (5-Minuten-Regel) |
+| 3 bis 6 Std./Woche | keine externe Quelle | Einschätzung | E | |
+| Anreicherung nur aus Firmenwebsite, keine Personenprofile | eigene Datenschutz-Entscheidung | Einschätzung | E | |
+
+## crm-pflege-und-nachfassen
+
+| Aussage | Quelle | Art | Tiefe | Anmerkung |
+|---|---|---|---|---|
+| Vertrieb verbringt nur ~25 bis 30 % der Zeit mit Verkaufen | Salesforce "State of Sales" 6. Ausgabe 2024, Pressemitteilung DE 31.07.2024 ("nur ein Viertel seiner Zeit mit Kund:innen") | Studie (Anbieter) | S | Quellen nennen 25 %, 30 % und 40 %, je nach Lesart; Text nennt Spanne |
+| B2B-Daten veralten ~30 % pro Jahr; Landbase: 22,5 bis 70,3 %; 65,8 % wechseln Titel, 42,9 % Telefon, 37,3 % E-Mail in 12 Monaten | bliro Blog (30 %), Landbase Research | Fachpresse/Anbieter | S | Keine neutrale Primärquelle, Text nennt Spanne und "je nach Quelle" |
+| Forrester B2B Data Health Benchmark 2024: 40 bis 60 % der CRM-Kontakte unvollständig | zitiert über b77.de | Studie | S | Nicht im Text verwendet (Sekundärzitat) |
+| 2 bis 4 Std./Woche pro Vertriebler | keine externe Quelle | Einschätzung | E | |
+
+## antwortentwuerfe-mit-wissensbasis
+
+| Aussage | Quelle | Art | Tiefe | Anmerkung |
+|---|---|---|---|---|
+| Klarna Feb 2024: KI-Assistent übernimmt 2/3 der Chats, 2,3 Mio. Gespräche im ersten Monat, Lösungszeit unter 2 Min., "entspricht 700 Agenten" | Klarna Pressemitteilung 27.02.2024 (über CX Dive, Forbes, Bigeye) | Fallstudie (Anbieter) | S | |
+| Klarna Mai 2025: CEO Siemiatkowski "we went too far", Qualität gesunken, Rekrutierung von Menschen, hybrides Modell | CX Dive, Forbes 18.05.2025, MLQ | Fachpresse | S | Zentraler Beleg für "Entwurf statt Automatik" |
+| Anthropic Citations | siehe oben | Doku | S | |
+| 8 bis 15 Std./Woche | keine externe Quelle | Einschätzung | E | |
+
+## stellenanzeigen-und-hr-texte
+
+| Aussage | Quelle | Art | Tiefe | Anmerkung |
+|---|---|---|---|---|
+| § 11 AGG neutrale Ausschreibung, Vermutungswirkung, § 15 AGG Entschädigung | ADVANT Beiten, Haufe "Gestaltung von rechtssicheren Stellenanzeigen" | Gesetz/Behörde | S | |
+| "junges Team": LAG-Entscheidung ohne Benachteiligung vs. ArbG Dortmund 60.000 Euro Entschädigung ("junges und engagiertes Team") | Haufe AGG-Kommentar, efarbeitsrecht, betriebs-berater | Gesetz/Behörde | S | Aktenzeichen nicht recherchiert, vor Nutzung im Gespräch nachschlagen |
+| Claude Team/Enterprise: kein Training mit Customer Content, DPA enthalten; Consumer-Terms ohne diese Zusagen | Anthropic Privacy Center "Is my data used for model training?", Commercial Terms | Doku | S | |
+| 3 bis 5 Std./Woche | keine externe Quelle | Einschätzung | E | |
+
+## wartungsdokumentation-per-sprache
+
+| Aussage | Quelle | Art | Tiefe | Anmerkung |
+|---|---|---|---|---|
+| API_MAINTNOTIFICATION (OData, S/4HANA Cloud und On-Premise): Meldungskopf, Positionen, Ursachen, Maßnahmen, Partner; ETag/If-Match bei Änderungen | api.sap.com API_MAINTNOTIFICATION, SAP Help "Operations for Maintenance Notifications" | Doku | S | Servicename bestätigt |
+| Whisper WER ca. 8 bis 12 % sauber, 16 bis 24 % industriell/klinisch, Rauschunterdrückung 20 bis 40 % relative Verbesserung | Forasoft "Speech Recognition Accuracy in Noise" (2026), VexaScribe WER-Daten, MLCommons Whisper Benchmark | Fachpresse/Benchmark | S | Keine peer-reviewte Industriestudie gefunden; Zahlen als "berichtet" formuliert |
+| DIN 31051 setzt Dokumentation voraus, Praxisberichte zu unvollständigen Störmeldungen | mymaintenance.blog (DIN 31051 Dokumentation) | Fachpresse | S | |
+| 20 bis 40 Min./Techniker/Tag | keine externe Quelle | Einschätzung | E | Im Text gekennzeichnet |
+
+## schichtuebergabe-zusammenfassung
+
+| Aussage | Quelle | Art | Tiefe | Anmerkung |
+|---|---|---|---|---|
+| Übergabe Nacht→Früh als kritischste Kommunikationssituation in der Chemieanlage, Gegenmaßnahmen Schichtbuch, Überlappung, Checkliste | Wiley Prozesstechnik, Praxisbericht "Betriebsstörung Kommunikationsfehler" | Fachpresse | S | |
+| 451 Research: 40 % der Störfälle kurz nach Übergabe oder beim An-/Abfahren | zitiert in chemietechnik.de "Digitalisierung verhindert Störfälle in der Produktion" | Studie (Sekundärzitat) | S | Primärquelle nicht gefunden, im Text als "zitiert" markiert |
+| 25 bis 40 % Informationsverlust bei mündlicher Übergabe | Anbieterblogs (embedded data, Blupassion) | Anbieter ohne Quelle | S | Im Text ausdrücklich als nicht belegt gekennzeichnet |
+| Übergabe 10 → 5 Min. | keine externe Quelle | Einschätzung | E | |
+
+## meeting-zusammenfassung-und-aufgaben
+
+| Aussage | Quelle | Art | Tiefe | Anmerkung |
+|---|---|---|---|---|
+| Work Trend Index 2025: 31.000 Befragte, 31 Länder, Unterbrechung alle 2 Minuten, ineffiziente Meetings größter Produktivitätsstörer, fehlende nächste Schritte | Microsoft Blog 23.04.2025, WorkLab "Breaking down the infinite workday" | Studie (Hersteller) | S | Herstellerquelle, im Text so benannt |
+| Teams Meeting Recap / Copilot in Teams Doku | Microsoft Tech Community "Turn meetings into momentum with Microsoft 365 Copilot" | Doku | S | |
+| 2 bis 4 Std./Woche pro Führungskraft | keine externe Quelle | Einschätzung | E | |
+
+## entscheidungsvorlagen-kurzfassung
+
+| Aussage | Quelle | Art | Tiefe | Anmerkung |
+|---|---|---|---|---|
+| Amazon: sechsseitige narrative Memos, kein PowerPoint, stilles Lesen zu Meetingbeginn, "gutes Memo schwerer als 20 Folien" | Jeff Bezos, Aktionärsbrief 2017; CNBC 2018/2019 | Primärquelle (Brief) | S | |
+| 0,5 bis 1 Tag pro Vorlage | keine externe Quelle | Einschätzung | E | |
+
+## Zusammenfassung Prüftiefe
+
+Alle externen Belege dieser Tabelle sind Stufe S (Suchergebnis-Auszug, mehrere Treffer), mit Ausnahme der Anthropic-PDF-Dokumentation (V). Vor dem ersten Kundengespräch zu einer Lösung: die zwei bis drei wichtigsten S-Quellen dieser Lösung einmal selbst öffnen und die Zahl gegen den Originaltext prüfen. Dauer pro Lösung etwa 15 Minuten.

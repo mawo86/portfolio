@@ -22,11 +22,17 @@ Dokumentation konkurriert mit der nächsten Störung, und die Störung gewinnt. 
 
 ## Was wir bauen
 
-Der Techniker spricht eine Minute frei ins Handy, direkt nach der Arbeit. Der Workflow erkennt daraus Anlage, Fehlerbild, vermutete Ursache, durchgeführte Maßnahme, verwendete Teile und offene Punkte und legt einen strukturierten Eintrag im Instandhaltungssystem an. Fehlt etwas Wichtiges, fragt das System kurz nach. Der Eintrag wird vor dem Speichern angezeigt und bestätigt.
+Der Techniker spricht direkt nach der Arbeit eine Minute frei ins Firmenhandy, in Teams oder als Sprachmemo. Ein Spracherkennungsdienst auf EU-Servern macht Text daraus, danach wird die Audiodatei gelöscht. Das Sprachmodell bekommt den Text plus eure Anlagenliste mit den Spitznamen der Techniker ("die Alte", "Linie 3 hinten") und die Liste eurer Teilebezeichnungen, und füllt eine feste Struktur: Anlage, Fehlerbild, Ursache (vermutet oder bestätigt), Maßnahme, verwendete Teile, offene Punkte. Fehlt die Anlage oder die Maßnahme, kommt eine kurze Rückfrage. Der Eintrag wird als Karte angezeigt, der Techniker bestätigt, und erst dann legt der Workflow die Meldung im Zielsystem an, in SAP PM über den OData-Dienst API_MAINTNOTIFICATION, sonst in eurer Instandhaltungssoftware oder zum Start in einer SharePoint-Liste. Keine Zeiterfassung, keine Auswertung pro Person.
 
 ## Was das bringt
 
-Die Einsparung liegt bei 20 bis 40 Minuten pro Techniker und Tag, Erfahrungswert aus vergleichbaren Prozessen. Wichtiger ist die Vollständigkeit: Wiederkehrende Fehler werden sichtbar, Ersatzteilbedarf planbar, und neue Kollegen finden die Lösung vom letzten Mal.
+Dass Dokumentation der Schwachpunkt der Instandhaltung ist, steht in jedem Lehrbuch, DIN 31051 setzt sie voraus, und die Praxisberichte beschreiben dieselbe Lücke: Störungsmeldungen sind unvollständig, Ursachen fehlen, Wiederholfehler werden nicht erkannt. Eine externe Zahl, wie viel Zeit Techniker heute mit Dokumentation verbringen, habe ich nicht gefunden. Mein Erfahrungswert: 20 bis 40 Minuten pro Techniker und Tag, die heute abends am Rechner oder gar nicht anfallen.
+
+Zur Technik gibt es belastbare Zahlen: Die Spracherkennung mit dem Modell Whisper erreicht in ruhiger Umgebung Wortfehlerraten um 8 bis 12 Prozent, in industriellem Umfeld werden 16 bis 24 Prozent berichtet, Rauschunterdrückung verbessert das um 20 bis 40 Prozent relativ. Deshalb testen wir im Piloten beides, Geräte-Diktat und serverseitige Erkennung, und deshalb ist die Vokabularliste mit Anlagennamen so wichtig.
+
+## Wo es schwierig wird
+
+Hallenlärm. Die Fehlerraten oben sind der Grund, warum wir Erkennungsrate messen und nicht annehmen. Zweitens Funklöcher: Hallen haben sie, deshalb wird die Sprachmemo lokal gespeichert und später verarbeitet, mit dem Zeitstempel der Aufnahme. Drittens der Betriebsrat: Sprachaufnahmen von Beschäftigten sind ein Mitbestimmungsthema, deshalb Löschung nach Transkription, keine Zeiterfassung, keine Personenauswertung, schriftlich vereinbart. Und ohne die Techniker im Kickoff scheitert es, egal wie gut die Technik ist.
 
 ## Was ihr dafür braucht
 

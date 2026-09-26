@@ -22,11 +22,17 @@ Antworten schreiben kostet Zeit, weil man Fakten nachschlägt und Formulierungen
 
 ## Was wir bauen
 
-Ein Workflow zieht zur Anfrage die passenden Stellen aus eurer Wissensbasis (Handbücher, FAQ, Garantiebedingungen, frühere Antworten) und schreibt daraus einen Entwurf in eurem Ton. Der Entwurf erscheint direkt im Ticket, mit Verweis auf die Quelle, damit das Team in Sekunden prüfen kann. Was das System nicht weiß, sagt es. Es erfindet nichts.
+Zu jeder Anfrage sucht der Workflow die passenden Abschnitte aus eurer Wissensbasis (Handbücher, FAQ, Garantiebedingungen, die besten alten Antworten), wie bei der Wissensdatenbank über eine Ähnlichkeitssuche in einer Datenbank auf einem EU-Server. Nur diese Abschnitte plus der Kundenkontext gehen an das Sprachmodell, mit 50 guten alten Antworten als Tonvorlage und einer festen Regel: nur aus den Abschnitten antworten, jede Aussage mit Quelle, sonst "dazu habe ich keine gesicherte Information". Die Anthropic-Schnittstelle liefert dafür eine eigene Funktion (Citations), bei der jede zitierte Stelle technisch auf den Quelltext zeigen muss. Der Entwurf erscheint als interne Notiz im Ticket mit Quellenliste, das Team klickt "übernehmen", "ändern" oder "verwerfen". Diese drei Klicks sind zugleich die Qualitätsmessung.
 
 ## Was das bringt
 
-Die Einsparung liegt bei 8 bis 15 Stunden pro Woche im Team, Erfahrungswert aus vergleichbaren Prozessen. Antworten werden einheitlich, neue Kollegen sind ab Woche eins produktiv. Die Kundenzufriedenheit steigt, weil Antworten schneller und vollständiger sind.
+Der bekannteste Fall zeigt Nutzen und Grenze zugleich. Klarna meldete im Februar 2024, dass ein KI-Assistent im ersten Monat zwei Drittel der Kundenservice-Chats übernahm, 2,3 Millionen Gespräche, mit Lösungszeiten unter zwei Minuten. Im Mai 2025 räumte der Vorstandschef ein, man habe zu sehr auf Kosten geschaut, die Qualität habe gelitten, und stellte wieder Menschen ein. Seitdem fährt Klarna hybrid: KI für Routine, Menschen mit KI-Unterstützung für den Rest. Genau das ist der Aufbau hier: Entwurf statt Automatik, Mensch entscheidet.
+
+Zur Zeitersparnis habe ich für den Mittelstand keine belastbare Zahl gefunden. Mein Erfahrungswert: 8 bis 15 Stunden pro Woche in einem Service-Team, das heute Antworten aus dem Kopf und aus drei Ordnern zusammensucht. Messbar ab Woche eins: der Anteil übernommener Entwürfe.
+
+## Wo es schwierig wird
+
+Die Wissensbasis. Ein veraltetes Dokument im Index erzeugt eine überzeugende falsche Antwort mit korrekter Quellenangabe. Aussortieren vor der Ingestion und ein Verantwortlicher für die Pflege sind Teil des Projekts. Zweitens die Versuchung, den Quellenzwang zu lockern, weil die Antworten dann "flüssiger" klingen. Genau dann fängt das Modell an zu erfinden. Drittens: Ein Bereich im Pilot, nicht alle Produkte auf einmal.
 
 ## Was ihr dafür braucht
 

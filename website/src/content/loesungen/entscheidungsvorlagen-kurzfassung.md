@@ -22,11 +22,17 @@ Vorlagen sind zu lang, weil Kürzen schwerer ist als Schreiben. Entscheider lese
 
 ## Was wir bauen
 
-Ein festes Format für Entscheidungsvorlagen (eine Seite: Entscheidungsfrage, zwei bis drei Optionen, Kosten und Nutzen als Spanne, Risiken, Empfehlung, offene Fragen) und ein eingerichteter KI-Assistent, der aus den Fachunterlagen einen Entwurf in genau diesem Format erzeugt. Die Fachabteilung schärft den Entwurf, statt bei null anzufangen. Die Quellen bleiben als Anhang verfügbar.
+Zuerst das Format, dann das Werkzeug. In einem halben Workshop-Tag legt die Geschäftsführung fest, was sie für eine Entscheidung braucht, und das wird eine Seite: Entscheidungsfrage, zwei bis drei Optionen, Kosten und Nutzen als Spanne mit Quelle, Risiken, Empfehlung des Autors, offene Punkte, Verweis auf den Anhang. Dazu eine Word-Vorlage. Dann richten wir in eurem Business-KI-Werkzeug einen Assistenten mit genau dieser Anweisung ein: Er bekommt die Fachunterlagen und erzeugt einen Entwurf im Format, markiert jede Zahl ohne Quelle als "[Quelle fehlt]" und spricht keine Empfehlung aus, die kommt vom Autor. Die Fachabteilung schärft den Entwurf, statt bei null anzufangen. Eine Einweisung von 90 Minuten für die Autoren gehört dazu.
 
 ## Was das bringt
 
-Die Einsparung liegt bei einem halben bis ganzen Tag pro Vorlage, Erfahrungswert aus vergleichbaren Prozessen. Entscheidungen werden schneller, weil die Frage klar gestellt ist. Und sie werden vergleichbar, weil alle Vorlagen gleich aufgebaut sind.
+Das bekannteste Vorbild für kurze, narrative Vorlagen ist Amazon. Jeff Bezos beschrieb im Aktionärsbrief 2017, dass Meetings dort mit dem stillen Lesen eines sechsseitigen, erzählend strukturierten Memos beginnen und Folienpräsentationen abgeschafft sind, mit der Begründung, dass ein gutes Memo zu schreiben schwerer ist als zwanzig Folien und deshalb besseres Denken erzwingt. Wir bleiben bei einer Seite statt sechs, das Prinzip ist dasselbe: Sätze statt Stichpunkte, Zahlen mit Quelle.
+
+Eine externe Zahl zur Zeitersparnis gibt es dafür nicht. Mein Erfahrungswert: ein halber bis ganzer Tag pro Vorlage in der Fachabteilung, und schnellere Entscheidungen, weil die Frage klar gestellt ist.
+
+## Wo es schwierig wird
+
+Wenn die Geschäftsführung das Format nicht selbst will und einfordert, nutzt es niemand. Deshalb der Workshop mit ihr, nicht mit der Assistenz. Zweitens neigen Sprachmodelle dazu, Zahlen zu runden und zusammenzufassen, deshalb die Quellenmarkierung und die Prüfung durch den Autor. Drittens: Der Anhang bleibt. Der Einseiter ist die Spitze, nicht der Ersatz.
 
 ## Was ihr dafür braucht
 

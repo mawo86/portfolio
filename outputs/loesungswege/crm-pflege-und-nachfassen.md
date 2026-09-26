@@ -68,3 +68,9 @@ Gilt `_betriebsstandard.md`. Spezifisch hier:
 - Angebotsentwurf aus der Anfrage
 - Meeting-Zusammenfassungen (gleiche Technik für interne Termine)
 - Lead-Qualifizierung am Eingang
+
+## 10. Belege und Quellen
+
+- Salesforce "State of Sales" 2024 (Pressemitteilung DE 31.07.2024): Vertrieb verbringt nur rund ein Viertel bis 30 % der Zeit mit Verkaufen. Herstellerquelle.
+- B2B-Datenverfall: ~30 %/Jahr (Faustregel), Landbase 22,5 bis 70,3 %, Forrester B2B Data Health Benchmark 2024 (40 bis 60 % unvollständige Kontakte, Sekundärzitat). Keine neutrale Primärquelle, als Spanne nennen.
+- Zeitersparnis: kein Beleg. Messgröße: Anteil Termine binnen 24 Std. dokumentiert, Anteil Vorschläge unverändert übernommen.
