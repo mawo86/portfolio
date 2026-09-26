@@ -9,13 +9,11 @@ import { getCollection } from 'astro:content';
 import { availability, links, terminUrl } from '../config/site';
 import { getLoesungen, bereichLabel } from '../lib/loesungen';
 import { paketTonal, tonalClass, tonalText, chipBereich, chipKategorie } from '../lib/tonal';
-import { hasMedia, mediaUrl } from '../lib/media';
 
 const status = availability.status;
 const availabilityLabel = availability.label[status];
 const statusDot = status === 'available' ? 'bg-brand-400' : status === 'limited' ? 'bg-amber-300' : 'bg-bone-600';
 
-const kontaktStill = hasMedia('kontakt.jpg');
 
 const posts = (await getCollection('blog', ({ data }) => !data.draft))
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
@@ -379,12 +377,6 @@ function formatDate(date: Date) {
 
   <!-- ═══ KONTAKT ═══ -->
   <section id="kontakt" class="relative py-16 lg:py-24 px-4 sm:px-6 lg:px-10">
-    {kontaktStill && (
-      <div class="absolute inset-0" aria-hidden="true">
-        <img src={mediaUrl('kontakt.jpg')} alt="" loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover opacity-40" />
-        <div class="absolute inset-0 bg-gradient-to-b from-ink-900 via-ink-900/80 to-ink-900"></div>
-      </div>
-    )}
     <div class="relative max-w-7xl mx-auto rounded-[28px] bg-brand-600 text-white px-6 sm:px-10 lg:px-16 py-14 lg:py-20 overflow-hidden">
       <div class="absolute -right-24 -bottom-32 w-[28rem] h-[28rem] rounded-full bg-white/10" aria-hidden="true"></div>
       <div class="grid lg:grid-cols-12 gap-12 lg:gap-16">

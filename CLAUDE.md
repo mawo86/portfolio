@@ -69,7 +69,7 @@ Claude sollte sich immer über `/prime` am Session-Start orientieren, dann mit v
     ├── scripts/           # check-links.mjs, check-budget.mjs (laufen in CI)
     └── public/
         ├── fonts/         # Bricolage Grotesque, Inter, JetBrains Mono (self-hosted)
-        ├── media/         # Higgsfield-Assets (hero.mp4, about.jpg, paket-*.jpg, kontakt.jpg)
+        ├── media/         # Higgsfield-Assets (nur noch about.jpg)
         └── favicon.svg, icon-*.png, apple-touch-icon.png, CNAME, robots.txt
 ```
 
@@ -202,11 +202,11 @@ Die OG-Schriften liegen seit 2026-09-26 lokal (`src/assets/og-fonts/`), der Buil
 - Tailwind `gray` ist auf Google-Neutrals umgestellt (gray-400 bis 600 dunkel genug für Text auf Weiß), damit Impressum, Datenschutz und Tools ohne Anpassung lesbar sind.
 - Display-Font: Manrope (variable, self-hosted in `public/fonts/manrope-*.woff2`, Klasse `font-display`), Body: Roboto (variable, `roboto-*.woff2`), Mono: JetBrains Mono. Bricolage Grotesque und Inter sind entfernt. OG-Bilder nutzen statische TTF-Instanzen `Manrope-800/700` und `Roboto-400` in `src/assets/og-fonts/` (erzeugt mit fontTools), heller Grund, blauer Rand links.
 - Formen: Pill-Buttons (primär `bg-brand-600 text-white hover:bg-brand-700`, sekundär `border border-bone-50/20`), Chips als Filter (aktiv `bg-brand-100 text-brand-900 border-brand-600`), Karten und Container mit 16 bis 28 px Radius und feiner Kontur (`border-bone-50/10`) statt Schatten, Hero als Tonfläche `rounded-[28px] bg-ink-800`.
-- Kein Filmkorn-Overlay mehr, kein Hero-Video (Slots `hero.mp4`/`hero-poster.jpg` sind aus `index.astro` entfernt, `hasMedia()` bleibt für `about.jpg`, `paket-*.jpg`, `kontakt.jpg`).
+- Kein Filmkorn-Overlay mehr, kein Hero-Video (Slots `hero.mp4`/`hero-poster.jpg` sind aus `index.astro` entfernt, `hasMedia()` bleibt für `about.jpg`). Paketbilder und der `kontakt.jpg`-Slot sind seit dem 2026-09-26 gelöscht.
 - Umstellung technisch: Die Token-Werte wurden invertiert, die Klassennamen im Markup blieben (`bg-ink-800` ist jetzt hell, `text-bone-50` dunkel). `white`-Klassen wurden auf Token umgestellt, `prose-invert` entfernt. Wer neue Komponenten baut, denkt in Rollen (ink = Fläche, bone = Text, brand = Signal), nicht in den alten Farbnamen.
 - Mock-ups, die Marlon freigegeben hat (Variante A): [busche.cloud Redesign-Mockups](https://claude.ai/artifact/SenxvGBrRqvCPzCyzRY1dF)
 
-**Higgsfield-Visuals:** Die Seite sucht zur Build-Zeit nach Dateien in `website/public/media/` (`src/lib/media.ts` → `hasMedia()`). Fehlt eine Datei, rendert `MediaImage.astro` einen ruhigen Verlauf. Slots (seit dem Redesign ohne Hero-Video): `about.jpg` (Über mich, am besten echtes Porträt), `paket-check.jpg`/`paket-pilot.jpg`/`paket-begleitung.jpg`/`paket-tagessatz.jpg` (`/leistungen`), `kontakt.jpg` (Kontakt-Hintergrund). Alle Prompts, Formate und der Style-Block stehen in `reference/higgsfield-briefing.md`. Aktuell liegt noch kein Asset im Ordner.
+**Higgsfield-Visuals:** Die Seite sucht zur Build-Zeit nach Dateien in `website/public/media/` (`src/lib/media.ts` → `hasMedia()`). Fehlt eine Datei, rendert `MediaImage.astro` einen ruhigen Verlauf. Einziger verbliebener Slot: `about.jpg` (Über mich, am besten echtes Porträt). Hero-Video, Paketbilder (`paket-*.jpg`) und Kontakt-Hintergrund (`kontakt.jpg`) sind mit dem Redesign entfallen, die Prompts in `reference/higgsfield-briefing.md` dazu sind hinfällig.
 
 **Sektionen (Startseite):** Hero (Tonfläche, Proof-Karten, zweiter Button führt zu `/loesungen`) · Über mich (Bild-Slot + Text) · Leistungen (nummerierte Stufen 01–03 + Tagessatz-Hinweis) · Lösungen (4 Top-Use-Cases nach `prio`, Link zum Finder) · So läuft ein Projekt (Link zu `/case-studies`) · Newsletter · Werkzeuge · Blog (Listenansicht, 4 Artikel) · Kontakt (Split: Text + Formular, Bild-Slot)
 
@@ -289,7 +289,7 @@ Herkunft 2026-09-14, abgeleitet aus Transkript-Analyse (`context/strategy.md`): 
 
 **Skript `scripts/youtube_transcripts.py`:** Lädt via yt-dlp Untertitel (letzte 6 Monate) für eine konfigurierte Kanalliste, wandelt sie in Klartext um und schreibt Ergebnisse nach `reference/youtube-transcripts/` (pro Kanal + `alle-transkripte.md` gesammelt; `_raw/` enthält Original-VTTs). Voraussetzung: `brew install yt-dlp`. Zuletzt gelaufen 2026-09-14 für Silicon Valley Girl, Alex Hormozi, Dan Martell, Chris Donnelly, Everlast AI (133 Transkripte, siehe `context/strategy.md`).
 
-**Higgsfield-Assets (2026-09-19):** 4 von 8 Slots erzeugt und live: `about.jpg` (Umgebungsbild, Übergangslösung bis echtes Porträt), `paket-check.jpg`, `paket-pilot.jpg`, `paket-begleitung.jpg`. Erzeugt via `image_auto`-Modell (Free-Plan-Account erlaubt kein `gpt_image_2_5`/`recraft_v4_1`), Format 3:4 statt Briefing-Ziel 4:5 (kein 4:5 im Free-Plan verfügbar), auf 1120×1500 skaliert, unter 400 KB. Account-Guthaben danach bei 0 Credits (Free-Plan: 10 Credits, 1 Bild ≈ 1–1,25 Credits, Video ≈ 56 Credits — Video mit Free-Plan nicht finanzierbar).
+**Higgsfield-Assets (2026-09-19, bereinigt 2026-09-26):** Von den damals erzeugten Bildern ist nur `about.jpg` geblieben (Umgebungsbild, Übergangslösung bis echtes Porträt). `paket-check.jpg`, `paket-pilot.jpg`, `paket-begleitung.jpg` wurden am 2026-09-26 gelöscht, weil `/leistungen` Tonkacheln zeigt. Erzeugt wurden sie via `image_auto` im Free-Plan (kein `gpt_image_2_5`/`recraft_v4_1`, kein 4:5-Format, Video mit rund 56 Credits nicht finanzierbar); Guthaben danach 0 Credits.
 
 **Eigene-Produkte-Sektion entfernt (2026-09-19):** Cookloop und DartsIQ werden auf der Website nicht mehr präsentiert. Entfernt: Startseiten-Sektion "Eigene Produkte" (`index.astro`), Footer-Spalte "Eigene Apps", `links.cookloop`/`links.dartsiq` in `src/config/site.ts`. Der Blog-Artikel `app-bauen-ohne-programmierer.md` erwähnt Cookloop weiterhin als Erfahrungsbericht-Content, unverändert.
 
@@ -319,7 +319,6 @@ Invarianten (nie ändern ohne bewussten Grund): Score = Zeitaufwand × Automatis
 **Noch ausstehend:**
 - Buttondown: Tag `use-case-finder` anlegen und eine Automation "Willkommens-Mail für Tag use-case-finder" mit der ausführlichen Fassung der Lösungen (Link auf `/loesungen` plus PDF oder Text) einrichten. Bis dahin bekommen Finder-Abonnenten nur die Bestätigungsmail. Metadaten `finder_*` kommen mit und stehen im Abonnenten-Profil.
 - GoatCounter: Events-Ansicht prüfen (Pfade `ev/finder_gestartet` usw. erscheinen nach den ersten Klicks), optional als Dashboard-Filter speichern.
-- `paket-*.jpg` werden seit den Tonkacheln nicht mehr angezeigt (Dateien liegen noch in `public/media/`, können weg oder für Blogbilder dienen); `kontakt.jpg` würde als Hintergrund der blauen Kontaktfläche kaum sichtbar sein, Slot kann entfallen
 - `about.jpg` durch ein echtes Porträt ersetzen (aktuell nur Umgebungsbild als Übergangslösung)
 - Cal.com einrichten + Discovery-Call-Link in Website einbauen (aktuell zeigen alle CTAs auf das Formspree-Kontaktformular)
 - Affiliate-Programme beantragen: n8n, Zapier, IONOS, Netlify; Status prüfen: Hostinger, Miro
