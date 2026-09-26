@@ -3,7 +3,7 @@ title: "Die 7 häufigsten Fehler bei der KI-Einführung"
 description: "Warum so viele KI-Projekte im Pilotpurgatorium stecken und welche sieben Fehler fast immer dahinterstecken. Mit konkreten Gegenmaßnahmen."
 date: 2026-04-21
 tags: ["KI", "Strategie", "Unternehmen", "Fehler"]
-draft: true
+draft: false
 category: "Strategie"
 ---
 

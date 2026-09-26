@@ -3,7 +3,7 @@ title: "KI trifft SAP: Was heute schon funktioniert und wo die Reise hingeht"
 description: "KI und SAP kombinieren: Konkrete Szenarien für Rechnungserkennung, Berichtsautomatisierung und Chatbots. Was heute funktioniert und was kommt."
 date: 2026-04-06
 tags: ["SAP", "KI", "Enterprise", "Integration"]
-draft: true
+draft: false
 category: "SAP & Enterprise"
 ---
 
@@ -48,7 +48,7 @@ Du willst wissen, welche Lieferanten im letzten Jahr die höchste Reklamationsqu
 
 In SAP: Report bauen, Variante pflegen, Daten exportieren, analysieren. Mit KI formulierst du die Frage in natürlicher Sprache. Ein Sprachmodell übersetzt das in eine SAP-Abfrage, holt die Daten und liefert die Antwort.
 
-Das ist kein Science-Fiction. Tools wie Langchain oder eigene Python-Skripte mit SAP-Connector können das heute abbilden. Die Herausforderung liegt nicht in der KI. Sie liegt in der sauberen Anbindung an SAP und der richtigen Berechtigungssteuerung.
+Das ist kein Science-Fiction. Tools wie LangChain oder eigene Python-Skripte mit SAP-Connector können das heute abbilden. Die Herausforderung liegt nicht in der KI. Sie liegt in der sauberen Anbindung an SAP und der richtigen Berechtigungssteuerung.
 
 ### Chatbots für SAP-Datenabfragen
 
@@ -68,7 +68,7 @@ Vollautomatische SAP-Buchungen ohne menschliche Freigabe: technisch machbar, pra
 
 KI-gesteuertes SAP-Customizing: davon sind wir weit entfernt. SAP-Konfiguration ist zu komplex und zu kontextabhängig.
 
-SAPs eigene KI-Produkte wie Joule oder BTP AI: Sie werden besser, sind aber für viele Mittelständler noch zu teuer oder zu unreif. Die gute Nachricht: Du brauchst sie nicht. Die oben beschriebenen Szenarien lassen sich mit externen Tools umsetzen, die über Standard-Schnittstellen an SAP andocken.
+SAPs eigene KI-Produkte wie Joule oder die KI-Dienste der BTP: Sie werden schnell besser und sind für S/4HANA-Cloud-Kunden inzwischen ernst zu nehmen. Für viele Mittelständler auf ECC oder On-Premise sind sie aber noch nicht erreichbar oder nicht im Budget. Die gute Nachricht: Du brauchst sie nicht zwingend. Die oben beschriebenen Szenarien lassen sich mit externen Tools umsetzen, die über Standard-Schnittstellen an SAP andocken.
 
 > Das erfolgreichste SAP-KI-Projekt ist nicht das ambitionierteste. Es ist das, das einen klar definierten Prozess löst und in vier Wochen läuft.
 

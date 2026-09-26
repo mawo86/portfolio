@@ -3,7 +3,7 @@ title: "E-Mail-Automatisierung mit KI: Von der übervollen Inbox zum Workflow"
 description: "Wie du E-Mail-Prozesse mit KI und n8n automatisierst: von Klassifikation über Weiterleitung bis zur automatischen Antwort. Schritt für Schritt."
 date: 2026-05-29
 tags: ["Automatisierung", "E-Mail", "n8n", "Workflow"]
-draft: true
+draft: false
 category: "Automatisierung"
 ---
 

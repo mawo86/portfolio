@@ -3,7 +3,7 @@ title: "KI ersetzt keine Jobs, aber KI-Nutzer ersetzen Nicht-Nutzer"
 description: "Warum die Frage 'Nimmt KI meinen Job?' falsch gestellt ist und welche Fähigkeiten in einer KI-geprägten Arbeitswelt wirklich zählen."
 date: 2026-06-19
 tags: ["KI", "Zukunft", "Arbeit", "Meinung"]
-draft: true
+draft: false
 category: "Erfahrungsbericht"
 ---
 

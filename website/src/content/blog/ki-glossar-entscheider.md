@@ -3,7 +3,7 @@ title: "KI-Glossar für Entscheider: Die 20 Begriffe, die du kennen musst"
 description: "LLM, RAG, Prompt Engineering, Halluzination: KI-Gespräche sind voller Fachbegriffe. Hier sind die 20 wichtigsten, verständlich erklärt für Führungskräfte."
 date: 2026-04-24
 tags: ["KI", "Grundlagen", "Glossar", "Entscheider"]
-draft: true
+draft: false
 category: "Grundlagen"
 ---
 
@@ -27,6 +27,9 @@ Der Prozess, bei dem wiederkehrende Aufgaben durch Software übernommen werden. 
 **Context Window**
 Wie viel Text ein Modell auf einmal "sehen" und verarbeiten kann. Ein großes Context Window bedeutet: Du kannst ein langes Dokument auf einmal hineinladen. Für Unternehmen relevant, wenn große Verträge, Berichte oder Datenmengen analysiert werden sollen.
 
+**Embedding**
+Eine Zahlenfolge, die die Bedeutung eines Textes abbildet. Ähnliche Inhalte bekommen ähnliche Zahlen. Damit findet ein System "Rechnungsreklamation" auch dann, wenn im Dokument "Beschwerde über die Abrechnung" steht. Technische Grundlage für RAG und Vektor-Datenbanken.
+
 **Fine-Tuning**
 Ein vortrainiertes Modell wird zusätzlich auf unternehmenseigene Daten trainiert, damit es besser auf spezifische Aufgaben oder den Unternehmenskontext ausgerichtet ist. Aufwendig und teuer. Für die meisten Anwendungsfälle nicht nötig, RAG ist oft die bessere Alternative.
 
@@ -39,10 +42,10 @@ Ein Sprachmodell gibt eine Antwort, die falsch ist, aber überzeugend klingt. Es
 Der Prozess, bei dem ein trainiertes Modell eine Anfrage verarbeitet und eine Antwort generiert. Relevant für Kosten: Je mehr Inference, desto höher der API-Verbrauch. Wer viele Anfragen automatisiert, sollte die Inference-Kosten einplanen.
 
 **KI-Modell vs. KI-Produkt**
-Ein Modell ist das technische Fundament (z.B. GPT-4, Claude 3). Ein Produkt ist die Benutzeroberfläche darüber (z.B. ChatGPT, Claude.ai). Du kannst das gleiche Modell über verschiedene Produkte nutzen oder über die API direkt ansprechen.
+Ein Modell ist das technische Fundament (z.B. GPT-5, Claude Opus). Ein Produkt ist die Benutzeroberfläche darüber (z.B. ChatGPT, Claude.ai). Du kannst das gleiche Modell über verschiedene Produkte nutzen oder über die API direkt ansprechen.
 
 **LLM (Large Language Model)**
-Das technische Wort für das, was die meisten "KI" nennen. Ein sehr großes, auf riesigen Textmengen trainiertes Modell, das Sprache versteht und generiert. Claude und GPT-4 sind LLMs. Der Begriff taucht in jeder technischen Diskussion auf.
+Das technische Wort für das, was die meisten "KI" nennen. Ein sehr großes, auf riesigen Textmengen trainiertes Modell, das Sprache versteht und generiert. Claude und GPT sind LLMs. Der Begriff taucht in jeder technischen Diskussion auf.
 
 **Latenz**
 Die Zeit, die ein Modell braucht, um zu antworten. Für Anwendungen, die in Echtzeit reagieren müssen (z.B. Chatbots im Kundenservice), ist niedrige Latenz wichtig. Für Batch-Verarbeitungen (z.B. nächtliche Berichterstellung) irrelevant.

@@ -3,7 +3,7 @@ title: "KI für SAP FI/CO: Konkrete Anwendungsfälle im Controlling"
 description: "Wie KI das SAP-Controlling konkret verändert: von automatisierten Abschlüssen über intelligente Abweichungsanalysen bis zu natürlichsprachigen Datenabfragen."
 date: 2026-06-16
 tags: ["SAP", "KI", "Controlling", "FI/CO", "Enterprise"]
-draft: true
+draft: false
 category: "SAP & Enterprise"
 ---
 

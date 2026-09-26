@@ -3,7 +3,7 @@ title: "KI-Angst im Team: So nimmst du Mitarbeiter mit"
 description: "Wenn KI eingeführt wird, entstehen Ängste. Jobverlust, Kontrollverlust, Verunsicherung. Wie du als Führungskraft ehrlich kommunizierst und wirklich überzeugst."
 date: 2026-04-24
 tags: ["KI", "Change Management", "Führung", "Mitarbeiter"]
-draft: true
+draft: false
 category: "Strategie"
 ---
 

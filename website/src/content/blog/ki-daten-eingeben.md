@@ -3,7 +3,7 @@ title: "Welche Daten darf ich in KI-Tools eingeben? Eine praktische Übersicht"
 description: "Kundennamen in ChatGPT? Personaldaten in Claude? Was erlaubt ist und was nicht: eine konkrete, alltagstaugliche Übersicht für Unternehmen."
 date: 2026-05-08
 tags: ["KI", "DSGVO", "Datenschutz", "Praxis"]
-draft: true
+draft: false
 category: "Datenschutz"
 ---
 
@@ -37,7 +37,7 @@ Diese Daten gehören entweder in lokal betriebene Modelle oder gar nicht in KI-T
 
 **Darf ich ein Kundengespräch transkribieren und in Claude eingeben?**
 
-Kommt drauf an. Das Transkript selbst enthält Personendaten. In Claude for Business (mit AVV): möglicherweise ja. In Claude.ai ohne Enterprise-Vertrag: nein. Besser: Transkript anonymisieren (Namen ersetzen), dann in jedes Tool.
+Kommt drauf an. Das Transkript selbst enthält Personendaten. In Claude Team oder Enterprise (mit AVV): möglicherweise ja. In Claude.ai als Privatkonto: nein. Besser: Transkript anonymisieren (Namen ersetzen), dann in jedes Tool.
 
 **Darf ich eine E-Mail eines Kunden in ChatGPT einfügen, um eine Antwort zu generieren?**
 
@@ -51,9 +51,9 @@ Nein, in externe Consumer-Tools grundsätzlich nicht. Das sind besonders sensibl
 
 Kommt auf den Inhalt an. Aggregierte Finanzdaten ohne Kundenbezug: möglicherweise. Reports mit Kundennamen, Adressen oder Kontonummern: nur mit AVV und nur in freigegebene Tools.
 
-**Kann ich WhisperFlow für Meeting-Aufzeichnungen nutzen?**
+**Kann ich ein Diktier-Tool wie WhisperFlow für Kundennotizen nutzen?**
 
-WhisperFlow verarbeitet lokal auf deinem Gerät, kein Cloud-Upload. Das ist datenschutzrechtlich deutlich unkomplizierter. Trotzdem: Alle Meeting-Teilnehmer müssen wissen, dass aufgezeichnet wird.
+Kommt auf die Verarbeitung an. Läuft die Spracherkennung lokal auf deinem Gerät, ist das datenschutzrechtlich unkompliziert. Schickt das Tool Audio in die Cloud, gilt dasselbe wie für jeden anderen Cloud-Dienst: AVV oder keine Personendaten. Das steht in den Datenschutzbestimmungen des Anbieters, im Zweifel wie ein Cloud-Tool behandeln. Und für Meeting-Aufzeichnungen gilt immer: Alle Teilnehmer müssen wissen, dass aufgezeichnet wird.
 
 ## Die einfachste Schutzmaßnahme: Anonymisieren
 

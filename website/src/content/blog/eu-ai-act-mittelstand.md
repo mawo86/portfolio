@@ -3,13 +3,13 @@ title: "EU AI Act: Was er für den deutschen Mittelstand wirklich bedeutet"
 description: "Deutschland reguliert Risiken zuerst, die USA erlaubt zuerst. Was das für dein Unternehmen konkret heißt, wenn du mit KI arbeitest."
 date: 2026-05-08
 tags: ["KI", "EU AI Act", "Regulierung", "Mittelstand", "Recht"]
-draft: true
+draft: false
 category: "Datenschutz"
 ---
 
 "Dürfen wir das überhaupt einsetzen?" Diese Frage höre ich inzwischen öfter als "Wie funktioniert das?"
 
-Der EU AI Act ist seit 2026 in Kraft, und viele Mittelständler wissen nicht, ob sie betroffen sind. Die kurze Antwort: wahrscheinlich schon, aber nicht so dramatisch, wie es klingt.
+Der EU AI Act gilt seit August 2026 in weiten Teilen, und viele Mittelständler wissen nicht, ob sie betroffen sind. Die kurze Antwort: wahrscheinlich schon, aber nicht so dramatisch, wie es klingt.
 
 <figure>
   <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1200&q=80" alt="Whiteboard mit Prozessdiagramm in einem Besprechungsraum" />
@@ -30,7 +30,7 @@ Für die meisten Mittelständler ist das eine gute Nachricht, keine schlechte. W
 
 Der AI Act unterteilt KI-Systeme in Risikostufen. Die meisten Business-Anwendungen im Mittelstand, Chatbots im Kundenservice, Automatisierung in der Buchhaltung, Textgenerierung für Marketing, fallen unter "minimales Risiko" oder "begrenztes Risiko". Das bedeutet: Transparenzpflichten, keine Verbote.
 
-Kritisch wird es erst bei Systemen, die über Menschen entscheiden: Bewerbungsauswahl, Kreditvergabe, biometrische Identifikation. Das sind die Fälle mit "hohem Risiko", und genau dort greifen strengere Auflagen.
+Kritisch wird es erst bei Systemen, die über Menschen entscheiden: Bewerbungsauswahl, Kreditvergabe, biometrische Identifikation. Das sind die Fälle mit "hohem Risiko", und genau dort greifen strengere Auflagen. Für diese Anhang-III-Systeme hat die EU die Frist mit dem Digital Omnibus auf Dezember 2027 verschoben. Wer so etwas plant, hat also Zeit zur Vorbereitung, aber keinen Grund zum Abwarten.
 
 **Für die Praxis heißt das:** Wenn du KI zur Automatisierung von Abläufen einsetzt, nicht zur automatisierten Bewertung von Menschen, bewegst du dich in der Regel im unkritischen Bereich.
 

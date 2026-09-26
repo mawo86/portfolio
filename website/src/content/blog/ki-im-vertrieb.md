@@ -3,7 +3,7 @@ title: "KI im Vertrieb: Mehr Leads, weniger Kaltakquise"
 description: "Wie KI den B2B-Vertrieb konkret verändert: von der Lead-Recherche über Angebotserstellung bis zur Follow-up-Automatisierung. Mit echten Beispielen."
 date: 2026-05-12
 tags: ["KI", "Vertrieb", "Automatisierung", "B2B"]
-draft: true
+draft: false
 category: "Branchen"
 ---
 

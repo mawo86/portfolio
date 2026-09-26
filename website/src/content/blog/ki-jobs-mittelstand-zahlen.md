@@ -3,7 +3,7 @@ title: "KI und Jobs: Was die Zahlen wirklich sagen (und was nicht)"
 description: "Zwischen '99% der Jobs verschwinden' und 'alles halb so wild' liegt eine belegte Zahl: 16% weniger Einstiegsjobs für unter 25-Jährige. Was das für den Mittelstand heißt."
 date: 2026-06-19
 tags: ["KI", "Arbeitsmarkt", "Zukunft der Arbeit", "Mittelstand"]
-draft: true
+draft: false
 category: "Strategie"
 ---
 
@@ -18,9 +18,9 @@ Das ist das Problem mit fast jeder Prognose zu KI und Arbeitsplätzen. Sie ist e
 
 ## Die eine Zahl, die sich nachprüfen lässt
 
-Eine Studie mit dem Titel "Canaries in the Coal Mine" (Autor: David Autor u. a., MIT, 2024) hat den amerikanischen Arbeitsmarkt untersucht und kommt zu einem konkreten Ergebnis: KI hat bereits 16 Prozent der Einstiegsjobs für unter 25-Jährige verdrängt. Kein Zukunftsszenario, sondern eine Beobachtung aus der Gegenwart.
+Eine Studie mit dem Titel "Canaries in the Coal Mine?" (Erik Brynjolfsson, Bharat Chandar und Ruyu Chen, Stanford Digital Economy Lab, August 2025) hat Gehaltsdaten von Millionen US-Beschäftigten ausgewertet und kommt zu einem konkreten Ergebnis: Bei 22- bis 25-Jährigen in den am stärksten KI-exponierten Berufen ist die Beschäftigung seit Ende 2022 relativ um 13 Prozent gesunken, nach Bereinigung um Firmeneffekte um 16 Prozent. Ältere Kollegen in denselben Berufen waren nicht betroffen. Kein Zukunftsszenario, sondern eine Beobachtung aus der Gegenwart.
 
-Das ist ernst zu nehmen, aber es ist auch spezifisch. Es geht um Entry-Level-Positionen, nicht um Jobs insgesamt. Und es geht um den US-Arbeitsmarkt, der anders tickt als der deutsche Mittelstand.
+Das ist ernst zu nehmen, aber es ist auch spezifisch. Es geht um Einstiegspositionen in bestimmten Berufen wie Softwareentwicklung und Kundenservice, nicht um Jobs insgesamt. Und es geht um den US-Arbeitsmarkt, der anders tickt als der deutsche Mittelstand.
 
 > Die Frage ist nicht, ob KI Jobs verändert. Die Frage ist, welche Jobs, und wie schnell.
 
@@ -34,7 +34,7 @@ Das heißt nicht, dass sich nichts verändert. Es heißt, dass sich die Frage ve
 
 ## Was sich in der Praxis tatsächlich verändert
 
-Ein Muster taucht in fast jedem Projekt auf, das ich begleite: Die Aufgaben, die zuerst wegfallen, sind repetitive, gut strukturierte Tätigkeiten. Rechnungen prüfen, Standard-E-Mails beantworten, Daten aus einem System ins andere übertragen.
+Ein Muster taucht in fast jedem Projekt auf, das ich sehe: Die Aufgaben, die zuerst wegfallen, sind repetitive, gut strukturierte Tätigkeiten. Rechnungen prüfen, Standard-E-Mails beantworten, Daten aus einem System ins andere übertragen.
 
 Was bleibt und wichtiger wird, sind Aufgaben mit Urteilsvermögen: Ausnahmefälle einschätzen, Kunden am Telefon überzeugen, Entscheidungen treffen, die Kontext brauchen. Das deckt sich mit einer Beobachtung, die auch bei größeren Unternehmen auftaucht: KI wird zuerst dort eingesetzt, wo Effizienz zählt, nicht dort, wo Führung oder Kreativität gefragt sind.
 
@@ -44,7 +44,7 @@ Für ein Team im Mittelstand heißt das konkret: Wer heute überwiegend repetiti
 
 Wenn du ein Team führst, ist die produktive Frage nicht "ersetzt KI meine Leute", sondern "wo verliere ich gerade Zeit an Aufgaben, die eigentlich niemand gerne macht". Das ist auch der Ausgangspunkt für [gute Prozessautomatisierung](/blog/ki-prozesse-identifizieren): nicht Stellen abbauen, sondern die langweiligen Teile einer Rolle rausnehmen.
 
-Die 16-Prozent-Zahl aus den USA ist ein Warnsignal, kein Blaupause. Sie zeigt: Wer nichts tut, wird von der Entwicklung überholt. Sie zeigt nicht, dass im deutschen Mittelstand dasselbe Muster eins zu eins passiert.
+Die 16-Prozent-Zahl aus den USA ist ein Warnsignal, keine Blaupause. Sie zeigt: Wer nichts tut, wird von der Entwicklung überholt. Sie zeigt nicht, dass im deutschen Mittelstand dasselbe Muster eins zu eins passiert.
 
 ## Dein nächster Schritt
 

@@ -3,7 +3,7 @@ title: "Zapier vs n8n: Wann welches Automatisierungstool passt"
 description: "Zapier oder n8n? Ein ehrlicher Vergleich für Unternehmen: wann welches Tool die bessere Wahl ist und wo die echten Unterschiede liegen."
 date: 2026-04-28
 tags: ["Automatisierung", "Tools", "n8n", "Zapier", "Vergleich"]
-draft: true
+draft: false
 category: "Automatisierung"
 ---
 
@@ -28,7 +28,7 @@ Der Unterschied liegt im Detail. Und Details entscheiden.
 
 ## Zapier: Schnell und cloud-nativ
 
-Zapier ist das ältere der beiden Tools und hat entsprechend mehr Zeit gehabt, sein Ökosystem auszubauen. Über 6.000 App-Integrationen. Wenn du eine SaaS-App nutzt, ist sie bei Zapier wahrscheinlich dabei.
+Zapier ist das ältere der beiden Tools und hat entsprechend mehr Zeit gehabt, sein Ökosystem auszubauen. Über 7.000 App-Integrationen. Wenn du eine SaaS-App nutzt, ist sie bei Zapier wahrscheinlich dabei.
 
 **Stärken:**
 - Einfachster Einstieg auf dem Markt. Kein Account vorbereiten, keine Infrastruktur, sofort loslegen.
@@ -44,7 +44,7 @@ Zapier ist das ältere der beiden Tools und hat entsprechend mehr Zeit gehabt, s
 
 ## n8n: Flexibel und selbst gehostet
 
-n8n ist jünger, Open Source und technisch deutlich mächtiger. Die Lernkurve ist steiler, aber wer sie überwindet, hat eine Plattform, die kaum Grenzen kennt.
+n8n ist jünger, quelloffen (Fair-Code unter der Sustainable Use License, kein klassisches Open Source) und technisch deutlich mächtiger. Die Lernkurve ist steiler, aber wer sie überwindet, hat eine Plattform, die kaum Grenzen kennt.
 
 **Stärken:**
 - Selbst hostbar. Deine Daten bleiben auf deinen Servern. Für deutsche Unternehmen mit DSGVO-Anforderungen oft entscheidend.
@@ -53,8 +53,8 @@ n8n ist jünger, Open Source und technisch deutlich mächtiger. Die Lernkurve is
 - Aktive Open-Source-Community. Viele Nodes werden von der Community entwickelt.
 
 **Schwächen:**
-- Höherer Einrichtungsaufwand. Self-Hosting bedeutet: Server einrichten, Updates einspielen, Backups verwalten.
-- Weniger Out-of-the-Box-Integrationen als Zapier, aber n8n Cloud schließt diese Lücke.
+- Höherer Einrichtungsaufwand. Self-Hosting bedeutet: Server einrichten, Updates einspielen, Backups verwalten. Wer das nicht will, nimmt n8n Cloud und zahlt pro Workflow-Ausführung statt pro Schritt.
+- Weniger fertige Integrationen als Zapier. Der HTTP-Request-Node erreicht dafür jede API, die eine Dokumentation hat.
 - Steilere Lernkurve für nicht-technische Nutzer.
 
 **Ideal für:** Unternehmen mit Datenschutzanforderungen, komplexere Workflows, höhere Automatisierungsvolumen, technischere Teams.
@@ -66,7 +66,7 @@ n8n ist jünger, Open Source und technisch deutlich mächtiger. Die Lernkurve is
 | Einstiegsaufwand | Sehr niedrig | Mittel |
 | Kosten bei hohem Volumen | Hoch | Niedrig (self-hosted) |
 | Datenschutz / Self-Hosting | Nein | Ja |
-| App-Integrationen | 6.000+ | 400+ (wachsend) |
+| App-Integrationen | 7.000+ | 400+ native Nodes, jede API per HTTP |
 | Komplexe Logik | Eingeschränkt | Sehr flexibel |
 | Eigener Code | Begrenzt | Ja (JavaScript/Python) |
 
