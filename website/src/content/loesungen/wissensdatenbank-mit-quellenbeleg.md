@@ -7,7 +7,7 @@ zeitprobleme: ["Informationen suchen", "Regeln und Unsicherheit"]
 branchen: ["Fertigung", "Handel", "Dienstleistung", "Handwerk"]
 werkzeuge: ["RAG-Pipeline (eigene Umsetzung)", "Claude", "EU-Hosting oder On-Premise", "SharePoint, Laufwerk oder Confluence"]
 aufwand: "10 bis 15 Tage"
-einsparung: "Suchzeit sinkt spürbar; extern belegt: 1,8 bis 2,5 Std./Tag gehen heute ins Suchen"
+einsparung: "Suchzeit sinkt spürbar, im Piloten gemessen"
 paket: "pilot-projekt"
 reifegrad: "Fortgeschritten"
 sapNah: false

@@ -17,9 +17,33 @@ const slug = loesung.slug;
 const ogRoute = `loesungen/${slug}`;
 const anfrageHref = terminUrl({ thema: slug, titel: d.title, paket: d.paket });
 const BASE = import.meta.env.BASE_URL;
+const canonical = new URL(Astro.url.pathname, Astro.site).toString();
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: d.title,
+    description: d.description,
+    datePublished: d.date.toISOString(),
+    articleSection: d.bereich,
+    author: { '@type': 'Person', name: 'Marlon Busche', url: 'https://busche.cloud' },
+    publisher: { '@type': 'Organization', name: 'Busche Cloud', url: 'https://busche.cloud' },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Start', item: 'https://busche.cloud/' },
+      { '@type': 'ListItem', position: 2, name: 'Lösungen', item: 'https://busche.cloud/loesungen' },
+      { '@type': 'ListItem', position: 3, name: d.title, item: canonical },
+    ],
+  },
+];
 ---
 
 <Layout title={`${d.title} — Lösungen — Busche Cloud`} description={d.description} ogRoute={ogRoute}>
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify(jsonLd).replace(/</g, "\\u003c")} />
   <Header />
   <main id="main" class="pt-36 lg:pt-44 pb-24">
     <article class="max-w-7xl mx-auto px-6 lg:px-10">

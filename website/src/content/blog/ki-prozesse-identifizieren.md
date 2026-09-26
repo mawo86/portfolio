@@ -1,6 +1,6 @@
 ---
 title: "5 Zeichen, dass ein Prozess in deinem Unternehmen nach KI schreit"
-description: "Wie du erkennst welche Prozesse sich für KI-Automatisierung eignen. 5 konkrete Zeichen mit Praxisbeispielen — sofort anwendbar."
+description: "Wie du erkennst welche Prozesse sich für KI-Automatisierung eignen. 5 konkrete Zeichen mit Praxisbeispielen, sofort anwendbar."
 date: 2026-04-06
 tags: ["KI", "Prozesse", "Automatisierung", "Anleitung"]
 draft: false
@@ -24,7 +24,7 @@ Mitarbeiter nehmen Informationen aus einem System und tippen sie in ein anderes 
 
 Das ist keine Seltenheit. In der Logistik, im Handel, in der Verwaltung ist manuelles Datenabtippen so verbreitet, dass es als normal gilt. Es ist aber kein unvermeidliches Naturgesetz. Es ist ein ungelöstes Automatisierungsproblem.
 
-Die einfache Faustregel: Wenn die Aufgabe ein Azubi nach zwei Tagen Einarbeitung beherrscht, kann sie automatisiert werden. Strukturierte Informationen aus unstrukturierten Quellen ziehen — das schafft ein Sprachmodell in Sekunden, zuverlässig und ohne Tippfehler.
+Die einfache Faustregel: Wenn die Aufgabe ein Azubi nach zwei Tagen Einarbeitung beherrscht, kann sie automatisiert werden. Strukturierte Informationen aus unstrukturierten Quellen ziehen: Das schafft ein Sprachmodell in Sekunden, zuverlässig und ohne Tippfehler.
 
 ## Zeichen 2: Die Antwort ist fast immer dieselbe
 
@@ -56,7 +56,7 @@ Ein erfahrener Mitarbeiter geht in Rente oder kündigt. Plötzlich merkt ihr: Di
 
 Dieses Problem hat einen Namen: "Brain Drain". Siemens, Bosch und andere große Industrieunternehmen investieren seit Jahren massiv in Wissensmanagementsysteme, genau weil die Babyboomer-Generation in Rente geht und dabei jahrzehntelange Erfahrung mitnimmt.
 
-> KI ersetzt diese Erfahrung nicht. Aber sie macht implizites Wissen zugänglich. Ein internes Wissenssystem auf Basis von Dokumenten, E-Mails und Fallhistorien gibt neuen Mitarbeitern sofort die relevanten Informationen — und verkürzt den Weg zur Kompetenz erheblich.
+> KI ersetzt diese Erfahrung nicht. Aber sie macht implizites Wissen zugänglich. Ein internes Wissenssystem auf Basis von Dokumenten, E-Mails und Fallhistorien gibt neuen Mitarbeitern sofort die relevanten Informationen, und verkürzt den Weg zur Kompetenz erheblich.
 
 <figure>
   <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80" alt="Dashboard mit Daten und Diagrammen" />

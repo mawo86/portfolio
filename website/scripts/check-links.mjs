@@ -5,6 +5,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 const root = path.resolve(process.argv[2] ?? 'dist');
+const SITE = process.env.SITE_URL ?? 'https://busche.cloud';
 const htmlFiles = [];
 (function walk(dir) {
   for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
@@ -39,8 +40,16 @@ let checked = 0;
 for (const file of htmlFiles) {
   const html = fs.readFileSync(file, 'utf8');
   const pagePath = '/' + path.relative(root, file).replace(/\\/g, '/').replace(/index\.html$/, '');
-  for (const m of html.matchAll(/\s(?:href|src)=["']([^"']+)["']/g)) {
-    let href = m[1].replace(/&#38;|&amp;/g, '&');
+  const refs = [...html.matchAll(/\s(?:href|src)=["']([^"']+)["']/g)].map(m => m[1]);
+  // content="..." nur, wenn es eine URL ist (og:image, og:url, canonical-ähnliche Meta-Werte)
+  for (const m of html.matchAll(/\scontent=["']([^"']+)["']/g)) {
+    const v = m[1];
+    if (v.startsWith(SITE + '/') || v.startsWith('/')) refs.push(v);
+  }
+  for (const m of html.matchAll(/\ssrcset=["']([^"']+)["']/g)) for (const part of m[1].split(',')) refs.push(part.trim().split(/\s+/)[0]);
+  for (let href of refs) {
+    href = href.replace(/&#38;|&amp;/g, '&');
+    if (href.startsWith(SITE + '/')) href = href.slice(SITE.length);          // eigene absolute URLs (og:image) mitprüfen
     if (!href || /^(https?:|mailto:|tel:|data:|javascript:|#$)/.test(href)) continue;
     if (href.startsWith('//')) continue;
     checked++;

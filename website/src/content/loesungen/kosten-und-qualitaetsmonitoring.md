@@ -7,7 +7,7 @@ zeitprobleme: ["Zahlen und Reporting", "Fehler und Nacharbeit"]
 branchen: ["Dienstleistung", "Fertigung", "Handel", "Software"]
 werkzeuge: ["Logging pro Aufruf", "Kosten-Dashboard", "Stichproben-Bewertung", "Budget-Alarme", "Modell-Routing"]
 aufwand: "3 bis 5 Tage, dann laufend"
-einsparung: "Modellkosten sinken durch Routing spürbar; Benchmarks zeigen bis 85 %, ich rechne mit 30 bis 60 %"
+einsparung: "30 bis 60 % geringere Modellkosten, Erfahrungswert (Benchmarks: bis 85 %)"
 paket: "begleitung"
 reifegrad: "Betrieb"
 sapNah: false

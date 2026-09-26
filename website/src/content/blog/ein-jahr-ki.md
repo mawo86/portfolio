@@ -1,6 +1,6 @@
 ---
 title: "Ein Jahr KI im Alltag: Was ich wirklich gelernt habe"
-description: "Kein Hype-Artikel. Was sich nach einem Jahr intensiver KI-Nutzung wirklich verändert hat — was besser geworden ist, was enttäuscht hat und was mich überrascht."
+description: "Kein Hype-Artikel. Was sich nach einem Jahr intensiver KI-Nutzung wirklich verändert hat: was besser geworden ist, was enttäuscht hat und was mich überrascht."
 date: 2026-04-21
 tags: ["KI", "Erfahrungsbericht", "Produktivität", "Persönlich"]
 draft: false

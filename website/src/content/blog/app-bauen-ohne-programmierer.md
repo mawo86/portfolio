@@ -1,6 +1,6 @@
 ---
-title: "Ich habe in einem Wochenende eine App gebaut — ohne Programmierer zu sein"
-description: "App bauen ohne Programmierkenntnisse — ist das wirklich möglich? Ich habe es gemacht. Zwei eigene Produkte, live, mit KI als Entwicklungspartner. Was dahintersteckt und was du daraus mitnehmen kannst."
+title: "Ich habe in einem Wochenende eine App gebaut, ohne Programmierer zu sein"
+description: "App bauen ohne Programmierkenntnisse: Ist das wirklich möglich? Ich habe es gemacht. Zwei eigene Produkte, live, mit KI als Entwicklungspartner. Was dahintersteckt und was du daraus mitnehmen kannst."
 date: 2026-04-02
 tags: ["KI", "Entwicklung", "Produktivität", "Erfahrungsbericht", "No-Code", "Claude Code"]
 draft: false
@@ -56,7 +56,7 @@ Aber der Grundrhythmus ist ein anderer.
 
 Ich muss an dieser Stelle ehrlich sein: Die Effizienz kam nicht allein von Claude Code.
 
-Hinter dem Arbeitsrhythmus steckt ein System. Ein strukturierter Workspace, der Claude dauerhaft im Kontext hält — wer ich bin, woran ich arbeite, welche Entscheidungen bereits getroffen sind. Claude startet nicht jeden Tag neu bei null. Es kennt das Projekt.
+Hinter dem Arbeitsrhythmus steckt ein System. Ein strukturierter Workspace, der Claude dauerhaft im Kontext hält: wer ich bin, woran ich arbeite, welche Entscheidungen bereits getroffen sind. Claude startet nicht jeden Tag neu bei null. Es kennt das Projekt.
 
 Dieses System habe ich in großen Teilen von **Garrit Wilson** und der [KI PIONIER Akademie](https://ki-pionier-akademie.de) übernommen und auf meine Bedürfnisse angepasst. Garrit hat ein Workspace-Template-Konzept entwickelt, das genau dieses Problem löst: Wie gibst du einer KI dauerhaften Kontext, ohne jedes Mal von vorn anfangen zu müssen?
 

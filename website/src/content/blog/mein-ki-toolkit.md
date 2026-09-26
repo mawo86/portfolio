@@ -1,6 +1,6 @@
 ---
 title: "Mein KI-Toolkit: Diese Tools nutze ich wirklich jeden Tag"
-description: "Welche KI-Tools ich täglich nutze und warum. Mein ehrliches Setup für Automatisierung, Code und Produktivität — ohne Hype."
+description: "Welche KI-Tools ich täglich nutze und warum. Mein ehrliches Setup für Automatisierung, Code und Produktivität, ohne Hype."
 date: 2026-04-06
 tags: ["KI", "Tools", "Produktivität", "Setup"]
 draft: false

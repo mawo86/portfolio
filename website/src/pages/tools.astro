@@ -5,7 +5,10 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import AffiliateDisclosure from '../components/AffiliateDisclosure.astro';
 
-const categories = [
+type Tool = { name: string; url: string; description: string; affiliate?: boolean; affiliateNote?: string };
+type Category = { name: string; slug: string; tools: Tool[] };
+
+const categories: Category[] = [
   {
     name: 'KI & LLMs',
     slug: 'ki--llms',
