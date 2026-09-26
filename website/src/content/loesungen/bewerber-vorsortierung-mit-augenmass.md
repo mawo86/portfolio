@@ -22,11 +22,15 @@ Sichten ist Zeitfresser Nummer eins im Recruiting. Gleichzeitig ist Vorsicht geb
 
 ## Was wir bauen
 
-Ein Assistent, der jede Bewerbung in ein einheitliches Profil zusammenfasst: Qualifikationen, Erfahrung, Lücken, offene Fragen für das Gespräch, jeweils mit Verweis auf die Stelle in den Unterlagen. Kein Score, kein Ranking, keine Ablehnung durch das System. Die Reihenfolge und Entscheidung trifft der Mensch, und der Prozess wird so dokumentiert, dass ihr das belegen könnt.
+Jede Bewerbung wird vor der Verarbeitung anonymisiert, soweit möglich: Name, Foto, Geburtsdatum raus. Das Sprachmodell bekommt die Unterlagen und euer Anforderungsprofil (Muss, Soll, Kann) und erzeugt ein Profil in fester Struktur: Qualifikationen, Erfahrung, je Anforderung "belegt", "nicht belegt" oder "offen" mit Verweis auf die Stelle in den Unterlagen, dazu Fragen fürs Gespräch. Was es nicht erzeugt: einen Score, eine Rangfolge, eine Empfehlung, ein Adjektiv über die Person. Das Profil landet als Freitext-Notiz im Bewerbermanagement, technisch nicht sortierbar. Vor jeder Änderung an Modell oder Anweisung läuft ein Neutralitätstest: Bewerbungspaare, die sich nur in Name, Geschlecht oder Alter unterscheiden, müssen identische Ausgaben erzeugen. Verarbeitungsprotokoll und Profil werden mit der Bewerbung gelöscht.
 
 ## Was das bringt
 
-Die Einsparung liegt bei 1 bis 2 Tagen pro Stellenbesetzung, Erfahrungswert aus vergleichbaren Prozessen. Einheitliche Profile machen den Vergleich fairer, nicht nur schneller. Und ihr habt eine Antwort, wenn der Betriebsrat oder ein Bewerber fragt, wie KI im Prozess eingesetzt wird.
+Der Rechtsrahmen ist eindeutiger als bei den meisten KI-Themen. Anhang III der KI-Verordnung stuft Systeme zur Einstellung und Auswahl natürlicher Personen, insbesondere zum Filtern und Bewerten von Bewerbungen, als Hochrisiko ein, und schon eine wesentliche Beeinflussung der Entscheidung durch Ranking oder Scoring reicht dafür. Die Kernpflichten dafür gelten nach dem Digital Omnibus (Verordnung (EU) 2026/1744) ab dem 2. Dezember 2027 statt August 2026. Wer heute ein Ranking-Tool kauft, kauft also ein System, das er in gut einem Jahr mit Konformitätsbewertung, Dokumentation und Registrierung betreiben muss. Wer stattdessen Zusammenfassung und Spiegelung ohne Wertung baut, bleibt außerhalb, und spart trotzdem: Mein Erfahrungswert sind ein bis zwei Tage Sichtzeit pro Stellenbesetzung, extern habe ich dazu keine Zahl gefunden, die auf diese abgespeckte Variante passt.
+
+## Wo es schwierig wird
+
+"Nur ein kleiner Score zur Orientierung" ist der Satz, mit dem es Hochrisiko wird. Nein, auch nicht klein. Zweitens der Betriebsrat: Auswahlrichtlinien sind nach § 95 BetrVG mitbestimmungspflichtig, und ein System, das auf Firmenrechnern Bewerbungen verarbeitet und protokolliert, dürfte auch unter § 87 fallen. Ohne den Betriebsrat am Tisch ist das Projekt vor dem ersten Test zu Ende. Drittens: Anonymisierung ist nie vollständig, ein Lebenslauf verrät das Alter über die Jahreszahlen. Deshalb der Neutralitätstest, nicht das Vertrauen.
 
 ## Was ihr dafür braucht
 

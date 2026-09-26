@@ -99,3 +99,15 @@
 - Nach jedem Kundeneinsatz: Status hier auf "beim Kunden erprobt", in der Anleitung Abschnitt 7 (Typische Fehler) um das Gelernte ergänzen, Zeitschätzungen in Abschnitt 4 gegen die Realität prüfen.
 - Preise in Abschnitt 8 folgen `outputs/consulting-angebot.md`. Ändern sich die Pakete, hier und dort anpassen.
 - Konsistenzprüfung (Slugs Website vs. Anleitungen): das Python-Snippet, das diese Datei erzeugt hat, steht in der Commit-Historie; einfacher: `ls website/src/content/loesungen | sed 's/.md//' | sort` gegen `ls outputs/loesungswege | grep -v '^_' | grep -v INDEX | sed 's/.md//' | sort` mit `diff`.
+
+## Beleg-Status (Recherche 2026-09-26)
+
+Grundlage: `_belege.md`. **belegt** = externer Beleg für Mechanismus und mindestens eine Zahl · **teilweise** = Mechanismus extern belegt (Doku, Fallstudie), Zeitersparnis Erfahrungswert · **Einschätzung** = kein externer Beleg.
+
+| Status | Lösungen |
+|---|---|
+| belegt (15) | rechnungseingang-vorerfassung, mahnwesen-vorschlaege, wissensdatenbank-mit-quellenbeleg, lead-qualifizierung-eingang, crm-pflege-und-nachfassen, antwortentwuerfe-mit-wissensbasis, eu-ai-act-einstufung, dsgvo-check-fuer-ki-einsatz, bewerber-vorsortierung-mit-augenmass, ki-einfuehrung-team-und-betriebsrat, hosting-entscheidung-cloud-eu-onprem, vom-prototyp-zum-betrieb, kosten-und-qualitaetsmonitoring, meeting-zusammenfassung-und-aufgaben, wartungsdokumentation-per-sprache |
+| teilweise (11) | angebotsentwurf-aus-anfrage, sap-sd-auftragspruefung, ticket-klassifikation-kundenservice, sap-fico-buchungsvorschlaege, sap-stammdatenqualitaet, auftragsbestaetigung-abgleich, lieferantenanfragen-vergleichen, reporting-kommentierung, stellenanzeigen-und-hr-texte, schichtuebergabe-zusammenfassung, entscheidungsvorlagen-kurzfassung |
+| Einschätzung (0) | keine |
+
+Alle Zeitersparnis-Angaben auf der Website sind als Erfahrungswert gekennzeichnet, sofern keine externe Zahl existiert. Jede Anleitung hat einen Abschnitt 10 mit den zwei bis fünf wichtigsten Quellen und der Messgröße für den Piloten.

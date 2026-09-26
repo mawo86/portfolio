@@ -73,3 +73,10 @@ Die Entscheidung selbst hat keinen Betrieb, aber sie legt den Betrieb der folgen
 - Jeder Pilot mit eigener Infrastruktur, besonders Wissensdatenbank und Antwortentwürfe
 - DSGVO-Check (liefert die Datenklassen)
 - Vom Prototyp zum Betrieb (setzt die Entscheidung um)
+
+## 10. Belege und Quellen
+
+- AWS Bedrock eu-central-1 (Frankfurt) mit Claude; Microsoft Foundry Claude GA ohne EU-Datenzone (InfoQ 07/2026); Azure OpenAI Data Zone EU. Stand 09/2026, vor jedem Workshop neu prüfen.
+- IONOS AI Model Hub (Berlin, OpenAI-kompatibel, Euro pro Mio. Token), STACKIT AI Model Serving (GA 05/2025), Open Telekom Cloud LLM-Serving (Biere/Magdeburg).
+- Anthropic: EU-Datenresidenz, ZDR, DPA; Drittlandtransfer bleibt (compound.law Zusammenfassung, Anthropic Doku).
+- CLOUD Act als Argument des Datenschutzbeauftragten: offen ansprechen, nicht wegdiskutieren.

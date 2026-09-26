@@ -68,3 +68,11 @@ Gilt `_betriebsstandard.md`. Spezifisch hier:
 - Antwortentwürfe mit Wissensbasis (direkt anschließend, gleiche Tickets)
 - Wissensdatenbank mit Quellenbeleg (Grundlage für gute Antworten)
 - Kosten- und Qualitätsmonitoring, sobald beide laufen
+
+## 10. Belege und Quellen
+
+- Mittelstand-Digital Zentrum Ruhr-OWL, "KI-basiertes Ticketmanagement für IT-Dienstleister": öffentlich gefördertes Projekt mit genau diesem Mechanismus (Betreff/Beschreibung klassifizieren, Team zuweisen, Priorität).
+- Zendesk Help, "Automatically classifying customer intent, sentiment, and language": Vorhersagen mit Vertrauensstufe, eigene Intents.
+- Freshdesk Support, "Setting up auto-triage": ca. 2.000 historische Tickets nötig, manueller vs. automatischer Modus. Gut, um Erwartungen zur Datenmenge zu setzen.
+- ArbG Hamburg, Beschluss 16.01.2024, 24 BVGa 1/24 (Zusammenfassungen Haufe, CMS, Gleiss Lutz): Browser-Nutzung nicht mitbestimmungspflichtig, Systeme mit Protokollierung auf Firmensystemen möglicherweise doch.
+- Zeitersparnis: Fallberichte ohne Methodik (ki-syndikat: 4,5 Std. → unter 1 Std. bei 500 Anfragen/Tag). Im Piloten selbst messen: Zeit bis Erstzuweisung, Anteil Prüf-Queue.

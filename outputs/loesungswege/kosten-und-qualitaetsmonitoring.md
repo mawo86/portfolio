@@ -71,3 +71,10 @@ Gilt `_betriebsstandard.md`. Spezifisch hier:
 - Jeder bestehende Workflow wird günstiger und messbar
 - Reporting-Kommentierung (KI-Kosten und -Nutzen im Monatsreport der Geschäftsführung)
 - Vom Prototyp zum Betrieb (Voraussetzung)
+
+## 10. Belege und Quellen
+
+- RouteLLM (Ong et al., ICLR 2025, arxiv 2406.18665; LMSYS Blog 07/2024): 85 % Ersparnis auf MT-Bench bei 95 % Qualität, 45 % MMLU, 35 % GSM8K. Benchmark, nicht Praxis, deshalb 30 bis 60 % als eigene Schätzung.
+- Zheng et al. (NeurIPS 2023, arxiv 2306.05685): über 80 % Übereinstimmung Modell-Richter mit Menschen. Begründung für wöchentliche Kalibrierung.
+- Preisstand 09/2026 (Haiku 4.5 1/5, Sonnet 5 2/10, Opus 5.5 4/20 USD pro Mio. Token): vor jedem Angebot gegen platform.claude.com/pricing prüfen.
+- Anthropic Console Ausgabenlimits.

@@ -22,11 +22,15 @@ Jeder Lieferant baut sein Angebot anders auf. Vor dem Vergleich steht das Übert
 
 ## Was wir bauen
 
-Ein Workflow liest eingehende Angebote aus, ordnet Positionen eurer Anfrage zu und rechnet auf gleiche Einheiten und Mengen um. Er stellt Preise, Lieferzeiten, Zahlungsbedingungen und Abweichungen vom Angefragten in einer Tabelle gegenüber und markiert, was fehlt oder ungewöhnlich ist. Der Einkauf verhandelt auf Basis der Tabelle, statt sie zu bauen.
+Angebote zu einer Anfrage landen im Postfach und werden über die Anfragenummer im Betreff oder einen Ordner pro Vorgang gesammelt. Das Sprachmodell liest jedes Angebot als Bild und Text und liefert Positionen, Mengen, Einheiten, Einzel- und Staffelpreise, Nebenkosten, Zahlungsbedingungen und Gültigkeit als Tabelle. Danach rechnet der Workflow, nicht das Modell: Einheiten werden umgerechnet, Staffeln auf eure Anfragemenge bezogen, Fracht anteilig verteilt, und die Positionssummen aus dem Angebot werden gegen die extrahierten Einzelwerte nachgerechnet. Stimmt eine Summe nicht, ist die Position markiert, das fängt Lesefehler. Ergebnis ist eine Excel-Tabelle mit Formeln (Summen rechnet Excel) und einer kurzen, faktischen Kommentarspalte. Wer in SAP arbeitet, bekommt die Werte als Angebote im System (Dienst API_SUPPLIERQUOTATION), damit der Preisspiegel (ME49) sie vergleicht.
 
 ## Was das bringt
 
-Die Einsparung liegt bei 2 bis 5 Stunden pro Ausschreibung, Erfahrungswert aus vergleichbaren Prozessen. Versteckte Nebenkosten und abweichende Mengen fallen sofort auf. Bei vielen kleinen Ausschreibungen summiert sich das auf einen Tag pro Woche.
+Der Preisspiegel in SAP existiert seit jeher, aber er vergleicht nur, was vorher jemand eingetippt hat. Das Tippen ist der Teil, der wegfällt. Eine externe Studie zur Zeitersparnis im Angebotsvergleich habe ich nicht gefunden. Mein Erfahrungswert: 2 bis 5 Stunden pro Ausschreibung bei drei bis vier Angeboten, bei vielen kleinen Ausschreibungen summiert sich das auf einen Tag pro Woche. Der Nutzen, der sich nicht in Stunden misst: Ersatzartikel, abweichende Mengen und Nebenkosten fallen auf, bevor bestellt ist.
+
+## Wo es schwierig wird
+
+Einheiten. Stück, Karton, Palette, Kilogramm, Meter, und jeder Lieferant meint etwas anderes. Ohne eine Umrechnungstabelle pro Artikelgruppe vergleicht man Äpfel mit Kartons. Zweitens gilt für öffentliche Auftraggeber Vergaberecht mit eigenen Regeln, das ist ein anderes Projekt. Drittens sind Angebote Geschäftsgeheimnisse, deshalb bleiben sie in eurem SharePoint und das Protokoll speichert keine Preise.
 
 ## Was ihr dafür braucht
 

@@ -68,3 +68,9 @@ Gilt `_betriebsstandard.md`. Spezifisch hier:
 - Auftragsbestätigungs-Abgleich (nach der Bestellung)
 - Rechnungseingang (nach der Lieferung)
 - SAP-Stammdatenqualität (Lieferantenstamm)
+
+## 10. Belege und Quellen
+
+- SAP-Dokumentation "Angebote vergleichen" (ME49 Preisspiegel), ME47 Angebot pflegen.
+- SAP Cloud SDK Doku: API_SUPPLIERQUOTATION für Lieferantenangebote mit Anfragebezug.
+- Zeitersparnis: kein Beleg. Messgröße: Zeit von letztem Angebotseingang bis fertiger Vergleichstabelle.

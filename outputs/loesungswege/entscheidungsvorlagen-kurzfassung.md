@@ -65,3 +65,8 @@ Kein Workflow, aber:
 - Reporting-Kommentierung (Zahlen zu Text, monatlich)
 - Meeting-Zusammenfassungen (offene Punkte werden Vorlagen)
 - EU-AI-Act-Einstufung (oft die erste Entscheidungsvorlage, die damit geschrieben wird)
+
+## 10. Belege und Quellen
+
+- Jeff Bezos, Amazon-Aktionärsbrief 2017 (Primärquelle), CNBC 2018/2019: sechsseitige narrative Memos statt PowerPoint, stilles Lesen. Das Vorbild, das jeder Geschäftsführer kennt.
+- Zeitersparnis: kein Beleg. Messgröße: Autorenzeit bis Endfassung, Entscheidungsdauer vom Einreichen bis Beschluss.

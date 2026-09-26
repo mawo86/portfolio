@@ -22,11 +22,17 @@ Protokolle kosten Zeit und werden nicht gelesen. Aufgaben verschwinden im Fließ
 
 ## Was wir bauen
 
-Nach dem Meeting verarbeitet der Workflow Aufnahme oder Notizen und erzeugt drei Dinge: eine Liste der getroffenen Entscheidungen, Aufgaben mit Verantwortlichen und Terminen (direkt im Aufgabentool angelegt) und ein Protokoll von einer halben Seite in eurem Format. Alles geht als Entwurf an den Moderator, der in fünf Minuten prüft und freigibt.
+Zwei Wege, je nachdem, was ihr habt. Mit Microsoft 365 und Copilot-Lizenz nutzen wir die Bordmittel: Teams-Transkription, den Meeting-Recap und die Aufgabenübernahme nach Planner. Meine Arbeit ist dann Einrichtung, Regeln und Schulung. Ohne Copilot bauen wir den Weg selbst: Nach Meeting-Ende holt der Workflow das Transkript aus Teams oder Zoom über deren Schnittstellen, das Sprachmodell extrahiert Entscheidungen, Aufgaben (wer, was, bis wann, mit Verweis auf die Stelle im Transkript) und offene Punkte und schreibt ein Protokoll von einer halben Seite in eurem Format. Aufgaben werden dem Moderator als Vorschlag gezeigt und erst nach Bestätigung im Aufgabentool angelegt. Das Transkript wird danach gelöscht. In beiden Fällen gilt: Aufnahme nur mit Ansage und Zustimmung.
 
 ## Was das bringt
 
-Die Einsparung liegt bei 2 bis 4 Stunden pro Woche und Führungskraft, Erfahrungswert aus vergleichbaren Prozessen. Aufgaben sind am selben Tag zugewiesen. Entscheidungen sind nachlesbar, was die Diskussionen kürzer macht.
+Meetings sind der größte Produktivitätsfresser, sagt Microsofts Work Trend Index 2025 auf Basis von 31.000 Befragten in 31 Ländern und Nutzungsdaten aus Microsoft 365: Unterbrechungen alle zwei Minuten im Arbeitstag, Meetings ohne klare nächste Schritte als häufigste Klage. Dass die Bordmittel dafür gebaut sind, zeigt Microsofts eigene Dokumentation zu Meeting-Recaps und Copilot in Teams. Die Zahlen stammen vom Hersteller des Werkzeugs, das ist bei der Bewertung mitzudenken.
+
+Zur Zeitersparnis habe ich keine neutrale Zahl gefunden. Mein Erfahrungswert: 2 bis 4 Stunden pro Woche und Führungskraft, die heute in Protokolle und Nachfassen gehen. Messbar am selben Tag: Sind die Aufgaben aus dem Meeting abends im Tool?
+
+## Wo es schwierig wird
+
+Aufnahme ohne Ansage ist rechtlich und kulturell ein Fehler, und Sprachaufnahmen von Beschäftigten sind ein Betriebsratsthema. Zweitens: Aufgaben automatisch anlegen führt zu falschen Aufgaben bei falschen Leuten, dann verliert das Tool sein Vertrauen. Deshalb die Bestätigung. Drittens: Ohne ein Aufgabentool, das alle nutzen, bleibt das Protokoll ein Text. Erst Tool, dann Automatisierung. Und Copilot nur für Meetings zu lizenzieren, rechnet sich meist nicht.
 
 ## Was ihr dafür braucht
 

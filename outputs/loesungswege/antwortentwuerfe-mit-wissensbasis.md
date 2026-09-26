@@ -67,3 +67,9 @@ Gilt `_betriebsstandard.md`. Spezifisch hier:
 - Wissensdatenbank intern (gleicher Index, andere Oberfläche)
 - Ticket-Klassifikation davor
 - Kosten- und Qualitätsmonitoring
+
+## 10. Belege und Quellen
+
+- Klarna Pressemitteilung 27.02.2024 (2/3 der Chats, 2,3 Mio., unter 2 Min.) und Kehrtwende Mai 2025 (CEO: "we went too far", Rekrutierung von Menschen, hybrid). Der beste Beleg für "Entwurf statt Automatik": Nutzen und Grenze in einem Fall.
+- Anthropic Citations (Jan 2025): technischer Quellenzwang.
+- Zeitersparnis: kein Beleg. Messgröße: Anteil übernommener/geänderter/verworfener Entwürfe, Bearbeitungszeit pro Ticket aus dem Ticketsystem.

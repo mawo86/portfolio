@@ -22,11 +22,15 @@ Zahlen zusammenstellen geht schnell, sie zu erklären dauert. Der Kommentar ist 
 
 ## Was wir bauen
 
-Der Workflow nimmt eure Monatszahlen (Umsatz, Deckungsbeitrag, Kosten, Bestände, was für euch zählt), vergleicht mit Vormonat, Vorjahr und Plan und schreibt einen Kommentar in eurer Sprache: die drei größten Abweichungen, plausible Ursachen aus den Daten, offene Fragen für das Controlling. Das Ergebnis ist ein Entwurf, den Controlling in 20 Minuten schärft statt in zwei Tagen schreibt.
+Die Monatszahlen kommen als Export (SAP CO, Power BI, DATEV-BWA) in eine Tabelle mit Ist, Vormonat, Vorjahr und Plan. Ein Skript berechnet Abweichungen absolut und in Prozent, sortiert nach Relevanz und markiert Ausreißer. Erst diese fertige Tabelle geht an das Sprachmodell, mit drei alten Kommentaren als Tonvorlage und einer harten Regel: Es darf nur Zahlen nennen, die in der Tabelle stehen, Ursachen nur als Vermutung formulieren und für jede Vermutung eine Prüffrage ans Controlling stellen. Danach prüft ein zweiter Schritt automatisch jede Zahl im Text gegen die Tabelle. Bei einer Abweichung gibt es keinen Entwurf, sondern eine Fehlermeldung. Der Entwurf wird in eure Word-Vorlage gesetzt und geht an den Controller, der ihn in 20 Minuten schärft.
 
 ## Was das bringt
 
-Die Einsparung liegt bei 1 bis 2 Tagen pro Monatsabschluss, Erfahrungswert aus vergleichbaren Prozessen. Der Report kommt am dritten Werktag mit Kommentar, nicht am zehnten. Die Geschäftsführung liest eine Seite statt zwanzig Tabellen.
+Berichtskommentierung ist einer der Anwendungsfälle, die in der Controlling-Fachwelt inzwischen als Standard gelten. Der Internationale Controller Verein nennt sie in seinen Beiträgen zu generativer KI als typischen Pilotfall neben Kennzahlenanalyse, und die Controlling & Management Review beschreibt 2025, wie Sprachmodelle in automatisierte Reporting-Prozesse eingebunden werden. Belastbare Zahlen zur Zeitersparnis habe ich nicht gefunden. Mein Erfahrungswert: ein bis zwei Tage pro Monatsabschluss, die heute ins Schreiben gehen. Wichtiger als die Stunden ist der Termin: Der Kommentar liegt am dritten Werktag vor, nicht am zehnten.
+
+## Wo es schwierig wird
+
+Das Modell schreibt gern Ursachen, die plausibel klingen und nicht in den Daten stehen. Deshalb rechnet es nicht, deshalb der Quellenzwang auf die Tabelle, deshalb die automatische Zahlenprüfung. Zweitens sind Monatszahlen vertraulich, die Geschäftsführung muss dem Einsatz ausdrücklich zustimmen, und das ist oft die eigentliche Hürde. Drittens läuft der Pilot über zwei Abschlüsse, also acht bis zehn Wochen statt vier. Das sage ich vorher.
 
 ## Was ihr dafür braucht
 

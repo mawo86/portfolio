@@ -7,7 +7,7 @@ zeitprobleme: ["Informationen suchen", "Regeln und Unsicherheit"]
 branchen: ["Fertigung", "Handel", "Dienstleistung", "Handwerk"]
 werkzeuge: ["RAG-Pipeline (eigene Umsetzung)", "Claude", "EU-Hosting oder On-Premise", "SharePoint, Laufwerk oder Confluence"]
 aufwand: "10 bis 15 Tage"
-einsparung: "30 bis 60 Minuten pro Person und Tag beim Suchen"
+einsparung: "Suchzeit sinkt spürbar; extern belegt: 1,8 bis 2,5 Std./Tag gehen heute ins Suchen"
 paket: "pilot-projekt"
 reifegrad: "Fortgeschritten"
 sapNah: false
@@ -23,11 +23,17 @@ Das Wissen ist da, aber nicht auffindbar. Neue Kollegen brauchen Monate, erfahre
 
 ## Was wir bauen
 
-Eure Dokumente werden in kleine Abschnitte zerlegt und durchsuchbar gemacht. Wer eine Frage stellt, bekommt eine Antwort, die ausschließlich auf euren Dokumenten beruht, mit Verweis auf Datei und Seite. Wenn nichts Passendes gefunden wird, sagt der Assistent genau das. Die Daten bleiben auf einem Server in der EU oder bei euch im Haus.
+Eure Dokumente (PDF, Word, Wiki) werden in Abschnitte von wenigen hundert Wörtern zerlegt, jeder Abschnitt behält Dateiname, Kapitelpfad und Version. Zu jedem Abschnitt wird ein numerischer Fingerabdruck berechnet und in einer Datenbank auf einem Server in der EU gespeichert (bei mir Postgres mit pgvector, kein externer Suchdienst). Stellt jemand eine Frage, sucht das System die sechs ähnlichsten Abschnitte plus eine klassische Volltextsuche, und nur diese Abschnitte bekommt das Sprachmodell zu sehen. Es antwortet mit Zitatmarkierungen, die auf Datei und Abschnitt zeigen. Die Anthropic-Schnittstelle liefert dafür eine eigene Funktion (Citations), bei der jede zitierte Stelle technisch auf den Quelltext zeigen muss. Findet die Suche nichts Passendes, ist die Antwort "dazu steht nichts in den Dokumenten". Genau so war es im Showcase gebaut, das ihr unter Projekte anschauen könnt.
 
 ## Was das bringt
 
-Die Suchzeit sinkt um 30 bis 60 Minuten pro Person und Tag, Erfahrungswert aus vergleichbaren Prozessen. Onboarding wird kürzer, Antworten werden einheitlich. Wie so ein System aussieht, zeige ich im Showcase-Projekt (siehe Projekte).
+Wie viel Zeit ins Suchen geht, ist gut belegt, wenn auch mit älteren Zahlen: McKinsey Global Institute schätzte 1,8 Stunden pro Tag (2012), IDC rund 2,5 Stunden. Beides Wissensarbeiter im Schnitt, nicht euer Servicetechniker. Dass RAG-Systeme in kleinen Unternehmen funktionieren, zeigt ein dokumentierter Testbetrieb in einem KMU mit rund 20 Beschäftigten und 81 Dokumenten, mit lokal laufenden Modellen (Fachbeitrag 2025). Fraunhofer IESE beschreibt denselben Aufbau als Standardweg, um "mit eigenen Daten zu chatten", und benennt auch die Fehlerquellen.
+
+Eine belastbare Zahl, wie viel Suchzeit bei euch wegfällt, habe ich extern nicht gefunden. Wir messen sie selbst: 20 Testfragen vorher mit der Stoppuhr, nachher mit dem Assistenten.
+
+## Wo es schwierig wird
+
+Der Index ist so gut wie die Dokumente. Ein veraltetes Handbuch im Index erzeugt eine selbstbewusste, falsche Antwort mit korrekter Quellenangabe. Deshalb ist Kuratierung Teil des Projekts und jemand muss den Hut aufhaben. Zweitens sind Tabellen und Zeichnungen in PDFs schwer zu zerlegen, dort ist die Trefferquote niedriger. Drittens: Wer strikt On-Premise mit einem kleinen Open-Source-Modell arbeiten will, bekommt spürbar schlechtere Antworten als mit den großen Modellen. Das zeige ich im Piloten an euren Fragen, dann entscheidet ihr.
 
 ## Was ihr dafür braucht
 

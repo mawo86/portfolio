@@ -80,3 +80,9 @@ Variante A: 2 Tage Tagessatz. Variante B: 4 Tage, als kleiner Pilot €2.500 ode
 - Entscheidungsvorlagen (aus offenen Punkten wird eine Vorlage)
 - CRM-Pflege (dieselbe Technik für Kundentermine)
 - KI-Einführung im Team
+
+## 10. Belege und Quellen
+
+- Microsoft Work Trend Index 2025 (23.04.2025, 31.000 Befragte, 31 Länder) und WorkLab "Breaking down the infinite workday": Unterbrechung alle 2 Minuten, Meetings ohne nächste Schritte. Herstellerquelle, so benennen.
+- Microsoft Tech Community: Meeting Recap und Copilot in Teams (Doku).
+- Zeitersparnis: kein Beleg. Messgröße: Aufgaben am Meeting-Tag im Tool, Moderator-Zeit pro Meeting.

@@ -22,11 +22,17 @@ Die Technik ist selten das Problem. KI-Projekte scheitern an Menschen, die nicht
 
 ## Was wir bauen
 
-Ein Programm in drei Teilen. Erstens: Betriebsrat und Datenschutz kommen vor dem ersten Piloten an den Tisch, mit einer Vorlage für eine Rahmenvereinbarung, die Mitbestimmung ernst nimmt und trotzdem Tempo erlaubt. Zweitens: Schulungen von zwei Stunden pro Gruppe, praktisch an euren eigenen Aufgaben, mit der KI-Richtlinie als Handout. Drittens: eine einfache Nutzungsmessung, damit ihr nach vier Wochen wisst, ob die Lösung ankommt, und nachsteuern könnt.
+Drei Bausteine über drei Monate. Erstens kommt der Betriebsrat vor dem ersten Piloten an den Tisch, mit einer Rahmenvereinbarung als Vorlage: Grundsätze (Unterstützung, keine Leistungskontrolle, keine automatischen Personalentscheidungen), Informationsrechte, eine Pilotklausel, die Tests nach Information erlaubt und den Regelbetrieb an Zustimmung bindet, Schulung, Evaluierung nach sechs Monaten. Die Hans-Böckler-Stiftung stellt solche Vereinbarungen aus der Praxis in ihrer Datenbank bereit, daran orientiere ich mich. Zweitens Schulungen von zwei Stunden pro Gruppe, mit 60 Minuten Arbeit an eigenen Aufgaben in Zweierteams, zuerst die Führungskräfte. Drittens eine Nutzungsmessung ohne Personenbezug (aktive Nutzer pro Woche aus dem Werkzeug-Admin) plus eine anonyme Drei-Fragen-Umfrage nach vier Wochen. Wer nicht nutzt, bekommt eine zweite Runde mit seinen eigenen Aufgaben.
 
 ## Was das bringt
 
-Der Nutzen zeigt sich daran, dass die gebauten Lösungen genutzt werden. Erfahrungswert: Ein Pilot ohne Einführungsprogramm wird nach drei Monaten von weniger als der Hälfte des Teams genutzt, mit Programm von fast allen. Dazu kommt die Schulungspflicht aus dem EU AI Act, die ihr damit erfüllt.
+Die Zahlen sind eindeutig, dass die Einführung das Problem ist, nicht die Technik. Bitkom zählt 2025 erst 36 Prozent der Unternehmen als KI-Nutzer, und ein Drittel berichtet von deutlich höheren Kosten als erwartet. Eine MIT-Untersuchung von 2025 kam zu dem Ergebnis, dass 95 Prozent der untersuchten Pilotprojekte keinen messbaren Ergebnisbeitrag lieferten, nicht wegen der Modelle, sondern weil sie nicht in Arbeitsabläufe kamen. Gartner prognostizierte, dass mindestens 30 Prozent der Projekte nach dem Proof of Concept abgebrochen werden.
+
+Was das Programm bringt, misst ihr an der Nutzung: Ziel sind 60 Prozent aktive Nutzer nach vier Wochen und 80 Prozent nach drei Monaten. Das sind meine Zielwerte aus Erfahrung, kein externer Benchmark. Nebenbei erfüllt ihr die Pflicht zur KI-Kompetenz aus Artikel 4 der KI-Verordnung, die seit Februar 2025 gilt, mit Teilnehmerlisten als Nachweis.
+
+## Wo es schwierig wird
+
+Die Arbeitsplatzfrage kommt in jeder Schulung, und sie muss ehrlich beantwortet werden, auch wenn die Antwort unbequem ist. Wer ausweicht, verliert den Raum. Zweitens: Wenn die Geschäftsführung nur das Team schickt, heißt die Botschaft "das ist etwas für euch, nicht für uns". Sie sitzt in der ersten Reihe oder das Programm findet nicht statt. Drittens der Betriebsrat: Das Arbeitsgericht Hamburg hat 2024 entschieden, dass reine Browser-Nutzung von KI nicht mitbestimmungspflichtig ist. Ich binde den Betriebsrat trotzdem früh ein, weil er als Multiplikator mehr wert ist als als Prozessgegner.
 
 ## Was ihr dafür braucht
 

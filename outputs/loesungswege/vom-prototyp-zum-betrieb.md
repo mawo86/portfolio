@@ -85,3 +85,10 @@ Dieser Use-Case ist der Betriebsstandard. Vollständig in `_betriebsstandard.md`
 - Kosten- und Qualitätsmonitoring (baut auf dem Entscheidungsprotokoll auf)
 - Jeder weitere Workflow kommt in dieselbe Pipeline (1 bis 2 Tage statt 5 bis 8)
 - Hosting-Entscheidung (falls noch offen)
+
+## 10. Belege und Quellen
+
+- MIT NANDA 2025 (95 %) und Gartner 2024 (30 %): Warum Piloten sterben. Gartner nennt Datenqualität, Risikokontrollen, Kosten, unklaren Nutzen, das ist die Gliederung des Betriebsstandards.
+- docs.n8n.io: Export/Import, öffentliche REST-API, Error Trigger. Hinweis: Aktivierung per API war in älteren Versionen read-only, aktuelle Versionen haben /activate.
+- Anthropic Console: Ausgabenlimits pro Workspace, Alarme bei 50/75/90 %.
+- `_betriebsstandard.md` ist die ausführliche Fassung.

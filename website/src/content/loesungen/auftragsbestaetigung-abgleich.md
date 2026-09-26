@@ -22,11 +22,17 @@ Der Abgleich ist wichtig und wird trotzdem übersprungen, weil er stumpf ist. Ab
 
 ## Was wir bauen
 
-Der Workflow liest jede Auftragsbestätigung aus dem Postfach, findet die Bestellung im ERP und vergleicht Position für Position: Menge, Preis, Termin, Artikelnummer. Passt alles, wird der Bestätigungsstatus gesetzt. Weicht etwas ab, bekommt der zuständige Einkäufer eine kurze Nachricht mit dem Unterschied und einem Antwortentwurf an den Lieferanten.
+Der Workflow liest jede Auftragsbestätigung aus dem Postfach. Das Sprachmodell extrahiert Lieferant, eure Bestellnummer, Positionen mit Menge, Preis und Termin. Dann findet der Workflow die Bestellung in SAP, in S/4HANA über den OData-V4-Dienst für Bestellungen (API_PURCHASEORDER_2, der Vorgänger API_PURCHASEORDER_PROCESS_SRV ist seit Release 2308 abgekündigt), im ECC über RFC. Der Vergleich ist deterministisch: Position für Position Menge, Nettopreis pro Einheit und Termin gegen eure Toleranzen. Passt alles, schreibt der Workflow einen Bestätigungssatz in die Bestellposition, genau dort, wo SAP ihn mit der Bestätigungssteuerung erwartet, damit der Status im System sichtbar ist und die Überwachung (ME92F) grün zeigt. Weicht etwas ab, geht eine Nachricht an den Einkäufer mit dem Unterschied und einem Antwortentwurf an den Lieferanten. Der Workflow ändert nie Kopf oder Positionen der Bestellung.
 
 ## Was das bringt
 
-Die Einsparung liegt bei 3 bis 6 Stunden pro Woche, Erfahrungswert aus vergleichbaren Prozessen. Der größere Nutzen liegt in den vermiedenen Folgekosten: Terminabweichungen sind Wochen früher bekannt, Preisdifferenzen werden vor der Rechnung geklärt.
+SAP hat den Prozess seit Jahrzehnten vorgesehen: Bestätigungssteuerschlüssel, Bestätigungsarten, Überwachung offener Bestätigungen. Was fehlt, ist der Schritt vom PDF in den Bestätigungssatz, und genau den bauen wir. Die Extraktion aus PDF und E-Mail ist dieselbe Technik wie bei Rechnungseingang und Auftragsprüfung, mit denselben Grenzen.
+
+Eine externe Zahl zur Zeitersparnis gibt es dafür nicht, ich habe keine gefunden. Mein Erfahrungswert: 3 bis 6 Stunden pro Woche im Einkauf. Der größere Effekt ist in Euro schwer zu greifen und trotzdem der Grund für das Projekt: Terminabweichungen sind Wochen früher bekannt, Preisdifferenzen werden vor der Rechnung geklärt statt in der Rechnungsprüfung.
+
+## Wo es schwierig wird
+
+Ein falsches "passt" ist schlimmer als jede Fehlmeldung, deshalb im Zweifel als Abweichung melden. Zweitens funktioniert der Weg nur, wenn eure Bestellarten Bestätigungen überhaupt erwarten (Customizing der Bestätigungssteuerung), das prüfen wir am ersten Tag. Drittens schreiben Lieferanten eure Bestellnummer gern falsch oder gar nicht, dann braucht es den Fallback über Lieferant, Datum und Positionen, und der ist unschärfer.
 
 ## Was ihr dafür braucht
 

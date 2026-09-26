@@ -66,3 +66,9 @@ Hier gibt es keine Pipeline, aber trotzdem Betrieb:
 - Bewerber-Vorsortierung (der nächste HR-Schritt, mit AI-Act-Abgrenzung)
 - Meeting-Zusammenfassungen (gleiche Werkzeugklasse, andere Abteilung)
 - KI-Einführung im Team (Schulungsformat wiederverwenden)
+
+## 10. Belege und Quellen
+
+- § 11 AGG, § 15 AGG; Haufe und ADVANT Beiten zu rechtssicheren Stellenanzeigen. Rechtsprechung "junges Team" uneinheitlich (LAG: keine Benachteiligung; ArbG Dortmund: 60.000 Euro). Aktenzeichen vor Verwendung nachschlagen.
+- Anthropic Privacy Center: Team/Enterprise trainieren nicht mit Kundendaten, DPA enthalten. Analog Copilot M365 und ChatGPT Team (nicht recherchiert, vor Empfehlung prüfen).
+- Zeitersparnis: kein Beleg. Messgröße: Zeit von Stichworten bis veröffentlichter Anzeige, AGG-Checkliste bestanden.

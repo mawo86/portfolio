@@ -67,3 +67,10 @@ Als Bestandteil des Readiness-Checks (€299) in Kurzform: Welche Werkzeugklasse
 - KI-Einführung im Team (Einseiter wird Schulungsmaterial)
 - Hosting-Entscheidung (wenn eigene Anwendungen gebaut werden)
 - Jede Automatisierung mit personenbezogenen Daten baut auf dieser Matrix auf
+
+## 10. Belege und Quellen
+
+- Bitkom, Oktober 2025 (n=604): 42 % Schatten-KI bekannt oder vermutet, 8 % weit verbreitet. Einstieg ins Gespräch: "Bei euch auch."
+- DSK-Orientierungshilfe "KI und Datenschutz" (06.05.2024): die Checkliste, gegen die wir prüfen.
+- HmbBfDI Diskussionspapier (15.07.2024): Modell speichert nichts Personenbezogenes, Ein- und Ausgabe schon. Hilft gegen das Argument "das Modell hat unsere Daten gelernt".
+- Anthropic DPA/Commercial Terms, API and data retention: kein Training, AVV enthalten, Drittlandtransfer bleibt.

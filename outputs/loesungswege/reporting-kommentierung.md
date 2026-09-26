@@ -67,3 +67,10 @@ Gilt `_betriebsstandard.md`. Spezifisch hier:
 - Entscheidungsvorlagen (gleiches Prinzip: Fakten rein, Text raus)
 - Mahnwesen (Liquiditätsteil)
 - Schichtübergabe (Tagesrhythmus statt Monat, gleiche Struktur)
+
+## 10. Belege und Quellen
+
+- ICV Blog "Generative KI im Controlling" und Controller Institut "KI-Use-Cases im Controlling": Kommentierung als Standard-Pilotfall.
+- Controlling & Management Review 2025, "Generative KI im Controlling praktisch umsetzen" (Springer): Einbindung von LLMs in Reporting-Prozesse.
+- ICV-Studie Reporting/Forecasting (Eisl, Hofer, Perkhofer): Ergebnisse nachschlagen, sobald veröffentlicht.
+- Zeitersparnis: kein Beleg. Messgrößen: Tag der Kommentarfreigabe, Controller-Zeit für Endfassung.

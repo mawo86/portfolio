@@ -67,3 +67,10 @@ Gilt `_betriebsstandard.md`. Spezifisch hier:
 
 - Jede Automatisierung mit Stammdatenbezug: Auftragsprüfung, Rechnungseingang, Buchungsvorschläge, Angebotsentwurf
 - Reporting-Kommentierung (Datenqualitäts-Kennzahlen im Monatsreport)
+
+## 10. Belege und Quellen
+
+- SAP Blog "SAP S/4HANA Business Partner Duplicate Check" (2021), SAP Note 3612988, SAP Help "Duplicate Check": eingebaute unscharfe Dublettenprüfung ab SAP_BASIS 755 ohne Drittanbieter. Erst Standard aktivieren, dann ergänzen.
+- Planat-Studie (Presseportal): 1 % "sehr hoch", 38 % "hoch" bei Datenqualität im Mittelstand.
+- Uniserv-Umfrage: jedes dritte Unternehmen mit fehlerhaften Adressen, jedes fünfte mit Retouren durch schlechte Kundendaten.
+- Nutzen: nicht in Stunden bezifferbar, Messgrößen Dublettenquote und Füllgrad vorher/nachher.

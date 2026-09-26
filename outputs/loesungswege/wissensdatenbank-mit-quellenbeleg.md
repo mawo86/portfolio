@@ -78,3 +78,11 @@ Gilt `_betriebsstandard.md`. Da hier eigener Code läuft, zusätzlich:
 - Wartungsdokumentation (Berichte landen im Index)
 - Kosten- und Qualitätsmonitoring
 - Vom Prototyp zum Betrieb (hier von Anfang an eingebaut)
+
+## 10. Belege und Quellen
+
+- McKinsey Global Institute, "The Social Economy" (2012): 1,8 Std./Tag Suchen; IDC: 2,5 Std./Tag. Alt, aber die meistzitierten Zahlen, mit Jahr nennen.
+- ResearchGate 2025, "Aufbau eines RAG-Systems für Wissenssicherung in KMU": Testbetrieb mit ca. 20 Beschäftigten, 81 Dokumenten, lokale Modelle. Guter Beleg, dass es im Kleinen geht.
+- Fraunhofer IESE Blog, "Retrieval Augmented Generation (RAG): Chat mit eigenen Daten": Aufbau und Fehlerquellen aus neutraler Quelle.
+- Anthropic, "Introducing Citations on the Anthropic API" (Jan 2025) und Citations-Doku: zitierte Stellen zeigen technisch auf den Quelltext.
+- Eigene Case Study `rag-demo-quellenbelegter-chatbot` als gebautes Beispiel.

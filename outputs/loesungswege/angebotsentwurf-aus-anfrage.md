@@ -79,3 +79,10 @@ Gilt `_betriebsstandard.md`. Spezifisch hier:
 - Lead-Qualifizierung (Anfragen bewerten, bevor sie zum Angebot werden)
 - CRM-Pflege und Nachfassen (Angebot raus, Nachfass-Termin automatisch)
 - Betrieb: Kosten- und Qualitätsmonitoring, sobald zwei Workflows laufen
+
+## 10. Belege und Quellen
+
+- Computerwoche 2024, "Zentis automatisiert Auftragserfassung mit KI-Hilfe": Bestellungen aus E-Mail/PDF, Stammdatenabgleich, Buchung per SAP-Schnittstelle, anfangs 60 % Nacharbeit. Der ehrlichste Referenzwert, den ich kenne. Im Gespräch nutzen, wenn der Kunde "100 % automatisch" erwartet.
+- Fraunhofer IAIS, Themenseite "Angebotserstellung automatisieren mit KI": Mechanismus NLP plus Produktkatalog.
+- Anthropic PDF support und Structured outputs (Doku): Grundlage für Extraktion mit festem Schema und Sicherheitswert.
+- Zeitersparnis: kein externer Beleg mit Methodik. Im Angebot als Erfahrungswert formulieren, im Piloten messen (Durchlaufzeit Anfrage bis Entwurf, Anteil unveränderter Entwürfe).

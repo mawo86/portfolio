@@ -70,3 +70,10 @@ Gilt `_betriebsstandard.md`. Spezifisch hier:
 - Schichtübergabe (die Einträge werden Teil der Übergabe)
 - Wissensdatenbank (Störungshistorie durchsuchbar: "hatten wir das schon?")
 - Kosten- und Qualitätsmonitoring
+
+## 10. Belege und Quellen
+
+- api.sap.com API_MAINTNOTIFICATION, SAP Help "Operations for Maintenance Notifications": Meldungsanlage per OData, ETag-Pflicht bei Änderungen.
+- Whisper-Fehlerraten: ca. 8 bis 12 % sauber, 16 bis 24 % industriell, Rauschunterdrückung 20 bis 40 % relativ (Forasoft 2026, VexaScribe, MLCommons). Keine peer-reviewte Industriestudie, im Piloten selbst messen (Wortfehlerrate an 10 Hallenaufnahmen).
+- DIN 31051 (Dokumentation als Grundlage der Instandhaltung), mymaintenance.blog Praxisberichte.
+- Zeit pro Techniker: kein Beleg.
