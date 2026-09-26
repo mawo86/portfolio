@@ -12,7 +12,7 @@ Eine Anfrage kommt am Dienstagmorgen rein. Drei Positionen, ein Wunschtermin, ei
 Das Problem ist nicht die Entscheidung. Rabatt, Lieferzeit, Zahlungsziel, das kann der Vertrieb in zwei Minuten. Das Problem ist die Tipparbeit davor. Und genau die lässt sich heute automatisieren, ohne dass jemand das ERP anfasst.
 
 <figure>
-  <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1200&q=80" alt="Schreibtisch mit Unterlagen, Taschenrechner und Laptop, Angebotskalkulation" />
+  <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80" alt="Schreibtisch mit Unterlagen, Taschenrechner und Laptop, Angebotskalkulation" />
   <figcaption>Der Engpass im Vertrieb sitzt selten im Gespräch. Er sitzt zwischen Posteingang und Angebotsvorlage. (Foto: Unsplash)</figcaption>
 </figure>
 

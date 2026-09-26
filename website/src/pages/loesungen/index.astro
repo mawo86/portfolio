@@ -41,7 +41,7 @@ const BASE = import.meta.env.BASE_URL;
         <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-8">
           <h2 id="bibliothek-heading" class="font-display font-bold text-bone-50 text-[2rem] sm:text-[2.6rem] leading-[1.02] tracking-tight">Alle Lösungen.</h2>
           <div class="flex flex-wrap gap-2" id="bereich-nav">
-            <button data-filter="all" aria-pressed="true" class="bereich-btn px-3 py-1.5 text-xs font-semibold rounded-full transition-colors border bg-bone-50 text-ink-950 border-bone-50">Alle</button>
+            <button data-filter="all" aria-pressed="true" class="bereich-btn px-3 py-1.5 text-xs font-semibold rounded-full transition-colors border bg-brand-600 text-white border-bone-50">Alle</button>
             {usedBereiche.map(b => (
               <button data-filter={b} aria-pressed="false" class="bereich-btn px-3 py-1.5 text-xs font-semibold rounded-full transition-colors border bg-ink-800 text-bone-400 border-bone-50/10 hover:border-brand-400/60 hover:text-brand-300">{bereichLabel[b]}</button>
             ))}
@@ -84,7 +84,7 @@ const BASE = import.meta.env.BASE_URL;
           <p class="text-bone-400 text-[1.05rem] leading-relaxed max-w-xl">Der KI-Readiness-Check für €299: Eure drei bis fünf größten Zeitfresser, bewertet nach Zeitaufwand, Automatisierbarkeit und Umsetzbarkeit. Ergebnis ist eine priorisierte Liste mit Tool-Empfehlung, kein Reifegrad-Zertifikat.</p>
         </div>
         <div class="lg:col-span-5 flex flex-col sm:flex-row lg:flex-col gap-3 lg:items-end">
-          <a href={terminUrl({ thema: 'readiness-check', paket: 'readiness-check' })} data-track="paket_cta_geklickt" class="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-bone-50 text-ink-950 hover:bg-brand-300 font-semibold rounded-full transition-colors text-[0.95rem]">
+          <a href={terminUrl({ thema: 'readiness-check', paket: 'readiness-check' })} data-track="paket_cta_geklickt" class="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-brand-600 text-white hover:bg-brand-700 font-semibold rounded-full transition-colors text-[0.95rem]">
             Readiness-Check anfragen
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M5 12h14M13 6l6 6-6 6" /></svg>
           </a>
@@ -102,7 +102,7 @@ const BASE = import.meta.env.BASE_URL;
   const buttons = document.querySelectorAll<HTMLButtonElement>('.bereich-btn');
   const rows = document.querySelectorAll<HTMLElement>('[data-loesung]');
   const empty = document.getElementById('loesung-empty');
-  const ON = ['bg-bone-50', 'text-ink-950', 'border-bone-50'];
+  const ON = ['bg-brand-100', 'text-brand-900', 'border-brand-600'];
   const OFF = ['bg-ink-800', 'text-bone-400', 'border-bone-50/10', 'hover:border-brand-400/60', 'hover:text-brand-300'];
   buttons.forEach(btn => btn.addEventListener('click', () => {
     const f = btn.dataset.filter!;

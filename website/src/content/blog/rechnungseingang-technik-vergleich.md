@@ -12,7 +12,7 @@ Seit Anfang 2025 muss jedes Unternehmen in Deutschland E-Rechnungen empfangen k�
 Für diesen Mix gibt es vier technische Wege. Sie werden ständig durcheinandergeworfen, und das kostet Geld, weil man entweder zu viel Technik kauft oder die falsche.
 
 <figure>
-  <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1200&q=80" alt="Stapel Rechnungen neben Laptop und Taschenrechner auf einem Schreibtisch" />
+  <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80" alt="Stapel Rechnungen neben Laptop und Taschenrechner auf einem Schreibtisch" />
   <figcaption>Vier Formate, vier Techniken. Die Kunst ist, jede Rechnung auf den billigsten Weg zu schicken, der sie sicher liest. (Foto: Unsplash)</figcaption>
 </figure>
 
