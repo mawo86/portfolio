@@ -29,6 +29,7 @@ Claude sollte sich immer über `/prime` am Session-Start orientieren, dann mit v
 .
 ├── CLAUDE.md              # Diese Datei — Kern-Kontext, immer geladen
 ├── shell-aliases.md       # Shell-Aliase für den Workspace
+├── .github/workflows/deploy.yml  # Build + Deploy auf GitHub Pages bei Push auf main
 ├── .claude/               # (git-ignoriert)
 │   ├── commands/          # Slash-Commands, die Claude ausführen kann
 │   │   ├── prime.md       # /prime — Session-Initialisierung
@@ -50,8 +51,11 @@ Claude sollte sich immer über `/prime` am Session-Start orientieren, dann mit v
 │   └── youtube-transcripts/    # Output von scripts/youtube_transcripts.py
 ├── scripts/               # youtube_transcripts.py
 └── website/               # Astro-Portfolio-Website (busche.cloud)
+    ├── astro.config.mjs     # Integrationen (tailwind, mdx, sitemap) + Rehype-Plugin für Lazy-Images
     ├── tailwind.config.mjs  # Design-Tokens (ink, bone, brand, font-display)
     ├── src/
+    │   ├── config/site.ts # Externe Links, Verfügbarkeits-Status, Site-Metadaten
+    │   ├── content/config.ts  # Zod-Schemas der Collections blog + case-studies
     │   ├── pages/         # index, leistungen, blog/, case-studies/, tools, 404, danke, og/
     │   ├── content/       # blog/ und case-studies/ (Markdown)
     │   ├── layouts/       # Layout, BlogLayout, CaseStudyLayout
@@ -129,15 +133,44 @@ Falls ja, aktualisiere die entsprechenden Abschnitte. Diese Datei muss immer den
 
 ## Aktives Projekt: busche.cloud Website
 
-Die Astro-Portfolio-Website befindet sich in `website/`. Lokale Entwicklung:
+Die Astro-Portfolio-Website befindet sich in `website/`. Alle npm-Befehle dort ausführen (nicht im Repo-Root).
 
 ```bash
 cd website
-npm run dev   # Dev-Server auf http://localhost:4321
-npm run build # Produktions-Build
+npm ci              # Abhängigkeiten (Node 20, wie in CI)
+npm run dev         # Dev-Server auf http://localhost:4321 (ohne Suche, siehe Pagefind)
+npm run build       # Produktions-Build: astro build + pagefind --site dist
+npm run build:fast  # Nur astro build, ohne Such-Index (schneller, zum Prüfen von Layout/Inhalt)
+npm run preview     # Gebauten dist/-Ordner lokal ausliefern
 ```
 
+Es gibt keine Tests, kein Lint und kein Format-Tooling. `npm run build` ist der einzige Check: Er schlägt fehl bei Frontmatter, das nicht zum Schema in `src/content/config.ts` passt, und bei TypeScript-Fehlern in `.astro`-Dateien (tsconfig `strict`). Vor jedem Push, der `website/` berührt, einmal bauen.
+
 **Live unter:** https://busche.cloud
+
+**Deployment:** `.github/workflows/deploy.yml` baut bei jedem Push auf `main` (Node 20, `npm ci`, `npm run build`) und deployt `website/dist` auf GitHub Pages. `main` ist also Produktion, es gibt kein Staging. Die Domain kommt aus `public/CNAME`.
+
+### Architektur der Website (was man aus mehreren Dateien zusammenlesen müsste)
+
+**Inhalte sind Astro Content Collections.** `src/content/config.ts` definiert zwei Collections mit Zod-Schema: `blog` (title, description, date, tags, category, image?, draft) und `case-studies` (zusätzlich client, industry, timeframe, role, services, results[]). Ein neuer Artikel ist eine Markdown-Datei in `src/content/blog/`, der Dateiname ist der Slug. Neue Pflichtfelder im Frontmatter müssen im Schema landen, sonst bricht der Build.
+
+**Drafts werden an vier Stellen gefiltert**, immer mit `getCollection('blog', ({ data }) => !data.draft)`: `pages/index.astro` (Blog-Teaser), `pages/blog/index.astro`, `pages/blog/[...slug].astro` und `pages/rss.xml.ts`. Dazu `pages/og/[...route].ts` für OG-Bilder. Wer die Draft-Logik ändert, muss alle fünf anfassen.
+
+**Blog-Kategorien sind hart kodiert.** `pages/blog/index.astro` hat `CATEGORY_ORDER`; eine Kategorie im Frontmatter, die dort fehlt, bekommt keinen Tab (der Artikel erscheint trotzdem in der Liste). Neue Kategorie = Frontmatter + `CATEGORY_ORDER` + Liste in dieser Datei ("Blog-Kategorien" unten).
+
+**OG-Images werden zur Build-Zeit gerendert** (astro-og-canvas, `pages/og/[...route].ts`). Die Route baut ein `pages`-Objekt aus allen nicht-draft Blog-Artikeln und Case Studies plus festen Einträgen für `index`, `blog`, `tools`, `case-studies`, `leistungen`. `layouts/Layout.astro` wählt das Bild in dieser Reihenfolge: explizites `image`-Prop, `ogRoute`-Prop (setzen `BlogLayout`/`CaseStudyLayout`), Pfad-Auto-Erkennung für die statischen Seiten (Liste in `resolveOgRoute()`), sonst `/icon-512.png`. Eine neue statische Seite mit eigenem OG-Bild braucht Einträge an **beiden** Stellen (og-Route und `resolveOgRoute`).
+
+Der OG-Schritt lädt beim Build Schriften von `api.fontsource.org` nach (astro-og-canvas). Ohne Netz oder in Sandboxes, die den Host blocken, bricht `astro build` mit `Cannot read properties of null (reading 'countFamilies')` ab. Das ist kein Repo-Fehler; in GitHub Actions läuft der Build durch.
+
+**Suche läuft über Pagefind, nur nach Full-Build.** `BlogLayout.astro` markiert Artikel mit `data-pagefind-body`; die Blog-Index-Seite lädt `/pagefind/pagefind.js` zur Laufzeit. Im Dev-Server und bei `build:fast` existiert der Index nicht, die Suche loggt dann nur eine Warnung. Das ist kein Bug.
+
+**Zentrale Konfiguration:** `src/config/site.ts` hält externe URLs (LinkedIn, Formspree-Formular, Buttondown-Endpoint), Site-Metadaten und den Verfügbarkeits-Status (`available` / `limited` / `booked`) für den Header-Indikator. Dort ändern, nicht in einzelnen Komponenten. `src/lib/media.ts` (`hasMedia()`) prüft zur Build-Zeit, ob ein Higgsfield-Asset in `public/media/` liegt; Komponenten rendern sonst einen Fallback-Verlauf (Details unten).
+
+**Layouts:** `Layout.astro` ist die Hülle (Head, Meta, Canonical, OG, Filmkorn-Overlay, Fonts). `BlogLayout` und `CaseStudyLayout` wrappen es; Header und Footer werden pro Seite eingebunden, nicht im Layout. Interne Links nutzen `import.meta.env.BASE_URL` als Präfix. Path-Alias `@/*` → `src/*` ist in `tsconfig.json` definiert.
+
+**Markdown-Pipeline:** `astro.config.mjs` registriert ein eigenes Rehype-Plugin, das allen `<img>` im Content `loading="lazy"` und `decoding="async"` gibt. MDX ist aktiviert, Sitemap wird automatisch erzeugt, `site` ist `https://busche.cloud`.
+
+**Gitignored, aber referenziert:** `.claude/` (Commands `/prime`, `/create-plan`, `/implement`, `/shutdown`, Skills, `launch.json`) und `reference/` liegen nur lokal auf Marlons Rechner. In einer frischen Clone-Umgebung (z. B. Claude Code Web) existieren sie nicht; Verweise in dieser Datei auf `reference/*.html` oder die Slash-Commands sind dann nicht auflösbar.
 
 **Browser-Preview:** `.claude/launch.json` (Projekt-Root) startet den Dev-Server mit `npm run dev --prefix website` auf Port 4321. In Claude Code via `preview_start` mit Name `website-dev`.
 
