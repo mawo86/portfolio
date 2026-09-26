@@ -238,12 +238,12 @@ Die OG-Schriften liegen seit 2026-09-26 lokal (`src/assets/og-fonts/`), der Buil
 - `chatgpt-vs-claude-unternehmen` — ChatGPT vs Claude Vergleich
 - `ki-prozesse-identifizieren` — 5 Zeichen für KI-geeignete Prozesse (überarbeitet: keine persönlichen Beispiele, allgemein bekannte Referenzen)
 - `nordvpn-sicher-arbeiten` — Warum ein VPN heute zum Arbeitsalltag gehört (inkl. NordVPN Affiliate-Link)
-- `mein-ki-toolkit` — Persönliches Tool-Setup (**Achtung:** steht seit Commit 252bee1 auf `draft: true`, ist also nicht live. Sechs Artikel verlinkten darauf, seit 2026-09-26 zeigen diese Links auf `/tools`. Entscheiden: Artikel überarbeiten und live stellen oder aus dieser Liste streichen.)
+- `mein-ki-toolkit` — Persönliches Tool-Setup (war von Commit 252bee1 bis 2026-09-26 versehentlich auf `draft: true`, seit 2026-09-26 wieder live; die sechs internen Links aus anderen Artikeln zeigen wieder auf den Artikel)
 - `ki-strategie-erste-schritte` — KI-Strategie Einsteigerguide
 - `sap-ki-integration` — SAP + KI Praxis
 - `mein-ki-os` — KI-Betriebssystem (inkl. Garrit Wilson / KIPA Credit)
 - `prompts-die-funktionieren` — 5 Prompts aus dem echten Alltag
-- `n8n-erster-workflow` — n8n Einstieg Schritt-für-Schritt
+- `n8n-erster-workflow` — n8n Einstieg Schritt-für-Schritt (**Achtung:** steht seit Commit 252bee1 auf `draft: true`, ist also nicht live. `mein-ki-toolkit` verlinkte darauf, der Link zeigt seit 2026-09-26 auf `/tools#automatisierung`. Entscheiden: live stellen oder aus dieser Liste streichen.)
 - `ein-jahr-ki` — Ein Jahr KI im Alltag: Erfahrungsbericht (fundamental überarbeitet 2026-04-21)
 
 **Blog-Drafts (draft: true, KW16–25, 21 Artikel):**
@@ -312,10 +312,9 @@ Neu 2026-09-14, abgeleitet aus Transkript-Analyse (`context/strategy.md`): `eu-a
 Invarianten (nie ändern ohne bewussten Grund): Score = Zeitaufwand × Automatisierbarkeit × Umsetzbarkeit (Produkt, 1–125, Schwellen 60/20), Std./Woche als Erfassungseinheit, max. 3 Bereiche, 7 Leitfragen.
 
 **Noch ausstehend:**
+- `n8n-erster-workflow` entscheiden: live stellen oder aus der Live-Liste streichen (siehe Blog-Artikel). Nach `mein-ki-toolkit` der zweite Artikel, den Commit 252bee1 stillschweigend auf Draft gesetzt hat.
 - Buttondown: Tag `use-case-finder` anlegen und eine Automation "Willkommens-Mail für Tag use-case-finder" mit der ausführlichen Fassung der Lösungen (Link auf `/loesungen` plus PDF oder Text) einrichten. Bis dahin bekommen Finder-Abonnenten nur die Bestätigungsmail. Metadaten `finder_*` kommen mit und stehen im Abonnenten-Profil.
 - GoatCounter: Events-Ansicht prüfen (Pfade `ev/finder_gestartet` usw. erscheinen nach den ersten Klicks), optional als Dashboard-Filter speichern.
-- `mein-ki-toolkit` entscheiden: live stellen oder aus der Live-Liste streichen (siehe Blog-Artikel).
-- Pull Request [mawo86/portfolio#1](https://github.com/mawo86/portfolio/pull/1) reviewen und mergen; danach läuft `pr-check.yml` bei jedem weiteren PR.
 - `paket-tagessatz.jpg` und `kontakt.jpg` generieren, sobald wieder Credits verfügbar sind (Prompts bereits in `reference/higgsfield-briefing.md`)
 - `hero.mp4` + `hero-poster.jpg`: Video braucht Higgsfield-Plan-Upgrade (Free-Plan reicht nicht, ~56 Credits/Video) oder Credit-Top-up
 - `about.jpg` durch ein echtes Porträt ersetzen (aktuell nur Umgebungsbild als Übergangslösung)
