@@ -2,6 +2,7 @@
 import { getCollection, type CollectionEntry } from 'astro:content';
 import { BEREICHE, ZEITPROBLEME } from '../content/config';
 import { pakete } from '../config/site';
+import { chipBereich } from './tonal';
 
 export type Loesung = CollectionEntry<'loesungen'>;
 
@@ -13,6 +14,7 @@ export async function getLoesungen(): Promise<Loesung[]> {
 // Kompakte Form für clientseitigen Finder (wird als JSON in die Seite gerendert).
 export function toFinderItem(l: Loesung) {
   return {
+    bereichChip: chipBereich(l.data.bereich),
     slug: l.slug,
     title: l.data.title,
     problem: l.data.problem,

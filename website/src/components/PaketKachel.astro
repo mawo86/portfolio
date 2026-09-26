@@ -1,0 +1,92 @@
+---
+// Tonfläche für ein Paket: ersetzt das Bild auf /leistungen. Jede Kachel trägt eine kleine,
+// paketspezifische Grafik, die etwas Wahres über das Paket sagt (Leitfragen, Wochen, Termine, Stunden).
+import { paketTonal, tonalClass, tonalSolid } from '../lib/tonal';
+
+export interface Props {
+  id: string;
+  step: string | null;
+  name: string;
+  claim: string;
+  price: string;
+  duration: string;
+  class?: string;
+}
+const { id, step, name, claim, price, duration, class: className = '' } = Astro.props;
+const t = paketTonal[id] ?? 'neutral';
+const tone = tonalClass[t];
+const solid = tonalSolid[t];
+const wochen = ['Finden', 'Bauen', 'Testen', 'Läuft'];
+const monate = ['Monat 1', 'Monat 2', 'Monat 3'];
+---
+
+<div class={`relative aspect-[4/5] lg:aspect-[5/6] rounded-[28px] overflow-hidden p-7 sm:p-9 flex flex-col ${tone} ${className}`} role="img" aria-label={`${name}: ${claim}, ${price}`}>
+  <!-- Schrittnummer als Wasserzeichen -->
+  <span class="absolute -top-3 right-5 font-display font-extrabold text-[7rem] sm:text-[9rem] leading-none opacity-[0.12] select-none" aria-hidden="true">{step ?? '∞'}</span>
+
+  <p class="relative text-[0.7rem] font-semibold uppercase tracking-[0.18em] opacity-70">{step ? `Stufe ${step}` : 'Ergänzend'} · {duration}</p>
+
+  <!-- Paketspezifische Grafik -->
+  <div class="relative flex-1 flex items-center" aria-hidden="true">
+    {id === 'readiness-check' && (
+      <div class="w-full">
+        <p class="text-[0.7rem] font-semibold uppercase tracking-[0.14em] opacity-70 mb-4">7 Leitfragen, 2 Stunden</p>
+        <div class="flex items-center gap-2.5">
+          {Array.from({ length: 7 }).map((_, i) => (
+            <span class={`h-3.5 w-3.5 rounded-full ${i < 5 ? solid : 'bg-white/70'}`}></span>
+          ))}
+        </div>
+        <div class="mt-6 grid grid-cols-3 gap-2">
+          {['Sofort', '3 Monate', 'Beobachten'].map((p, i) => (
+            <div class={`rounded-xl px-3 py-2.5 text-[0.7rem] font-semibold ${i === 0 ? `${solid} text-white` : 'bg-white/70'}`}>{p}</div>
+          ))}
+        </div>
+      </div>
+    )}
+    {id === 'pilot-projekt' && (
+      <div class="w-full">
+        <p class="text-[0.7rem] font-semibold uppercase tracking-[0.14em] opacity-70 mb-4">Vier Wochen bis Produktion</p>
+        <div class="grid grid-cols-4 gap-2 items-end h-28">
+          {wochen.map((w, i) => (
+            <div class="flex flex-col gap-2 h-full justify-end">
+              <span class={`w-full rounded-lg ${i === 3 ? solid : 'bg-white/70'}`} style={`height: ${[28, 52, 76, 100][i]}%`}></span>
+              <span class="text-[0.65rem] font-semibold text-center">{w}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    )}
+    {id === 'begleitung' && (
+      <div class="w-full">
+        <p class="text-[0.7rem] font-semibold uppercase tracking-[0.14em] opacity-70 mb-4">Zwei Gespräche im Monat, Antwort in 48 h</p>
+        <div class="grid grid-cols-3 gap-3">
+          {monate.map(m => (
+            <div class="rounded-xl bg-white/70 p-2.5">
+              <p class="text-[0.6rem] font-semibold mb-2 opacity-80">{m}</p>
+              <div class="grid grid-cols-4 gap-1">
+                {Array.from({ length: 8 }).map((_, i) => (
+                  <span class={`h-2 rounded-sm ${i === 1 || i === 5 ? solid : 'bg-white'}`}></span>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    )}
+    {id === 'tagessatz' && (
+      <div class="w-full">
+        <p class="text-[0.7rem] font-semibold uppercase tracking-[0.14em] opacity-70 mb-4">Ein Tag, Vor- und Nachbereitung inklusive</p>
+        <div class="flex items-center gap-1.5">
+          {['Vorbereitung', '9', '10', '11', '12', '13', '14', '15', '16', '17', 'Nachbericht'].map((h, i) => (
+            <span class={`flex-1 h-10 rounded-md flex items-center justify-center text-[0.6rem] font-semibold ${i === 0 || i === 10 ? 'bg-bone-50/10 text-bone-50' : 'bg-white/90 text-bone-50'} ${i === 0 || i === 10 ? 'flex-[1.6] [writing-mode:vertical-rl] rotate-180' : ''}`}>{h}</span>
+          ))}
+        </div>
+      </div>
+    )}
+  </div>
+
+  <div class="relative">
+    <p class="font-display font-semibold text-[1.35rem] leading-tight tracking-tight mb-2" style="text-wrap: balance;">{claim}</p>
+    <p class="font-display font-bold text-[2rem] leading-none tracking-tight">{price}</p>
+  </div>
+</div>

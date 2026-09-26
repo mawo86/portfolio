@@ -163,6 +163,14 @@ const absoluteImage = ogImagePath.startsWith('http') ? ogImagePath : new URL(ogI
         font-feature-settings: 'kern';
       }
 
+      /* Pill-Buttons drücken sich beim Klick leicht ein (Material-Gefühl ohne Ripple-Skript) */
+      a.rounded-full, button.rounded-full {
+        transition-property: color, background-color, border-color, transform;
+        transition-duration: 150ms;
+      }
+      a.rounded-full:active, button.rounded-full:active { transform: scale(0.97); }
+      @media (prefers-reduced-motion: reduce) { a.rounded-full:active, button.rounded-full:active { transform: none; } }
+
       /* Header-Offset für Anker-Links */
       :target,
       section[id],

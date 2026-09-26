@@ -3,6 +3,7 @@
 // damit der Leser vom Thema zum konkreten nächsten Schritt kommt statt nur zum Newsletter.
 import { loesungenFuerKategorie, bereichLabel } from '../lib/loesungen';
 import { pakete } from '../config/site';
+import { chipBereich } from '../lib/tonal';
 
 export interface Props {
   category: string;
@@ -20,7 +21,7 @@ const BASE = import.meta.env.BASE_URL;
     <div class="grid sm:grid-cols-2 gap-3">
       {passend.map(l => (
         <a href={`${BASE}loesungen/${l.slug}`} data-track="paket_cta_geklickt" data-track-label={`blog→${l.slug}`} class="group block p-5 bg-ink-900 border border-bone-50/[0.06] hover:border-bone-50/20 rounded-xl transition-colors">
-          <span class="text-[0.65rem] font-semibold uppercase tracking-wider text-bone-600">{bereichLabel[l.data.bereich]} · {pakete[l.data.paket].name}</span>
+          <span class="flex flex-wrap items-center gap-2 text-[0.65rem] text-bone-600"><span class={chipBereich(l.data.bereich)}>{bereichLabel[l.data.bereich]}</span><span>{pakete[l.data.paket].name}</span></span>
           <p class="font-display font-semibold text-bone-50 text-[1.02rem] mt-2 leading-snug tracking-tight group-hover:text-brand-300 transition-colors">{l.data.title}</p>
           <p class="mt-2 text-bone-400 text-sm leading-relaxed line-clamp-2">{l.data.description}</p>
         </a>
