@@ -68,3 +68,10 @@ Gilt `_betriebsstandard.md`. Hier besonders:
 - EU-AI-Act-Einstufung (für alle anderen KI-Anwendungen im Haus)
 - Stellenanzeigen und HR-Texte (unkritischer Einstieg)
 - KI-Einführung im Team (Betriebsratsvorlage wiederverwenden)
+
+## 10. Belege und Quellen
+
+- Anhang III Nr. 4 KI-VO: Einstellung, Auswahl, Filtern, Bewerten von Bewerbungen = Hochrisiko; materielle Beeinflussung reicht (Kanzleizusammenfassungen lawpilots, tww.law 09/2026).
+- Digital Omnibus: Frist 02.12.2027. Argument: Wer jetzt Ranking kauft, betreibt in einem Jahr ein Hochrisiko-System.
+- § 95 BetrVG (Auswahlrichtlinien), § 87 Abs. 1 Nr. 6 BetrVG mit ArbG Hamburg 24 BVGa 1/24 im Umkehrschluss.
+- § 26 BDSG (Beschäftigtendaten), Art. 22 DSGVO (automatisierte Entscheidung) als Rahmen; Datenschutzbeauftragten einbinden.

@@ -22,11 +22,17 @@ Schatten-KI ist die Regel, nicht die Ausnahme: Mitarbeitende nutzen private Kont
 
 ## Was wir bauen
 
-Wir sortieren eure Datenarten in drei Stufen (öffentlich, intern, personenbezogen oder vertraulich) und ordnen jeder Stufe zu, welche Werkzeuge erlaubt sind. Dazu kommt die Liste der nötigen Verträge mit den Anbietern (Auftragsverarbeitung, EU-Hosting, kein Training mit euren Daten) und ein Einseiter für das Team: Das darfst du, das nicht, so machst du es richtig. Ich bin kein Anwalt und ersetze keine Rechtsberatung. Ich bereite die Entscheidung so vor, dass euer Datenschutzbeauftragter oder Anwalt sie in einer Stunde absegnen kann.
+Drei Dokumente und ein Einseiter, keine Software. Erstens eine Datenklassen-Matrix mit drei Stufen (öffentlich, intern, personenbezogen oder vertraulich) und Beispielen aus eurem Haus pro Stufe. Zweitens eine Werkzeugliste: Für jedes heute genutzte und jedes geplante KI-Werkzeug steht drin, bis zu welcher Stufe es erlaubt ist und warum, geprüft an vier Fragen: Gibt es einen Auftragsverarbeitungsvertrag, wo werden die Daten verarbeitet, werden sie zum Training genutzt, wie lange werden sie gespeichert. Drittens eine Vertragscheckliste für das Zielwerkzeug. Der Einseiter für das Team ist positiv formuliert: Das darfst du, so machst du es richtig (Namen raus, Platzhalter rein), das nicht. Ich bereite das so vor, dass euer Datenschutzbeauftragter oder Anwalt es in einer Stunde absegnen kann. Ich bin kein Anwalt und ersetze keine Rechtsberatung.
 
 ## Was das bringt
 
-Rechtssicherheit für das, was ohnehin passiert, und die Grundlage für jede weitere Automatisierung. Das Team bekommt statt Verbot ein freigegebenes Werkzeug. Das Bußgeldrisiko und der Datenabfluss über private Konten sinken deutlich.
+Dass Schatten-KI die Regel ist, hat Bitkom im Oktober 2025 bei 604 Unternehmen ab 20 Beschäftigten erhoben: 42 Prozent berichten von bekannter oder vermuteter Nutzung privater KI-Tools im Job, in 8 Prozent ist sie weit verbreitet, doppelt so viele wie im Vorjahr. Ein Verbot ändert daran erfahrungsgemäß nichts, ein freigegebenes Werkzeug schon.
+
+Die Regeln, gegen die wir prüfen, sind öffentlich: Die Datenschutzkonferenz hat im Mai 2024 eine Orientierungshilfe "KI und Datenschutz" mit Fokus auf Sprachmodelle veröffentlicht, eine Checkliste für Auswahl und Einsatz. Die Hamburger Datenschutzbehörde hat im Juli 2024 in einem Diskussionspapier klargestellt, dass ein Sprachmodell selbst keine personenbezogenen Daten speichert, die Eingaben und Ausgaben aber sehr wohl unter die DSGVO fallen. Für die großen Anbieter gilt: Bei Business-Verträgen ist ein Auftragsverarbeitungsvertrag enthalten und Training mit euren Daten ausgeschlossen, bei Anthropic zum Beispiel als Teil der Commercial Terms. Bei Consumer-Konten gilt das nicht.
+
+## Wo es schwierig wird
+
+Der Datentransfer in die USA. Auch mit EU-Region bleibt ein US-Anbieter ein US-Unternehmen, und der Datenschutzbeauftragte wird das Thema Drittlandtransfer und CLOUD Act aufmachen, zu Recht. Die Antwort ist differenziert: Für personenbezogene Daten der Stufe drei entweder ein EU-Anbieter, ein Betrieb über AWS Frankfurt mit den entsprechenden Vertragsklauseln, oder gar keine KI. Das entscheidet ihr mit eurem Datenschutzbeauftragten, ich bereite die Optionen auf. Zweitens: Drei Stufen halten die Leute im Alltag ein, fünf nicht. Wer es genauer will, bekommt es genauer und dann hält sich niemand daran.
 
 ## Was ihr dafür braucht
 

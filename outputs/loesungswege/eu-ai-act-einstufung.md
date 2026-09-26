@@ -66,3 +66,9 @@ Kein technischer Betrieb, aber Pflegeprozess:
 - DSGVO-Check (parallel oder davor)
 - KI-Einführung im Team (Schulungspflicht erfüllen)
 - Entscheidungsvorlage für die Geschäftsführung zu Hochrisiko-Kandidaten
+
+## 10. Belege und Quellen
+
+- VO (EU) 2026/1744 (Digital Omnibus on AI), ABl. 24.07.2026: Anhang III ab 02.12.2027, Anhang I ab 02.08.2028. Zusammenfassungen: Gibson Dunn, Covington, Travers Smith, DLA Piper (Mai bis Aug 2026). Vor jedem Workshop eur-lex prüfen, Leitlinien der Kommission ändern sich.
+- VO (EU) 2024/1689 Anhang III Nr. 4 (Beschäftigung), Art. 4 (KI-Kompetenz, seit 02.02.2025), Art. 5 (Verbote), Art. 14 (menschliche Aufsicht), Art. 26 (Betreiberpflichten), Art. 50 (Transparenz, ab 02.08.2026).
+- Bitkom KI 2025 als Kontext, wie wenige Unternehmen überhaupt ein Inventar haben (nicht explizit erhoben, Ableitung).

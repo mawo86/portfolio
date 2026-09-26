@@ -7,7 +7,7 @@ zeitprobleme: ["Zahlen und Reporting", "Fehler und Nacharbeit"]
 branchen: ["Dienstleistung", "Fertigung", "Handel", "Software"]
 werkzeuge: ["Logging pro Aufruf", "Kosten-Dashboard", "Stichproben-Bewertung", "Budget-Alarme", "Modell-Routing"]
 aufwand: "3 bis 5 Tage, dann laufend"
-einsparung: "Typisch 30 bis 60 % geringere Modellkosten durch passendes Modell pro Aufgabe"
+einsparung: "Modellkosten sinken durch Routing spürbar; Benchmarks zeigen bis 85 %, ich rechne mit 30 bis 60 %"
 paket: "begleitung"
 reifegrad: "Betrieb"
 sapNah: false
@@ -22,11 +22,15 @@ KI-Kosten skalieren mit der Nutzung, und Nutzung ist gut. Aber ohne Zuordnung pr
 
 ## Was wir bauen
 
-Jeder KI-Aufruf wird mit Workflow, Zweck, Modell, Tokenverbrauch und Ergebnis protokolliert. Ein Dashboard zeigt Kosten pro Workflow und Tag, ein Budget-Alarm meldet Ausreißer. Für die Qualität ziehen wir täglich Stichproben, die eine zweite KI-Instanz nach euren Kriterien bewertet, und ein Mensch prüft wöchentlich zehn Fälle. Dazu kommt Modell-Routing: Einfache Aufgaben laufen auf günstigen Modellen, nur schwierige auf den teuren.
+Jeder Aufruf eines Sprachmodells läuft über einen kleinen gemeinsamen Baustein, der Workflow, Zweck, Modell, Eingabe- und Ausgabe-Token und Sicherheitswert protokolliert. Eine Preistabelle im Repo (monatlich aktualisiert, weil sich Preise und Modelle ändern) macht daraus Euro pro Workflow und Tag, sichtbar in einer einfachen Ansicht. Budgetgrenzen gibt es doppelt: hart beim Anbieter (Anthropic erlaubt Ausgabenlimits pro Workspace mit Warnungen bei Schwellen) und weich im eigenen Protokoll pro Workflow, mit Pausieren statt Weiterlaufen. Für die Qualität zieht das System täglich Stichproben und lässt ein zweites Modell nach euren fünf bis zehn Kriterien mit Ja oder Nein bewerten. Wöchentlich prüft ein Mensch zehn Fälle, und wenn Mensch und Modell zu oft auseinanderliegen, wird der Prüf-Prompt geschärft, nicht der Mensch überstimmt. Modell-Routing schickt einfache Aufgaben (Klassifikation, kurze Extraktion) auf das günstige Modell und komplexe auf das starke, mit Regressionstest pro Route vor jeder Umschaltung.
 
 ## Was das bringt
 
-Erfahrungswert aus vergleichbaren Setups: 30 bis 60 Prozent geringere Modellkosten durch passendes Routing, ohne spürbaren Qualitätsverlust. Verschlechterungen werden innerhalb eines Tages bemerkt, nicht nach einem Monat. Die Geschäftsführung sieht, was KI kostet und was sie bringt, pro Prozess.
+Die Größenordnungen sind gut untersucht. RouteLLM, ein Forschungsprojekt aus Berkeley (ICLR 2025), erreichte durch Routing zwischen einem starken und einem schwachen Modell auf dem Benchmark MT-Bench 85 Prozent geringere Kosten bei 95 Prozent der Qualität des starken Modells, auf anderen Benchmarks 35 bis 45 Prozent. Das sind Benchmarks, keine Mittelstands-Workflows, deshalb rechne ich bei euch mit 30 bis 60 Prozent, abhängig davon, wie viel einfache Arbeit dabei ist. Der Preisabstand macht es plausibel: Das kleinste aktuelle Claude-Modell kostet je Million Token ein Bruchteil des größten. Dass ein Modell als Prüfer taugt, zeigt die Arbeit von Zheng et al. (NeurIPS 2023): Ein starkes Modell stimmte in über 80 Prozent der Fälle mit menschlichen Bewertern überein, etwa so oft wie Menschen untereinander. Deshalb die wöchentliche menschliche Stichprobe zur Kalibrierung, nicht als Misstrauen, sondern weil 80 Prozent nicht 100 sind.
+
+## Wo es schwierig wird
+
+Billig und falsch ist teurer als teuer und richtig. Wer nur Kosten misst, merkt den Qualitätsverlust nach dem Routing erst an Beschwerden. Deshalb kein Routing ohne Testset pro Route. Zweitens bewertet ein Modell als Richter systematisch, also auch systematisch falsch, wenn niemand kalibriert. Zehn Fälle pro Woche durch einen Menschen sind Pflicht. Drittens ändern Anbieter Preise und Modelle im Quartalsrhythmus, die Preistabelle veraltet, wenn sie niemand pflegt.
 
 ## Was ihr dafür braucht
 

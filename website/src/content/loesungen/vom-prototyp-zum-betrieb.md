@@ -22,11 +22,17 @@ Der Mittelstand scheitert selten am Prototyp. Er scheitert daran, dass der Proto
 
 ## Was wir bauen
 
-Wir überführen eure Workflows in einen Betriebsmodus, den auch eure IT versteht. Workflows, Prompts und Konfiguration liegen versioniert in Git. Es gibt eine Test-Umgebung, in der Änderungen mit echten Beispielfällen automatisch geprüft werden, bevor sie live gehen. Das Deployment läuft per Pipeline auf Knopfdruck, der Rollback genauso. Zugangsdaten liegen in einem Secrets-Manager, nicht im Workflow. Logging zeigt, was das System entschieden hat, und ein Alarm meldet sich, wenn die Fehlerquote steigt oder die Kosten aus dem Rahmen laufen.
+Wir holen eure Workflows von Laptops und Einzelinstanzen in einen Betrieb, den eure IT versteht. Workflows (bei n8n als JSON-Export), Anweisungen an das Modell und Konfiguration liegen versioniert in eurem Git. Es gibt zwei getrennte Umgebungen, Test und Produktion, als zwei Container mit eigenen Datenbanken, und der Unterschied steckt in Umgebungsvariablen, nicht im Workflow. Änderungen laufen über einen Pull Request, der automatisch 20 bis 50 echte, anonymisierte Testfälle durch die neue Version schickt und die Trefferquote mit der alten vergleicht. Grün heißt: Deploy nach Test, Smoke-Test, Freigabe durch eine benannte Person, Deploy nach Produktion, per Skript über die n8n-Schnittstelle. Zurückrollen ist ein Revert, unter fünf Minuten. Zugangsdaten liegen in einem Secrets-Speicher, nicht im Workflow-Export. Jeder Modellaufruf schreibt eine Protokollzeile, ein Fehler-Workflow meldet Ausfälle, Alarme feuern bei Fehlerquote, Kosten und ausbleibenden Ausführungen. Am Ende steht ein Runbook, das die IT einmal gemeinsam mit mir durchgespielt hat.
 
 ## Was das bringt
 
-Änderungen dauern Minuten statt Tage, weil niemand Angst hat, etwas kaputt zu machen. Ausfälle werden bemerkt, bevor der Kunde anruft. Und die Lösung überlebt den Weggang der Person, die sie gebaut hat.
+Warum das nötig ist, belegen zwei Untersuchungen aus 2025. Eine MIT-Studie (NANDA, "The GenAI Divide") fand, dass 95 Prozent der untersuchten Pilotprojekte keinen messbaren Ergebnisbeitrag lieferten. Gartner prognostizierte im Juli 2024, dass mindestens 30 Prozent der Projekte nach dem Proof of Concept abgebrochen werden, wegen Datenqualität, fehlender Risikokontrollen, steigender Kosten oder unklarem Nutzen. Das sind genau die Punkte, die im Betriebsstandard adressiert sind: Tests gegen echte Fälle, Protokoll, Kostenalarm, Rollback.
+
+Die Werkzeuge dafür sind Standard, nicht Sonderbau: n8n exportiert Workflows als JSON und bietet eine REST-Schnittstelle für Import und Aktivierung sowie einen Fehler-Trigger für Alarm-Workflows. Anthropic bietet Ausgabenlimits pro Workspace mit Warnschwellen. Was der Betrieb an Zeit spart, lässt sich nicht extern belegen. Was er verhindert, schon: den Ausfall, den der Kunde vor euch bemerkt.
+
+## Wo es schwierig wird
+
+Wer Make statt n8n nutzt, bekommt keine brauchbare Versionierung, weil Make Szenarien nicht sauber exportiert. Dann ist der Betriebsstandard schwächer, und das sage ich vorher. Zweitens die Versuchung, während der Stabilisierung neue Funktionen einzubauen. Erst Betrieb, dann Features, sonst weiß niemand, was den Fehler verursacht hat. Drittens braucht der Betrieb jemanden in eurer IT, der zwei Stunden im Monat dafür hat. Ohne diese Person läuft es nach meinem Ausstieg genau so lange, bis das erste Zertifikat abläuft.
 
 ## Was ihr dafür braucht
 

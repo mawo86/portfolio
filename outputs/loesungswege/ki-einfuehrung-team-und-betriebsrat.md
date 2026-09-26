@@ -74,3 +74,12 @@ Kein technischer Betrieb, aber Kontinuität:
 - Jeder Pilot profitiert (deshalb läuft das parallel zum ersten Piloten)
 - DSGVO-Check und EU-AI-Act-Einstufung liefern das Regelwerk
 - Stellenanzeigen und Meeting-Zusammenfassungen als niedrigschwellige Übungsfälle in der Schulung
+
+## 10. Belege und Quellen
+
+- Bitkom KI-Studie 2025: 36 % Nutzung, 47 % planen, 33 % höhere Kosten als erwartet.
+- MIT NANDA "The GenAI Divide" (07/2025): 95 % ohne messbaren P&L-Effekt. Methodik dünn, als Argument nutzbar, nicht als Beweis.
+- Gartner 29.07.2024: mind. 30 % Abbruch nach PoC bis Ende 2025 (Prognose).
+- Hans-Böckler-Stiftung: Datenbank Betriebsvereinbarungen, KI-Vereinbarungen mit Klauseln zu menschlicher Entscheidung und Schulung. Vorlage daran anlehnen.
+- ArbG Hamburg 16.01.2024: Browser-Nutzung nicht mitbestimmungspflichtig. Trotzdem einbinden.
+- Art. 4 KI-VO: Schulungspflicht, Teilnehmerlisten archivieren.

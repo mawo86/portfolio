@@ -19,7 +19,7 @@ Eingangsrechnungen werden manuell erfasst. Wir bauen Auslesen, Abgleich mit Best
 
 ## 3. Werkzeugentscheidung
 
-n8n plus Claude Sonnet mit Bild- und PDF-Eingabe (kein separater OCR-Dienst nötig, bei sehr schlechten Scans Vorverarbeitung). Bei XRechnung/ZUGFeRD: XML direkt parsen, kein Modell nötig. ERP: SAP über OData (API_SUPPLIERINVOICE_PROCESS_SRV für Vorerfassung, API_PURCHASEORDER_PROCESS_SRV für Bestellung) oder Batch-Input-Vorlage, DATEV über Belegimport-Format.
+n8n plus Claude Sonnet mit Bild- und PDF-Eingabe (kein separater OCR-Dienst nötig, bei sehr schlechten Scans Vorverarbeitung). Bei XRechnung/ZUGFeRD: XML direkt parsen, kein Modell nötig. ERP: SAP über OData (API_SUPPLIERINVOICE_PROCESS_SRV für Vorerfassung, OData V4 Purchase Order api_purchaseorder_2 für Bestellung; der V2-Dienst API_PURCHASEORDER_PROCESS_SRV ist seit 2308 abgekündigt) oder Batch-Input-Vorlage, DATEV über Belegimport-Format.
 
 ## 4. Umsetzung
 

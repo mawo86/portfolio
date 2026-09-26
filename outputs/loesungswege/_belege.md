@@ -134,3 +134,73 @@
 | Controlling & Management Review 2025, "Generative KI im Controlling praktisch umsetzen" | Springer, doi 10.1007/s12176-025-1497-1 | Studie/Fachartikel | S | Volltext nicht gelesen |
 | ICV-Studie zu KI und Automatisierung in Reporting und Forecasting (Eisl, Hofer, Perkhofer) läuft/lief 2025 | Haufe Controlling | Fachpresse | S | Ergebnisse nachschlagen, wenn veröffentlicht |
 | 1 bis 2 Tage pro Abschluss | keine externe Quelle | Einschätzung | E | |
+
+## dsgvo-check-fuer-ki-einsatz
+
+| Aussage | Quelle | Art | Tiefe | Anmerkung |
+|---|---|---|---|---|
+| Schatten-KI: 42 % bekannt/vermutet, 8 % weit verbreitet (2024: 4 %), 17 % Einzelfälle, n=604 ab 20 MA, Okt 2025 | Bitkom Presseinformation "Beschäftigte nutzen vermehrt Schatten-KI" | Studie | S | Seite blockiert, Zahlen aus mehreren Treffern konsistent |
+| DSK-Orientierungshilfe KI und Datenschutz, 06.05.2024 | datenschutzkonferenz-online.de | Gesetz/Behörde | S | |
+| HmbBfDI Diskussionspapier 15.07.2024: LLM speichert keine personenbezogenen Daten, Ein-/Ausgabe fällt unter DSGVO | datenschutz-hamburg.de | Gesetz/Behörde | S | |
+| Anthropic: DPA in Commercial Terms, kein Training mit Kundendaten, ZDR für Enterprise, Drittlandtransfer bleibt | Anthropic Privacy Center, API and data retention Doku | Doku | S | |
+| Consumer-Konten ohne AVV sind kein Business-Einsatz | eigene Einordnung aus den Anbieterbedingungen | Einschätzung | E | |
+
+## eu-ai-act-einstufung
+
+| Aussage | Quelle | Art | Tiefe | Anmerkung |
+|---|---|---|---|---|
+| Digital Omnibus VO (EU) 2026/1744, ABl. 24.07.2026, in Kraft 27.07.2026; Anhang III Hochrisiko ab 02.12.2027, Anhang I ab 02.08.2028; Art. 5 (02.02.2025), Art. 4 KI-Kompetenz (02.02.2025), Art. 50 (02.08.2026), GPAI (08/2025) unverändert | Gibson Dunn "EU AI Act Omnibus Agreement", Travers Smith, Covington Inside Privacy (Mai 2026), CSA Research Note, DLA Piper, Holland & Knight | Gesetz/Behörde über Kanzlei-Zusammenfassungen | S | **Korrektur** gegenüber Alttext (dort implizit Aug 2026). Vor Workshop eur-lex direkt prüfen |
+| Anhang III umfasst Einstellung/Auswahl, Beförderung, Kündigung, Aufgabenzuweisung, Leistungsüberwachung; wesentliche Beeinflussung (Ranking, Filtern, Scoring) reicht | Kanzlei-/Beraterzusammenfassungen (lawpilots, tww.law 22.09.2026, gallmond) zu VO (EU) 2024/1689 Anhang III Nr. 4 | Gesetz/Behörde | S | |
+| Art. 26 Abs. 11 Information Betroffener, Art. 14 menschliche Aufsicht | dito | Gesetz/Behörde | S | |
+
+## bewerber-vorsortierung-mit-augenmass
+
+| Aussage | Quelle | Art | Tiefe | Anmerkung |
+|---|---|---|---|---|
+| Recruiting-KI mit Ranking/Filtern = Hochrisiko Anhang III; Frist 02.12.2027 | siehe eu-ai-act | Gesetz/Behörde | S | |
+| § 95 BetrVG Auswahlrichtlinien mitbestimmungspflichtig; § 87 bei Systemen mit Protokollierung auf Firmensystemen wahrscheinlich (ArbG Hamburg 2024 im Umkehrschluss) | Kanzleizusammenfassungen zu 24 BVGa 1/24 | Gesetz/Behörde | S | § 95-Aussage ist Gesetzestext, nicht recherchiert, aber unstrittig |
+| Neutralitätstest mit Bewerbungspaaren | eigene Methode | Einschätzung | E | |
+| 1 bis 2 Tage Sichtzeit pro Stelle | keine externe Quelle | Einschätzung | E | |
+
+## ki-einfuehrung-team-und-betriebsrat
+
+| Aussage | Quelle | Art | Tiefe | Anmerkung |
+|---|---|---|---|---|
+| Bitkom 2025: 36 % nutzen KI, 33 % höhere Kosten als erwartet | Bitkom Studienbericht KI 2025 | Studie | S | |
+| MIT NANDA 2025: 95 % ohne messbaren P&L-Effekt (52 Interviews, 153 Befragte, 300 Deployments) | MIT NANDA "The GenAI Divide" Juli 2025 | Studie | S | Methodik ist dünn (Interviews/Survey), im Text als "Untersuchung" nicht "Studie" |
+| Gartner 29.07.2024: mind. 30 % GenAI-Projekte nach PoC abgebrochen bis Ende 2025 | Gartner Pressemitteilung | Studie/Prognose | S | Prognose, keine Messung |
+| Hans-Böckler-Stiftung Datenbank Betriebs-/Dienstvereinbarungen mit KI-Vereinbarungen (menschliche Entscheidung, Schulung vor Nutzung, jährlich) | boeckler.de | Doku | S | |
+| ArbG Hamburg 2024 | siehe oben | Gesetz/Behörde | S | |
+| Art. 4 KI-Kompetenz seit 02.02.2025 | siehe eu-ai-act | Gesetz/Behörde | S | |
+| Zielwerte 60 % / 80 % aktive Nutzer | eigene Zielsetzung | Einschätzung | E | Im Text so gekennzeichnet |
+
+## hosting-entscheidung-cloud-eu-onprem
+
+| Aussage | Quelle | Art | Tiefe | Anmerkung |
+|---|---|---|---|---|
+| Claude auf AWS Bedrock in eu-central-1 Frankfurt verfügbar | modelavailability.com, Gerloff "Claude on AWS vs Azure vs Google Cloud GDPR" (2026) | Doku/Fachpresse | S | |
+| Claude auf Microsoft Foundry GA (07/2026) ohne EU-Datenzone | InfoQ "Claude Reaches GA on Microsoft Foundry: European Enterprises Cannot Deploy It" (07/2026), Microsoft Q&A | Fachpresse | S | Kann sich schnell ändern, vor Workshop prüfen |
+| Azure OpenAI "Data Zone Standard" EU für OpenAI-Modelle | i6eal Guide, Microsoft-Doku | Doku | S | |
+| IONOS AI Model Hub: Llama, Mistral u. a., Rechenzentrum Berlin, OpenAI-kompatible API, Abrechnung pro Mio. Token in Euro | IONOS Blog, neuost Test, digital-magazin | Anbieter/Fachpresse | S | |
+| STACKIT AI Model Serving GA seit Mai 2025, Llama/Mistral, EU | docs.stackit.cloud, innfactory Test | Doku | S | |
+| Open Telekom Cloud / T Cloud Public: LLM-Serving mit Meta/Mistral, Rechenzentren Biere/Magdeburg | t-systems.com Referenz | Anbieter | S | |
+| Anthropic: EU-Datenresidenz und ZDR für Enterprise, Drittlandtransfer bleibt | siehe oben | Doku | S | |
+
+## vom-prototyp-zum-betrieb
+
+| Aussage | Quelle | Art | Tiefe | Anmerkung |
+|---|---|---|---|---|
+| MIT NANDA 95 %, Gartner 30 % | siehe ki-einfuehrung | Studie | S | |
+| n8n Export/Import JSON, REST-API, Error Trigger | docs.n8n.io | Doku | S | Aktivierung per API in älteren Versionen eingeschränkt |
+| Anthropic Ausgabenlimits pro Workspace mit Warnschwellen | Console-Doku über Torii/Weckr | Doku | S | |
+| Make ohne brauchbare Versionierung | eigene Erfahrung | Einschätzung | E | |
+
+## kosten-und-qualitaetsmonitoring
+
+| Aussage | Quelle | Art | Tiefe | Anmerkung |
+|---|---|---|---|---|
+| RouteLLM: 85 % Kostenersparnis auf MT-Bench, 45 % MMLU, 35 % GSM8K bei 95 % GPT-4-Qualität | Ong et al. ICLR 2025, arxiv 2406.18665, LMSYS Blog 01.07.2024 | Studie | S | Text nennt Benchmark-Charakter ausdrücklich |
+| Zheng et al. 2023: >80 % Übereinstimmung Modell-Richter mit Menschen, ähnlich Mensch-Mensch | arxiv 2306.05685, NeurIPS 2023 | Studie | S | |
+| Preisabstand Haiku zu Opus (1/5 vs 4/20 bzw. 5/25 USD pro Mio. Token) | Preisübersichten 09/2026 | Fachpresse | S | Im Text nur "Bruchteil", keine Zahl, weil Preise wechseln |
+| Anthropic Ausgabenlimits und Alarme | siehe oben | Doku | S | |
+| 30 bis 60 % in Praxis-Workflows | eigene Schätzung aus Benchmark abgeleitet | Einschätzung | E | |

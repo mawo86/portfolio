@@ -22,11 +22,17 @@ Die Hosting-Frage wird zur Glaubensfrage, weil sie ohne konkrete Anwendung disku
 
 ## Was wir bauen
 
-Ein Workshop-Tag mit IT, Datenschutz und Fachbereich. Wir nehmen eure konkreten Anwendungsfälle, zeichnen für jeden den Datenfluss und ordnen ihn einer Hosting-Option zu. Für jede Option bekommt ihr Anbieter, Vertragsanforderungen, Kostenmodell (monatlich, pro Nutzer, pro Anfrage) und die Grenzen: Was kann ein kleines Open-Source-Modell auf eurem Server, was nicht. Das Ergebnis ist eine Entscheidungsvorlage, die die Geschäftsführung am selben Tag unterschreiben kann.
+Ein Workshop-Tag mit IT, Datenschutz und Fachbereich, an konkreten Anwendungsfällen statt an Grundsatzfragen. Pro Fall zeichnen wir den Datenfluss (welche Daten, von wo, wohin, wer sieht sie) und ordnen die Datenklasse zu. Dann gehen wir die Optionen durch, mit Stand vom Workshop-Tag, weil sich das Feld schnell bewegt: US-Modelle über einen EU-Vertrag mit Verarbeitung in einer EU-Region, US-Modelle über eine europäische Cloud-Region eines Hyperscalers, europäische Anbieter mit Open-Source-Modellen in deutschen Rechenzentren, oder ein eigener Server mit eigenem Modell. Für jede Option: Vertragsanforderungen, Kosten für zwölf Monate (Anfragen mal Token mal Preis, plus Betrieb), Grenzen. Bei On-Premise-Wunsch zeige ich am eigenen Beispiel den Qualitätsunterschied zwischen kleinem und großem Modell. Ergebnis ist eine einseitige Entscheidungsvorlage und ein Architekturdokument im Repo, auf das jeder Pilot verweist.
 
 ## Was das bringt
 
-Die Entscheidung fällt in einem Tag statt in drei Monaten. Ihr zahlt nicht für einen eigenen Server, wenn ein EU-Vertrag reicht, und ihr riskiert nicht, dass personenbezogene Daten in der falschen Cloud landen.
+Die Optionen sind real und unterscheiden sich in Details, die im Vertrieb der Anbieter untergehen. Claude läuft über AWS Bedrock in der Region Frankfurt mit Datenhaltung in der EU. Über Microsoft Foundry ist Claude seit Mitte 2026 zwar allgemein verfügbar, aber ohne europäische Datenzone. Azure OpenAI bietet eine EU-Datenzone für die OpenAI-Modelle. Europäische Anbieter wie IONOS (AI Model Hub, Rechenzentrum Berlin, Abrechnung pro Million Token in Euro), STACKIT (AI Model Serving, allgemein verfügbar seit Mai 2025) und die Open Telekom Cloud betreiben Open-Source-Modelle wie Llama und Mistral in deutschen Rechenzentren, mit OpenAI-kompatibler Schnittstelle, sodass ein Wechsel technisch klein ist. Anthropic selbst bietet für Enterprise-Kunden EU-Datenresidenz und Zero Data Retention an, weist aber darauf hin, dass der Transfer in ein Drittland für DSGVO-Zwecke bestehen bleibt.
+
+Was der Workshop spart: die drei Monate, in denen das Thema sonst zwischen IT und Datenschutz hin- und hergeht, während der Pilot wartet.
+
+## Wo es schwierig wird
+
+Der CLOUD Act. Ein US-Anbieter bleibt ein US-Anbieter, auch mit EU-Region, und euer Datenschutzbeauftragter weiß das. Wer das verschweigt, verliert Vertrauen. Also offen ansprechen und pro Datenklasse entscheiden. Zweitens der Qualitätsunterschied: Kleine Modelle auf dem eigenen Server können weniger, und das merkt man bei komplexen Dokumenten sofort. Das muss man gesehen haben, bevor man sich für On-Premise entscheidet. Drittens verändert sich das Angebot der Anbieter im Quartalsrhythmus, die Entscheidung braucht ein Ablaufdatum.
 
 ## Was ihr dafür braucht
 

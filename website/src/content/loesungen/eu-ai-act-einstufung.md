@@ -22,11 +22,15 @@ Die meisten KI-Anwendungen im Mittelstand sind unkritisch: Textentwürfe, Sortie
 
 ## Was wir bauen
 
-Ein Workshop-Tag, an dem wir alle KI-Anwendungen (laufend, geplant, heimlich genutzt) erfassen und nach den Risikoklassen des EU AI Act einstufen. Für jede Anwendung entsteht ein Eintrag im KI-Inventar mit Klasse, Pflichten (Transparenz, Dokumentation, menschliche Aufsicht, Schulung) und Frist. Für Hochrisiko-Kandidaten prüfen wir, ob eine Umgestaltung sie aus der Klasse herausholt, so wie bei der Bewerbervorsortierung ohne Ranking. Ich bereite die juristische Prüfung vor, ich ersetze sie nicht.
+Ein Workshop-Tag und ein Inventar. Vorher sammeln wir alle KI-Anwendungen im Haus, gekaufte, gebaute, geplante und heimlich genutzte. Am Workshop-Tag gehen wir jede Anwendung durch: Wofür wird sie eingesetzt, wer entscheidet am Ende, seid ihr Betreiber oder Anbieter. Daraus folgt die Einstufung nach dem Raster der Verordnung: verbotene Praktiken, Hochrisiko nach Anhang III (dazu gehören unter anderem Einstellung, Bewertung und Beförderung von Beschäftigten), Transparenzpflichten für Chatbots und generierte Inhalte, oder minimales Risiko. Pro Anwendung entstehen ein Eintrag im Inventar mit Begründung, Pflichten, Frist und Verantwortlichem. Für Hochrisiko-Kandidaten prüfen wir, ob eine Umgestaltung sie aus der Klasse holt: Assistenz statt Entscheidung, kein Ranking, nachweisbar entscheidet ein Mensch. Grenzfälle markiere ich für euren Anwalt, ich stufe nicht rechtsverbindlich ein.
 
 ## Was das bringt
 
-Klarheit, wo Pflichten bestehen und wo nicht. Die Schulungspflicht für Mitarbeitende, die KI nutzen, gilt bereits, und das Inventar ist die Grundlage dafür. Vor allem: Ihr investiert nicht in eine Anwendung, die ihr später nicht betreiben dürft.
+Klarheit über Fristen, die sich gerade verschoben haben. Mit der Verordnung (EU) 2026/1744, dem sogenannten Digital Omnibus, im Amtsblatt vom 24. Juli 2026, gelten die Kernpflichten für eigenständige Hochrisiko-Systeme nach Anhang III erst ab dem 2. Dezember 2027, für KI in produktsicherheitsregulierten Produkten ab August 2028. Unverändert bleiben die Verbote nach Artikel 5 (seit Februar 2025), die Pflicht zur KI-Kompetenz der Mitarbeitenden nach Artikel 4 (ebenfalls seit Februar 2025) und die Transparenzpflichten nach Artikel 50 ab August 2026. Für den Mittelstand heißt das: Die Schulungspflicht ist heute schon fällig und am einfachsten zu erfüllen, die große Hochrisiko-Bürokratie hat mehr Zeit bekommen, und die meisten Anwendungen fallen ohnehin in die Klasse mit minimalem Risiko oder Transparenzpflicht.
+
+## Wo es schwierig wird
+
+Anbieteraussagen. "Unser Tool ist AI-Act-konform" sagt nichts darüber, ob euer Einsatzzweck Hochrisiko ist. Die Einstufung hängt vom Zweck ab, nicht vom Produkt: Dasselbe Textmodell ist für Angebotsentwürfe minimal und für Bewerbervorsortierung mit Ranking Hochrisiko. Zweitens ändern sich Fristen und Leitlinien laufend, das Inventar ist in sechs Monaten falsch, wenn es niemand pflegt. Drittens: Aus Vorsicht alles als Hochrisiko einzustufen lähmt, und ist meistens falsch.
 
 ## Was ihr dafür braucht
 
