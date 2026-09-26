@@ -24,7 +24,7 @@ function resolveOgRoute() {
   if (ogRoute) return ogRoute;
   const path = Astro.url.pathname.replace(/\/$/, '').replace(/^\//, '');
   if (!path) return 'index';
-  if (['blog', 'tools', 'case-studies', 'leistungen'].includes(path)) return path;
+  if (['blog', 'tools', 'case-studies', 'leistungen', 'loesungen'].includes(path)) return path;
   return null;
 }
 
@@ -141,6 +141,22 @@ const absoluteImage = ogImagePath.startsWith('http') ? ogImagePath : new URL(ogI
     <!-- GoatCounter Analytics (cookieless, DSGVO-konform) -->
     <script data-goatcounter="https://buschecloud.goatcounter.com/count"
             async src="https://gc.zgo.at/count.js"></script>
+    <!-- Funnel-Ereignisse: window.bcTrack('name') zählt in GoatCounter als Event unter ev/<name>.
+         Elemente mit data-track="<name>" melden Klicks automatisch. Namen: src/config/site.ts (funnelEvents). -->
+    <script is:inline>
+      window.bcTrack = function (name, data) {
+        try {
+          var gc = window.goatcounter;
+          if (gc && typeof gc.count === 'function') {
+            gc.count({ path: 'ev/' + name, title: name + (data && data.label ? ' · ' + data.label : ''), event: true });
+          }
+        } catch (e) {}
+      };
+      document.addEventListener('click', function (e) {
+        var el = e.target && e.target.closest ? e.target.closest('[data-track]') : null;
+        if (el) window.bcTrack(el.getAttribute('data-track'), { label: el.getAttribute('data-track-label') || el.textContent.trim().slice(0, 60) });
+      }, { passive: true });
+    </script>
     <style is:global>
       /* Filmkorn über der ganzen Seite. Sehr leicht, gibt dem Anthrazit Tiefe. */
       body::before {

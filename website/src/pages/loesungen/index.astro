@@ -1,0 +1,118 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import UseCaseFinder from '../../components/UseCaseFinder.astro';
+import { getLoesungen, BEREICHE, bereichLabel } from '../../lib/loesungen';
+import { pakete, terminUrl } from '../../config/site';
+
+const alle = await getLoesungen();
+const usedBereiche = BEREICHE.filter(b => alle.some(l => l.data.bereich === b));
+const sapCount = alle.filter(l => l.data.sapNah).length;
+const BASE = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="Lösungen — Busche Cloud"
+  description="Konkrete KI-Lösungen für Vertrieb, Kundenservice, Backoffice, Produktion und SAP-Prozesse im Mittelstand. Mit Aufwand, Effekt und passendem Paket."
+>
+  <Header />
+  <main id="main" class="pt-36 lg:pt-44 pb-24">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+
+      <div class="grid lg:grid-cols-12 gap-8 mb-16">
+        <div class="lg:col-span-8">
+          <p class="text-brand-400 text-[0.75rem] font-semibold uppercase tracking-[0.2em] mb-5">Lösungen</p>
+          <h1 class="font-display font-bold text-bone-50 text-[3rem] sm:text-[4.2rem] leading-[0.96] tracking-tightest" style="text-wrap: balance;">
+            Was bei euch automatisierbar ist. Konkret.
+          </h1>
+        </div>
+        <div class="lg:col-span-4 lg:pt-14">
+          <p class="text-bone-400 text-[1.05rem] leading-relaxed">
+            {alle.length} Lösungen aus dem Alltag mittelständischer Unternehmen, {sapCount} davon direkt an SAP. Jede mit Problem, Lösung in drei Sätzen, Aufwand und dem Paket, in dem ich sie umsetze. Die Schritt-für-Schritt-Umsetzung ist das, was ihr bei mir kauft.
+          </p>
+        </div>
+      </div>
+
+      <UseCaseFinder />
+
+      <!-- Bibliothek -->
+      <section class="mt-24" aria-labelledby="bibliothek-heading">
+        <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-8">
+          <h2 id="bibliothek-heading" class="font-display font-bold text-bone-50 text-[2rem] sm:text-[2.6rem] leading-[1.02] tracking-tight">Alle Lösungen.</h2>
+          <div class="flex flex-wrap gap-2" id="bereich-nav">
+            <button data-filter="all" class="bereich-btn px-3 py-1.5 text-xs font-semibold rounded-full transition-colors bg-bone-50 text-ink-950 border border-bone-50">Alle</button>
+            {usedBereiche.map(b => (
+              <button data-filter={b} class="bereich-btn px-3 py-1.5 text-xs font-semibold rounded-full transition-colors bg-ink-800 text-bone-400 border border-bone-50/10 hover:border-brand-400/60 hover:text-brand-300">{bereichLabel[b]}</button>
+            ))}
+            <button data-filter="sap" class="bereich-btn px-3 py-1.5 text-xs font-semibold rounded-full transition-colors bg-ink-800 text-bone-400 border border-bone-50/10 hover:border-brand-400/60 hover:text-brand-300">SAP-nah</button>
+          </div>
+        </div>
+
+        <div class="border-t border-bone-50/10" id="loesung-list">
+          {alle.map(l => (
+            <a
+              href={`${BASE}loesungen/${l.slug}`}
+              data-loesung
+              data-bereich={l.data.bereich}
+              data-sap={l.data.sapNah ? 'true' : 'false'}
+              class="group grid md:grid-cols-12 gap-x-8 gap-y-2 py-7 border-b border-bone-50/10 hover:bg-bone-50/[0.025] transition-colors -mx-6 px-6 lg:-mx-10 lg:px-10"
+            >
+              <div class="md:col-span-3 flex md:flex-col gap-x-3 gap-y-1 text-xs text-bone-600 pt-1">
+                <span class="text-brand-400 font-semibold uppercase tracking-wider">{bereichLabel[l.data.bereich]}</span>
+                <span>{pakete[l.data.paket].name} · {pakete[l.data.paket].price}</span>
+              </div>
+              <div class="md:col-span-8">
+                <h3 class="font-display font-semibold text-bone-50 text-[1.35rem] leading-snug tracking-tight group-hover:text-brand-300 transition-colors mb-2">{l.data.title}</h3>
+                <p class="text-bone-400 text-[0.95rem] leading-relaxed line-clamp-2">{l.data.problem}</p>
+                <p class="mt-3 text-xs text-bone-600">Aufwand {l.data.aufwand} · Effekt {l.data.einsparung}</p>
+              </div>
+              <div class="hidden md:flex md:col-span-1 justify-end pt-1">
+                <svg class="w-5 h-5 text-bone-600 group-hover:text-brand-300 transition-all group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M13 6l6 6-6 6" /></svg>
+              </div>
+            </a>
+          ))}
+        </div>
+        <p id="loesung-empty" class="hidden py-12 text-bone-400">Dazu ist noch keine Lösung beschrieben.</p>
+      </section>
+
+      <!-- Abschluss -->
+      <section class="mt-24 grid lg:grid-cols-12 gap-10 items-center border-t border-bone-50/10 pt-16">
+        <div class="lg:col-span-7">
+          <p class="text-brand-400 text-[0.75rem] font-semibold uppercase tracking-[0.2em] mb-5">Und bei euch?</p>
+          <h2 class="font-display font-bold text-bone-50 text-[2rem] sm:text-[2.6rem] leading-[1.02] tracking-tight mb-5" style="text-wrap: balance;">Welche davon bei euch zuerst dran ist, klären wir in zwei Stunden.</h2>
+          <p class="text-bone-400 text-[1.05rem] leading-relaxed max-w-xl">Der KI-Readiness-Check für €299: Eure drei bis fünf größten Zeitfresser, bewertet nach Zeitaufwand, Automatisierbarkeit und Umsetzbarkeit. Ergebnis ist eine priorisierte Liste mit Tool-Empfehlung, kein Reifegrad-Zertifikat.</p>
+        </div>
+        <div class="lg:col-span-5 flex flex-col sm:flex-row lg:flex-col gap-3 lg:items-end">
+          <a href={terminUrl({ thema: 'readiness-check', paket: 'readiness-check' })} data-track="paket_cta_geklickt" class="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-bone-50 text-ink-950 hover:bg-brand-300 font-semibold rounded-full transition-colors text-[0.95rem]">
+            Readiness-Check anfragen
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M5 12h14M13 6l6 6-6 6" /></svg>
+          </a>
+          <a href={`${BASE}leistungen`} class="inline-flex items-center justify-center px-6 py-3.5 text-bone-50 border border-bone-50/20 hover:border-bone-50/50 font-semibold rounded-full transition-colors text-[0.95rem]">
+            Alle Pakete &amp; Preise
+          </a>
+        </div>
+      </section>
+    </div>
+  </main>
+  <Footer />
+</Layout>
+
+<script>
+  const buttons = document.querySelectorAll<HTMLButtonElement>('.bereich-btn');
+  const rows = document.querySelectorAll<HTMLElement>('[data-loesung]');
+  const empty = document.getElementById('loesung-empty');
+  const on = 'bg-bone-50 text-ink-950 border-bone-50';
+  const off = 'bg-ink-800 text-bone-400 border-bone-50/10 hover:border-brand-400/60 hover:text-brand-300';
+  buttons.forEach(btn => btn.addEventListener('click', () => {
+    const f = btn.dataset.filter!;
+    buttons.forEach(b => { b.className = b.className.replace(on, '').replace(off, '').trim() + ' ' + (b === btn ? on : off); });
+    let shown = 0;
+    rows.forEach(r => {
+      const show = f === 'all' || (f === 'sap' ? r.dataset.sap === 'true' : r.dataset.bereich === f);
+      r.classList.toggle('hidden', !show);
+      if (show) shown++;
+    });
+    empty?.classList.toggle('hidden', shown > 0);
+  }));
+</script>

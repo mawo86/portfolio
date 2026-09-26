@@ -18,15 +18,37 @@ import Footer from '../components/Footer.astro';
       <h1 class="font-display font-bold text-bone-50 text-[3rem] sm:text-[4.5rem] lg:text-[5.5rem] leading-[0.94] tracking-tightest mb-8" style="text-wrap: balance;">
         Danke. Ich melde mich.
       </h1>
-      <p class="text-bone-400 text-lg leading-relaxed mb-10 max-w-md">
-        Innerhalb von 24 Stunden, meistens schneller. Bis dahin: Im Blog steht, wie ich über KI im Mittelstand denke. Dann weißt du vorher, mit wem du sprichst.
+      <p class="text-bone-400 text-lg leading-relaxed mb-12 max-w-md">
+        Innerhalb von 24 Stunden, meistens schneller. Damit unser Gespräch direkt in die Tiefe geht, könnt ihr drei Dinge vorbereiten.
       </p>
+
+      <ol class="grid md:grid-cols-3 gap-5 mb-12 max-w-5xl">
+        <li class="bg-ink-800 border border-bone-50/[0.06] rounded-2xl p-6">
+          <span class="font-mono text-xs text-bone-600">01</span>
+          <h2 class="font-display font-semibold text-bone-50 text-[1.15rem] leading-snug tracking-tight mt-3 mb-2">Drei Zeitfresser notieren</h2>
+          <p class="text-bone-400 text-sm leading-relaxed">Welche Aufgaben kosten euer Team jede Woche Stunden, ohne dass jemand nachdenken muss? Stichworte reichen.</p>
+        </li>
+        <li class="bg-ink-800 border border-bone-50/[0.06] rounded-2xl p-6">
+          <span class="font-mono text-xs text-bone-600">02</span>
+          <h2 class="font-display font-semibold text-bone-50 text-[1.15rem] leading-snug tracking-tight mt-3 mb-2">Lösungen anschauen</h2>
+          <p class="text-bone-400 text-sm leading-relaxed">In der <a href="/loesungen" class="text-bone-50 underline decoration-bone-50/30 underline-offset-4 hover:decoration-brand-300 transition-colors">Lösungsbibliothek</a> steht, was in eurem Bereich typischerweise zuerst dran ist. Der Finder braucht drei Klicks.</p>
+        </li>
+        <li class="bg-ink-800 border border-bone-50/[0.06] rounded-2xl p-6">
+          <span class="font-mono text-xs text-bone-600">03</span>
+          <h2 class="font-display font-semibold text-bone-50 text-[1.15rem] leading-snug tracking-tight mt-3 mb-2">Die richtigen Leute einladen</h2>
+          <p class="text-bone-400 text-sm leading-relaxed">Wer kennt den Prozess, um den es geht, wirklich? Diese Person sollte beim Erstgespräch dabei sein, nicht nur die Geschäftsführung.</p>
+        </li>
+      </ol>
+
       <div class="flex flex-col sm:flex-row gap-3">
-        <a href="/blog" class="inline-flex items-center gap-2 px-6 py-3.5 bg-bone-50 text-ink-950 hover:bg-brand-300 font-semibold rounded-full transition-colors text-sm">
-          Zum Blog
+        <a href="/loesungen" class="inline-flex items-center gap-2 px-6 py-3.5 bg-bone-50 text-ink-950 hover:bg-brand-300 font-semibold rounded-full transition-colors text-sm">
+          Zu den Lösungen
         </a>
-        <a href="/" class="inline-flex items-center px-6 py-3.5 text-bone-50 border border-bone-50/20 hover:border-bone-50/50 font-semibold rounded-full transition-colors text-sm">
-          Zur Startseite
+        <a href="/leistungen#readiness-check" class="inline-flex items-center px-6 py-3.5 text-bone-50 border border-bone-50/20 hover:border-bone-50/50 font-semibold rounded-full transition-colors text-sm">
+          Readiness-Check ansehen
+        </a>
+        <a href="/blog" class="inline-flex items-center px-6 py-3.5 text-bone-400 hover:text-bone-50 font-semibold transition-colors text-sm">
+          Zum Blog
         </a>
       </div>
     </div>

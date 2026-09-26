@@ -1,0 +1,34 @@
+---
+// Blog-Ausleitung: zeigt am Artikelende die 1 bis 2 Lösungen, die zur Kategorie passen,
+// damit der Leser vom Thema zum konkreten nächsten Schritt kommt statt nur zum Newsletter.
+import { loesungenFuerKategorie, bereichLabel } from '../lib/loesungen';
+import { pakete } from '../config/site';
+
+export interface Props {
+  category: string;
+  limit?: number;
+}
+const { category, limit = 2 } = Astro.props;
+const passend = await loesungenFuerKategorie(category, limit);
+const BASE = import.meta.env.BASE_URL;
+---
+
+{passend.length > 0 && (
+  <aside class="mt-10 p-7 sm:p-8 bg-ink-800 border border-bone-50/[0.08] rounded-2xl" aria-label="Passende Lösungen">
+    <p class="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-brand-400 mb-2.5">Vom Lesen ins Tun</p>
+    <h3 class="font-display font-semibold text-bone-50 text-[1.35rem] leading-tight tracking-tight mb-5">So sieht das bei euch konkret aus.</h3>
+    <div class="grid sm:grid-cols-2 gap-3">
+      {passend.map(l => (
+        <a href={`${BASE}loesungen/${l.slug}`} data-track="paket_cta_geklickt" data-track-label={`blog→${l.slug}`} class="group block p-5 bg-ink-900 border border-bone-50/[0.06] hover:border-bone-50/20 rounded-xl transition-colors">
+          <span class="text-[0.65rem] font-semibold uppercase tracking-wider text-bone-600">{bereichLabel[l.data.bereich]} · {pakete[l.data.paket].name}</span>
+          <p class="font-display font-semibold text-bone-50 text-[1.02rem] mt-2 leading-snug tracking-tight group-hover:text-brand-300 transition-colors">{l.data.title}</p>
+          <p class="mt-2 text-bone-400 text-sm leading-relaxed line-clamp-2">{l.data.description}</p>
+        </a>
+      ))}
+    </div>
+    <a href={`${BASE}loesungen`} class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-bone-50 hover:text-brand-300 transition-colors group">
+      Alle Lösungen und der Use-Case-Finder
+      <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M5 12h14M13 6l6 6-6 6" /></svg>
+    </a>
+  </aside>
+)}

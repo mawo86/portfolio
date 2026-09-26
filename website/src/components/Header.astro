@@ -1,8 +1,10 @@
 ---
 import Logo from './Logo.astro';
+import { terminUrl } from '../config/site';
 
 const BASE = import.meta.env.BASE_URL;
 const navLinks = [
+  { href: `${BASE}loesungen`, label: 'Lösungen' },
   { href: `${BASE}leistungen`, label: 'Leistungen' },
   { href: `${BASE}case-studies`, label: 'Projekte' },
   { href: `${BASE}blog`, label: 'Blog' },
@@ -40,7 +42,8 @@ function isActive(href: string) {
 
     <!-- CTA -->
     <a
-      href={`${BASE}#kontakt`}
+      href={terminUrl()}
+      data-track="paket_cta_geklickt" data-track-label="header"
       class="hidden md:inline-flex items-center gap-2 px-4 py-2 text-sm font-semibold bg-bone-50 text-ink-950 hover:bg-brand-300 rounded-full transition-colors"
     >
       Erstgespräch
@@ -78,7 +81,7 @@ function isActive(href: string) {
         </li>
       ))}
       <li class="mt-3 pt-3 border-t border-bone-50/10">
-        <a href={`${BASE}#kontakt`} class="block py-3 px-3 text-center bg-bone-50 text-ink-950 hover:bg-brand-300 rounded-full text-sm font-semibold transition-colors">
+        <a href={terminUrl()} data-track="paket_cta_geklickt" data-track-label="header-mobil" class="block py-3 px-3 text-center bg-bone-50 text-ink-950 hover:bg-brand-300 rounded-full text-sm font-semibold transition-colors">
           Erstgespräch buchen
         </a>
       </li>

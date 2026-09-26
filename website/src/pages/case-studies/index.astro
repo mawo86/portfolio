@@ -3,6 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import { getCollection } from 'astro:content';
+import { terminUrl } from '../../config/site';
 
 const studies = (await getCollection('case-studies', ({ data }) => !data.draft))
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
@@ -33,7 +34,7 @@ const studies = (await getCollection('case-studies', ({ data }) => !data.draft))
       {studies.length === 0 ? (
         <div class="py-16 border-t border-bone-50/10">
           <p class="text-bone-200 text-lg mb-6">Die ersten Projektberichte sind in Arbeit.</p>
-          <a href="/#kontakt" class="inline-flex items-center gap-2 px-5 py-3 bg-bone-50 text-ink-950 hover:bg-brand-300 font-semibold rounded-full transition-colors text-sm">
+          <a href={terminUrl()} class="inline-flex items-center gap-2 px-5 py-3 bg-bone-50 text-ink-950 hover:bg-brand-300 font-semibold rounded-full transition-colors text-sm">
             Gespräch vereinbaren
           </a>
         </div>

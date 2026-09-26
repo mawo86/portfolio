@@ -2,6 +2,7 @@
 import Layout from './Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import { terminUrl } from '../config/site';
 
 export interface Props {
   title: string;
@@ -89,7 +90,7 @@ const ogRoute = `case-studies/${slug}`;
         <p class="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-brand-400 mb-2.5">Ähnlicher Fall bei dir?</p>
         <h3 class="font-display font-semibold text-bone-50 text-[1.35rem] leading-tight tracking-tight mb-2">Lass uns 30 Minuten darüber reden.</h3>
         <p class="text-bone-400 text-sm leading-relaxed mb-5">Kostenloses Erstgespräch, kein Verkauf. Wir schauen, ob und wie es bei dir passt.</p>
-        <a href="/#kontakt" class="inline-flex items-center gap-2 px-5 py-3 bg-bone-50 text-ink-950 hover:bg-brand-300 font-semibold rounded-full transition-colors text-sm">
+        <a href={terminUrl()} class="inline-flex items-center gap-2 px-5 py-3 bg-bone-50 text-ink-950 hover:bg-brand-300 font-semibold rounded-full transition-colors text-sm">
           Gespräch vereinbaren
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M5 12h14M13 6l6 6-6 6" /></svg>
         </a>
