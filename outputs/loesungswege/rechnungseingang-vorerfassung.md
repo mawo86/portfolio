@@ -71,3 +71,12 @@ Gilt `_betriebsstandard.md`. Spezifisch hier:
 - SAP FI/CO-Buchungsvorschläge (für Rechnungen ohne Bestellung)
 - Mahnwesen (die Ausgangsseite)
 - Auftragsbestätigungs-Abgleich (gleiche Technik, Einkauf)
+
+## 10. Belege und Quellen
+
+- Ardent Partners, "State of ePayables 2025": 10,89 USD pro manueller Rechnung, Best-in-Class 2,78 USD. IOFM: 10 bis 15 USD. US-Zahlen, für Größenordnung.
+- Bitkom Research 2025 (n=1.103): 45 % können E-Rechnungen empfangen, 96 % bekommen Rechnungen per E-Mail. Empfangspflicht seit 01.01.2025 (Wachstumschancengesetz, EN 16931).
+- api.sap.com API_SUPPLIERINVOICE_PROCESS_SRV: Anlegen (auch vorerfasst), Lesen, Freigeben, Stornieren.
+- SAP Logistik-Rechnungsprüfung: Toleranzschlüssel (OMR6), Dreiwegeabgleich, Zahlsperre, Freigabe MRBR. Die Toleranzen des Kunden übernehmen, nicht neu definieren.
+- BMF-Schreiben GoBD 28.11.2019 (geändert 14.07.2025): Verfahrensdokumentation, Unveränderbarkeit, Aufbewahrung; strukturierte E-Rechnung nur als Datensatz aufbewahren.
+- Zeitersparnis 5 bis 10 Std./Woche: Erfahrungswert, kein Mittelstandsbeleg gefunden.

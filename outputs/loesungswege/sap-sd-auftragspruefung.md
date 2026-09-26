@@ -73,3 +73,11 @@ Gilt `_betriebsstandard.md`. Spezifisch hier:
 - Auftragsbestätigungs-Abgleich (Einkaufsseite, gleiche Technik)
 - SAP-Stammdatenqualität (Kunden-Material-Info)
 - Kosten- und Qualitätsmonitoring
+
+## 10. Belege und Quellen
+
+- SAP Help Portal, "Sales Order (A2X, OData V2)" und api.sap.com API_SALES_ORDER_SRV: Anlage per POST auf A_SalesOrder mit Deep Insert der Positionen.
+- api.sap.com API_CUSTOMER_MATERIAL_SRV: Kunden-Material-Info per OData (S/4HANA).
+- SAP Community / sapdatasheet: BAPI_SALESORDER_CREATEFROMDAT2, Standard für ECC und S/4, Variantenkonfiguration aufwendig.
+- Computerwoche 2024 und Workist-SAP-Seite: Zentis-Fall nutzt genau diese Kette (BP, MARA, Kundenmaterial, BAPI), anfangs 60 % Nacharbeit.
+- Zeitersparnis: kein externer Beleg. Messgröße im Piloten: Zeit bis Auftragsbestätigung, Anteil Aufträge mit einem Klick angelegt.
