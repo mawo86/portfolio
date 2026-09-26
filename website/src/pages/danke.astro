@@ -14,7 +14,12 @@ import Footer from '../components/Footer.astro';
   <Header />
   <main id="main" class="min-h-[80svh] flex items-center px-6 lg:px-10 pt-36 pb-24">
     <div class="max-w-7xl mx-auto w-full">
-      <p class="text-brand-400 text-[0.75rem] font-semibold uppercase tracking-[0.2em] mb-5">Nachricht angekommen</p>
+      <div class="flex items-center gap-4 mb-6">
+        <span class="w-12 h-12 rounded-full bg-tonal-green text-tonal-green-900 inline-flex items-center justify-center" aria-hidden="true">
+          <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path class="haken-pfad" d="M5 12.5l4.5 4.5L19 7" /></svg>
+        </span>
+        <p class="text-brand-400 text-[0.75rem] font-semibold uppercase tracking-[0.2em]">Nachricht angekommen</p>
+      </div>
       <h1 class="font-display font-bold text-bone-50 text-[3rem] sm:text-[4.5rem] lg:text-[5.5rem] leading-[0.94] tracking-tightest mb-8" style="text-wrap: balance;">
         Danke. Ich melde mich.
       </h1>
@@ -55,3 +60,9 @@ import Footer from '../components/Footer.astro';
   </main>
   <Footer />
 </Layout>
+
+<style>
+  .haken-pfad { stroke-dasharray: 24; stroke-dashoffset: 24; animation: haken 0.6s 0.2s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+  @keyframes haken { to { stroke-dashoffset: 0; } }
+  @media (prefers-reduced-motion: reduce) { .haken-pfad { animation: none; stroke-dashoffset: 0; } }
+</style>

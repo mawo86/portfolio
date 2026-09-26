@@ -7,6 +7,7 @@ import NewsletterSignup from '../components/NewsletterSignup.astro';
 import RelatedPosts from '../components/RelatedPosts.astro';
 import LoesungTeaser from '../components/LoesungTeaser.astro';
 import { terminUrl } from '../config/site';
+import { chipKategorie } from '../lib/tonal';
 
 export interface Props {
   title: string;
@@ -38,6 +39,7 @@ const ogRoute = `blog/${slug}`;
   <main id="main" class="pt-36 lg:pt-44 pb-24">
 
     <!-- Kopf -->
+    <div id="lesefortschritt" class="fixed top-0 left-0 h-[3px] w-0 bg-brand-600 z-[60] transition-[width] duration-150" aria-hidden="true"></div>
     <div class="max-w-3xl mx-auto px-6 mb-14">
       <a href={`${import.meta.env.BASE_URL}blog`} class="inline-flex items-center gap-2 text-bone-600 hover:text-bone-50 text-sm mb-10 transition-colors group">
         <svg class="w-4 h-4 transition-transform group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -46,7 +48,7 @@ const ogRoute = `blog/${slug}`;
         Alle Artikel
       </a>
 
-      <p class="text-brand-400 text-[0.75rem] font-semibold uppercase tracking-[0.2em] mb-5">{category}</p>
+      <p class="mb-5"><span class={chipKategorie(category)}>{category}</span></p>
 
       <h1 class="font-display font-bold text-bone-50 text-[2.3rem] sm:text-[3rem] lg:text-[3.5rem] leading-[1.02] tracking-tight mb-6" style="text-wrap: balance;">{title}</h1>
 
@@ -170,3 +172,18 @@ const ogRoute = `blog/${slug}`;
   </main>
   <Footer />
 </Layout>
+
+<script>
+  // Lesefortschritt als dünne Linie am oberen Rand
+  const bar = document.getElementById('lesefortschritt');
+  const article = document.querySelector('article');
+  function fortschritt() {
+    if (!bar || !article) return;
+    const rect = article.getBoundingClientRect();
+    const total = rect.height - window.innerHeight;
+    const done = Math.min(Math.max(-rect.top, 0), Math.max(total, 1));
+    bar.style.width = `${(done / Math.max(total, 1)) * 100}%`;
+  }
+  window.addEventListener('scroll', fortschritt, { passive: true });
+  fortschritt();
+</script>

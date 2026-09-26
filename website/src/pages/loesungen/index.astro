@@ -5,6 +5,7 @@ import Footer from '../../components/Footer.astro';
 import UseCaseFinder from '../../components/UseCaseFinder.astro';
 import { getLoesungen, BEREICHE, bereichLabel } from '../../lib/loesungen';
 import { pakete, terminUrl } from '../../config/site';
+import { chipBereich } from '../../lib/tonal';
 
 const alle = await getLoesungen();
 const usedBereiche = BEREICHE.filter(b => alle.some(l => l.data.bereich === b));
@@ -59,7 +60,7 @@ const BASE = import.meta.env.BASE_URL;
               class="group grid md:grid-cols-12 gap-x-8 gap-y-2 py-7 border-b border-bone-50/10 hover:bg-bone-50/[0.025] transition-colors -mx-6 px-6 lg:-mx-10 lg:px-10"
             >
               <div class="md:col-span-3 flex md:flex-col gap-x-3 gap-y-1 text-xs text-bone-600 pt-1">
-                <span class="text-brand-400 font-semibold uppercase tracking-wider">{bereichLabel[l.data.bereich]}</span>
+                <span class={chipBereich(l.data.bereich)}>{bereichLabel[l.data.bereich]}</span>
                 <span>{pakete[l.data.paket].name} · {pakete[l.data.paket].price}</span>
               </div>
               <div class="md:col-span-8">

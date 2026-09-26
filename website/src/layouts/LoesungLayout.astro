@@ -4,6 +4,7 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { pakete, terminUrl } from '../config/site';
 import { bereichLabel, type Loesung } from '../lib/loesungen';
+import { chipBereich } from '../lib/tonal';
 
 export interface Props {
   loesung: Loesung;
@@ -57,8 +58,9 @@ const jsonLd = [
 
       <div class="grid lg:grid-cols-12 gap-12 lg:gap-16">
         <div class="lg:col-span-8">
-          <p class="text-brand-400 text-[0.75rem] font-semibold uppercase tracking-[0.2em] mb-5">
-            {bereichLabel[d.bereich]}{d.sapNah && <span class="text-bone-600 normal-case tracking-normal font-medium"> · SAP-nah</span>}
+          <p class="flex flex-wrap items-center gap-2 mb-5">
+            <span class={chipBereich(d.bereich)}>{bereichLabel[d.bereich]}</span>
+            {d.sapNah && <span class="inline-flex items-center px-2.5 py-1 rounded-full text-[0.68rem] font-semibold uppercase tracking-[0.08em] leading-none bg-ink-800 text-bone-400">SAP-nah</span>}
           </p>
           <h1 class="font-display font-bold text-bone-50 text-[2.3rem] sm:text-[3rem] lg:text-[3.5rem] leading-[1.02] tracking-tight mb-8" style="text-wrap: balance;">{d.title}</h1>
 

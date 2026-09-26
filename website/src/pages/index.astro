@@ -8,6 +8,7 @@ import MediaImage from '../components/MediaImage.astro';
 import { getCollection } from 'astro:content';
 import { availability, links, terminUrl } from '../config/site';
 import { getLoesungen, bereichLabel } from '../lib/loesungen';
+import { paketTonal, tonalClass, tonalText, chipBereich, chipKategorie } from '../lib/tonal';
 import { hasMedia, mediaUrl } from '../lib/media';
 
 const status = availability.status;
@@ -106,6 +107,15 @@ function formatDate(date: Date) {
             Was ist bei euch automatisierbar?
           </a>
         </div>
+
+        <!-- Überraschung: ein rotierendes Beispiel aus der Lösungsbibliothek, damit "Automatisierung" sofort konkret wird -->
+        <p class="mt-8 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-bone-400 animate-fade-in" style="animation-delay: 0.5s;">
+          <span>Zum Beispiel:</span>
+          <a id="hero-beispiel" href={`/loesungen/${topLoesungen[0].slug}`} data-beispiele={JSON.stringify(topLoesungen.map(l => ({ slug: l.slug, text: l.data.title, bereich: bereichLabel[l.data.bereich], chip: chipBereich(l.data.bereich) }))).replace(/</g, '\u003c')} class="inline-flex items-center gap-2 font-medium text-bone-50 hover:text-brand-400 transition-[opacity,color] duration-300">
+            <span class={chipBereich(topLoesungen[0].data.bereich)} data-beispiel-bereich>{bereichLabel[topLoesungen[0].data.bereich]}</span>
+            <span data-beispiel-text>{topLoesungen[0].data.title}</span>
+          </a>
+        </p>
       </div>
 
       <!-- Proof-Leiste -->
@@ -190,18 +200,24 @@ function formatDate(date: Date) {
         </div>
       </div>
 
-      <ol class="border-t border-bone-50/10">
+      <ol class="grid md:grid-cols-3 gap-4">
         {ladder.map(item => (
-          <li>
-            <a href={`/leistungen#${item.anchor}`} class="group grid md:grid-cols-12 gap-x-8 gap-y-3 py-8 lg:py-10 border-b border-bone-50/10 hover:bg-bone-50/[0.025] transition-colors -mx-6 px-6 lg:-mx-10 lg:px-10">
-              <div class="md:col-span-1 font-mono text-sm text-bone-600 pt-1.5">{item.step}</div>
-              <div class="md:col-span-4">
-                <h3 class="font-display font-semibold text-bone-50 text-[1.45rem] leading-tight tracking-tight group-hover:text-brand-300 transition-colors">{item.name}</h3>
-                <p class="mt-1.5 text-sm text-bone-400"><span class="text-bone-50 font-semibold">{item.price}</span> · {item.meta}</p>
+          <li class="flex">
+            <a href={`/leistungen#${item.anchor}`} class="group flex flex-col w-full rounded-[24px] border border-bone-50/[0.08] overflow-hidden bg-ink-900 hover:border-bone-50/25 transition-colors">
+              <div class={`p-7 pb-6 ${tonalClass[paketTonal[item.anchor]]}`}>
+                <div class="flex items-center justify-between mb-5">
+                  <span class="font-mono text-sm opacity-70">{item.step}</span>
+                  <span class="text-[0.65rem] font-semibold uppercase tracking-[0.14em] opacity-70">{item.meta}</span>
+                </div>
+                <h3 class="font-display font-semibold text-[1.35rem] leading-tight tracking-tight">{item.name}</h3>
+                <p class="mt-3 font-display font-bold text-[1.9rem] leading-none tracking-tight">{item.price}</p>
               </div>
-              <p class="md:col-span-6 text-bone-200 leading-relaxed text-[1rem]">{item.text}</p>
-              <div class="md:col-span-1 flex md:justify-end items-start pt-1.5">
-                <svg class="w-5 h-5 text-bone-600 group-hover:text-brand-300 transition-all group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M13 6l6 6-6 6" /></svg>
+              <div class="p-7 pt-6 flex flex-col flex-1">
+                <p class="text-bone-200 leading-relaxed text-[0.98rem] flex-1">{item.text}</p>
+                <span class={`mt-6 inline-flex items-center gap-2 text-sm font-semibold ${tonalText[paketTonal[item.anchor]]}`}>
+                  Details und Ablauf
+                  <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M5 12h14M13 6l6 6-6 6" /></svg>
+                </span>
               </div>
             </a>
           </li>
@@ -240,7 +256,7 @@ function formatDate(date: Date) {
       <div class="grid md:grid-cols-2 gap-4">
         {topLoesungen.map(l => (
           <a href={`/loesungen/${l.slug}`} class="group flex flex-col bg-ink-800 border border-bone-50/[0.06] hover:border-bone-50/20 rounded-2xl p-7 transition-colors">
-            <span class="text-[0.65rem] font-semibold uppercase tracking-wider text-brand-400">{bereichLabel[l.data.bereich]}</span>
+            <span class={chipBereich(l.data.bereich)}>{bereichLabel[l.data.bereich]}</span>
             <h3 class="font-display font-semibold text-bone-50 text-[1.3rem] mt-3 leading-snug tracking-tight group-hover:text-brand-300 transition-colors">{l.data.title}</h3>
             <p class="mt-3 text-bone-400 text-[0.95rem] leading-relaxed flex-1 line-clamp-3">{l.data.problem}</p>
             <p class="mt-5 pt-4 border-t border-bone-50/10 text-xs text-bone-600">Aufwand {l.data.aufwand} · Effekt {l.data.einsparung}</p>
@@ -337,7 +353,7 @@ function formatDate(date: Date) {
           {posts.map(post => (
             <a href={`/blog/${post.slug}`} class="group grid md:grid-cols-12 gap-x-8 gap-y-2 py-7 border-b border-bone-50/10 hover:bg-bone-50/[0.025] transition-colors -mx-6 px-6 lg:-mx-10 lg:px-10">
               <div class="md:col-span-3 flex md:flex-col gap-x-3 gap-y-1 text-xs text-bone-600 pt-1">
-                <span class="text-brand-400 font-semibold uppercase tracking-wider">{post.data.category}</span>
+                <span class={chipKategorie(post.data.category)}>{post.data.category}</span>
                 <time datetime={post.data.date.toISOString()}>{formatDate(post.data.date)}</time>
               </div>
               <div class="md:col-span-8">
@@ -362,42 +378,43 @@ function formatDate(date: Date) {
   )}
 
   <!-- ═══ KONTAKT ═══ -->
-  <section id="kontakt" class="relative py-24 lg:py-32 border-t border-bone-50/[0.06] overflow-hidden">
+  <section id="kontakt" class="relative py-16 lg:py-24 px-4 sm:px-6 lg:px-10">
     {kontaktStill && (
       <div class="absolute inset-0" aria-hidden="true">
         <img src={mediaUrl('kontakt.jpg')} alt="" loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover opacity-40" />
         <div class="absolute inset-0 bg-gradient-to-b from-ink-900 via-ink-900/80 to-ink-900"></div>
       </div>
     )}
-    <div class="relative max-w-7xl mx-auto px-6 lg:px-10">
+    <div class="relative max-w-7xl mx-auto rounded-[28px] bg-brand-600 text-white px-6 sm:px-10 lg:px-16 py-14 lg:py-20 overflow-hidden">
+      <div class="absolute -right-24 -bottom-32 w-[28rem] h-[28rem] rounded-full bg-white/10" aria-hidden="true"></div>
       <div class="grid lg:grid-cols-12 gap-12 lg:gap-16">
 
         <div class="lg:col-span-5">
-          <p class="text-brand-400 text-[0.75rem] font-semibold uppercase tracking-[0.2em] mb-5">Kontakt</p>
-          <h2 class="font-display font-bold text-bone-50 text-[2.2rem] sm:text-[2.9rem] lg:text-[3.4rem] leading-[1.02] tracking-tight mb-6" style="text-wrap: balance;">
+          <p class="text-brand-100 text-[0.75rem] font-semibold uppercase tracking-[0.2em] mb-5">Kontakt</p>
+          <h2 class="font-display font-bold text-white text-[2.2rem] sm:text-[2.9rem] lg:text-[3.4rem] leading-[1.02] tracking-tight mb-6" style="text-wrap: balance;">
             Lass uns 30 Minuten reden.
           </h2>
-          <p class="text-bone-200 text-[1.05rem] leading-relaxed mb-8 max-w-md">
+          <p class="text-brand-100 text-[1.05rem] leading-relaxed mb-8 max-w-md">
             Schreib mir kurz, worum es geht. Ich antworte innerhalb von 24 Stunden, meistens schneller. Kein Verkaufsgespräch, versprochen. Wenn es nicht passt, sage ich das auch.
           </p>
           <dl class="space-y-4 text-sm">
             <div class="flex gap-4">
-              <dt class="w-24 text-bone-600 flex-shrink-0">Antwort</dt>
-              <dd class="text-bone-50">innerhalb von 24 Stunden</dd>
+              <dt class="w-24 text-brand-200 flex-shrink-0">Antwort</dt>
+              <dd class="text-white">innerhalb von 24 Stunden</dd>
             </div>
             <div class="flex gap-4">
-              <dt class="w-24 text-bone-600 flex-shrink-0">Erstgespräch</dt>
-              <dd class="text-bone-50">30 Minuten, kostenlos, remote</dd>
+              <dt class="w-24 text-brand-200 flex-shrink-0">Erstgespräch</dt>
+              <dd class="text-white">30 Minuten, kostenlos, remote</dd>
             </div>
             <div class="flex gap-4">
-              <dt class="w-24 text-bone-600 flex-shrink-0">Direkt</dt>
-              <dd><a href="https://linkedin.com/in/marlon-b-26203116a" target="_blank" rel="noopener noreferrer" class="text-bone-50 hover:text-brand-300 transition-colors underline decoration-bone-50/30 underline-offset-4">LinkedIn-Nachricht</a></dd>
+              <dt class="w-24 text-brand-200 flex-shrink-0">Direkt</dt>
+              <dd><a href="https://linkedin.com/in/marlon-b-26203116a" target="_blank" rel="noopener noreferrer" class="text-white hover:text-brand-100 transition-colors underline decoration-white/40 underline-offset-4">LinkedIn-Nachricht</a></dd>
             </div>
           </dl>
         </div>
 
         <div class="lg:col-span-7">
-          <div class="bg-ink-800/90 backdrop-blur border border-bone-50/[0.08] rounded-2xl p-7 sm:p-10">
+          <div class="relative bg-ink-900 text-bone-50 rounded-[24px] p-7 sm:p-10">
             <form
               action={links.formspree}
               method="POST"
@@ -509,5 +526,31 @@ function formatDate(date: Date) {
         btn.textContent = 'Wird gesendet…';
       }
     });
+  }
+</script>
+
+<script>
+  // Rotierendes Beispiel im Hero. Steht still, wenn der Nutzer weniger Bewegung wünscht.
+  const beispiel = document.getElementById('hero-beispiel') as HTMLAnchorElement | null;
+  const wenigBewegung = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (beispiel && !wenigBewegung) {
+    const items = JSON.parse(beispiel.dataset.beispiele || '[]') as { slug: string; text: string; bereich: string; chip: string }[];
+    const chip = beispiel.querySelector<HTMLElement>('[data-beispiel-bereich]');
+    const text = beispiel.querySelector<HTMLElement>('[data-beispiel-text]');
+    let i = 0;
+    if (items.length > 1 && chip && text) {
+      setInterval(() => {
+        beispiel.style.opacity = '0';
+        setTimeout(() => {
+          i = (i + 1) % items.length;
+          const it = items[i];
+          beispiel.href = `/loesungen/${it.slug}`;
+          chip.textContent = it.bereich;
+          chip.className = it.chip;
+          text.textContent = it.text;
+          beispiel.style.opacity = '1';
+        }, 300);
+      }, 4200);
+    }
   }
 </script>

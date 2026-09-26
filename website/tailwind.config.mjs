@@ -58,6 +58,8 @@ export default {
           green:   '#C4EED0', 'green-900':  '#072711',
           yellow:  '#FEEFC3', 'yellow-900': '#5F3E00',
           red:     '#FAD2CF', 'red-900':    '#601410',
+          purple:  '#E9DDFF', 'purple-900': '#21005D',
+          teal:    '#C2E7E4', 'teal-900':   '#00332F',
         },
       },
       scrollMargin: {
