@@ -182,9 +182,9 @@ Digitale Produkte: `outputs/digitale-produkte.md`
 - [x] Preise angehoben, SAP-Prozess-Nische geschärft, Discovery-Call-Leitfaden + Testimonial-Vorlage erstellt, 2 neue Blog-Drafts — 2026-09-14
 - [x] Rebranding "Cinematic Dark": Palette, Font, Wortmarke, alle Texte, Higgsfield-Slots + Briefing — 2026-09-17
 - [x] 4 von 8 Higgsfield-Assets generiert + live: about.jpg (Übergangslösung), paket-check.jpg, paket-pilot.jpg, paket-begleitung.jpg — 2026-09-19
-- [ ] paket-tagessatz.jpg + kontakt.jpg generieren, sobald Higgsfield-Credits wieder verfügbar sind
-- [ ] hero.mp4 + hero-poster.jpg: braucht Higgsfield-Plan-Upgrade oder Credit-Top-up (Video ≈ 56 Credits, Free-Plan hatte nur 10)
-- [ ] about.jpg durch echtes Porträt ersetzen (aktuell nur Umgebungsbild)
+- [x] ~~paket-tagessatz.jpg + kontakt.jpg~~ entfallen: Paketbilder und kontakt.jpg-Slot mit dem Redesign "Material Light" entfernt — 2026-09-26
+- [x] ~~hero.mp4 + hero-poster.jpg~~ entfallen: Hero ohne Video seit Redesign "Material Light" — 2026-09-26
+- [ ] about.jpg durch echtes Porträt ersetzen (aktuell gerenderte Workflow-Grafik)
 - [x] Favicon + App-Icons auf neue Wortmarke umgestellt — 2026-09-17
 - [x] Eigene-Produkte-Sektion (Cookloop, DartsIQ) von Startseite + Footer entfernt, sollen nicht mehr präsentiert werden — 2026-09-19
 - [ ] Cal.com einrichten + Link in Website einbauen (alle CTAs zeigen aktuell auf Kontaktformular)
@@ -194,5 +194,11 @@ Digitale Produkte: `outputs/digitale-produkte.md`
 - [ ] LinkedIn-Texte (`outputs/linkedin-optimierung.md`) auf Konsistenz mit neuer Positionierung prüfen + Profil aktualisieren
 - [ ] Testimonials mit echten Kundenstimmen befüllen (aktuell ausgeblendet) — Vorlage bereit: `outputs/testimonial-vorlage.md`
 - [ ] Echte Case Study nach erstem Projekt einpflegen (ersetzt Beispielprojekt) — Interview-Leitfaden bereit: `outputs/testimonial-vorlage.md`
-- [ ] 21 Draft-Artikel schrittweise reviewen + live stellen (KW16–25)
+- [x] Alle Pipeline-Artikel reviewt und veröffentlicht, 36 Artikel live — 2026-09-26
 - [ ] Discovery-Call-Leitfaden (`outputs/discovery-call-leitfaden.md`) beim nächsten Erstgespräch anwenden
+- [x] DSGVO-Check fürs KI-Kit: sieben Kundenvorlagen (`outputs/vorlagen/dsgvo-check/`), Word-Fassung per `scripts/build_dsgvo_vorlagen.py`, Anbieterangaben recherchiert (Mistral Le Chat Pro als EU-Option gestrichen) — 2026-09-30
+- [x] KI-Regelwerk-Kit als Anwendung gebaut (Docker, lokal + VPS), privates Repo github.com/mawo86/ki-regelwerk-kit — 2026-09-30
+- [x] `outputs/` aus dem öffentlichen Git genommen (PR #14, noch nicht gemergt) — 2026-09-30
+- [ ] PR #14 mergen; entscheiden, ob Portfolio-Repo privat wird oder die Git-Historie von `outputs/` bereinigt wird
+- [ ] Backup für den nur noch lokalen Ordner `outputs/` einrichten
+- [ ] KI-Regelwerk-Kit auf dem VPS: Rechtstexte in `legal/` anwaltlich prüfen lassen, AVV mit dem Hoster, Checkliste `docs/BETRIEB.md`
