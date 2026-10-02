@@ -22,7 +22,8 @@ Zielgruppe: KMU/Mittelstand (10–500 MA), Schwerpunkt seit 2026-09-14: SAP-nahe
 
 - Noch angestellt, baut die Marke nebenberuflich auf
 - Portfoliowebsite als zentrales Vehikel für Sichtbarkeit und Vertrauen
-- Blogbeiträge geplant im AI-Bereich
+- 36 Blogartikel live, Lösungsbibliothek mit 26 Use-Cases und Lead-Funnel auf der Website
+- Erstes Werkzeug-Produkt: KI-Regelwerk-Kit (DSGVO-Check als Generator, lokal im Workshop einsetzbar, Server-Betrieb vorbereitet, noch ohne ersten Kunden)
 
 ## Positionierung
 

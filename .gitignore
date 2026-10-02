@@ -12,3 +12,6 @@ reference/
 # Pagefind output (wird beim Build erzeugt, nicht im Repo)
 dist/
 .astro-og-canvas/
+
+# Interne Arbeitsergebnisse (Lösungswege, Produktkarten, Vorlagen, Preise): nur lokal, das Repo ist öffentlich
+outputs/
