@@ -42,7 +42,7 @@ Das ist übertragbar, auch auf kleinere Unternehmen. Du musst nicht auf letzte R
 
 ## Was du konkret tun solltest
 
-Drei Schritte, die in jedem Erstgespräch sinnvoll sind, bevor du ein KI-Projekt startest:
+Drei Schritte, die vor jedem KI-Projekt sinnvoll sind:
 
 1. **Einordnen:** Betrifft das System Entscheidungen über Menschen (Bewerbung, Kredit, Zugang) oder nur interne Abläufe?
 2. **Dokumentieren:** Auch bei geringem Risiko gilt: Wer welches Tool wofür nutzt, sollte nachvollziehbar sein.
@@ -52,4 +52,4 @@ Das ist kein Hexenwerk. Es ist die gleiche Sorgfalt, die du bei sensiblen Kunden
 
 ## Dein nächster Schritt
 
-Wenn du unsicher bist, ob dein geplantes KI-Projekt in eine höhere Risikostufe fällt: Das ist genau die Art Frage, die in einen [KI-Readiness-Check](/leistungen) gehört, bevor Geld und Zeit in die Umsetzung fließen. Lieber einmal zu früh fragen als später nachbessern.
+Wenn du unsicher bist, ob dein geplantes KI-Projekt in eine höhere Risikostufe fällt: Kläre das, bevor Geld und Zeit in die Umsetzung fließen, am besten mit der Rechtsabteilung oder dem Datenschutzbeauftragten. Lieber einmal zu früh fragen als später nachbessern.

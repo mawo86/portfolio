@@ -15,3 +15,11 @@ dist/
 
 # Interne Arbeitsergebnisse (Lösungswege, Produktkarten, Vorlagen, Preise): nur lokal, das Repo ist öffentlich
 outputs/
+
+# Beratungs-Archiv (Backup nach Produkt-Pivot), nur lokal, das Repo ist öffentlich
+/archiv-beratung/
+
+# Lokale Editor-/Agent-Konfiguration, nicht für das öffentliche Repo
+.agents/
+.obsidian/
+AGENTS.md

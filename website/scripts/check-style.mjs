@@ -5,7 +5,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 const strict = process.argv.includes('--strict');
-const roots = ['src/content/blog', 'src/content/case-studies', 'src/content/loesungen'];
+const roots = ['src/content/blog'];
 const findings = [];
 
 for (const dir of roots) {

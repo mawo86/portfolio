@@ -21,7 +21,7 @@ function rehypeLazyImages() {
 }
 
 export default defineConfig({
-  integrations: [tailwind(), mdx(), sitemap()],
+  integrations: [tailwind(), mdx(), sitemap({ filter: (page) => !page.includes('/datenschutzerklaerung') })],
   site: 'https://busche.cloud',
   markdown: {
     rehypePlugins: [rehypeLazyImages],

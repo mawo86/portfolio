@@ -48,4 +48,4 @@ Die 16-Prozent-Zahl aus den USA ist ein Warnsignal, keine Blaupause. Sie zeigt: 
 
 ## Dein nächster Schritt
 
-Willst du wissen, welche Aufgaben in deinem Team sich für Automatisierung eignen, und welche nicht? Genau das ist die Kernfrage im [KI-Readiness-Check](/leistungen). Zwei Stunden, ein klares Bild, keine Panikmache.
+Willst du wissen, welche Aufgaben in deinem Team sich für Automatisierung eignen, und welche nicht? Fang mit [5 Zeichen, dass ein Prozess nach KI schreit](/blog/ki-prozesse-identifizieren) an.

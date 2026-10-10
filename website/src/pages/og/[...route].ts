@@ -2,19 +2,12 @@ import { OGImageRoute } from 'astro-og-canvas';
 import { getCollection } from 'astro:content';
 
 const blog = await getCollection('blog', ({ data }) => !data.draft);
-const studies = await getCollection('case-studies', ({ data }) => !data.draft);
-const loesungen = await getCollection('loesungen', ({ data }) => !data.draft);
 
 const pages = Object.fromEntries([
   ...blog.map(p => [`blog/${p.slug}`, { title: p.data.title, description: p.data.description, tag: p.data.category }]),
-  ...studies.map(p => [`case-studies/${p.slug}`, { title: p.data.title, description: p.data.description, tag: p.data.industry }]),
-  ...loesungen.map(p => [`loesungen/${p.slug}`, { title: p.data.title, description: p.data.description, tag: p.data.bereich }]),
-  ['loesungen', { title: 'Was bei euch automatisierbar ist. Konkret.', description: 'KI-Lösungen für Vertrieb, Service, Backoffice, Produktion und SAP-Prozesse', tag: 'Lösungen' }],
-  ['index', { title: 'KI, die bei euch wirklich läuft.', description: 'Busche Cloud · KI-Beratung für den Mittelstand', tag: 'Busche Cloud' }],
+  ['index', { title: 'KI und Automatisierung aus der Praxis.', description: 'Busche Cloud · Was funktioniert, welche Werkzeuge taugen und was nicht', tag: 'Busche Cloud' }],
   ['blog', { title: 'Aus der Praxis', description: 'Was bei KI im Mittelstand funktioniert. Und was nicht.', tag: 'Blog' }],
   ['tools', { title: 'Womit ich arbeite', description: 'Tools, die bei mir wirklich im Einsatz sind', tag: 'Tools' }],
-  ['case-studies', { title: 'Projekte, die laufen', description: 'Vorgehen, Zahlen, Ergebnisse', tag: 'Projekte' }],
-  ['leistungen', { title: 'Vier Pakete. Feste Preise.', description: 'KI-Beratung für den Mittelstand, ohne "Preis auf Anfrage"', tag: 'Leistungen' }],
 ]);
 
 export const { getStaticPaths, GET } = OGImageRoute({

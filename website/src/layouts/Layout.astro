@@ -8,7 +8,7 @@ export interface Props {
 
 const {
   title,
-  description = 'Marlon Busche, KI-Consultant für den Mittelstand. Readiness-Check, Pilotprojekt, laufende Begleitung: Automatisierung, die im Alltag läuft, nicht nur auf der Folie.',
+  description = 'Marlon Busche schreibt über KI und Automatisierung aus der Praxis: was funktioniert, welche Werkzeuge taugen und was nicht.',
   image,
   ogRoute,
 } = Astro.props;
@@ -24,7 +24,7 @@ function resolveOgRoute() {
   if (ogRoute) return ogRoute;
   const path = Astro.url.pathname.replace(/\/$/, '').replace(/^\//, '');
   if (!path) return 'index';
-  if (['blog', 'tools', 'case-studies', 'leistungen', 'loesungen'].includes(path)) return path;
+  if (['blog', 'tools'].includes(path)) return path;
   return null;
 }
 
@@ -39,7 +39,7 @@ const absoluteImage = ogImagePath.startsWith('http') ? ogImagePath : new URL(ogI
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'wasm-unsafe-eval' https://gc.zgo.at; style-src 'self' 'unsafe-inline'; img-src 'self' data: https: blob:; media-src 'self'; font-src 'self' data:; connect-src 'self' https://gc.zgo.at https://formspree.io https://buttondown.com; worker-src 'self' blob:; form-action 'self' https://formspree.io https://buttondown.com; frame-ancestors 'none'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'wasm-unsafe-eval' https://gc.zgo.at; style-src 'self' 'unsafe-inline'; img-src 'self' data: https: blob:; media-src 'self'; font-src 'self' data:; connect-src 'self' https://gc.zgo.at https://buttondown.com; worker-src 'self' blob:; form-action 'self' https://buttondown.com; frame-ancestors 'none'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests" />
     <meta http-equiv="X-Content-Type-Options" content="nosniff" />
     <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), interest-cohort=()" />
     <meta name="format-detection" content="telephone=no" />
@@ -128,7 +128,6 @@ const absoluteImage = ogImagePath.startsWith('http') ? ogImagePath : new URL(ogI
     <link rel="manifest" href={`${import.meta.env.BASE_URL}site.webmanifest`} />
     <link rel="preconnect" href="https://gc.zgo.at" crossorigin />
     <link rel="dns-prefetch" href="https://gc.zgo.at" />
-    <link rel="dns-prefetch" href="https://formspree.io" />
     <link rel="dns-prefetch" href="https://buttondown.com" />
     <title>{title}</title>
     <slot name="head" />
@@ -142,7 +141,7 @@ const absoluteImage = ogImagePath.startsWith('http') ? ogImagePath : new URL(ogI
     <script data-goatcounter="https://buschecloud.goatcounter.com/count"
             async src="https://gc.zgo.at/count.js"></script>
     <!-- Funnel-Ereignisse: window.bcTrack('name') zählt in GoatCounter als Event unter ev/<name>.
-         Elemente mit data-track="<name>" melden Klicks automatisch. Namen: src/config/site.ts (funnelEvents). -->
+         Elemente mit data-track="<name>" melden Klicks automatisch. -->
     <script is:inline>
       window.bcTrack = function (name, data) {
         try {

@@ -1,6 +1,5 @@
 ---
 import Logo from './Logo.astro';
-import { terminUrl } from '../config/site';
 const year = new Date().getFullYear();
 const BASE = import.meta.env.BASE_URL;
 ---
@@ -13,14 +12,13 @@ const BASE = import.meta.env.BASE_URL;
       <div class="md:col-span-5">
         <Logo size="sm" />
         <p class="mt-5 text-bone-400 text-[0.95rem] leading-relaxed max-w-sm">
-          KI-Beratung für den Mittelstand. Aus Ostwestfalen-Lippe, remote überall. Feste Pakete, feste Preise, Workflows, die nach Woche vier noch laufen.
+          Notizen zu KI und Automatisierung aus der Praxis. Aus Ostwestfalen-Lippe.
         </p>
         <a
-          href={terminUrl()}
-          data-track="paket_cta_geklickt" data-track-label="footer"
+          href={`${BASE}#newsletter`}
           class="mt-7 inline-flex items-center gap-2 text-sm font-semibold text-bone-50 hover:text-brand-300 transition-colors group"
         >
-          Erstgespräch buchen
+          Newsletter abonnieren
           <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M5 12h14M13 6l6 6-6 6" />
           </svg>
@@ -32,9 +30,6 @@ const BASE = import.meta.env.BASE_URL;
         <div>
           <p class="text-[0.7rem] font-semibold text-bone-600 uppercase tracking-[0.18em] mb-4">Seiten</p>
           <ul class="flex flex-col gap-2.5">
-            <li><a href={`${BASE}loesungen`} class="text-sm text-bone-400 hover:text-bone-50 transition-colors">Lösungen</a></li>
-            <li><a href={`${BASE}leistungen`} class="text-sm text-bone-400 hover:text-bone-50 transition-colors">Leistungen &amp; Preise</a></li>
-            <li><a href={`${BASE}case-studies`} class="text-sm text-bone-400 hover:text-bone-50 transition-colors">Projekte</a></li>
             <li><a href={`${BASE}blog`} class="text-sm text-bone-400 hover:text-bone-50 transition-colors">Blog</a></li>
             <li><a href={`${BASE}tools`} class="text-sm text-bone-400 hover:text-bone-50 transition-colors">Tools</a></li>
             <li><a href={`${BASE}#ueber-mich`} class="text-sm text-bone-400 hover:text-bone-50 transition-colors">Über mich</a></li>
@@ -43,7 +38,6 @@ const BASE = import.meta.env.BASE_URL;
         <div>
           <p class="text-[0.7rem] font-semibold text-bone-600 uppercase tracking-[0.18em] mb-4">Kontakt</p>
           <ul class="flex flex-col gap-2.5">
-            <li><a href={terminUrl()} class="text-sm text-bone-400 hover:text-bone-50 transition-colors">Anfrage stellen</a></li>
             <li><a href="https://linkedin.com/in/marlon-b-26203116a" target="_blank" rel="noopener noreferrer" class="text-sm text-bone-400 hover:text-bone-50 transition-colors">LinkedIn</a></li>
             <li><a href={`${BASE}#newsletter`} class="text-sm text-bone-400 hover:text-bone-50 transition-colors">Newsletter</a></li>
             <li>

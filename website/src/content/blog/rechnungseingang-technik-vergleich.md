@@ -79,4 +79,4 @@ Genau dieser Abgleich, den SAP Dreiwegeabgleich nennt, ist bei allen vier Wegen 
 
 ## Dein nächster Schritt
 
-Zähl eine Woche lang, wie viele Rechnungen als E-Rechnung, als PDF und als Scan kommen. Diese drei Zahlen entscheiden, welcher Weg bei euch die Hauptlast trägt. Den kompletten Use Case mit Aufwand und Voraussetzungen findest du in der Lösungsbibliothek: [Eingangsrechnungen erkennen, prüfen, vorerfassen](/loesungen/rechnungseingang-vorerfassung). Was KI in der Buchhaltung darüber hinaus kann und wo sie aufhört, beschreibt [KI in der Buchhaltung](/blog/ki-in-der-buchhaltung).
+Zähl eine Woche lang, wie viele Rechnungen als E-Rechnung, als PDF und als Scan kommen. Diese drei Zahlen entscheiden, welcher Weg bei euch die Hauptlast trägt. Was KI in der Buchhaltung darüber hinaus kann und wo sie aufhört, beschreibt [KI in der Buchhaltung](/blog/ki-in-der-buchhaltung).

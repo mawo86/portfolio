@@ -1,8 +1,6 @@
-// Tonflächen (Material-Pastell) als Bedeutungsträger: Jeder Unternehmensbereich, jedes Paket und
-// jede Blog-Kategorie hat eine feste Farbe. Chips, Kacheln und Karten lesen sie von hier.
+// Tonflächen (Material-Pastell) als Bedeutungsträger: Jede Blog-Kategorie hat eine feste Farbe.
+// Chips, Kacheln und Karten lesen sie von hier.
 // Die Klassen stehen hier als vollständige Strings, damit Tailwind sie beim Build findet.
-import type { BEREICHE } from '../content/config';
-
 export type Tonal = 'blue' | 'green' | 'yellow' | 'red' | 'purple' | 'teal' | 'neutral';
 
 /** Chip oder Fläche: heller Ton, dunkler Text derselben Familie. */
@@ -38,26 +36,6 @@ export const tonalSolid: Record<Tonal, string> = {
   neutral: 'bg-bone-50',
 };
 
-export const bereichTonal: Record<(typeof BEREICHE)[number], Tonal> = {
-  'Vertrieb': 'blue',
-  'Kundenservice': 'yellow',
-  'Backoffice & Buchhaltung': 'green',
-  'HR': 'purple',
-  'Einkauf & Logistik': 'teal',
-  'Produktion & Technik': 'red',
-  'Geschäftsführung': 'neutral',
-  'SAP-Prozesse': 'blue',
-  'Recht & Organisation': 'purple',
-  'Technik & Betrieb': 'teal',
-};
-
-export const paketTonal: Record<string, Tonal> = {
-  'readiness-check': 'blue',
-  'pilot-projekt': 'green',
-  'begleitung': 'yellow',
-  'tagessatz': 'neutral',
-};
-
 export const kategorieTonal: Record<string, Tonal> = {
   'Strategie': 'blue',
   'Automatisierung': 'green',
@@ -75,5 +53,4 @@ export function chipFor(t: Tonal | undefined): string {
   return `${CHIP_BASE} ${tonalClass[t ?? 'neutral']}`;
 }
 
-export const chipBereich = (b: (typeof BEREICHE)[number]) => chipFor(bereichTonal[b]);
 export const chipKategorie = (k: string | undefined) => chipFor(k ? kategorieTonal[k] : undefined);

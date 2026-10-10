@@ -2,59 +2,20 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import Testimonials from '../components/Testimonials.astro';
 import NewsletterSignup from '../components/NewsletterSignup.astro';
-import MediaImage from '../components/MediaImage.astro';
 import { getCollection } from 'astro:content';
-import { availability, links, terminUrl } from '../config/site';
-import { getLoesungen, bereichLabel } from '../lib/loesungen';
-import { paketTonal, tonalClass, tonalText, chipBereich, chipKategorie } from '../lib/tonal';
-
-const status = availability.status;
-const availabilityLabel = availability.label[status];
-const statusDot = status === 'available' ? 'bg-brand-400' : status === 'limited' ? 'bg-amber-300' : 'bg-bone-600';
-
+import { links } from '../config/site';
+import { chipKategorie } from '../lib/tonal';
 
 const posts = (await getCollection('blog', ({ data }) => !data.draft))
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
   .slice(0, 4);
 
-const alleLoesungen = await getLoesungen();
-const topLoesungen = alleLoesungen.slice(0, 4);
-const anzahlBereiche = new Set(alleLoesungen.map(l => l.data.bereich)).size;
-
-const ladder = [
-  {
-    step: '01',
-    name: 'KI-Readiness-Check',
-    price: '€299',
-    meta: '2 Stunden, remote',
-    text: 'Zwei Stunden, ein klares Bild. Danach weißt du, was bei euch automatisierbar ist, was sich nicht lohnt und womit ihr anfangen solltet.',
-    anchor: 'readiness-check',
-  },
-  {
-    step: '02',
-    name: 'KI-Pilot-Projekt',
-    price: 'ab €2.500',
-    meta: '4 Wochen',
-    text: 'Ein Prozess, vier Wochen, ein Workflow in Produktion. Am Ende läuft etwas, das dein Team jeden Tag nutzt. Kein Prototyp in der Schublade.',
-    anchor: 'pilot-projekt',
-  },
-  {
-    step: '03',
-    name: 'Laufende KI-Begleitung',
-    price: 'ab €1.200/Monat',
-    meta: 'ab 3 Monate',
-    text: 'Ich bleibe an Bord. Weitere Workflows, Schulung fürs Team, ein Ansprechpartner, der eure Systeme kennt. Ohne ganze Beratungsmannschaft.',
-    anchor: 'begleitung',
-  },
-];
-
 const facts = [
   { label: 'Rolle', value: 'Global AI Manager' },
   { label: 'Erfahrung', value: '10+ Jahre Digital & ERP' },
   { label: 'Standort', value: 'Ostwestfalen-Lippe' },
-  { label: 'Arbeitsweise', value: 'Remote & vor Ort' },
+  { label: 'Themen', value: 'KI & Automatisierung' },
 ];
 
 const toolGroups = [
@@ -69,54 +30,41 @@ function formatDate(date: Date) {
 }
 ---
 
-<Layout title="Busche Cloud — KI-Beratung für den Mittelstand">
+<Layout title="Busche Cloud — KI und Automatisierung aus der Praxis">
   <Header />
 
   <main id="main">
 
   <!-- ═══ HERO ═══ -->
-  <!-- Tonfläche statt Video: ruhiger Container auf Weiß, Inhalte links, Proof-Karten unten. -->
   <section class="pt-[6.5rem] lg:pt-28 px-4 sm:px-6 lg:px-10" aria-labelledby="hero-heading">
     <div class="relative max-w-7xl mx-auto rounded-[28px] bg-ink-800 overflow-hidden">
     <div class="relative px-6 sm:px-10 lg:px-16 pt-14 pb-10 lg:pt-20 lg:pb-14">
       <div class="max-w-5xl">
         <div class="inline-flex items-center gap-2.5 text-[0.8rem] font-medium text-bone-200 mb-8 px-3.5 py-1.5 rounded-full bg-ink-900 border border-bone-50/10 animate-fade-in">
-          <span class={`w-1.5 h-1.5 rounded-full flex-shrink-0 ${statusDot}`}></span>
-          <span class="whitespace-nowrap">{availabilityLabel}</span>
-          <span class="text-bone-600 hidden sm:inline">·</span>
-          <span class="text-bone-400 hidden sm:inline whitespace-nowrap">KI-Beratung für den Mittelstand</span>
+          <span class="w-1.5 h-1.5 rounded-full flex-shrink-0 bg-brand-400"></span>
+          <span class="whitespace-nowrap">Blog &amp; Newsletter</span>
         </div>
 
         <h1 id="hero-heading" class="font-display font-bold text-bone-50 text-[2.9rem] sm:text-[4rem] lg:text-[5rem] leading-[0.94] tracking-tightest mb-8 animate-fade-up" style="animation-delay: 0.08s;">
-          KI, die bei euch wirklich&nbsp;läuft.<br />
-          <span class="text-brand-600">Nicht nur auf der&nbsp;Folie.</span>
+          KI und Automatisierung.<br />
+          <span class="text-brand-600">Aus der&nbsp;Praxis.</span>
         </h1>
 
         <p class="text-lg sm:text-xl text-bone-200 max-w-2xl leading-relaxed mb-10 animate-fade-up" style="animation-delay: 0.18s;">
-          Ich baue mit mittelständischen Unternehmen Automatisierungen, die ab Woche vier Arbeit abnehmen. Schwerpunkt: Prozesse rund um SAP in Vertrieb, Kundenservice und Backoffice. Ohne Strategiepapier für die Schublade.
+          Ich schreibe auf, was von KI im Arbeitsalltag hängen bleibt: Werkzeuge, die taugen, Fehler, die man vermeiden kann, und Zahlen, wo ich welche habe.
         </p>
 
         <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3 animate-fade-up" style="animation-delay: 0.28s;">
-          <a href={terminUrl()} data-track="paket_cta_geklickt" data-track-label="hero" class="inline-flex items-center gap-2 px-6 py-3.5 bg-brand-600 text-white hover:bg-brand-700 font-semibold rounded-full transition-colors text-[0.95rem]">
-            Kostenloses Erstgespräch
+          <a href="#newsletter" class="inline-flex items-center gap-2 px-6 py-3.5 bg-brand-600 text-white hover:bg-brand-700 font-semibold rounded-full transition-colors text-[0.95rem]">
+            Newsletter abonnieren
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M5 12h14M13 6l6 6-6 6" /></svg>
           </a>
-          <a href="/loesungen" class="inline-flex items-center gap-2 px-6 py-3.5 text-bone-50 border border-bone-50/20 hover:border-bone-50/50 font-semibold rounded-full transition-colors text-[0.95rem]">
-            Was ist bei euch automatisierbar?
+          <a href="/blog" class="inline-flex items-center gap-2 px-6 py-3.5 text-bone-50 border border-bone-50/20 hover:border-bone-50/50 font-semibold rounded-full transition-colors text-[0.95rem]">
+            Zum Blog
           </a>
         </div>
-
-        <!-- Überraschung: ein rotierendes Beispiel aus der Lösungsbibliothek, damit "Automatisierung" sofort konkret wird -->
-        <p class="mt-8 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-bone-400 animate-fade-in" style="animation-delay: 0.5s;">
-          <span>Zum Beispiel:</span>
-          <a id="hero-beispiel" href={`/loesungen/${topLoesungen[0].slug}`} data-beispiele={JSON.stringify(topLoesungen.map(l => ({ slug: l.slug, text: l.data.title, bereich: bereichLabel[l.data.bereich], chip: chipBereich(l.data.bereich) }))).replace(/</g, '\u003c')} class="inline-flex items-center gap-2 font-medium text-bone-50 hover:text-brand-400 transition-[opacity,color] duration-300">
-            <span class={chipBereich(topLoesungen[0].data.bereich)} data-beispiel-bereich>{bereichLabel[topLoesungen[0].data.bereich]}</span>
-            <span data-beispiel-text>{topLoesungen[0].data.title}</span>
-          </a>
-        </p>
       </div>
 
-      <!-- Proof-Leiste -->
       <dl class="mt-12 lg:mt-16 grid grid-cols-2 lg:grid-cols-4 gap-3 animate-fade-up" style="animation-delay: 0.4s;">
         {facts.map(f => (
           <div class="bg-ink-900 rounded-2xl px-5 py-4">
@@ -129,217 +77,14 @@ function formatDate(date: Date) {
     </div>
   </section>
 
-  <!-- ═══ ÜBER MICH ═══ -->
-  <section id="ueber-mich" class="py-24 lg:py-32">
-    <div class="max-w-7xl mx-auto px-6 lg:px-10">
-      <div class="grid lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-
-        <div class="lg:col-span-5 lg:sticky lg:top-28">
-          <MediaImage file="about.jpg" alt="Schema eines Workflows: Anfrage per E-Mail, Prüfung mit markierten Positionen, Angebotsentwurf am selben Tag" aspect="aspect-[4/5]" class="rounded-2xl" />
-          <p class="mt-4 text-xs text-bone-600">Marlon Busche · Global AI Manager · Ostwestfalen-Lippe</p>
-        </div>
-
-        <div class="lg:col-span-7">
-          <p class="text-brand-400 text-[0.75rem] font-semibold uppercase tracking-[0.2em] mb-5">Über mich</p>
-          <h2 class="font-display font-bold text-bone-50 text-[2.2rem] sm:text-[2.9rem] leading-[1.02] tracking-tight mb-8" style="text-wrap: balance;">
-            Tagsüber Global AI Manager. Genau deshalb weiß ich, was in Produktion geht.
-          </h2>
-          <div class="space-y-5 text-bone-200 text-[1.05rem] leading-[1.75] max-w-2xl">
-            <p>
-              Ich komme aus Ostwestfalen-Lippe und arbeite seit über zehn Jahren im Digitalen. Inhouse Consultant, IT-Organisator, ERP-Auswahl, IT-Strategie. Heute verantworte ich als Global AI Manager, wie ein Unternehmen KI tatsächlich einsetzt. Nicht in Pilotfolien. Im Alltag.
-            </p>
-            <p>
-              Das ist der Unterschied zu vielen Beratern: Ich sehe jeden Tag, welche KI-Ideen nach dem Workshop sterben und welche laufen. Diese Erfahrung bringe ich in den Mittelstand. Mit Schwerpunkt auf Prozessen rund um SAP, wo noch viel per E-Mail und Excel passiert.
-            </p>
-            <p>
-              Ich denke Strategie und Umsetzung zusammen. Vom Prozess bis zur Schnittstelle. Und manchmal ist die ehrlichste Empfehlung: Bau das nicht. Auch das gehört dazu.
-            </p>
-            <p class="text-bone-400">
-              Abseits davon: Familie zuerst. Dann Laufen. Dann Darts.
-            </p>
-          </div>
-
-          <div class="mt-10 flex flex-wrap items-center gap-x-6 gap-y-3">
-            <a
-              href="https://linkedin.com/in/marlon-b-26203116a"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="inline-flex items-center gap-2 text-sm font-semibold text-bone-50 hover:text-brand-300 transition-colors"
-            >
-              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-              </svg>
-              Auf LinkedIn
-            </a>
-            <span class="text-bone-600 text-sm">·</span>
-            <a href="/blog/ein-jahr-ki" class="text-sm font-semibold text-bone-50 hover:text-brand-300 transition-colors">
-              Ein Jahr KI im Alltag, mein Erfahrungsbericht
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══ LEISTUNGEN ═══ -->
-  <section id="leistungen" class="py-24 lg:py-32 border-t border-bone-50/[0.06]">
-    <div class="max-w-7xl mx-auto px-6 lg:px-10">
-      <div class="grid lg:grid-cols-12 gap-8 mb-14">
-        <div class="lg:col-span-7">
-          <p class="text-brand-400 text-[0.75rem] font-semibold uppercase tracking-[0.2em] mb-5">Leistungen</p>
-          <h2 class="font-display font-bold text-bone-50 text-[2.2rem] sm:text-[2.9rem] leading-[1.02] tracking-tight" style="text-wrap: balance;">
-            Vom ersten Blick bis zum Workflow, der läuft.
-          </h2>
-        </div>
-        <div class="lg:col-span-5 lg:pt-12">
-          <p class="text-bone-400 text-[1.05rem] leading-relaxed">
-            Drei Stufen, die aufeinander aufbauen. Du kannst bei jeder einsteigen. Feste Preise, du weißt vorher, was es kostet.
-          </p>
-        </div>
-      </div>
-
-      <ol class="grid md:grid-cols-3 gap-4">
-        {ladder.map(item => (
-          <li class="flex">
-            <a href={`/leistungen#${item.anchor}`} class="group flex flex-col w-full rounded-[24px] border border-bone-50/[0.08] overflow-hidden bg-ink-900 hover:border-bone-50/25 transition-colors">
-              <div class={`p-7 pb-6 ${tonalClass[paketTonal[item.anchor]]}`}>
-                <div class="flex items-center justify-between mb-5">
-                  <span class="font-mono text-sm opacity-70">{item.step}</span>
-                  <span class="text-[0.65rem] font-semibold uppercase tracking-[0.14em] opacity-70">{item.meta}</span>
-                </div>
-                <h3 class="font-display font-semibold text-[1.35rem] leading-tight tracking-tight">{item.name}</h3>
-                <p class="mt-3 font-display font-bold text-[1.9rem] leading-none tracking-tight">{item.price}</p>
-              </div>
-              <div class="p-7 pt-6 flex flex-col flex-1">
-                <p class="text-bone-200 leading-relaxed text-[0.98rem] flex-1">{item.text}</p>
-                <span class={`mt-6 inline-flex items-center gap-2 text-sm font-semibold ${tonalText[paketTonal[item.anchor]]}`}>
-                  Details und Ablauf
-                  <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M5 12h14M13 6l6 6-6 6" /></svg>
-                </span>
-              </div>
-            </a>
-          </li>
-        ))}
-      </ol>
-
-      <div class="mt-8 flex flex-col sm:flex-row sm:items-center justify-between gap-5">
-        <p class="text-bone-400 text-sm">
-          Oder punktuell: <span class="text-bone-50 font-medium">Tagessatz €1.200–1.800</span> für Workshops, Strategie-Sessions oder Umsetzung vor Ort.
-        </p>
-        <a href="/leistungen" class="inline-flex items-center gap-2 text-sm font-semibold text-bone-50 hover:text-brand-300 transition-colors group whitespace-nowrap">
-          Alle Pakete im Detail
-          <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M5 12h14M13 6l6 6-6 6" /></svg>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══ LÖSUNGEN ═══ -->
-  <section id="loesungen" class="py-24 lg:py-32 border-t border-bone-50/[0.06]">
-    <div class="max-w-7xl mx-auto px-6 lg:px-10">
-      <div class="grid lg:grid-cols-12 gap-8 mb-14">
-        <div class="lg:col-span-7">
-          <p class="text-brand-400 text-[0.75rem] font-semibold uppercase tracking-[0.2em] mb-5">Lösungen</p>
-          <h2 class="font-display font-bold text-bone-50 text-[2.2rem] sm:text-[2.9rem] leading-[1.02] tracking-tight" style="text-wrap: balance;">
-            Nicht "KI einführen". Sondern: Angebote in einer Stunde statt in zwei Tagen.
-          </h2>
-        </div>
-        <div class="lg:col-span-5 lg:pt-12">
-          <p class="text-bone-400 text-[1.05rem] leading-relaxed">
-            {alleLoesungen.length} konkrete Lösungen aus {anzahlBereiche} Unternehmensbereichen, jede mit Aufwand, Effekt und Paket. Der Use-Case-Finder zeigt euch in drei Klicks, was bei euch zuerst dran wäre.
-          </p>
-        </div>
-      </div>
-
-      <div class="grid md:grid-cols-2 gap-4">
-        {topLoesungen.map(l => (
-          <a href={`/loesungen/${l.slug}`} class="group flex flex-col bg-ink-800 border border-bone-50/[0.06] hover:border-bone-50/20 rounded-2xl p-7 transition-colors">
-            <span class={chipBereich(l.data.bereich)}>{bereichLabel[l.data.bereich]}</span>
-            <h3 class="font-display font-semibold text-bone-50 text-[1.3rem] mt-3 leading-snug tracking-tight group-hover:text-brand-300 transition-colors">{l.data.title}</h3>
-            <p class="mt-3 text-bone-400 text-[0.95rem] leading-relaxed flex-1 line-clamp-3">{l.data.problem}</p>
-            <p class="mt-5 pt-4 border-t border-bone-50/10 text-xs text-bone-600">Aufwand {l.data.aufwand} · Effekt {l.data.einsparung}</p>
-          </a>
-        ))}
-      </div>
-
-      <div class="mt-8 flex flex-col sm:flex-row sm:items-center justify-between gap-5">
-        <p class="text-bone-400 text-sm">Alle Lösungen lassen sich nach Bereich filtern, auch nach SAP-Nähe.</p>
-        <a href="/loesungen" class="inline-flex items-center gap-2 px-5 py-3 bg-brand-600 text-white hover:bg-brand-700 font-semibold rounded-full transition-colors text-sm whitespace-nowrap">
-          Use-Case-Finder starten
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M5 12h14M13 6l6 6-6 6" /></svg>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══ PROJEKT-ABLAUF ═══ -->
-  <section id="projekte" class="py-24 lg:py-32 bg-ink-950 border-t border-bone-50/[0.06]">
-    <div class="max-w-7xl mx-auto px-6 lg:px-10">
-      <div class="grid lg:grid-cols-12 gap-10 items-end">
-        <div class="lg:col-span-8">
-          <p class="text-brand-400 text-[0.75rem] font-semibold uppercase tracking-[0.2em] mb-5">So läuft ein Projekt</p>
-          <h2 class="font-display font-bold text-bone-50 text-[2.2rem] sm:text-[2.9rem] lg:text-[3.4rem] leading-[1.02] tracking-tight" style="text-wrap: balance;">
-            Woche&nbsp;1: Wir finden den Prozess.<br class="hidden lg:block" /> Woche&nbsp;4: Er läuft ohne mich.
-          </h2>
-        </div>
-        <div class="lg:col-span-4 lg:pb-2">
-          <p class="text-bone-400 leading-relaxed mb-6">
-            Ein Beispielprojekt zeigt dir Schritt für Schritt, wie ein KI-Pilot bei mir abläuft. Von der ersten Analyse bis der Workflow im Alltag hängt.
-          </p>
-          <a href="/case-studies" class="inline-flex items-center gap-2 px-5 py-3 text-bone-50 border border-bone-50/20 hover:border-bone-50/50 font-semibold rounded-full transition-colors text-sm">
-            Beispielprojekt ansehen
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M5 12h14M13 6l6 6-6 6" /></svg>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <Testimonials />
-
-  <!-- ═══ NEWSLETTER ═══ -->
-  <section id="newsletter" class="py-24 lg:py-32 border-t border-bone-50/[0.06]">
-    <div class="max-w-7xl mx-auto px-6 lg:px-10">
-      <NewsletterSignup />
-    </div>
-  </section>
-
-  <!-- ═══ TOOLS ═══ -->
-  <section id="tools" class="py-24 lg:py-32 border-t border-bone-50/[0.06]">
-    <div class="max-w-7xl mx-auto px-6 lg:px-10">
-      <div class="grid lg:grid-cols-12 gap-8 mb-14">
-        <div class="lg:col-span-7">
-          <p class="text-brand-400 text-[0.75rem] font-semibold uppercase tracking-[0.2em] mb-5">Werkzeuge</p>
-          <h2 class="font-display font-bold text-bone-50 text-[2.2rem] sm:text-[2.9rem] leading-[1.02] tracking-tight">Womit ich arbeite.</h2>
-        </div>
-        <div class="lg:col-span-5 lg:pt-12">
-          <p class="text-bone-400 text-[1.05rem] leading-relaxed">Kein Tool-Bingo. Das hier ist bei mir wirklich im Einsatz. Was ich davon empfehle und warum, steht auf der <a href="/tools" class="text-bone-50 underline decoration-bone-50/30 underline-offset-4 hover:decoration-brand-300 transition-colors">Tools-Seite</a>.</p>
-        </div>
-      </div>
-
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-10 border-t border-bone-50/10 pt-10">
-        {toolGroups.map(group => (
-          <div>
-            <p class="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-bone-600 mb-4">{group.category}</p>
-            <ul class="space-y-2">
-              {group.tools.map(tool => (
-                <li class="font-display font-medium text-bone-50 text-[1.2rem] leading-snug">{tool}</li>
-              ))}
-            </ul>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
-
   <!-- ═══ BLOG ═══ -->
   {posts.length > 0 && (
-    <section id="blog" class="py-24 lg:py-32 border-t border-bone-50/[0.06]">
+    <section id="blog" class="py-24 lg:py-32">
       <div class="max-w-7xl mx-auto px-6 lg:px-10">
         <div class="flex items-end justify-between gap-6 mb-12">
           <div>
             <p class="text-brand-400 text-[0.75rem] font-semibold uppercase tracking-[0.2em] mb-5">Blog</p>
-            <h2 class="font-display font-bold text-bone-50 text-[2.2rem] sm:text-[2.9rem] leading-[1.02] tracking-tight">Aus der Praxis.</h2>
+            <h2 class="font-display font-bold text-bone-50 text-[2.2rem] sm:text-[2.9rem] leading-[1.02] tracking-tight">Neu im Blog.</h2>
           </div>
           <a href="/blog" class="hidden sm:inline-flex items-center gap-2 text-sm font-semibold text-bone-50 hover:text-brand-300 transition-colors group whitespace-nowrap">
             Alle Artikel
@@ -375,96 +120,81 @@ function formatDate(date: Date) {
     </section>
   )}
 
-  <!-- ═══ KONTAKT ═══ -->
-  <section id="kontakt" class="relative py-16 lg:py-24 px-4 sm:px-6 lg:px-10">
-    <div class="relative max-w-7xl mx-auto rounded-[28px] bg-brand-600 text-white px-6 sm:px-10 lg:px-16 py-14 lg:py-20 overflow-hidden">
-      <div class="absolute -right-24 -bottom-32 w-[28rem] h-[28rem] rounded-full bg-white/10" aria-hidden="true"></div>
-      <div class="grid lg:grid-cols-12 gap-12 lg:gap-16">
+  <!-- ═══ NEWSLETTER ═══ -->
+  <section id="newsletter" class="py-24 lg:py-32 border-t border-bone-50/[0.06]">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+      <NewsletterSignup />
+    </div>
+  </section>
 
-        <div class="lg:col-span-5">
-          <p class="text-brand-100 text-[0.75rem] font-semibold uppercase tracking-[0.2em] mb-5">Kontakt</p>
-          <h2 class="font-display font-bold text-white text-[2.2rem] sm:text-[2.9rem] lg:text-[3.4rem] leading-[1.02] tracking-tight mb-6" style="text-wrap: balance;">
-            Lass uns 30 Minuten reden.
-          </h2>
-          <p class="text-brand-100 text-[1.05rem] leading-relaxed mb-8 max-w-md">
-            Schreib mir kurz, worum es geht. Ich antworte innerhalb von 24 Stunden, meistens schneller. Kein Verkaufsgespräch, versprochen. Wenn es nicht passt, sage ich das auch.
+  <!-- ═══ ÜBER MICH ═══ -->
+  <section id="ueber-mich" class="py-24 lg:py-32 border-t border-bone-50/[0.06]">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+      <div class="max-w-3xl">
+        <p class="text-brand-400 text-[0.75rem] font-semibold uppercase tracking-[0.2em] mb-5">Über mich</p>
+        <h2 class="font-display font-bold text-bone-50 text-[2.2rem] sm:text-[2.9rem] leading-[1.02] tracking-tight mb-8" style="text-wrap: balance;">
+          Tagsüber Global AI Manager. Genau deshalb weiß ich, was in Produktion geht.
+        </h2>
+        <div class="space-y-5 text-bone-200 text-[1.05rem] leading-[1.75]">
+          <p>
+            Ich komme aus Ostwestfalen-Lippe und arbeite seit über zehn Jahren im Digitalen. Inhouse Consultant, IT-Organisator, ERP-Auswahl, IT-Strategie. Heute verantworte ich als Global AI Manager, wie ein Unternehmen KI tatsächlich einsetzt. Nicht in Pilotfolien. Im Alltag.
           </p>
-          <dl class="space-y-4 text-sm">
-            <div class="flex gap-4">
-              <dt class="w-24 text-brand-200 flex-shrink-0">Antwort</dt>
-              <dd class="text-white">innerhalb von 24 Stunden</dd>
-            </div>
-            <div class="flex gap-4">
-              <dt class="w-24 text-brand-200 flex-shrink-0">Erstgespräch</dt>
-              <dd class="text-white">30 Minuten, kostenlos, remote</dd>
-            </div>
-            <div class="flex gap-4">
-              <dt class="w-24 text-brand-200 flex-shrink-0">Direkt</dt>
-              <dd><a href="https://linkedin.com/in/marlon-b-26203116a" target="_blank" rel="noopener noreferrer" class="text-white hover:text-brand-100 transition-colors underline decoration-white/40 underline-offset-4">LinkedIn-Nachricht</a></dd>
-            </div>
-          </dl>
+          <p>
+            Ich sehe jeden Tag, welche KI-Ideen nach dem Workshop sterben und welche laufen. Darüber schreibe ich hier.
+          </p>
+          <p>
+            Ich denke Strategie und Umsetzung zusammen. Und manchmal ist die ehrlichste Empfehlung: Bau das nicht.
+          </p>
+          <p class="text-bone-400">
+            Abseits davon: Familie zuerst. Dann Laufen. Dann Darts.
+          </p>
         </div>
 
+        <div class="mt-10 flex flex-wrap items-center gap-x-6 gap-y-3">
+          <a
+            href={links.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 text-sm font-semibold text-bone-50 hover:text-brand-300 transition-colors"
+          >
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+            Auf LinkedIn
+          </a>
+          <span class="text-bone-600 text-sm">·</span>
+          <a href="/blog/ein-jahr-ki" class="text-sm font-semibold text-bone-50 hover:text-brand-300 transition-colors">
+            Ein Jahr KI im Alltag, mein Erfahrungsbericht
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ TOOLS ═══ -->
+  <section id="tools" class="py-24 lg:py-32 border-t border-bone-50/[0.06]">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+      <div class="grid lg:grid-cols-12 gap-8 mb-14">
         <div class="lg:col-span-7">
-          <div class="relative bg-ink-900 text-bone-50 rounded-[24px] p-7 sm:p-10">
-            <form
-              action={links.formspree}
-              method="POST"
-              class="space-y-6"
-              aria-label="Kontaktformular"
-            >
-              <input type="hidden" name="_next" value="https://busche.cloud/danke" />
-              <input type="text" name="_gotcha" style="display:none !important" tabindex="-1" autocomplete="off" aria-hidden="true" />
-              <input type="hidden" name="_timestamp" id="formTimestamp" value="" />
-              <input type="hidden" name="thema" id="formThema" value="" />
-
-              <div class="grid sm:grid-cols-2 gap-6">
-                <div>
-                  <label class="block text-xs font-semibold uppercase tracking-[0.14em] text-bone-400 mb-2.5" for="name">Name</label>
-                  <input type="text" id="name" name="name" required placeholder="Max Mustermann"
-                    class="w-full px-0 py-3 bg-transparent border-0 border-b border-bone-50/20 focus:border-brand-400 text-bone-50 placeholder-bone-600 text-base outline-none transition-colors rounded-none" />
-                </div>
-                <div>
-                  <label class="block text-xs font-semibold uppercase tracking-[0.14em] text-bone-400 mb-2.5" for="email">E-Mail</label>
-                  <input type="email" id="email" name="email" required placeholder="max@unternehmen.de"
-                    class="w-full px-0 py-3 bg-transparent border-0 border-b border-bone-50/20 focus:border-brand-400 text-bone-50 placeholder-bone-600 text-base outline-none transition-colors rounded-none" />
-                </div>
-              </div>
-
-              <div>
-                <label class="block text-xs font-semibold uppercase tracking-[0.14em] text-bone-400 mb-2.5" for="subject">Worum geht es?</label>
-                <select id="subject" name="subject" required
-                  class="w-full px-0 py-3 bg-transparent border-0 border-b border-bone-50/20 focus:border-brand-400 text-bone-50 text-base outline-none transition-colors appearance-none rounded-none cursor-pointer">
-                  <option value="" class="bg-ink-800" disabled selected>Bitte wählen</option>
-                  <option value="readiness-check" class="bg-ink-800">KI-Readiness-Check</option>
-                  <option value="pilot-projekt" class="bg-ink-800">KI-Pilot-Projekt</option>
-                  <option value="laufende-begleitung" class="bg-ink-800">Laufende KI-Begleitung</option>
-                  <option value="tagessatz" class="bg-ink-800">Tagessatz / Workshop</option>
-                  <option value="sonstiges" class="bg-ink-800">Etwas anderes</option>
-                </select>
-              </div>
-
-              <div>
-                <label class="block text-xs font-semibold uppercase tracking-[0.14em] text-bone-400 mb-2.5" for="message">Nachricht</label>
-                <textarea id="message" name="message" required rows="4" placeholder="Zwei, drei Sätze reichen: Was macht euer Unternehmen, und wo drückt es gerade?"
-                  class="w-full px-0 py-3 bg-transparent border-0 border-b border-bone-50/20 focus:border-brand-400 text-bone-50 placeholder-bone-600 text-base outline-none transition-colors resize-none rounded-none"></textarea>
-              </div>
-
-              <div class="flex items-start gap-3 pt-2">
-                <input type="checkbox" id="consent" name="consent" required class="mt-1 w-4 h-4 flex-shrink-0 accent-brand-500 cursor-pointer" />
-                <label for="consent" class="text-xs text-bone-400 leading-relaxed cursor-pointer">
-                  Ich bin einverstanden, dass meine Angaben zur Bearbeitung der Anfrage verarbeitet werden. Details in der <a href="/datenschutz" class="text-bone-200 hover:text-brand-300 underline underline-offset-2 transition-colors">Datenschutzerklärung</a>.
-                </label>
-              </div>
-
-              <button type="submit"
-                class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-brand-600 text-white hover:bg-brand-700 font-semibold rounded-full transition-colors text-[0.95rem] disabled:opacity-50 disabled:cursor-not-allowed">
-                Nachricht senden
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M5 12h14M13 6l6 6-6 6" /></svg>
-              </button>
-            </form>
-          </div>
+          <p class="text-brand-400 text-[0.75rem] font-semibold uppercase tracking-[0.2em] mb-5">Werkzeuge</p>
+          <h2 class="font-display font-bold text-bone-50 text-[2.2rem] sm:text-[2.9rem] leading-[1.02] tracking-tight">Womit ich arbeite.</h2>
         </div>
+        <div class="lg:col-span-5 lg:pt-12">
+          <p class="text-bone-400 text-[1.05rem] leading-relaxed">Kein Tool-Bingo. Das hier ist bei mir wirklich im Einsatz. Was ich davon empfehle und warum, steht auf der <a href="/tools" class="text-bone-50 underline decoration-bone-50/30 underline-offset-4 hover:decoration-brand-300 transition-colors">Tools-Seite</a>.</p>
+        </div>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-10 border-t border-bone-50/10 pt-10">
+        {toolGroups.map(group => (
+          <div>
+            <p class="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-bone-600 mb-4">{group.category}</p>
+            <ul class="space-y-2">
+              {group.tools.map(tool => (
+                <li class="font-display font-medium text-bone-50 text-[1.2rem] leading-snug">{tool}</li>
+              ))}
+            </ul>
+          </div>
+        ))}
       </div>
     </div>
   </section>
@@ -473,76 +203,3 @@ function formatDate(date: Date) {
 
   <Footer />
 </Layout>
-
-<script>
-  const loadTime = Date.now();
-  const tsField = document.getElementById('formTimestamp') as HTMLInputElement | null;
-  if (tsField) tsField.value = String(loadTime);
-
-  const form = document.querySelector('form[action*="formspree"]') as HTMLFormElement | null;
-
-  // Vorbelegung aus dem Funnel: /?thema=<slug>&paket=<id>&bereich=..&zeitproblem=..#kontakt
-  // (gesetzt von Lösungs-Seiten, Finder und Blog-CTA). Der Besucher sieht, dass wir wissen, worum es geht.
-  const params = new URLSearchParams(window.location.search);
-  const thema = params.get('thema');
-  if (form && thema) {
-    const paket = params.get('paket');
-    const bereich = params.get('bereich');
-    const zeitproblem = params.get('zeitproblem');
-    const subject = form.querySelector<HTMLSelectElement>('#subject');
-    const message = form.querySelector<HTMLTextAreaElement>('#message');
-    const themaField = form.querySelector<HTMLInputElement>('#formThema');
-    const paketMap: Record<string, string> = { 'readiness-check': 'readiness-check', 'pilot-projekt': 'pilot-projekt', 'begleitung': 'laufende-begleitung', 'tagessatz': 'tagessatz' };
-    if (subject && paket && paketMap[paket]) subject.value = paketMap[paket];
-    else if (subject && thema === 'finder') subject.value = 'readiness-check';
-    if (themaField) themaField.value = [thema, bereich, zeitproblem].filter(Boolean).join(' | ');
-    if (message && !message.value) {
-      const titel = params.get('titel');
-      const readable = thema.startsWith('blog/') ? `dem Artikel "${titel || thema.slice(5)}"` : thema === 'finder' ? 'dem Use-Case-Finder' : `der Lösung "${titel || thema.replace(/-/g, ' ')}"`;
-      message.value = `Ich komme von ${readable}${bereich ? ` (Bereich: ${bereich}${zeitproblem ? `, Thema: ${zeitproblem}` : ''})` : ''}. Bei uns sieht das so aus: `;
-    }
-    // Anker nach dem Setzen der Werte erneut anfahren, damit der Browser nicht am Seitenanfang bleibt
-    if (window.location.hash === '#kontakt') document.getElementById('kontakt')?.scrollIntoView();
-  }
-
-  if (form) {
-    form.addEventListener('submit', (e) => {
-      if (Date.now() - loadTime < 3000) {
-        e.preventDefault();
-        return;
-      }
-      (window as any).bcTrack?.('formular_gesendet', { label: (form.querySelector<HTMLSelectElement>('#subject')?.value) || '' });
-      const btn = form.querySelector('button[type="submit"]') as HTMLButtonElement | null;
-      if (btn) {
-        btn.disabled = true;
-        btn.textContent = 'Wird gesendet…';
-      }
-    });
-  }
-</script>
-
-<script>
-  // Rotierendes Beispiel im Hero. Steht still, wenn der Nutzer weniger Bewegung wünscht.
-  const beispiel = document.getElementById('hero-beispiel') as HTMLAnchorElement | null;
-  const wenigBewegung = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (beispiel && !wenigBewegung) {
-    const items = JSON.parse(beispiel.dataset.beispiele || '[]') as { slug: string; text: string; bereich: string; chip: string }[];
-    const chip = beispiel.querySelector<HTMLElement>('[data-beispiel-bereich]');
-    const text = beispiel.querySelector<HTMLElement>('[data-beispiel-text]');
-    let i = 0;
-    if (items.length > 1 && chip && text) {
-      setInterval(() => {
-        beispiel.style.opacity = '0';
-        setTimeout(() => {
-          i = (i + 1) % items.length;
-          const it = items[i];
-          beispiel.href = `/loesungen/${it.slug}`;
-          chip.textContent = it.bereich;
-          chip.className = it.chip;
-          text.textContent = it.text;
-          beispiel.style.opacity = '1';
-        }, 300);
-      }, 4200);
-    }
-  }
-</script>

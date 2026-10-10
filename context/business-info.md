@@ -2,29 +2,14 @@
 
 ## Marke
 
-**Busche Cloud** — persönliche Marke von Marlon Busche
-**Domain:** busche.cloud
-**Logo:** Seit 2026-09-17 neue Wortmarke (geometrisches B auf Amber, "Busche Cloud" in Bricolage Grotesque) als Inline-SVG in `website/src/components/Logo.astro` und `public/favicon.svg`. Die alte blaue Wolke liegt nur noch archiviert in `reference/`.
+**Busche Cloud**, persönliche Marke von Marlon Busche. Domain busche.cloud (Blog und Newsletter).
+**Logo und Look:** Wortmarke "Busche Cloud" mit B-Kachel in Google-Blau, "Material Light" (Details in `CLAUDE.md`).
 
-**Look:** "Cinematic Dark": warmes Anthrazit, Off-White, Amber als einzige Akzentfarbe. Details in `CLAUDE.md`.
+## Produkt (Test)
 
-## Angebot
+Hochzeitswebsite: Paar füllt einen Fragebogen aus, KI schreibt Begrüßung, FAQ und Ablauf, daraus entsteht eine statische Astro-Seite. Preisidee 99 € (Subdomain, 2 Jahre) oder 149 € (eigene .de-Domain), einmal zahlen, kein Abo. Eigene Produkt-Domain (noch nicht gekauft), eigenes Projekt außerhalb dieses Repos.
 
-Vier Consulting-Pakete (Details: `outputs/consulting-angebot.md`):
-- KI-Readiness-Check — €299
-- KI-Pilot-Projekt — ab €2.500
-- Laufende KI-Begleitung — ab €1.200/Monat
-- Tagessatz-Projekte (neu) — €1.200–1.800/Tag
+## Stand
 
-Zielgruppe: KMU/Mittelstand (10–500 MA), Schwerpunkt seit 2026-09-14: SAP-nahe Prozessautomatisierung in Vertrieb, Kundenservice & Backoffice.
-
-## Aktueller Stand
-
-- Noch angestellt, baut die Marke nebenberuflich auf
-- Portfoliowebsite als zentrales Vehikel für Sichtbarkeit und Vertrauen
-- 36 Blogartikel live, Lösungsbibliothek mit 26 Use-Cases und Lead-Funnel auf der Website
-- Erstes Werkzeug-Produkt: KI-Regelwerk-Kit (DSGVO-Check als Generator, lokal im Workshop einsetzbar, Server-Betrieb vorbereitet, noch ohne ersten Kunden)
-
-## Positionierung
-
-"Ich helfe Unternehmen, KI sinnvoll einzusetzen und echte Wettbewerbsvorteile daraus zu machen" — pragmatisch, hands-on, mit Schwerpunkt auf SAP-nahen Prozessen (seit 2026-09-14, siehe `context/strategy.md`).
+- Noch angestellt, Nebenverdienst-Ziel.
+- Beratung ist im Archiv, keine Pakete mehr.
