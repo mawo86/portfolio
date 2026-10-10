@@ -29,7 +29,7 @@ Workspace von Marlon Busche (Global AI Manager, angestellt) für die Arbeit mit 
 
 **Archiv:** `archiv-beratung/` enthält Lösungsseiten (26), Case Studies (2), `/leistungen`, Use-Case-Finder, `outputs/` mit Lösungswegen, Produktkarten, Kundenvorlagen und Readiness-Check, `reference/` (YouTube-Transkripte, Higgsfield-Briefing, alte Logos), die Skripte `build_dsgvo_vorlagen.py` und `youtube_transcripts.py`, zwei ältere Pläne und die alten Kontext-Dateien. Es ist **nur lokal** (`.gitignore`), das Repo ist öffentlich. Git sichert es nicht: eigenes Backup nötig. Die Git-Historie enthält die älteren Fassungen weiterhin öffentlich (30 Commits berührten `outputs/`), bis sie gezielt bereinigt wird oder das Repo privat ist.
 
-**Test-Projekt Hochzeitswebsite:** eigenes Projekt und eigenes Repo außerhalb dieses Repos (`/Users/mabu/Documents/hochzeitswebsite/`, geplant), eigene Domain (noch nicht gekauft), Deploy über Cloudflare Pages oder Netlify. Es soll keine Kundendaten im öffentlichen Portfolio-Repo geben.
+**Produkt-Projekt Hochzeitswebsite:** eigenes Repo außerhalb dieses Repos (`/Users/mabu/Documents/hochzeitswebsite/`, lokal, noch ohne Remote). Phase 0 ist gebaut (Astro-Site mit Konfigurator und Live-Vorschau, gemeinsamer Renderer `packages/render`, Anleitung fürs Zusage-Formular, fünf Muster, Vorbestellung). Phase 1 (Cloudflare-Backend, Workflows für Zahlung, Bau, Mails, Ablauf, Schließung, alle mit Log) und Phase 2 (echte Zahlung) stehen im Plan `~/.claude/plans/snoopy-kindling-seal.md` und starten erst nach dem Nachfrage-Test. Arbeitsname/Domain `jawort-seite.de` (laut DENIC frei, nicht gekauft). Stand und offene Punkte: `docs/phase0-offen.md` im Produkt-Repo. Es soll keine Kundendaten im öffentlichen Portfolio-Repo geben.
 
 ---
 
@@ -107,7 +107,7 @@ npm run check       # Typen, Stil, Build, Links, Budget (vor jedem Push)
 - `blog-artikel`: Formatierung der Blog-Artikel.
 
 ## Entscheidungen und offene Punkte (Stand 2026-10-10)
-- Produkt: Hochzeitswebsite als Test ohne Bezahlung (Landingpage mit Vorbestellung, Beispielseite, Google Ads ca. 100 €, 14 Tage). Schwellen: Abbruch bei mindestens 300 Besuchern und unter 3 % Vorbestellungen oder unter 5 Vorbestellungen nach 14 Tagen, weiter ab 10. Alles Annahmen.
+- Produkt: Hochzeitswebsite als Test ohne Bezahlung (Produktseite mit Konfigurator und Vorbestellung, Muster-Seiten, Google Ads ca. 100 €, 14 Tage). Seiten der Paare später selbst konfiguriert (nicht mehr halbautomatisch), Backend bei Cloudflare, Stripe zuerst im Testmodus. Schwellen: Abbruch bei mindestens 300 Besuchern und unter 3 % Vorbestellungen oder unter 5 Vorbestellungen nach 14 Tagen, weiter ab 10. Alles Annahmen.
 - Offen: Name und Domain des Produkts (Kauf durch Marlon), Dienst für die Vorbestellungen (Buttondown-Tag oder Formspree), Google-Ads-Konto, Nebentätigkeit beim Arbeitgeber, Gewerbe/Steuer/Merchant of Record vor dem ersten Verkauf. Hinweis auf das Produkt auf busche.cloud erst, wenn die Domain existiert.
 - Backup für `archiv-beratung/` einrichten. Entscheiden, ob die alte Git-Historie bereinigt oder das Repo privat gestellt wird.
 - Affiliate-Programme (n8n, Zapier, IONOS, Netlify), `about.jpg`-Slot und Higgsfield-Visuals sind mit dem Umbau entfallen. Keine Beratung, keine Pakete, keine Lead-Funnel-Events mehr.
