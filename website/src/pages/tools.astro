@@ -1,6 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { terminUrl } from '../config/site';
+import { links } from '../config/site';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import AffiliateDisclosure from '../components/AffiliateDisclosure.astro';
@@ -194,7 +194,7 @@ const categories: Category[] = [
       <div class="mt-8 pt-8 border-t border-bone-50/10">
         <p class="text-gray-500 text-sm leading-relaxed">
           Die Liste wächst mit. Fehlt dir eine Einschätzung oder suchst du ein Tool für einen konkreten Fall?
-          <a href={terminUrl()} class="text-bone-50 hover:text-brand-300 transition-colors underline decoration-bone-50/30 underline-offset-4">Schreib mir.</a>
+          <a href={links.linkedin} target="_blank" rel="noopener noreferrer" class="text-bone-50 hover:text-brand-300 transition-colors underline decoration-bone-50/30 underline-offset-4">Schreib mir auf LinkedIn.</a>
         </p>
       </div>
 

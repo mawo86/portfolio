@@ -1,26 +1,19 @@
 # Strategie
 
-## Aktueller Fokuszeitraum
+## Stand (2026-10-10)
 
-2026 — Aufbau persönlicher Marke parallel zum Anstellungsverhältnis
+Consulting ist vorerst raus. Ziel ist ein kleines AI-Produkt als Nebenverdienst. Nach acht Recherche-Runden (ca. 100 Ideen, siehe `outputs/produktideen-ranking.md`, `outputs/zusammenfassung-entscheidung.md`) ist die **Hochzeitswebsite** (Fragebogen, KI-Texte, statische Seite, einmal zahlen, kein Abo) der erste Test.
 
-## Strategische Prioritäten
+## Rahmen
 
-1. **Neue Stelle / bessere Position** — aktiv auf dem Arbeitsmarkt positionieren
-2. **Sichtbarkeit aufbauen** — busche.cloud als professionellen Online-Auftritt etablieren
-3. **Grundlage für Selbstständigkeit legen** — Projekte dokumentieren, Expertise zeigen, Netzwerk aufbauen
-4. **Thought Leadership im AI-Segment** — durch Blogbeiträge und Projektdokumentation
+- Betrieb höchstens 3 bis 5 Stunden pro Woche, Test bis ca. 150 €.
+- Hosting nicht-sensibler Daten ist erlaubt, Wettbewerb ist kein K.-o. bei klarer Differenzierung.
+- Blocker nur markieren: Nebentätigkeit beim Arbeitgeber, Gewerbe/Steuer/Merchant of Record, Etsy-Regeln, keine Kalt-Mails (§ 7 UWG).
 
-## Wie Erfolg aussieht
+## Test ohne Bezahlung (14 Tage)
 
-- Fokusiertes AI Wissen aufbauen
-- Anfragen für AI-Consulting-Projekte kommen rein
+Eigene Produkt-Domain, Landingpage mit Vorbestellung, Beispielseite, Google Ads ca. 100 €. Abbruch bei mindestens 300 Besuchern und weniger als 3 % Vorbestellungen oder unter 5 Vorbestellungen nach 14 Tagen. Weiter bei 10 oder mehr. Schwellen sind Annahmen.
 
-## Offene Fragen
+## busche.cloud
 
-- Welche konkreten AI-Projekte sollen showcased werden?
-
-## Offene Aufgaben
-
-- [x] Transkribiere alle Videos auf Youtube der letzten 6 Monaten vollständig von folgenden Youtube-Kanälen: "Silicon Valley Girl", "Alex Hormozi", "Dan Martell", "Chris Donnelly" und "Everlast AI". Mache mir eine gesammelte Datei daraus. — erledigt 2026-09-14, 133 Transkripte in `reference/youtube-transcripts/` (Chris Donnelly: 0, Kanal ruht seit Januar 2026). Reproduzierbar via `scripts/youtube_transcripts.py`.
-- [x] Erkenntnisse aus den Transkripten analysieren und Handlungsempfehlungen ableiten — erledigt 2026-09-14, zwei Analyse-Durchgänge (Consulting-Fokus + breite Themenanalyse). Umgesetzt: Preise angehoben, SAP-Prozess-Nische geschärft (`outputs/consulting-angebot.md`), Discovery-Call-Leitfaden und Testimonial-Vorlage erstellt (`outputs/discovery-call-leitfaden.md`, `outputs/testimonial-vorlage.md`), zwei neue Blog-Drafts (`eu-ai-act-mittelstand`, `ki-jobs-mittelstand-zahlen`), zwei Website-Textanpassungen (About-Sektion, Readiness-Check-Beschreibung).
+Blog (36 Artikel), Newsletter (Buttondown), Tools-Seite, Impressum, Datenschutz. Beratungsseiten sind im Archiv (`archiv-beratung/`, lokal, nicht im Repo).

@@ -80,4 +80,4 @@ Wie du daraus einen Business Case rechnest, den die Geschäftsführung unterschr
 - 20 bis 30 alte Anfragen mit dem Angebot, das daraus wurde. Das sind eure Testfälle, an denen ihr die Trefferquote messt, bevor der erste Kunde etwas davon merkt
 - Eine Person im Vertrieb, die zwei Wochen lang jeden Entwurf mit "passt", "geändert" oder "verworfen" markiert
 
-Der komplette Use Case mit Aufwand, Paket und Voraussetzungen steht in der Lösungsbibliothek: [Angebotsentwurf aus der Kundenanfrage](/loesungen/angebotsentwurf-aus-anfrage). Wenn du dir noch nicht sicher bist, ob dieser Prozess bei euch der richtige erste ist, hilft [5 Zeichen, dass ein Prozess nach KI schreit](/blog/ki-prozesse-identifizieren).
+Wenn du dir noch nicht sicher bist, ob dieser Prozess bei euch der richtige erste ist, hilft [5 Zeichen, dass ein Prozess nach KI schreit](/blog/ki-prozesse-identifizieren).
